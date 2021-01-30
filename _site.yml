@@ -1,0 +1,7 @@
+name: "Simons-website"
+output_dir: "."
+navbar:
+  title: "Simons Website"
+  left:
+    - text: "Home"
+      href: index.html
