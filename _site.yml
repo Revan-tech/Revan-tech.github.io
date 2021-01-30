@@ -1,7 +1,0 @@
-name: "my-website"
-navbar:
-  title: "Our Website"
-  left:
-    - text: "Home"
-      href: index.html
-   
