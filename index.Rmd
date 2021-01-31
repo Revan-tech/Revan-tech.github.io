@@ -1,7 +1,33 @@
 ---
-title: "Szymon's Website"
+title: "Home"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    toc_depth: 3
+    number_sections: true
+
+
 ---
 
 Hello, Kamil!
 
-[Hey](https://revan-tech.github.io/Blog_entry.html)
+# La
+
+------
+
+
+# La La
+
+dddd
+
+------
+
+# La La La
+
+------
+
+# La La La
+
+------

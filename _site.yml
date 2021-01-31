@@ -1,7 +1,20 @@
-name: "Simons-website"
+name: "Sortownia"
 output_dir: "."
 navbar:
-  title: "Simons Website"
+  title: "Sortownia"
   left:
     - text: "Home"
       href: index.html
+    - text: "Aktualności"
+      href: news.html
+    - text: "Poradniki"
+      href: poradniki.html
+    - text: "Baza wiedzy"
+      href: baza_wiedzy.html
+    - text: "Projekty"
+      href: projekty.html  
+    - text: "Kontakt"
+      href: kontakt.html  
+output:
+  html_document:
+    theme: flatly
