@@ -1,7 +1,0 @@
----
-title: "Szymon's Website"
----
-
-Hello, Kamil!
-
-[Hey](https://revan-tech.github.io/Blog_entry.html)
