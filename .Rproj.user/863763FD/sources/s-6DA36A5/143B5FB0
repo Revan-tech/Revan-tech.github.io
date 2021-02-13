@@ -1,24 +1,24 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1613256686645.000,
+    "created" : 1613258342650.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
-    "id" : "930F75D6",
-    "lastKnownWriteTime" : 1613256722,
-    "last_content_update" : 1613256722327,
+    "hash" : "441686701",
+    "id" : "143B5FB0",
+    "lastKnownWriteTime" : 1613258354,
+    "last_content_update" : 1613258354887,
     "path" : "D:/II level/Różne informatyczne/Website/Web_work/Revan-tech.github.io/_site.yml",
     "project_path" : "_site.yml",
     "properties" : {
-        "cursorPosition" : "22,0",
+        "cursorPosition" : "9,22",
         "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 1,
+    "relative_order" : 3,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "yaml"

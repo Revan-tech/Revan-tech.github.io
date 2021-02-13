@@ -1,15 +1,12 @@
 name: "Sortownia"
-title: "Sortownia"
-description: |
-  Sortownia
 output_dir: "."
 navbar:
-  search: true
+  title: "Sortownia"
   left:
     - text: "Home"
       href: index.html
-    - text: "Blog"
-      href: blog.html
+    - text: "Aktualności"
+      href: news.html
     - text: "Poradniki"
       href: poradniki.html
     - text: "Baza wiedzy"
@@ -17,6 +14,7 @@ navbar:
     - text: "Projekty"
       href: projekty.html  
     - text: "Kontakt"
-      href: kontakt.html 
-  
-output: distill::distill_article
+      href: kontakt.html  
+output:
+  html_document:
+    theme: flatly

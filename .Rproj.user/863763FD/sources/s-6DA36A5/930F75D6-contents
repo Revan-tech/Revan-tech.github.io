@@ -2,12 +2,12 @@ name: "Sortownia"
 title: "Sortownia"
 description: |
   Sortownia
-output_dir: "_site"
+output_dir: "."
 navbar:
   search: true
   left:
     - text: "Home"
-      href: index.html
+      href: "_site/index.html"
     - text: "Blog"
       href: blog.html
     - text: "Poradniki"
