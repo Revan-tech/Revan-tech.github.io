@@ -2,7 +2,7 @@ name: "Sortownia"
 title: "Sortownia"
 description: |
   Sortownia
-output_dir: "_site"
+output_dir: "."
 navbar:
   search: true
   left:

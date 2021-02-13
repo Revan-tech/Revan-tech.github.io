@@ -6,14 +6,14 @@
       "description": "Some additional details about the blog\n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-02-13T23:53:40+01:00"
+      "last_modified": "2021-02-14T00:12:44+01:00"
     },
     {
       "path": "index.html",
       "title": "Sortownia",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-02-13T23:53:40+01:00"
+      "last_modified": "2021-02-14T00:12:45+01:00"
     }
   ],
   "collections": ["posts/posts.json"]
