@@ -16,6 +16,7 @@ navbar:
       href: baza_wiedzy.html
     - text: "Projekty"
       href: projekty.html  
+  right:
     - text: "Kontakt"
       href: kontakt.html 
   
