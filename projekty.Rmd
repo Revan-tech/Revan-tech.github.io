@@ -1,0 +1,16 @@
+---
+title: "Projekty"
+site: distill::distill_website
+---
+
+::: {.floatting}
+
+```{r out.width='30%', out.extra='style="float:left; padding:10px"', echo=FALSE}
+knitr::include_graphics("ANC.jpg") 
+```
+
+</br> </br>Vivamus venenatis egestas eros ut tempus. Vivamus id est nisi. Aliquam molestie erat et sollicitudin venenatis. In ac lacus at velit scelerisque mattis.
+:::
+
+
+---
