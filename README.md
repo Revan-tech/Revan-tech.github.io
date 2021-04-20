@@ -2,5 +2,3 @@
 ---
 permalink: /index.html
 ---
- 
-
