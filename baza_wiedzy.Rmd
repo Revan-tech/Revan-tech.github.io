@@ -5,7 +5,7 @@ site: distill::distill_website
 
 <span> <b>Gdzie zacząć szukanie wiedzy, ogólnoprzydatne serwisy</b>
 
-<span>Punktoza - portal pozwalający sprawdzić aktualną punktację czasopism wg list ministerialnych -
+<span>Punktoza - portal pozwalający sprawdzić aktualną punktację czasopism wg list ministerialnych
 https://punktoza.pl/ 
 
 https://scholar.google.pl/ 
@@ -37,7 +37,7 @@ https://www.sztukaszukania.pl/2019/01/29/jak-szukac-artykulow-naukowych/
 	
 
  
-
+Platforma Otwartej Nauki
 http://pon.edu.pl/ 
 	
 
@@ -49,42 +49,56 @@ https://alternativeto.net/
 
 <b>Reszta jeszcze nieuporządkowana </b>
  
+ 
+
+Artykuł o przydatnych stronach
 
 https://medium.com/polish/37-najlepszych-stron-internetowych-do-nauki-nowych-rzeczy-18d2642ce821 
 	
 
- 
+ Lista baz naukowych, wyszukiwarek, informatorów (UJ)
 
 https://bj.uj.edu.pl/zasoby-cyfrowe/ogolnodostepne-wyszukiwarki-bazy-zagraniczne 
 	
 
+Zasoby online BUW
+
+https://www.buw.uw.edu.pl/zasoby-online/
+
+
  
+Portal Czasopism Naukowych (UJ)
 
 https://www.ejournals.eu/ 
 	
 
  
+Portal Nauka Polska
 
 http://www.nauka-polska.opi.org.pl/ 
 	
 
+Listy Ministerialne
 
 https://listymnisw.pl/  
 
  
 
 Scopus
+
 https://www.scopus.com/home.uri
 
 
-web of science 
+Web of science
+
 http://webofknowledge.com 
 
- 
+
+Lista blogów naukowych UKSW 
  https://biblioteka.uksw.edu.pl/pl/node/82  
 	
 
- 
+ Przystanek Nauka (UŚ)
 
 https://przystaneknauka.us.edu.pl/  
 	
@@ -96,10 +110,12 @@ https://nauka.uj.edu.pl/start
 
  
 
+Lista blogów naukowych
+
 https://www.dobreprogramy.pl/PREZESKIC/Popularyzacja-nauki-TOP-10-serwisow,88042.html  
 	
 
- 
+Lista blogów naukowych
 
 https://www.totylkoteoria.pl/2019/01/ranking-polskich-blogow-naukowych-2018.html  
 	
@@ -107,19 +123,24 @@ https://www.totylkoteoria.pl/2019/01/ranking-polskich-blogow-naukowych-2018.html
  
 
 Naukowy bełkot 
+
 https://www.youtube.com/channel/UC_7PqixGIdE-jjoHKMPYpGA
 
-puls kosmosu 
+
+Puls kosmosu 
+
 https://www.pulskosmosu.pl/
 
 
  
 
 strefa psyche 
+
 https://www.swps.pl/strefa-psyche
 
 
 Lek.Check
+
 https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  
 
 
@@ -144,7 +165,7 @@ https://naukawpolsce.pap.pl/aktualnosci/news%2C84944%2Cwkrotce-kolejne-odcinki-p
 
 
 
-regularnie: https://www.wnycstudios.org/podcasts/anthropocene-reviewed 
+
 
  
 
@@ -244,16 +265,21 @@ https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw
 
 
 Tu Centrum Nauki Kopernik 
+
 https://www.kopernik.org.pl/podcast-tu-centrum-nauki-kopernik
 
 Dział zagraniczny  
+
 https://www.dzialzagraniczny.pl/ 
 
 Raport o stanie świata
+
 https://raportostanieswiata.pl/ 
 
 podcast granice nauki 
+
 https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9kMmQzOWI0L3BvZGNhc3QvcnNz
+
 
 https://uni.wroc.pl/podcasty-naukowe/ 
 	
@@ -299,21 +325,30 @@ Radio Naukowe
 	
 https://radionaukowe.pl/
  
+ 
  Babel. Rzeczpospolita Multi-Kulti (d. Lechistan)
+ 
 https://audycje.tokfm.pl/audycja/230,Babel-Rzeczpospolita-Multi-Kulti
 	
 	SexAudycja
+	
 	https://audycje.tokfm.pl/audycja/361,SexAudycja
 	
+	
 	 Klimat zmian 
+	 
 	https://audycje.tokfm.pl/audycja/394,Klimat-zmian
 	
+	
 	 Usługi Kosmiczne dla Ludności 
+	 
 	https://audycje.tokfm.pl/audycja/409,Uslugi-Kosmiczne-dla-Ludnosci
+	
+	
 
 <b>Podkasty 🇬🇧</b>
 
-
+https://www.wnycstudios.org/podcasts/anthropocene-reviewed 
 
 <b> Platformy dyskusji społecznej</b> 
 
