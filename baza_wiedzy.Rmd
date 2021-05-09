@@ -17,22 +17,39 @@ https://otwartezasoby.pl/
 <span> Test 
 
 
-
+Wikiksiążki
 https://pl.wikibooks.org/wiki/Wikibooks:Strona_g%C5%82%C3%B3wna 
 
 	
  
 
+<b>Artykuły agregujące linki do przydatnych stron</b>
+
 https://pl.wikipedia.org/wiki/Kategoria:Portale_naukowe 
 	
+	
+	
+Artykuł o przydatnych stronach
 
- 
+https://medium.com/polish/37-najlepszych-stron-internetowych-do-nauki-nowych-rzeczy-18d2642ce821 
+	
 
+ Lista baz naukowych, wyszukiwarek, informatorów (UJ)
+
+https://bj.uj.edu.pl/zasoby-cyfrowe/ogolnodostepne-wyszukiwarki-bazy-zagraniczne 
+	
+
+Zasoby online BUW
+
+https://www.buw.uw.edu.pl/zasoby-online/
+
+
+Artykuł z listą przydatnych stron do nauki
 https://lifegeek.pl/przydatne-strony/ 
 	
 
  
-
+Artykuł na temat sztuki szukania artykułóW naukowych
 https://www.sztukaszukania.pl/2019/01/29/jak-szukac-artykulow-naukowych/ 
 	
 
@@ -47,23 +64,11 @@ http://pon.edu.pl/
 https://alternativeto.net/ 
 
 
+
+
 <b>Reszta jeszcze nieuporządkowana </b>
  
  
-
-Artykuł o przydatnych stronach
-
-https://medium.com/polish/37-najlepszych-stron-internetowych-do-nauki-nowych-rzeczy-18d2642ce821 
-	
-
- Lista baz naukowych, wyszukiwarek, informatorów (UJ)
-
-https://bj.uj.edu.pl/zasoby-cyfrowe/ogolnodostepne-wyszukiwarki-bazy-zagraniczne 
-	
-
-Zasoby online BUW
-
-https://www.buw.uw.edu.pl/zasoby-online/
 
 
  
@@ -94,9 +99,6 @@ Web of science
 http://webofknowledge.com 
 
 
-Lista blogów naukowych UKSW 
- https://biblioteka.uksw.edu.pl/pl/node/82  
-	
 
  Przystanek Nauka (UŚ)
 
@@ -109,24 +111,9 @@ https://nauka.uj.edu.pl/start
 	
 
  
-
-Lista blogów naukowych
-
-https://www.dobreprogramy.pl/PREZESKIC/Popularyzacja-nauki-TOP-10-serwisow,88042.html  
-	
-
-Lista blogów naukowych
-
-https://www.totylkoteoria.pl/2019/01/ranking-polskich-blogow-naukowych-2018.html  
 	
 
  
-
-Naukowy bełkot 
-
-https://www.youtube.com/channel/UC_7PqixGIdE-jjoHKMPYpGA
-
-
 Puls kosmosu 
 
 https://www.pulskosmosu.pl/
@@ -163,23 +150,6 @@ https://naukawpolsce.pap.pl/aktualnosci/news%2C84944%2Cwkrotce-kolejne-odcinki-p
 
  
 
-
-
-
-
- 
-
-Kasia gandor kanał yt 
-
- https://www.youtube.com/channel/UCUercAwR2To1Zx6GA6ZP2TQ
-
-
-
- 
-
-
- 
-
  
 
 Informacje z poradnika sztuka promocji nauki 
@@ -200,15 +170,16 @@ https://nowewyrazy.uw.edu.pl/linki.html
 
  
 
- 
-
-https://www.youtube.com/watch?v=S9dqJRyk0YM&t=0s 
 
 <b>Serwisy informacyjne popularno-naukowe 🇵🇱</b>
 
 
 
 https://dzienniknaukowy.pl/ 
+
+
+Nauka w Polsce (PAP)
+	https://naukawpolsce.pap.pl
 	
 	
 
@@ -220,19 +191,46 @@ https://dzienniknaukowy.pl/
 
 https://www.naukatolubie.pl/
 
+
+Lista blogów naukowych
+
 https://ekulczycki.pl/warsztat_badacza/katalog-blogow-naukowych/  
 	
+	
+	
+	Lista blogów naukowych
 
 http://www.zostanphd.pl/blogi-naukowe-share-week-2018/  
 	
 
  
+ Lista blogów naukowych
+ 
 https://naukawpolsce.pap.pl/aktualnosci/news%2C32436%2Cpolskie-popularnonaukowe-strony-blogi-kanaly-wideo-i-podcasty.html  
 
+
+Lista blogów naukowych
 
 https://www.crazynauka.pl/share-week-2019-czyli-dobre-blogi-ktore-wam-polecamy/ 
 
 
+
+Lista blogów naukowych
+
+https://www.dobreprogramy.pl/PREZESKIC/Popularyzacja-nauki-TOP-10-serwisow,88042.html  
+	
+
+Lista blogów naukowych
+
+https://www.totylkoteoria.pl/2019/01/ranking-polskich-blogow-naukowych-2018.html  
+
+
+
+Lista blogów naukowych UKSW 
+ https://biblioteka.uksw.edu.pl/pl/node/82  
+	
+	
+	
 <b>Blogi popularno-naukowe 🇬🇧</b>
 
 
@@ -241,7 +239,26 @@ xx
 
 <b>Kanały popularno-naukowe na youtube 🇵🇱</b>
 
+
+Nauka to lubię
+
 https://www.youtube.com/user/naukatolubie?app=desktop
+
+
+
+
+Kasia gandor kanał yt 
+
+ https://www.youtube.com/channel/UCUercAwR2To1Zx6GA6ZP2TQ
+
+
+
+Naukowy bełkot 
+
+https://www.youtube.com/channel/UC_7PqixGIdE-jjoHKMPYpGA
+
+
+
 
 <b>Kanały popularno-naukowe na youtube 🇬🇧</b>
 
@@ -260,7 +277,21 @@ https://www.facebook.com/theactionlabofficial
 https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw   
 
 
+Nature Video
+https://www.youtube.com/channel/UC7c8mE90qCtu11z47U0KErg
+
+
+Minutephysics
+ 
+https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg
+
+
+
 <span>
+
+
+
+
 <b>Podkasty 🇵🇱</b></span>
 
 
@@ -345,14 +376,57 @@ https://audycje.tokfm.pl/audycja/230,Babel-Rzeczpospolita-Multi-Kulti
 	https://audycje.tokfm.pl/audycja/409,Uslugi-Kosmiczne-dla-Ludnosci
 	
 	
+	Przyjaciele Przyszłości
+https://anchor.fm/centrum-cyfrowe/message
+	
 
 <b>Podkasty 🇬🇧</b>
 
+Science Vs
+https://gimletmedia.com/shows/science-vs
+
+
+The Anthropocene Reviewed
+
 https://www.wnycstudios.org/podcasts/anthropocene-reviewed 
+
+Neuromantics
+
+https://www.willeaves.com/podcast
+
+
+
+99% Invisible
+
+https://99percentinvisible.org/
+
+
+Nature Podcast
+
+https://www.nature.com/nature/articles?type=nature-podcast
+
+
+Science Talk (Scientific American)
+
+https://www.scientificamerican.com/podcast/science-talk/
+
+
+Terrible Lizards
+
+https://terriblelizards.libsyn.com/
+
+
+British Museum Membercast
+
+https://www.britishmuseum.org/membership/membercasts
+
+
+
 
 <b> Platformy dyskusji społecznej</b> 
 
 https://biennalewarszawa.pl/ 
+	
 	
 
  
