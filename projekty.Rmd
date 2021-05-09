@@ -9,7 +9,17 @@ site: distill::distill_website
 knitr::include_graphics("ANC.jpg") 
 ```
 
-</br> </br>Vivamus venenatis egestas eros ut tempus. Vivamus id est nisi. Aliquam molestie erat et sollicitudin venenatis. In ac lacus at velit scelerisque mattis.
+
+
+</br> </br> 
+
+<b><a href="https://open.spotify.com/show/31q8yGIJtSpixob4uaeYwl?si=Qt0vROjLSha03-kOkl1jlQ">Artykuły naukowe czytane: w całości, nie do końca profesjonalnie </a></b>
+
+ 
+
+
+
+
 :::
 
 

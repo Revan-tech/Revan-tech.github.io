@@ -1,0 +1,273 @@
+require(rtdists)
+require(msm)
+require(snowfall)
+require(coda)
+require(loo)
+library(tidyverse)
+library(reshape2)
+
+
+source("funkcje_ddm_test_with_d_price.r")
+#load("price_o.Rdata")
+
+#mc = mc[-625]
+
+mc = unlist(mc_full, recursive = FALSE)
+
+params = data.frame()
+for (i in 1:length(mc)) {
+  
+  
+  
+  
+  summary.samples.single=summary(theta.as.mcmc.list(mc[[i]]))
+  
+  params = rbind(params, c(names(mc[i]),summary.samples.single[[1]][,1]))
+  
+  
+  
+}
+
+
+params_copy =  params
+
+ 
+colnames(params) = c("ID",rownames(summary.samples.single[[1]]))
+
+params$ID =  gsub("H026_1", "H026", params$ID)
+
+params= cbind(colsplit(params$ID,"_", c("ID","Side", "Prym", "Con")),params[,-1])
+
+params = params %>% filter(ID != "L021")
+
+params$Group <- ifelse(grepl("H", params$ID), "H", "L")
+
+params[,5:11] <- apply(params[,5:11], 2, as.numeric)
+
+params_stat = params %>% group_by(ID) %>% summarise(a = mean(a), st0 = mean(st0), v = mean(v), t0 = mean(t0), sv = mean(sv), sz=mean(sz))
+
+# 
+# 
+# 
+library(ez)
+# 
+# 
+ezANOVA(params, within = c(Side,Prym,Con), dv = t0, between = Group, wid = ID, type = 3)
+# 
+# 
+ezPlot(params, within = c(Con), between = Group, dv = t0, wid = ID, x = .(Con), split = .(Group))
+# 
+# 
+# ezPlot(params, within = c(Side,Con, Prym), dv = sv, between = Group, wid = ID, x = .(Prym), split = .(Con), col = .(Group), row = .(Side))
+# 
+# 
+# ezPlot(params, within = c(Side, Prym,Con), dv = v,  wid = ID, x = .(Prym), split = .(Side), col = .(Con))
+
+#params = params[,-12]
+
+params_wider = pivot_wider(params, names_from = c(2:4), values_from = 5:10)
+
+write.csv(params_wider,file = "params.csv")
+
+#write.csv(params_wider, file = "DDM_price.csv")
+
+
+##################################################
+
+
+
+ sub <- data_full %>% filter(Subject == "H001")
+
+ sub$RT <- sub$RT/10000
+
+sub$R <- ifelse(sub$correct == TRUE, "upper", "lower")
+
+sub$S <- "upper"
+
+
+ sub = sub %>% filter(Condition  == "P_na_C")
+
+ 
+ ddm.par.names=list(single=c("a","z","t0","sv","v","st0","sz"))
+ 
+ 
+ theta.names=list(single=ddm.par.names$single[!(ddm.par.names$single%in%c("z","d"))])
+ 
+ attr(theta.names$single,"fixed.pars")=c("z","d")
+ 
+ hyper.single=get.priors.and.starts(dual.state=FALSE,theta.names)
+ n.pars.single=length(hyper.single$theta.names.fit)
+ 
+ 
+ n.chains=16
+ 
+ p.migrate=.05  
+ 
+ nmc = c(1500,3000)
+ 
+ 
+ rp=.001 
+ 
+ cores=1  
+ 
+ n.post=200
+ 
+ 
+pp.samples.single=post.predict(mc[["H001_P_na_C"]],sub,n.post=n.post,
+                             theta.names=hyper.single$theta.names.fit,burnin=nmc[2]/2,dual.state=FALSE)
+#
+ plot.post.predictive(sub,pp.samples.single)
+#
+
+ 
+ pp.samples.single=as.data.frame(pp.samples.single)
+ 
+ 
+ggplot() +
+   geom_histogram(data = sub[sub$correct == T,], mapping = aes(x = RT, y = 0.983*..ncount..), color="black", fill="white", binwidth = 0.07) +
+  geom_histogram(data = sub[sub$correct == F,], mapping = aes(x = RT, y = -0.016*..ncount..),color="black", fill="white", binwidth = 0.07) +
+  geom_density(data = pp.samples.single[pp.samples.single$R == pp.samples.single$S,], mapping = aes(x = RT, y = 0.983*..ndensity..), color = "blue") +
+  geom_density(data = pp.samples.single[pp.samples.single$R != pp.samples.single$S,], mapping = aes(x = RT, y = -0.016*..ndensity..), color = "red") +
+  ylab("Density") +
+  xlab("Response time")+
+  ggtitle("Observed RT (histogram) and model generated RT (lines) for subject H001 \n in condition neutral-angry, target on right side field of view \n and target congruent condition")
+
+
+
+
+params_wider$ID <- str_to_upper(params_wider$ID)
+
+
+n2pc =  read.csv2("data_erpy/n2pc_yes_220_360_P7P8.csv")
+
+n2pc = cbind(n2pc, colsplit(n2pc$X, "_", c("ID", "rest")))
+
+n2pc = n2pc %>% filter(ID != "L021")
+
+n2pc =n2pc %>% arrange(ID)
+
+colnames(n2pc)[-11] = paste("n2pc",colnames(n2pc)[-11],sep="_")
+
+all = left_join(params_wider,n2pc)
+
+
+
+cor.test(all$t0_L_an_C, all)
+
+
+
+
+
+
+
+
+# n2 = ((n2pc$AN_P8_Contra - n2pc$NA_P8_Ipsi) + (n2pc$NA_P7_Contra - n2pc$AN_P7_Ipsi))/2
+
+
+
+P1 = read.delim("data_erpy/P1_lat.txt", sep = ",")
+
+P1 = cbind(P1, colsplit(P1$X, "_", c("ID", "rest")))
+
+P1 = P1 %>% filter(ID != "L021")
+
+P1 = P1 %>% arrange(ID)
+
+all = left_join(all,P1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+vv = params %>% group_by(Con) %>% summarise(a = mean(a), st0 = mean(st0), v = mean(v), t0 = mean(t0), sv = mean(sv), sz=mean(sz), d =mean(d))
+
+vv1 = vv[1,-1]
+
+vv2 = vv[2,-1]
+
+vv1 = as.list(vv1)
+
+vv2 = as.list(vv2)
+
+
+
+fun.1 <- function(x) ddiffusion(x, response = "upper",a=vv1[["a"]],v=vv1[["v"]],t0=vv1[["t0"]],z=vv1[["a"]]/2,d=vv1[["d"]],sz=vv1[["sz"]],sv=vv1[["sv"]],st0=vv1[["st0"]])
+fun.2 <- function(x) ddiffusion(x, response = "upper",a=vv2[["a"]],v=vv2[["v"]],t0=vv2[["t0"]],z=vv2[["a"]]/2,d=vv2[["d"]],sz=vv2[["sz"]],sv=vv2[["sv"]],st0=vv2[["st0"]])
+
+colors <- c("High loneliness" = "blue", "Low loneliness" = "green")
+
+
+
+ggplot(data = data.frame(x = 0), mapping = aes(x = x)) + stat_function(fun = fun.1, aes(color = "High loneliness")) + xlim(0.2,1.2) + stat_function(fun = fun.2, aes(color = "Low loneliness")) +xlab("RT") + ylab("Density") + labs(color = "Legend") + 
+  scale_colour_manual("Lgend title", values = c( "blue", "green")) + ggtitle("Modeled response times functions for correct answers")
+
+
+
+
+
+
+hmm1 = rdiffusion(100000, a=vv1[["a"]],v=vv1[["v"]],t0=vv1[["t0"]],z=vv1[["a"]]/2,d=vv1[["d"]],sz=vv1[["sz"]],sv=vv1[["sv"]],st0=vv1[["st0"]])
+hmm2 = rdiffusion(100000, a=vv2[["a"]],v=vv2[["v"]],t0=vv2[["t0"]],z=vv2[["a"]]/2,d=vv2[["d"]],sz=vv2[["sz"]],sv=vv2[["sv"]],st0=vv2[["st0"]])
+
+hmm1 %>% group_by(response) %>% summarise( Mean_RT = round(mean(rt),2), Prop = n()/100000)
+
+hmm2 %>% group_by(response) %>% summarise( Mean_RT = round(mean(rt),2), Prop = n()/100000)
+
+
+
+
+rt <- rdiffusion(10000, a=1, v=2, t0=0.5, z = 0.5)
+min(rt$rt)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+vv = params %>% group_by(Group) %>% summarise(a = mean(a), st0 = mean(st0), v = mean(v), t0 = mean(t0), sv = mean(sv), sz=mean(sz), d =mean(d))
+
+vv1 = vv[1,-1]
+
+vv2 = vv[2,-1]
+
+vv1 = as.list(vv1)
+
+vv2 = as.list(vv2)
+
+
+
+fun.1 <- function(x) ddiffusion(x, response = "upper",a=vv1[["a"]],v=vv1[["v"]],t0=vv1[["t0"]],z=vv1[["a"]]/2,d=vv1[["d"]],sz=0,sv=0,st0=0)
+fun.2 <- function(x) ddiffusion(x, response = "upper",a=vv2[["a"]],v=vv2[["v"]],t0=vv1[["t0"]],z=vv2[["a"]]/2,d=vv2[["d"]],sz=0,sv=0,st0=0)
+
+colors <- c("Con" = "blue", "Non-Con" = "green")
+
+
+
+ggplot(data = data.frame(x = 0), mapping = aes(x = x)) + stat_function(fun = fun.1, aes(color = "Con")) + xlim(0.2,1.2) + stat_function(fun = fun.2, aes(color = "Non-Con")) +xlab("RT") + ylab("Density") + labs(color = "Legend") + 
+  scale_colour_manual("Lgend title", values = c( "blue", "green")) + ggtitle("Modeled response times functions for correct answers")
+
+
+
+ 
