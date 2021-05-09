@@ -3,7 +3,16 @@ title: "Baza wiedzy"
 site: distill::distill_website
 ---
 
-<span>Punktoza - portal pozwalający sprawdzić aktualną punktację czasopism wg list ministerialnych - https://punktoza.pl/ </span>
+<span> <b>Gdzie zacząć szukanie wiedzy, ogólnoprzydatne serwisy</b>
+
+<span>Punktoza - portal pozwalający sprawdzić aktualną punktację czasopism wg list ministerialnych -
+https://punktoza.pl/ 
+
+https://scholar.google.pl/ 
+
+https://otwartezasoby.pl/ 
+
+</span>
 
 <span> Test 
 
@@ -69,13 +78,11 @@ https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw 3Blue1Brown
 
 https://listymnisw.pl/  
 
-https://punktoza.pl/ 
+ 
 
 Scopus web of science 
 
-https://scholar.google.pl/ 
 
-https://otwartezasoby.pl/ 
  
  https://biblioteka.uksw.edu.pl/pl/node/82  
 	
@@ -208,7 +215,7 @@ https://naukawpolsce.pap.pl/aktualnosci/news%2C84944%2Cwkrotce-kolejne-odcinki-p
 
  
 
-Raport o stanie świata, 
+
 
 regularnie: https://www.wnycstudios.org/podcasts/anthropocene-reviewed 
 
@@ -218,7 +225,7 @@ Kasia gandor kanał yt
 
  
 
-Dział zagraniczny  
+
 
 ScepTech 
 
@@ -255,7 +262,32 @@ https://nowewyrazy.uw.edu.pl/linki.html
 
 https://www.youtube.com/watch?v=S9dqJRyk0YM&t=0s 
 
- 
+<b>Blogi popularno-naukowe</b>
 
+
+xx
+
+
+<b>Kanały popularno-naukowe na youtube 🇬🇧</b>
+
+
+xx
+
+<span>
+<b>Podkasty 🇵🇱</b></span>
+
+Dział zagraniczny  
+
+Raport o stanie świata
+
+
+
+<b>Blogi popularno-naukowe</b>
+
+<b>Blogi popularno-naukowe</b>
+
+<b>Blogi popularno-naukowe</b>
+
+<b>Blogi popularno-naukowe</b>
  
  </span>
