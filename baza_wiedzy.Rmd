@@ -5,53 +5,161 @@ site: distill::distill_website
 
 <span> <b>Gdzie zacząć szukanie wiedzy, ogólnoprzydatne serwisy</b>
 
-<span>Punktoza - portal pozwalający sprawdzić aktualną punktację czasopism wg list ministerialnych
-https://punktoza.pl/ 
 
+<table style="width:100%">
+
+
+
+<tr>
+<th>
+Google Scholar
+</th>
+<th>
+Pierwsze miejsce w które należy zajrzeć przy szukaniu artykułów naukowych
+<th>
 https://scholar.google.pl/ 
+</th>
+</tr>
 
-https://otwartezasoby.pl/ 
+<tr>
+<th>Semantic Scholar</th>
+<th>Alternatywa dla G.Scholar</th>
 
-http://bazhum.muzhp.pl/
+<th>https://www.semanticscholar.org/</th>
+</tr>
 
+<tr>
+<th>Microsoft Academic</th>
+<th>Alternatywa dla G.Scholar</th>
 
-https://doaj.org/
-
-
-https://www.ciniba.edu.pl/
-
-
-http://cejsh.icm.edu.pl/
-
-
-https://www.ceeol.com/
-
-
-https://www.buw.uw.edu.pl/en/online-resources/online-databases/
+<th>https://academic.microsoft.com/home</th>
+</tr>
 
 
-http://e-naukowiec.eu/
+<tr>
+<th> Academia</th>
+
+<th>Społecznościowa baza artykułów</th>
+<th>https://www.academia.edu/</th>
+</tr>
+
+<tr>
+<th> ResearchGate</th>
+<th> Społecznościowa baza artykułów</th>
+<th>https://www.researchgate.net/</th>
+</tr>
+
+<tr>
+<th>Predatory Journals</th>
+<th>Lista pism, których należy unikać</th>
+
+<th>https://predatoryjournals.com/journals/  </th>
+</tr>
+
+<tr>
+<th>
+Punktoza </th>
+ 
+<th>Portal pozwalający sprawdzić aktualną punktację czasopism wg list ministerialnych </th>
+<th>https://punktoza.pl/ </th>
+</tr>
+
+<tr>
+<th>Listy ministerialne punktowanych pism</th>
+<th></th>
+<th>https://listymnisw.pl/  </th>
+</tr>
+
+<tr>
+<th>Otwarte Zasoby</th>
+<th>Strona zbierająca zasoby na otwartej licencji</th>
+<th>https://otwartezasoby.pl/ </th>
+</tr>
+
+<tr>
+<th>Open Culture</th>
+<th>Strona zbierająca zasoby na otwartej licencji</th>
+<th>https://www.openculture.com/</th>
+</tr>
+
+<tr>
+<th>Archive.com</th>
+<th>Strona zbierająca zasoby na otwartej licencji</th>
+<th>https://archive.org/</th>
+</tr>
 
 
-https://rcin.org.pl/dlibra
-
-https://www.academia.edu/
-
-
-https://www.researchgate.net/
-
-</span>
-
-<span> Test 
+<tr>
+<th>BazHum</th>
+<th>Repozytorium polskich artykułów. Darmowe i w otwartym dostępie</th>
+<th>http://bazhum.muzhp.pl/</th>
+</tr>
 
 
-Wikiksiążki
-https://pl.wikibooks.org/wiki/Wikibooks:Strona_g%C5%82%C3%B3wna 
 
-	 
-Lista pism, których należy unikać
+<tr>
+<th>The Directory of Open Access Journals </th>
+<th>Zbiór pism w otwartym dostępie </th>
+<th>https://doaj.org/ </th>
+</tr>
 
-https://predatoryjournals.com/journals/  
+
+
+<tr>
+<th> Centrum Informacji Naukowej i Biblioteka Akademicka UŚ</th>
+<th>Wyszukiwarka źródeł </th>
+<th>https://www.ciniba.edu.pl/ </th>
+</tr>
+
+
+<tr>
+<th>The Central European Journal of Social Sciences and Humanities </th>
+<th>Repozytorium artykułów. Darmowy i otwarty dostęp </th>
+<th>http://cejsh.icm.edu.pl/ </th>
+</tr>
+
+
+<tr>
+<th>Central and Eastern European Online Library </th>
+<th>Repozytorium artykułów </th>
+<th>https://www.ceeol.com/ </th>
+</tr>
+
+
+<tr>
+<th>Zasoby online BUW </th>
+<th> </th>
+<th>https://www.buw.uw.edu.pl/pl/online-resources/online-databases/ </th>
+</tr>
+
+
+<tr>
+<th>E-naukowiec </th>
+<th>Repozytorium artykułów i książek </th>
+<th>http://e-naukowiec.eu/ </th>
+</tr>
+
+
+<tr>
+<th>Repozytorium Cyfrowe Instytutów Naukowych </th>
+<th>Repozytorium artykułów </th>
+<th>https://rcin.org.pl/dlibra </th>
+</tr>
+
+
+<tr>
+<th>Wikiksiążki</th>
+<th>Darmowe materiały naukowe</th>
+<th>https://pl.wikibooks.org/wiki/Wikibooks:Strona_g%C5%82%C3%B3wna  </th>
+</tr>
+
+
+
+
+</table>
+ </span>
+ 
+ 
  
 
 <b>Artykuły agregujące linki do przydatnych stron</b>
@@ -114,9 +222,6 @@ Portal Nauka Polska
 http://www.nauka-polska.opi.org.pl/ 
 	
 
-Listy Ministerialne
-
-https://listymnisw.pl/  
 
  
 
