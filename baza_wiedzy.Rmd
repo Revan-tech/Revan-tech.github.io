@@ -154,7 +154,31 @@ Punktoza </th>
 </tr>
 
 
+<tr>
+<th>Platforma Otwartej Nauki</th>
+<th>Repozytorium otwartej i darmowej wiedzy</th>
+<th>http://pon.edu.pl/ </th>
+</tr>
+ 
 
+<tr>
+<th>Scopus </th>
+<th>Strona na której można sprawdzić impact factor czasopism </th>
+<th>https://www.scopus.com/home.uri </th>
+</tr>
+
+
+
+<tr>
+<th>Web of science </th>
+<th>Strona na której można sprawdzić impact factor czasopism </th>
+<th>http://webofknowledge.com  </th>
+</tr>
+
+
+
+
+	
 
 </table>
  </span>
@@ -192,10 +216,7 @@ Artykuł na temat sztuki szukania artykułóW naukowych
 https://www.sztukaszukania.pl/2019/01/29/jak-szukac-artykulow-naukowych/ 
 	
 
- 
-Platforma Otwartej Nauki
-http://pon.edu.pl/ 
-	
+
 
 <b>Gdzie szukać oprogramowania?</b>
 
@@ -223,18 +244,6 @@ http://www.nauka-polska.opi.org.pl/
 	
 
 
- 
-
-Scopus
-
-https://www.scopus.com/home.uri
-
-
-Web of science
-
-http://webofknowledge.com 
-
-
 
  Przystanek Nauka (UŚ)
 
@@ -244,9 +253,6 @@ https://przystaneknauka.us.edu.pl/
  
 
 https://nauka.uj.edu.pl/start  
-	
-
- 
 	
 
  
@@ -267,10 +273,6 @@ Lek.Check
 https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  
 
 
-
- 
-
-
 	
 Humanistyka medyczna
 
@@ -278,29 +280,10 @@ Humanistyka medyczna
 
  
 
-
- 
-
 https://naukawpolsce.pap.pl/aktualnosci/news%2C84944%2Cwkrotce-kolejne-odcinki-podcastow-biocentrum-edukacji-naukowej.html 
 	
-
  
 
- 
-
-Informacje z poradnika sztuka promocji nauki 
-
- 
-
- 
-
-https://kph.org.pl/wp-content/uploads/2017/11/Praktyczny-przewodnik-po-zdrowiu-LGBTI-dla-lekarzy.pdf 
-
-https://kph.org.pl/publikacje_kph/ 
-
- 
-
- 
 
 https://nowewyrazy.uw.edu.pl/linki.html 
 
@@ -309,117 +292,184 @@ https://nowewyrazy.uw.edu.pl/linki.html
 
 <b>Serwisy informacyjne popularno-naukowe 🇵🇱</b>
 
+<table>
+<tr>
+<th> </th>
+<th> </th>
+<th>https://dzienniknaukowy.pl/ </th>
+</tr>
 
 
-https://dzienniknaukowy.pl/ 
 
 
-Nauka w Polsce (PAP)
-	https://naukawpolsce.pap.pl
+ 
+
+<tr>
+<th>Nauka w Polsce (PAP) </th>
+<th> </th>
+<th>https://naukawpolsce.pap.pl </th>
+</tr>
+
 	
+
+</table>
 	
 
 <b>Serwisy informacyjne popularno-naukowe 🇬🇧</b>
+ <table>
+ <tr>
+<th> </th>
+<th> </th>
+<th> </th>
+</tr>
 
+</table>
 
 
 <b>Blogi popularno-naukowe 🇵🇱</b>
 
-https://www.naukatolubie.pl/
+ <table>
+<tr>
+<th>Nauka to lubię </th>
+<th> </th>
+<th>https://www.naukatolubie.pl/ </th>
+</tr>
 
 
-Lista blogów naukowych
+<tr>
+<th>Lista blogów naukowych </th>
+<th> </th>
+<th>https://ekulczycki.pl/warsztat_badacza/katalog-blogow-naukowych/   </th>
+</tr>
 
-https://ekulczycki.pl/warsztat_badacza/katalog-blogow-naukowych/  
 	
-	
-	
-	Lista blogów naukowych
+<tr>
+<th>Lista blogów naukowych </th>
+<th> </th>
+<th>http://www.zostanphd.pl/blogi-naukowe-share-week-2018/ </th>
+</tr>	
 
-http://www.zostanphd.pl/blogi-naukowe-share-week-2018/  
-	
 
+<tr>
+<th>Lista blogów naukowych </th>
+<th> </th>
+<th>https://naukawpolsce.pap.pl/aktualnosci/news%2C32436%2Cpolskie-popularnonaukowe-strony-blogi-kanaly-wideo-i-podcasty.html   </th>
+</tr> 
  
- Lista blogów naukowych
- 
-https://naukawpolsce.pap.pl/aktualnosci/news%2C32436%2Cpolskie-popularnonaukowe-strony-blogi-kanaly-wideo-i-podcasty.html  
+
+<tr>
+<th>Lista blogów naukowych </th>
+<th> </th>
+<th>https://www.crazynauka.pl/share-week-2019-czyli-dobre-blogi-ktore-wam-polecamy/  </th>
+</tr>
 
 
-Lista blogów naukowych
-
-https://www.crazynauka.pl/share-week-2019-czyli-dobre-blogi-ktore-wam-polecamy/ 
-
-
-
-Lista blogów naukowych
-
-https://www.dobreprogramy.pl/PREZESKIC/Popularyzacja-nauki-TOP-10-serwisow,88042.html  
+<tr>
+<th> Lista blogów naukowych</th>
+<th> </th>
+<th>https://www.dobreprogramy.pl/PREZESKIC/Popularyzacja-nauki-TOP-10-serwisow,88042.html  </th>
+</tr>
 	
+<tr>
+<th>Lista blogów naukowych </th>
+<th> </th>
+<th>https://www.totylkoteoria.pl/2019/01/ranking-polskich-blogow-naukowych-2018.html  </th>
+</tr>
 
-Lista blogów naukowych
 
-https://www.totylkoteoria.pl/2019/01/ranking-polskich-blogow-naukowych-2018.html  
+<tr>
+<th>Lista blogów naukowych UKSW </th>
+<th> </th>
+<th>  https://biblioteka.uksw.edu.pl/pl/node/82  </th>
+</tr>
+
+</table>
 
 
-
-Lista blogów naukowych UKSW 
- https://biblioteka.uksw.edu.pl/pl/node/82  
-	
-	
 	
 <b>Blogi popularno-naukowe 🇬🇧</b>
+ <table>
+ <tr>
+<th> </th>
+<th> </th>
+<th> </th>
+</tr>
 
-
-xx
+</table>
 
 
 <b>Kanały popularno-naukowe na youtube 🇵🇱</b>
 
-
-Nauka to lubię
-
-https://www.youtube.com/user/naukatolubie?app=desktop
+ <table>
 
 
+<tr>
+<th> Nauka to lubię</th>
+<th> </th>
+<th>https://www.youtube.com/user/naukatolubie?app=desktop </th>
+</tr>
 
 
-Kasia gandor kanał yt 
+<tr>
+<th>Kasia gandor kanał yt  </th>
+<th> </th>
+<th> https://www.youtube.com/channel/UCUercAwR2To1Zx6GA6ZP2TQ</th>
+</tr>
 
- https://www.youtube.com/channel/UCUercAwR2To1Zx6GA6ZP2TQ
+
+<tr>
+<th> Naukowy bełkot </th>
+<th> </th>
+<th>https://www.youtube.com/channel/UC_7PqixGIdE-jjoHKMPYpGA </th>
+</tr>
 
 
-
-Naukowy bełkot 
-
-https://www.youtube.com/channel/UC_7PqixGIdE-jjoHKMPYpGA
-
+</table>
 
 
 
 <b>Kanały popularno-naukowe na youtube 🇬🇧</b>
 
-Veritasium
+ <table>
 
-https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA  
-
- 
-The Action Lab
-
-https://www.facebook.com/theactionlabofficial  
-
- 
-3Blue1Brown
-
-https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw   
+<tr>
+<th>Veritasium </th>
+<th> </th>
+<th>https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA </th>
+</tr>
 
 
-Nature Video
-https://www.youtube.com/channel/UC7c8mE90qCtu11z47U0KErg
+
+<tr>
+<th>The Action Lab </th>
+<th> </th>
+<th>https://www.facebook.com/theactionlabofficial   </th>
+</tr>
 
 
-Minutephysics
- 
-https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg
+<tr>
+<th>3Blue1Brown </th>
+<th> </th>
+<th>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw  </th>
+</tr>
+
+
+<tr>
+<th>Nature Video </th>
+<th> </th>
+<th>https://www.youtube.com/channel/UC7c8mE90qCtu11z47U0KErg </th>
+</tr>
+
+
+<tr>
+<th>Minutephysics </th>
+<th> </th>
+<th>https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg </th>
+</tr>
+
+
+
+</table>
 
 
 
@@ -429,134 +479,185 @@ https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg
 
 
 <b>Podkasty 🇵🇱</b></span>
+ 
+<table>
+<tr>
+<th>Tu Centrum Nauki Kopernik  </th>
+<th> </th>
+<th> https://www.kopernik.org.pl/podcast-tu-centrum-nauki-kopernik</th>
+</tr>
 
 
-Tu Centrum Nauki Kopernik 
 
-https://www.kopernik.org.pl/podcast-tu-centrum-nauki-kopernik
-
-Dział zagraniczny  
-
-https://www.dzialzagraniczny.pl/ 
-
-Raport o stanie świata
-
-https://raportostanieswiata.pl/ 
-
-podcast granice nauki 
-
-https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9kMmQzOWI0L3BvZGNhc3QvcnNz
+<tr>
+<th>Dział zagraniczny   </th>
+<th> </th>
+<th>https://www.dzialzagraniczny.pl/  </th>
+</tr>
 
 
-https://uni.wroc.pl/podcasty-naukowe/ 
-	
+<tr>
+<th>Raport o stanie świata </th>
+<th> </th>
+<th>https://raportostanieswiata.pl/  </th>
+</tr>
+
+
+<tr>
+<th> podcast granice nauki </th>
+<th> </th>
+<th>https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9kMmQzOWI0L3BvZGNhc3QvcnNz </th>
+</tr>
+
+
+<tr>
+<th> </th>
+<th> </th>
+<th>https://uni.wroc.pl/podcasty-naukowe/ </th>
+</tr>
 
  
+<tr>
+<th> </th>
+<th> </th>
+<th> https://cwid.uw.edu.pl/podcast-nauka-nadaje/ </th>
+</tr>
 
-https://cwid.uw.edu.pl/podcast-nauka-nadaje/ 
 
-
-ScepTech 
-
-https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5hY2FzdC5jb20vcHVibGljL3Nob3dzL3NjZXB0ZWNo
+<tr>
+<th>ScepTech  </th>
+<th> </th>
+<th> https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5hY2FzdC5jb20vcHVibGljL3Nob3dzL3NjZXB0ZWNo</th>
+</tr>
 
   
-
-Nauka XXI wieku 
-	
-http://nauka.podkasty.info/
- 
-
-Crazy Nauka 
-
-https://www.crazynauka.pl/
+<tr>
+<th>Nauka XXI wieku  </th>
+<th> </th>
+<th> http://nauka.podkasty.info/</th>
+</tr>
 
  
- 
+<tr>
+<th> Crazy Nauka </th>
+<th> </th>
+<th>https://www.crazynauka.pl/ </th>
+</tr>
 	
 
- 
-
-Dekompresor Nauka 
-
-http://dekompresor.pl/nauka
-
- 
-
-http://Wszechnica.org.pl 
-	
+<tr>
+<th>Dekompresor Nauka  </th>
+<th> </th>
+<th> http://dekompresor.pl/nauka</th>
+</tr>
 
  
+<tr>
+<th> </th>
+<th> </th>
+<th>http://Wszechnica.org.pl  </th>
+</tr>
 
-Radio Naukowe 
-	
-https://radionaukowe.pl/
+<tr>
+<th> Radio Naukowe </th>
+<th> </th>
+<th>https://radionaukowe.pl/ </th>
+</tr>
+
  
- 
- Babel. Rzeczpospolita Multi-Kulti (d. Lechistan)
- 
-https://audycje.tokfm.pl/audycja/230,Babel-Rzeczpospolita-Multi-Kulti
+<tr>
+<th>  Babel. Rzeczpospolita Multi-Kulti (d. Lechistan)</th>
+<th> </th>
+<th>https://audycje.tokfm.pl/audycja/230,Babel-Rzeczpospolita-Multi-Kulti </th>
+</tr>
+
 	
-	SexAudycja
-	
-	https://audycje.tokfm.pl/audycja/361,SexAudycja
-	
-	
-	 Klimat zmian 
-	 
-	https://audycje.tokfm.pl/audycja/394,Klimat-zmian
-	
-	
-	 Usługi Kosmiczne dla Ludności 
-	 
-	https://audycje.tokfm.pl/audycja/409,Uslugi-Kosmiczne-dla-Ludnosci
+<tr>
+<th> 	SexAudycja</th>
+<th> </th>
+<th>	https://audycje.tokfm.pl/audycja/361,SexAudycja </th>
+</tr>
 	
 	
-	Przyjaciele Przyszłości
-https://anchor.fm/centrum-cyfrowe/message
+<tr>
+<th> 	 Klimat zmian </th>
+<th> </th>
+<th>	https://audycje.tokfm.pl/audycja/394,Klimat-zmian </th>
+</tr>
+
 	
+<tr>
+<th>	 Usługi Kosmiczne dla Ludności  </th>
+<th> </th>
+<th>	https://audycje.tokfm.pl/audycja/409,Uslugi-Kosmiczne-dla-Ludnosci </th>
+</tr>
+
+	
+<tr>
+<th>	Przyjaciele Przyszłości </th>
+<th> </th>
+<th> https://anchor.fm/centrum-cyfrowe/message</th>
+</tr>
+
+
+</table>
+
+
 
 <b>Podkasty 🇬🇧</b>
 
-Science Vs
-https://gimletmedia.com/shows/science-vs
+<table>
+<tr>
+<th>Science Vs </th>
+<th> </th>
+<th>https://gimletmedia.com/shows/science-vs </th>
+</tr>
+
+<tr>
+<th>The Anthropocene Reviewed </th>
+<th> </th>
+<th>https://www.wnycstudios.org/podcasts/anthropocene-reviewed  </th>
+</tr>
 
 
-The Anthropocene Reviewed
 
-https://www.wnycstudios.org/podcasts/anthropocene-reviewed 
+<tr>
+<th>Neuromantics </th>
+<th> </th>
+<th>https://www.willeaves.com/podcast </th>
+</tr>
 
-Neuromantics
+<tr>
+<th>99% Invisible </th>
+<th> </th>
+<th>https://99percentinvisible.org/ </th>
+</tr>
 
-https://www.willeaves.com/podcast
+<tr>
+<th>Nature Podcast </th>
+<th> </th>
+<th>https://www.nature.com/nature/articles?type=nature-podcast </th>
+</tr>
 
+<tr>
+<th>Science Talk (Scientific American) </th>
+<th> </th>
+<th>https://www.scientificamerican.com/podcast/science-talk/ </th>
+</tr>
 
+<tr>
+<th>Terrible Lizards </th>
+<th> </th>
+<th>https://terriblelizards.libsyn.com/ </th>
+</tr>
 
-99% Invisible
+<tr>
+<th>British Museum Membercast </th>
+<th> </th>
+<th>https://www.britishmuseum.org/membership/membercasts </th>
+</tr>
 
-https://99percentinvisible.org/
-
-
-Nature Podcast
-
-https://www.nature.com/nature/articles?type=nature-podcast
-
-
-Science Talk (Scientific American)
-
-https://www.scientificamerican.com/podcast/science-talk/
-
-
-Terrible Lizards
-
-https://terriblelizards.libsyn.com/
-
-
-British Museum Membercast
-
-https://www.britishmuseum.org/membership/membercasts
-
-
+</table>
 
 
 <b> Platformy dyskusji społecznej</b> 
@@ -577,6 +678,13 @@ https://www.instagram.com/kasia_coztymseksem/?hl=pl
 
 I kulturaseksualna 
 https://kulturaseksualna.pl/
+ 
+ 
+ 
+https://kph.org.pl/wp-content/uploads/2017/11/Praktyczny-przewodnik-po-zdrowiu-LGBTI-dla-lekarzy.pdf 
+
+https://kph.org.pl/publikacje_kph/ 
+
  
  
  <b> Cyfrowe muzea i galerie </b>
@@ -677,3 +785,12 @@ https://twitter.com/fakenews_buster?lang=en
  https://www.adfontesmedia.com/?v=402f03a963ba
  
  </span>
+ 
+<table>
+<tr>
+<th> </th>
+<th> </th>
+<th> </th>
+</tr>
+
+</table>
