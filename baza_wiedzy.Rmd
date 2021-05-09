@@ -12,6 +12,29 @@ https://scholar.google.pl/
 
 https://otwartezasoby.pl/ 
 
+http://bazhum.muzhp.pl/
+
+
+https://doaj.org/
+
+
+https://www.ciniba.edu.pl/
+
+
+http://cejsh.icm.edu.pl/
+
+
+https://www.ceeol.com/
+
+
+https://www.buw.uw.edu.pl/en/online-resources/online-databases/
+
+
+http://e-naukowiec.eu/
+
+
+https://rcin.org.pl/dlibra
+
 </span>
 
 <span> Test 
@@ -20,7 +43,10 @@ https://otwartezasoby.pl/
 Wikiksiążki
 https://pl.wikibooks.org/wiki/Wikibooks:Strona_g%C5%82%C3%B3wna 
 
-	
+	 
+Lista pism, których należy unikać
+
+https://predatoryjournals.com/journals/  
  
 
 <b>Artykuły agregujące linki do przydatnych stron</b>
@@ -442,5 +468,102 @@ https://www.instagram.com/kasia_coztymseksem/?hl=pl
 I kulturaseksualna 
 https://kulturaseksualna.pl/
  
+ 
+ <b> Cyfrowe muzea i galerie </b>
+ 
+ http://cyfrowe.mnw.art.pl/
+ 
+ 
+https://artmuseum.pl/pl/zasoby
+
+
+https://artmuseum.pl/pl/archiwum
+
+
+https://artmuseum.pl/pl/kolekcja
+
+
+https://zacheta.art.pl/pl/kolekcja/katalog
+
+
+https://www.europeana.eu/pl
+
+
+
+https://zbiory.mnk.pl/en/home-page
+
+
+https://www.wearemuseums.com/
+
+
+https://www.paranoia-tv.com/en/
+
+
+https://www.youtube.com/c/Pa%C5%84stwoweMuzeumEtnograficznewWarszawie/videos
+
+
+https://muzea.malopolska.pl/pl/l
+
+
+https://polona.pl/
+
+<b>Strony fackcheckingowe</b>
+
+https://fakenews.pl/
+
+
+https://sprawdzam.afp.com/
+
+
+https://demagog.org.pl/
+
+
+https://misinforeview.hks.harvard.edu/
+
+
+https://euvsdisinfo.eu/
+
+
+https://www.stopfake.org/en/tag/disinformation-review/
+
+
+https://schema.org/ClaimReview
+
+
+https://developers.google.com/search/docs/data-types/factcheck
+
+
+https://www.claimreviewproject.com/the-facts-about-claimreivew
+
+
+https://www.storybench.org/how-claimreview-is-simplifying-the-process-of-fact-checking/
+
+
+politifact.com
+
+
+https://noodleremover.news/ 
+
+
+fakeoff.org
+
+
+stopfake.org
+
+
+botometer.iuni.iu.edu
+
+
+https://en.wikipedia.org/wiki/List_of_fake_news_websites
+
+
+https://twitter.com/fakenews_buster?lang=en
+
+
+ https://wid.org.pl/wp-content/uploads/E_wydanie-Mały-Leksykon-Postprawdy.pdf
+ 
+ 
+ Media bias chart
+ https://www.adfontesmedia.com/?v=402f03a963ba
  
  </span>
