@@ -24,8 +24,6 @@ https://pl.wikibooks.org/wiki/Wikibooks:Strona_g%C5%82%C3%B3wna
 
  
 
-https://dzienniknaukowy.pl/ 
-	
 
  
 
@@ -66,15 +64,7 @@ https://www.ejournals.eu/
 
 http://www.nauka-polska.opi.org.pl/ 
 	
-https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA Veritasium 
 
- 
-
-https://www.facebook.com/theactionlabofficial  
-
- 
-
-https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw 3Blue1Brown  
 
 https://listymnisw.pl/  
 
@@ -93,9 +83,6 @@ https://przystaneknauka.us.edu.pl/
 	
 
  
-
-https://ekulczycki.pl/warsztat_badacza/katalog-blogow-naukowych/  
-	
 
  
 
@@ -139,7 +126,6 @@ strefa psyche
 
 Na audiotece są wykłady profesora hołtysa o samobójstwach 
 
-podcast granice nauki 
 
 https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  
 
@@ -262,16 +248,48 @@ https://nowewyrazy.uw.edu.pl/linki.html
 
 https://www.youtube.com/watch?v=S9dqJRyk0YM&t=0s 
 
-<b>Blogi popularno-naukowe</b>
+<b>Serwisy informacyjne popularno-naukowe 🇵🇱</b>
+
+
+
+https://dzienniknaukowy.pl/ 
+	
+	
+
+<b>Serwisy informacyjne popularno-naukowe 🇬🇧</b>
+
+
+
+<b>Blogi popularno-naukowe 🇵🇱</b>
+
+
+
+https://ekulczycki.pl/warsztat_badacza/katalog-blogow-naukowych/  
+	
+
+
+<b>Blogi popularno-naukowe 🇬🇧</b>
 
 
 xx
+
+
+<b>Kanały popularno-naukowe na youtube 🇵🇱</b>
 
 
 <b>Kanały popularno-naukowe na youtube 🇬🇧</b>
 
 
-xx
+https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA Veritasium 
+
+ 
+
+https://www.facebook.com/theactionlabofficial  
+
+ 
+
+https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw 3Blue1Brown  
+
 
 <span>
 <b>Podkasty 🇵🇱</b></span>
@@ -281,13 +299,13 @@ Dział zagraniczny
 Raport o stanie świata
 
 
+podcast granice nauki 
 
-<b>Blogi popularno-naukowe</b>
 
-<b>Blogi popularno-naukowe</b>
+<b>Podkasty 🇬🇧</b>
 
-<b>Blogi popularno-naukowe</b>
 
-<b>Blogi popularno-naukowe</b>
+
+
  
  </span>
