@@ -21,10 +21,6 @@ https://otwartezasoby.pl/
 https://pl.wikibooks.org/wiki/Wikibooks:Strona_g%C5%82%C3%B3wna 
 
 	
-
- 
-
-
  
 
 https://pl.wikipedia.org/wiki/Kategoria:Portale_naukowe 
@@ -45,6 +41,13 @@ https://www.sztukaszukania.pl/2019/01/29/jak-szukac-artykulow-naukowych/
 http://pon.edu.pl/ 
 	
 
+<b>Gdzie szukać oprogramowania?</b>
+
+
+https://alternativeto.net/ 
+
+
+<b>Reszta jeszcze nieuporządkowana </b>
  
 
 https://medium.com/polish/37-najlepszych-stron-internetowych-do-nauki-nowych-rzeczy-18d2642ce821 
@@ -90,13 +93,7 @@ https://naukawpolsce.pap.pl/aktualnosci/news%2C32436%2Cpolskie-popularnonaukowe-
 	
 
  
-
-http://www.zostanphd.pl/blogi-naukowe-share-week-2018/  
-	
-
  
-
-https://www.crazynauka.pl/share-week-2019-czyli-dobre-blogi-ktore-wam-polecamy/  
 	
 
  
@@ -135,14 +132,7 @@ Dziennik naukowy
 
  
 
-Platformy dyskusji 
 
-https://biennalewarszawa.pl/ 
-	
-
- 
-
-https://www.mixcloud.com/radiokapital/radio-kapita%C5%82-godzina-szumu-3-marta-czy%C5%BC-i-urszula-zaj%C4%85czkowska/  
 	
 
  https://www.facebook.com/humanistykamedyczna/  
@@ -186,12 +176,6 @@ Tu Centrum Nauki Kopernik
 
  
 
-https://uni.wroc.pl/podcasty-naukowe/ 
-	
-
- 
-
-https://cwid.uw.edu.pl/podcast-nauka-nadaje/ 
 	
 
  
@@ -262,10 +246,17 @@ https://dzienniknaukowy.pl/
 
 <b>Blogi popularno-naukowe 🇵🇱</b>
 
-
+https://www.naukatolubie.pl/
 
 https://ekulczycki.pl/warsztat_badacza/katalog-blogow-naukowych/  
 	
+
+http://www.zostanphd.pl/blogi-naukowe-share-week-2018/  
+	
+
+ 
+
+https://www.crazynauka.pl/share-week-2019-czyli-dobre-blogi-ktore-wam-polecamy/ 
 
 
 <b>Blogi popularno-naukowe 🇬🇧</b>
@@ -276,6 +267,7 @@ xx
 
 <b>Kanały popularno-naukowe na youtube 🇵🇱</b>
 
+https://www.youtube.com/user/naukatolubie?app=desktop
 
 <b>Kanały popularno-naukowe na youtube 🇬🇧</b>
 
@@ -294,18 +286,35 @@ https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw 3Blue1Brown
 <span>
 <b>Podkasty 🇵🇱</b></span>
 
+https://www.kopernik.org.pl/podcast-tu-centrum-nauki-kopernik
+
 Dział zagraniczny  
+https://www.dzialzagraniczny.pl/ 
 
 Raport o stanie świata
-
+https://raportostanieswiata.pl/ 
 
 podcast granice nauki 
 
+
+https://uni.wroc.pl/podcasty-naukowe/ 
+	
+
+ 
+
+https://cwid.uw.edu.pl/podcast-nauka-nadaje/ 
 
 <b>Podkasty 🇬🇧</b>
 
 
 
+<b> Platformy dyskusji społecznej</b> 
 
+https://biennalewarszawa.pl/ 
+	
+
+ 
+
+https://www.mixcloud.com/radiokapital/radio-kapita%C5%82-godzina-szumu-3-marta-czy%C5%BC-i-urszula-zaj%C4%85czkowska/  
  
  </span>
