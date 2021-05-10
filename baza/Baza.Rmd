@@ -223,7 +223,12 @@ Punktoza </th>
 <th>https://libra.ibuk.pl/</th>
 </tr>
 	
-
+	
+<tr>	
+<th>Free Learning List</th>
+<th>Bogata lista stron edukacyjnych</th>
+<th>https://freelearninglist.org/</th>
+<tr>
 
 </table>
  </span>
@@ -380,7 +385,11 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 	
 
 
-
+<tr>
+<th>Instrat </th>
+<th>Publikacje dotyczące ekonomii i klimatu </th>
+<th>http://instrat.pl/publikacje/</th>
+</tr>
 
 <tr>
 <th> </th>
