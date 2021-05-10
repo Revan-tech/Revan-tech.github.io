@@ -82,6 +82,11 @@ Punktoza </th>
 </tr>
 
 <tr>
+<th>Orcid</th>
+<th>Każda osoba w nauce powinna założyć swój własny identyfikator ORCID</th>
+<th>https://orcid.org/</th>
+
+<tr>
 <th>Otwarte Zasoby</th>
 <th>Strona zbierająca zasoby na otwartej licencji</th>
 <th>https://otwartezasoby.pl/ </th>
@@ -383,7 +388,12 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 <th> https://naukawpolsce.pap.pl/aktualnosci/news%2C84944%2Cwkrotce-kolejne-odcinki-podcastow-biocentrum-edukacji-naukowej.html</th>
 </tr>
 
- 
+<tr>
+<th>Przydatny słowniczek do neuro</th>
+<th> </th>
+<th>http://fizyka.umk.pl/~duch/Wyklady/Mozg/Slowniczek.htm</th>
+</tr>
+
 	
  
 <tr>
