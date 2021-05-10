@@ -125,6 +125,19 @@ Punktoza </th>
 <th>https://www.ceeol.com/ </th>
 </tr>
 
+<tr>
+<th>Repository of Centre for Open Science</th>
+<th>Repozytorium artykułów </th>
+<th>https://depot.ceon.pl/ </th>
+</tr>
+
+<tr>
+<th>Baza AGRO</th>
+<th>Repozytorium artykułów </th>
+<th>http://agro.icm.edu.pl/</th>
+</tr>
+
+
 
 <tr>
 <th>Zasoby online BUW </th>
@@ -176,8 +189,17 @@ Punktoza </th>
 </tr>
 
 
+<tr>
+<th>OpenAIRE </th>
+<th>Wyszukiwarka artykułów w otwartym dostępie </th>
+<th>https://explore.openaire.eu/</th>
+</tr>
 
-
+<tr>
+<th>Zenodo</th>
+<th>Wyszukiwarka artykułów w otwartym dostępie </th>
+<th>https://zenodo.org/</th>
+</tr>
 	
 
 </table>
@@ -792,6 +814,28 @@ https://twitter.com/fakenews_buster?lang=en
  
  </span>
  
+<b>🦑 Pozyskiwanie grantów</b>
+ 
+https://www.ncn.gov.pl/finansowanie-nauki/konkursy/typy
+ 
+ 
+ 
+ 
+<b>🦑 Poradniki</b>
+ 
+ 
+Poradnik korzystania z Google Scholar
+
+https://pitt.libguides.com/googlescholar/searchtips
+ 
+https://www.wur.nl/en/article/How-to-use-Google-Scholar.htm
+ 
+https://guides.library.ucsc.edu/c.php?g=745384&p=5361954
+ 
+https://guides.library.illinois.edu/c.php?g=347668&p=2344602
+
+https://paperpile.com/g/google-scholar-guide/
+
 <table>
 <tr>
 <th> </th>
