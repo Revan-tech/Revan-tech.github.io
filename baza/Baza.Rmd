@@ -1104,6 +1104,20 @@ https://kulturaseksualna.pl/
 <th> https://www.adfontesmedia.com/?v=402f03a963ba</th>
 </tr>
 
+<tr>
+<th>Bad News</th>
+<th>Gra edukująca o dezinformacji</th>
+<th>https://www.getbadnews.com/#intro</th>
+</tr>
+
+<tr>
+<th>Factitious</th>
+<th>Gra edukująca o dezinformacji</th>
+<th>http://factitious.augamestudio.com/#/</th>
+</tr>
+
+
+
 </table>
  
  </span>
@@ -1176,11 +1190,34 @@ https://kulturaseksualna.pl/
 
 </table>
 
+### <b>Tematyczne</b>
 <table>
 <tr>
-<th> </th>
-<th> </th>
-<th> </th>
+<th>3D Brain - Brainfacts </th>
+<th>Trójwymiarowy model mózgu do zabawy i nauki </th>
+<th>http://www.brainfacts.org/3D-Brain </th>
 </tr>
+
+
+### <b> Gry edukacyjne, gry w edukacji </b>
+
+<table>
+<tr>
+<th>Taming Gaming </th>
+<th>Baza informacji o grach przyjaznych dla dzieci </th>
+<th>https://www.taminggaming.com/</th>
+</tr>
+
+<tr>
+<th>Science based games </th>
+<th>Wielka lista gier opartych na nauce </th>
+<th>https://github.com/stared/science-based-games-list</th>
+</tr>
+
+
+
+
+
+</table>
 
 </table>
