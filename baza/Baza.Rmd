@@ -446,7 +446,7 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
  <tr>
 <th> </th>
 <th> </th>
-<th> </th>
+<th>Na razie pusto </th>
 </tr>
 
 </table>
@@ -518,7 +518,7 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
  <tr>
 <th> </th>
 <th> </th>
-<th> </th>
+<th>Na razie pusto </th>
 </tr>
 
 </table>
@@ -875,151 +875,296 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 
 ### <b>🦑 Platformy dyskusji społecznej</b> 
 
-https://biennalewarszawa.pl/ 
-	
+
+<table>
+
+
+<tr>
+<th>https://biennalewarszawa.pl/ </th>
+</tr>
 	
 
  
-
-https://www.mixcloud.com/radiokapital/radio-kapita%C5%82-godzina-szumu-3-marta-czy%C5%BC-i-urszula-zaj%C4%85czkowska/  
+<tr>
+<th>https://www.mixcloud.com/radiokapital/radio-kapita%C5%82-godzina-szumu-3-marta-czy%C5%BC-i-urszula-zaj%C4%85czkowska/  </th>
+</tr>
  
- 
- 
- Instagram: 
+<tr>
+<th> Instagram: 
 Kasiacoztymseksem 
 https://www.instagram.com/kasia_coztymseksem/?hl=pl
+</th>
+</tr>
 
-I kulturaseksualna 
+<tr>
+<th>Kulturaseksualna 
 https://kulturaseksualna.pl/
- 
- 
- 
-https://kph.org.pl/wp-content/uploads/2017/11/Praktyczny-przewodnik-po-zdrowiu-LGBTI-dla-lekarzy.pdf 
+</th> 
+</tr>
 
-https://kph.org.pl/publikacje_kph/ 
 
- 
+<tr> 
+<th>https://kph.org.pl/wp-content/uploads/2017/11/Praktyczny-przewodnik-po-zdrowiu-LGBTI-dla-lekarzy.pdf </th>
+</tr>
+
+<tr>
+
+<th>https://kph.org.pl/publikacje_kph/ </th>
+</tr>
+
+</table>
  
 ### <b>🦑 Cyfrowe muzea i galerie </b>
  
- http://cyfrowe.mnw.art.pl/
  
+<table> 
  
-https://artmuseum.pl/pl/zasoby
+<tr>
+<th>http://cyfrowe.mnw.art.pl/</th>
+</tr>
+ 
+<tr>
+<th>https://artmuseum.pl/pl/zasoby</th>
+</tr>
+
+<tr>
+<th>https://artmuseum.pl/pl/archiwum</th>
+</tr>
+
+<tr>
+<th>https://artmuseum.pl/pl/kolekcja</th>
+</tr>
+
+<tr>
+<th>https://zacheta.art.pl/pl/kolekcja/katalog</th>
+</tr>
+
+<tr>
+<th>https://www.europeana.eu/pl</th>
+</tr>
 
 
-https://artmuseum.pl/pl/archiwum
+<tr>
+<th>https://zbiory.mnk.pl/en/home-page</th>
+</tr>
+
+<tr>
+<th>https://www.wearemuseums.com/</th>
+</tr>
+
+<tr>
+<th>https://www.paranoia-tv.com/en/</th>
+</tr>
+
+<tr>
+<th>https://www.youtube.com/c/Pa%C5%84stwoweMuzeumEtnograficznewWarszawie/videos</th>
+</tr>
+
+<tr>
+<th>https://muzea.malopolska.pl/pl/l</th>
+</tr>
+
+<tr>
+<th>https://polona.pl/</th>
+</tr>
 
 
-https://artmuseum.pl/pl/kolekcja
-
-
-https://zacheta.art.pl/pl/kolekcja/katalog
-
-
-https://www.europeana.eu/pl
-
-
-
-https://zbiory.mnk.pl/en/home-page
-
-
-https://www.wearemuseums.com/
-
-
-https://www.paranoia-tv.com/en/
-
-
-https://www.youtube.com/c/Pa%C5%84stwoweMuzeumEtnograficznewWarszawie/videos
-
-
-https://muzea.malopolska.pl/pl/l
-
-
-https://polona.pl/
 
 ### <b>🦑 Strony fackcheckingowe</b>
+<table>
 
-https://fakenews.pl/
-
-
-https://sprawdzam.afp.com/
-
-
-https://demagog.org.pl/
-
-
-https://misinforeview.hks.harvard.edu/
+<tr>
+<th> </th>
+<th> </th>
+<th> https://fakenews.pl/</th>
+</tr>
 
 
-https://euvsdisinfo.eu/
+<tr>
+<th> </th>
+<th> </th>
+<th>https://sprawdzam.afp.com/ </th>
+</tr>
 
 
-https://www.stopfake.org/en/tag/disinformation-review/
+<tr>
+<th> </th>
+<th> </th>
+<th> https://demagog.org.pl/</th>
+</tr>
 
 
-https://schema.org/ClaimReview
+<tr>
+<th> </th>
+<th> </th>
+<th> https://misinforeview.hks.harvard.edu/</th>
+</tr>
 
 
-https://developers.google.com/search/docs/data-types/factcheck
+<tr>
+<th> </th>
+<th> </th>
+<th> https://euvsdisinfo.eu/</th>
+</tr>
 
 
-https://www.claimreviewproject.com/the-facts-about-claimreivew
+<tr>
+<th> </th>
+<th> </th>
+<th> https://www.stopfake.org/en/tag/disinformation-review/</th>
+</tr>
 
 
-https://www.storybench.org/how-claimreview-is-simplifying-the-process-of-fact-checking/
+<tr>
+<th> </th>
+<th> </th>
+<th>https://schema.org/ClaimReview </th>
+</tr>
 
 
-politifact.com
+<tr>
+<th> </th>
+<th> </th>
+<th>https://developers.google.com/search/docs/data-types/factcheck </th>
+</tr>
 
 
-https://noodleremover.news/ 
+<tr>
+<th> </th>
+<th> </th>
+<th>https://www.claimreviewproject.com/the-facts-about-claimreivew </th>
+</tr>
 
 
-fakeoff.org
+<tr>
+<th> </th>
+<th> </th>
+<th> https://www.storybench.org/how-claimreview-is-simplifying-the-process-of-fact-checking/</th>
+</tr>
 
 
-stopfake.org
+<tr>
+<th> </th>
+<th> </th>
+<th>https://politifact.com </th>
+</tr>
+
+<tr>
+<th> </th>
+<th> </th>
+<th>https://noodleremover.news/  </th>
+</tr>
 
 
-botometer.iuni.iu.edu
+<tr>
+<th> </th>
+<th> </th>
+<th>https://fakeoff.org </th>
+</tr>
 
 
-https://en.wikipedia.org/wiki/List_of_fake_news_websites
+<tr>
+<th> </th>
+<th> </th>
+<th>https://stopfake.org </th>
+</tr>
 
 
-https://twitter.com/fakenews_buster?lang=en
+<tr>
+<th> </th>
+<th> </th>
+<th>https://botometer.iuni.iu.edu </th>
+</tr>
 
 
- https://wid.org.pl/wp-content/uploads/E_wydanie-Mały-Leksykon-Postprawdy.pdf
+<tr>
+<th> </th>
+<th> </th>
+<th>https://en.wikipedia.org/wiki/List_of_fake_news_websites </th>
+</tr>
+
+
+<tr>
+<th> </th>
+<th> </th>
+<th>https://twitter.com/fakenews_buster?lang=en </th>
+</tr>
+
+
+<tr>
+<th>Leksykon Postprawdy </th>
+<th> </th>
+<th>https://wid.org.pl/wp-content/uploads/E_wydanie-Mały-Leksykon-Postprawdy.pdf </th>
+</tr>
  
  
- Media bias chart
- https://www.adfontesmedia.com/?v=402f03a963ba
+ <tr>
+<th> Media bias chart </th>
+<th> </th>
+<th> https://www.adfontesmedia.com/?v=402f03a963ba</th>
+</tr>
+
+</table>
  
  </span>
  
 ### <b>🦑 Pozyskiwanie grantów</b>
  
-https://www.ncn.gov.pl/finansowanie-nauki/konkursy/typy
  
+<table>
+<tr>
+
+<th>https://www.ncn.gov.pl/finansowanie-nauki/konkursy/typy</th>
  
+</tr> 
  
- 
+</table>
+
 ### <b>🦑 Poradniki</b>
  
 <table> 
-Poradnik korzystania z Google Scholar
 
-https://pitt.libguides.com/googlescholar/searchtips
- 
-https://www.wur.nl/en/article/How-to-use-Google-Scholar.htm
- 
-https://guides.library.ucsc.edu/c.php?g=745384&p=5361954
- 
-https://guides.library.illinois.edu/c.php?g=347668&p=2344602
 
-https://paperpile.com/g/google-scholar-guide/
+
+
+<tr>
+<th>Poradnik korzystania z Google Scholar </th>
+<th> </th>
+<th> https://pitt.libguides.com/googlescholar/searchtips
+</th>
+</tr>
+ 
+ 
+<tr>
+<th>Poradnik korzystania z Google Scholar </th>
+<th> </th>
+<th> https://www.wur.nl/en/article/How-to-use-Google-Scholar.htm</th>
+</tr> 
+ 
+
+ 
+<tr>
+<th>Poradnik korzystania z Google Scholar </th>
+<th> </th>
+<th> https://guides.library.ucsc.edu/c.php?g=745384&p=5361954</th>
+</tr> 
+ 
+
+ 
+<tr>
+<th> Poradnik korzystania z Google Scholar</th>
+<th> </th>
+<th> https://guides.library.illinois.edu/c.php?g=347668&p=2344602</th>
+</tr> 
+ 
+
+
+<tr>
+<th>Poradnik korzystania z Google Scholar </th>
+<th> </th>
+<th> https://paperpile.com/g/google-scholar-guide/</th>
+</tr>
+
 
 	
 
