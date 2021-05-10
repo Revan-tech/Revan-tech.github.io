@@ -125,6 +125,19 @@ Punktoza </th>
 <th>https://www.ceeol.com/ </th>
 </tr>
 
+<tr>
+<th>Repository of Centre for Open Science</th>
+<th>Repozytorium artykułów </th>
+<th>https://depot.ceon.pl/ </th>
+</tr>
+
+<tr>
+<th>Baza AGRO</th>
+<th>Repozytorium artykułów </th>
+<th>http://agro.icm.edu.pl/</th>
+</tr>
+
+
 
 <tr>
 <th>Zasoby online BUW </th>
@@ -176,9 +189,25 @@ Punktoza </th>
 </tr>
 
 
+<tr>
+<th>OpenAIRE </th>
+<th>Wyszukiwarka artykułów w otwartym dostępie </th>
+<th>https://explore.openaire.eu/</th>
+</tr>
 
-
+<tr>
+<th>Zenodo</th>
+<th>Wyszukiwarka artykułów w otwartym dostępie </th>
+<th>https://zenodo.org/</th>
+</tr>
 	
+<tr>
+<th>Ibuk Libra</th>
+<th>Czytelnia książek z dostępem akademickim </th>
+<th>https://libra.ibuk.pl/</th>
+</tr>
+	
+
 
 </table>
  </span>
@@ -456,7 +485,7 @@ https://nowewyrazy.uw.edu.pl/linki.html
 
 <tr>
 <th>Nature Video </th>
-<th> </th>
+<th>Oficjalny kanał pisma Nature </th>
 <th>https://www.youtube.com/channel/UC7c8mE90qCtu11z47U0KErg </th>
 </tr>
 
@@ -465,6 +494,12 @@ https://nowewyrazy.uw.edu.pl/linki.html
 <th>Minutephysics </th>
 <th> </th>
 <th>https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg </th>
+</tr>
+
+<tr>
+<th>Sciencephile the AI</th>
+<th>Fizyka, kosmologia i memy </th>
+<th>https://www.youtube.com/c/SciencephiletheAI</th>
 </tr>
 
 
@@ -491,20 +526,20 @@ https://nowewyrazy.uw.edu.pl/linki.html
 
 <tr>
 <th>Dział zagraniczny   </th>
-<th> </th>
+<th>Rozmowy na temat regionów świata, o których w dużych mediach się nie mówi </th>
 <th>https://www.dzialzagraniczny.pl/  </th>
 </tr>
 
 
 <tr>
 <th>Raport o stanie świata </th>
-<th> </th>
+<th>Rozmowy i reportaże na temat światowej kultury i polityki </th>
 <th>https://raportostanieswiata.pl/  </th>
 </tr>
 
 
 <tr>
-<th> podcast granice nauki </th>
+<th>Granice nauki </th>
 <th> </th>
 <th>https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9kMmQzOWI0L3BvZGNhc3QvcnNz </th>
 </tr>
@@ -566,8 +601,8 @@ https://nowewyrazy.uw.edu.pl/linki.html
 
  
 <tr>
-<th>  Babel. Rzeczpospolita Multi-Kulti (d. Lechistan)</th>
-<th> </th>
+<th>Babel. Rzeczpospolita Multi-Kulti (d. Lechistan)</th>
+<th>Historia Polski poprzez pryzmat innych kultur </th>
 <th>https://audycje.tokfm.pl/audycja/230,Babel-Rzeczpospolita-Multi-Kulti </th>
 </tr>
 
@@ -594,8 +629,8 @@ https://nowewyrazy.uw.edu.pl/linki.html
 
 	
 <tr>
-<th>	Przyjaciele Przyszłości </th>
-<th> </th>
+<th>Przyjaciele Przyszłości </th>
+<th>Rozmowy o technologiach i społeczeństwie przyszłości </th>
 <th> https://anchor.fm/centrum-cyfrowe/message</th>
 </tr>
 
@@ -786,6 +821,28 @@ https://twitter.com/fakenews_buster?lang=en
  
  </span>
  
+<b>🦑 Pozyskiwanie grantów</b>
+ 
+https://www.ncn.gov.pl/finansowanie-nauki/konkursy/typy
+ 
+ 
+ 
+ 
+<b>🦑 Poradniki</b>
+ 
+ 
+Poradnik korzystania z Google Scholar
+
+https://pitt.libguides.com/googlescholar/searchtips
+ 
+https://www.wur.nl/en/article/How-to-use-Google-Scholar.htm
+ 
+https://guides.library.ucsc.edu/c.php?g=745384&p=5361954
+ 
+https://guides.library.illinois.edu/c.php?g=347668&p=2344602
+
+https://paperpile.com/g/google-scholar-guide/
+
 <table>
 <tr>
 <th> </th>
