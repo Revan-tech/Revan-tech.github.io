@@ -293,10 +293,16 @@ Punktoza </th>
 
 <table>
 <tr>
-<th> </th>
-<th> </th>
+<th>Alternative.to </th>
+<th>Strona pozwalająca znaleźć programy podobne do poszukiwanego. Strona podaje informacje na temat tego czy aplikacje są darmowe </th>
 <th> https://alternativeto.net/ </th>
 </tr>
+
+<tr>
+<th>Tech against coronavirus</th>
+<th>Duża lista aplikacji do zdalnej edukacji</th>
+<th>https://techagainstcoronavirus.com/edu/</th>
+<tr>
 
 </table>
 
@@ -1197,7 +1203,7 @@ https://kulturaseksualna.pl/
 <th>Trójwymiarowy model mózgu do zabawy i nauki </th>
 <th>http://www.brainfacts.org/3D-Brain </th>
 </tr>
-
+</table>
 
 ### <b> Gry edukacyjne, gry w edukacji </b>
 
