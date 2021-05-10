@@ -201,6 +201,13 @@ Punktoza </th>
 <th>https://zenodo.org/</th>
 </tr>
 	
+<tr>
+<th>Ibuk Libra</th>
+<th>Czytelnia książek z dostępem akademickim </th>
+<th>https://libra.ibuk.pl/</th>
+</tr>
+	
+
 
 </table>
  </span>
