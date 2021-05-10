@@ -228,113 +228,180 @@ Punktoza </th>
 
 ### <b>🦑 Artykuły agregujące linki do przydatnych stron</b>
 
-https://pl.wikipedia.org/wiki/Kategoria:Portale_naukowe 
+
+<table>
+<tr>
+<th> </th>
+<th> </th>
+<th>https://pl.wikipedia.org/wiki/Kategoria:Portale_naukowe  </th>
+</tr>
+
 	
 	
+<tr>
+<th>Artykuł o przydatnych stronach </th>
+<th> </th>
+<th> https://medium.com/polish/37-najlepszych-stron-internetowych-do-nauki-nowych-rzeczy-18d2642ce821 
+</th>
+</tr>	
+
+
 	
-Artykuł o przydatnych stronach
+<tr>
+<th> Lista baz naukowych, wyszukiwarek, informatorów (UJ) </th>
+<th> </th>
+<th>https://bj.uj.edu.pl/zasoby-cyfrowe/ogolnodostepne-wyszukiwarki-bazy-zagraniczne 
+ </th>
+</tr>
 
-https://medium.com/polish/37-najlepszych-stron-internetowych-do-nauki-nowych-rzeczy-18d2642ce821 
+
 	
-
- Lista baz naukowych, wyszukiwarek, informatorów (UJ)
-
-https://bj.uj.edu.pl/zasoby-cyfrowe/ogolnodostepne-wyszukiwarki-bazy-zagraniczne 
-	
-
-Zasoby online BUW
-
-https://www.buw.uw.edu.pl/zasoby-online/
+<tr>
+<th>Zasoby online BUW </th>
+<th> </th>
+<th> https://www.buw.uw.edu.pl/zasoby-online/</th>
+</tr>
 
 
-Artykuł z listą przydatnych stron do nauki
-https://lifegeek.pl/przydatne-strony/ 
-	
 
- 
-Artykuł na temat sztuki szukania artykułóW naukowych
-https://www.sztukaszukania.pl/2019/01/29/jak-szukac-artykulow-naukowych/ 
+
+<tr>
+<th>Artykuł z listą przydatnych stron do nauki </th>
+<th> </th>
+<th>https://lifegeek.pl/przydatne-strony/  </th>
+</tr>
+
+
+
+
+</table>
 	
 
 
 
 ### <b>🦑 Gdzie szukać oprogramowania?</b>
 
+<table>
+<tr>
+<th> </th>
+<th> </th>
+<th> https://alternativeto.net/ </th>
+</tr>
 
-https://alternativeto.net/ 
+</table>
 
 
 
 
 ### <b>🦑 Reszta jeszcze nieuporządkowana </b>
  
- 
+<table>
 
 
- 
-Portal Czasopism Naukowych (UJ)
+<tr>
+<th> Portal Czasopism Naukowych (UJ)</th>
+<th> </th>
+<th> https://www.ejournals.eu/ </th>
+</tr>
 
-https://www.ejournals.eu/ 
-	
-
- 
-Portal Nauka Polska
-
-http://www.nauka-polska.opi.org.pl/ 
-	
-
-
-
- Przystanek Nauka (UŚ)
-
-https://przystaneknauka.us.edu.pl/  
-	
-
- 
-
-https://nauka.uj.edu.pl/start  
-	
-
- 
-Puls kosmosu 
-
-https://www.pulskosmosu.pl/
-
-
- 
-
-strefa psyche 
-
-https://www.swps.pl/strefa-psyche
-
-
-Lek.Check
-
-https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  
 
 
 	
-Humanistyka medyczna
+<tr>
+<th> Portal Nauka Polska</th>
+<th> </th>
+<th>http://www.nauka-polska.opi.org.pl/  </th>
+</tr>
+ 
 
- https://www.facebook.com/humanistykamedyczna/  
+
+
+	
+
+<tr>
+<th> Przystanek Nauka (UŚ)
+ </th>
+<th> </th>
+<th> https://przystaneknauka.us.edu.pl/  
+</th>
+</tr>
+
+
+	
+
+<tr>
+<th> </th>
+<th> </th>
+<th> https://nauka.uj.edu.pl/start  
+</th>
+</tr>
+
+	
+<tr>
+<th> Puls kosmosu </th>
+<th> </th>
+<th> https://www.pulskosmosu.pl/</th>
+</tr>
+ 
+
+
+
+
+
+ 
+<tr>
+<th>strefa psyche  </th>
+<th> </th>
+<th>https://www.swps.pl/strefa-psyche </th>
+</tr>
+
+
+
+
+<tr>
+<th>Lek.Check </th>
+<th> </th>
+<th>
+https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
+</tr>
 
  
 
-https://naukawpolsce.pap.pl/aktualnosci/news%2C84944%2Cwkrotce-kolejne-odcinki-podcastow-biocentrum-edukacji-naukowej.html 
+<tr>
+<th>Humanistyka medyczna </th>
+<th> </th>
+<th>  https://www.facebook.com/humanistykamedyczna/  </th>
+</tr>
+	
+
+
+
+
+<tr>
+<th> </th>
+<th> </th>
+<th> https://naukawpolsce.pap.pl/aktualnosci/news%2C84944%2Cwkrotce-kolejne-odcinki-podcastow-biocentrum-edukacji-naukowej.html</th>
+</tr>
+
+ 
 	
  
-
-
-https://nowewyrazy.uw.edu.pl/linki.html 
+<tr>
+<th>Nowe Wyrazy (UW) </th>
+<th>Portal monitorujący nowe polskie słownictwo </th>
+<th>https://nowewyrazy.uw.edu.pl/linki.html </th>
+</tr>
 
  
+
+</table>
 
 
 ### <b>🦑 Serwisy informacyjne popularno-naukowe 🇵🇱</b>
 
 <table>
 <tr>
-<th> </th>
+<th>Dziennik Naukowy </th>
 <th> </th>
 <th>https://dzienniknaukowy.pl/ </th>
 </tr>
@@ -922,7 +989,7 @@ https://www.ncn.gov.pl/finansowanie-nauki/konkursy/typy
  
 ### <b>🦑 Poradniki</b>
  
- 
+<table> 
 Poradnik korzystania z Google Scholar
 
 https://pitt.libguides.com/googlescholar/searchtips
@@ -934,6 +1001,16 @@ https://guides.library.ucsc.edu/c.php?g=745384&p=5361954
 https://guides.library.illinois.edu/c.php?g=347668&p=2344602
 
 https://paperpile.com/g/google-scholar-guide/
+
+	
+
+<tr>
+<th>Artykuł na temat sztuki szukania artykułóW naukowych </th>
+<th> </th>
+<th>https://www.sztukaszukania.pl/2019/01/29/jak-szukac-artykulow-naukowych/  </th>
+</tr> 
+
+</table>
 
 <table>
 <tr>

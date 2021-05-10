@@ -9,11 +9,12 @@ site: distill::distill_website
 knitr::include_graphics("ANC.jpg") 
 ```
 
-</br> </br>
+
 https://www.spreaker.com/show/artykuly-naukowe-czytane
 
 
-Vivamus venenatis egestas eros ut tempus. Vivamus id est nisi. Aliquam molestie erat et sollicitudin venenatis. In ac lacus at velit scelerisque mattis.
+To pierwszy (i mamy nadzieję, że już niedługo jeden z wielu!) projekt związany z Sortownią.
+W <i>Artykułach Naukowych Czytanych w całości, nie do końca profesjonalnie</i> posłuchacie właśnie tego - artykułów naukowych. Na łamach tego podkastu jak dotąd pojawiła się socjologia, psychologia, neurobiologia, lingwistyka, afrykanistyka, historia, antropologia, kosmologia... i wiele innych dziedzin
 :::
 
 
