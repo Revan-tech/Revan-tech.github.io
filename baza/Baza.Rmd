@@ -157,8 +157,8 @@ Punktoza </th>
 
 <tr>
 <th>Zasoby online BUW </th>
-<th> </th>
-<th>https://www.buw.uw.edu.pl/pl/online-resources/online-databases/ </th>
+<th>Dostępne dla studentów UW, ale sama lista jest przydatnym zbiorem linków </th>
+<th>https://www.buw.uw.edu.pl/zasoby-online/</th>
 </tr>
 
 
@@ -223,12 +223,14 @@ Punktoza </th>
 <th>https://libra.ibuk.pl/</th>
 </tr>
 	
-	
-<tr>	
-<th>Free Learning List</th>
-<th>Bogata lista stron edukacyjnych</th>
-<th>https://freelearninglist.org/</th>
+
+
+
 <tr>
+<th> Portal Czasopism Naukowych (UJ)</th>
+<th>Informacje o polskich pismach naukowych </th>
+<th> https://www.ejournals.eu/ </th>
+</tr>
 
 </table>
  </span>
@@ -240,9 +242,27 @@ Punktoza </th>
 
 
 <table>
+
+	
 <tr>
-<th> </th>
-<th> </th>
+<th> Lista baz naukowych, wyszukiwarek, informatorów (UJ) </th>
+<th>Różne repozytoria naukowe, podzielone na schludne kategorie </th>
+<th>https://bj.uj.edu.pl/zasoby-cyfrowe/ogolnodostepne-wyszukiwarki-bazy-zagraniczne 
+ </th>
+</tr>
+
+	
+<tr>	
+<th>Free Learning List</th>
+<th>Bogata lista stron edukacyjnych</th>
+<th>https://freelearninglist.org/</th>
+<tr>
+
+
+
+<tr>
+<th>Kategoria portale naukowe na wikipedii </th>
+<th>Lista portali naukowych w obrębie Wikipedii</th>
 <th>https://pl.wikipedia.org/wiki/Kategoria:Portale_naukowe  </th>
 </tr>
 
@@ -250,34 +270,16 @@ Punktoza </th>
 	
 <tr>
 <th>Artykuł o przydatnych stronach </th>
-<th> </th>
+<th>Artykuł linkuje głównie strony związane z nauką programowania </th>
 <th> https://medium.com/polish/37-najlepszych-stron-internetowych-do-nauki-nowych-rzeczy-18d2642ce821 
 </th>
 </tr>	
 
 
-	
-<tr>
-<th> Lista baz naukowych, wyszukiwarek, informatorów (UJ) </th>
-<th> </th>
-<th>https://bj.uj.edu.pl/zasoby-cyfrowe/ogolnodostepne-wyszukiwarki-bazy-zagraniczne 
- </th>
-</tr>
-
-
-	
-<tr>
-<th>Zasoby online BUW </th>
-<th> </th>
-<th> https://www.buw.uw.edu.pl/zasoby-online/</th>
-</tr>
-
-
-
 
 <tr>
 <th>Artykuł z listą przydatnych stron do nauki </th>
-<th> </th>
+<th>45 linków do przydatnych stron </th>
 <th>https://lifegeek.pl/przydatne-strony/  </th>
 </tr>
 
@@ -309,45 +311,41 @@ Punktoza </th>
 
 
 
-### <b>🦑 Reszta jeszcze nieuporządkowana </b>
- 
+### <b>🦑 Serwisy informacyjne popularno-naukowe 🇵🇱</b>
+
 <table>
-
-
 <tr>
-<th> Portal Czasopism Naukowych (UJ)</th>
-<th> </th>
-<th> https://www.ejournals.eu/ </th>
+<th>Dziennik Naukowy </th>
+<th>Nowości ze świata nauki </th>
+<th>https://dzienniknaukowy.pl/ </th>
 </tr>
 
 
+<tr>
+<th>Nauka w Polsce (PAP) </th>
+<th>Nowości w polskiej nauce </th>
+<th>https://naukawpolsce.pap.pl </th>
+</tr>
 
-	
+
 <tr>
 <th> Portal Nauka Polska</th>
-<th> </th>
+<th> Informacje dotyczące nauki w Polsce</th>
 <th>http://www.nauka-polska.opi.org.pl/  </th>
 </tr>
  
-
-
-
 	
-
 <tr>
-<th> Przystanek Nauka (UŚ)
- </th>
-<th> </th>
-<th> https://przystaneknauka.us.edu.pl/  
-</th>
+<th> Przystanek Nauka (UŚ)</th>
+<th>Portal popularnonaukowy UŚ </th>
+<th> https://przystaneknauka.us.edu.pl/ </th>
 </tr>
 
 
-	
 
 <tr>
-<th> </th>
-<th> </th>
+<th>Nauka (UJ) </th>
+<th>Portal popularnonaukowy UJ </th>
 <th> https://nauka.uj.edu.pl/start  
 </th>
 </tr>
@@ -355,94 +353,16 @@ Punktoza </th>
 	
 <tr>
 <th> Puls kosmosu </th>
-<th> </th>
+<th>Portal z informacjami kosmologicznymi (+ powiązany podkast) </th>
 <th> https://www.pulskosmosu.pl/</th>
 </tr>
  
-
-
-
-
-
- 
 <tr>
 <th>strefa psyche  </th>
-<th> </th>
+<th>Portal popularnonaukowy SWPS o psychologii (+ podkast) </th>
 <th>https://www.swps.pl/strefa-psyche </th>
 </tr>
 
-
-
-
-<tr>
-<th>Lek.Check </th>
-<th> </th>
-<th>
-https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
-</tr>
-
- 
-
-<tr>
-<th>Humanistyka medyczna </th>
-<th> </th>
-<th>  https://www.facebook.com/humanistykamedyczna/  </th>
-</tr>
-	
-
-
-<tr>
-<th>Instrat </th>
-<th>Publikacje dotyczące ekonomii i klimatu </th>
-<th>http://instrat.pl/publikacje/</th>
-</tr>
-
-<tr>
-<th> </th>
-<th> </th>
-<th> https://naukawpolsce.pap.pl/aktualnosci/news%2C84944%2Cwkrotce-kolejne-odcinki-podcastow-biocentrum-edukacji-naukowej.html</th>
-</tr>
-
-<tr>
-<th>Przydatny słowniczek do neuro</th>
-<th> </th>
-<th>http://fizyka.umk.pl/~duch/Wyklady/Mozg/Slowniczek.htm</th>
-</tr>
-
-	
- 
-<tr>
-<th>Nowe Wyrazy (UW) </th>
-<th>Portal monitorujący nowe polskie słownictwo </th>
-<th>https://nowewyrazy.uw.edu.pl/linki.html </th>
-</tr>
-
- 
-
-</table>
-
-
-### <b>🦑 Serwisy informacyjne popularno-naukowe 🇵🇱</b>
-
-<table>
-<tr>
-<th>Dziennik Naukowy </th>
-<th> </th>
-<th>https://dzienniknaukowy.pl/ </th>
-</tr>
-
-
-
-
- 
-
-<tr>
-<th>Nauka w Polsce (PAP) </th>
-<th> </th>
-<th>https://naukawpolsce.pap.pl </th>
-</tr>
-
-	
 
 </table>
 	
@@ -463,55 +383,55 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
  <table>
 <tr>
 <th>Nauka to lubię </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://www.naukatolubie.pl/ </th>
 </tr>
 
 
 <tr>
 <th>Lista blogów naukowych </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://ekulczycki.pl/warsztat_badacza/katalog-blogow-naukowych/   </th>
 </tr>
 
 	
 <tr>
 <th>Lista blogów naukowych </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>http://www.zostanphd.pl/blogi-naukowe-share-week-2018/ </th>
 </tr>	
 
 
 <tr>
 <th>Lista blogów naukowych </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://naukawpolsce.pap.pl/aktualnosci/news%2C32436%2Cpolskie-popularnonaukowe-strony-blogi-kanaly-wideo-i-podcasty.html   </th>
 </tr> 
  
 
 <tr>
 <th>Lista blogów naukowych </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://www.crazynauka.pl/share-week-2019-czyli-dobre-blogi-ktore-wam-polecamy/  </th>
 </tr>
 
 
 <tr>
 <th> Lista blogów naukowych</th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://www.dobreprogramy.pl/PREZESKIC/Popularyzacja-nauki-TOP-10-serwisow,88042.html  </th>
 </tr>
 	
 <tr>
 <th>Lista blogów naukowych </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://www.totylkoteoria.pl/2019/01/ranking-polskich-blogow-naukowych-2018.html  </th>
 </tr>
 
 
 <tr>
 <th>Lista blogów naukowych UKSW </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>  https://biblioteka.uksw.edu.pl/pl/node/82  </th>
 </tr>
 
@@ -537,21 +457,21 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 
 <tr>
 <th> Nauka to lubię</th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://www.youtube.com/user/naukatolubie?app=desktop </th>
 </tr>
 
 
 <tr>
-<th>Kasia gandor kanał yt  </th>
-<th> </th>
+<th>Kasia Gandor kanał yt  </th>
+<th>Do sprawdzenia </th>
 <th> https://www.youtube.com/channel/UCUercAwR2To1Zx6GA6ZP2TQ</th>
 </tr>
 
 
 <tr>
 <th> Naukowy bełkot </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://www.youtube.com/channel/UC_7PqixGIdE-jjoHKMPYpGA </th>
 </tr>
 
@@ -581,11 +501,6 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 <th>https://www.youtube.com/channel/UCDfWTcT7AZay2Y4v-gn1dmQ </th>
 </tr>
 
-<tr>
-<th> </th>
-<th> </th>
-<th> </th>
-</tr>
 
 
 
@@ -599,7 +514,7 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 
 <tr>
 <th>Veritasium </th>
-<th> </th>
+<th>Fizyka, kosmologia, inżynieria </th>
 <th>https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA </th>
 </tr>
 
@@ -607,14 +522,14 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 
 <tr>
 <th>The Action Lab </th>
-<th> </th>
-<th>https://www.facebook.com/theactionlabofficial   </th>
+<th>Eksperymenty, fizyka, chemia </th>
+<th>https://www.youtube.com/channel/UC1VLQPn9cYSqx8plbk9RxxQ </th>
 </tr>
 
 
 <tr>
 <th>3Blue1Brown </th>
-<th> </th>
+<th>Teoria programowania, statystyka, sieci neuronowe, matematyka </th>
 <th>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw  </th>
 </tr>
 
@@ -628,7 +543,7 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 
 <tr>
 <th>Minutephysics </th>
-<th> </th>
+<th>Fizyka objaśniana w tempie ekspresowym </th>
 <th>https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg </th>
 </tr>
 
@@ -699,10 +614,21 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 
 ### <b>🦑 Podkasty 🇵🇱</b></span>
  
+ 
+ 
+ 
 <table>
+
+
+<tr>
+<th>BioCAST </th>
+<th>Podkast na tematy biologiczne </th>
+<th>http://biocen.edu.pl/biocast/</th>
+</tr>
+
 <tr>
 <th>Tu Centrum Nauki Kopernik  </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th> https://www.kopernik.org.pl/podcast-tu-centrum-nauki-kopernik</th>
 </tr>
 
@@ -724,62 +650,62 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 
 <tr>
 <th>Granice nauki </th>
-<th> </th>
+<th>Do sprawdzenia  </th>
 <th>https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9kMmQzOWI0L3BvZGNhc3QvcnNz </th>
 </tr>
 
 
 <tr>
-<th> </th>
-<th> </th>
+<th>Lista blogów i podkastów </th>
+<th>Do sprawdzenia  </th>
 <th>https://uni.wroc.pl/podcasty-naukowe/ </th>
 </tr>
 
  
 <tr>
-<th> </th>
-<th> </th>
-<th> https://cwid.uw.edu.pl/podcast-nauka-nadaje/ </th>
+<th>Nauka Nadaje </th>
+<th>Do sprawdzenia </th>
+<th>https://cwid.uw.edu.pl/category/podcast-nauka-nadaje/</th>
 </tr>
 
 
 <tr>
 <th>ScepTech  </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th> https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5hY2FzdC5jb20vcHVibGljL3Nob3dzL3NjZXB0ZWNo</th>
 </tr>
 
   
 <tr>
 <th>Nauka XXI wieku  </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th> http://nauka.podkasty.info/</th>
 </tr>
 
  
 <tr>
 <th> Crazy Nauka </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://www.crazynauka.pl/ </th>
 </tr>
 	
 
 <tr>
 <th>Dekompresor Nauka  </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th> http://dekompresor.pl/nauka</th>
 </tr>
 
  
 <tr>
-<th> </th>
-<th> </th>
+<th>Wszechnica - wykłady w internecie </th>
+<th>Do sprawdzenia </th>
 <th>http://Wszechnica.org.pl  </th>
 </tr>
 
 <tr>
 <th> Radio Naukowe </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://radionaukowe.pl/ </th>
 </tr>
 
@@ -793,21 +719,21 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 	
 <tr>
 <th> 	SexAudycja</th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>	https://audycje.tokfm.pl/audycja/361,SexAudycja </th>
 </tr>
 	
 	
 <tr>
 <th> 	 Klimat zmian </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>	https://audycje.tokfm.pl/audycja/394,Klimat-zmian </th>
 </tr>
 
 	
 <tr>
 <th>	 Usługi Kosmiczne dla Ludności  </th>
-<th> </th>
+<th>O podróżach w kosmos - przeszłych i przyszłych </th>
 <th>	https://audycje.tokfm.pl/audycja/409,Uslugi-Kosmiczne-dla-Ludnosci </th>
 </tr>
 
@@ -828,13 +754,13 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 <table>
 <tr>
 <th>Science Vs </th>
-<th> </th>
+<th>Tematyczne dyskusje z perspektywy nauki. Średnio ponad 100 cytowań na odcinek! </th>
 <th>https://gimletmedia.com/shows/science-vs </th>
 </tr>
 
 <tr>
 <th>The Anthropocene Reviewed </th>
-<th> </th>
+<th>Do sprawdzenia </th>
 <th>https://www.wnycstudios.org/podcasts/anthropocene-reviewed  </th>
 </tr>
 
@@ -842,37 +768,37 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 
 <tr>
 <th>Neuromantics </th>
-<th> </th>
+<th>Rozmowy na pograniczu neurobiologii, kognitywistyki, literatury i poezji </th>
 <th>https://www.willeaves.com/podcast </th>
 </tr>
 
 <tr>
 <th>99% Invisible </th>
-<th> </th>
+<th>Projektowanie, grafika, urbanistyka, design </th>
 <th>https://99percentinvisible.org/ </th>
 </tr>
 
 <tr>
 <th>Nature Podcast </th>
-<th> </th>
+<th>Doniesienia ze świata nauki </th>
 <th>https://www.nature.com/nature/articles?type=nature-podcast </th>
 </tr>
 
 <tr>
 <th>Science Talk (Scientific American) </th>
-<th> </th>
+<th>Doniesienia ze świata nauki </th>
 <th>https://www.scientificamerican.com/podcast/science-talk/ </th>
 </tr>
 
 <tr>
 <th>Terrible Lizards </th>
-<th> </th>
+<th>Dinozaury! </th>
 <th>https://terriblelizards.libsyn.com/ </th>
 </tr>
 
 <tr>
 <th>British Museum Membercast </th>
-<th> </th>
+<th>Historia </th>
 <th>https://www.britishmuseum.org/membership/membercasts </th>
 </tr>
 
@@ -886,36 +812,58 @@ https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
 
 
 <tr>
+<th>Biennale Warszawa</th>
+<th>Dyskusje na temat przyszłości Polski i świata</th>
 <th>https://biennalewarszawa.pl/ </th>
 </tr>
 	
 
  
 <tr>
+<th>Godzina Szumu</th>
+<th>Do sprawdzenia</th>
 <th>https://www.mixcloud.com/radiokapital/radio-kapita%C5%82-godzina-szumu-3-marta-czy%C5%BC-i-urszula-zaj%C4%85czkowska/  </th>
 </tr>
  
 <tr>
-<th> Instagram: 
-Kasiacoztymseksem 
-https://www.instagram.com/kasia_coztymseksem/?hl=pl
+<th>Kasiacoztymseksem</th>
+<th>Edukacja seksualna</th>
+<th>https://www.instagram.com/kasia_coztymseksem/?hl=pl
 </th>
 </tr>
 
 <tr>
-<th>Kulturaseksualna 
-https://kulturaseksualna.pl/
-</th> 
+<th>Kulturaseksualna </th>
+<th>Edukacja seksualna</th>
+<th>https://kulturaseksualna.pl/</th> 
 </tr>
 
 
 <tr> 
+<th>Poradnik dla lekarzy na temat LGBT </th>
+<th>jw</th>
 <th>https://kph.org.pl/wp-content/uploads/2017/11/Praktyczny-przewodnik-po-zdrowiu-LGBTI-dla-lekarzy.pdf </th>
 </tr>
 
 <tr>
-
+<th>Kampania Przeciwko Homofobii</th>
+<th>Publikacje i raporty</th>
 <th>https://kph.org.pl/publikacje_kph/ </th>
+</tr>
+
+
+<tr>
+<th>Humanistyka medyczna </th>
+<th>Dyskusja na temat medycyny z perspektywy humanistycznej </th>
+<th> https://humanistykamedyczna.cm.uj.edu.pl/idea/ </th>
+</tr>
+	
+
+
+<tr>
+<th>Instrat </th>
+<th>Publikacje dotyczące ekonomii i klimatu </th>
+<th>http://instrat.pl/publikacje/</th>
 </tr>
 
 </table>
@@ -1106,7 +1054,7 @@ https://kulturaseksualna.pl/
  
  <tr>
 <th> Media bias chart </th>
-<th> </th>
+<th>Rozkład politycznych przynależności anglojęzycznych mediów </th>
 <th> https://www.adfontesmedia.com/?v=402f03a963ba</th>
 </tr>
 
@@ -1133,7 +1081,8 @@ https://kulturaseksualna.pl/
  
 <table>
 <tr>
-
+<th>Granty NCN</th>
+<th>jw</th>
 <th>https://www.ncn.gov.pl/finansowanie-nauki/konkursy/typy</th>
  
 </tr> 
@@ -1226,4 +1175,41 @@ https://kulturaseksualna.pl/
 
 </table>
 
+
+
+
+### <b>🦑 Reszta jeszcze nieuporządkowana </b>
+ 
+<table>
+
+
+
+<tr>
+<th>Lek.Check </th>
+<th>Ciekawostki o lekach </th>
+<th>
+https://www.facebook.com/113957380786168/posts/119289410252965/?d=n  </th>
+</tr>
+
+ 
+
+
+<tr>
+<th>Przydatny słowniczek do neuro</th>
+<th> </th>
+<th>http://fizyka.umk.pl/~duch/Wyklady/Mozg/Slowniczek.htm</th>
+</tr>
+
+	
+ 
+<tr>
+<th>Nowe Wyrazy (UW) </th>
+<th>Portal monitorujący nowe polskie słownictwo </th>
+<th>https://nowewyrazy.uw.edu.pl/linki.html </th>
+</tr>
+
+ 
+
 </table>
+
+
