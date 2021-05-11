@@ -839,12 +839,6 @@ Punktoza </th>
 </tr>
 
 
-<tr> 
-<th>Poradnik dla lekarzy na temat LGBT </th>
-<th>jw</th>
-<th>https://kph.org.pl/wp-content/uploads/2017/11/Praktyczny-przewodnik-po-zdrowiu-LGBTI-dla-lekarzy.pdf </th>
-</tr>
-
 <tr>
 <th>Kampania Przeciwko Homofobii</th>
 <th>Publikacje i raporty</th>
