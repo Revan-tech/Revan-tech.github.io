@@ -868,51 +868,63 @@ Punktoza </th>
 <table> 
  
 <tr>
+<th>Cyfrowe zbiory Muzeum Narodowego w Warszawie</th>
 <th>http://cyfrowe.mnw.art.pl/</th>
 </tr>
  
 <tr>
+<th>Zasoby Muzeum Sztuki Nowoczesnej w Warszawie</th>
 <th>https://artmuseum.pl/pl/zasoby</th>
 </tr>
 
 <tr>
+<th>Archiwa Muzeum Sztuki Nowoczesnej w Warszawie</th>
 <th>https://artmuseum.pl/pl/archiwum</th>
 </tr>
 
 <tr>
+<th>Kolekcja Muzeum Sztuki Nowoczesnej w Warszawie </th>
 <th>https://artmuseum.pl/pl/kolekcja</th>
 </tr>
 
 <tr>
+<th>Kolekcja Galerii Zachęta</th>
 <th>https://zacheta.art.pl/pl/kolekcja/katalog</th>
 </tr>
 
 <tr>
+<th>Europeana - kolekcje europejskich muzeów</th>
 <th>https://www.europeana.eu/pl</th>
 </tr>
 
 
 <tr>
+<th>Kolekcja Muzeum Narodowego w Krakowie</th>
 <th>https://zbiory.mnk.pl/en/home-page</th>
 </tr>
 
 <tr>
+<th>We are Museums - platforma dyskusji społecznej związana z muzeami</th>
 <th>https://www.wearemuseums.com/</th>
 </tr>
 
 <tr>
+<th>paranoia-tv - sztuka glitch</th>
 <th>https://www.paranoia-tv.com/en/</th>
 </tr>
 
 <tr>
+<th>Kanał YT Państwowego Muzeum Etnograficznego w Warszawie</th>
 <th>https://www.youtube.com/c/Pa%C5%84stwoweMuzeumEtnograficznewWarszawie/videos</th>
 </tr>
 
 <tr>
-<th>https://muzea.malopolska.pl/pl/l</th>
+<th>Wirtualne Muzea Małopolski</th>
+<th>https://muzea.malopolska.pl/pl/strona-glowna</th>
 </tr>
 
 <tr>
+<th>Cyfrowe archiwum Polona</th>
 <th>https://polona.pl/</th>
 </tr>
 
