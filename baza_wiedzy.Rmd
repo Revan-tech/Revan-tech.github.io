@@ -2,7 +2,6 @@
 title: "Baza wiedzy"
 site: distill::distill_website
 ---
-
 ```{r, echo=FALSE}
 library(htmltools)
 htmltools::includeHTML("Baza/Baza.html")

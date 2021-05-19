@@ -1,5 +1,5 @@
 ---
-title: "About this blog"
+title: ""
 description: |
   Some additional details about the blog
 listing: posts
