@@ -3,7 +3,6 @@ title: "Sortownia"
 description: |
   Sortownia
 output_dir: "."
-future: true
 navbar:
   left:
     - text: "Home"
