@@ -12,7 +12,7 @@ navbar:
     - text: "Poradniki"
       href: poradniki.html
     - text: "Baza wiedzy"
-      href: bhttps://szpm.shinyapps.io/baza_wiedzy/
+      href: https://szpm.shinyapps.io/baza_wiedzy/
     - text: "Projekty"
       href: projekty.html  
   right:
