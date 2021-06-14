@@ -26,8 +26,8 @@
       "path": "kontakt.html",
       "title": "Kontakt",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-05-19T17:27:56+02:00"
+      "contents": "\r\nnmn(Xie 2015)wdedwdwedwwdede sdf(Xie 2015)\r\n\r\n.wrapper {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  grid-auto-rows: minmax(100px, auto);\r\n  \r\n}\r\n\r\n.a {\r\n    display: block;\r\n    width: 350px;\r\n  word-wrap: break-word\r\n}\r\n\r\n.wrapper {\r\n  display: grid;\r\n  grid-template-columns: 1fr 1fr;\r\n  grid-auto-rows: minmax(100px, auto);\r\n  \r\n}\r\n\r\n.a {\r\n    display: block;\r\n    width: 350px;\r\n  word-wrap: break-word\r\n}\r\n\r\n\r\nword-wrap: break-word\r\n}\r\n\r\nword-wrap: break-word\r\n}\r\n\r\n\r\n\r\n\r\n\r\nplot(iris)\r\n\r\n\r\n\r\n\r\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\r\n\r\n\r\n\r\n\r\nplot(iris)\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\np.comment {\r\nbackground-color: #DBDBDB;\r\npadding: 10px;\r\nborder: 1px solid black;\r\nmargin-left: 25px;\r\nborder-radius: 5px;\r\nfont-style: italic;\r\n}\r\n\r\np.comment {\r\nbackground-color: #DBDBDB;\r\npadding: 10px;\r\nborder: 1px solid black;\r\nmargin-left: 25px;\r\nborder-radius: 5px;\r\nfont-style: italic;\r\n}\r\n\r\n\r\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\r\n\r\n\r\n\r\n\r\nXie, Yihui. 2015. Dynamic Documents with r and Knitr. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. http://yihui.name/knitr/.\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-05-29T14:57:41+02:00"
     },
     {
       "path": "poradniki.html",
@@ -44,5 +44,5 @@
       "last_modified": "2021-05-19T17:27:58+02:00"
     }
   ],
-  "collections": ["posts/posts.json"]
+  "collections": []
 }
