@@ -10,6 +10,7 @@ output:
     theme: theme.css
 ---
 
+
 <span> Cześć! Jesteśmy grupką osób zawodowo zajmującą się pracą naukową. Choć każde z nas poświęca się głównie swojej pracy, to podczas niezobowiązujących rozmów zauważyliśmy, że widzimy podobne problemy w nauce, problemy komunikacji pomiędzy badaczami a resztą społeczeństwa, czy w niedostatecznym wykorzystywaniu wiedzy naukowej, w rozwiązywaniu problemów społecznych. Zastanawialiśmy się czy jako naukowcy możemy w jakiś sposób przyłożyć się do rozwiązania tych problemów. </span>
 
 <span style="margin-left:2em"> W ten sposób narodził się ten projekt, który w obecnej fazie jest dla nas swojego rodzaju hobby. 
