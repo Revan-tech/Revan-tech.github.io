@@ -82,7 +82,7 @@ d-appendix {
     margin-bottom: 2em;
     /* liner gradient tints the image darker for readability*/
     background-image: linear-gradient( rgba(0,0,0,.2), rgba(0,0,0,.2) ), url(hero-image.jpg); 
-    height: 450px;
+    height: 470px;
     background-size: cover;
     background-color: #141c25f2;
     background-position: center center;
