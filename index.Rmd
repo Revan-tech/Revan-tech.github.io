@@ -18,9 +18,9 @@ output:
 <span style="margin-left:2em">Zaczniemy od publikowania przydatnych linków - baz danych, informatorów, stron popularyzujących naukę. Następnie zaczniemy publikować poradniki, pomagające poruszać się w świecie nauki. Na koniec uruchomimy większe projekty związane z nauką i jej popularyzowaniem. 
 
 
-Do kogo kierujemy nasz projekt? Do osób zaczynających przygodę z nauką, do popularyzatorów/ek, influencerów/ek, osób zainteresowanych nauką i osób poszukujących wiedzy. 
+<span style="margin-left:2em">Do kogo kierujemy nasz projekt? Do osób zaczynających przygodę z nauką, do popularyzatorów/ek, influencerów/ek, osób zainteresowanych nauką i osób poszukujących wiedzy. 
 
-Naszym celem jest przede wszystkim redystrybucja nauki. To znaczy, że nie tyle chcemy ją <i>popularyzować</i>, co raczej przekazywać dalej, umieszczać w nowych kontekstach. Chcemy ułatwiać dostęp do nauki, pokazywać jak z niej korzystać i oferować wskazówki na temat tego, jak poruszać się w świecie nauki.  
+<span style="margin-left:2em"> Naszym celem jest przede wszystkim redystrybucja nauki. To znaczy, że nie tyle chcemy ją <i>popularyzować</i>, co raczej przekazywać dalej, umieszczać w nowych kontekstach. Chcemy ułatwiać dostęp do nauki, pokazywać jak z niej korzystać i oferować wskazówki na temat tego, jak poruszać się w świecie nauki.  
  </span>
 
 
