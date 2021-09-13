@@ -1,0 +1,29 @@
+---
+title: "Odwiedź Bazę Wiedzy!"
+description: 
+preview: "books-1655783_1280.jpg"
+author:
+  - name: Kamil Kopacewicz
+date: 09-12-2021
+output:
+  distill::distill_article:
+    self_contained: false
+categories: 
+  - Sortownia
+---
+
+Odwiedź Bazę Wiedzy! 
+ 
+Otwieramy pierwszy moduł Sortowni Wiedzy! Jest nią... Baza Wiedzy. Sprawa jest bardzo prosta – zbieramy przydatne linki w jedno miejsce. Tylko tyle i aż tyle. Jeśli chcecie dowiedzieć się od czego zacząć poszukiwania artykułów naukowych, jeśli chcecie poznać podkasty popnaukowe, jeśli chcecie poznać ciekawe kanały na Youtube, albo dotrzeć do przydatnych źródeł z wybranych dziedzin – zajrzyjcie i przetestujcie wyszukiwarkę.  
+
+ 
+
+Linki są zorganizowane według kategorii gatunkowo-funkcjonalnych (np. podkasty, serwisy informacyjne, strony zawierające informacje o grantach). Jest również specjalna kategoria "tematyczne/dziedzinowe", która rozwinie dalsze okno wyboru wg dziedzin naukowych (np. lingwistyka, neuronauki). Ta z kolei pozwoli na jeszcze dokładniejsze zawężenie poszukiwań, wg tagów (dowolne hasła, lepiej kategoryzujące strony). 
+
+ 
+
+Baza Wiedzy jest i będzie w ciągłym rozwoju, a znajdować się na niej będą ręcznie wybrane linki do istotnych stron. Zależy nam na stworzeniu prostego, funkcjonalnego przybornika do świata wiedzy. Kategorie zorganizowaliśmy tak, aby różne osoby mogły znaleźć coś przydatnego. Dla osób zaczynających poszukiwanie wiedzy stworzyliśmy kategorię "Gdzie zacząć", na której znajdziecie odnośniki do baz z zasobami i wyszukiwarek. Dla osób szukających rozrywki i wiadomości naukowych mamy kategorie podkastów, kanałów wideo i serwisów informacyjnych. Z kolei osoby już eksplorujące wybrane dziedziny naukowe, mamy kategorię "dziedziny", która pozwala wybrać specyficzne pole badawcze. 
+
+ 
+
+Wy też możecie dołożyć swoje trzy grosze do rozwoju Bazy Wiedzy! Jeśli znacie przydatne strony, albo jeśli macie wiedzę ekspercką z zakresu jakiejś dziedziny – piszcie do nas! Informacje w zakładce "Kontakt". 

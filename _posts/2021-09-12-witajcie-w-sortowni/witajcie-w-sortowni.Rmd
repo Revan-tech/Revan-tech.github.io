@@ -1,0 +1,32 @@
+---
+title: "Witajcie w Sortowni"
+preview: "hero-image.jpg"
+author:
+  - name: Kamil Kopacewicz
+date: 09-11-2021
+output:
+  distill::distill_article:
+    self_contained: false
+categories: 
+  - Sortownia
+---
+
+Otwieramy stronę! Witajcie na Sortowni Wiedzy (a może powinniśmy powiedzieć - w Sortowni?). Ta strona ma być przede wszystkim swego rodzaju punktem przesiadkowym. Węzłem, z którego dalej można przeskoczyć do innych stron z wiedzą naukową. My w pierwszej kolejności chcemy zgromadzić przydatne odnośniki i nakierować Was na te najbardziej wartościowe. Już teraz możecie zajrzeć do naszej Bazy Wiedzy. Co prawda wciąż jeszcze panuje tam chaos, który próbujemy opanować - ale wraz z mijającym czasem, powinno zacząć się tam przejaśniać. Cel i funkcja Bazy Wiedzy są niezwykle proste. Wręcz obraźliwie proste. To po prostu baza przydatnych linków. Tyle i aż tyle. Odnośniki zebrane w jednym miejscu, opisane i podzielone na kategorie. Znajdziecie tam linki do stron popnaukowych (serwisy, blogi, podkasty), jak i linki do przydatnych repozytoriów i baz naukowych. Linki są naszym subiektywnym wyborem tego, co uważamy za przydatne i istotne. I tu otwarcie mówimy - to nie jest obiektywna selekcja, choć staramy się do obiektywizmu dążyć.  
+
+Zachęcamy Was do podsyłania nam nowych linków na adres sortownia.wiedzy@gmail.com. Siłą rzeczy, nie znamy się na większości dziedzin naukowych, więc będziemy niezmiernie wdzięczni za pomoc w uzupełnianiu bazy. 
+
+ 
+
+Baza Wiedzy to jednak tylko początek. Już teraz mamy w planach kolejne moduły strony, również związane z rozpowszechnianiem nauki. Będziemy publikować teksty opiniotwórcze na blogu i poradniki (m.in. z wiedzą o tym jak korzystać z nauki, jak szukać artykułów, jak rozpoznawać strategie retoryczne itd.). Mamy tysiąc pomysłów na nowe, przydatne narzędzia do poszukiwania wiedzy naukowej – te jednak będziemy powoli i ostrożnie rozwijać, wraz z rozrastaniem się strony. 
+
+ 
+
+Dla kogo w ogóle to wszystko robimy? Jaki to ma sens? No więc tak – po pierwsze, tak zebrana wiedza jest po prostu przydatna, nawet dla nas samych. Już teraz zdarza się nam szukać linków w Bazie kiedy szukamy (tego co gdzieś tam dawno temu daliśmy do zakładek w wyszukiwarce, ale nikt nie pamięta gdzie i kiedy to było). Baza Wiedzy, nawet w swojej podstawowej formie, pozwala dość szybko znaleźć przydatne strony związane z nauką. 
+
+Po drugie, ze strony mogą korzystać studen_ i naukowc_, poszukujący jakiegoś punktu wyjściowego do poszukiwań. Osoby nie zaznajomione z poszukiwaniem wiedzy naukowej znajdą u nas wiele przydatnych odnośników do najważniejszych stron, od których należy zacząć zbieranie bibliografii. 
+Po trzecie, osoby zupełnie niezwiązane ze światem nauki mogą być zainteresowane naszym wyborem stron popnaukowych. W szczególności polecamy sekcję podkastów. 
+Po czwarte, będziemy kierować część materiałów do influencer_ i popularyzator_ nauki. Jednym z naszych celów jest zwiększenie ilości wiedzy naukowej w debacie publicznej. W związku z tym, jeśli masz platformę i własną publiczność, na naszej stronie znajdziesz materiały, które pomogą Ci w dalszym przekazywaniu informacji naukowych. 
+
+ 
+
+Mamy nadzieję, że to co robimy będzie przydatne. To dla nas najważniejsze. Chcemy zrobić coś pozytywnego w wymiarze społecznym, nawet jeśli będzie to bardzo mała rzecz. Piszcie do nas z uwagami, pomysłami, reakcjami na adres sortownia.wiedzy@gmail.com. 
