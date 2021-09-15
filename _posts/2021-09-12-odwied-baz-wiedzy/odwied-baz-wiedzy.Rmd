@@ -12,11 +12,29 @@ categories:
   - Sortownia
 ---
 
+```{css echo=FALSE}
+p.note
+{
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     background-color: #f0f7fb;
+     background-image: url(css-box-icon-3.png);
+     background-position: 9px 0px;
+     background-repeat: no-repeat;
+     border: solid 1px #3498db;
+     border-radius: 6px;
+     line-height: 18px;
+     overflow: hidden;
+     padding: 15px 60px;
+}
+```
+
+
 Odwiedź Bazę Wiedzy! 
  
 Otwieramy pierwszy moduł Sortowni Wiedzy! Jest nią... Baza Wiedzy. Sprawa jest bardzo prosta – zbieramy przydatne linki w jedno miejsce. Tylko tyle i aż tyle. Jeśli chcecie dowiedzieć się od czego zacząć poszukiwania artykułów naukowych, jeśli chcecie poznać podkasty popnaukowe, jeśli chcecie poznać ciekawe kanały na Youtube, albo dotrzeć do przydatnych źródeł z wybranych dziedzin – zajrzyjcie i przetestujcie wyszukiwarkę.  
 
- 
+<p class = "note"> We współczesnym świecie bardzo wiele można nauczyć się nie wychodząc z domu (i za darmo). Internet jest pełen zasobów i narzędzi do nauki, weryfikacji informacji i edukującej rozrywki. Na niektóre łatwo trafić. Inne znajduje się po długich poszukiwaniach lub przypadkiem. Menedżery zakładek w naszych przeglądarkach wypchane są przydatnymi linkami, często nieopisanymi lub w złych podfolderach. Chęci na uporządkowanie tego zrodziła pomysł Bazy Wiedzy. </p>
 
 Linki są zorganizowane według kategorii gatunkowo-funkcjonalnych (np. podkasty, serwisy informacyjne, strony zawierające informacje o grantach). Jest również specjalna kategoria "tematyczne/dziedzinowe", która rozwinie dalsze okno wyboru wg dziedzin naukowych (np. lingwistyka, neuronauki). Ta z kolei pozwoli na jeszcze dokładniejsze zawężenie poszukiwań, wg tagów (dowolne hasła, lepiej kategoryzujące strony). 
 
