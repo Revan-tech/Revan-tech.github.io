@@ -39,7 +39,7 @@ sortownia.wiedzy@gmail.com
 
 <div class="wrapper">
 <div class = "a">
-**Szymon Mąka** – neurokognitywista, doktorant w Pracowni Neuronauki Społecznej IP PAN. Obecnie pracuje przy [projekcie Samotność](http://www.neuronauka-spoleczna.pl/badania-2/opus/), gdzie bada neurofizjologiczne skutki samotności. Na stronie współodpowiada za strukturę, UX, teksty i strategie rozwoju. 
+**Szymon Mąka** – neurokognitywista, doktorant w Pracowni Neuronauki Społecznej IP PAN. Obecnie pracuje przy [projekcie Samotność](http://www.neuronauka-spoleczna.pl/badania-2/opus/), gdzie bada neurofizjologiczne skutki samotności. Odpowiada za budowę strony, współodpowiada za strukturę, UX, teksty i strategie rozwoju. 
 
 </div>
 
