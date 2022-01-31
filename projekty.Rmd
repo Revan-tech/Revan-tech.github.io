@@ -5,7 +5,7 @@ site: distill::distill_website
 
 ::: {.floatting}
 
-```{r out.width='30%', out.extra='style="float:left; padding:10px"', echo=FALSE}
+```{r out.width='30%', out.extra='style="float:left; padding:20px"', echo=FALSE}
 knitr::include_graphics("ANC.jpg") 
 ```
 

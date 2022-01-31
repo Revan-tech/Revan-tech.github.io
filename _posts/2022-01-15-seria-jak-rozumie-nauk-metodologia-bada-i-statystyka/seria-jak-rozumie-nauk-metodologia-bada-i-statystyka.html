@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Seria: Jak rozumieć naukę?</title>
+
+  <meta property="description" itemprop="description" content="Metodologia badań i Statystyka"/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-01-15"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-01-15"/>
+  <meta name="article:author" content="Szymon Mąka"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Seria: Jak rozumieć naukę?"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Metodologia badań i Statystyka"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Seria: Jak rozumieć naukę?"/>
+  <meta property="twitter:description" content="Metodologia badań i Statystyka"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Przyczyny i skutki rewolucyjna nauka wnioskowania przyczynowego;citation_publication_date=2021;citation_publisher=Copernicus Center Press;citation_author=Judea Pearl;citation_author=Dana Mackenzie"/>
+  <meta name="citation_reference" content="citation_title=Neural correlates of interspecies perspective taking in the post-mortem atlantic salmon: An argument for multiple comparisons correction;citation_publication_date=2009;citation_publisher=Elsevier Science;citation_volume=47;citation_author=Craig M Bennett;citation_author=Michael B Miller;citation_author=George L Wolford"/>
+  <meta name="citation_reference" content="citation_title=Podstawy badaĹ„ spoĹ‚ecznych;citation_publication_date=2008;citation_publisher=PWN;citation_author=Earl Babbie"/>
+  <meta name="citation_reference" content="citation_title=Do student samples provide an accurate estimate of the general public?;citation_publication_date=2016;citation_publisher=Public Library of Science San Francisco, CA USA;citation_volume=11;citation_author=Paul HP Hanel;citation_author=Katia C Vione"/>
+  <meta name="citation_reference" content="citation_title=Individual vulnerability to escalated aggressive behavior by a low dose of alcohol: Decreased serotonin receptor mRNA in the prefrontal cortex of male mice;citation_publication_date=2010;citation_publisher=Wiley Online Library;citation_volume=9;citation_author=S Chiavegatto;citation_author=IMH Quadros;citation_author=G Ambar;citation_author=KA2824083 Miczek"/>
+  <meta name="citation_reference" content="citation_title=Mindless statistics;citation_publication_date=2004;citation_publisher=Elsevier;citation_volume=33;citation_author=Gerd Gigerenzer"/>
+  <meta name="citation_reference" content="citation_title=Past, present, and future of statistical science;citation_publication_date=2014;citation_publisher=CRC Press;citation_author=Xihong Lin;citation_author=Christian Genest;citation_author=David L Banks;citation_author=Geert Molenberghs;citation_author=David W Scott;citation_author=Jane-Ling Wang"/>
+  <meta name="citation_reference" content="citation_title=Replications, comparisons, sampling and the problem of representativeness in animal cognition research;citation_publication_date=2021;citation_publisher=Europe PMC Funders;citation_volume=8;citation_author=Benjamin G Farrar;citation_author=Konstantinos Voudouris;citation_author=Nicola S Clayton"/>
+  <meta name="citation_reference" content="citation_title=Does stereotype threat influence performance of girls in stereotyped domains? A meta-analysis;citation_publication_date=2015;citation_publisher=Elsevier;citation_volume=53;citation_author=Paulette C Flore;citation_author=Jelte M Wicherts"/>
+  <meta name="citation_reference" content="citation_title=Estimating the reproducibility of psychological science;citation_publication_date=2015;citation_publisher=American Association for the Advancement of Science;citation_volume=349;citation_author=Estimating the reproducibility of psychological science"/>
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","author","date","output","bibliography","categories","csl"]}},"value":[{"type":"character","attributes":{},"value":["Seria: Jak rozumieć naukę?"]},{"type":"character","attributes":{},"value":["Metodologia badań i Statystyka\n"]},{"type":"character","attributes":{},"value":["naser-tamimi-yG9pCqSOrAg-unsplash.jpg"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Szymon Mąka"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["01-15-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["bib.bib"]},{"type":"character","attributes":{},"value":["Refleksja"]},{"type":"character","attributes":{},"value":["apa.csl"]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["apa.csl","bib.bib","naser-tamimi-yG9pCqSOrAg-unsplash.jpg","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/anchor-4.2.2/anchor.min.js","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/bowser-1.9.3/bowser.min.js","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/distill-2.2.21/template.v2.js","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/header-attrs-2.10/header-attrs.js","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/jquery-1.11.3/jquery.min.js","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/popper-2.6.0/popper.min.js","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/tippy-6.2.7/tippy-bundle.umd.min.js","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/tippy-6.2.7/tippy-light-border.css","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/tippy-6.2.7/tippy.css","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/tippy-6.2.7/tippy.umd.min.js","seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/header-attrs-2.10/header-attrs.js"></script>
+  <script src="seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/popper-2.6.0/popper.min.js"></script>
+  <link href="seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="seria-jak-rozumie-nauk-metodologia-bada-i-statystyka_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Seria: Jak rozumieć naukę?","description":"Metodologia badań i Statystyka","authors":[{"author":"Szymon Mąka","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-01-15T00:00:00.000+01:00","citationText":"Mąka, 2022"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Seria: Jak rozumieć naukę?</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">Refleksja</div>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Metodologia badań i Statystyka</p></p>
+</div>
+
+<div class="d-byline">
+  Szymon Mąka true 
+  
+<br/>01-15-2022
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#statystycznie-rzecz-biorąc">Statystycznie rzecz biorąc</a></li>
+<li><a href="#jak-zbadać-wszystich-polaków">Jak zbadać wszystich Polaków?</a></li>
+<li><a href="#różnią-się-czy-nie">Różnią się czy nie?</a></li>
+<li><a href="#krysys-replikacyjny">Krysys Replikacyjny</a></li>
+</ul>
+</nav>
+</div>
+<p>Zwykle kursy z metodologii w szkołach wyższych zaczyna się od filozofii nauki. Wprowadza ona należyty kontekst, historię refleksji naukowej. Przedstawia się rolę teorii i modeli w procesie wyjaśniania rzeczywistości. Następnie wyjaśnia się założenia i metody stosowane w dziedzinie nauki, którą ktoś akurat studiuje. My te i inne tematy odłożymy sobie na potem, a serię jak rozumieć naukę zaczniemy od przyjrzenia się statystyce i metodologii badań.</p>
+<h1 id="statystycznie-rzecz-biorąc">Statystycznie rzecz biorąc</h1>
+<p>Statystyka to dziedzina nauki pozwalająca na formalne (to znaczy w języku matematyki) przedstawienie interesujących nas zjawisk. Często jest przedmiotem znienawidzonym przez studentów. Uznawana za nudną i trudną, często uczona przez wykładowców, którzy sami ją za taką uważają, co zdecydowanie nie pomaga w jej przyswajaniu. Zdecydowaliśmy się zacząć od statystyki, ponieważ jest ona wykorzystywana właściwie we wszystkich naukach empirycznych (choć niektórzy fizycy zapewne z pogardą pokręcili głową). Dobrze podsumował to matematyk John Tukey: „Najlepszą rzeczą w byciu statystykiem jest to, że możesz grzebać w podwórku u wszystkich innych”<span class="citation" data-cites="lin2014past">(<a href="#ref-lin2014past" role="doc-biblioref">Lin et al., 2014</a>)</span>.</p>
+<p>Zacznijmy więc zagłębiać się w meandry statystyki. <strong>Najpierw musimy wykonać pomiar</strong>. Pomiar oznacza przypisanie cesze pewnego obiektu wartości liczbowej. Np. ile waży człowiek w kilogramach, na kogo zagłosuje w najbliższych wyborach lub jaki jest poziom jego otwartości na nowe doświadczenia. Następnie możemy sprawdzić czy pomiędzy mierzonymi zmiennymi zachodzi jakiś związek. Na przykład, gdybyśmy przyjrzeli się danym dotyczącym wieku i wzrostu ludzi do 21 roku, zauważylibyśmy, że im więcej ktoś ma lat, tym jest wyższy. Związek, w którym wartość jednej zmiennej wzrasta i wartość drugiej zmiennej także wzrasta (bądź maleje) nazywamy korelacją liniową.</p>
+<p>Istnieją oczywiście inne, bardziej subtelne związki pomiędzy zmiennymi, ale na razie zostańmy przy relacji liniowej. Pewną mantrą, którą słyszy się na zajęciach ze statystyki jest: „korelacja nie oznacza przyczynowości”. Weźmy taki przykład: okazuje się, że im więcej sprzedaje się lodów tym częściej ludzi atakują rekiny. Czy spożycie lodów w jakiś sposób zachęca rekiny do ataku? Oczywiście nie, pozorny związek pomiędzy tymi dwoma zjawiskami wyjaśnia fakt, że ludzie najczęściej kupują lody w upalne dni, a w upalne dni więcej ludzi odpoczywa na plaży, co przekłada się na częstsze ataki rekinów.</p>
+<p>Gdy mamy więc dane obserwacyjne (nasze wyniki pomiarów) nie możemy mówić o przyczynowości, gdyż widzimy <strong>tylko</strong> współzmienność cech obiektów, które badamy. By wnioskować o przyczynowości musimy posłużyć się eksperymentem. W warunkach kontrolowanych dzielimy losowo badane przez nas obiekty na dwie grupy (bądź więcej), zapewniamy im możliwie jak najbardziej zbliżone warunki, a następnie w jednej z nich (zwanej grupą docelową) wykonujemy jakąś interwencję X (np. podajemy lek), a w drugiej grupie (nazywanej kontrolną) nie. Następnie w obu grupach wykonujemy pomiar. Jeśli pomiary w grupach się różnią, zakładamy, że różnicę mogła spowodować tylko interwencja X.</p>
+<p>Często jednak nie możemy posłużyć się eksperymentem, bo na przykłąd: jego koszt jest zbyt wysoki, wykonanie byłoby nieetyczne, lub jest to po prostu niemożliwe. Wtedy, by odnaleźć przyczynowość, posługujemy się dodatkowymi metodami, takimi jak wykorzystanie istniejących teorii, zgodność z modelem, wyeliminowanie innych potencjalnie wpływających zmiennych, modelami zwierzęcymi czy obserwacją następstw czasowych w badaniach podłużnych. Żadna z tych metod nie daje jednak takiej pewności we wnioskowaniu o przyczynowości jak eksperyment. Pewną nadzieję na rozwiązanie tego problemu dają rozwijane od kilkunastu lat metody matematyczne pozwalające na wnioskowanie o przyczynowości z danych obserwacyjnych. Zainteresowanym tym tematem polecam książkę „Przyczyny i Skutki” Jude’a Pearl’a i Dany Mackenzie <span class="citation" data-cites="Pearl">(<a href="#ref-Pearl" role="doc-biblioref">Pearl &amp; Mackenzie, 2021</a>)</span>.</p>
+<h1 id="jak-zbadać-wszystich-polaków">Jak zbadać wszystich Polaków?</h1>
+<p>Zajmijmy się teraz kolejnym istotnym problemem, mianowicie, jak możemy uogólniać (generalizować) wyniki badań. Załóżmy, że chcemy powiedzieć coś o wadze w populacji Polaków, więc przeprowadzamy badanie. Mierzymy wagę dziesięciu ludzi napotkanych na ulicy, ale od razu napotykamy problem. Otrzymaliśmy dokładne informacje o wadze tylko tych 10 ludzi. Skąd mamy pewność, że ich średnia waga jest jakkolwiek zbliżona do średniej w populacji? Może należałoby zwiększyć próbę? Sto, może tysiąc osób wystarczyłoby aby uzyskać odpowiednie przybliżenie. Taką logiką kierował się magazyn „Literary Digest”, który przeprowadził sondaż w wyborach prezydenckich w Stanach Zjednoczonych w 1936 roku. Próba wynosiła ponad dwa miliony ludzi. W sondażu zwyciężył Alf Landon z 57% poparciem. Jednak w wyborach zwyciężył Franklin Delano Roosevelt z 61% poparciem, gdy Alf Landon otrzymał jedynie 8% głosów. Jak to możliwe? „Literary Digest” losował respondentów z książek telefonicznych. Jednak w 1936 roku telefon posiadały raczej osoby zamożne, dlatego wyniki sondażu były bardzo skrzywione. Większość ludzi w dobie największego kryzysu ekonomicznego w Stanach, głosowało na prosocjalne reformy Roosevelta <span class="citation" data-cites="Babbie">(<a href="#ref-Babbie" role="doc-biblioref">Babbie, 2008</a>)</span>.</p>
+<p>A jednak dzisiejsze sondaże są zadziwiająco dokładne. Jak się to dzieje? Otóż zachowanie matematycznych obiektów, a takimi są nasze pomiary, można policzyć. Jeśli każdy obiekt w populacji (np. Polaków) ma niezerowe, takie samo prawdopodobieństwo wylosowania do próby, możemy policzyć ile osób musimy wylosować, by z prawdopodobieństwem X wylosować próbę, w której średnia wartość cechy nie będzie różna więcej niż Y od średniej wartości cechy w populacji.</p>
+<aside>
+Umożliwia nam to jedno z najważniejszych twierdzeń w statystyce: Centralne Twierdzenie Graniczne.
+</aside>
+<p>W praktyce wygląda to tak, że gdybyśmy chcieli mieć 95% szansę na wylosowanie próby, w której procent respondentów głosujących na daną partię, nie różni się więcej niż o 3% od realnego poparcia w społeczeństwie, powinniśmy wylosować 1067 osób do próby. Ponieważ każdy Polak musi mieć szansę na wylosowanie, próbę powinniśmy losować ze zbioru, który zawiera wszystkich Polaków, na przykład zbioru numerów PESEL.</p>
+<p>Próbę, do której obiekty zostały przydzielone w sposób losowy z całej populacji nazywamy próbą reprezentatywną. Wszystkie łączy to, że możemy dokładnie policzyć margines błędu dla wyników. Na marginesie, spotkałem się kiedyś z opinią, że jeśli ankieter stanie w centrum miasta i będzie podchodził do niektórych ludzi i prosił ich o wypełnienie ankiety, mamy do czynienia z losowym doborem do próby. Ankieter przecież nie zna tych ludzi, nie może więc dobierać ich sobie według ich poglądów. Niemniej, ludzie Ci znaleźli się w tym konkretnym miejscu, o tej konkretnej godzinie w sposób nieprzypadkowy. Przy uczelni będzie więcej studentów, w godzinach szczytu będzie więcej osób zmierzających do pracy, i tak dalej.</p>
+<aside>
+Próba w której wszystkie obiekty zostały wylosowane z takim samym prawdopodobieństwem nazywamy doborem prostym losowym. Istnieją jeszcze inne metody doboru próby reprezentatywnej.
+</aside>
+<p>A jednak wśród badań naukowych próby reprezentatywne to znaczna mniejszość. Jest to spowodowane wieloma czynnikami. Przede wszystkim, przeprowadzenie badania reprezentatywnego jest kosztowne i trudne. Uzyskanie dostępu do listy zawierającej dane wszystkich obywateli wymaga przejścia wielu czasochłonnych procedur. Po drugie, o ile w wypadku ludzi istnieje jakaś lista, w przypadku badań nad zwierzętami nic takiego nie ma. Biolodzy nie mają skąd wylosować reprezentatywnej próby szczurów. Chemicy i fizycy mają w tym względzie nieco łatwiej. Atom wodoru na wsi będzie identyczny z atomem wodoru w mieście.</p>
+<p>By poradzić sobie z tym problemem stosuje się różne metody. W dniu wyborów, po zakończeniu zbierania głosów, zwykle o godzinie 21 ogłasza się sondażowe wyniki wyborów, metodą exit poll. Badanie to nie jest przeprowadzone na próbie reprezentatywnej, ponieważ ankieterzy muszą zadać pytanie o oddany głos zaraz po wyjściu wyborcy z lokalu wyborczego. A jednak znowu mamy do czynienia z niezwykłą dokładnością. Badacze wyszczególniają zmienne silnie skorelowane z preferencjami wyborczymi, na podstawie wcześniejszych badań reprezentatywnych. Takie zmienne to zwykle płeć, wielkość miejscowości zamieszkania, poziom wykształcenia czy wielkość dochodów. Respondenci są dobierani tak, by procentowo liczba osób wykształconych odpowiadała tej w populacji itd. Przy poprawnie dobranych założeniach pozwala to na dokładne oszacowanie wyników wyborów. Biolodzy współcześnie w badaniach nad zwierzętami podobnie starają się brać pod uwagę wewnątrzgatunkowe zróżnicowanie genetyczne, środowisko zwierzęcia i jego historię, by stworzyć próbę, której wyniki będą dały się generalizować <span class="citation" data-cites="farrar2021replications">(<a href="#ref-farrar2021replications" role="doc-biblioref">Farrar et al., 2021</a>)</span>.</p>
+<p>Jednocześnie w niereprezentatywnych próbach należy uznać, że <strong>wpływ pewnych potencjalnych źródeł zmienności jest zaniedbywalny</strong>, to znaczy nie ma znaczenia dla wyniku badań. Na przykład, że mechanizm molekularny skurczu mięśnia poprzecznie prążkowanego jest niezależny od tego czy ktoś mieszka w Warszawie czy San Francisco. Jednak czasami takie założenia są błędne. Psychologowie długo twierdzili, że badają uniwersalne mechanizmy zachowania i myślenia ludzkiego, co miało uzasadniać mało zróżnicowane próby składające się głównie ze studentów psychologii (obecnie w ramach psychologii międzykulturowej zwraca się uwagę na różnice wynikające z kultury) <span class="citation" data-cites="hanel2016student">(<a href="#ref-hanel2016student" role="doc-biblioref">Hanel &amp; Vione, 2016</a>)</span>. Problemy z doborem próby miały także inne dziedziny nauki, jak biologia i medycyna, co jest jednym z powodów kryzysu replikacyjnego, który omówimy w dalszej części tego tekstu.</p>
+<h1 id="różnią-się-czy-nie">Różnią się czy nie?</h1>
+<p>No dobrze. Jak zauważyliśmy, dobór próby do badania to nietrywialna sprawa. Załóżmy jednak, że dobraliśmy naszą próbę odpowiednio i teraz chcemy powiedzieć czy średnia waga mężczyzn i kobiet się różni. Nie wystarczy jednak tylko spojrzeć na średnią mężczyzn i kobiet z naszej próby i zobaczyć, która średnia jest większa. Ponieważ losowaliśmy naszych badanych, nawet jeśli średnia waga w populacji jest taka sama dla kobiet i mężczyzn, prawie na pewno nie otrzymamy takich samych średnich w naszej próbie (zawsze będzie między nimi jakaś różnica). Jak więc określić czy otrzymane wyniki w próbie istotnie się różnią w populacji, czy różnica jest wynikiem błędu losowego.</p>
+<p>I tu statystycy opracowali kolejną ciekawą sztuczkę. Na podstawie wyników otrzymanych w próbie jesteśmy w stanie oszacować prawdopodobieństwo tego, że jeśli w populacji mężczyźni i kobiety nie różnią się wagą, to na ile jest prawdopodobne wylosowanie próbek różniących się o określoną wartość. Jeśli jest to wysoce nieprawdopodobne (zwykle przyjmuje się, że to prawdopodobieństwo wynosi mniej niż 5%) przyjmuje się to jako argument, że różnica rzeczywiście istnieje w populacji. Prawdopodobieństwo to nazywa się wartością p (p-value), a jeśli jest mniejsze od przyjętego progu (dopuszczalnego prawdopodobieństwa otrzymania wyniku fałszywie pozytywnego), wynik nazywamy istotnym statystycznie.</p>
+<p>P-value możemy obliczyć dla większości hipotez, nie tylko o różnicy średnich, np. czy zmienne są skorelowane liniowo, szacując prawdopodobieństwo otrzymania wyniku w próbie, który w populacji nie istnieje. Nie jest to jedyny sposób weryfikacji hipotez statystycznych, niemniej z powodów historycznych oraz faktu, że obliczenie p-value jest stosunkowo proste, jest to najczęstsza metoda stosowana w praktyce. Niemniej wokół użycia p-value narosło wiele kontrowersji. Wynika to między automatycznego korzystania z tej miary przez naukowców traktujących statystykę jako mechaniczny sposób na wskazanie czy badanie potwierdza daną tezę. Stwarza to szereg problemów, których opisanie jednak przekracza zakres tego tekstu. Zainteresowanych odsyłam do artykułu “Mindless Statistic” Gerda Gigerenzera <span class="citation" data-cites="gigerenzer2004mindless">(<a href="#ref-gigerenzer2004mindless" role="doc-biblioref">Gigerenzer, 2004</a>)</span>.</p>
+<p>Przeszliśmy od doboru próby do prostej analizy statystycznej otrzymanych wyników. Czy to jednak zawsze wystarczy by otrzymać rzetelną informację na temat interesującego nas efektu? Niestety sprawa jest bardziej skomplikowana. Rozpatrzmy następujący przykład, przeprowadzamy badanie na podstawie danych obserwacyjnych w którym chcemy określić wpływ aktywności fizycznej na gęstość kości. Liczymy wskaźnik korelacji liniowej, jednak ku naszemu zdziwieniu analiza pokazuje brak związku, choć z innych badań wiemy, że wraz ze wzrostem częstotliwości uprawiania sportu, gęstość kości powinna rosnąć.</p>
+<p>Używamy więc innej metody statystycznej – <strong>regresji liniowej</strong>, która pozwala na uwzględnienie wpływu więcej niż jednej zmiennej na zmienną, która nas interesuje (gęstość kości). Do analizy używamy teraz nie tylko częstotliwości aktywności fizycznej, ale także wagę w kilogramach. Okazuje się, że obydwie zmienne są pozytywnie skorelowane z gęstością kości (im większa częstotliwość aktywności fizycznej bądź waga, tym większa gęstość kości). Jednak jeśli analizować zmienne z osobna, nie wykryjemy związku. Dzieje się tak dlatego, że częstotliwość aktywności fizycznej i waga są ze sobą negatywnie skorelowane (im częstsza aktywność, tym mniejsza waga). Oznacza to, że większa gęstość kości u osób aktywnych jest równoważona przez większą gęstość kości u osób ważących więcej, przez co wydaje się, na pierwszy rzut oka, że aktywność fizyczna nie ma związku z gęstością kości.</p>
+<p>Zauważmy, że gdybyśmy przeprowadzili eksperyment, nie spotkalibyśmy się z podobnym problemem, ponieważ tylko jedna grupa uprawiałaby wzmożoną aktywność fizyczną, co zwiększyłoby średnią gęstość kości. Choć dane obserwacyjne nie pozwalają nam mówić o przyczynowości, za pomocą metod statystycznych jesteśmy w stanie <strong>odseparować wpływ poszczególnych zmiennych.</strong></p>
+<p>Na koniec tej części warto wspomnieć o interpretacji wyników analizy statystycznej. Ponownie załóżmy, że przeprowadzamy eksperyment, w którym interesuje nas wpływ alkoholu na zachowania agresywne. Dobieramy próbę, grupie docelowej podajemy alkohol, a następnie mierzymy częstotliwość zachowań agresywnych. Podczas analizy naszych wyników widzimy, że średnia częstotliwość zachowań agresywnych jest istotnie wyższa w grupie, której podaliśmy alkohol. Z tego punktu wiedzie prosta droga do wniosku, że alkohol powoduje agresję.</p>
+<p>Nie jest to jednak wniosek poprawny. Jeśli dołączymy do analizy zmienną wskazującą na tendencję do zachowań agresywnych, okaże się, że częstotliwość agresji wzrasta po alkoholu, ale proporcjonalnie do wcześniej istniejącej skłonności do agresji <span class="citation" data-cites="chiavegatto2010individual">(<a href="#ref-chiavegatto2010individual" role="doc-biblioref">Chiavegatto et al., 2010</a>)</span>. Otrzymaliśmy zgoła inny wniosek, mówiący nam, że alkohol działa jako wyzwalacz agresji, jednak jej nie powoduje. Podczas przeprowadzania badań należy pamiętać o tym, że <strong>wniosek statystyczny (średnia ilość zachowań agresywnych wzrasta), jest czymś innym od wniosku interpretacyjnego (alkohol powoduje agresję).</strong></p>
+<h1 id="krysys-replikacyjny">Krysys Replikacyjny</h1>
+<p>Zwróćmy uwagę teraz na większy obraz wynikający z naszych rozważań nad metodologią statystyczną. Załóżmy, że w idealnym świecie, gdzie badacze idealnie przygotowują swoje eksperymenty na doskonałych próbach, średnio 5% badań, w których badany efekt nie istnieje, będzie zawierało fałszywe wyniki. Czyli jeśli na temat jakiegoś zjawiska pojawiło się wystarczająco dużo badań, to zawsze znajdziemy artykuł przedstawiający dane za, jak i przeciw danej tezie. Dlatego jeśli ktoś przedstawia nam badanie popierające jakąś tezę, <strong>niekoniecznie oznacza to, że ma rację.</strong> W nauce ważne jest gromadzenie (akumulacja) dowodów i powtarzanie (replikacja) badań. Duże role odgrywają w tym metaanalizy czyli wtórna analiza statystyczna wyników wielu badań w celu określenia istotności dowodów przemawiających za danym zjawiskiem.</p>
+<aside>
+Upraszczam tu sprawę, ponieważ mówię tylko o prawdopodobieństwie wyników fałszywie pozytywnych, a należałoby uwzględnić także sytuacje, w których nie wykryto efektu faktycznie istniejącego, czyli fałszywych wynikach negatywnych. Realnie prawdopodobieństwo otrzymania wyników nieprawdziwych jest większe.
+</aside>
+<p>No właśnie. Tak by było w idealnym świecie. Jednak realnie mamy do czynienia z efektem <strong>złudzenia publikacyjnego</strong>, czyli skłonności wydawców do publikacji artykułów zawierających wyniki świadczące o istnieniu efektu. Brak efektu nie jest sexy, bo w badaniu nie wyszło nic interesującego. Doprowadziło to sytuacji, w której badania przedstawiające jakiś efekt były znacznie częściej publikowane niż te, które go nie pokazywały. A tak jak zauważyliśmy wcześniej zawsze pewien odsetek badań fałszywie pokaże nam istnienie efektu, którego nie ma. Może prowadzić to do sytuacji, w której dobrze udokumentowany efekt faktycznie nie istnieje. Za przykład może posłużyć zjawisko zagrożenia stereotypem z psychologii społecznej polegające na obniżeniu sprawności wykonywania zadania przez osoby należące do grupy objętej negatywnym stereotypem, gdy wcześniej „przypomni” im się o istnieniu stereotypu. Na przykład jeśli kobietom (niekoniecznie wprost) powie się, że kobiety są gorsze z matematyki, a następnie przeprowadzi się test, okaże się, że wypadły gorzej niż mężczyźni.</p>
+<p>Mimo licznych badań potwierdzających ten efekt, metaanalizy przeprowadzane od 2015 roku wykazały istnienie złudzenia publikacyjnego <span class="citation" data-cites="flore2015does">(<a href="#ref-flore2015does" role="doc-biblioref">Flore &amp; Wicherts, 2015</a>)</span>. Wykrycie złudzenia publikacyjnego jest możliwe dzięki temu, że wyniki badań (w formie liczb) powinny zachowywać się (statystycznie) w określony sposób. Od kilkunastu lat rozwijają się metody statystyczne pozwalające na wykrywanie tendencyjności w publikowaniu artykułów. Złudzenia publikacyjne stanowią jeden z problemów składających się na wspomniany wcześniej kryzys replikacyjny.</p>
+<p>W 2015 roku w prestiżowym czasopiśmie naukowym „Science” ukazały się wyniki badania, w którym autorzy powtórzyli 100 nigdy wcześniej niereplikowanych badań psychologicznych. Tylko w 39% z nich udało się otrzymać wynik taki jak w oryginalnych publikacjach <span class="citation" data-cites="open2015estimating">(<a href="#ref-open2015estimating" role="doc-biblioref">Open Science Collaboration, 2015</a>)</span>. To i podobne badania, wraz z rosnącą świadomością złudzeń publikacyjnych, zapoczątkowało debatę na temat kryzysu replikacyjności i rzetelności współczesnych praktyk naukowych. Szybko okazało się, że problem nie dotyczy tylko psychologii, lecz również biologii, ekonomii i medycyny.</p>
+<p>Kryzys replikacyjny ma wiele źródeł, jednak najczęściej wymienia się zjawisko <strong>“publikuj lub zgiń”</strong> (publish or perish). Współczesna polityka ewaluacji pracownika naukowego i jego dorobku opiera się na publikacjach. Im więcej jest publikacji, im częściej są cytowane przez innych badaczy, w im lepszych czasopismach są publikowane, tym lepiej. Od wyniku ewaluacji zależy zatrudnienie i finansowanie badań naukowca. Presja publikacyjna wywierana na badaczy w połączeniu z tendencyjnością publikowania tylko “interesujących” wyników sprawiła, że niekiedy popełniają oni pewne metodologiczne nadużycia. Jakie to nadużycia? Pomoże nam to wyjaśnić martwy łosoś w rezonansie magnetycznym.</p>
+<p>Zespół neuronaukowców pod kierownictwem Craiga Bennetta przygotowywał się do przeprowadzenia badania dotyczącego przetwarzania w mózgu emocjonalnych zdjęć przy użyciu funkcjonalnego rezonansu magnetycznego (fMRI). Urządzenie to działa jak trójwymiarowa kamera pozwalająca na rejestrowanie zmian w natężeniu pola magnetycznego w voxelach (trójwymiarowych odpowiednikach pikseli). W zależności od tego czy krew jest utlenowana czy odtlenowana ma inne właściwości magnetyczne, pozwala to sprawdzać poziom utlenowania krwi w różnych obszarach mózgu. Im większą aktywność wykonuje dany region mózgu, tym więcej tlenu zużywa. Pozwala to na sprawdzenie jakie obszary mózgu są bardziej aktywne w różnych warunkach eksperymentalnych.</p>
+<p>Bennett przed wykonaniem właściwych badań zdecydował się na przetestowanie procedury wkładając do skanera trzykilogramowego martwego łososia. W trakcie pomiaru wyświetlano na specjalnym ekranie zdjęcia, tak jak miałoby to miejsce podczas prawdziwego badania, po czym zadawano łososiowi pytania, jakie emocje prezentują osoby na zdjęciach. Po przeanalizowaniu danych okazało się, że mózg martwego łososia wykazuje zwiększoną aktywność pewnych regionów podczas oglądania zdjęć, niż w spoczynku <span class="citation" data-cites="bennett2009neural">(<a href="#ref-bennett2009neural" role="doc-biblioref">Bennett et al., 2009</a>)</span>.</p>
+<p>Wynikało to ze zjawiska znanego w statystyce jako <strong>problem wielokrotnych porównań.</strong> W badaniach przy użyciu fMRI porównuje się aktywność w każdym voxelu pomiędzy warunkami. Voxeli w skanie fMRI jest kilkaset tysięcy. Wykonując tyle porównań prawdopodobieństwo, że wyjdzie nam choć jeden wynik fałszywie pozytywny wynosi niemal 100%. Prawdopodobieństwo, że w każdym pojedynczym porównaniu wystąpi wynik fałszywie pozytywny nadal wynosi 5%, ale jeśli średnio 5% wokseli pokaże nam różnice pomiędzy warunkami, to wykryjemy aktywność nawet u martwego łososia (przez szum generowany wynikający z fluktuacji pola magnetycznego). By poradzić sobie z tym problemem stosuje się współcześnie odpowiednie poprawki, które utrzymują niższe prawdopodobieństwo otrzymania wyniku fałszywie pozytywnego.</p>
+<p>Co ma więc martwy łosoś do zjawiska “publikuj lub giń?” Naukowcy w swoich badaniach zwykle zbierają więcej danych, niż te które są potrzebne do weryfikacji a priori postawionych hipotez (pytań badawczych, które stanowiły motywację do przeprowadzenia badania). Dodatkowe dane zbiera się w celu kontrolowania wpływu zmiennych potencjalnie wpływających na efekt, jak wspominaliśmy powyżej. Ponadto, z uwagi, że zwykle przeprowadzenie badania jest kosztowne i czasochłonne zbiera się jak najwięcej danych w celach eksploracyjnych (dodatkowych analiz nie wynikających bezpośrednio z hipotez). Presja publikacyjna, razem z tendencją wydawnictw do publikowania artykułów potwierdzających efekt niż mu zaprzeczających, sprawia, że jeśli badacze nie potwierdzą swoich założonych hipotez, szukają w danych jakiegoś istotnego efektu, by zwiększyć szansę na publikację.</p>
+<p>W tym momencie powracamy do problemu wielokrotnych porównań. Istnieją oczywiście odpowiednie statystyczne środki zaradcze, niestety czasami badacze by zwiększyć sexapill artykułów przedstawiają uzyskane istotne wyniki tak, jakby odpowiadały na ich pytanie badawcze postawione przed jego przeprowadzeniem badania. Pomijają także w tekście analizy, które nie wykrywały efektu. Nieodpowiedni dobór próby, tendencyjność publikacyjna i presja kładziona na badaczy składa się na kryzys replikacyjny. Od kilku lat stosuje się coraz częściej środki zaradcze w postaci częstszej publikacji replikacji, czasopism, które publikują tylko artykuły mówiące o braku efektu czy prerejestracji - przedstawieniu do wiadomości publicznej w formie krótkiego artykułu, hipotez badawczych i metodologii przed zaczęciem badania.</p>
+<p>Czy kryzys replikacyjny oznacza, że nie możemy ufać nauce? Nie. Nauka nadal pozostaje najlepszym narzędziem do poznawania otaczającego nas świata i jest procesem samokrytycznym, to znaczy metody i założenia stosowane w nauce są poddawane ciągłej krytyce przez środowisko naukowe. Należy tu dodać, że kryzys replikacyjny może być związany z umasowieniem nauki. Liczba osób otrzymujących doktoraty stale się zwiększa, i to w państwach, w których liczba ludności spada. Standaryzacja metod oceny pracowników naukowych jest potrzebna, jednak w obecnej formie może nasilać omawiany problem.</p>
+<p>Na tym kończymy pierwszy wpis serii “Jak rozumieć naukę.” Dotknęliśmy tylko wierzchołka góry lodowej jeśli chodzi o zagadnienia statystyczne i metodologiczne w nauce, jednak mam nadzieję, że ten tekst będzie stanowił interesujące wprowadzenie do zagadnień metodologicznych. Osobom zainteresowanym poszerzeniem swojej wiedzy polecamy przejrzenie zasobów w bazie wiedzy w dziedzinie “Matematyka, Statystyka, Data Science” oraz “Metodologia.”</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-Babbie" class="csl-entry" role="doc-biblioentry">
+Babbie, E. (2008). <em>Podstawy badań społecznych</em> (pp. 209–210). PWN.
+</div>
+<div id="ref-bennett2009neural" class="csl-entry" role="doc-biblioentry">
+Bennett, C. M., Miller, M. B., &amp; Wolford, G. L. (2009). Neural correlates of interspecies perspective taking in the post-mortem atlantic salmon: An argument for multiple comparisons correction. <em>Neuroimage</em>, <em>47</em>(Suppl 1), S125.
+</div>
+<div id="ref-chiavegatto2010individual" class="csl-entry" role="doc-biblioentry">
+Chiavegatto, S., Quadros, I., Ambar, G., &amp; Miczek, K. (2010). Individual vulnerability to escalated aggressive behavior by a low dose of alcohol: Decreased serotonin receptor mRNA in the prefrontal cortex of male mice. <em>Genes, Brain and Behavior</em>, <em>9</em>(1), 110–119.
+</div>
+<div id="ref-farrar2021replications" class="csl-entry" role="doc-biblioentry">
+Farrar, B. G., Voudouris, K., &amp; Clayton, N. S. (2021). Replications, comparisons, sampling and the problem of representativeness in animal cognition research. <em>Animal Behavior and Cognition</em>, <em>8</em>(2), 273.
+</div>
+<div id="ref-flore2015does" class="csl-entry" role="doc-biblioentry">
+Flore, P. C., &amp; Wicherts, J. M. (2015). Does stereotype threat influence performance of girls in stereotyped domains? A meta-analysis. <em>Journal of School Psychology</em>, <em>53</em>(1), 25–44.
+</div>
+<div id="ref-gigerenzer2004mindless" class="csl-entry" role="doc-biblioentry">
+Gigerenzer, G. (2004). Mindless statistics. <em>The Journal of Socio-Economics</em>, <em>33</em>(5), 587–606.
+</div>
+<div id="ref-hanel2016student" class="csl-entry" role="doc-biblioentry">
+Hanel, P. H., &amp; Vione, K. C. (2016). Do student samples provide an accurate estimate of the general public? <em>PloS One</em>, <em>11</em>(12), e0168354.
+</div>
+<div id="ref-lin2014past" class="csl-entry" role="doc-biblioentry">
+Lin, X., Genest, C., Banks, D. L., Molenberghs, G., Scott, D. W., &amp; Wang, J.-L. (2014). <em>Past, present, and future of statistical science</em> (p. 44). CRC Press.
+</div>
+<div id="ref-open2015estimating" class="csl-entry" role="doc-biblioentry">
+Open Science Collaboration. (2015). Estimating the reproducibility of psychological science. <em>Science</em>, <em>349</em>(6251).
+</div>
+<div id="ref-Pearl" class="csl-entry" role="doc-biblioentry">
+Pearl, J., &amp; Mackenzie, D. (2021). <em>Przyczyny i skutki rewolucyjna nauka wnioskowania przyczynowego</em>. Copernicus Center Press.
+</div>
+</div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
