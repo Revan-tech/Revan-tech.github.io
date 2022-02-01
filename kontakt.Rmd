@@ -38,3 +38,15 @@ sortownia.wiedzy@gmail.com
 **Kamil Kopacewicz** – lingwista, doktorant UW, zajmuje się analizą dyskursu publicznego i tropieniem konceptualizacji przyszłości. Na stronie współodpowiada za strukturę, UX, teksty i strategie rozwoju. 
 
 
+
+<div class="wrapper">
+<div class = "a">
+**Szymon Mąka** – neurokognitywista, doktorant w Pracowni Neuronauki Społecznej IP PAN. Obecnie pracuje przy [projekcie Samotność](http://www.neuronauka-spoleczna.pl/badania-2/opus/), gdzie bada neurofizjologiczne skutki samotności. Odpowiada za budowę strony, współodpowiada za strukturę, UX, teksty i strategie rozwoju. 
+
+</div>
+
+<div class = "a">
+**Kamil Kopacewicz** – lingwista, doktorant UW, zajmuje się analizą dyskursu publicznego i tropieniem konceptualizacji przyszłości. Na stronie współodpowiada za strukturę, UX, teksty i strategie rozwoju. 
+</div>
+</div>
+
