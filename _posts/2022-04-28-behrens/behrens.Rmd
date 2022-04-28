@@ -124,7 +124,7 @@ $$P(k) \sim N(0,100)$$
 
 Szukamy takich parametrów, które maksymalizują prawdopodobieństwo *a posteriori* $P(r_i,v_i,k|y_i)$. Model Behrensa zakłada proces Markowa (wartości parametrów w czasie $i$ zależą tylko od wartości parametrów w czasie $i-1$), więc prawdopodbieństwo *a posteriori* dane jest wzorem:
 
-$$P(r_i,v_i,k|y_i) \propto P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k)P(r_{i-1})P(v_{i-1})P(k) $$
+$$P(r_i,v_i,k|y_i) \propto \int \int P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k)P(r_{i-1})P(v_{i-1})P(k) dv_{i-1} dr_{i-1} $$
 Po więcej detali polecam zajrzeć do orginalnego artykułu. 
 
 

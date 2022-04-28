@@ -1540,7 +1540,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Czyli wielkość przeskoków pomiędzy <span class="math inline">\(v_{i+1}\)</span> i <span class="math inline">\(v_{i}\)</span> zależna jest od parametru k, który, a jakże, też zamodelowany jest rozkładem normalnym:</p>
 <p><span class="math display">\[P(k) \sim N(0,100)\]</span></p>
 <p>Szukamy takich parametrów, które maksymalizują prawdopodobieństwo <em>a posteriori</em> <span class="math inline">\(P(r_i,v_i,k|y_i)\)</span>. Model Behrensa zakłada proces Markowa (wartości parametrów w czasie <span class="math inline">\(i\)</span> zależą tylko od wartości parametrów w czasie <span class="math inline">\(i-1\)</span>), więc prawdopodbieństwo <em>a posteriori</em> dane jest wzorem:</p>
-<p><span class="math display">\[P(r_i,v_i,k|y_i) \propto P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k)P(r_{i-1})P(v_{i-1})P(k) \]</span> Po więcej detali polecam zajrzeć do orginalnego artykułu.</p>
+<p><span class="math display">\[P(r_i,v_i,k|y_i) \propto \int \int P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k)P(r_{i-1})P(v_{i-1})P(k) dv_{i-1} dr_{i-1} \]</span> Po więcej detali polecam zajrzeć do orginalnego artykułu.</p>
 </details>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
