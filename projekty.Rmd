@@ -22,6 +22,7 @@ W <i>Artykułach Naukowych Czytanych w całości, nie do końca profesjonalnie</
 
 
 
+
 ::: {.floatting}
 
 ```{r out.width='30%', out.extra='style="float:left; padding:20px"', echo=FALSE}
@@ -36,4 +37,20 @@ https://dziwnegrynaukowe.itch.io/
 Eksperymentalny projekt gier narracyjnych, zacierających granice pomiędzy wykładem a prezentacją. Obecnie można przetestować lingwistyczne visual novele.
 :::
 
+---
+
+
+::: {.floatting}
+
+```{r out.width='30%', out.extra='style="float:left; padding:20px"', echo=FALSE}
+knitr::include_graphics("Statystyczne_Dygresje.jpg") 
+```
+
+<br>
+
+https://revan-tech.github.io//blog.html#category:Statystyczne_Dygresje
+
+Miniblog. Trochę o statystyce, trochę o modelowaniu procesów poznawczych. 
+
+:::
 ---

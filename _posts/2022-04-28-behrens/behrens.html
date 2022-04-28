@@ -86,635 +86,43 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Sortownia: Projekty</title>
+  <title>Jak mózg monitoruje zmienność środowiska?</title>
+
+  <meta property="description" itemprop="description" content="Modelowanie niepewności w procesie uczenia się wartości bodźców."/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2022-04-28"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-04-28"/>
+  <meta name="article:author" content="Szymon Mąka"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Sortownia: Projekty"/>
+  <meta property="og:title" content="Jak mózg monitoruje zmienność środowiska?"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Modelowanie niepewności w procesie uczenia się wartości bodźców."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Sortownia"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Sortownia: Projekty"/>
+  <meta property="twitter:title" content="Jak mózg monitoruje zmienność środowiska?"/>
+  <meta property="twitter:description" content="Modelowanie niepewności w procesie uczenia się wartości bodźców."/>
 
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Learning the value of information in an uncertain world;citation_publication_date=2007;citation_publisher=Nature Publishing Group;citation_volume=10;citation_author=Timothy EJ Behrens;citation_author=Mark W Woolrich;citation_author=Mark E Walton;citation_author=Matthew FS Rushworth"/>
+  <meta name="citation_reference" content="citation_title=Uncertainty in perception and the hierarchical gaussian filter;citation_publication_date=2014;citation_publisher=Frontiers;citation_volume=8;citation_author=Christoph D Mathys;citation_author=Ekaterina I Lomakina;citation_author=Jean Daunizeau;citation_author=Sandra Iglesias;citation_author=Kay H Brodersen;citation_author=Karl J Friston;citation_author=Klaas E Stephan"/>
+  <meta name="citation_reference" content="citation_title=Reinforcement learning: An introduction;citation_publication_date=2018;citation_publisher=MIT press;citation_author=Richard S Sutton;citation_author=Andrew G Barto"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Projekty"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","author","date","output","bibliography","categories","csl"]}},"value":[{"type":"character","attributes":{},"value":["Jak mózg monitoruje zmienność środowiska?"]},{"type":"character","attributes":{},"value":["Modelowanie niepewności w procesie uczenia się wartości bodźców.\n"]},{"type":"character","attributes":{},"value":["Statystyczne_Dygresje.jpg"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Szymon Mąka"]},{"type":"character","attributes":{},"value":["https://revan-tech.github.io/kontakt.html"]}]}]},{"type":"character","attributes":{},"value":["04-28-2022"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","includes","css"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["in_header"]}},"value":[{"type":"character","attributes":{},"value":["hero-image.html"]}]},{"type":"character","attributes":{},"value":["theme.css"]}]}]},{"type":"character","attributes":{},"value":["bib.bib"]},{"type":"character","attributes":{},"value":["Statystyczne Dygresje"]},{"type":"character","attributes":{},"value":["apa.csl"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["apa.csl","bib.bib","hero-image.html","model.png","RL.PNG","Rplot1.png","Rplot2.png","Statystyczne_Dygresje.jpg","theme.css"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2030,19 +1438,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="behrens_files/header-attrs-2.10/header-attrs.js"></script>
+  <script src="behrens_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="behrens_files/popper-2.6.0/popper.min.js"></script>
+  <link href="behrens_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="behrens_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="behrens_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="behrens_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="behrens_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="behrens_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="behrens_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <link rel="icon" type="image/png" href="favicon.ico"/>
   <!--/radix_placeholder_site_in_header-->
+  <div class="hero-image"> 
 
+  </div>
+
+  <link rel="stylesheet" href="theme.css" type="text/css"/>
 
 </head>
 
@@ -2051,68 +1463,97 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Projekty","authors":[]}
+{"title":"Jak mózg monitoruje zmienność środowiska?","description":"Modelowanie niepewności w procesie uczenia się wartości bodźców.","authors":[{"author":"Szymon Mąka","authorURL":"https://revan-tech.github.io/kontakt.html","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-04-28T00:00:00.000+02:00","citationText":"Mąka, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Sortownia</a>
-<a href="index.html">Home</a>
-<a href="blog.html">Blog</a>
-<a href="poradniki.html">Poradniki</a>
-<a href="https://szpm.shinyapps.io/baza_wiedzy/">Baza wiedzy</a>
-<a href="projekty.html">Projekty</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="kontakt.html">Kontakt</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Projekty</h1>
+<h1>Jak mózg monitoruje zmienność środowiska?</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt=tag">Statystyczne Dygresje</div>
+</div>
 <!--/radix_placeholder_categories-->
-
+<p><p>Modelowanie niepewności w procesie uczenia się wartości bodźców.</p></p>
 </div>
 
+<div class="d-byline">
+  Szymon Mąka <a href="https://revan-tech.github.io/kontakt.html" class="uri">https://revan-tech.github.io/kontakt.html</a> 
+  
+<br/>04-28-2022
+</div>
 
 <div class="d-article">
-<div class="floatting">
+<p>Modelowanie procesów poznawczych to taka dziedzina, dzięki której możemy sięgnąć do czarnej skrzynki, jaką jest umysł. Jednym procesów, który możemy zamodelować, jest uczenie się. Choć my, ludzie, potrafimy nauczyć się czynności poprzez obserwację, czy nawet werbalny komunikat, dzielimy ze wszystkimi zwierzętami starszy (ale nie mniej przydatny) mechanizm. Mowa o warunkowaniu.</p>
+<p>Podstawowa zasada warunkowania jest prosta: Jeśli po wykonaniu jakiejś czynności otrzymujemy rezulatat pozytywny, zwiększa się prawdopodobieństwo powtórzenia tej czynności, jeśli negatywny, zmniejsza się.</p>
+<p>Jednym z modeli warunkowania jest model Rescola-Wagner <span class="citation" data-cites="sutton2018reinforcement">(<a href="#ref-sutton2018reinforcement" role="doc-biblioref">Sutton &amp; Barto, 2018</a>)</span>, który wygląda tak:</p>
+<div class="layout-chunk" data-layout="l-body-outset">
+<p><img src="RL.PNG" width="754" /></p>
+</div>
+<p>Model jest bardzo prosty. Przewidywaną wartością bodźca <span class="math inline">\(V\)</span> w czasie <span class="math inline">\(i\)</span> jest wartość bodzica w czasie <span class="math inline">\(i-1\)</span> plus błąd predykcji, czyli różnica pomiędzy rezultatem (np. wartością nagrody), a przewidywaną wartością bodźca w czasie <span class="math inline">\(i-1\)</span> , pomnożoną przez stałą <span class="math inline">\(a\)</span>. Od wielkości współczynnika uczenia (<em>learning rate</em>) <span class="math inline">\(a\)</span> zależy jak szybko agent aktualizuje wartość bodźca.</p>
+<p>Model Rescola-Wagner jest dość prosty i nie odda wszystkich zjawisk zachodzących u ludzi i zwierząt podczas warunkowania. Jednak jego prostota pozwala szybko zrozumieć ideę stojącą za tą klasą modeli - uczenia ze wzmocnieniem (<em>reinforcement learning models</em>).</p>
+<p>Takie modele wykorzystywane są w kognitywistyce i ekonomii (uczenie się i podejmowanie decyzji), a także w biologii (uczenie ze wzmocnieniem to jedna z podstawowych zasad działania neuronów dopaminergicznych) i robotyce. Ja chciałym się skupić na badaniu przeprowadzonym przez zespół Timothego Behrensa, które wyjątkowo mi się spodobało <span class="citation" data-cites="behrens2007learning">(<a href="#ref-behrens2007learning" role="doc-biblioref">Behrens et al., 2007</a>)</span>.</p>
+<p>Badani wykonywali proste zadanie, w którym mieli wybierać wiekokrotnie jedną z dwóch opcji. W pierwszej fazie (120 prób) każda z możliwości była związana ze stałym prawdopodbieństwem uzyskania nagrody. Następnie, w drugiej fazie prawdopodobieństwo uzyskania nagrody zmieniało się co 30-40 prób.</p>
+<p>Całą precedurę badani wykonywali w funkcjonalnym rezonansie magnetycznym. Dzięki użyciu neurobrazowania, można nie tylko sprawdzić jak dobrze dany model uczenia ze wzmocniem wyjaśnia nam obserwowalne dane (w tym wypadku decyzje badanych), ale możemy sprawdzić czy mózg oblicza wartość bodźca i błąd predykcji w podobny sposób jak model (i jakie ośrodki w mózgu w tym współuczestniczą).</p>
+<p>Behrensa i jego zespół zainteresowali się problemem zmienności środowiska. Jeśli środowisko jest stabilne (prawdopodobieństwa przypisane wyborom/opcjom nie zmieniają się), współczynnik uczenia się powinien być niższy, ponieważ nawet jeśli preferowana przez nas opcja akurat nie dostarczy nagrody, jest to raczej wynikiem przypadku. Natomiast jeśli prawdopodbieństwa związane z wyborami zmieniają się (a co za tym idzie zmienia się wartość bodźców), musimy szybko aktualizować wartości bodźców, inaczej z uporem wybieralibyśmy te, których wybranie w przeszłosci dawało często nagrodę.</p>
+<p>Moglibyśmy tak zmodyfikować model Rescola-Wagner, by współczynnik uczenia nie był stały, ale zmieniał się w czasie. Uzyskalibyśmy wtedy informację jak dana osoba dostosowuje swój współczynik uczenia. Nie wiedzielibyśmy jednak dlaczego to robi. Wielkość współczynnika uczenia będzie także zależała od innych czynników.</p>
+<p>Na przykład, gdy nie mamy wcześniejszych informacji na temat wartości bodzców, współczynnik musi być wysoki, byśmy mogli szybko nabyć jakieś przekonania, na podstawie których podejmiemy decyzję. Natomiast, wraz z postępem czasu powinien maleć (wynika to z chartakterystyki uczenia się - wraz z postępem czasu efekty uczenia maleją).</p>
+<p>Jeśli chcielibyśmy wiedzieć jak bardzo współczynnik zmienia się w zależności od niestabilności (<em>volatility</em>), a także czy jej monitorowanie jest odzwierciedlone w sygnale fMRI (co interesowało Behrensa), musimy mieć jej jakąś estymatę.</p>
+<p>Behrens stworzył więc algorytm - Bayesowskiego Obserwatora, którego zadaniem było przewidywanie prawdopodobieństw i monitorowanie niestabilności. Uzyskał wartość niestabilności w czasie <span class="math inline">\(i\)</span>. Dzięki temu odkrył, że w monitorowaniu zmienności środowiska uczestniczy pewien obszar mózgu - przedni zakręt obręczy.</p>
+<p>Ponieważ lubię się pobawić takimi zabawkami, zaimplementowałem go (kod można znaleźć <a href="link">tutaj</a>). Wygenerowałem zmienną <span class="math inline">\(y\)</span> przyjmującą wartości 0 (brak nagrody) i 1 (nagroda). Przez pierwsze 120 obserwacji prawdopodobieństwo nagrody wynosiło 90%, następnie przez 220 prób prawdopodobieństwo zmieniało się między 80% a 20% co 30 lub 40 prób. W ostatnich 120 obserwacjach prawdopodbieństwo wynosiło 10%.</p>
+<p>Model radzi sobie tak:</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="ANC.jpg" width="30%" style="float:left; padding:20px" /></p>
+<p><img src="Rplot1.png" width="50%" /><img src="Rplot2.png" width="50%" /></p>
 </div>
-<p><a href="https://www.spreaker.com/show/artykuly-naukowe-czytane" class="uri">https://www.spreaker.com/show/artykuly-naukowe-czytane</a></p>
-<p>To pierwszy (i mamy nadzieję, że już niedługo jeden z wielu!) projekt związany z Sortownią. W <i>Artykułach Naukowych Czytanych w całości, nie do końca profesjonalnie</i> posłuchacie właśnie tego - artykułów naukowych. Na łamach tego podkastu jak dotąd pojawiła się socjologia, psychologia, neurobiologia, lingwistyka, afrykanistyka, historia, antropologia, kosmologia… i wiele innych dziedzin</p>
-</div>
-<hr />
-<div class="floatting">
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="dziwne_gry_logo.png" width="30%" style="float:left; padding:20px" /></p>
-</div>
-<p><br></p>
-<p><a href="https://dziwnegrynaukowe.itch.io/" class="uri">https://dziwnegrynaukowe.itch.io/</a></p>
-<p>Eksperymentalny projekt gier narracyjnych, zacierających granice pomiędzy wykładem a prezentacją. Obecnie można przetestować lingwistyczne visual novele.</p>
-</div>
-<hr />
-<div class="floatting">
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="Statystyczne_Dygresje.jpg" width="30%" style="float:left; padding:20px" /></p>
-</div>
-<p><br></p>
-<p><a href="https://revan-tech.github.io//blog.html#category:Statystyczne_Dygresje" class="uri">https://revan-tech.github.io//blog.html#category:Statystyczne_Dygresje</a></p>
-<p>Miniblog. Trochę o statystyce, trochę o modelowaniu procesów poznawczych.</p>
-</div>
-<hr />
+<p>Przy pomocy naszego idealnego obserwatora możemy policzyć teraz niestabilność środowiska. Przy odrobinie wysiłku można zaadaptować model do innych sytuacji, bądź rozwinąć go, by używać niestabilności środowiska jako zmiennej w modelach podejmowania decyzji czy uczenia się.</p>
+<p>Estymowaną niestabilność środowiska moglibyśmy nazwać też niepewnością pierwszego poziomu. Warto wspomnieć, że istnieje model uczenia ze wzmocnieniem - Hierarchical Gaussian Filter, który uwzględnia niepewność decyzyjną <span class="math inline">\(n\)</span> poziomów (właściwie tyle ile chcemy), czyli modeluje też niestabiność niestabilności - i tak dalej <span class="citation" data-cites="mathys2014uncertainty">(<a href="#ref-mathys2014uncertainty" role="doc-biblioref">Mathys et al., 2014</a>)</span>.</p>
+<details>
+<summary>
+<span style="color: blue;">Jak działa model?</span>
+</summary>
+<p><strong>Twierdzenie Bayesa</strong></p>
+<p>Bayesowskie modele opierają się na twierdzeniu Bayesa (lub inaczej mówiąc, wzorze na prawdopodobieństwo warunkowe):</p>
+<p><span class="math display">\[ P(parameters|data) = \frac{P(data|parameters)P(parameters)}{P(data)}\]</span> Człon <span class="math inline">\(P(data|parameters)\)</span> (wiarygodność, <em>likehood</em>) oznacza prawdopodobieństwo, że dany parametr wygenerował zaobserwowane dane (czyli na przykład prawdopodbieństwo tego, że jeśli prawdopodobieństwo nagrody wynosi 80%, jakie jest prawdopodobieństwo, że zaobserwujemy 1 - czyli nagrodę).</p>
+<p><span class="math inline">\(P(parameters)\)</span> nazywane prawdopodobieństem <em>a priori</em>, oznacza jakie jest prawdopodobieństwo danego parametru. Często opisuje się go jako wcześniejsze doświadczenie, ponieważ możemy wiedzieć, że wystąpienie jakiejś wartości parametru jest mniej prawdopodobne, niż innej (bądź ma pewnien określony rozkład statystyczny). Jeśli tego nie wiemy, <span class="math inline">\(P(parameters)\)</span> przyjmują taką samą wartość dla wszystkich <span class="math inline">\(P(data|parameters)\)</span>.</p>
+<p><span class="math inline">\(P(data)\)</span> jest właściwie tylko parametrem skalującym (stałą), bez specjalnej interpretacji. Dlatego powyższy wzór możemy zapisać:</p>
+<p><span class="math display">\[ P(parameters|data) \propto P(data|parameters)P(parameters)\]</span> gdzie <span class="math inline">\(\propto\)</span> oznacza “jest proporcjonalny do”</p>
+<p>Wreszcie człon <span class="math inline">\(P(parameters|data)\)</span> jest prawdopodbieństwem <em>a posteriori</em>, czyli prawdopodbieństwem wartości parametru modelu przy zaobserowanych danych (na przykład, jeśli zaobserwowaliśmy 1, jakie jest prawdopodbieństwo, że prawdopodobieństwo otrzymania nagrody wynosi 66%).</p>
+<p><strong>Proces Markowa</strong></p>
+<p>Proces Markowa to proces stochastyczny, w którym prawdopodobieństwo zdarzenia w czasie <span class="math inline">\(i\)</span> zależy tylko od stanu systemu w czasie <span class="math inline">\(i-1\)</span>. Czyli:</p>
+<p><span class="math display">\[P(X_i = x|X_{i-1}, X_{i-2}  ... X_1) = P(X_i = x|X_{i-1})\]</span></p>
+<p><strong>Obserwator Bayesowski</strong></p>
+<p>Model Behrensa można zwizualizować następujący sposób:</p>
+<center>
+<img src="model.png" width="350" />
+</center>
+<p><span class="math inline">\(y_{i+1}\)</span> czyli nagroda lub jej brak zależy tylko od parametru <span class="math inline">\(r_{i+1}\)</span> - prawdopodobieństwa jej uzyskania. Z kolei parametr <span class="math inline">\(r_{i+1}\)</span> zależy od siebie krok wcześniej <span class="math inline">\(r_{i}\)</span> oraz od niestabilności <span class="math inline">\(v_i\)</span>, która sama zależy od <span class="math inline">\(v_{i-1}\)</span> i stałego parametru <span class="math inline">\(k\)</span>, który moglibyśmy nazwać niestabilnością niestabilności. Jak to działa?</p>
+<p>Prawdopodobieństwo <span class="math inline">\(P(y_i|r_i)\)</span> zamodelowane jest rozkładem dwumianowym:</p>
+<p><span class="math display">\[P(y_i|r_i) \sim Binomial(r_i)\]</span> Prawdpodobieństwo <span class="math inline">\(P(r_{i+1}|r_i,v_i)\)</span> Behrens zamodelował rozkładem Beta, jednak ja, kierowany lenistwem, zamodelowałem je rozkładem normalnym ograniczonym na przedziale (0,1): <span class="math display">\[P(r_{i+1}|r_{i},v_{i}) \sim N^{(0,1)}(r_i,e^{v_{i}})\]</span></p>
+<p>Jak widzimy, prawdopodobieństwo <span class="math inline">\(r_{i+1}\)</span> dane jest rozkładem normalnym o średniej <span class="math inline">\(r_i\)</span> i wariancji <span class="math inline">\(e^{v_{i+1}}\)</span>. To jak bardzo prawdopodobny jest większy przeskok pomiędzy <span class="math inline">\(r_i\)</span> do <span class="math inline">\(r_{i+1}\)</span> zależne będzie od tego jak duża jest wariancja <span class="math inline">\(e^{v_{i+1}}\)</span>. Właśnie ona jest naszą ukrytą zmienną reprezentującą niestabilność.</p>
+<p>Prawdopodobieństwo <span class="math inline">\(P(v_{i+1}|v_i,k)\)</span> również zamodelowane jest rozkładem normalnym:</p>
+<p><span class="math display">\[P(v_{i+1}|v_i,k) \sim N(v_i,e^{k})\]</span></p>
+<p>Czyli wielkość przeskoków pomiędzy <span class="math inline">\(v_{i+1}\)</span> i <span class="math inline">\(v_{i}\)</span> zależna jest od parametru k, który, a jakże, też zamodelowany jest rozkładem normalnym:</p>
+<p><span class="math display">\[P(k) \sim N(0,100)\]</span></p>
+<p>Szukamy takich parametrów, które maksymalizują prawdopodobieństwo <em>a posteriori</em> <span class="math inline">\(P(r_i,v_i,k|y_i)\)</span>. Model Behrensa zakłada proces Markowa (wartości parametrów w czasie <span class="math inline">\(i\)</span> zależą tylko od wartości parametrów w czasie <span class="math inline">\(i-1\)</span>), więc prawdopodbieństwo <em>a posteriori</em> dane jest wzorem:</p>
+<p><span class="math display">\[P(r_i,v_i,k|y_i) \propto P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k)P(r_{i-1})P(v_{i-1})P(k) \]</span> Po więcej detali polecam zajrzeć do orginalnego artykułu.</p>
+</details>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-behrens2007learning" class="csl-entry" role="doc-biblioentry">
+Behrens, T. E., Woolrich, M. W., Walton, M. E., &amp; Rushworth, M. F. (2007). Learning the value of information in an uncertain world. <em>Nature Neuroscience</em>, <em>10</em>(9), 1214–1221.
+</div>
+<div id="ref-mathys2014uncertainty" class="csl-entry" role="doc-biblioentry">
+Mathys, C. D., Lomakina, E. I., Daunizeau, J., Iglesias, S., Brodersen, K. H., Friston, K. J., &amp; Stephan, K. E. (2014). Uncertainty in perception and the hierarchical gaussian filter. <em>Frontiers in Human Neuroscience</em>, <em>8</em>, 825.
+</div>
+<div id="ref-sutton2018reinforcement" class="csl-entry" role="doc-biblioentry">
+Sutton, R. S., &amp; Barto, A. G. (2018). <em>Reinforcement learning: An introduction</em> (pp. 346–349). MIT press.
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2120,18 +1561,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
-<div class="distill-site-nav distill-site-footer">
-<p>© Copyright 2021 Sortownia</p>
-</div>
 <!--/radix_placeholder_navigation_after_body-->
-
 
 </body>
 
