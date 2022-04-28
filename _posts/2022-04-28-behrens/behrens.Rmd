@@ -2,7 +2,7 @@
 title: "Jak mózg monitoruje zmienność środowiska?"
 description: |
   Modelowanie niepewności w procesie uczenia się wartości bodźców.
-preview: "Statystyczne_Dygresje.jpg"
+preview: "Statystyczne_Dygresje2.jpg"
 author:
   - name: Szymon Mąka
     url: https://revan-tech.github.io/kontakt.html
