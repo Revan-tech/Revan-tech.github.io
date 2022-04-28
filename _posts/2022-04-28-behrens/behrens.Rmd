@@ -53,7 +53,7 @@ Jeśli chcielibyśmy wiedzieć jak bardzo współczynnik zmienia się w zależno
 
 Behrens stworzył więc algorytm - Bayesowskiego Obserwatora, którego zadaniem było przewidywanie prawdopodobieństw i monitorowanie niestabilności. Uzyskał wartość niestabilności w czasie $i$. Dzięki temu odkrył, że w monitorowaniu zmienności środowiska uczestniczy pewien obszar mózgu - przedni zakręt obręczy.
 
-Ponieważ lubię się pobawić takimi zabawkami, zaimplementowałem go (kod można znaleźć [tutaj](link)). Wygenerowałem zmienną $y$ przyjmującą wartości 0 (brak nagrody) i 1 (nagroda). Przez pierwsze 120 obserwacji prawdopodobieństwo nagrody wynosiło 90%, następnie przez 220 prób prawdopodobieństwo zmieniało się między 80% a 20% co 30 lub 40 prób. W ostatnich 120 obserwacjach prawdopodbieństwo wynosiło 10%. 
+Ponieważ lubię się pobawić takimi zabawkami, zaimplementowałem go (kod można znaleźć [tutaj](https://github.com/Revan-tech/fuzzy-octo-waddle/tree/main/behrens)). Wygenerowałem zmienną $y$ przyjmującą wartości 0 (brak nagrody) i 1 (nagroda). Przez pierwsze 120 obserwacji prawdopodobieństwo nagrody wynosiło 90%, następnie przez 220 prób prawdopodobieństwo zmieniało się między 80% a 20% co 30 lub 40 prób. W ostatnich 120 obserwacjach prawdopodbieństwo wynosiło 10%. 
 
 Model radzi sobie tak:
 

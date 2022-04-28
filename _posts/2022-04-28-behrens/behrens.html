@@ -120,7 +120,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["apa.csl","bib.bib","hero-image.html","model.png","RL.PNG","Rplot1.png","Rplot2.png","Statystyczne_Dygresje.jpg","theme.css"]}
+  {"type":"character","attributes":{},"value":["apa.csl","behrens_files/anchor-4.2.2/anchor.min.js","behrens_files/bowser-1.9.3/bowser.min.js","behrens_files/distill-2.2.21/template.v2.js","behrens_files/header-attrs-2.10/header-attrs.js","behrens_files/jquery-1.11.3/jquery.min.js","behrens_files/popper-2.6.0/popper.min.js","behrens_files/tippy-6.2.7/tippy-bundle.umd.min.js","behrens_files/tippy-6.2.7/tippy-light-border.css","behrens_files/tippy-6.2.7/tippy.css","behrens_files/tippy-6.2.7/tippy.umd.min.js","behrens_files/webcomponents-2.0.0/webcomponents.js","bib.bib","hero-image.html","model.png","RL.PNG","Rplot1.png","Rplot2.png","Statystyczne_Dygresje.jpg","theme.css"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1505,7 +1505,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Na przykład, gdy nie mamy wcześniejszych informacji na temat wartości bodzców, współczynnik musi być wysoki, byśmy mogli szybko nabyć jakieś przekonania, na podstawie których podejmiemy decyzję. Natomiast, wraz z postępem czasu powinien maleć (wynika to z chartakterystyki uczenia się - wraz z postępem czasu efekty uczenia maleją).</p>
 <p>Jeśli chcielibyśmy wiedzieć jak bardzo współczynnik zmienia się w zależności od niestabilności (<em>volatility</em>), a także czy jej monitorowanie jest odzwierciedlone w sygnale fMRI (co interesowało Behrensa), musimy mieć jej jakąś estymatę.</p>
 <p>Behrens stworzył więc algorytm - Bayesowskiego Obserwatora, którego zadaniem było przewidywanie prawdopodobieństw i monitorowanie niestabilności. Uzyskał wartość niestabilności w czasie <span class="math inline">\(i\)</span>. Dzięki temu odkrył, że w monitorowaniu zmienności środowiska uczestniczy pewien obszar mózgu - przedni zakręt obręczy.</p>
-<p>Ponieważ lubię się pobawić takimi zabawkami, zaimplementowałem go (kod można znaleźć <a href="link">tutaj</a>). Wygenerowałem zmienną <span class="math inline">\(y\)</span> przyjmującą wartości 0 (brak nagrody) i 1 (nagroda). Przez pierwsze 120 obserwacji prawdopodobieństwo nagrody wynosiło 90%, następnie przez 220 prób prawdopodobieństwo zmieniało się między 80% a 20% co 30 lub 40 prób. W ostatnich 120 obserwacjach prawdopodbieństwo wynosiło 10%.</p>
+<p>Ponieważ lubię się pobawić takimi zabawkami, zaimplementowałem go (kod można znaleźć <a href="https://github.com/Revan-tech/fuzzy-octo-waddle/tree/main/behrens">tutaj</a>). Wygenerowałem zmienną <span class="math inline">\(y\)</span> przyjmującą wartości 0 (brak nagrody) i 1 (nagroda). Przez pierwsze 120 obserwacji prawdopodobieństwo nagrody wynosiło 90%, następnie przez 220 prób prawdopodobieństwo zmieniało się między 80% a 20% co 30 lub 40 prób. W ostatnich 120 obserwacjach prawdopodbieństwo wynosiło 10%.</p>
 <p>Model radzi sobie tak:</p>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="Rplot1.png" width="50%" /><img src="Rplot2.png" width="50%" /></p>
