@@ -40,14 +40,14 @@ Takie modele wykorzystywane są w kognitywistyce i ekonomii (uczenie się i pode
 
 Badani wykonywali proste zadanie, w którym mieli wybierać wiekokrotnie jedną z dwóch opcji. W pierwszej fazie (120 prób) każda z możliwości była związana ze stałym prawdopodbieństwem uzyskania nagrody. Następnie, w drugiej fazie prawdopodobieństwo uzyskania nagrody zmieniało się co 30-40 prób. 
 
-Całą precedurę badani wykonywali w funkcjonalnym rezonansie magnetycznym. Dzięki użyciu neurobrazowania, można nie tylko sprawdzić jak dobrze dany model uczenia ze wzmocniem wyjaśnia nam obserwowalne dane (w tym wypadku decyzje badanych), ale możemy sprawdzić czy mózg oblicza wartość bodźca i błąd predykcji w podobny sposób jak model (i jakie ośrodki w mózgu w tym współuczestniczą). 
+Całą procedurę badani wykonywali w funkcjonalnym rezonansie magnetycznym. Dzięki użyciu neurobrazowania, można nie tylko sprawdzić jak dobrze dany model uczenia ze wzmocniem wyjaśnia nam obserwowalne dane (w tym wypadku decyzje badanych), ale możemy sprawdzić czy mózg oblicza wartość bodźca i błąd predykcji w podobny sposób jak model (i jakie ośrodki w mózgu w tym współuczestniczą). 
 
 Behrensa i jego zespół zainteresowali się problemem zmienności środowiska. Jeśli środowisko jest stabilne (prawdopodobieństwa przypisane wyborom/opcjom nie zmieniają się), współczynnik uczenia się powinien być niższy, ponieważ nawet jeśli preferowana przez nas opcja akurat nie dostarczy nagrody, jest to raczej wynikiem przypadku. 
-Natomiast jeśli prawdopodbieństwa związane z wyborami zmieniają się (a co za tym idzie zmienia się wartość bodźców), musimy szybko aktualizować wartości bodźców, inaczej z uporem wybieralibyśmy te, których wybranie w przeszłosci dawało często nagrodę. 
+Natomiast jeśli prawdopodobieństwa związane z wyborami zmieniają się (a co za tym idzie zmienia się wartość bodźców), musimy szybko aktualizować wartości bodźców, inaczej z uporem wybieralibyśmy te, których wybranie w przeszłosci dawało często nagrodę. 
 
 Moglibyśmy tak zmodyfikować model Rescola-Wagner, by współczynnik uczenia nie był stały, ale zmieniał się w czasie. Uzyskalibyśmy wtedy informację jak dana osoba dostosowuje swój współczynik uczenia. Nie wiedzielibyśmy jednak dlaczego to robi. Wielkość współczynnika uczenia będzie także zależała od innych czynników. 
 
-Na przykład, gdy nie mamy wcześniejszych informacji na temat wartości bodzców, współczynnik musi być wysoki, byśmy mogli szybko nabyć jakieś przekonania, na podstawie których podejmiemy decyzję. Natomiast, wraz z postępem czasu powinien maleć (wynika to z chartakterystyki uczenia się - wraz z postępem czasu efekty uczenia maleją). 
+Na przykład, gdy nie mamy wcześniejszych informacji na temat wartości bodźców, współczynnik musi być wysoki, byśmy mogli szybko nabyć jakieś przekonania, na podstawie których podejmiemy decyzję. Natomiast, wraz z postępem czasu powinien maleć (wynika to z chartakterystyki uczenia się - wraz z postępem czasu efekty uczenia maleją). 
 
 Jeśli chcielibyśmy wiedzieć jak bardzo współczynnik zmienia się w zależności od niestabilności (*volatility*), a także czy jej monitorowanie jest odzwierciedlone w sygnale fMRI (co interesowało Behrensa), musimy mieć jej jakąś estymatę. 
 
