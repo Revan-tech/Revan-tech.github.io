@@ -129,7 +129,7 @@ Czyli wielkość przeskoków pomiędzy $v_{i+1}$ i $v_{i}$ zależna jest od para
 
 $$P(k) \sim N(0,10^{10})$$
 
-Do uzyskania rozkładów *a posteriori* użyłem metod ABC (*Approximate Bayesian Computation*), a konkretniej próbkowanie Gibbsa (przy użyciu JAGS).
+Do uzyskania rozkładów *a posteriori* użyłem metod ABC (*Approximate Bayesian Computation*), a konkretniej próbkowania Gibbsa (przy użyciu JAGS).
 
 Po więcej detali polecam zajrzeć do orginalnego artykułu.
 
