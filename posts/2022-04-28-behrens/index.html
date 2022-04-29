@@ -2159,8 +2159,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><span class="math inline">\(y_{i+1}\)</span> czyli nagroda lub jej brak zależy tylko od parametru <span class="math inline">\(r_{i+1}\)</span> - prawdopodobieństwa jej uzyskania. Z kolei parametr <span class="math inline">\(r_{i+1}\)</span> zależy od siebie krok wcześniej <span class="math inline">\(r_{i}\)</span> oraz od niestabilności <span class="math inline">\(v_i\)</span>, która sama zależy od <span class="math inline">\(v_{i-1}\)</span> i stałego parametru <span class="math inline">\(k\)</span>, który moglibyśmy nazwać niestabilnością niestabilności. Jak widzimy, model Behrensa zakłada proces Markowa (wartości parametrów w czasie <span class="math inline">\(i\)</span> zależą tylko od wartości parametrów w czasie <span class="math inline">\(i-1\)</span>).</p>
 <p>Szukamy takich parametrów, które maksymalizują prawdopodobieństwo <em>a posteriori</em> <span class="math inline">\(P(r_i,v_i,k|y_i)\)</span>. Dzięki temu będziemy poznamy najbardziej prawdopodobne wartości parametrów <span class="math inline">\(r\)</span>, <span class="math inline">\(v\)</span> i <span class="math inline">\(k\)</span>.</p>
 <p>Używiając twierdzenia Bayesa, wzór na prawdopodobieństwo <em>a posteriori</em> wygląda tak:</p>
-<p><span class="math display">\[P(r_i,v_i,k|y_i) \propto \int \int P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k)P(r_{i-1})P(v_{i-1})P(k) dv_{i-1} dr_{i-1} \]</span></p>
-<p>Całka pojawiająca się we wzorze wynika z faktu, że interesuje nas rozkład łączny parametrów w czasie <span class="math inline">\(i\)</span>. Innymi słowy szukamy takiego parametru <span class="math inline">\(r_i\)</span>, który jest najbardziej prawdopodobny, dla wszystkich <span class="math inline">\(r_{i-1}\)</span>.</p>
+<p><span class="math display">\[P(r_i,v_i,k|y_i) \propto \int \int P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k) P(r_{i-1},v_{i-1},k|y_{i-1})dv_{i-1} dr_{i-1}\]</span></p>
 <p>Potrzebujemy do pełni szczęścia jeszcze poszczególnych prawdopodobieńtw wystepujących we wzorze.</p>
 <p>Prawdopodobieństwo <span class="math inline">\(P(y_i|r_i)\)</span>, czyli otrzymania nagrody, pod warunkiem prawdopodobieństwa <span class="math inline">\(r_i\)</span> wynosi po prostu <span class="math inline">\(r_i\)</span>. Możemy więc zamodelować je rozkładem dwumianowym:</p>
 <p><span class="math display">\[P(y_i|r_i) \sim Binomial(r_i)\]</span></p>
@@ -2170,8 +2169,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <p><span class="math display">\[P(v_{i+1}|v_i,k) \sim N(v_i,e^{k})\]</span></p>
 <p>Czyli wielkość przeskoków pomiędzy <span class="math inline">\(v_{i+1}\)</span> i <span class="math inline">\(v_{i}\)</span> zależna jest od parametru k - stałego dla wszystkich <span class="math inline">\(i\)</span>, który, a jakże, też zamodelowany jest rozkładem normalnym:</p>
 <p><span class="math display">\[P(k) \sim N(0,10^{10})\]</span></p>
-<p>Prawdopodobieństwa <span class="math inline">\(P(r_{i-1})\)</span> i <span class="math inline">\(P(v_{i-1})\)</span> otrzymujemy poprzez “wycałkowanie niepotrzebnych parametrów” z prawdopodobieństwa <em>a posteriori</em> z poprzedniej próby <span class="math inline">\(P(r_{i-1},v_{i-1},k|y_{i-1})\)</span>.</p>
-<p><span class="math display">\[P(r_{i-1}) = \int \int P(r_{i-1},v_{i-1},k|y_{i-1}) dv_{i-1}dk \]</span> <span class="math display">\[P(v_{i-1}) = \int \int P(r_{i-1},v_{i-1},k|y_{i-1}) dr_{i-1}dk\]</span></p>
+<p>Do uzyskania rozkładów <em>a posteriori</em> użyłem metod ABC (<em>Approximate Bayesian Computation</em>), a konkretniej próbkowanie Gibbsa (przy użyciu JAGS).</p>
 <p>Po więcej detali polecam zajrzeć do orginalnego artykułu.</p>
 </details>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>

@@ -87,8 +87,6 @@ gdzie $\propto$ oznacza "jest proporcjonalny do"
 
 Wreszcie człon $P(parameters|data)$ jest prawdopodbieństwem *a posteriori*, czyli prawdopodbieństwem wartości parametru modelu przy zaobserowanych danych (na przykład, jeśli zaobserwowaliśmy 1, jakie jest prawdopodbieństwo, że prawdopodobieństwo otrzymania nagrody wynosi 66%).
 
-
-
 __Proces Markowa__
 
 Proces Markowa to proces stochastyczny, w którym prawdopodobieństwo zdarzenia w czasie $i$ zależy tylko od stanu systemu w czasie $i-1$. Czyli:
@@ -110,9 +108,7 @@ Szukamy takich parametrów, które maksymalizują prawdopodobieństwo *a posteri
 
 Używiając twierdzenia Bayesa, wzór na prawdopodobieństwo *a posteriori* wygląda tak: 
 
-$$P(r_i,v_i,k|y_i) \propto \int \int P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k)P(r_{i-1})P(v_{i-1})P(k) dv_{i-1} dr_{i-1} $$
-
-Całka pojawiająca się we wzorze wynika z faktu, że interesuje nas rozkład łączny parametrów w czasie $i$. Innymi słowy szukamy takiego parametru $r_i$, który jest najbardziej prawdopodobny, dla wszystkich $r_{i-1}$.
+$$P(r_i,v_i,k|y_i) \propto \int \int P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k) P(r_{i-1},v_{i-1},k|y_{i-1})dv_{i-1} dr_{i-1}$$
 
 Potrzebujemy do pełni szczęścia jeszcze poszczególnych prawdopodobieńtw wystepujących we wzorze.
 
@@ -133,13 +129,9 @@ Czyli wielkość przeskoków pomiędzy $v_{i+1}$ i $v_{i}$ zależna jest od para
 
 $$P(k) \sim N(0,10^{10})$$
 
-Prawdopodobieństwa $P(r_{i-1})$ i $P(v_{i-1})$ otrzymujemy poprzez "wycałkowanie niepotrzebnych parametrów" z prawdopodobieństwa *a posteriori* z poprzedniej próby $P(r_{i-1},v_{i-1},k|y_{i-1})$. 
+Do uzyskania rozkładów *a posteriori* użyłem metod ABC (*Approximate Bayesian Computation*), a konkretniej próbkowanie Gibbsa (przy użyciu JAGS).
 
-$$P(r_{i-1}) = \int \int P(r_{i-1},v_{i-1},k|y_{i-1}) dv_{i-1}dk $$
-$$P(v_{i-1}) = \int \int P(r_{i-1},v_{i-1},k|y_{i-1}) dr_{i-1}dk$$
-
-Po więcej detali polecam zajrzeć do orginalnego artykułu. 
-
+Po więcej detali polecam zajrzeć do orginalnego artykułu.
 
 </details>
 
