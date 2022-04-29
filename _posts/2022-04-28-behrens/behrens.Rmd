@@ -106,11 +106,20 @@ Model Behrensa można zwizualizować następujący sposób:
 
 $y_{i+1}$ czyli nagroda lub jej brak zależy tylko od parametru $r_{i+1}$ - prawdopodobieństwa jej uzyskania. Z kolei parametr $r_{i+1}$ zależy od siebie krok wcześniej $r_{i}$ oraz od niestabilności $v_i$, która sama zależy od $v_{i-1}$ i stałego parametru $k$, który moglibyśmy nazwać niestabilnością niestabilności. Jak widzimy, model Behrensa zakłada proces Markowa (wartości parametrów w czasie $i$ zależą tylko od wartości parametrów w czasie $i-1$). 
 
-Szukamy takich parametrów, które maksymalizują prawdopodobieństwo *a posteriori* $P(r_i,v_i,k|y_i)$. Dzięki temu będziemy poznamy najbardziej prawdopodobne wartości parametróW $r$, $v$ i $k$. 
+Szukamy takich parametrów, które maksymalizują prawdopodobieństwo *a posteriori* $P(r_i,v_i,k|y_i)$. Dzięki temu będziemy poznamy najbardziej prawdopodobne wartości parametrów $r$, $v$ i $k$. 
 
-Prawdopodobieństwo $P(y_i|r_i)$ zamodelowane jest rozkładem dwumianowym:
+Używiając twierdzenia Bayesa, wzór na prawdopodobieństwo *a posteriori* wygląda tak: 
+
+$$P(r_i,v_i,k|y_i) \propto \int \int P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k)P(r_{i-1})P(v_{i-1})P(k) dv_{i-1} dr_{i-1} $$
+
+Całka pojawiająca się we wzorze wynika z faktu, że interesuje nas rozkład łączny parametrów w czasie $i$. Innymi słowy szukamy takiego parametru $r_i$, który jest najbardziej prawdopodobny, dla wszystkich $r_{i-1}$.
+
+Potrzebujemy do pełni szczęścia jeszcze poszczególnych prawdopodobieńtw wystepujących we wzorze.
+
+Prawdopodobieństwo $P(y_i|r_i)$, czyli otrzymania nagrody, pod warunkiem prawdopodobieństwa $r_i$ wynosi po prostu $r_i$. Możemy więc zamodelować je rozkładem dwumianowym:
 
 $$P(y_i|r_i) \sim Binomial(r_i)$$
+
 Prawdpodobieństwo $P(r_{i+1}|r_i,v_i)$ Behrens zamodelował rozkładem Beta, jednak ja, kierowany lenistwem, zamodelowałem je rozkładem normalnym ograniczonym na przedziale (0,1): 
 $$P(r_{i+1}|r_{i},v_{i}) \sim N^{(0,1)}(r_i,e^{v_{i}})$$
 
@@ -120,13 +129,15 @@ Prawdopodobieństwo $P(v_{i+1}|v_i,k)$ również zamodelowane jest rozkładem no
 
 $$P(v_{i+1}|v_i,k) \sim N(v_i,e^{k})$$ 
 
-Czyli wielkość przeskoków pomiędzy $v_{i+1}$ i $v_{i}$ zależna jest od parametru k, który, a jakże, też zamodelowany jest rozkładem normalnym:
+Czyli wielkość przeskoków pomiędzy $v_{i+1}$ i $v_{i}$ zależna jest od parametru k - stałego dla wszystkich $i$, który, a jakże, też zamodelowany jest rozkładem normalnym:
 
-$$P(k) \sim N(0,100)$$
+$$P(k) \sim N(0,10^{10})$$
 
-Prawdopodobieństwo *a posteriori* $P(r_i,v_i,k|y_i)$ dane jest wzorem:
+Prawdopodobieństwa $P(r_{i-1})$ i $P(v_{i-1})$ otrzymujemy poprzez "wycałkowanie" z prawdopodobieństwa *a posteriori* z poprzedniej próby $P(r_{i-1},v_{i-1},k|y_{i-1})$ niepotrzebnych parametrów. 
 
-$$P(r_i,v_i,k|y_i) \propto \int \int P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k)P(r_{i-1})P(v_{i-1})P(k) dv_{i-1} dr_{i-1} $$
+$$P(r_{i-1}) = \int \int P(r_{i-1},v_{i-1},k|y_{i-1}) dv_{i-1}dk $$
+$$P(v_{i-1}) = \int \int P(r_{i-1},v_{i-1},k|y_{i-1}) dr_{i-1}dk$$
+
 Po więcej detali polecam zajrzeć do orginalnego artykułu. 
 
 
