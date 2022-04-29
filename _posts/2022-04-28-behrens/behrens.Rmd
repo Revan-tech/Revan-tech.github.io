@@ -110,9 +110,9 @@ Używiając twierdzenia Bayesa, wzór na prawdopodobieństwo *a posteriori* wygl
 
 $$P(r_i,v_i,k|y_i) \propto \int \int P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k) P(r_{i-1},v_{i-1},k|y_{i-1})dv_{i-1} dr_{i-1}$$
 
-Potrzebujemy do pełni szczęścia jeszcze poszczególnych prawdopodobieńtw wystepujących we wzorze.
+Potrzebujemy do pełni szczęścia jeszcze poszczególnych prawdopodobieństw wystepujących we wzorze.
 
-Prawdopodobieństwo $P(y_i|r_i)$, czyli otrzymania nagrody, pod warunkiem prawdopodobieństwa $r_i$ wynosi po prostu $r_i$. Możemy więc zamodelować je rozkładem dwumianowym:
+Prawdopodobieństwo $P(y_i|r_i)$, czyli otrzymanie nagrody, pod warunkiem prawdopodobieństwa $r_i$ wynosi po prostu $r_i$. Możemy więc zamodelować je rozkładem dwumianowym:
 
 $$P(y_i|r_i) \sim Binomial(r_i)$$
 
