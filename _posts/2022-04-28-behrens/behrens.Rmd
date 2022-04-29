@@ -40,7 +40,7 @@ Takie modele wykorzystywane są w kognitywistyce i ekonomii (uczenie się i pode
 
 Badani wykonywali proste zadanie, w którym mieli wybierać wiekokrotnie jedną z dwóch opcji. W pierwszej fazie (120 prób) każda z możliwości była związana ze stałym prawdopodbieństwem uzyskania nagrody. Następnie, w drugiej fazie prawdopodobieństwo uzyskania nagrody zmieniało się co 30-40 prób. 
 
-Całą procedurę badani wykonywali w funkcjonalnym rezonansie magnetycznym. Dzięki użyciu neurobrazowania, można nie tylko sprawdzić jak dobrze dany model uczenia ze wzmocniem wyjaśnia nam obserwowalne dane (w tym wypadku decyzje badanych), ale możemy sprawdzić czy mózg oblicza wartość bodźca i błąd predykcji w podobny sposób jak model (i jakie ośrodki w mózgu w tym współuczestniczą). 
+Całą procedurę badani wykonywali w funkcjonalnym rezonansie magnetycznym (fMRI). Dzięki użyciu neurobrazowania, można nie tylko sprawdzić jak dobrze dany model uczenia ze wzmocniem wyjaśnia nam obserwowalne dane (w tym wypadku decyzje badanych), ale możemy sprawdzić czy mózg oblicza wartość bodźca i błąd predykcji w podobny sposób jak model (i jakie ośrodki w mózgu w tym współuczestniczą). 
 
 Behrensa i jego zespół zainteresowali się problemem zmienności środowiska. Jeśli środowisko jest stabilne (prawdopodobieństwa przypisane wyborom/opcjom nie zmieniają się), współczynnik uczenia się powinien być niższy, ponieważ nawet jeśli preferowana przez nas opcja akurat nie dostarczy nagrody, jest to raczej wynikiem przypadku. 
 Natomiast jeśli prawdopodobieństwa związane z wyborami zmieniają się (a co za tym idzie zmienia się wartość bodźców), musimy szybko aktualizować wartości bodźców, inaczej z uporem wybieralibyśmy te, których wybranie w przeszłosci dawało często nagrodę. 
@@ -104,7 +104,9 @@ Model Behrensa można zwizualizować następujący sposób:
 ![](model.png){width=350px}
 </center>
 
-$y_{i+1}$ czyli nagroda lub jej brak zależy tylko od parametru $r_{i+1}$ - prawdopodobieństwa jej uzyskania. Z kolei parametr $r_{i+1}$ zależy od siebie krok wcześniej $r_{i}$ oraz od niestabilności $v_i$, która sama zależy od $v_{i-1}$ i stałego parametru $k$, który moglibyśmy nazwać niestabilnością niestabilności. Jak to działa?
+$y_{i+1}$ czyli nagroda lub jej brak zależy tylko od parametru $r_{i+1}$ - prawdopodobieństwa jej uzyskania. Z kolei parametr $r_{i+1}$ zależy od siebie krok wcześniej $r_{i}$ oraz od niestabilności $v_i$, która sama zależy od $v_{i-1}$ i stałego parametru $k$, który moglibyśmy nazwać niestabilnością niestabilności. Jak widzimy, model Behrensa zakłada proces Markowa (wartości parametrów w czasie $i$ zależą tylko od wartości parametrów w czasie $i-1$). 
+
+Szukamy takich parametrów, które maksymalizują prawdopodobieństwo *a posteriori* $P(r_i,v_i,k|y_i)$. Dzięki temu będziemy poznamy najbardziej prawdopodobne wartości parametróW $r$, $v$ i $k$. 
 
 Prawdopodobieństwo $P(y_i|r_i)$ zamodelowane jest rozkładem dwumianowym:
 
@@ -122,7 +124,7 @@ Czyli wielkość przeskoków pomiędzy $v_{i+1}$ i $v_{i}$ zależna jest od para
 
 $$P(k) \sim N(0,100)$$
 
-Szukamy takich parametrów, które maksymalizują prawdopodobieństwo *a posteriori* $P(r_i,v_i,k|y_i)$. Model Behrensa zakłada proces Markowa (wartości parametrów w czasie $i$ zależą tylko od wartości parametrów w czasie $i-1$), więc prawdopodbieństwo *a posteriori* dane jest wzorem:
+Prawdopodobieństwo *a posteriori* $P(r_i,v_i,k|y_i)$ dane jest wzorem:
 
 $$P(r_i,v_i,k|y_i) \propto \int \int P(y_i|r_i)P(r_{i}|r_{i-1},v_i) P(v_{i}|v_{i-1},k)P(r_{i-1})P(v_{i-1})P(k) dv_{i-1} dr_{i-1} $$
 Po więcej detali polecam zajrzeć do orginalnego artykułu. 
