@@ -2,7 +2,7 @@
 title: "Większe czy równe?"
 description: |
   O nieprzechodności testów statystycznych.
-preview: "Statystyczne_Dygresje.jpg"
+preview: "Statystyczne_Dygresje2.jpg"
 author:
   - name: Szymon Mąka
     url: {https://revan-tech.github.io/kontakt.html}
