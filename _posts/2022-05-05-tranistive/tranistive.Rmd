@@ -54,6 +54,6 @@ Oczywiście nie wydarzyło się tu nic niezwykłego. Różnica średnich pomięd
 
 Jak zachować się w takiej sytuacji? Prawdopodobnie najrozsądniejszym wyjściem jest przedstawienie wyniku $a$ i $c$, oraz stwiedzenie, że nie mamy wiedzy, by orzekać o $b$ (patrząc na przedział ufności na wykresie, widzimy, że może być zarówno bliżej $a$ jak i $c$).
 
-Gdybyśmy mieli do czynienia z sytuacją w której $a,b,c$ się nie różnią statystycznie albo $a,b$ się nie różnią statystycznie a $c$ jest od nich istotnie większe moglibyśmy szybko przedstawić nasze wnioski, bez zbędnej konsternacji.  
+Gdybyśmy mieli do czynienia z sytuacją w której $a,b,c$ się nie różnią statystycznie albo $a,b$ się nie różnią statystycznie, a $c$ jest od nich istotnie większe moglibyśmy szybko przedstawić nasze wnioski, bez zbędnej konsternacji.  
 
 Stwierdzenie, że coś jest istotnie różne jest użyteczną heurystyką tego, że coś jest naprawdę różne, jednak prosty przykład przedstawiony powyżej pokazuje nam, że nie zawsze otrzymane wyniki będą spójne. Warto pamiętać, że p-value jest tylko miarą wskazującą jak bardzo dane nie pasują do danego modelu (w tym przypadku modelu, w którym dana para średnich jest równa). 
