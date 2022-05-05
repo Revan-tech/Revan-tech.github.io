@@ -1,0 +1,59 @@
+---
+title: "Większe czy równe?"
+description: |
+  O nieprzechodności testów statystycznych.
+preview: "Statystyczne_Dygresje.jpg"
+author:
+  - name: Szymon Mąka
+    url: {https://revan-tech.github.io/kontakt.html}
+date: 05-05-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    includes:
+      in_header:
+        - hero-image.html
+    css: theme.css  
+bibliography: bib.bib
+categories: 
+  - Statystyczne Dygresje
+csl: apa.csl
+---
+
+Wspomnę jeszcze nie raz, że nie jestem fanem p-value. Nie dlatego, że jest ona złym sposobem oceny wniosków jakie wyciągamy z danych, ale z powodu tego, jak jest używana i nadużywana. Poruszyłem ten temat <span style="color:blue">[tutaj](https://revan-tech.github.io/posts/2022-01-15-seria-jak-rozumie-nauk-metodologia-bada-i-statystyka/)</span>. 
+
+Dzisiejszy wpis będzie o sytuacji jaką możemy napotkać gdy obcujemy z danymi.
+Mamy taki zbiór danych z trzema zmiennymi: wartości jakiejś cechy, grupa do której obserwacja należy i unikalny identyfikator. Przeprowadzamy analizę wariancji.  
+
+```{r}
+library(ez)
+library(knitr)
+library(broom)
+
+data = data.frame(value = c(1,2,3,3,4,5,5,6,7), group = c("a","a","a","b","b","b","c","c","c"), id = 1:9)
+
+kable(ezANOVA(data = data, dv = value, between = group, wid = id)$ANOVA)
+
+```
+Istotny efekt! Wykonujemy więc porównania posthoc. 
+
+```{r}
+kable(tidy(pairwise.t.test(data$value, data$group), p.adjust.method = 'holm'))
+```
+
+Zwizualizujmy także efekt grupy.
+
+```{r, layout="l-body-outset"}
+ezPlot(data = data, wid = id, between = group, dv = value, x = group)
+```
+
+Mamy do czynienia z sytuacją, w której $c$ jest istotnie większe od $a$, natomiast $b$ nie jest istotnie różne od $a$ i od ... $c$. I co teraz? Popularna wykładnia mówi: p-value < 0.05 - efekt jest (średnie się różnią), p-value > 0.05 - efektu nie ma (średnie się nie różnią). Jednak patrząc na wszystkie 3 testy moglibyśmy dojść do wniosku, że efekt zarówno jest jak i go nie ma. 
+
+Oczywiście nie wydarzyło się tu nic niezwykłego. Różnica średnich pomiędzy $c$ i $b$ oraz $a$ i $c$ jest za mała, by przy tej wariancji wykazać istotny efekt. Wnioski otrzymane za pomocą testów statystycznych są nieprzechodne. Przechodność to taka własność, która mówi nam, że jeśli $a<b$ i $b<c$ to $a<c$.
+
+Jak zachować się w takiej sytuacji? Prawdopodobnie najrozsądniejszym wyjściem jest przedstawienie wyniku $a$ i $c$, oraz stwiedzenie, że nie mamy wiedzy, by orzekać o $b$ (patrząc na przedział ufności na wykresie, widzimy, że może być zarówno bliżej $a$ jak i $c$).
+
+Gdybyśmy mieli do czynienia z sytuacją w której $a,b,c$ się nie różnią statystycznie albo $a,b$ się nie różnią statystycznie a $c$ jest od nich istotnie większe moglibyśmy szybko przedstawić nasze wnioski, bez zbędnej konsternacji.  
+
+Stwierdzenie, że coś jest istotnie różne jest użyteczną heurystyką tego, że coś jest naprawdę różne, jednak prosty przykład przedstawiony powyżej pokazuje nam, że nie zawsze otrzymane wyniki będą spójne. Warto pamiętać, że p-value jest tylko miarą wskazującą jak bardzo dane nie pasują do danego modelu (w tym przypadku modelu, w którym dana para średnich jest równa). 

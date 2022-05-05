@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2022-05-05-tranistive/",
+    "title": "Większe czy równe?",
+    "description": "O nieprzechodności testów statystycznych.",
+    "author": [
+      {
+        "name": "Szymon Mąka",
+        "url": {
+          "https://revan-tech.github.io/kontakt.html": {}
+        }
+      }
+    ],
+    "date": "2022-05-05",
+    "categories": [
+      "Statystyczne Dygresje"
+    ],
+    "contents": "\r\nWspomnę jeszcze nie raz, że nie jestem fanem p-value. Nie dlatego, że jest ona złym sposobem oceny wniosków jakie wyciągamy z danych, ale z powodu tego, jak jest używana i nadużywana. Poruszyłem ten temat tutaj.\r\nDzisiejszy wpis będzie o sytuacji jaką możemy napotkać gdy obcujemy z danymi. Mamy taki zbiór danych z trzema zmiennymi: wartości jakiejś cechy, grupa do której obserwacja należy i unikalny identyfikator. Przeprowadzamy analizę wariancji.\r\n\r\n\r\nlibrary(ez)\r\nlibrary(knitr)\r\nlibrary(broom)\r\n\r\ndata = data.frame(value = c(1,2,3,3,4,5,5,6,7), group = c(\"a\",\"a\",\"a\",\"b\",\"b\",\"b\",\"c\",\"c\",\"c\"), id = 1:9)\r\n\r\nkable(ezANOVA(data = data, dv = value, between = group, wid = id)$ANOVA)\r\n\r\n\r\nEffect\r\nDFn\r\nDFd\r\nF\r\np\r\np<.05\r\nges\r\ngroup\r\n2\r\n6\r\n12\r\n0.008\r\n*\r\n0.8\r\n\r\nIstotny efekt! Wykonujemy więc porównania posthoc.\r\n\r\n\r\nkable(tidy(pairwise.t.test(data$value, data$group), p.adjust.method = 'holm'))\r\n\r\n\r\ngroup1\r\ngroup2\r\np.value\r\nb\r\na\r\n0.0996505\r\nc\r\na\r\n0.0081410\r\nc\r\nb\r\n0.0996505\r\n\r\nZwizualizujmy także efekt grupy.\r\n\r\n\r\nezPlot(data = data, wid = id, between = group, dv = value, x = group)\r\n\r\n\r\n\r\n\r\nMamy do czynienia z sytuacją, w której \\(c\\) jest istotnie większe od \\(a\\), natomiast \\(b\\) nie jest istotnie różne od \\(a\\) i od … \\(c\\). I co teraz? Popularna wykładnia mówi: p-value < 0.05 - efekt jest (średnie się różnią), p-value > 0.05 - efektu nie ma (średnie się nie różnią). Jednak patrząc na wszystkie 3 testy moglibyśmy dojść do wniosku, że efekt zarówno jest jak i go nie ma.\r\nOczywiście nie wydarzyło się tu nic niezwykłego. Różnica średnich pomiędzy \\(c\\) i \\(b\\) oraz \\(a\\) i \\(c\\) jest za mała, by przy tej wariancji wykazać istotny efekt. Wnioski otrzymane za pomocą testów statystycznych są nieprzechodne. Przechodność to taka własność, która mówi nam, że jeśli \\(a<b\\) i \\(b<c\\) to \\(a<c\\).\r\nJak zachować się w takiej sytuacji? Prawdopodobnie najrozsądniejszym wyjściem jest przedstawienie wyniku \\(a\\) i \\(c\\), oraz stwiedzenie, że nie mamy wiedzy, by orzekać o \\(b\\) (patrząc na przedział ufności na wykresie, widzimy, że może być zarówno bliżej \\(a\\) jak i \\(c\\)).\r\nGdybyśmy mieli do czynienia z sytuacją w której \\(a,b,c\\) się nie różnią statystycznie albo \\(a,b\\) się nie różnią statystycznie a \\(c\\) jest od nich istotnie większe moglibyśmy szybko przedstawić nasze wnioski, bez zbędnej konsternacji.\r\nStwierdzenie, że coś jest istotnie różne jest użyteczną heurystyką tego, że coś jest naprawdę różne, jednak prosty przykład przedstawiony powyżej pokazuje nam, że nie zawsze otrzymane wyniki będą spójne. Warto pamiętać, że p-value jest tylko miarą wskazującą jak bardzo dane nie pasują do danego modelu (w tym przypadku modelu, w którym dana para średnich jest równa).\r\n\r\n\r\n\r\n",
+    "preview": "posts/2022-05-05-tranistive/Statystyczne_Dygresje.jpg",
+    "last_modified": "2022-05-05T19:36:17+02:00",
+    "input_file": "tranistive.knit.md"
+  },
+  {
     "path": "posts/2022-04-28-behrens/",
     "title": "Jak mózg monitoruje zmienność środowiska?",
     "description": "Modelowanie niepewności w procesie uczenia się wartości bodźców.",
