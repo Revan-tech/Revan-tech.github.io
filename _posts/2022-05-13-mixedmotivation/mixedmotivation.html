@@ -1487,7 +1487,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<p>Dzisiejszy wpis będzie taką mini motywacją do zainteresowania się mieszanymi modelami liniowymi (aka hierarhicznymi/wielopoziomowymi modelami liniowymi).</p>
+<p>Dzisiejszy wpis będzie taką mini motywacją do zainteresowania się mieszanymi modelami liniowymi (<em>aka</em> hierarhicznymi/wielopoziomowymi modelami liniowymi).</p>
 <p>Rozważmy hipotetyczny eksperyment. Badane osoby oglądają różne zdjęcia, a po po obejrzeniu oceniają jak bardzo zdjęcie było pobudzające. W trakcie badania uczesnicy mają na palcu wskazującym i środkowym elektrody mierzące aktywność skórno-galwaniczną (mikropocenie).</p>
 <p>Następnie możemy zadać pytanie czy większa amplituda sygnału z elektrod jest związana z większym pobudzeniem. Jeśli pytamy o to, czy osoby z średnio wyższą amplitudą sygnału mają wyższą średnią ocenę (efekt międzyobiektowy), możemy po prostu uśrednić pomiary na osobę i skorelować je ze sobą.</p>
 <p>Jeśli jednak zapytamy czy średnio im większy sygnał w pojedynczym pomiarze, tym wyższa ocena (efekt wewnątrzobiektowy), takie podejście może nie zadziałać. Czemu? Zasymulujmy sobie takie dane.</p>
@@ -1523,12 +1523,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Korelacja pojedynczych pomiarów"</span>,<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cor</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>signal</span>, <span class='va'>data</span><span class='op'>$</span><span class='va'>response</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>Korelacja pojedynczych pomiarów 0.05475626</code></pre>
+<pre><code>Korelacja pojedynczych pomiarów -0.03578</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Korelacja średnich pomiarów na osobę"</span>,<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cor</a></span><span class='op'>(</span><span class='va'>data_averaged</span><span class='op'>$</span><span class='va'>mean_signal</span>, <span class='va'>data_averaged</span><span class='op'>$</span><span class='va'>mean_response</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>Korelacja średnich pomiarów na osobę 0.05245162</code></pre>
+<pre><code>Korelacja średnich pomiarów na osobę -0.03876854</code></pre>
 </div>
 <p>Nie obserwujemy znaczących korelacji w żadnym wypadku. Zerknięcie na wykres wyjaśni tajemnicę:</p>
 <div class="layout-chunk" data-layout="l-body-outset">
@@ -1558,16 +1558,16 @@ response_demeaned <span class='op'>=</span> <span class='va'>response</span> <sp
 <div class="layout-chunk" data-layout="l-body">
 <pre><code># Fixed Effects
 
-Parameter   | Coefficient |   SE |        95% CI | t(9996) |      p
--------------------------------------------------------------------
-(Intercept) |       -0.19 | 0.21 | [-0.60, 0.23] |   -0.87 | 0.384 
-signal      |        0.50 | 0.01 | [ 0.48, 0.52] |   49.43 | &lt; .001
+Parameter   | Coefficient |       SE |        95% CI | t(9996) |      p
+-----------------------------------------------------------------------
+(Intercept) |       -0.19 |     0.21 | [-0.59, 0.22] |   -0.91 | 0.363 
+signal      |        0.52 | 9.86e-03 | [ 0.50, 0.53] |   52.27 | &lt; .001
 
 # Random Effects
 
 Parameter                   | Coefficient
 -----------------------------------------
-SD (Intercept: participant) |        2.09
+SD (Intercept: participant) |        2.03
 SD (Residual)               |        0.10</code></pre>
 </div>
 <p>W tabeli Fixed Effects mamy estymaty stałej <span class="math inline">\(a\)</span> i współczynnika regresji <span class="math inline">\(B\)</span>. Niżej w tabeli Random Effects widzimy estymaty wariancji stałych <span class="math inline">\(b\)</span> (wariancji międzyobiektowej) i błędu (w tym wypadku wariancji wewnątrzobiektowej). Jak widzimy współczynnik dla sygnału jest pozytywny i wynosi około 0.5. Dzięki dodaniu dodatkowych stałych <span class="math inline">\(b_j\)</span> nasz model liczy teraz efekt wewnątrzobiektowy.</p>
@@ -1575,7 +1575,7 @@ SD (Residual)               |        0.10</code></pre>
 <div class="layout-chunk" data-layout="l-body-outset">
 <p><img src="mixedmotivation_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
 </div>
-<p>Jak widzimy z wykresu, występuje zarówno efekt międzyobiektowy jak i wewnątrzobiektowy. Ponadto, te efekty mają przeciwny znak.</p>
+<p>Jak widzimy na wykresie, występuje zarówno efekt międzyobiektowy, jak i wewnątrzobiektowy. Ponadto, te efekty mają przeciwny znak.</p>
 <p>Przykładem z życia takiej sytuacji jest szybkość pisania na klawiaturze. Im szybciej średnio dana osoba pisze na klawiaturze tym rzadziej popełnia błędy. Jednak każda osoba, im relatywnie szybciej (względem swojej średniej) pisze, tym więcej błędów popełnia.</p>
 <p>Model mieszany wykryje tylko efekt wewnątrzobiektowy. Jeśli chcielibyśmy wykryć oba efekty, musimy wykonać pewną sztuczkę <span class="citation" data-cites="bell2019fixed">(<a href="#ref-bell2019fixed" role="doc-biblioref">Bell et al., 2019</a>)</span> i rozbić zmienną niezależną na dwie: <span class="math inline">\(X_{between}\)</span> = średnia dla danego badanego i <span class="math inline">\(X_{within} = X - X_{between}\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1593,16 +1593,16 @@ SD (Residual)               |        0.10</code></pre>
 
 Parameter      | Coefficient |   SE |         95% CI | t(395) |      p
 ----------------------------------------------------------------------
-(Intercept)    |       14.61 | 2.48 | [ 9.73, 19.48] |   5.89 | &lt; .001
-signal within  |        1.01 | 0.05 | [ 0.92,  1.11] |  21.41 | &lt; .001
-signal between |       -2.24 | 0.28 | [-2.79, -1.70] |  -8.11 | &lt; .001
+(Intercept)    |       17.35 | 2.70 | [12.05, 22.65] |   6.44 | &lt; .001
+signal within  |        0.96 | 0.05 | [ 0.87,  1.06] |  19.54 | &lt; .001
+signal between |       -2.54 | 0.28 | [-3.09, -2.00] |  -9.14 | &lt; .001
 
 # Random Effects
 
 Parameter                   | Coefficient
 -----------------------------------------
-SD (Intercept: participant) |        4.27
-SD (Residual)               |        0.94</code></pre>
+SD (Intercept: participant) |        4.58
+SD (Residual)               |        0.96</code></pre>
 </div>
 <p>Dzięki temu nasz model estymuje zarówno efekt wewnątrzobiektowy, jak i międzyobiektowy.</p>
 <p>Poniżej możecie zobaczyć jak zmiana poszczególnych parametrów w symulacji (kod z początku wpisu) wpływa na to jak wyglądają dane i jak radzi sobie model mieszany.</p>

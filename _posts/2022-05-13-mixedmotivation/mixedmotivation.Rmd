@@ -22,7 +22,7 @@ csl: apa.csl
 ---
 
 
-Dzisiejszy wpis będzie taką mini motywacją do zainteresowania się mieszanymi modelami liniowymi (aka hierarhicznymi/wielopoziomowymi modelami liniowymi). 
+Dzisiejszy wpis będzie taką mini motywacją do zainteresowania się mieszanymi modelami liniowymi (*aka* hierarhicznymi/wielopoziomowymi modelami liniowymi). 
 
 Rozważmy hipotetyczny eksperyment. Badane osoby oglądają różne zdjęcia, a po po obejrzeniu oceniają jak bardzo zdjęcie było pobudzające. W trakcie badania uczesnicy mają na palcu wskazującym i środkowym elektrody mierzące aktywność skórno-galwaniczną (mikropocenie). 
 
@@ -145,7 +145,7 @@ plot_grid(plot1, plot2, labels = "AUTO")
 ```
 
 
-Jak widzimy z wykresu, występuje zarówno efekt międzyobiektowy jak i wewnątrzobiektowy. Ponadto, te efekty mają przeciwny znak. 
+Jak widzimy na wykresie, występuje zarówno efekt międzyobiektowy, jak i wewnątrzobiektowy. Ponadto, te efekty mają przeciwny znak. 
 
 Przykładem z życia takiej sytuacji jest szybkość pisania na klawiaturze. Im szybciej średnio dana osoba pisze na klawiaturze tym rzadziej popełnia błędy. Jednak każda osoba, im relatywnie szybciej (względem swojej średniej) pisze, tym więcej błędów popełnia. 
 
