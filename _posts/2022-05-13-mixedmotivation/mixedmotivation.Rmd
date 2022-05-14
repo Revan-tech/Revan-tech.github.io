@@ -22,7 +22,7 @@ csl: apa.csl
 ---
 
 
-Dzisiejszy wpis będzie taką mini motywacją do zainteresowania się mieszanymi modelami liniowymi (aka hierarhicznymi/wielopoziomowymi modelami mieszanymi). 
+Dzisiejszy wpis będzie taką mini motywacją do zainteresowania się mieszanymi modelami liniowymi (aka hierarhicznymi/wielopoziomowymi modelami liniowymi). 
 
 Rozważmy hipotetyczny eksperyment. Badane osoby oglądają różne zdjęcia, a po po obejrzeniu oceniają jak bardzo zdjęcie było pobudzające. W trakcie badania uczesnicy mają na palcu wskazującym i środkowym elektrody mierzące aktywność skórno-galwaniczną (mikropocenie). 
 
