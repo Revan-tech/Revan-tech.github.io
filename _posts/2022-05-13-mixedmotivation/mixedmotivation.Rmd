@@ -105,7 +105,7 @@ Jak widzimy teraz nasz model uwzględnia odchylenia od stałej dla każdego bada
 Zerknijmy na model mieszany: 
 
 
-```{r echo=FALSE}
+```{r}
 model = lmer(response ~ signal + (1| participant), data = data)
 model_parameters(model)
 ```
