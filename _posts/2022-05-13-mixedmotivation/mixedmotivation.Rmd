@@ -2,7 +2,7 @@
 title: "Dlaczego liniowe modele mieszane?"
 description: |
   Mała zachęta do stosowania mieszanych modeli liniowych.
-preview: "Statystyczne_Dygresje.jpg"
+preview: "Statystyczne_Dygresje2.jpg"
 author:
   - name: Szymon Mąka
     url: {https://revan-tech.github.io/kontakt.html}
