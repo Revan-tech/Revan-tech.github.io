@@ -28,7 +28,7 @@ Rozważmy hipotetyczny eksperyment. Badane osoby oglądają różne zdjęcia, a 
 
 Następnie możemy zadać pytanie czy większa amplituda sygnału z elektrod jest związana z większym pobudzeniem. Jeśli pytamy o to, czy osoby z średnio wyższą amplitudą sygnału mają wyższą średnią ocenę (efekt międzyobiektowy), możemy po prostu uśrednić pomiary na osobę i skorelować je ze sobą. 
 
-Jeśli jednak zapytamy czy średnio im większy sygnał w pojedynczym pomiarze tym wyższa ocena (efekt wewnątrzobiektowy), takie podejście może nie zadziałać. Czemu? Zasymulujmy sobie takie dane. 
+Jeśli jednak zapytamy czy średnio im większy sygnał w pojedynczym pomiarze, tym wyższa ocena (efekt wewnątrzobiektowy), takie podejście może nie zadziałać. Czemu? Zasymulujmy sobie takie dane. 
 
 
 ```{r}
