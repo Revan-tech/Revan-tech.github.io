@@ -65,8 +65,10 @@ cat("Korelacja średnich pomiarów na osobę",cor(data_averaged$mean_signal, dat
 ```
 Nie obserwujemy znaczących korelacji w żadnym wypadku. Zerknięcie na wykres wyjaśni tajemnicę:
 
-```{r echo=FALSE, layout="l-body-outset"}
-plot1 <- ggplot(data, aes(x = signal, y = response, colour = as.character(participant))) + geom_point() + theme_bw() +  theme(legend.position="none")
+```{r tidy=FALSE, layout="l-body-outset"}
+plot1 <- ggplot(data, aes(x = signal, y = response, colour =
+  as.character(participant))) + geom_point() + theme_bw() + 
+  theme(legend.position="none")
 
 plot2 <- ggplot(data_averaged, aes(x = mean_signal, y = mean_response)) +
   geom_point() + theme_bw()
