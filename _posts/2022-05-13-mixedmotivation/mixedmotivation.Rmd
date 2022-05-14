@@ -172,5 +172,5 @@ knitr::include_app("https://szpm.shinyapps.io/Mixed/", height = "1020")
 Możliwość estymacji efektów wewnątrzobiektowych i międzyobiektowych to jedna z zalet mieszanych modeli liniowych. Posiadają one jeszcze inne, ciekawe właściwości. Niemniej, tu zakończymy tą małą zachętę do stosowania mieszanych modeli liniowych. 
 
 
-Jeśli ktoś jest zainteresowany szczegółami, zarówno matematycznymi jak i bardziej praktycznymi, zachęcam do skorzystania z bazy wiedzy, gdzie znajdują się odnośniki do dobrych tutoriali i kursów omawiających tę klasę modeli. 
+Jeśli ktoś jest zainteresowany szczegółami, zarówno matematycznymi jak i bardziej praktycznymi, zachęcam do skorzystania z <span style="color:blue">[bazy wiedzy](https://szpm.shinyapps.io/baza_wiedzy/)</span>, gdzie znajdują się odnośniki do dobrych tutoriali i kursów omawiających tę klasę modeli. 
 
