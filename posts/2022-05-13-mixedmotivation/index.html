@@ -2148,12 +2148,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Korelacja pojedynczych pomiarów"</span>,<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cor</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>signal</span>, <span class='va'>data</span><span class='op'>$</span><span class='va'>response</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>Korelacja pojedynczych pomiarów 0.02492706</code></pre>
+<pre><code>Korelacja pojedynczych pomiarów 0.08416419</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Korelacja średnich pomiarów na osobę"</span>,<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cor</a></span><span class='op'>(</span><span class='va'>data_averaged</span><span class='op'>$</span><span class='va'>mean_signal</span>, <span class='va'>data_averaged</span><span class='op'>$</span><span class='va'>mean_response</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>Korelacja średnich pomiarów na osobę 0.02296055</code></pre>
+<pre><code>Korelacja średnich pomiarów na osobę 0.0820647</code></pre>
 </div>
 <p>Nie obserwujemy znaczących korelacji w żadnym wypadku. Zerknięcie na wykres wyjaśni tajemnicę:</p>
 <div class="layout-chunk" data-layout="l-body-outset">
@@ -2183,16 +2183,16 @@ response_demeaned <span class='op'>=</span> <span class='va'>response</span> <sp
 <div class="layout-chunk" data-layout="l-body">
 <pre><code># Fixed Effects
 
-Parameter   | Coefficient |       SE |        95% CI | t(9996) |      p
------------------------------------------------------------------------
-(Intercept) |       -0.01 |     0.23 | [-0.46, 0.44] |   -0.05 | 0.962 
-signal      |        0.50 | 9.96e-03 | [ 0.48, 0.52] |   49.79 | &lt; .001
+Parameter   | Coefficient |   SE |       95% CI | t(9996) |      p
+------------------------------------------------------------------
+(Intercept) |        0.44 | 0.20 | [0.04, 0.84] |    2.17 | 0.030 
+signal      |        0.50 | 0.01 | [0.48, 0.51] |   49.15 | &lt; .001
 
 # Random Effects
 
 Parameter                   | Coefficient
 -----------------------------------------
-SD (Intercept: participant) |        2.24
+SD (Intercept: participant) |        2.00
 SD (Residual)               |        0.10</code></pre>
 </div>
 <p>W tabeli Fixed Effects mamy estymaty stałej <span class="math inline">\(a\)</span> i współczynnika regresji <span class="math inline">\(B\)</span>. Niżej w tabeli Random Effects widzimy estymaty wariancji stałych <span class="math inline">\(b\)</span> (wariancji międzyobiektowej) i błędu (w tym wypadku wariancji wewnątrzobiektowej). Jak widzimy współczynnik dla sygnału jest pozytywny i wynosi około 0.5. Dzięki dodaniu dodatkowych stałych <span class="math inline">\(b_j\)</span> nasz model liczy teraz efekt wewnątrzobiektowy.</p>
@@ -2204,20 +2204,30 @@ SD (Residual)               |        0.10</code></pre>
 <p>Przykładem z życia takiej sytuacji jest szybkość pisania na klawiaturze. Im szybciej średnio dana osoba pisze na klawiaturze tym rzadziej popełnia błędy. Jednak każda osoba, im relatywnie szybciej (względem swojej średniej) pisze, tym więcej błędów popełnia.</p>
 <p>Model mieszany wykryje tylko efekt wewnątrzobiektowy. Jeśli chcielibyśmy wykryć oba efekty, musimy wykonać pewną sztuczkę <span class="citation" data-cites="bell2019fixed">(<a href="#ref-bell2019fixed" role="doc-biblioref">Bell et al., 2019</a>)</span> i rozbić zmienną niezależną na dwie: <span class="math inline">\(X_{between}\)</span> = średnia dla danego badanego i <span class="math inline">\(X_{within} = X - X_{between}\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span>
+  <span class='va'>data</span>,
+  <span class='fu'><a href='https://easystats.github.io/datawizard/reference/demean.html'>demean</a></span><span class='op'>(</span><span class='va'>data</span>, select <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"signal"</span><span class='op'>)</span>, group <span class='op'>=</span> <span class='st'>"participant"</span><span class='op'>)</span>
+<span class='op'>)</span>
+
+<span class='va'>model</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/lme4/man/lmer.html'>lmer</a></span><span class='op'>(</span><span class='va'>response</span> <span class='op'>~</span> <span class='va'>signal_within</span> <span class='op'>+</span> <span class='va'>signal_between</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span> <span class='va'>participant</span><span class='op'>)</span>, data <span class='op'>=</span> <span class='va'>data</span><span class='op'>)</span>
+<span class='fu'><a href='https://easystats.github.io/parameters/reference/model_parameters.html'>model_parameters</a></span><span class='op'>(</span><span class='va'>model</span><span class='op'>)</span>
+</code></pre>
+</div>
 <pre><code># Fixed Effects
 
 Parameter      | Coefficient |   SE |         95% CI | t(395) |      p
 ----------------------------------------------------------------------
-(Intercept)    |       13.88 | 2.93 | [ 8.11, 19.64] |   4.73 | &lt; .001
-signal within  |        1.07 | 0.05 | [ 0.97,  1.18] |  20.01 | &lt; .001
-signal between |       -2.19 | 0.31 | [-2.80, -1.59] |  -7.17 | &lt; .001
+(Intercept)    |        9.75 | 2.76 | [ 4.31, 15.19] |   3.53 | &lt; .001
+signal within  |        1.03 | 0.05 | [ 0.93,  1.13] |  20.28 | &lt; .001
+signal between |       -1.70 | 0.35 | [-2.38, -1.01] |  -4.88 | &lt; .001
 
 # Random Effects
 
 Parameter                   | Coefficient
 -----------------------------------------
-SD (Intercept: participant) |        4.96
-SD (Residual)               |        1.02</code></pre>
+SD (Intercept: participant) |        4.98
+SD (Residual)               |        0.98</code></pre>
 </div>
 <p>Dzięki temu nasz model estymuje zarówno efekt wewnątrzobiektowy, jak i międzyobiektowy.</p>
 <p>Poniżej możecie zobaczyć jak zmiana poszczególnych parametrów w symulacji (kod z początku wpisu) wpływa na to jak wyglądają dane i jak radzi sobie model mieszany.</p>

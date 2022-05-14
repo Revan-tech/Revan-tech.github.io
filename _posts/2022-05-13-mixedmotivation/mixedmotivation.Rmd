@@ -151,7 +151,7 @@ Przykładem z życia takiej sytuacji jest szybkość pisania na klawiaturze. Im 
 
 Model mieszany wykryje tylko efekt wewnątrzobiektowy. Jeśli chcielibyśmy wykryć oba efekty, musimy wykonać pewną sztuczkę [@bell2019fixed] i rozbić zmienną niezależną na dwie: $X_{between}$ = średnia dla danego badanego i $X_{within} = X - X_{between}$. 
 
-```{r echo=FALSE}
+```{r}
 data <- cbind(
   data,
   demean(data, select = c("signal"), group = "participant")
