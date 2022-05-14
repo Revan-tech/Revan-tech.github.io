@@ -1502,17 +1502,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <span class='va'>between_effect</span> <span class='op'>=</span> <span class='fl'>0</span>
 <span class='va'>within_effect</span> <span class='op'>=</span> <span class='fl'>0.5</span>
-<span class='va'>between_var</span> <span class='op'>=</span> <span class='fl'>2</span>
-<span class='va'>within_var</span> <span class='op'>=</span> <span class='fl'>0.1</span>
+<span class='va'>between_sd</span> <span class='op'>=</span> <span class='fl'>2</span>
+<span class='va'>within_sd</span> <span class='op'>=</span> <span class='fl'>0.1</span>
 
 <span class='va'>signal_intercepts</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span> 
-<span class='va'>response_intercepts</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>0</span>, <span class='va'>between_var</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>between_effect</span> <span class='op'>*</span> <span class='va'>signal_intercepts</span>
+<span class='va'>response_intercepts</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>0</span>, <span class='va'>between_sd</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>between_effect</span> <span class='op'>*</span> <span class='va'>signal_intercepts</span>
 
 <span class='va'>data</span> <span class='op'>=</span>  <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='op'>)</span>
 <span class='kw'>for</span> <span class='op'>(</span><span class='va'>participant</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>100</span><span class='op'>)</span><span class='op'>{</span>
   
   <span class='va'>signal</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>4</span>,<span class='fl'>0.1</span><span class='op'>)</span>  
-  <span class='va'>response</span> <span class='op'>=</span>  <span class='va'>within_effect</span><span class='op'>*</span><span class='va'>signal</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>0</span>,<span class='va'>within_var</span><span class='op'>)</span>
+  <span class='va'>response</span> <span class='op'>=</span>  <span class='va'>within_effect</span><span class='op'>*</span><span class='va'>signal</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>0</span>,<span class='va'>within_sd</span><span class='op'>)</span>
   <span class='va'>response</span> <span class='op'>=</span> <span class='va'>response</span> <span class='op'>+</span> <span class='va'>response_intercepts</span><span class='op'>[</span><span class='va'>participant</span><span class='op'>]</span>
   <span class='va'>signal</span> <span class='op'>=</span> <span class='va'>signal</span> <span class='op'>+</span> <span class='va'>signal_intercepts</span><span class='op'>[</span><span class='va'>participant</span><span class='op'>]</span>
   <span class='va'>data</span> <span class='op'>=</span>  <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>data</span>, <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>signal</span>,<span class='va'>response</span>,<span class='va'>participant</span><span class='op'>)</span><span class='op'>)</span>
@@ -1523,12 +1523,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Korelacja pojedynczych pomiarów"</span>,<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cor</a></span><span class='op'>(</span><span class='va'>data</span><span class='op'>$</span><span class='va'>signal</span>, <span class='va'>data</span><span class='op'>$</span><span class='va'>response</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>Korelacja pojedynczych pomiarów -0.1482177</code></pre>
+<pre><code>Korelacja pojedynczych pomiarów 0.1079963</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Korelacja średnich pomiarów na osobę"</span>,<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cor</a></span><span class='op'>(</span><span class='va'>data_averaged</span><span class='op'>$</span><span class='va'>mean_signal</span>, <span class='va'>data_averaged</span><span class='op'>$</span><span class='va'>mean_response</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>Korelacja średnich pomiarów na osobę -0.1512096</code></pre>
+<pre><code>Korelacja średnich pomiarów na osobę 0.1064589</code></pre>
 </div>
 <p>Nie obserwujemy znaczących korelacji w żadnym wypadku. Zerknięcie na wykres wyjaśni tajemnicę:</p>
 <div class="layout-chunk" data-layout="l-body-outset">
@@ -1563,16 +1563,16 @@ response_demeaned <span class='op'>=</span> <span class='va'>response</span> <sp
 </div>
 <pre><code># Fixed Effects
 
-Parameter   | Coefficient |   SE |        95% CI | t(9996) |      p
--------------------------------------------------------------------
-(Intercept) |        0.17 | 0.23 | [-0.29, 0.63] |    0.73 | 0.463 
-signal      |        0.49 | 0.01 | [ 0.47, 0.51] |   49.23 | &lt; .001
+Parameter   | Coefficient |   SE |         95% CI | t(9996) |      p
+--------------------------------------------------------------------
+(Intercept) |       -0.44 | 0.22 | [-0.88,  0.00] |   -1.98 | 0.048 
+signal      |        0.51 | 0.01 | [ 0.49,  0.53] |   49.98 | &lt; .001
 
 # Random Effects
 
 Parameter                   | Coefficient
 -----------------------------------------
-SD (Intercept: participant) |        2.31
+SD (Intercept: participant) |        2.20
 SD (Residual)               |        0.10</code></pre>
 </div>
 <p>W tabeli Fixed Effects mamy estymaty stałej <span class="math inline">\(a\)</span> i współczynnika regresji <span class="math inline">\(B\)</span>. Niżej w tabeli Random Effects widzimy estymaty wariancji stałych <span class="math inline">\(b\)</span> (wariancji międzyobiektowej) i błędu (w tym wypadku wariancji wewnątrzobiektowej). Jak widzimy współczynnik dla sygnału jest pozytywny i wynosi około 0.5. Dzięki dodaniu dodatkowych stałych <span class="math inline">\(b_j\)</span> nasz model liczy teraz efekt wewnątrzobiektowy.</p>
@@ -1598,16 +1598,16 @@ SD (Residual)               |        0.10</code></pre>
 
 Parameter      | Coefficient |   SE |         95% CI | t(395) |      p
 ----------------------------------------------------------------------
-(Intercept)    |        8.80 | 2.04 | [ 4.78, 12.82] |   4.31 | &lt; .001
-signal within  |        0.98 | 0.06 | [ 0.87,  1.09] |  17.56 | &lt; .001
-signal between |       -1.62 | 0.22 | [-2.05, -1.19] |  -7.43 | &lt; .001
+(Intercept)    |       14.17 | 2.67 | [ 8.93, 19.41] |   5.32 | &lt; .001
+signal within  |        0.98 | 0.05 | [ 0.88,  1.08] |  18.70 | &lt; .001
+signal between |       -2.34 | 0.31 | [-2.95, -1.73] |  -7.54 | &lt; .001
 
 # Random Effects
 
 Parameter                   | Coefficient
 -----------------------------------------
-SD (Intercept: participant) |        4.03
-SD (Residual)               |        1.05</code></pre>
+SD (Intercept: participant) |        5.44
+SD (Residual)               |        1.00</code></pre>
 </div>
 <p>Dzięki temu nasz model estymuje zarówno efekt wewnątrzobiektowy, jak i międzyobiektowy.</p>
 <p>Poniżej możecie zobaczyć jak zmiana poszczególnych parametrów w symulacji (kod z początku wpisu) wpływa na to jak wyglądają dane i jak radzi sobie model mieszany.</p>

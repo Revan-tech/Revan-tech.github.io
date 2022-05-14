@@ -41,17 +41,17 @@ library(cowplot)
 
 between_effect = 0
 within_effect = 0.5
-between_var = 2
-within_var = 0.1
+between_sd = 2
+within_sd = 0.1
 
 signal_intercepts = rnorm(100,0,1) 
-response_intercepts = rnorm(100,0, between_var) + between_effect * signal_intercepts
+response_intercepts = rnorm(100,0, between_sd) + between_effect * signal_intercepts
 
 data =  data.frame()
 for (participant in 1:100){
   
   signal = rnorm(100,4,0.1)  
-  response =  within_effect*signal + rnorm(100,0,within_var)
+  response =  within_effect*signal + rnorm(100,0,within_sd)
   response = response + response_intercepts[participant]
   signal = signal + signal_intercepts[participant]
   data =  rbind(data, data.frame(signal,response,participant))
