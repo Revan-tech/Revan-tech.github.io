@@ -112,7 +112,7 @@ model = lmer(response ~ signal + (1| participant), data = data)
 model_parameters(model)
 ```
 
-W tabeli Fixed Effects mamy estymaty stałej $a$ i współczynnika regresji $B$. Niżej w tabeli Random Effects widzimy estymaty wariancji stałych $b$ (wariancji międzyobiektowej) i błędu (w tym wypadku wariancji wewnątrzobiektowej). Jak widzimy współczynnik dla sygnału jest pozytywny i wynosi około 0.5. Dzięki dodaniu dodatkowych stałych $b_j$ nasz model liczy teraz efekt wewnątrzobiektowy.
+W tabeli Fixed Effects mamy estymaty stałej $a$ i współczynnika regresji $\beta$. Niżej w tabeli Random Effects widzimy estymaty odchylenia standardowego stałych $b$ (wariancji międzyobiektowej) i błędu (w tym wypadku wariancji wewnątrzobiektowej). Jak widzimy współczynnik dla sygnału jest pozytywny i wynosi około 0.5. Dzięki dodaniu dodatkowych stałych $b_j$ nasz model liczy teraz efekt wewnątrzobiektowy.
 
 Ale czasami chcielibyśmy by liczył także efekt międzyobiektowy. Spójrzmy na taki przykład: 
 
@@ -151,7 +151,7 @@ Jak widzimy na wykresie, występuje zarówno efekt międzyobiektowy, jak i wewn�
 
 Przykładem z życia takiej sytuacji jest szybkość pisania na klawiaturze. Im szybciej średnio dana osoba pisze na klawiaturze tym rzadziej popełnia błędy. Jednak każda osoba, im relatywnie szybciej (względem swojej średniej) pisze, tym więcej błędów popełnia. 
 
-Model mieszany wykryje tylko efekt wewnątrzobiektowy. Jeśli chcielibyśmy wykryć oba efekty, musimy wykonać pewną sztuczkę [@bell2019fixed] i rozbić zmienną niezależną na dwie: $X_{between}$ = średnia dla danego badanego i $X_{within} = X - X_{between}$. 
+Model mieszany wykryje tylko efekt wewnątrzobiektowy. Jeśli chcielibyśmy wykryć oba efekty, musimy wykonać pewną sztuczkę i rozbić zmienną niezależną na dwie [@bell2019fixed]: $X_{between}$ = średnia dla danego badanego i $X_{within} = X - X_{between}$. 
 
 ```{r}
 data <- cbind(
