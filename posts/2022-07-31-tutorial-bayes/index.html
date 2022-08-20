@@ -2180,7 +2180,7 @@ padding: 15px 60px;
 </style>
 <p><br></p>
 <p class="comment">
-<strong>Prawo całkowitego prawdopodobieństwa</strong> <br> <br> Jeśli <span class="math inline">\(B_1\)</span>, <span class="math inline">\(B_2\)</span> … <span class="math inline">\(B_n\)</span> są parami rozłączne, których suma zdarzeń wynosi 1, to dla dowolnego zdarzenia <span class="math inline">\(A\)</span> zachodzi wzór: Dla wartości dyskretnych. <span class="math display">\[P(A)=\sum_{B}P(A \land B) \]</span> Dla wartosci ciągłych. <span class="math display">\[ P(A) = \int_{}P(A \land B)dB\]</span>
+<strong>Prawo całkowitego prawdopodobieństwa</strong> <br> <br> Jeśli <span class="math inline">\(B_1\)</span>, <span class="math inline">\(B_2\)</span> … <span class="math inline">\(B_n\)</span> są parami rozłączne, których suma zdarzeń wynosi 1, to dla dowolnego zdarzenia <span class="math inline">\(A\)</span> zachodzi wzór: <br> Dla wartości dyskretnych. <span class="math display">\[P(A)=\sum_{B}P(A \land B) \]</span> Dla wartosci ciągłych. <span class="math display">\[ P(A) = \int_{}P(A \land B)dB\]</span>
 </p>
 <p><br></p>
 <p>Czyli, by obliczyć intersujące nas prawdopodobieństwo musimy podstawić odpowiednie wartości do wzoru:</p>
@@ -2281,7 +2281,8 @@ padding: 15px 60px;
 <span class='va'>iq</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>87</span>, <span class='fl'>112</span>, <span class='fl'>83</span>, <span class='fl'>95</span>, <span class='fl'>106</span>,<span class='fl'>105</span>, <span class='fl'>123</span>, <span class='fl'>107</span>, <span class='fl'>103</span>, <span class='fl'>98</span>, <span class='fl'>137</span>, <span class='fl'>114</span>, <span class='fl'>90</span>, <span class='fl'>90</span>, <span class='fl'>117</span><span class='op'>)</span>
 
 <span class='co'># To są nasze parametry czyli możliwe wartości parametrów mu i sigma. </span>
-<span class='co'># Ponieważ jest to proste przybliżenie numeryczne, ograniczamy możliwe wartości średniej między 50 a 150, dla otchylenia standardowego między 0.1 a 50.</span>
+<span class='co'># Ponieważ jest to proste przybliżenie numeryczne, ograniczamy możliwe wartości średniej </span>
+<span class='co'># między 50 a 150, dla otchylenia standardowego między 0.1 a 50.</span>
 <span class='va'>pars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span><span class='op'>(</span>mu <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>50</span>, <span class='fl'>150</span>, length.out <span class='op'>=</span> <span class='fl'>300</span><span class='op'>)</span>, 
                     sigma <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0.1</span>, <span class='fl'>50</span>, length.out <span class='op'>=</span> <span class='fl'>300</span><span class='op'>)</span><span class='op'>)</span>
 
