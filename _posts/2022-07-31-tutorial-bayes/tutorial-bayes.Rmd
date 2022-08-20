@@ -215,7 +215,7 @@ $$P(y|\mu,\sigma) = \prod_{i=1}^{n}P(y_i|\mu,\sigma) = P(y_1|\mu,\sigma)*P(y_2|\
 
 Skoro mamy już naszą funkcję wiarygodności, potrzebujemy jeszcze naszego prawdopodobieństwa *A priori* $P(\mu,\sigma)$. Zakładamy, że wartość średniej jest niezależna od wartości odchylenia standardowego, czyli $P(\mu,\sigma) = P(\mu) P(\sigma)$. Tak jak już wspomniałem, prawdopodobieństwo *a priori* przedstawia stan wyjściowy (np. naszą wcześniejszą wiedzę). 
 
-Jaką wiedzę mamy na temat średniego IQ? Wiemy, że w populacji wynosi 100 (tak jest skonstruowana ta miara). Raczej nie podejrzewamy, dużych odstępów od tej wartości więc możemy zamodelować $P(\mu)$ rozkładem normalnym o średniej 100 i odchyleniu 2 $N(100,3)$. Wiemy też, że odchylenie standardowe wynosi 15, ale na potrzeby tego ćwiczenia udamy, że tego nie wiemy. A skoro nie mamy żadnej wcześniejszej wiedzy na temat SD, uznajemy że każda wartość SD jest tak samo prawdopodobna i zamodelujemy $P(\sigma)$ rozkładem jednostajnym. 
+Jaką wiedzę mamy na temat średniego IQ? Wiemy, że w populacji wynosi 100 (tak jest skonstruowana ta miara). Raczej nie podejrzewamy, dużych odstępów od tej wartości więc możemy zamodelować $P(\mu)$ rozkładem normalnym o średniej 100 i odchyleniu 2 $N(100,3)$. Wiemy też, że odchylenie standardowe wynosi 15, ale na potrzeby tego ćwiczenia udamy, że tego nie wiemy. A skoro nie mamy żadnej wcześniejszej wiedzy na temat SD, uznajemy że każda wartość SD jest tak samo prawdopodobna i zamodelujemy $P(\sigma)$ rozkładem jednostajnym (prawdopodobieństwo wylosowania każdej wartości z zadanego przedziału jest takie same). 
 
 Nasz wzór możemy zapisać:
 
@@ -243,7 +243,8 @@ Równania wyglądają czasami bardzo abstrakcyjnie, zwłaszcza jeśli nie można
 # Dane z naszej próby
 iq <- c(87, 112, 83, 95, 106,105, 123, 107, 103, 98, 137, 114, 90, 90, 117)
 
-# To są nasze parametry czyli możliwe wartości parametrów mu i sigma.  
+# To są nasze parametry czyli możliwe wartości parametrów mu i sigma. 
+# Ponieważ jest to proste przybliżenie numeryczne, ograniczamy możliwe wartości średniej między 50 a 150, dla otchylenia standardowego między 0.1 a 50.
 pars <- expand.grid(mu = seq(50, 150, length.out = 300), 
                     sigma = seq(0.1, 50, length.out = 300))
 
@@ -485,6 +486,6 @@ Im więcej mamy danych (obserwacji), tym mniej istotne staje się prawdopodobie�
 
 ## Podsumowanie
 
-Jak zauważyliśmy, analiza Bayesowska zwraca nam rozkład statystyczny parametru, którego szukamy. Rozkład reprezentuje nasz poziom pewności co do wartości parametru. W statystyce częstościowej dane są modelowane jako zmienne losowe, a parametry traktowane są jako stałe. W analizie staramy się oszacować najlepszą możliwą punktową wartość tego parametru. W podejściu Bayesowskim, dane są stałe, a parmetry są zmiennymi losowymi. To znaczy, że szukane przez nas parametry reprezentujemy jako rozkład statystyczny, pod warunkiem zebranych przez nas danych. Gdy otrzymujemy nowe dane, możemy aktualizować naszą pewność co do prawdopodobieństwa konkretnych wartości parametrów. 
+ W statystyce częstościowej dane są modelowane jako zmienne losowe, a parametry traktowane są jako stałe. W analizie staramy się oszacować najlepszą możliwą punktową wartość tego parametru. Jak zauważyliśmy, analiza Bayesowska zwraca nam rozkład statystyczny parametru, którego szukamy. Rozkład reprezentuje nasz poziom pewności co do wartości parametru. W podejściu Bayesowskim, dane są stałe, a parmetry są zmiennymi losowymi. To znaczy, że szukane przez nas parametry reprezentujemy jako rozkład statystyczny, pod warunkiem zebranych przez nas danych. Gdy otrzymujemy nowe dane, możemy aktualizować naszą pewność co do prawdopodobieństwa konkretnych wartości parametrów. 
 
 Mam nadzieję, że pokazanymi tu przykładami udało mi się pokazać na czym polega wnioskowanie Bayesowskie. W następnej części zajmiemy się budowaniem i estymowaniem modeli Bayesowskich. 
