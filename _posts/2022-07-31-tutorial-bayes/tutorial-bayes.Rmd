@@ -108,7 +108,7 @@ padding: 15px 60px;
 **Prawo całkowitego prawdopodobieństwa**
 <br>
 <br>
-Jeśli $B_1$, $B_2$ ... $B_n$ są  parami rozłączne, których suma zdarzeń wynosi 1, to dla dowolnego zdarzenia $A$ zachodzi wzór:
+Jeśli $B_1$, $B_2$ ... $B_n$ są  parami rozłączne, a ich suma zdarzeń wynosi 1, to dla dowolnego zdarzenia $A$ zachodzi wzór:
 <br>
 <br>
 Dla wartości dyskretnych.
