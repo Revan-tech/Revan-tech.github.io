@@ -110,6 +110,7 @@ padding: 15px 60px;
 <br>
 Jeśli $B_1$, $B_2$ ... $B_n$ są  parami rozłączne, których suma zdarzeń wynosi 1, to dla dowolnego zdarzenia $A$ zachodzi wzór:
 <br>
+<br>
 Dla wartości dyskretnych.
 $$P(A)=\sum_{B}P(A \land B) $$
 Dla wartosci ciągłych.
