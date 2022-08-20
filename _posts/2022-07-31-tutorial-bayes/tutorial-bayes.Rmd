@@ -105,12 +105,13 @@ padding: 15px 60px;
 <br>
 
 <p class="comment">
-**Prawo Sumy**
+**Prawo całkowitego prawdopodobieństwa**
 <br>
 <br>
-Dla wartości dyskretnych:
+Jeśli $B_1$, $B_2$ ... $B_n$ są  parami rozłączne, których suma zdarzeń wynosi 1, to dla dowolnego zdarzenia $A$ zachodzi wzór:
+Dla wartości dyskretnych.
 $$P(A)=\sum_{B}P(A \land B) $$
-Dla wartosci ciągłych:
+Dla wartosci ciągłych.
 $$ P(A) = \int_{}P(A \land B)dB$$
 </p>
 <br>
@@ -486,6 +487,6 @@ Im więcej mamy danych (obserwacji), tym mniej istotne staje się prawdopodobie�
 
 ## Podsumowanie
 
- W statystyce częstościowej dane są modelowane jako zmienne losowe, a parametry traktowane są jako stałe. W analizie staramy się oszacować najlepszą możliwą punktową wartość tego parametru. Jak zauważyliśmy, analiza Bayesowska zwraca nam rozkład statystyczny parametru, którego szukamy. Rozkład reprezentuje nasz poziom pewności co do wartości parametru. W podejściu Bayesowskim, dane są stałe, a parmetry są zmiennymi losowymi. To znaczy, że szukane przez nas parametry reprezentujemy jako rozkład statystyczny, pod warunkiem zebranych przez nas danych. Gdy otrzymujemy nowe dane, możemy aktualizować naszą pewność co do prawdopodobieństwa konkretnych wartości parametrów. 
+W statystyce częstościowej dane są modelowane jako zmienne losowe, a parametry traktowane są jako stałe. W analizie staramy się oszacować najlepszą możliwą punktową wartość tego parametru. Jak zauważyliśmy, analiza Bayesowska zwraca nam rozkład prawdopodobieństwa parametru, którego szukamy. Rozkład reprezentuje nasz poziom pewności co do wartości parametru. W podejściu Bayesowskim, dane są stałe, a parmetry są zmiennymi losowymi. To znaczy, że szukane przez nas parametry reprezentujemy jako rozkład statystyczny, pod warunkiem zebranych przez nas danych. Gdy otrzymujemy nowe dane, możemy aktualizować naszą pewność co do prawdopodobieństwa konkretnych wartości parametrów. 
 
 Mam nadzieję, że pokazanymi tu przykładami udało mi się pokazać na czym polega wnioskowanie Bayesowskie. W następnej części zajmiemy się budowaniem i estymowaniem modeli Bayesowskich. 

@@ -2180,7 +2180,7 @@ padding: 15px 60px;
 </style>
 <p><br></p>
 <p class="comment">
-<strong>Prawo Sumy</strong> <br> <br> Dla wartości dyskretnych: <span class="math display">\[P(A)=\sum_{B}P(A \land B) \]</span> Dla wartosci ciągłych: <span class="math display">\[ P(A) = \int_{}P(A \land B)dB\]</span>
+<strong>Prawo całkowitego prawdopodobieństwa</strong> <br> <br> Jeśli <span class="math inline">\(B_1\)</span>, <span class="math inline">\(B_2\)</span> … <span class="math inline">\(B_n\)</span> są parami rozłączne, których suma zdarzeń wynosi 1, to dla dowolnego zdarzenia <span class="math inline">\(A\)</span> zachodzi wzór: Dla wartości dyskretnych. <span class="math display">\[P(A)=\sum_{B}P(A \land B) \]</span> Dla wartosci ciągłych. <span class="math display">\[ P(A) = \int_{}P(A \land B)dB\]</span>
 </p>
 <p><br></p>
 <p>Czyli, by obliczyć intersujące nas prawdopodobieństwo musimy podstawić odpowiednie wartości do wzoru:</p>
@@ -2455,7 +2455,7 @@ padding: 15px 60px;
 </div>
 <p>Im więcej mamy danych (obserwacji), tym mniej istotne staje się prawdopodobieństwo <em>a priori</em>. Jednocześnie im bardziej informatywny rozkład <em>a priori</em> (im węższy, im więcej gęstości prawdopodobieństwa jest skupione wokół danej wartości) tym więcej danych trzeba by rozkład <em>post priori</em> różnił się od niego.</p>
 <h2 id="podsumowanie">Podsumowanie</h2>
-<p>W statystyce częstościowej dane są modelowane jako zmienne losowe, a parametry traktowane są jako stałe. W analizie staramy się oszacować najlepszą możliwą punktową wartość tego parametru. Jak zauważyliśmy, analiza Bayesowska zwraca nam rozkład statystyczny parametru, którego szukamy. Rozkład reprezentuje nasz poziom pewności co do wartości parametru. W podejściu Bayesowskim, dane są stałe, a parmetry są zmiennymi losowymi. To znaczy, że szukane przez nas parametry reprezentujemy jako rozkład statystyczny, pod warunkiem zebranych przez nas danych. Gdy otrzymujemy nowe dane, możemy aktualizować naszą pewność co do prawdopodobieństwa konkretnych wartości parametrów.</p>
+<p>W statystyce częstościowej dane są modelowane jako zmienne losowe, a parametry traktowane są jako stałe. W analizie staramy się oszacować najlepszą możliwą punktową wartość tego parametru. Jak zauważyliśmy, analiza Bayesowska zwraca nam rozkład prawdopodobieństwa parametru, którego szukamy. Rozkład reprezentuje nasz poziom pewności co do wartości parametru. W podejściu Bayesowskim, dane są stałe, a parmetry są zmiennymi losowymi. To znaczy, że szukane przez nas parametry reprezentujemy jako rozkład statystyczny, pod warunkiem zebranych przez nas danych. Gdy otrzymujemy nowe dane, możemy aktualizować naszą pewność co do prawdopodobieństwa konkretnych wartości parametrów.</p>
 <p>Mam nadzieję, że pokazanymi tu przykładami udało mi się pokazać na czym polega wnioskowanie Bayesowskie. W następnej części zajmiemy się budowaniem i estymowaniem modeli Bayesowskich.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
