@@ -188,7 +188,7 @@ ggplot(data, aes(x = IQ, y = Mean)) +
 
 Jaką daje nam to pewność co do naszego pomiaru? Na ile możemy być pewni, że prawdziwa średnia leży w tym przedziale ufności? Tu zaczynają się trudności. 
 
-NHST historycznie powstała do stosowania w warunkach przemysłowych, gdzie wykonujemy bardzo wiele identycznych badań, na przykład w kontroli jakości produktów. Na przykład w Ikei produkowany jest pewien element do konstrukcji szafek. Każdy kolejny wyprodukowany egzemplarz tego elementu różni się odrobinę w długości od schematu, ale dobrze skalibrowana maszyna przycinająca elementy działa tak, że te różnice nie są na tyle duże by element nie pasował do szafki.
+NHST historycznie powstała do stosowania w warunkach przemysłowych, gdzie wykonujemy bardzo wiele identycznych badań, na przykład w kontroli jakości produktów. Na przykład, w Ikei produkowany jest pewien element do konstrukcji szafek. Każdy kolejny wyprodukowany egzemplarz tego elementu różni się odrobinę w długości od schematu, ale dobrze skalibrowana maszyna przycinająca elementy działa tak, że te różnice nie są na tyle duże by element nie pasował do szafki.
 
 Osoba odpowiedzialna za kontrolę jakości regularnie wykonuje pomiary długości $n$ elementów każdego, by sprawdzić czy średnia długość elementów nie wykracza założonego przedziału bezpiecznej różnicy w długości. Obliczył sobie ile elementów musi zmierzyć dziennie, by przedział ufności pokrywał się z tą bezpieczną różnicą przy ustalonym poziomie ufności 90%. Jeśli maszyna będzie działać poprawnie, kontroler otrzyma średnio 1 fałszywy alarm na 10 dni. 
 
