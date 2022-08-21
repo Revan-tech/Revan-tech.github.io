@@ -203,7 +203,7 @@ Zasadniczo, w idealnej sytuacji mamy 95% prawdopodobieństwo na wylosowanie taki
 
 No dobrze. Czas na Bayesowskie podejście do problemu. Chcemy obliczyć $P(Hipoteza|Dane)$. Co jest jednak naszą hipotezą? O ile w przypadku zmiennej binarnej jak choroba i jej brak jest to proste, tutaj nasza hipoteza dotyczy wartości średniej - wartość średniej jest raczej zmienną ciągłą, może być dowolna. Dlatego $P(Hipoteza|Dane)$ będzie rozkładem prawdopodobieństwa dla każdej możliwej wartości średniej. 
 
-Rozkład IQ jest, zgodnie z teorią, rozkładem normalnym. Dlatego $P(Dane|Hipoteza)$ możemy zamodelować jako prawdopodobieństwo otrzymania danych pod warunkiem określonych wartości średniej i odchylenia rozkładu normalnego, które nazywamy parametrami. Gdy mamy dużo parametrów, zwykle dla wygody oznaczmy je literką $\theta$, która symbolizuje wektor parametrów. 
+Rozkład IQ jest, zgodnie z teorią, rozkładem normalnym. Dlatego $P(Dane|Hipoteza)$ możemy zamodelować jako prawdopodobieństwo otrzymania danych pod warunkiem określonych wartości średniej ($\mu$) i odchylenia standardowego ($\sigma$) rozkładu normalnego, które nazywamy parametrami. Gdy mamy dużo parametrów, zwykle dla wygody oznaczmy je literką $\theta$, która symbolizuje wektor parametrów. 
 
 My jednak mamy tylko dwa parametry, więc nasze $P(Dane|Hipoteza)$ zapiszemy jako $P(y| \mu ,\sigma)$, które jest rozkładem prawdopodobieństwa, mówi nam jak prawdopodobne jest wylosowanie wartości $y$ z rozkładu normalnego $N(\mu,\sigma)$. Na przykłd, gęstość prawdopodobieństwa otrzymania wartości 6 z rozkładu $N(4,2)$ wynosi:
 
@@ -282,7 +282,7 @@ levelplot(probability ~ mu * sigma, data = pars, col.regions = coul)
 
 ```
 
-Widzimy tu prawdopodobieństwo, że dana kombinacja parametrów $\mu$ i $\sigma$ wygenerowała nasze dane. W odróżnieniu do statystyki częstościowej odpowiedzią na nasze pytanie jest nie punktowa wartość parametru, ale jego rozkład $P(\theta|y)$. Możemy skonstruować przedział, w którym zawrze się 95% prawdopodobieństwa. Nazywa się go przedziałem wiarygodności. W odróżnieniu do przedziału ufności, interpretacja przedziały wiarygodności mówi: Biorąc pod uwagę dane, które mamy, oraz prawdopodobieństwa *a priori*, mamy 95% prawdopodobieństwo, że parametr, który wygenerował dane jest w przedziale wiarygodności. 
+Widzimy tu prawdopodobieństwo, że dana kombinacja parametrów $\mu$ i $\sigma$ wygenerowała nasze dane. W odróżnieniu do statystyki częstościowej odpowiedzią na nasze pytanie jest nie punktowa wartość parametru, ale jego rozkład $P(\theta|y)$. Możemy skonstruować przedział, w którym zawrze się 95% prawdopodobieństwa. Nazywa się go przedziałem wiarygodności. W odróżnieniu do przedziału ufności, interpretacja przedziału wiarygodności mówi: Biorąc pod uwagę dane, które mamy, oraz prawdopodobieństwa *a priori*, mamy 95% prawdopodobieństwo, że parametr, który wygenerował dane jest w przedziale wiarygodności. 
 
 Weźmy rozkład marginalny dla średniej za pomocą prawa sumy:
 
