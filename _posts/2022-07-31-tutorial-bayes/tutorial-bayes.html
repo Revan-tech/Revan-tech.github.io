@@ -1718,7 +1718,7 @@ padding: 15px 60px;
 <strong>Rozkład dwumianowy</strong> <br> <br> Rozkład dwumianowy modeluje prawdopodobieństwo uzyskania <span class="math inline">\(k\)</span> sukcesów z <span class="math inline">\(n\)</span> prób, gdy prawdopodobieństwo sukcesu wynosi <span class="math inline">\(p\)</span>. Dany jest wzorem: <br> <span class="math display">\[ P(k)  =  {{n}\choose{k}} \cdot p^k(1-p)^{n-k}\]</span>
 </p>
 <p><br> W statystyce klasycznej najlepszym estymatorem <span class="math inline">\(p\)</span> jest po prostu <span class="math inline">\(\frac{k}{n}\)</span>. Nie uwzględnia to jednak niepewności pomiaru. My jednak chcielibyśmy podejść do problemu bayesowsko. Musimy więc zdefiniować wszystkie potrzebne zmienne.</p>
-<p>Zmienną, której rozkład chcemy poznać jest <span class="math inline">\(p\)</span>, dlatego <span class="math inline">\(p\)</span> będzie naszą hipotezą. Zauważmy, że <span class="math inline">\(p\)</span> może być dowolną wartością z przedziału &lt;0,1&gt;. Dane to recenzje pozytywne i negatywne. Mamy już dobrego kandydata na funkcję wiarygodności. Prawdopodobieństwo uzyskania <span class="math inline">\(k\)</span> poleceń na <span class="math inline">\(n\)</span> ocen pod warunkiem konkretnej wartości <span class="math inline">\(p\)</span> zamodelujemy rozkładem dwumianowym.</p>
+<p>Zmienną, której rozkład chcemy poznać jest <span class="math inline">\(p\)</span>, dlatego <span class="math inline">\(p\)</span> będzie naszą hipotezą. Dane to recenzje pozytywne i negatywne. Mamy już dobrego kandydata na funkcję wiarygodności. Prawdopodobieństwo uzyskania <span class="math inline">\(k\)</span> poleceń na <span class="math inline">\(n\)</span> ocen pod warunkiem konkretnej wartości <span class="math inline">\(p\)</span> zamodelujemy rozkładem dwumianowym.</p>
 <p><span class="math display">\[P(k,n|p) = {{n}\choose{k}} \cdot p^k(1-p)^{n-k}\]</span></p>
 <p>Potrzebujemy jeszcze prawdopodobieństwa <em>a priori</em> <span class="math inline">\(P(p)\)</span>. Zauważmy, że ponieważ szukane przez nas <span class="math inline">\(p\)</span> jest prawdopodobieństwem, może przyjmować dowolne wartości z przedziału &lt;0,1&gt;. Do modelowania prawdopodobieństwa prawdopodobieństwa często wykorzystuje się rozkład Beta.</p>
 <br>
@@ -1728,7 +1728,7 @@ padding: 15px 60px;
 <p><br></p>
 <p>A więc <span class="math inline">\(P(p)\)</span> możemy zamodelować rozkładem Beta.</p>
 <p><span class="math display">\[ P(p)  =  \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)}\]</span></p>
-<p>Co wiemy parametrach tego rozkładu? Prawdopodobnie nic, ale możemy zastosować metodę zwaną empirycznym Bayesem. To znaczy, weźmiemy rozkład <em>a priori</em> z danych. Nie jest to ortodoksyjne podejście Bayesowskie, które zakłada zdefiniowanie rozkładów <em>a priori</em> przed spojrzeniem na dane. Niemniej, człowiek musi sobie jakoś radzić.</p>
+<p>Co wiemy parametrach tego rozkładu? Prawdopodobnie nic, ale możemy zastosować metodę zwaną empirycznym Bayesem. To znaczy, wyestymujemy rozkład <em>a priori</em> z danych. Nie jest to ortodoksyjne podejście Bayesowskie, które zakłada zdefiniowanie rozkładów <em>a priori</em> przed spojrzeniem na dane. Niemniej, człowiek musi sobie jakoś radzić.</p>
 <p>Księgarnia internetowa posiada oceny wszystkich książek, jakie są w jej posiadaniu. Załóżmy, że mamy dostęp do tych danych (zasymulujmy je) i stwórzmy histogram wszystkich ocen.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
