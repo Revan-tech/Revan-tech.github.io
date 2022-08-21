@@ -110,7 +110,7 @@ padding: 15px 60px;
 **Prawo całkowitego prawdopodobieństwa**
 <br>
 <br>
-Jeśli $B_1$, $B_2$ ... $B_n$ są  parami rozłączne, a ich suma zdarzeń wynosi 1, to dla dowolnego zdarzenia $A$ zachodzi wzór:
+Jeśli $B_1$, $B_2$ ... $B_n$ są  parami rozłączne, a ich prawdopodobieństwo sumy zdarzeń wynosi 1, to dla dowolnego zdarzenia $A$ zachodzi wzór:
 <br>
 <br>
 Dla wartości dyskretnych.
@@ -197,7 +197,7 @@ NHST historycznie powstała do stosowania w warunkach przemysłowych, gdzie wyko
 
 Osoba odpowiedzialna za kontrolę jakości regularnie wykonuje pomiary długości $n$ elementów każdego, by sprawdzić czy średnia długość elementów nie wykracza założonego przedziału bezpiecznej różnicy w długości. Obliczył sobie ile elementów musi zmierzyć dziennie, by przedział ufności pokrywał się z tą bezpieczną różnicą przy ustalonym poziomie ufności 90%. Jeśli maszyna będzie działać poprawnie, kontroler otrzyma średnio 1 fałszywy alarm na 10 dni. 
 
-Zasadniczo, w idealnej sytuacji mamy 95% prawdopodobieństwo na wylosowanie takiej próby,  której przedział ufności będzie zawierał prawdziwą średnią. Często spotykane, choć nie do końca zasadnym, jest twierdzenie, w danej próbie istnieje 95% prawdopodobieństwo, że w przedziale zawiera się średnia. 95% prawdopodobieństwo mamy przed wylosowaniem próby, gdy już ją mamy, nie wiemy co wylosowaliśmy.  
+Zasadniczo, w idealnej sytuacji mamy 95% prawdopodobieństwo na wylosowanie takiej próby,  której przedział ufności będzie zawierał prawdziwą średnią. Często spotykane, choć nie do końca zasadne, jest twierdzenie, w danej próbie istnieje 95% prawdopodobieństwo, że w przedziale zawiera się średnia. 95% prawdopodobieństwo mamy przed wylosowaniem próby, gdy już ją mamy, nie wiemy co wylosowaliśmy.  
 
 ### Bayesowcy
 
@@ -250,7 +250,7 @@ iq <- c(87, 112, 83, 95, 106,105, 123, 107, 103, 98, 137, 114, 90, 90, 117)
 
 # To są nasze parametry czyli możliwe wartości parametrów mu i sigma. 
 # Ponieważ jest to proste przybliżenie numeryczne, ograniczamy możliwe wartości średniej 
-# między 50 a 150, dla otchylenia standardowego między 0.1 a 50.
+# między 50 a 150, dla odchylenia standardowego między 0.1 a 50.
 pars <- expand.grid(mu = seq(50, 150, length.out = 300), 
                     sigma = seq(0.1, 50, length.out = 300))
 
@@ -492,6 +492,6 @@ Im więcej mamy danych (obserwacji), tym mniej istotne staje się prawdopodobie�
 
 ## Podsumowanie
 
-W statystyce częstościowej dane są modelowane jako zmienne losowe, a parametry traktowane są jako stałe. W analizie staramy się oszacować najlepszą możliwą punktową wartość tego parametru. Jak zauważyliśmy, analiza Bayesowska zwraca nam rozkład prawdopodobieństwa parametru, którego szukamy. Rozkład reprezentuje nasz poziom pewności co do wartości parametru. W podejściu Bayesowskim, dane są stałe, a parmetry są zmiennymi losowymi. To znaczy, że szukane przez nas parametry reprezentujemy jako rozkład statystyczny, pod warunkiem zebranych przez nas danych. Gdy otrzymujemy nowe dane, możemy aktualizować naszą pewność co do prawdopodobieństwa konkretnych wartości parametrów. 
+W statystyce częstościowej dane są modelowane jako zmienne losowe, a parametry traktowane są jako stałe. W analizie staramy się oszacować najlepszą możliwą punktową wartość tego parametru. Jak zauważyliśmy, analiza Bayesowska zwraca nam rozkład prawdopodobieństwa parametru, którego szukamy. Rozkład reprezentuje nasz poziom pewności co do wartości parametru. W podejściu Bayesowskim dane są stałe, a parmetry są zmiennymi losowymi. To znaczy, że szukane przez nas parametry reprezentujemy jako rozkład statystyczny, pod warunkiem zebranych przez nas danych. Gdy otrzymujemy nowe dane, możemy aktualizować naszą pewność co do prawdopodobieństwa konkretnych wartości parametrów. 
 
 Mam nadzieję, że pokazanymi tu przykładami udało mi się pokazać na czym polega wnioskowanie Bayesowskie. W następnej części zajmiemy się budowaniem i estymowaniem modeli Bayesowskich. 
