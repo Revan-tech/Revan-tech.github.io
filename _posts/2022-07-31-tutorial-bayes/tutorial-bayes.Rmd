@@ -64,14 +64,16 @@ Wszystko to wygląda fajnie, ale już na tym etapie może budzić zamieszanie. C
 
 ### Twierdzenie Bayesa
 
-Prawdopodobieństwo zdarzenia $A$ w zależności zdarzenia B równa się prawdopodobieństwu wystąpienia zdarzeń $A$ i $B$ podzielonym na prawdopodobieństwo zdarzenia $B$: 
+Prawdopodobieństwo zdarzenia $A$ w zależności od zdarzenia B równa się prawdopodobieństwu wystąpienia zdarzeń $A$ i $B$ podzielonym na prawdopodobieństwo zdarzenia $B$: 
 
 $$P(A|B) = \frac{P(A \land B)}{P(B)}$$
 By obliczyć prawdopodobieństwo palenia papierosów pod warunkiem bycia mężczyzną musimy po prostu podzielić liczbę mężczyzn palących papierosy przez liczbę wszystkich mężczyzn. 
 
-Zauważmy, że powyższe równanie możemy przekształcić w następujący sposób:
+Zauważmy, że powyższe równanie możemy przekształcić. Najpierw pomnóżmy obie strony równania przez $P(B)$.
 
 $$  P(A|B)P(B) = {P(A \land B)}$$
+Teraz podzielmy obie strony przez $P(A)$.
+
 $$  \frac{P(A|B)P(B)}{P(A)} = \frac{P(A \land B)}{P(A)} = P(B|A)$$
 To co otrzymaliśmy, jest twierdzeniem Bayesa:
 
