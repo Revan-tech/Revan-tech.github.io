@@ -122,7 +122,7 @@ $$ P(A) = \int_{}P(A \land B)dB$$
 
 Czyli, by obliczyć intersujące nas prawdopodobieństwo musimy podstawić odpowiednie wartości do wzoru:
 
-$P(Choroba|Pozytywny) =\frac{P(Pozytywny|Choroba)P(Choroba)}{P(Pozytywny|Choroba)P(Choroba) + P(Pozytywny|\neg Choroba)P( \neg Choroba) }$
+$P(Choroba|Pozytywny) =\frac{P(Pozytywny|Choroba)P(Choroba)}{P(Pozytywny) = P(Pozytywny|Choroba)P(Choroba) + P(Pozytywny|\neg Choroba)P( \neg Choroba)}$
 
 Po podstawieniu do wzoru
 
@@ -137,7 +137,7 @@ Rozważmy teraz następujący problem. Mierzymy IQ 15 osób i chcemy się dowied
 
 ### Częstościowcy
 
-W statystyce klasycznej opieramy policzylibyśmy błąd standardowy i przedział ufności zgodnie z paradygmatem Null Hypothesis Significance Testing (NHST). Dla uwidocznienia różnic pomiędzy podejściem Bayesowskim a częstościowym przypominajmy sobie na jakich założeniach opiera się NHST. 
+W statystyce klasycznej policzylibyśmy błąd standardowy i przedział ufności zgodnie z paradygmatem Null Hypothesis Significance Testing (NHST). Dla uwidocznienia różnic pomiędzy podejściem Bayesowskim a częstościowym, przypominajmy sobie na jakich założeniach opiera się NHST. 
 
 Zgodnie z Centralnym Twierdzeniem Granicznym średnia niezależnych zmiennych losowych o takim samym rozkładzie dąży o rozkładu normalnego gdy liczba zmiennych dąży do nieskończoności. Średnia takiego rozkładu jest równa średniej w populacji, a jej wariancja wynosi $\frac{D^2}{n}$, gdzie $D^2$ to wariancja w populacji. Zwizualizujmy taki rozkład dla średnich z wielkości próby równej 15. Wiemy, że średnia IQ wynosi 100, a odchylenie standardowe 15. 
  
@@ -203,7 +203,7 @@ Zasadniczo, w idealnej sytuacji mamy 95% prawdopodobieństwo na wylosowanie taki
 
 No dobrze. Czas na Bayesowskie podejście do problemu. Chcemy obliczyć $P(Hipoteza|Dane)$. Co jest jednak naszą hipotezą? O ile w przypadku zmiennej binarnej jak choroba i jej brak jest to proste, tutaj nasza hipoteza dotyczy wartości średniej - wartość średniej jest raczej zmienną ciągłą, może być dowolna. Dlatego $P(Hipoteza|Dane)$ będzie rozkładem prawdopodobieństwa dla każdej możliwej wartości średniej. 
 
-Rozkład IQ jest, zgodnie z teorią, rozkładem normalnym. Dlatego $P(Dane|Hipoteza)$ możemy zamodelować jako prawdopodobieństwo otrzymania danych pod warunkiem określonych wartości średniej ($\mu$) i odchylenia standardowego ($\sigma$) rozkładu normalnego, które nazywamy parametrami. Gdy mamy dużo parametrów, zwykle dla wygody oznaczmy je literką $\theta$, która symbolizuje wektor parametrów. 
+Rozkład IQ jest, zgodnie z teorią, rozkładem normalnym. Dlatego $P(Dane|Hipoteza)$ możemy zamodelować jako prawdopodobieństwo otrzymania danych pod warunkiem określonych wartości średniej (krtórą oznaczymy jako $\mu$) i odchylenia standardowego (które oznaczymy jako $\sigma$) rozkładu normalnego, które nazywamy parametrami. Gdy mamy dużo parametrów, zwykle dla wygody oznaczmy je literką $\theta$, która symbolizuje wektor parametrów. 
 
 My jednak mamy tylko dwa parametry, więc nasze $P(Dane|Hipoteza)$ zapiszemy jako $P(y| \mu ,\sigma)$, które jest rozkładem prawdopodobieństwa, mówi nam jak prawdopodobne jest wylosowanie wartości $y$ z rozkładu normalnego $N(\mu,\sigma)$. Na przykłd, gęstość prawdopodobieństwa otrzymania wartości 6 z rozkładu $N(4,2)$ wynosi:
 
@@ -211,10 +211,10 @@ My jednak mamy tylko dwa parametry, więc nasze $P(Dane|Hipoteza)$ zapiszemy jak
 dnorm(6,4,2)
 ```
 
-Zauważmy, że chcemy by nasza funkcja wiarygodności dawała prawdopodobieństwo wszystkich danych jakie mamy. Ponieważ dane (obserwacje) które mamy są losowe i od siebie niezależne, prawdopodobieństwo ich wylosowania równa się ich iloczynowi:
+Zauważmy, że chcemy by nasza funkcja wiarygodności dawała prawdopodobieństwo wszystkich danych jakie mamy. Ponieważ dane (obserwacje), które mamy są losowe i od siebie niezależne, prawdopodobieństwo ich wylosowania równa się ich iloczynowi:
 
 $$P(A \land B) = P(A)P(B)$$
-Czyli prawdopodobieństwo wylosowania całego zbioru danych z rozkładu o określonych parametrach będzie iloczynem prawdopodobieństwa wylosowania każdej obserwacji z osobna: 
+Czyli, prawdopodobieństwo wylosowania całego zbioru danych z rozkładu o określonych parametrach będzie iloczynem prawdopodobieństwa wylosowania każdej obserwacji z osobna: 
 
 $$P(y|\mu,\sigma) = \prod_{i=1}^{n}P(y_i|\mu,\sigma) = P(y_1|\mu,\sigma)*P(y_2|\mu,\sigma)...P(y_n|\mu,\sigma)$$.
 
@@ -241,7 +241,7 @@ Teraz możemy policzyć nasze szukany rozkład prawdopodobieństwa $P(\mu ,\sigm
 
 By obliczyć nasze rozwiązanie, też posłużymy się metodą numeryczną. Będzie ona bardzo prosta, co pozwoli prześledzić dokładnie jak wykonywane są obliczenia, jednak w praktyce stosuje się trochę bardziej skomplikowane metody, które omówimy w następnych częściach tutorialu. 
 
-Równania wyglądają czasami bardzo abstrakcyjnie, zwłaszcza jeśli nie można sobie dokładnie wyobrazić "rzeczy", którą dane równanie reprezentuje. Kod przydaje się w takich momentach. Po każdej wykonanej linijce można sprawdzić co nam wyszło i powiązać to z matematycznym zapisem. 
+Równania wyglądają czasami bardzo abstrakcyjnie, zwłaszcza jeśli nie można sobie dokładnie wyobrazić tego co reprezentują. Kod przydaje się w takich momentach. Po każdej wykonanej linijce można sprawdzić co nam wyszło i powiązać to z matematycznym zapisem. 
 
 
 ```{r, layout="l-body-outset"}
