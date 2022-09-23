@@ -21,8 +21,6 @@ categories:
 csl: apa.csl
 ---
 
-<h1><span style="color:red">Post w budowie</span></h1>
-
 
 ## Mały wstęp
 
@@ -344,7 +342,7 @@ Potrzebujemy jeszcze prawdopodobieństwa *a priori* $P(p)$. Zauważmy, że ponie
 <br>
 Rozkład Beta to rozkład prawdopodobieństwa, którego nośnik (przedział dla którego funkcja zwraca wartości większe od 0) to <0,1>. Rozkład ma dwa parametry kształtu $\alpha$ i $\beta$. Dany jest wzorem:
 <br>
-$$ P(x)  =  \frac{x^{\alpha-1}(1-x)^{\beta-1}}{Beta(\alpha,\beta)}$$
+$$ P(x)  =  \frac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)}$$
 W mianowniku mamy funkcję Beta. Dla wygody zapisuje się jako $B(\alpha,\beta)$.
 <br>
 Wartość oczekiwana rozkładu Beta to:
@@ -457,7 +455,12 @@ ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
 
 ```
 
-Czarna linia to wykres *a priori*. Symbolizuje naszą wiedzę na początku, jak prawdopodobne jest wybranie losowej książki o danej ocenie. Pozostałem linie pokazują jak zmieniły się nasze przekonania w stosunku do konkretnych książek po zobaczeniu ich oceny. By otrzymać bayesowskie estymaty $p$ dla każdej z książek, policzmy sobie średnie rozkładów *post priori*.
+Czarna linia to wykres *a priori*. Symbolizuje naszą wiedzę na początku, jak prawdopodobne jest wybranie losowej książki o danej ocenie. Pozostałem linie pokazują jak zmieniły się nasze przekonania w stosunku do konkretnych książek po zobaczeniu ich oceny. 
+
+Mamy rozkłady, ale chcemy podjąć decyzję, a do tego potrzebujemy mieć punktowe estymaty $p$. Możemy ją otrzymać na kilka sposobów. Możemy wziąć takie $p$, które ma największe prawdopodobieństwo. Inną popularną estymatą jest średnia, ponieważ minimalizuje ona kwadratową funkcję błędu $l(p, \bar{p}) = (p - \bar{p})^2$. Ponadto gdy nasz rozkład *post priori* jest symetryczny, obie te wartości są równe. 
+
+
+Policzmy sobie średnie rozkładów *post priori*.
 
 $$E(A_p) = 0.6$$
 $$E(B_p) = 0.64$$

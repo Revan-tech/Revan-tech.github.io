@@ -1,0 +1,64 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+
+## Porównanie modeli
+
+
+Rozważmy teraz następujący problem. Mamy dane z populacji przed i po interwencji. Chcemy dowiedzieć się czy średnie ineresującej nas miary są takie same w obu przypadkach. W częstociowym podejściu prawdopodbnie wykonalibyśmy t-test. T-test opiera się na założeniach podobnych do opisanych wcześniej. Mianowicie tworzymy statystykę będącą różnicą średnich w obu warunkach i sprawdzamy czy owa statystyka jest istotnie różna od 0. Jeśli otrzymane p-value jest mniejsze niż 0.05 uznajemy, że średnie w warunkach istotnie się różnią. 
+
+Zobaczmy taki przykład.
+
+```{r}
+set.seed(1)
+y1 = rnorm(15,6,3)
+y2 = rnorm(15,5,3)
+
+t.test(y1,y2, paired = T)
+```
+
+
+Co w takiej sytuacji? Konstrukcja statystyk częstościowych opiera się na testowaniu hipotezy zerowej. Hipotezą zerową w tym przypadku jest że różnica średnich pochodzi z rozkładu normalnego o średniej 0. Jest to model, który tesujemy. Im mniejsze p-value, tym bardziej otrzymane dane nie pasują to tego madelu. Jeśli jednak p-value jest większe niż 0.05 nie oznacza to, że ten model jest **bardziej prawdopodobny** niż inne. Innymi słowy ten rodzaj testowania może nam jedynie powiedzieć o występowaniu różnicy. 
+
+W naszym przykłądzie, mimo że próby zostały wylosowane z rozkładów o innych średnich, te z próby nie różnią się statystycznie. Przypomnijmy sobie, że wielkość przedziału ufności dla testu zależy od wariancji i wielkości próby. Gdyby NHST pozwalało nam orzekać o równości średnich, udowodnienie takiej hipotezy byłoby niezwykle łatwe.
+
+Na przykład. załóżmy, że chcemy sprawdzić czy nowylek nie różni się skutecznością od leku będącego już na rynku. Wystarczyłoby manipulować wielkoscią próby, by otrzymać efekt o braku istotnej różnicy pomiędzy wpływem tych dwóch leków!
+
+Chcielibyśmy móc orzec, który z modeli (hiptez) jest bardziej prawdopodobny. Podejście bayesowskie daje nam taką możliwość. 
+
+
+### Czynnik Bayesowski
+
+W poprzednim przykładzie sprawdzaliśmy jak bardzo jest prawopodobne są wartości parametrów pod warunkiem naszych danych. Parametry zwykle oznaczamy w podejściu bayesowskim grecką literą $\theta$, która oznacza wektor parametrów występujących w modelu. Tym razem jednak nie chcemy orzekać o prawdopodbieństwie parametrów, ale o prawdopodbieństwie danych otrzymanych z modelu $P(D|M)$ Czym jest model? **Najprościej mówiąc model jest zbiorem ograniczeń, który nakładamy na proces generujący dane.** Na przykład mogą być to dwa różne modele regresji z innymi predyktorami. Chcielibyśmy porównać dwa modele by sprawdzić, który z większym prawdopodobieństwem wyprodukował nasze dane. Miarą, której do tego używamy nazywamy Czynnikiem Bayesowskim:
+
+$$ BF_{12} = \frac{P(D|M_1)}{P(D|M_2)}$$
+Innymi słowy $BF$ mówi nam jak bardzo $M_1$ jest bardziej/mniej prawdopodobny od $M_2$. Wzór w tej konwencji jest identyczny do miary stosowanej także w statystyce częstościowej - stosunku wiarygodności. 
+
+Zatrzymajmy się przy nim na chwilę i powiedzmy na przykład, że chcemy porównać prawdopodobieństwo, że rozkład różnic przed i po interwencji z powyższego przykładu pochodzi z rozkładu normalnego o średniej 0, do modelu w którym pochodzą z rozkładu o średniej 5.   
+
+```{r}
+prod(dnorm(y1 - y2,0,sd(y1-y2)))/prod(dnorm(y1 - y2,5,sd(y1-y2)))
+```
+
+Jak widzidimy prawdopodobnieństwo, że dane pochodzą z rozkładu o średniej 0 jest około 1500 razy bardziej prawdopodobne, że pochodzą z rozkładu o średniej 5. 
+
+Co może być nieco tricky, czynnik bayesowski oblicza się w inny sposób w statystyce bayesowskiej. $P(D|M)$ oznacza prawdopodbieństwo danych pod warunkiem modelu dla wszystkich możliwych wartości parametrów:
+
+$$P(D|M) = \int_{}P(D|\theta,M)P(\theta|M)d\theta$$
+
+Co to znaczy dla wszystkich możliwych parametrów? Załóżmy, że mamy dwa modele regresji liniowej, różniące się tym, że jeden ma dodatkowy predyktor. Tak jak pisałem wcześniej w statystyce bayesowksiej nie otrzymamy punktowych estymat parametrów $\theta$, ale ich rozkłady $P(\theta|y)$. Ponieważ jednak, chcemy otrzymać jedną wartość - prawdopodobieństwo naszego modelu, musimy "całkować" po parametrach.  
+
+Teraz rozpiszmy sobie wzór na czynnik bayesowski:
+
+$$ \frac{P(D|M_1)}{P(D|M_2)} = \frac{\int_{}P(D|\theta,M_1)P(\theta|M_1)d\theta}{\int_{}P(D|\theta,M_2)P(\theta|M_2)d\theta} = \frac{P(M_1|D)P(M_2)}{P(M_2|D)P(M_1)}$$
+
+Jeśli kogoś interesuje jak otrzymaliśmy ostatni człon, tutaj to wyjaśniam. Dla tych, którzy są skłonni uwierzyć mi na słowo, przejdę dalej. Zauważmy, że ostatnia forma jest stosunkiem przekonań *post priori* do przekonań *a priori*.  
+
+$$ \frac{P(M_1|D)P(M_2)}{P(M_2|D)P(M_1)} = \frac{P(M_1|D)}{P(M_2|D)}:\frac{P(M_1)}{P(M_2)}$$
+
+Oznacza to, **że czynnik bayesowski mówi nam jak dane zmieniły nasze początkowe przekonania**.  No dobrze, ale skoro ten wzór przedstawia nam to samo, to po co go wprowadzam? Otóż wynika to z filozofii bayesowskiej. To, że prawdopodobieństwo *a priori* jest określane jako wcześniejsza wiedza, jest założeniem. Gdyby istniało jakieś obiektywne $P(M)$ te wzory były by sobie równoważne. W praktyce $P(M)$ ustalane jest przez badacza.
+
+Problem w tym podejściu jest obliczenie skomplikowanych całek. O ile istnieją rozwiązania analityczne dla prostych modeli, wiele z nich trzeba przybliżać numerycznie. Dlatego jak to zrobić, opowiemy sobie w II części tutorialu.
+

@@ -1507,9 +1507,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 </nav>
 </div>
-<h1>
-<span style="color:red">Post w budowie</span>
-</h1>
 <h2 id="mały-wstęp">Mały wstęp</h2>
 <p>Pomyślałem sobie, że napiszę taki mały tutorial statystyki Bayesowskiej.</p>
 <p>Próba wytłumaczenie czegoś komuś jest jedną z najlepszych metod nauki i weryfikacji swojej własnej wiedzy. W przeciwieństwie do rozważań we własnym umyśle, gdy tłumaczy się innym jakieś zagadnienie, nie można nie odpowiedzieć na pewne pytania, czy niektóre rzeczy zgrabnie pominąć :)</p>
@@ -1724,7 +1721,7 @@ padding: 15px 60px;
 <p>Potrzebujemy jeszcze prawdopodobieństwa <em>a priori</em> <span class="math inline">\(P(p)\)</span>. Zauważmy, że ponieważ szukane przez nas <span class="math inline">\(p\)</span> jest prawdopodobieństwem, może przyjmować dowolne wartości z przedziału &lt;0,1&gt;. Do modelowania prawdopodobieństwa prawdopodobieństwa często wykorzystuje się rozkład Beta.</p>
 <br>
 <p class="comment">
-<strong>Rozkład Beta</strong> <br> <br> Rozkład Beta to rozkład prawdopodobieństwa, którego nośnik (przedział dla którego funkcja zwraca wartości większe od 0) to &lt;0,1&gt;. Rozkład ma dwa parametry kształtu <span class="math inline">\(\alpha\)</span> i <span class="math inline">\(\beta\)</span>. Dany jest wzorem: <br> <span class="math display">\[ P(x)  =  \frac{x^{\alpha-1}(1-x)^{\beta-1}}{Beta(\alpha,\beta)}\]</span> W mianowniku mamy funkcję Beta. Dla wygody zapisuje się jako <span class="math inline">\(B(\alpha,\beta)\)</span>. <br> Wartość oczekiwana rozkładu Beta to: <span class="math display">\[E(x) = \frac{\alpha}{\alpha+ \beta}\]</span> <br> Na wykresie kształt rozkładu dla różnej wartości parametrów. <br> <br> <img src="Beta.png" alt="Beta" />
+<strong>Rozkład Beta</strong> <br> <br> Rozkład Beta to rozkład prawdopodobieństwa, którego nośnik (przedział dla którego funkcja zwraca wartości większe od 0) to &lt;0,1&gt;. Rozkład ma dwa parametry kształtu <span class="math inline">\(\alpha\)</span> i <span class="math inline">\(\beta\)</span>. Dany jest wzorem: <br> <span class="math display">\[ P(x)  =  \frac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)}\]</span> W mianowniku mamy funkcję Beta. Dla wygody zapisuje się jako <span class="math inline">\(B(\alpha,\beta)\)</span>. <br> Wartość oczekiwana rozkładu Beta to: <span class="math display">\[E(x) = \frac{\alpha}{\alpha+ \beta}\]</span> <br> Na wykresie kształt rozkładu dla różnej wartości parametrów. <br> <br> <img src="Beta.png" alt="Beta" />
 </p>
 <p><br></p>
 <p>A więc <span class="math inline">\(P(p)\)</span> możemy zamodelować rozkładem Beta.</p>
@@ -1803,7 +1800,9 @@ padding: 15px 60px;
 </div>
 <p><img src="tutorial-bayes_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
 </div>
-<p>Czarna linia to wykres <em>a priori</em>. Symbolizuje naszą wiedzę na początku, jak prawdopodobne jest wybranie losowej książki o danej ocenie. Pozostałem linie pokazują jak zmieniły się nasze przekonania w stosunku do konkretnych książek po zobaczeniu ich oceny. By otrzymać bayesowskie estymaty <span class="math inline">\(p\)</span> dla każdej z książek, policzmy sobie średnie rozkładów <em>post priori</em>.</p>
+<p>Czarna linia to wykres <em>a priori</em>. Symbolizuje naszą wiedzę na początku, jak prawdopodobne jest wybranie losowej książki o danej ocenie. Pozostałem linie pokazują jak zmieniły się nasze przekonania w stosunku do konkretnych książek po zobaczeniu ich oceny.</p>
+<p>Mamy rozkłady, ale chcemy podjąć decyzję, a do tego potrzebujemy mieć punktowe estymaty <span class="math inline">\(p\)</span>. Możemy ją otrzymać na kilka sposobów. Możemy wziąć takie <span class="math inline">\(p\)</span>, które ma największe prawdopodobieństwo. Inną popularną estymatą jest średnia, ponieważ minimalizuje ona kwadratową funkcję błędu <span class="math inline">\(l(p, \bar{p}) = (p - \bar{p})^2\)</span>. Ponadto gdy nasz rozkład <em>post priori</em> jest symetryczny, obie te wartości są równe.</p>
+<p>Policzmy sobie średnie rozkładów <em>post priori</em>.</p>
 <p><span class="math display">\[E(A_p) = 0.6\]</span> <span class="math display">\[E(B_p) = 0.64\]</span> <span class="math display">\[E(C_p) = 0.58\]</span></p>
 <p>Jak widzimy, książka B ma największe prawdopodobieństwo bycia najlepszą książką. Co tu się właściwie zadziało? Wszystkie prawdopodobieństwa są mniejsze, niż gdybyśmy wzięli po prostu częstościową estymatę <span class="math inline">\(\frac{k}{n}\)</span>.</p>
 <p>Estymata bayesowska oceny jest mniejsza od częstościowego odpowiednika dla każdej z książek. Dzieje się tak dlatego, że rozkład <em>a priori</em> wskazuje, że prawdopodobieństwa bliższe 0.5 - średniej rozkładu <em>a priori</em> są bardziej prawdopodobne i “ściąga” rozkłady <em>post priori</em> w swoją stronę. Jednocześnie bayesowska ocena książki C najmniej się różni od estymaty częstościowej, dlatego, że ocena książki C składa się z największej ilości głosów (obserwacji).</p>
