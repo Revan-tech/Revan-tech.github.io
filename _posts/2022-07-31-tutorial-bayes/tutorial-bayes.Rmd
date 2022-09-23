@@ -150,7 +150,7 @@ stat_function(fun = dnorm,n = 1000, args = list(mean = 100, sd = 15/sqrt(15)),ge
   group = after_scale(fill))) +
   geom_vline(xintercept = c(100 - 15/sqrt(15)*qnorm(.975), 100 + 15/sqrt(15)*qnorm(.975))) +
   labs(x = "Mean IQ", y = "Density") +
-  scale_fill_discrete(name = "P(X < x)", labels = c('0.025', '0.2', '0.5', '0.8',              '0.975','1'))
+  scale_fill_discrete(name = "P(X < x)", labels = c('0.025', '0.2', '0.5', '0.8', '0.975','1'))
 ```
 
 Stworzyliśmy w ten sposób estymowany rozkład wszystkich możliwych średnich IQ z piętnastoosobowych prób. Ten rozkład mówi nam, że losując 15 osobową próbę mamy 95% prawdopodobieństwo na wylosowanie takiej próby, w której średnie IQ znajdzie się w przedziale ufności oznaczonym przez czarne pionowe kreski na wykresie. 95% jest tu wartością umowną, badacz może przyjąć dowolny poziom ufności. 
@@ -457,7 +457,7 @@ ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
 
 Czarna linia to wykres *a priori*. Symbolizuje naszą wiedzę na początku, jak prawdopodobne jest wybranie losowej książki o danej ocenie. Pozostałem linie pokazują jak zmieniły się nasze przekonania w stosunku do konkretnych książek po zobaczeniu ich oceny. 
 
-Mamy rozkłady, ale chcemy podjąć decyzję, a do tego potrzebujemy mieć punktowe estymaty $p$. Możemy ją otrzymać na kilka sposobów. Możemy wziąć takie $p$, które ma największe prawdopodobieństwo. Inną popularną estymatą jest średnia, ponieważ minimalizuje ona kwadratową funkcję błędu $l(p, \bar{p}) = (p - \bar{p})^2$. Ponadto gdy nasz rozkład *post priori* jest symetryczny, obie te wartości są równe. 
+Mamy rozkłady, ale chcemy podjąć decyzję, a do tego potrzebujemy mieć punktowe estymaty $p$. Możemy ją otrzymać na kilka sposobów. Możemy wziąć takie $p$, które ma największe prawdopodobieństwo. Inną popularną estymatą jest średnia, ponieważ minimalizuje ona kwadratową funkcję błędu $l(p, \hat{p}) = (p - \hat{p})^2$. Ponadto gdy nasz rozkład *post priori* jest symetryczny, obie te wartości są równe. 
 
 
 Policzmy sobie średnie rozkładów *post priori*.
