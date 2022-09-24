@@ -460,7 +460,7 @@ ggplot(data = data.frame(x = 0), mapping = aes(x = x)) +
 
 Czarna linia to wykres *a priori*. Symbolizuje naszą wiedzę na początku, jak prawdopodobne jest wybranie losowej książki o danej ocenie. Pozostałem linie pokazują jak zmieniły się nasze przekonania w stosunku do konkretnych książek po zobaczeniu ich oceny. 
 
-Mamy rozkłady, ale chcemy podjąć decyzję, a do tego potrzebujemy mieć punktowe estymaty $p$. Możemy ją otrzymać na kilka sposobów. Możemy wziąć takie $p$, które ma największe prawdopodobieństwo. Inną popularną estymatą jest średnia, ponieważ minimalizuje ona kwadratową funkcję błędu $l(p, \hat{p}) = (p - \hat{p})^2$. Ponadto gdy nasz rozkład *post priori* jest symetryczny, obie te wartości są równe. 
+Mamy rozkłady, ale chcemy podjąć decyzję, a do tego potrzebujemy mieć punktowe estymaty $p$. Możemy ją otrzymać na kilka sposobów. Możemy wziąć takie $p$, które ma największe prawdopodobieństwo. Inną popularną estymatą jest średnia, ponieważ minimalizuje ona kwadratową funkcję błędu $l(p, \hat{p}) = E((p - \hat{p})^2)$. Ponadto gdy nasz rozkład *post priori* jest symetryczny, obie te wartości są równe. 
 
 
 Policzmy sobie średnie rozkładów *post priori*.
