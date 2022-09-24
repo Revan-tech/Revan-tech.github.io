@@ -34,7 +34,7 @@ Osobiście preferuję używanie języków programowania i obliczenia w tym tekś
 
 I jeszcze kilka słów wstępu o samej statystyce bayesowskiej. Istnieje obiegowa opinia, że statystyka Bayesowska jest trudniejsza od klasycznej. Osobiście wydaje mi się, że "prostota" klasycznej statystyki wynika z jej dogmatyzmu. Istnieją instrukcje na zastosowanie odpowiednich testów do danych, utarły się schematy, do których należy się stosować, mimo, że czasami są arbitralne. Statystyka Bayesowska wymaga więcej namysłu od badacza, ponieważ nie istnieją tak ostre „reguły kciuka” jak w statystyce klasycznej. 
 
-O statystyce bayesowskiej mówiło się ostatnio, jako rozwiązaniu kryzysu replikacyjnego. Mam pewną obawę, że statystyka bayesowska może tak samo popaść w dogmatyzm, jeśli potraktuje się ją mechanicznie jak klasyczną statystykę. Nie jestem twardym Bayesowcem, to znaczy nie uważam, że należy porzucić statystykę częstościową (tą zwykłą) na rzecz Bayesowskiej. Obie mają pewne zalety i wady. Powtarzam za Kevinem Rosem, że dobry współczesny statystyk korzysta z każdego z podejść w zależności od potrzeb.
+O statystyce bayesowskiej mówiło się ostatnio, jako rozwiązaniu kryzysu replikacyjnego. Mam pewną obawę, że statystyka bayesowska może tak samo popaść w dogmatyzm, jeśli potraktuje się ją mechanicznie jak klasyczną statystykę. Nie jestem twardym Bayesowcem, to znaczy nie uważam, że należy porzucić statystykę częstościową (tą zwykłą) na rzecz Bayesowskiej. Obie mają pewne zalety i wady. Podzielam zdanie Kevina Rosa, że dobry współczesny statystyk korzysta z każdego z podejść w zależności od potrzeb.
 
 ## Prawdopodobieństwo
 
@@ -293,6 +293,7 @@ boundary_2 = mu$mu[which(cs >= 0.975)[1]]
 ggplot(mu, aes(x = mu,y = probability))+
   geom_line(colour = 'light blue') +
   xlim(92,111) +
+  ylab("Density") +
   geom_area(alpha = 0.75, fill = 'light blue') +
   geom_vline(xintercept = c(boundary_1, boundary_2))
 
@@ -388,7 +389,9 @@ Fantastycznie. Mamy wszystko czego potrzebujemy by obliczyć nasz rozkład:
 $$P(p|k,n) = \frac{P(k,n|p)P(p)}{P(k,n)} $$
 Zdradzę wam teraz, że rozwiązaniem jest takie, że $P(p|k,n)$ jest rozkładem Beta o parametrach $\alpha = \alpha_0 + k$ i $\beta = \beta_0 + n - k$, gdzie $\alpha_0$ i $\beta_0$ to parametry rozkładu *a priori*. 
 
-Analityczną forma $P(p|k,n)$ istnieje. Rozkład Beta jest **zgodnym rozkładem *a priori* ** (*conjugate prior*) dla rozkładu dwumianowego. To znaczy, że w tym wypadku nie musimy przybliżać rozwiązania metodami numerycznymi, ale możemy je wprost obliczyć. 
+Analityczną forma $P(p|k,n)$ istnieje. Rozkład Beta jest **zgodnym rozkładem *a priori* ** (*conjugate prior*) dla rozkładu dwumianowego. To znaczy, że w tym wypadku nie musimy przybliżać rozwiązania metodami numerycznymi, ale możemy je wprost obliczyć.
+
+W tym wypadku rozkład *post priori* jest także rozkładem Beta, o parametrach kształtu $\alpha = \alpha_0 + k$ i $\beta = \beta_0 + n - k$, gdzie $\alpha_0$ i $\beta_0$ są parametrami rozkładu *a priori*. 
 
 Jeśli kogoś interesują obliczenia, które nie są trudne, a mogą pomóc zrozumieć jak rozkłady *a priori*, *post priori* i wiarygodność są powiązane, zapraszam do rozwinięcia tekstu poniżej. 
 
@@ -405,7 +408,7 @@ $$P(p|k,n) =\frac{{{n}\choose{k}} \cdot p^k(1-p)^{n-k} \frac{p^{\alpha-1}(1-p)^{
 $$P(p|k,n) = C*p^k(1-p)^{n-k}p^{\alpha-1}(1-p)^{\beta-1} = C* p^{\alpha-1 +k}(1-p)^{\beta-1 + n - k}$$
 Gdzie:
 
-$$ C = \frac{{{n}\choose{k}}}{B(\alpha,\beta)\int{{n}\choose{k}} \cdot p^k(1-p)^{n-k} \frac{p^{\alpha-1}(1-p)^{\beta-1}}{Beta(\alpha,\beta)}dp} $$
+$$ C = \frac{{{n}\choose{k}}}{B(\alpha,\beta)\int{{n}\choose{k}} \cdot p^k(1-p)^{n-k} \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)}dp} $$
 
 No dobra, teraz mała sztuczka. Przyjmijmy, że $\alpha = \alpha_0 +k$ i $\beta = \beta_0 + n - k$, gdzie $\alpha_0$ i $\beta_0$ to parametry rozkładu *a priori*. Zauważmy, że ponieważ $C$ nie zależy od $p$, to jest jakąś wartością stałą, skalującą rozkład. 
 
@@ -419,7 +422,7 @@ Nasz rozkład jest proporcjonalny do rozkładu Beta. A ponieważ nasz $P(p|k,n)$
 
 $$ C = \frac{1}{B(\alpha,\beta)}$$
 
-Czyli nasz rozkład *a posteriori* $P(p,|k,n)$ jest rozkładem Beta o parametrach $\alpha = \alpha_0 + k$ i $\beta = \beta_0 + n - k$.
+Nasz rozkład *a posteriori* $P(p,|k,n)$ jest rozkładem Beta o parametrach $\alpha = \alpha_0 + k$ i $\beta = \beta_0 + n - k$.
 
 ---
 
