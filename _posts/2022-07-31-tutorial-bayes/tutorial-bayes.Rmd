@@ -1,7 +1,7 @@
 ---
 title: "Tutorial statystyki Bayesowskiej"
 description: |
-  Częśc I: Nabywanie intuicji. 
+  Częśc I: Nabywanie intuicji
 preview: "Statystyczne_Dygresje2.jpg"
 author:
   - name: Szymon Mąka
@@ -193,7 +193,7 @@ Jaką daje nam to pewność co do naszego pomiaru? Na ile możemy być pewni, ż
 
 NHST historycznie powstała do stosowania w warunkach przemysłowych, gdzie wykonujemy bardzo wiele identycznych badań, na przykład w kontroli jakości produktów. Na przykład, w Ikei produkowany jest pewien element do konstrukcji szafek. Każdy kolejny wyprodukowany egzemplarz tego elementu różni się odrobinę w długości od schematu, ale dobrze skalibrowana maszyna przycinająca elementy działa tak, że te różnice nie są na tyle duże by element nie pasował do szafki.
 
-Osoba odpowiedzialna za kontrolę jakości regularnie wykonuje pomiary długości $n$ elementów każdego, by sprawdzić czy średnia długość elementów nie wykracza założonego przedziału bezpiecznej różnicy w długości. Obliczył sobie ile elementów musi zmierzyć dziennie, by przedział ufności pokrywał się z tą bezpieczną różnicą przy ustalonym poziomie ufności 90%. Jeśli maszyna będzie działać poprawnie, kontroler otrzyma średnio 1 fałszywy alarm na 10 dni. 
+Osoba odpowiedzialna za kontrolę jakości regularnie wykonuje pomiary długości $n$ elementów każdego dnia, by sprawdzić czy średnia długość elementów nie wykracza założonego przedziału bezpiecznej różnicy w długości. Obliczył sobie ile elementów musi zmierzyć dziennie, by przedział ufności pokrywał się z tą bezpieczną różnicą przy ustalonym poziomie ufności 90%. Jeśli maszyna będzie działać poprawnie, kontroler otrzyma średnio 1 fałszywy alarm na 10 dni. 
 
 Zasadniczo, w idealnej sytuacji mamy $1-\alpha$ prawdopodobieństwo na wylosowanie takiej próby,  której przedział ufności będzie zawierał prawdziwą średnią. Często spotykane, choć nie do końca zasadne, jest twierdzenie, w danej próbie istnieje prawdopodobieństwo równe $1-\alpha$, że w przedziale zawiera się średnia. Takie prawdopodbieństwo mamy przed wylosowaniem próby, gdy już ją mamy, nie wiemy co wylosowaliśmy.  
 
@@ -390,8 +390,6 @@ $$P(p|k,n) = \frac{P(k,n|p)P(p)}{P(k,n)} $$
 Zdradzę wam teraz, że rozwiązaniem jest takie, że $P(p|k,n)$ jest rozkładem Beta o parametrach $\alpha = \alpha_0 + k$ i $\beta = \beta_0 + n - k$, gdzie $\alpha_0$ i $\beta_0$ to parametry rozkładu *a priori*. 
 
 Analityczną forma $P(p|k,n)$ istnieje. Rozkład Beta jest **zgodnym rozkładem *a priori* ** (*conjugate prior*) dla rozkładu dwumianowego. To znaczy, że w tym wypadku nie musimy przybliżać rozwiązania metodami numerycznymi, ale możemy je wprost obliczyć.
-
-W tym wypadku rozkład *post priori* jest także rozkładem Beta, o parametrach kształtu $\alpha = \alpha_0 + k$ i $\beta = \beta_0 + n - k$, gdzie $\alpha_0$ i $\beta_0$ są parametrami rozkładu *a priori*. 
 
 Jeśli kogoś interesują obliczenia, które nie są trudne, a mogą pomóc zrozumieć jak rozkłady *a priori*, *post priori* i wiarygodność są powiązane, zapraszam do rozwinięcia tekstu poniżej. 
 
