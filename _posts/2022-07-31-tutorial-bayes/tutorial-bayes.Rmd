@@ -153,7 +153,7 @@ stat_function(fun = dnorm,n = 1000, args = list(mean = 100, sd = 15/sqrt(15)),ge
   scale_fill_discrete(name = "P(X < x)", labels = c('0.025', '0.2', '0.5', '0.8', '0.975','1'))
 ```
 
-Stworzyliśmy w ten sposób estymowany rozkład wszystkich możliwych średnich IQ z piętnastoosobowych prób. Ten rozkład mówi nam, że losując 15 osobową próbę mamy 95% prawdopodobieństwo na wylosowanie takiej próby, w której średnie IQ znajdzie się w przedziale ufności oznaczonym przez czarne pionowe kreski na wykresie. 95% jest tu wartością umowną, badacz może przyjąć dowolny poziom ufności. 
+Stworzyliśmy w ten sposób estymowany rozkład wszystkich możliwych średnich IQ z piętnastoosobowych prób. Ten rozkład mówi nam, że losując 15 osobową próbę mamy 95% prawdopodobieństwo na wylosowanie takiej próby, w której średnie IQ znajdzie się w przedziale ufności oznaczonym przez czarne pionowe kreski na wykresie. 95% jest tu wartością umowną, badacz może przyjąć dowolny poziom ufności (Poziom ufności to $1-\alpha$, gdzie $\alpha$ to prawdopodbieństwo błędu I rodzaju). 
 
 Zwykle gdy dokonujemy pomiaru, nie znamy średniej i wariancji i dopiero estymujemy je z naszej próby. Jeśli będziemy wielokrotnie wykonywać pomiar i wyznaczać przedziały ufności, możemy spodziewać się, że w 95% w przedziałach ufności z prób znajdzie się prawdziwa wartość średniej IQ. 
 
@@ -195,7 +195,7 @@ NHST historycznie powstała do stosowania w warunkach przemysłowych, gdzie wyko
 
 Osoba odpowiedzialna za kontrolę jakości regularnie wykonuje pomiary długości $n$ elementów każdego, by sprawdzić czy średnia długość elementów nie wykracza założonego przedziału bezpiecznej różnicy w długości. Obliczył sobie ile elementów musi zmierzyć dziennie, by przedział ufności pokrywał się z tą bezpieczną różnicą przy ustalonym poziomie ufności 90%. Jeśli maszyna będzie działać poprawnie, kontroler otrzyma średnio 1 fałszywy alarm na 10 dni. 
 
-Zasadniczo, w idealnej sytuacji mamy 95% prawdopodobieństwo na wylosowanie takiej próby,  której przedział ufności będzie zawierał prawdziwą średnią. Często spotykane, choć nie do końca zasadne, jest twierdzenie, w danej próbie istnieje 95% prawdopodobieństwo, że w przedziale zawiera się średnia. 95% prawdopodobieństwo mamy przed wylosowaniem próby, gdy już ją mamy, nie wiemy co wylosowaliśmy.  
+Zasadniczo, w idealnej sytuacji mamy $1-\alpha$ prawdopodobieństwo na wylosowanie takiej próby,  której przedział ufności będzie zawierał prawdziwą średnią. Często spotykane, choć nie do końca zasadne, jest twierdzenie, w danej próbie istnieje prawdopodobieństwo równe $1-\alpha$, że w przedziale zawiera się średnia. Takie prawdopodbieństwo mamy przed wylosowaniem próby, gdy już ją mamy, nie wiemy co wylosowaliśmy.  
 
 ### Bayesowcy
 
@@ -408,7 +408,7 @@ $$P(p|k,n) =\frac{{{n}\choose{k}} \cdot p^k(1-p)^{n-k} \frac{p^{\alpha-1}(1-p)^{
 $$P(p|k,n) = C*p^k(1-p)^{n-k}p^{\alpha-1}(1-p)^{\beta-1} = C* p^{\alpha-1 +k}(1-p)^{\beta-1 + n - k}$$
 Gdzie:
 
-$$ C = \frac{{{n}\choose{k}}}{B(\alpha,\beta)\int{{n}\choose{k}} \cdot p^k(1-p)^{n-k} \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)}dp} $$
+$$ C = \frac{{{n}\choose{k}}\frac{1}{B(\alpha,\beta)}}{\int{{n}\choose{k}} \cdot p^k(1-p)^{n-k} \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)}dp} $$
 
 No dobra, teraz mała sztuczka. Przyjmijmy, że $\alpha = \alpha_0 +k$ i $\beta = \beta_0 + n - k$, gdzie $\alpha_0$ i $\beta_0$ to parametry rozkładu *a priori*. Zauważmy, że ponieważ $C$ nie zależy od $p$, to jest jakąś wartością stałą, skalującą rozkład. 
 
