@@ -43,7 +43,7 @@ Wszyscy intuicyjnie czujemy czym jest prawdopodobieństwo. Jeśli chcemy sprawdz
 
 $$ \lim_{n\to\infty} P(A) = \frac{k_n(A)}{n} $$
 
-gdzie $k_n$ to liczba zdarzeń sprzyjających zdażeniu $A$ a $n$ to liczba prób. Słownie możemy przedstawić to założenie tak: Gdy liczba prób dąży do nieskończoności, częstość wystąpień zdarzeń $A$ pośród wszystkich prób będzie się równało prawdopodobieństwu wystąpienia zdarzenia $A$. Innymi słowy im więcej razy rzucimy monetą, tym większe mamy szanse na otrzymanie takiego stosunku reszek do orłów, który jest bliski prawdziwemu prawdopodobieństwu otrzymania reszki. 
+gdzie $k_n(A)$ to liczba zdarzeń sprzyjających zdażeniu $A$ a $n$ to liczba prób. Słownie możemy przedstawić to założenie tak: Gdy liczba prób dąży do nieskończoności, częstość wystąpień zdarzeń $A$ pośród wszystkich prób będzie się równało prawdopodobieństwu wystąpienia zdarzenia $A$. Innymi słowy im więcej razy rzucimy monetą, tym większe mamy szanse na otrzymanie takiego stosunku reszek do orłów, który jest bliski prawdziwemu prawdopodobieństwu otrzymania reszki. 
 
 W statystyce Bayesowkiej na prawdopodobieństwo patrzy się trochę inaczej. Zakłada się, że prawdopodobieństwo jest miarą pewności, którą możemy przypisać pewnym modelom (hipotezom). Wnioskowanie Bayesowskie można porównać do tego, jak wnioskują ludzie. Mamy jakieś oczekiwania, następnie dostajemy dane i rewidujemy nasze oczekiwania.
 
