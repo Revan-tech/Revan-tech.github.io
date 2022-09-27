@@ -1507,6 +1507,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 </nav>
 </div>
+<p style="color:blue">
+Post będzie aktualizowany.
+</p>
 <h2 id="mały-wstęp">Mały wstęp</h2>
 <p>Pomyślałem sobie, że napiszę taki mały tutorial statystyki Bayesowskiej.</p>
 <p>Próba wytłumaczenie czegoś komuś jest jedną z najlepszych metod nauki i weryfikacji swojej własnej wiedzy. W przeciwieństwie do rozważań we własnym umyśle, gdy tłumaczy się innym jakieś zagadnienie, nie można nie odpowiedzieć na pewne pytania, czy niektóre rzeczy zgrabnie pominąć :)</p>
@@ -1517,7 +1520,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="prawdopodobieństwo">Prawdopodobieństwo</h2>
 <p>Wszyscy intuicyjnie czujemy czym jest prawdopodobieństwo. Jeśli chcemy sprawdzić czy moneta nie jest obciążona i częściej wypada reszka niż orzeł, najprostszym sposobem jest dokonanie “eksperymentu losowego” i sprawdzenie ile razy wypadnie reszka spośród wszystkich prób. Im więcej razy rzucimy monetą, tym bardziej będziemy pewni otrzymanego wyniku. W statystyce klasycznej wychodzimy z podobnego założenia, formalnie zdefiniowanego tak:</p>
 <p><span class="math display">\[ \lim_{n\to\infty} P(A) = \frac{k_n(A)}{n} \]</span></p>
-<p>Słownie możemy przedstawić to założenie tak: Gdy liczba prób dąży do nieskończoności, częstość wystąpień zdarzeń <span class="math inline">\(A\)</span> pośród wszystkich prób będzie się równało prawdopodobieństwu wystąpienia zdarzenia <span class="math inline">\(A\)</span>. Innymi słowy im więcej razy rzucimy monetą, tym większe mamy szanse na otrzymanie takiego stosunku reszek do orłów, który jest bliski prawdziwemu prawdopodobieństwu otrzymania reszki.</p>
+<p>gdzie <span class="math inline">\(k_n\)</span> to liczba zdarzeń sprzyjających zdażeniu <span class="math inline">\(A\)</span> a <span class="math inline">\(n\)</span> to liczba prób. Słownie możemy przedstawić to założenie tak: Gdy liczba prób dąży do nieskończoności, częstość wystąpień zdarzeń <span class="math inline">\(A\)</span> pośród wszystkich prób będzie się równało prawdopodobieństwu wystąpienia zdarzenia <span class="math inline">\(A\)</span>. Innymi słowy im więcej razy rzucimy monetą, tym większe mamy szanse na otrzymanie takiego stosunku reszek do orłów, który jest bliski prawdziwemu prawdopodobieństwu otrzymania reszki.</p>
 <p>W statystyce Bayesowkiej na prawdopodobieństwo patrzy się trochę inaczej. Zakłada się, że prawdopodobieństwo jest miarą pewności, którą możemy przypisać pewnym modelom (hipotezom). Wnioskowanie Bayesowskie można porównać do tego, jak wnioskują ludzie. Mamy jakieś oczekiwania, następnie dostajemy dane i rewidujemy nasze oczekiwania.</p>
 <p>Wnioskowanie Bayesowskie opiera się na twierdzeniu Bayesa:</p>
 <p><span class="math display">\[  P(Hipoteza|Dane) = \frac{P(Dane|Hipoteza)P(Hipoteza)}{P(Dane)}\]</span></p>
@@ -1620,7 +1623,7 @@ padding: 15px 60px;
 </div>
 <p>Jaką daje nam to pewność co do naszego pomiaru? Na ile możemy być pewni, że prawdziwa średnia leży w tym przedziale ufności? Tu zaczynają się trudności.</p>
 <p>NHST historycznie powstała do stosowania w warunkach przemysłowych, gdzie wykonujemy bardzo wiele identycznych badań, na przykład w kontroli jakości produktów. Na przykład, w Ikei produkowany jest pewien element do konstrukcji szafek. Każdy kolejny wyprodukowany egzemplarz tego elementu różni się odrobinę w długości od schematu, ale dobrze skalibrowana maszyna przycinająca elementy działa tak, że te różnice nie są na tyle duże by element nie pasował do szafki.</p>
-<p>Osoba odpowiedzialna za kontrolę jakości regularnie wykonuje pomiary długości <span class="math inline">\(n\)</span> elementów każdego, by sprawdzić czy średnia długość elementów nie wykracza założonego przedziału bezpiecznej różnicy w długości. Obliczył sobie ile elementów musi zmierzyć dziennie, by przedział ufności pokrywał się z tą bezpieczną różnicą przy ustalonym poziomie ufności 90%. Jeśli maszyna będzie działać poprawnie, kontroler otrzyma średnio 1 fałszywy alarm na 10 dni.</p>
+<p>Osoba odpowiedzialna za kontrolę jakości regularnie wykonuje pomiary długości <span class="math inline">\(n\)</span> elementów każdego dnia, by sprawdzić czy średnia długość elementów nie wykracza założonego przedziału bezpiecznej różnicy w długości. Obliczył sobie ile elementów musi zmierzyć dziennie, by przedział ufności pokrywał się z tą bezpieczną różnicą przy ustalonym poziomie ufności 90%. Jeśli maszyna będzie działać poprawnie, kontroler otrzyma średnio 1 fałszywy alarm na 10 dni.</p>
 <p>Zasadniczo, w idealnej sytuacji mamy <span class="math inline">\(1-\alpha\)</span> prawdopodobieństwo na wylosowanie takiej próby, której przedział ufności będzie zawierał prawdziwą średnią. Często spotykane, choć nie do końca zasadne, jest twierdzenie, w danej próbie istnieje prawdopodobieństwo równe <span class="math inline">\(1-\alpha\)</span>, że w przedziale zawiera się średnia. Takie prawdopodbieństwo mamy przed wylosowaniem próby, gdy już ją mamy, nie wiemy co wylosowaliśmy.</p>
 <h3 id="bayesowcy">Bayesowcy</h3>
 <p>No dobrze. Czas na Bayesowskie podejście do problemu. Chcemy obliczyć <span class="math inline">\(P(Hipoteza|Dane)\)</span>. Co jest jednak naszą hipotezą? O ile w przypadku zmiennej binarnej jak choroba i jej brak jest to proste, tutaj nasza hipoteza dotyczy wartości średniej - wartość średniej jest raczej zmienną ciągłą, może być dowolna. Dlatego <span class="math inline">\(P(Hipoteza|Dane)\)</span> będzie rozkładem prawdopodobieństwa dla każdej możliwej wartości średniej.</p>
