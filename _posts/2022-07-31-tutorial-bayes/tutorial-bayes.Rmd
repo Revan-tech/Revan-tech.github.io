@@ -29,7 +29,7 @@ Pomyślałem sobie, że napiszę taki mały tutorial statystyki Bayesowskiej.
 
 Próba wytłumaczenie czegoś komuś jest jedną z najlepszych metod nauki i weryfikacji swojej własnej wiedzy. W przeciwieństwie do rozważań we własnym umyśle, gdy tłumaczy się innym jakieś zagadnienie, nie można nie odpowiedzieć na pewne pytania, czy niektóre rzeczy zgrabnie pominąć :)
 
-Tutorial nie będzie na pewno wyczerpującym podejściem do tematu. Jeśli ktoś potrzebuje metodycznego wprowadzenie do metod bayesowskich, możne znaleźć je świetnej książce "Bayesian Data Analysis" [@gelman2021bayesian]. Tutorial jest raczej pewnego rodzaju przyśpieszonym kursem pozwalający na późniejsze samodzielne eksplorowanie i zabawę statystyką Bayesowską. Forma tutorialu wynika z podejścia w akademii, które dla rozpoczynających karierę naukowców można sprowadzić do zdania: najpierw badaj, potem zastanawiaj się jak zbadać. 
+Tutorial nie będzie na pewno wyczerpującym podejściem do tematu. Jeśli ktoś potrzebuje metodycznego wprowadzenia do metod bayesowskich, możne znaleźć je świetnej książce "Bayesian Data Analysis" [@gelman2021bayesian]. Tutorial jest raczej pewnego rodzaju przyśpieszonym kursem pozwalający na późniejsze samodzielne eksplorowanie i zabawę statystyką Bayesowską. Forma tutorialu wynika z podejścia w akademii, które dla rozpoczynających karierę naukowców można sprowadzić do zdania: najpierw badaj, potem zastanawiaj się jak zbadać. 
 
 Osobiście preferuję używanie języków programowania i obliczenia w tym tekście będą wykonywane za pomocą R, ale wiele z pokazanych tu rzeczy można także wykonać w graficznym programie statystycznym JASP. W zrozumieniu zawartych tu treści pomoże, jeśli uczestniczyłeś/łaś wcześniej w jakimś kursie statystyki. 
 
