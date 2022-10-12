@@ -80,7 +80,7 @@ $$  P(B|A) = \frac{P(A|B)P(B)}{P(A)}$$
 
 ### Dyskretny przykład
 
-By uświadomić sobie przydatność twierdzenia Bayesa wykonajmy małe ćwiczenie. Załóżmy, że opracowaliśmy test pozwalający na wykrycie pewnej choroby z 99% prawdopodobieństwem u osób faktycznie chorych. Możemy zapisać to w następujący sposób $P(Pozytywny|Choroba) = 0.99$. Test jednak daje też wynik fałszywie pozytywny u 3% osób zdrowych $P(Pozytywny|\neg Choroba) = 0.05$. Wiemy także, że nosicielem choroby jest 1 procent populacji $P(Choroba) = 0.01$. Chcielibyśmy się dowiedzieć jakie jest prawdopodobieństwo choroby, jeśli wynik jest pozytywny $P(Choroba|Pozytywny)$. By je obliczyć potrzebujemy jeszcze prawdopodobieństwa otrzymania wyniku pozytywnego. Uzyskać je możemy za pomocą prawa sumy.
+By uświadomić sobie przydatność twierdzenia Bayesa wykonajmy małe ćwiczenie. Załóżmy, że opracowaliśmy test pozwalający na wykrycie pewnej choroby z 99% prawdopodobieństwem u osób faktycznie chorych. Możemy zapisać to w następujący sposób $P(Pozytywny|Choroba) = 0.99$. Test jednak daje też wynik fałszywie pozytywny u 5% osób zdrowych $P(Pozytywny|\neg Choroba) = 0.05$. Wiemy także, że nosicielem choroby jest 1 procent populacji $P(Choroba) = 0.01$. Chcielibyśmy się dowiedzieć jakie jest prawdopodobieństwo choroby, jeśli wynik jest pozytywny $P(Choroba|Pozytywny)$. By je obliczyć potrzebujemy jeszcze prawdopodobieństwa otrzymania wyniku pozytywnego. Uzyskać je możemy za pomocą prawa sumy.
 
 
 <style>
