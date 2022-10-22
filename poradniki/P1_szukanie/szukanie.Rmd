@@ -61,7 +61,6 @@ Wiemy już, że istnieje jakiś artykuł w interesującym nas temacie, ale nie j
 1. Zaskakująco często wystarczy przekopiować nazwę artykułu do zwykłej wyszukiwarki Google - autorzy często wrzucają swoje artykuły na [ResearchGate](https://www.researchgate.net/) lub [Academię](https://www.academia.edu/).
 
 <aside>Trzeba zaznaczyć, że Academia lubi spamować na maila zachętami do subskrypcji premium. ResearchGate jest zdecydowanie lepszym serwisem, ale może wymagać uniwersyteckiej skrzynki pocztowej do założenia konta. </aside>
-
 2. Może mamy dostęp instytucjonalny? Jeśli przynależymy do uniwersytetu, możemy mieć dostęp do wielu płatnych baz, na które nasz uniwersytet wykupił subskrypcję.
 3. Czasami można poprosić autora o podesłanie artykułu. Niektórzy autorzy chętnie wysyłają swoje prace, wystarczy wysłać wiadomość.
 4. Wchodzimy na Libgena lub SciHuba. To wymaga krótkiego omówienia:
@@ -155,5 +154,5 @@ Trzeba się też rozeznać, kiedy ma się komfortowy czas na czytanie trudnych t
 
 
 
-To tyle, kilka pomysłów na poszukiwania. Podkreślam - jest to subiektywna lista. Każdy wypracuje sobie własny najlepszy sposób. **Poszukiwania wiedzy to żywy proces**, który za każdym razem się zmienia i ewoluuje. Pojawiają się nowe źródła, algorytmy zmieniają swoje działanie, my zmieniamy zainteresowania i uczymy się lepiej organizować wiedzę. Na pewno warto eksperymentować, testować różne sposoby. Któryś w końcu zadziała.
+To tyle, kilka pomysłów na poszukiwania. Podkreślam - jest to subiektywna lista. Każdy wypracuje sobie własny najlepszy sposób. **Poszukiwanie wiedzy to żywy proces**, który za każdym razem się zmienia i ewoluuje. Pojawiają się nowe źródła, algorytmy zmieniają swoje działanie, my zmieniamy zainteresowania i uczymy się lepiej organizować wiedzę. Na pewno warto eksperymentować, testować różne sposoby. Któryś w końcu zadziała.
 
