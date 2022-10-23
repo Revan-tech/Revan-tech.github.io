@@ -88,7 +88,7 @@ Poradnik wspomina szereg innych stron i wyjaśnia jak z nich korzystać.
 W samym Libgenie można zaznaczyć wyszukiwanie książek naukowych, beletrystyki, artykułów naukowych (SciHub), a nawet komiksów. Wyszukiwać można po autorach, tytule, roku, języku etc. </p>
 
 <p align="justify">
-Ewentualna wada Libgena? Mało jest tam materiałów w języku polskim. Na szczęście polskie artykuły naukowe zazwyczaj są w otwartym dostępie. Gorzej z polskimi książkami naukowymi - te jednak zazwyczaj wcale nie są bardzo drogie - wydanie ok. 30/40zł na książkę jest zawsze warte rozważenia. Nie zaszkodzi zajrzeć też na Docer i Chomikuj - ale tu uwaga - materiały na tych stronach zdecydowanie będą łamać prawa majątkowe danych dzieł. Dodatkowo na Chomikuj łatwo przez przypadek ściągnąć potencjalnie niebezpieczny plik (szczególnie jeśli ma dziwną wielkość i końcówkę .exe). Co więcej, wersje chomikowe są zwykle kiepskiej jakości skanami. Lepiej odwiedzić lokalną bibliotekę lub [Ibuk Libra](https://libra.ibuk.pl) - jeśli mamy dostęp.</p>
+Ewentualna wada Libgena? Mało jest tam materiałów w języku polskim. Na szczęście polskie artykuły naukowe zazwyczaj są w otwartym dostępie. Gorzej z polskimi książkami naukowymi - te jednak zazwyczaj wcale nie są bardzo drogie - wydanie ok. 30/40zł na książkę jest zawsze warte rozważenia. Nie zaszkodzi zajrzeć też na Docer i Chomikuj - ale tu uwaga - materiały na tych stronach zdecydowanie będą łamać prawa majątkowe danych dzieł. Jest to tym bardziej wątpliwe moralnie, że takie publikacje znajdziemy w bibliotekach publicznych. Dodatkowo, na Chomikuj łatwo przez przypadek ściągnąć potencjalnie niebezpieczny plik (szczególnie jeśli ma dziwną wielkość i końcówkę .exe). Co więcej, wersje chomikowe są zwykle kiepskiej jakości skanami. Lepiej odwiedzić lokalną bibliotekę lub [Ibuk Libra](https://libra.ibuk.pl) - jeśli mamy dostęp.</p>
 
 <p align="justify">
 Żeby było jasne - **nie popieramy łamania praw autorskich i majątkowych**. Kupujcie artykuły i  książki, jeśli Was na to stać, niezależnie od tego czy cyfrowe, czy papierowe. Jednocześnie, wierzymy w otwarty i egalitarny dostęp do nauki i sprawiedliwe wynagrodzenia dla autorów dzieł. Obecny system obiegu wiedzy zawiera w sobie strukturalne patologie, które podważają zasadność podejścia moralnego i niejako wymuszają pragmatyczne “radzenie sobie” z zastaną sytuacją.</p>
@@ -158,7 +158,7 @@ Są różne sposoby czytania artykułów naukowych. Wcale nie trzeba ich czytać
   4. powtórzenie zakończenia, dla lepszego utrwalenia informacji. 
 
 <p align="justify">  
-Sposób czytania w dużej mierze zależy od tego, co chcemy wyciągnąć z artykułów i do czego dalej użyjemy tej wiedzy. Czasem wystarczy pobieżne przejrzenie, czasem konieczne jest całkowite zanurzenie się w danej strukturze wiedzy.</p>
+**Sposób czytania w dużej mierze zależy od tego, co chcemy wyciągnąć z artykułów i do czego dalej użyjemy tej wiedzy**. Czasem wystarczy pobieżne przejrzenie, czasem konieczne jest całkowite zanurzenie się w danej strukturze wiedzy.</p>
 
 <p align="justify">  
 Zawsze warto jest robić notatki i zaznaczenia - wewnątrz pliku, w zewnętrznym pliku, czy na papierze. Jeśli coś jest gwarantowane, to to, że za kilka miesięcy nie będziemy pamiętać z czytania prawie nic. Notatki wtedy będą ratującymi skórę bodźcami, które przypomną nam o czym czytaliśmy.
@@ -168,7 +168,7 @@ Trzeba się też rozeznać, kiedy ma się komfortowy czas na czytanie trudnych t
 
 
 <p align="justify"> 
-To tyle, kilka pomysłów na poszukiwania. Podkreślam - jest to subiektywna lista. Każdy wypracuje sobie własny najlepszy sposób. **Poszukiwanie wiedzy to żywy proces**, który za każdym razem się zmienia i ewoluuje. Pojawiają się nowe źródła, algorytmy zmieniają swoje działanie, my zmieniamy zainteresowania i uczymy się lepiej organizować wiedzę.</p>
+To tyle, kilka pomysłów na poszukiwania. Podkreślam - jest to subiektywna lista. Każdy wypracuje sobie własny najlepszy sposób. **Poszukiwanie wiedzy to żywy proces**, który za każdym razem się zmienia i ewoluuje. Pojawiają się nowe źródła, algorytmy zmieniają swoje działanie, my zmieniamy zainteresowania i uczymy się lepiej organizować wiedzę. Sam powód poszukiwań ma znaczenie dla ich wyglądu - raz lepiej jest robić to systematycznie, innym razem lepiej jest dać się porwać króliczej norze i popłynąć, razem z wyszukiwarkami i bazami danych.</p>
 
 Na pewno warto eksperymentować, testować różne sposoby. Któryś w końcu zadziała.
 
