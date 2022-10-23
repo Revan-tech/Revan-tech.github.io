@@ -82,13 +82,13 @@ Przed skorzystaniem z Libgena warto zainstalować Adblocka w swojej przeglądarc
 Poniżej zamieszczam niezwykle przydatny poradnik korzystania ze wspomnianych stron (w języku angielskim):</p>
 
 https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/edit 
-Poradnik wspomina szereg innych stron i wyjaśnia jak z nich korzystać.</p>
+Poradnik wspomina szereg innych stron i wyjaśnia jak z nich korzystać.
 
 <p align="justify">
 W samym Libgenie można zaznaczyć wyszukiwanie książek naukowych, beletrystyki, artykułów naukowych (SciHub), a nawet komiksów. Wyszukiwać można po autorach, tytule, roku, języku etc. </p>
 
 <p align="justify">
-Ewentualna wada Libgena? Mało jest tam materiałów w języku polskim. Na szczęście polskie artykuły naukowe zazwyczaj są w otwartym dostępie. Gorzej z polskimi książkami naukowymi - te jednak zazwyczaj wcale nie są bardzo drogie - wydanie ok. 30/40zł na książkę jest zawsze warte rozważenia. Nie zaszkodzi zajrzeć też na Docer i Chomikuj - ale tu uwaga - materiały na tych stronach zdecydowanie będą łamać prawa majątkowe danych dzieł. Dodatkowo na Chomikuj łatwo przez przypadek ściągnąć potencjalnie niebezpieczny plik (szczególnie jeśli ma dziwną wielkość i końcówkę .exe).</p>
+Ewentualna wada Libgena? Mało jest tam materiałów w języku polskim. Na szczęście polskie artykuły naukowe zazwyczaj są w otwartym dostępie. Gorzej z polskimi książkami naukowymi - te jednak zazwyczaj wcale nie są bardzo drogie - wydanie ok. 30/40zł na książkę jest zawsze warte rozważenia. Nie zaszkodzi zajrzeć też na Docer i Chomikuj - ale tu uwaga - materiały na tych stronach zdecydowanie będą łamać prawa majątkowe danych dzieł. Dodatkowo na Chomikuj łatwo przez przypadek ściągnąć potencjalnie niebezpieczny plik (szczególnie jeśli ma dziwną wielkość i końcówkę .exe). Co więcej, wersje chomikowe są zwykle kiepskiej jakości skanami. Lepiej odwiedzić lokalną bibliotekę lub [Ibuk Libra](https://libra.ibuk.pl) - jeśli mamy dostęp.</p>
 
 <p align="justify">
 Żeby było jasne - **nie popieramy łamania praw autorskich i majątkowych**. Kupujcie artykuły i  książki, jeśli Was na to stać, niezależnie od tego czy cyfrowe, czy papierowe. Jednocześnie, wierzymy w otwarty i egalitarny dostęp do nauki i sprawiedliwe wynagrodzenia dla autorów dzieł. Obecny system obiegu wiedzy zawiera w sobie strukturalne patologie, które podważają zasadność podejścia moralnego i niejako wymuszają pragmatyczne “radzenie sobie” z zastaną sytuacją.</p>
