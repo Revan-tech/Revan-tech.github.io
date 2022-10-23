@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -1434,7 +1435,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="szukanie_files/header-attrs-2.8/header-attrs.js"></script>
+  <script src="szukanie_files/header-attrs-2.10/header-attrs.js"></script>
   <script src="szukanie_files/jquery-1.11.3/jquery.min.js"></script>
   <script src="szukanie_files/popper-2.6.0/popper.min.js"></script>
   <link href="szukanie_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1515,7 +1516,9 @@ Może to zabrzmi zniechęcająco, ale to naprawdę ważne. I zasadniczo sprowadz
 <li>gdzie będziemy przechowywać pliki? jaka będzie struktura i nazewnictwo folderów na dysku?</li>
 <li>jak będziemy czytać artykuły i gdzie będziemy robić notatki?</li>
 </ul>
-<p>Nie ma żadnej konieczności trzymania się tych zasad! Nie przyjedzie do Was policja naukowa na sygnale, gdy po prostu wpiszemy w wyszukiwarkę pierwsze hasło, które przyjdzie nam do głowy. Te zasady mogą się jednak przydać w momencie, gdy poczujemy zagubienie lub przytłoczenie nadmiarem treści. A czasem lepiej jest <em>po prostu płynąć</em> i dać się zaskoczyć znalezionymi materiałami.</p>
+<p align="justify">
+Nie ma żadnej konieczności trzymania się tych zasad! Nie przyjedzie do Was policja naukowa na sygnale, gdy po prostu wpiszemy w wyszukiwarkę pierwsze hasło, które przyjdzie nam do głowy. Te zasady mogą się jednak przydać w momencie, gdy poczujemy zagubienie lub przytłoczenie nadmiarem treści. A czasem lepiej jest <em>po prostu płynąć</em> i dać się zaskoczyć znalezionymi materiałami.
+</p>
 <figure>
 <img src="dal2.png" style="width:50.0%" alt="“Using google scholar” - DALL-E" /><figcaption aria-hidden="true">“Using google scholar” - DALL-E</figcaption>
 </figure>
@@ -1528,7 +1531,7 @@ W większości przypadków, całkowicie wystarczające będzie otworzenie Google
 </figure>
 <h1 id="dostęp-do-artykułów-i-szara-strefa-którą-każdy-zna---ale-o-której-nie-wypada-mówić">Dostęp do artykułów i szara strefa, którą każdy zna - ale o której nie wypada mówić</h1>
 <p align="justify">
-<p>Wiemy już, że istnieje jakiś artykuł w interesującym nas temacie, ale nie jest w otwartym dostępie i nie możemy go tak po prostu otworzyć. Może wystarczy nam abstrakt i nie musimy zdobywać całego pliku? Jeśli jednak przeczytanie artykułu jest konieczne, możemy zrobić kilka rzeczy.</p>
+Wiemy już, że istnieje jakiś artykuł w interesującym nas temacie, ale nie jest w otwartym dostępie i nie możemy go tak po prostu otworzyć. Może wystarczy nam abstrakt i nie musimy zdobywać całego pliku? Jeśli jednak przeczytanie artykułu jest konieczne, możemy zrobić kilka rzeczy.
 </p>
 <ol type="1">
 <li>Zaskakująco często wystarczy przekopiować nazwę artykułu do zwykłej wyszukiwarki Google - autorzy często wrzucają swoje artykuły na <a href="https://www.researchgate.net/">ResearchGate</a> lub <a href="https://www.academia.edu/">Academię</a>.</li>
@@ -1540,38 +1543,42 @@ W większości przypadków, całkowicie wystarczające będzie otworzenie Google
 Trzeba zaznaczyć, że Academia lubi spamować na maila zachętami do subskrypcji premium. ResearchGate jest zdecydowanie lepszym serwisem, ale może wymagać uniwersyteckiej skrzynki pocztowej do założenia konta.
 </aside>
 <p align="justify">
-<p>Ekosystem publikowania prac naukowych jest, delikatnie mówiąc, nieidealny. <strong>Autorzy nie dostają wynagrodzenia za swoją pracę, tak samo recenzenci</strong>. Wydawnictwa pobierają jednak absurdalnie wysokie kwoty za pojedyncze artykuły (€20, €40 za jeden artykuł po jakimś czasie przestaje dziwić). Autorzy często muszą dopłacać za publikację od kilkuset, do kilku tysięcy Euro - jeśli chcą, by ich praca była w otwartym dostępie. Taki <em>gatekeeping</em> rzekomo gwarantuje wysoki poziom artykułów w prestiżowych pismach, faktycznie tworzy jednak barierę wolnego przepływu wiedzy i odcina od niej większość ludzi, w szczególności z mniej zamożnych krajów (co zresztą dalej pogłębia różnice pomiędzy Zachodem i resztą świata).</p>
+Ekosystem publikowania prac naukowych jest, delikatnie mówiąc, nieidealny. <strong>Autorzy nie dostają wynagrodzenia za swoją pracę, tak samo recenzenci</strong>. Wydawnictwa pobierają jednak absurdalnie wysokie kwoty za pojedyncze artykuły (€20, €40 za jeden artykuł po jakimś czasie przestaje dziwić). Autorzy często muszą dopłacać za publikację od kilkuset, do kilku tysięcy Euro - jeśli chcą, by ich praca była w otwartym dostępie. Taki <em>gatekeeping</em> rzekomo gwarantuje wysoki poziom artykułów w prestiżowych pismach, faktycznie tworzy jednak barierę wolnego przepływu wiedzy i odcina od niej większość ludzi, w szczególności z mniej zamożnych krajów (co zresztą dalej pogłębia różnice pomiędzy Zachodem i resztą świata).
 </p>
 <p align="justify">
-<p>Stąd powstanie pirackich serwisów, które - w zależności od wybranego spojrzenia - uwalniają wiedzę lub ją zawłaszczają.</p>
+Stąd powstanie pirackich serwisów, które - w zależności od wybranego spojrzenia - uwalniają wiedzę lub ją zawłaszczają.
 </p>
 <p align="justify">
-<p>Niezależnie od wybranego moralnego punktu widzenia, serwisy takie jak Libgen i SciHub udostępniają nieprzebrane ilości książek i artykułów za darmo. Przed skorzystaniem z Libgena warto zainstalować Adblocka w swojej przeglądarce, by nie zostać zbombardowanym(ą) reklamami. Libgen ma wiele adresów, które z czasem mogą się zmieniać - adres można łatwo znaleźć przez Google.</p>
+Niezależnie od wybranego moralnego punktu widzenia, serwisy takie jak Libgen i SciHub udostępniają nieprzebrane ilości książek i artykułów za darmo. Przed skorzystaniem z Libgena warto zainstalować Adblocka w swojej przeglądarce, by nie zostać zbombardowanym(ą) reklamami. Libgen ma wiele adresów, które z czasem mogą się zmieniać - adres można łatwo znaleźć przez Google.
 </p>
 <p align="justify">
-<p>Poniżej zamieszczam niezwykle przydatny poradnik korzystania ze wspomnianych stron (w języku angielskim): <a href="https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/edit" class="uri">https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/edit</a> Poradnik wspomina szereg innych stron i wyjaśnia jak z nich korzystać.</p>
+Poniżej zamieszczam niezwykle przydatny poradnik korzystania ze wspomnianych stron (w języku angielskim): <a href="https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/edit" class="uri">https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/edit</a> Poradnik wspomina szereg innych stron i wyjaśnia jak z nich korzystać.
 </p>
 <p align="justify">
-<p>W samym Libgenie można zaznaczyć wyszukiwanie książek naukowych, beletrystyki, artykułów naukowych (SciHub), a nawet komiksów. Wyszukiwać można po autorach, tytule, roku, języku etc.</p>
+W samym Libgenie można zaznaczyć wyszukiwanie książek naukowych, beletrystyki, artykułów naukowych (SciHub), a nawet komiksów. Wyszukiwać można po autorach, tytule, roku, języku etc.
 </p>
 <p align="justify">
 Ewentualna wada Libgena? Mało jest tam materiałów w języku polskim. Na szczęście polskie artykuły naukowe zazwyczaj są w otwartym dostępie. Gorzej z polskimi książkami naukowymi - te jednak zazwyczaj wcale nie są bardzo drogie - wydanie ok. 30/40zł na książkę jest zawsze warte rozważenia. Nie zaszkodzi zajrzeć też na Docer i Chomikuj - ale tu uwaga - materiały na tych stronach zdecydowanie będą łamać prawa majątkowe danych dzieł. Dodatkowo na Chomikuj łatwo przez przypadek ściągnąć potencjalnie niebezpieczny plik (szczególnie jeśli ma dziwną wielkość i końcówkę .exe).
 </p>
 <p align="justify">
-<p>Żeby było jasne - <strong>nie popieramy łamania praw autorskich i majątkowych</strong>. Kupujcie artykuły i książki, jeśli Was na to stać, niezależnie od tego czy cyfrowe, czy papierowe. Jednocześnie, wierzymy w otwarty i egalitarny dostęp do nauki i sprawiedliwe wynagrodzenia dla autorów dzieł. Obecny system obiegu wiedzy zawiera w sobie strukturalne patologie, które podważają zasadność podejścia moralnego i niejako wymuszają pragmatyczne “radzenie sobie” z zastaną sytuacją.</p>
+Żeby było jasne - <strong>nie popieramy łamania praw autorskich i majątkowych</strong>. Kupujcie artykuły i książki, jeśli Was na to stać, niezależnie od tego czy cyfrowe, czy papierowe. Jednocześnie, wierzymy w otwarty i egalitarny dostęp do nauki i sprawiedliwe wynagrodzenia dla autorów dzieł. Obecny system obiegu wiedzy zawiera w sobie strukturalne patologie, które podważają zasadność podejścia moralnego i niejako wymuszają pragmatyczne “radzenie sobie” z zastaną sytuacją.
 </p>
 <figure>
 <img src="money.jpg" style="width:65.0%" alt="Przykład ograniczonego dostępu do wiedzy. Od czasu, gdy ten obrazek stał się memem, artykuł trafił jednak do otwartego dostępu." /><figcaption aria-hidden="true">Przykład ograniczonego dostępu do wiedzy. Od czasu, gdy ten obrazek stał się memem, artykuł trafił jednak do otwartego dostępu.</figcaption>
 </figure>
 <h1 id="dalej-nie-mogę-znaleźć-tego-czego-chcę-dwie-klątwy">Dalej nie mogę znaleźć tego, czego chcę: dwie klątwy</h1>
 <p align="justify">
-<p>Ogólnie, przy wyszukiwaniu wiedzy mogą dotknąć nas dwie klątwy: nadmiar wyników i niedobór wyników.</p>
-<p>W przypadku nadmiaru, najlepiej będzie wrócić do punktu startowego, czyli precyzyjniej określić sobie metodę wyszukiwania. Przy zbyt dużej ilości artykułów i książek spróbujmy określić, które są najbardziej znaczące dla naszego tematu.</p>
+Ogólnie, przy wyszukiwaniu wiedzy mogą dotknąć nas dwie klątwy: nadmiar wyników i niedobór wyników.
 </p>
 <p align="justify">
-<p>W przypadku niedoboru można eksperymentować z doprecyzowanymi hasłami wyszukiwania, szukać po konkretnych autorach, wydawnictwach, lub po czasopismach. <strong>Jeśli udało nam się znaleźć jeden pasujący artykuł - to zaglądamy do bibliografii i kłączowo szukamy kolejnych prac tam wymienionych</strong>. Trzeba wykazać się kreatywnością w sprawdzaniu źródeł. Poniekąd dlatego zbieramy różne linki, bazy, agregatory w naszej <a href="https://szpm.shinyapps.io/baza_wiedzy/">Bazie Wiedzy</a>. Warto tam zajrzeć! Zgromadziliśmy sporo mało znanych i niszowych stron. Każda dziedzina będzie miała inne źródła, inne kluczowe strony. Jeśli znacie przydatne linki, których nie ma w Bazie - zgłaszajcie nam w formularzu! Będziemy dodawać i powiększać zbiór.</p>
+W przypadku nadmiaru, najlepiej będzie wrócić do punktu startowego, czyli precyzyjniej określić sobie metodę wyszukiwania. Przy zbyt dużej ilości artykułów i książek spróbujmy określić, które są najbardziej znaczące dla naszego tematu.
 </p>
-<p>Ostatnio pojawiają się też strony takie jak <a href="https://researchrabbitapp.com/">ResearchRabbit</a>, które w bardzo wizualny sposób przedstawiają połączone tematycznie artykuły. Większość takich projektów korzysta w coraz większym stopniu z uczenia maszynowego i podpowiada pokrewne treści w dość sprytny sposób. Nie zapominajmy jednak, że wciąż najlepszym sposobem na znalezienie przydatnych treści jest zapytanie o poradę żywej osoby! Znajomi, wykładowcy i promotorzy zawsze chętnie podpowiedzą czego szukać. Pomóc może też zadanie pytania w odpowiednich grupkach akademickich na Facebooku lub Reddicie.</p>
+<p align="justify">
+W przypadku niedoboru można eksperymentować z doprecyzowanymi hasłami wyszukiwania, szukać po konkretnych autorach, wydawnictwach, lub po czasopismach. <strong>Jeśli udało nam się znaleźć jeden pasujący artykuł - to zaglądamy do bibliografii i kłączowo szukamy kolejnych prac tam wymienionych</strong>. Trzeba wykazać się kreatywnością w sprawdzaniu źródeł. Poniekąd dlatego zbieramy różne linki, bazy, agregatory w naszej <a href="https://szpm.shinyapps.io/baza_wiedzy/">Bazie Wiedzy</a>. Warto tam zajrzeć! Zgromadziliśmy sporo mało znanych i niszowych stron. Każda dziedzina będzie miała inne źródła, inne kluczowe strony. Jeśli znacie przydatne linki, których nie ma w Bazie - zgłaszajcie nam w formularzu! Będziemy dodawać i powiększać zbiór.
+</p>
+<p align="justify">
+Ostatnio pojawiają się też strony takie jak <a href="https://researchrabbitapp.com/">ResearchRabbit</a>, które w bardzo wizualny sposób przedstawiają połączone tematycznie artykuły. Większość takich projektów korzysta w coraz większym stopniu z uczenia maszynowego i podpowiada pokrewne treści w dość sprytny sposób. Nie zapominajmy jednak, że wciąż najlepszym sposobem na znalezienie przydatnych treści jest zapytanie o poradę żywej osoby! Znajomi, wykładowcy i promotorzy zawsze chętnie podpowiedzą czego szukać. Pomóc może też zadanie pytania w odpowiednich grupkach akademickich na Facebooku lub Reddicie.
+</p>
 <aside>
 ResearchRabbit wymaga założenia konta.Nie jest też jedynym takim serwisem, zapraszamy do zajrzenia <a href="https://aarontay.medium.com/3-new-tools-to-try-for-literature-mapping-connected-papers-inciteful-and-litmaps-a399f27622a">pod ten link</a>, gdzie omawiane są <a href="https://www.connectedpapers.com/">Connected Papers</a>, <a href="https://inciteful.xyz/">Inciteful</a> i <a href="https://www.litmaps.com/">Litmaps</a>.
 </aside>
@@ -1580,10 +1587,10 @@ ResearchRabbit wymaga założenia konta.Nie jest też jedynym takim serwisem, za
 </figure>
 <h1 id="weryfikacja-treści">Weryfikacja treści</h1>
 <p align="justify">
-<p>Zdobyliśmy artykuły! Nie cieszmy się jednak za wcześnie, zawsze trzeba zachowywać zdrowy rozsądek przy czytaniu. Artykuł opublikowany w Nature nie jest równy studenckiej notce udostępnionej na Academii. Trzeba uważać na Predatory Journals, które publikują praktycznie wszystko, o ile autor zapłaci. Trzeba uważać na jakość metod w badaniach, wielkość prób itd. Nie znaczy to, że wiedza z “prowincjonalnego” czasopisma jest bezwartościowa - ja osobiście uważam, że ze wszystkiego da się wyciągnąć jakieś przydatne informacje. Trzeba jednak krytycznie patrzeć na wszystko co czytamy. Nawet najbardziej prestiżowym pismom zdarzają się wpadki.</p>
+Zdobyliśmy artykuły! Nie cieszmy się jednak za wcześnie, zawsze trzeba zachowywać zdrowy rozsądek przy czytaniu. Artykuł opublikowany w Nature nie jest równy studenckiej notce udostępnionej na Academii. Trzeba uważać na Predatory Journals, które publikują praktycznie wszystko, o ile autor zapłaci. Trzeba uważać na jakość metod w badaniach, wielkość prób itd. Nie znaczy to, że wiedza z “prowincjonalnego” czasopisma jest bezwartościowa - ja osobiście uważam, że ze wszystkiego da się wyciągnąć jakieś przydatne informacje. Trzeba jednak krytycznie patrzeć na wszystko co czytamy. Nawet najbardziej prestiżowym pismom zdarzają się wpadki.
 </p>
 <p align="justify">
-<p>Kluczowe może być rozeznanie się, którzy autorzy są szczególnie istotni i wiarygodni w danej dziedzinie. Niektóre pisma są ważniejsze od innych - np. jedne służą jako platformy żywej dyskusji akademickiej i mają charakter opiniotwórczy, inne - służą publikacjom dla samego faktu publikacji. Wszystko zależy od dziedziny. Niezwykle istotna jest też data publikacji - stare badania mogą być już nieaktualne. Z drugiej strony, nauka ulega modom, więc w starszych pracach można często trafić na cenne inspiracje, zapomniane przez obecnie panujący mainstream dziedziny.</p>
+Kluczowe może być rozeznanie się, którzy autorzy są szczególnie istotni i wiarygodni w danej dziedzinie. Niektóre pisma są ważniejsze od innych - np. jedne służą jako platformy żywej dyskusji akademickiej i mają charakter opiniotwórczy, inne - służą publikacjom dla samego faktu publikacji. Wszystko zależy od dziedziny. Niezwykle istotna jest też data publikacji - stare badania mogą być już nieaktualne. Z drugiej strony, nauka ulega modom, więc w starszych pracach można często trafić na cenne inspiracje, zapomniane przez obecnie panujący mainstream dziedziny.
 </p>
 <p>Nasze spojrzenie na wyniki badań i znaczenie publikacji może też zależeć od odpowiedzi, których od nich oczekujemy! Przykładowo:</p>
 <ul>
@@ -1597,16 +1604,32 @@ ResearchRabbit wymaga założenia konta.Nie jest też jedynym takim serwisem, za
 </figure>
 <h1 id="kupka-wstydu">Kupka wstydu</h1>
 <p align="justify">
-<p>Na koniec być może największy problem. Naściągaliśmy mnóstwo plików i leży to wszystko latami, nigdy nie otworzone i nieprzeczytane. Wiedza musi żyć, musi być w umyśle, żeby funkcjonować. Zamknięta na dysku będzie mało przydatna. Sam nie wiem do końca jak rozwiązać ten problem, wciąż testuję różne systemy dla siebie. Do głowy przychodzą mi dwa podejścia:</p>
-<p>A. Mieć dobrą strukturę folderów i plików, tak by można było szybko i łatwo odnaleźć dany plik. Najgorsze, co można zrobić, to wrzucać pliki do jednego folderu - i to jeszcze ponazywane np. article.pdf, article(1).pdf, 1213598.pdf… Dodatkowo używam programu Everything, który błyskawicznie znajduje pliki na dysku. Czasami wystarczy, że pamiętam fragment nazwy pliku - mogę szybko odnaleźć to, czego potrzebowałem. Najważniejsze artykuły i książki warto katalogować w menedżerze bibliografii (np. Zotero), by można było szybko cytować istotne prace.</p>
-<p>B. Mieć dobry system czytania. Czytanie artykułów naukowych jest ciężkie. Czasami “przedzieranie się” jest bardziej odpowiednim słowem. Są różne sposoby czytania artykułów naukowych. Wcale nie trzeba ich czytać od początku do końca! Dobrym sposobem jest: 1. przeczytanie abstraktu i wstępu, 2. przeczytanie zakończenia, 3. przeczytanie środkowej części artykułu, 4. powtórzenie zakończenia, dla lepszego utrwalenia informacji.</p>
-<p>Sposób czytania w dużej mierze zależy od tego, co chcemy wyciągnąć z artykułów i do czego dalej użyjemy tej wiedzy. Czasem wystarczy pobieżne przejrzenie, czasem konieczne jest całkowite zanurzenie się w danej strukturze wiedzy.</p>
-<p>Zawsze warto jest robić notatki i zaznaczenia - wewnątrz pliku, w zewnętrznym pliku, czy na papierze. Jeśli coś jest gwarantowane, to to, że za kilka miesięcy nie będziemy pamiętać z czytania prawie nic. Notatki wtedy będą ratującymi skórę bodźcami, które przypomną nam o czym czytaliśmy. Trzeba się też rozeznać, kiedy ma się komfortowy czas na czytanie trudnych treści. Dla niektórych jest to poranek, dla innych późny wieczór (to ja). Nie ma co się zmuszać do czytania, jeśli nie mamy koncentracji i ewidentnie czytanie nie idzie. Często jednak warto lekko przymusić się i spróbować - po pierwszych 5 minutach może okazać się, że dalej już “jakoś poszło.” Bardzo rzadko będziemy mieli taki cudowny stan, w którym czytanie jest lekkie i sprawia radość. Przed czytaniem warto zrobić lekki wysiłek fizyczny - czasami pomaga na koncentrację.</p>
+Na koniec być może największy problem. Naściągaliśmy mnóstwo plików i leży to wszystko latami, nigdy nie otworzone i nieprzeczytane. Wiedza musi żyć, musi być w umyśle, żeby funkcjonować. Zamknięta na dysku będzie mało przydatna. Sam nie wiem do końca jak rozwiązać ten problem, wciąż testuję różne systemy dla siebie. Do głowy przychodzą mi dwa podejścia:
+</p>
+<p align="justify">
+A. Mieć dobrą strukturę folderów i plików, tak by można było szybko i łatwo odnaleźć dany plik. Najgorsze, co można zrobić, to wrzucać pliki do jednego folderu - i to jeszcze ponazywane np. article.pdf, article(1).pdf, 1213598.pdf… Dodatkowo używam programu Everything, który błyskawicznie znajduje pliki na dysku. Czasami wystarczy, że pamiętam fragment nazwy pliku - mogę szybko odnaleźć to, czego potrzebowałem. Najważniejsze artykuły i książki warto katalogować w menedżerze bibliografii (np. Zotero), by można było szybko cytować istotne prace.
+</p>
+<p align="justify">
+B. Mieć dobry system czytania. Czytanie artykułów naukowych jest ciężkie. Czasami “przedzieranie się” jest bardziej odpowiednim słowem. Są różne sposoby czytania artykułów naukowych. Wcale nie trzeba ich czytać od początku do końca! Dobrym sposobem jest:
+</p>
+<ol type="1">
+<li>przeczytanie abstraktu i wstępu,</li>
+<li>przeczytanie zakończenia,</li>
+<li>przeczytanie środkowej części artykułu,</li>
+<li>powtórzenie zakończenia, dla lepszego utrwalenia informacji.</li>
+</ol>
+<p align="justify">
+Sposób czytania w dużej mierze zależy od tego, co chcemy wyciągnąć z artykułów i do czego dalej użyjemy tej wiedzy. Czasem wystarczy pobieżne przejrzenie, czasem konieczne jest całkowite zanurzenie się w danej strukturze wiedzy.
+</p>
+<p align="justify">
+Zawsze warto jest robić notatki i zaznaczenia - wewnątrz pliku, w zewnętrznym pliku, czy na papierze. Jeśli coś jest gwarantowane, to to, że za kilka miesięcy nie będziemy pamiętać z czytania prawie nic. Notatki wtedy będą ratującymi skórę bodźcami, które przypomną nam o czym czytaliśmy. Trzeba się też rozeznać, kiedy ma się komfortowy czas na czytanie trudnych treści. Dla niektórych jest to poranek, dla innych późny wieczór (to ja). Nie ma co się zmuszać do czytania, jeśli nie mamy koncentracji i ewidentnie czytanie nie idzie. Często jednak warto lekko przymusić się i spróbować - po pierwszych 5 minutach może okazać się, że dalej już “jakoś poszło.” Bardzo rzadko będziemy mieli taki cudowny stan, w którym czytanie jest lekkie i sprawia radość. Przed czytaniem warto zrobić lekki wysiłek fizyczny - czasami pomaga na koncentrację.
 </p>
 <figure>
 <img src="dal4.png" style="width:50.0%" alt="“student looking for scientific data” - Craiyon" /><figcaption aria-hidden="true">“student looking for scientific data” - Craiyon</figcaption>
 </figure>
-<p>To tyle, kilka pomysłów na poszukiwania. Podkreślam - jest to subiektywna lista. Każdy wypracuje sobie własny najlepszy sposób. <strong>Poszukiwanie wiedzy to żywy proces</strong>, który za każdym razem się zmienia i ewoluuje. Pojawiają się nowe źródła, algorytmy zmieniają swoje działanie, my zmieniamy zainteresowania i uczymy się lepiej organizować wiedzę.</p>
+<p align="justify">
+To tyle, kilka pomysłów na poszukiwania. Podkreślam - jest to subiektywna lista. Każdy wypracuje sobie własny najlepszy sposób. <strong>Poszukiwanie wiedzy to żywy proces</strong>, który za każdym razem się zmienia i ewoluuje. Pojawiają się nowe źródła, algorytmy zmieniają swoje działanie, my zmieniamy zainteresowania i uczymy się lepiej organizować wiedzę.
+</p>
 <p>Na pewno warto eksperymentować, testować różne sposoby. Któryś w końcu zadziała.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
