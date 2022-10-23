@@ -409,15 +409,14 @@ Gdzie:
 
 $$ C = \frac{{{n}\choose{k}}\frac{1}{B(\alpha,\beta)}}{\int{{n}\choose{k}} \cdot p^k(1-p)^{n-k} \frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)}dp} $$
 
-No dobra, teraz mała sztuczka. Przyjmijmy, że $\alpha = \alpha_0 +k$ i $\beta = \beta_0 + n - k$, gdzie $\alpha_0$ i $\beta_0$ to parametry rozkładu *a priori*. Zauważmy, że ponieważ $C$ nie zależy od $p$, to jest jakąś wartością stałą, skalującą rozkład. 
+No dobra, teraz mała sztuczka. Zauważmy teraz, że rozkład Beta jest proporcjonalny do $p^{\alpha-1}(1-p)^{\beta-1}$:
 
-$$P(k,n|p) \propto p^{\alpha-1}(1-p)^{\beta-1}$$
-
-Zauważmy teraz, że rozkład Beta jest proporcjonalny do $p^{\alpha-1}(1-p)^{\beta-1}$:
+Zauważmy też, że nasz w szukanym prze nas rozkładzie, $C$ nie zależy od $p$, jest więc jakąś wartością stałą, skalującą rozkład. 
+$$P(k,n|p) \propto p^{\alpha-1 + k}(1-p)^{\beta-1 + k - n}$$
 
 $$\frac{p^{\alpha-1}(1-p)^{\beta-1}}{B(\alpha,\beta)}\propto p^{\alpha-1}(1-p)^{\beta-1}$$
 
-Nasz rozkład jest proporcjonalny do rozkładu Beta. A ponieważ nasz $P(p|k,n)$ jest rozkładem prawdopodobieństwa, to jego suma/całka  musi równać się 1. Rozkładem proporcjonalnym do rozkładu Beta, którego suma/całka wynosi 1, **jest właśnie rozkład Beta**, a więc:
+Przyjmijmy, że $\alpha = \alpha_0 +k$ i $\beta = \beta_0 + n - k$, gdzie $\alpha_0$ i $\beta_0$ to parametry $\alpha$ i $\beta$ z powyższego wzoru. Teraz już powinniśmy zauważyć, że nasz rozkład jest proporcjonalny do rozkładu Beta. A ponieważ nasz $P(p|k,n)$ jest rozkładem prawdopodobieństwa, to jego suma/całka  musi równać się 1. Rozkładem proporcjonalnym do rozkładu Beta, którego suma/całka wynosi 1, **jest właśnie rozkład Beta**, a więc:
 
 $$ C = \frac{1}{B(\alpha,\beta)}$$
 
