@@ -10,7 +10,7 @@ knitr::include_graphics("clock.jpg")
 ```
 
 <br>
-<br>
+
 
 [Poszukiwanie wiedzy naukowej: Subiektywny poradnik](https://revan-tech.github.io/poradniki/P1_szukanie/szukanie)
 
