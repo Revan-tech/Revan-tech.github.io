@@ -6,16 +6,16 @@ site: distill::distill_website
 ::: {.floatting}
 
 ```{r out.width='30%', out.extra='style="float:left; padding:20px"', echo=FALSE}
-knitr::include_graphics("clock.png") 
+knitr::include_graphics("clock.jpg") 
 ```
 
 <br>
 <br>
 
-https://revan-tech.github.io/poradniki/P1_szukanie/szukanie
+[Poszukiwanie wiedzy naukowej: Subiektywny poradnik](https://revan-tech.github.io/poradniki/P1_szukanie/szukanie)
 
+Poradnik wprowadzający dla osób studiujących (i nie tylko!), które chciałyby znaleźć artykuły i książki naukowe - do esejów, prezentacji i różnorakich projektów. Pokazujemy przydatne źródła i narzędzia, radzimy co zrobić, żeby nie utonąć w nadmiarze danych.
 
-opis
 
 :::
 
