@@ -35,7 +35,7 @@ Może to zabrzmi zniechęcająco, ale to naprawdę ważne. I zasadniczo sprowadz
 - jak będziemy czytać artykuły i gdzie będziemy robić notatki?
 
 <p align="justify">
-Nie ma żadnej konieczności trzymania się tych zasad! Nie przyjedzie do Was policja naukowa na sygnale, gdy po prostu wpiszemy w wyszukiwarkę pierwsze hasło, które przyjdzie nam do głowy. Te zasady mogą się jednak przydać w momencie, gdy poczujemy zagubienie lub przytłoczenie nadmiarem treści. A czasem lepiej jest *po prostu płynąć* i dać się zaskoczyć znalezionymi materiałami.</p>
+Nie ma żadnej konieczności trzymania się tych zasad! Nie przyjedzie do Was policja naukowa na sygnale, gdy po prostu wpiszemy w wyszukiwarkę pierwsze hasło, które przyjdzie nam do głowy. Te zasady mogą się jednak przydać w momencie, gdy poczujemy zagubienie lub przytłoczenie nadmiarem treści. Inna sprawa, że czasem faktycznie lepiej jest *po prostu płynąć* i dać się zaskoczyć znalezionymi materiałami.</p>
 
 ![“Using google scholar” - DALL-E](dal2.jpg){width=50%}
 
