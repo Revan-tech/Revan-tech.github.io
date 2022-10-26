@@ -3,4 +3,18 @@ title: "Poradniki"
 site: distill::distill_website
 ---
 
-...pojawią się wkrótce...
+::: {.floatting}
+
+```{r out.width='30%', out.extra='style="float:left; padding:20px"', echo=FALSE}
+knitr::include_graphics("clock.png") 
+```
+
+
+https://revan-tech.github.io/poradniki/P1_szukanie/szukanie
+
+
+opis
+
+:::
+
+

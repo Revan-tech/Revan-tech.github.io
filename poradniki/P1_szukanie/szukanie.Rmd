@@ -5,15 +5,12 @@ description: |
 preview: "dal1.jpg"
 author:
   - name: Kamil Kopacewicz
+  url: https://revan-tech.github.io/kontakt.html
 date: 10-15-2022
 output:
   distill::distill_article:
     self_contained: false
     toc: true
-bibliography: bib.bib
-categories: 
-  - Poradnik
-csl: apa.csl
 ---
 
 <p align="justify">
@@ -79,7 +76,8 @@ Niezależnie od wybranego moralnego punktu widzenia, serwisy takie jak Libgen i 
 Przed skorzystaniem z Libgena warto zainstalować Adblocka w swojej przeglądarce, by nie zostać zbombardowanym(ą) reklamami. Libgen ma wiele adresów, które z czasem mogą się zmieniać - adres można łatwo znaleźć przez Google.</p>
 
 <p align="justify">
-Poniżej zamieszczam niezwykle przydatny poradnik korzystania ze wspomnianych stron (w języku angielskim):
+Poniżej zamieszczam niezwykle przydatny poradnik korzystania ze wspomnianych stron (w języku angielskim):</p>
+<p align="justify">
 https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/edit 
 Poradnik wspomina szereg innych stron i wyjaśnia jak z nich korzystać.</p>
 
