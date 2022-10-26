@@ -9,6 +9,8 @@ site: distill::distill_website
 knitr::include_graphics("clock.png") 
 ```
 
+<br>
+<br>
 
 https://revan-tech.github.io/poradniki/P1_szukanie/szukanie
 
