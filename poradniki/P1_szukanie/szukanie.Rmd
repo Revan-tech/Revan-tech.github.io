@@ -17,7 +17,7 @@ output:
 Cześć! Jesteście na Sortowni Wiedzy i jakkolwiek tu trafiliście, mogę założyć, że jesteście zainteresowani znalezieniem jakiegoś przydatnego kawałka wiedzy, informacji, naukowej treści. Zaczynacie przygodę z badaniami, ale nie jesteście pewni gdzie zacząć? Wyszukiwanie informacji może być przytłaczające, dlatego postanowiliśmy stworzyć krótki poradnik, który zaproponuje pewne podejście do przeszukiwania zbiorów. Pojawią się też powiązane kwestie, czyli budowanie metody, katalogowanie artykułów i ich czytanie.
 **Nie ma jednego sposobu na szukanie wiedzy**, więc nie traktujcie tego tekstu autorytatywnie. Pokażę tu jedynie sposób, który dość dobrze się sprawdza.  </p>
 
-![“student looking for scientific data” - DALL-E](dal1.png){width=70%}
+![“student looking for scientific data” - DALL-E](dal1.jpg){width=70%}
 
 
 ## Przed wyruszeniem na poszukiwanie wiedzy, zbuduj sobie metodę
@@ -37,7 +37,7 @@ Może to zabrzmi zniechęcająco, ale to naprawdę ważne. I zasadniczo sprowadz
 <p align="justify">
 Nie ma żadnej konieczności trzymania się tych zasad! Nie przyjedzie do Was policja naukowa na sygnale, gdy po prostu wpiszemy w wyszukiwarkę pierwsze hasło, które przyjdzie nam do głowy. Te zasady mogą się jednak przydać w momencie, gdy poczujemy zagubienie lub przytłoczenie nadmiarem treści. A czasem lepiej jest *po prostu płynąć* i dać się zaskoczyć znalezionymi materiałami.</p>
 
-![“Using google scholar” - DALL-E](dal2.png){width=50%}
+![“Using google scholar” - DALL-E](dal2.jpg){width=50%}
 
 
 
@@ -50,7 +50,7 @@ Można też zacząć od naszej [Bazy Wiedzy](https://szpm.shinyapps.io/baza_wied
 **[Cennym źródłem jest WordCat](https://www.worldcat.org/)**, strona zawierająca dane bibliograficzne książek, a także pobliskie biblioteki, w których daną książkę można znaleźć. A jeśli szukamy wyłącznie książek - to trzeba zajrzeć na [Google Books](https://books.google.pl/). Serwis ten wyświetla fragmenty książek, czasami to wystarczy, by zorientować się, czy książka jest nam potrzebna.</p>
 
 
-![“Using Scihub” - DALL-E](dal3.png){width=50%} 
+![“Using Scihub” - DALL-E](dal3.jpg){width=50%} 
  
 # Dostęp do artykułów i szara strefa, którą każdy zna - ale o której nie wypada mówić
 <p align="justify">
@@ -115,7 +115,7 @@ Ostatnio pojawiają się też strony takie jak [ResearchRabbit](https://research
 
 
 
-![“In Search of Lost Time” - DALL-E](dal5.png){width=50%} 
+![“In Search of Lost Time” - DALL-E](dal5.jpg){width=50%} 
 
 
 # Weryfikacja treści
@@ -134,7 +134,7 @@ Nasze spojrzenie na wyniki badań i znaczenie publikacji może też zależeć od
  
  
 
-![“The pile of shame” - DALL-E](dal6.png){width=60%} 
+![“The pile of shame” - DALL-E](dal6.jpg){width=60%} 
 
 # Kupka wstydu
 
@@ -161,7 +161,7 @@ Są różne sposoby czytania artykułów naukowych. Wcale nie trzeba ich czytać
 Zawsze warto jest robić notatki i zaznaczenia - wewnątrz pliku, w zewnętrznym pliku, czy na papierze. Jeśli coś jest gwarantowane, to to, że za kilka miesięcy nie będziemy pamiętać z czytania prawie nic. Notatki wtedy będą ratującymi skórę bodźcami, które przypomną nam o czym czytaliśmy.
 Trzeba się też rozeznać, kiedy ma się komfortowy czas na czytanie trudnych treści. Dla niektórych jest to poranek, dla innych późny wieczór (to ja). Nie ma co się zmuszać do czytania, jeśli nie mamy koncentracji i ewidentnie czytanie nie idzie. Często jednak warto lekko przymusić się i spróbować - po pierwszych 5 minutach może okazać się, że dalej już “jakoś poszło”. Bardzo rzadko będziemy mieli taki cudowny stan, w którym czytanie jest lekkie i sprawia radość. Przed czytaniem warto zrobić lekki wysiłek fizyczny - czasami pomaga na koncentrację.</p>
 
-![“student looking for scientific data” - Craiyon](dal4.png){width=50%}
+![“student looking for scientific data” - Craiyon](dal4.jpg){width=50%}
 
 
 <p align="justify"> 
