@@ -82,7 +82,7 @@ https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/
 Poradnik wspomina szereg innych stron i wyjaśnia jak z nich korzystać.
 
 <p align="justify">
-W samym Libgenie można zaznaczyć wyszukiwanie książek naukowych, beletrystyki, artykułów naukowych (SciHub), a nawet komiksów. Wyszukiwać można po autorach, tytule, roku, języku etc. </p>
+W samym Libgenie można zaznaczyć wyszukiwanie książek naukowych, beletrystyki, artykułów naukowych (SciHub), a nawet komiksów. Wyszukiwać można po autorach, tytule, roku, języku etc. Jeśli wybierzemy jakąś książkę - klikamy tytuł, najlepiej wybrać *this mirror*, następnie GET lub któryś z czterech mirrorów. Mirrory zapasowe czasem działają szybciej niż główny mirror.</p>
 
 <p align="justify">
 Ewentualna wada Libgena? Mało jest tam materiałów w języku polskim. Na szczęście polskie artykuły naukowe zazwyczaj są w otwartym dostępie. Gorzej z polskimi książkami naukowymi - te jednak zazwyczaj wcale nie są bardzo drogie - wydanie ok. 30/40zł na książkę jest zawsze warte rozważenia. Nie zaszkodzi zajrzeć też na Docer i Chomikuj - ale tu uwaga - materiały na tych stronach zdecydowanie będą łamać prawa majątkowe danych dzieł. Jest to tym bardziej wątpliwe moralnie, że takie publikacje znajdziemy w bibliotekach publicznych. Dodatkowo, na Chomikuj łatwo przez przypadek ściągnąć potencjalnie niebezpieczny plik (szczególnie jeśli ma dziwną wielkość i końcówkę .exe). Co więcej, wersje chomikowe są zwykle kiepskiej jakości skanami. Lepiej odwiedzić lokalną bibliotekę lub [Ibuk Libra](https://libra.ibuk.pl) - jeśli mamy dostęp.</p>
@@ -161,7 +161,7 @@ Są różne sposoby czytania artykułów naukowych. Wcale nie trzeba ich czytać
 Zawsze warto jest robić notatki i zaznaczenia - wewnątrz pliku, w zewnętrznym pliku, czy na papierze. Jeśli coś jest gwarantowane, to to, że za kilka miesięcy nie będziemy pamiętać z czytania prawie nic. Notatki wtedy będą ratującymi skórę bodźcami, które przypomną nam o czym czytaliśmy.
 Trzeba się też rozeznać, kiedy ma się komfortowy czas na czytanie trudnych treści. Dla niektórych jest to poranek, dla innych późny wieczór (to ja). Nie ma co się zmuszać do czytania, jeśli nie mamy koncentracji i ewidentnie czytanie nie idzie. Często jednak warto lekko przymusić się i spróbować - po pierwszych 5 minutach może okazać się, że dalej już “jakoś poszło”. Bardzo rzadko będziemy mieli taki cudowny stan, w którym czytanie jest lekkie i sprawia radość. Przed czytaniem warto zrobić lekki wysiłek fizyczny - czasami pomaga na koncentrację.</p>
 
-![“student looking for scientific data” - Craiyon](dal4.jpg){width=50%}
+![“student looking for scientific data” - DALL-E](dal4.jpg){width=50%}
 
 
 <p align="justify"> 
