@@ -2,7 +2,7 @@
 title: "Poszukiwanie wiedzy naukowej w internecie: subiektywny poradnik"
 description: |
   Poradnik dla osób studiujących (i nie tylko!)
-preview: "dal1.jpg"
+preview: "clock.jpg"
 author:
   - name: Kamil Kopacewicz
     url: https://revan-tech.github.io/kontakt.html
