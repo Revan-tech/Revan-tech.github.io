@@ -21,8 +21,6 @@ categories:
 csl: apa.csl
 ---
 
-<p style="color:blue">Post będzie aktualizowany.</p>
-
 ## Mały wstęp
 
 Pomyślałem sobie, że napiszę taki mały tutorial statystyki Bayesowskiej.

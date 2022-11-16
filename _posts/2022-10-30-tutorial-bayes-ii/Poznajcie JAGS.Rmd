@@ -1,0 +1,122 @@
+---
+title: "Poznajcie JAGS"
+output: html_document
+---
+## Poznajcie JAGS
+
+Poznaliśmy już jak z wewnątrz wygląda estymacja MCMC. Czas więc na poznanie oprogramowania, które pozwoli nam na tworzenie i estymowanie (przy użyciu MCMC) nawet bardzo skomplikowanych modeli w łatwy sposób. Do wyboru jest ich kilka, ja przedstawie wam JAGS (*Just Another Gibbs Sampler*). Jest to samodzielne oprogramowanie, które można używać bezpośrednio lub za pomocą języków programowania, a także graficznego programu statystycznego JASP. Pobrać możecie go tutaj.
+
+### Regresja liniowa
+
+Powtórzmy naszą bayesowską regresję tym razem przy użyciu JAGS. 
+
+```{r tidy=FALSE, results='hide',fig.keep='all', layout="l-body-outset"}
+library(rjags)
+library(coda)
+library(MCMCvis)
+
+data = data.frame(y,x)
+# Składnia kodu modelu
+mod = "model {
+  # Likelihood
+  for (i in 1:length(y)) {
+    y[i] ~ dnorm(a + b * x[i], sigma^-2)
+  }
+
+  # Priors
+  a ~ dunif(-1000, 1000)
+  b ~ dnorm(0, 100^-1)
+  sigma ~ dunif(0.000001,1000)
+}"
+
+# what parameters we want to track
+params = c("a","b","sigma")
+
+## hyperparameters
+n.adapt = 100
+# number of iterations
+ni = 3000
+# burn in interval
+nb = 3000
+# thinning interval
+nt = 1
+# number of chains
+nc = 3
+
+
+# compile model
+jmod = jags.model(file = textConnection(mod), data = data, n.chains = nc, inits = NULL, n.adapt = n.adapt)
+
+# iterate through jmod for the extent of the burn-in
+update(jmod, n.iter=nb, by=1)
+
+# draw samples from the posterior for params
+post = coda.samples(jmod, params, n.iter = ni, thin = nt)
+
+plot(post)
+```
+```{r}
+summary(post)
+```
+Zauważcie, że Jags miał tylko 3000 iteracji wypalania, podczas gdy mój kod potrzebował ponad 16 razy więcej. JAGS używa kombinacji różnych agorytmów MCMC, ponado dokonuje za nas tunningu hiperparametrów (takich jak na przykład step size w Metropolis-Hasting). Stąd oprócz wypalania i losowania, mamy jeszcze adaptację. 
+
+### Diagnostyka
+
+# Bonus - diagramy Bayesowskie
+
+
+Warto wspomnieć, że do wizualizacji modeli bayesowskich często używa się diagramów (ja do ich budowy używam biblioteki daft w pythonie). W przypadku naszego modelu: 
+
+
+```{python, eval = F}
+import daft
+import matplotlib.pyplot as plt 
+
+pgm = daft.PGM(observed_style="inner")
+
+pgm.add_node("alpha", r"$\alpha$", 0.5, 2)
+pgm.add_node("beta", r"$\beta$", 1.5, 2)
+pgm.add_node("sigma", r"$\sigma$", 2.5, 2)
+pgm.add_node("x", r"$x_i$", 2, 1, observed=True)
+pgm.add_node("y", r"$y_i$", 1, 1, observed=True)
+
+pgm.add_edge("alpha", "y")
+pgm.add_edge("beta", "y")
+pgm.add_edge("x", "y")
+pgm.add_edge("sigma", "y")
+
+pgm.add_plate([0.5, 0.5, 2, 1], label=r"$i = 1, \ldots, N$", shift=-0.1)
+
+pgm.render()
+plt.show() 
+```
+
+
+
+```{python, echo=FALSE,results='hide',fig.keep='all',fig.align='center'}
+
+import daft
+import matplotlib.pyplot as plt 
+
+pgm = daft.PGM(observed_style="inner")
+
+pgm.add_node("alpha", r"$\alpha$", 0.5, 2)
+pgm.add_node("beta", r"$\beta$", 1.5, 2)
+pgm.add_node("sigma", r"$\sigma$", 2.5, 2)
+pgm.add_node("x", r"$x_i$", 2, 1, observed=True)
+pgm.add_node("y", r"$y_i$", 1, 1, observed=True)
+
+pgm.add_edge("alpha", "y")
+pgm.add_edge("beta", "y")
+pgm.add_edge("x", "y")
+pgm.add_edge("sigma", "y")
+
+pgm.add_plate([0.5, 0.5, 2, 1], label=r"$i = 1, \ldots, N$", shift=-0.1)
+
+pgm.render()
+plt.show() 
+```
+
+Diagram pokazuje, że rozkład zmiennej $y_i$ definują 3 nieobserwowalne parametry (pojedyńcze okręgi) i jedna obserwowalna zmienna (dwuwarstwowy okrąg).
+
+Mamy zdefiniowany model i wizualizajcę. Czas policzyś rozkłady *post priori*. Jak to zrobić? W przypadku prostej regresji liniowej istnieje rozwiązanie analityczne, ale nie na nim sie dziś skupimy. 
