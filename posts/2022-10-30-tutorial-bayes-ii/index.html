@@ -2384,13 +2384,13 @@ Post będzie aktualizowany.
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>all_chains</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>       a                 b              sigma       
- Min.   :-0.7595   Min.   :0.5025   Min.   : 8.115  
- 1st Qu.: 2.9092   1st Qu.:0.8924   1st Qu.:10.255  
- Median : 3.6507   Median :0.9559   Median :10.753  
- Mean   : 3.6393   Mean   :0.9561   Mean   :10.800  
- 3rd Qu.: 4.3751   3rd Qu.:1.0199   3rd Qu.:11.289  
- Max.   : 8.8833   Max.   :1.4666   Max.   :14.417  </code></pre>
+<pre><code>       a                b              sigma       
+ Min.   :0.2799   Min.   :0.6895   Min.   : 7.924  
+ 1st Qu.:4.3235   1st Qu.:1.1579   1st Qu.:10.128  
+ Median :5.0148   Median :1.2302   Median :10.620  
+ Mean   :5.0089   Mean   :1.2302   Mean   :10.669  
+ 3rd Qu.:5.7083   3rd Qu.:1.3026   3rd Qu.:11.163  
+ Max.   :9.0632   Max.   :1.7902   Max.   :14.263  </code></pre>
 </div>
 <p>Porównajmy z klasyczną regresją.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2399,8 +2399,8 @@ Post będzie aktualizowany.
 <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>a <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, b <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>, sigma <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/sd.html'>sd</a></span><span class='op'>(</span><span class='va'>m</span><span class='op'>$</span><span class='va'>residuals</span><span class='op'>)</span>, row.names <span class='op'>=</span> <span class='st'>"Parameters"</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>                  a         b    sigma
-Parameters 3.629699 0.9562273 10.57452</code></pre>
+<pre><code>                  a        b    sigma
+Parameters 5.043664 1.230289 10.44847</code></pre>
 </div>
 <h2 id="diagnostyka">Diagnostyka</h2>
 <p>Gdy już mamy nasz model, musimy sprawdzić czy został wyestymowany poprawnie oraz w jakim zakresie jest w stanie odtworzyć zaobserwowane dane.</p>
@@ -2452,15 +2452,15 @@ W
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">a</td>
-<td style="text-align: right;">1.002925</td>
+<td style="text-align: right;">1.005779</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">b</td>
-<td style="text-align: right;">1.000061</td>
+<td style="text-align: right;">1.000064</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sigma</td>
-<td style="text-align: right;">1.007122</td>
+<td style="text-align: right;">1.000537</td>
 </tr>
 </tbody>
 </table>
@@ -2526,7 +2526,7 @@ W
 <span class='fu'>ESS</span><span class='op'>(</span><span class='va'>results</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>[1] 913.2895</code></pre>
+<pre><code>[1] 1086.461</code></pre>
 </div>
 <p>Teraz policzmy ESS dla odchudzonego łańcucha.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2534,7 +2534,7 @@ W
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ESS</span><span class='op'>(</span><span class='va'>thinned_results</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>[1] 913.1932</code></pre>
+<pre><code>[1] 1081.041</code></pre>
 </div>
 <p>EES zmniejszyło się względem nieodchudzonego łańcucha. Generalnie, znacznie lepszą metodą redukowania wpływu autokorelacji, jest użycie większej liczby dłuższych łańcuchów. Odchudzanie należy stosować tylko jeśli mierzymy się z bardzo dużą autokorelacją. Reguła kciuka została zaproponowana w tej książce <span class="citation" data-cites="christensen2010bayesian">(<a href="#ref-christensen2010bayesian" role="doc-biblioref">Christensen et al., 2010</a>)</span> - odchudzać jeśli duża autokorelacja występuje powyżej <em>lag</em> &gt; 30. W naszym przypadku było to więc niejako uzasadnione. Nie należy jednak stosować odchudzania jako rutyny w MCMC.</p>
 <h3 id="posterior-predictive-check">Posterior predictive check</h3>
