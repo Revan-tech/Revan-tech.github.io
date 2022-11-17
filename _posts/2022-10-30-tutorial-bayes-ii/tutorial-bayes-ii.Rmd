@@ -182,7 +182,7 @@ ggplot(x_samples_in_space, mapping = aes(x = Iteration, y = x, color = chain))+
 
 Widzimy, że wszytkie łańcuchy się zbiegły. Co prawda, nie daje nam to całkowitej pewności, że łańcuchy odnalazły właściwą przestrzeń.  
 
-Działanie algorytmu MCMC dizeli się na dwie części: wypalanie (*burn-in*) i losowanie z rozkładu *post priori*. Wypalamy łańcuchy dopóki się nie zbiegną, wtedy możemy rozpocząć estymacje rozkładu *post priori* z próbek z łańcuchów. Im większej liczby łańcuchów użyjemy, tym silniejszą mamy przesłankę (gdy wszystkie się zbiegną), że odnaleźliśmy właściwą przestrzeń losowania.
+Działanie algorytmu MCMC dzieli się na dwie części: wypalanie (*burn-in*) i losowanie z rozkładu *post priori*. Wypalamy łańcuchy dopóki się nie zbiegną, wtedy możemy rozpocząć estymacje rozkładu *post priori* z próbek z łańcuchów. Im większej liczby łańcuchów użyjemy, tym silniejszą mamy przesłankę (gdy wszystkie się zbiegną), że odnaleźliśmy właściwą przestrzeń losowania.
 
 
 ### Przykład praktyczny - Bayesowska Regresja Liniowa
@@ -414,7 +414,7 @@ $$\sigma^2 = \frac{\tau}{N}\mathrm{Var}(\theta)$$
 Dlaczego tak jest, to na razie pominiemy (wymagało by to dłuższego zatrzymania się nad tym problemem, niemniej być może do tego wrócimy). $\tau$ to zintegrowana funkcja autokorelacji (*integrated autocorrelation function*) dana wzorem:
 
 $$ \tau =1 + 2\sum^N_{t= 1} \mathrm{aCor(t)}$$
-Wobec tego $\frac{N}{\tau}$ to efektywna liczba próbek (ESS), a $\tau$ liczba iteracji jakie musi minąć łańcuch zanim "zapomni" gdzie sie zaczął. 
+Wobec tego $\frac{N}{\tau}$ to efektywna liczba próbek (ESS), a $\tau$ to liczba iteracji jakie musi minąć łańcuch zanim "zapomni" gdzie sie zaczął. 
 
 Popatrzmy na wykres autokorelacji dla $\beta$. Do pewnego $t$ autokorelacja jest malejącą funkcją, po przekroczeniu $t$ zaczyna oscylować wokół 0. Ponieważ autokorelacje mogą być tylko pozytywne gdy $N$ dąży do nieskonczoności, obserwowane empirycznie negatywne korelacje na pewno wynikają z szumu [@geyer1992practical]. Sumowanie ich by otrzymać zmniejszy nam estymatę $\tau$. Rownież te  małe dodatnie korelacje są efektem szumu.     
 
