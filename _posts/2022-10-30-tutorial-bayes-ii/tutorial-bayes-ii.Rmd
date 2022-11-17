@@ -26,7 +26,7 @@ csl: apa.csl
 
 ## Wstęp
 
-W poprzedniej <span style="color:blue">[części](https://revan-tech.github.io/posts/2022-07-31-tutorial-bayes/)</span> dowiedzieliśmy się na czym polega wnioskowanie bayesowskie. W następnych częściach będziemy budować modele bayesowskie u będziemy używać do tego dedykowanych pakietów i oprogramowania. Dlatego w dzisiaj dowiemy się jak od wewnątrz wygląda estymacja rozkładów *post priori*, gdy nie jest to możliwe metodą analityczną. 
+W poprzedniej <span style="color:blue">[części](https://revan-tech.github.io/posts/2022-07-31-tutorial-bayes/)</span> dowiedzieliśmy się na czym polega wnioskowanie bayesowskie. W następnych częściach będziemy budować modele bayesowskie i będziemy używać do tego dedykowanych pakietów i oprogramowania. Dlatego dzisiaj dowiemy się jak od wewnątrz wygląda estymacja rozkładów *post priori*, gdy nie jest to możliwe metodą analityczną. 
 
 Załóżmy, że zdefiniowaliśmy sobie jakąś funkcję wiarygodności i rozkłady *a priori* parametrów $\theta$. Chcemy numerycznie przybliżyć rozkład $P(\theta|y)$ 
 
@@ -362,7 +362,7 @@ Każdy parametr spełnia kryterium Gelmana-Rubina.
 
 Jak wspominałem już wielokrotnie wcześniej, MCMC ma symulować losowanie z rozkładu *a posteriori*. Wyobraźmy sobie taką sytuację - losujemy 1000 osób, by estymować rozkład wzrostu w populacji. Obserwacje są od siebie niezależne, wylosowanie osoby A nie ma wpływu na prawdopodobieństwo wylosowania osoby B. W przypadku łańcuchów nie jest to prawdą. Zauważmy, że wylosowanie obserwacji B, zależy od tego jaką wartośc ma obserwacja A. 
 
-W MCMC poruszamy się od obserwacji do obserwacji różniących się o jakąś małą losową wartość. W następstwie tego w łańcuchach występuje autokorelacja. Jeśli jest duża, może zbiasować nasz rozkład *a posteriori*, ponieważ pewne wartości będą nadreprezentowane, a efektywna liczba prób z rozkładu *post priori* będzie mniejsza niż *N*.
+W MCMC poruszamy się od obserwacji do obserwacji różniących się o jakąś małą losową wartość. W następstwie w łańcuchach występuje autokorelacja. Jeśli jest duża, może zbiasować nasz rozkład *a posteriori*, ponieważ pewne wartości będą nadreprezentowane, a efektywna liczba prób z rozkładu *post priori* będzie mniejsza niż *N*.
 
 Autokowariancja dla opóźnienia (*lag*) $t$ jest zdefiniowana tak:
 

@@ -2139,7 +2139,7 @@ document.addEventListener('DOMContentLoaded', function() {
 Post będzie aktualizowany.
 </p>
 <h2 id="wstęp">Wstęp</h2>
-<p>W poprzedniej <span style="color:blue"><a href="https://revan-tech.github.io/posts/2022-07-31-tutorial-bayes/">części</a></span> dowiedzieliśmy się na czym polega wnioskowanie bayesowskie. W następnych częściach będziemy budować modele bayesowskie u będziemy używać do tego dedykowanych pakietów i oprogramowania. Dlatego w dzisiaj dowiemy się jak od wewnątrz wygląda estymacja rozkładów <em>post priori</em>, gdy nie jest to możliwe metodą analityczną.</p>
+<p>W poprzedniej <span style="color:blue"><a href="https://revan-tech.github.io/posts/2022-07-31-tutorial-bayes/">części</a></span> dowiedzieliśmy się na czym polega wnioskowanie bayesowskie. W następnych częściach będziemy budować modele bayesowskie i będziemy używać do tego dedykowanych pakietów i oprogramowania. Dlatego dzisiaj dowiemy się jak od wewnątrz wygląda estymacja rozkładów <em>post priori</em>, gdy nie jest to możliwe metodą analityczną.</p>
 <p>Załóżmy, że zdefiniowaliśmy sobie jakąś funkcję wiarygodności i rozkłady <em>a priori</em> parametrów <span class="math inline">\(\theta\)</span>. Chcemy numerycznie przybliżyć rozkład <span class="math inline">\(P(\theta|y)\)</span></p>
 <p><span class="math display">\[P(\theta|y) \propto P(y|\theta)P(\theta)\]</span></p>
 <p>Istnieją dwie najpopularniejsze metody numerycznej estymacji modeli bayesowskich - MCMC i Variational Bayes.</p>
@@ -2267,7 +2267,7 @@ Post będzie aktualizowany.
 <p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-6-1.png" width="624" data-distill-preview=1 /></p>
 </div>
 <p>Widzimy, że wszytkie łańcuchy się zbiegły. Co prawda, nie daje nam to całkowitej pewności, że łańcuchy odnalazły właściwą przestrzeń.</p>
-<p>Działanie algorytmu MCMC dizeli się na dwie części: wypalanie (<em>burn-in</em>) i losowanie z rozkładu <em>post priori</em>. Wypalamy łańcuchy dopóki się nie zbiegną, wtedy możemy rozpocząć estymacje rozkładu <em>post priori</em> z próbek z łańcuchów. Im większej liczby łańcuchów użyjemy, tym silniejszą mamy przesłankę (gdy wszystkie się zbiegną), że odnaleźliśmy właściwą przestrzeń losowania.</p>
+<p>Działanie algorytmu MCMC dzieli się na dwie części: wypalanie (<em>burn-in</em>) i losowanie z rozkładu <em>post priori</em>. Wypalamy łańcuchy dopóki się nie zbiegną, wtedy możemy rozpocząć estymacje rozkładu <em>post priori</em> z próbek z łańcuchów. Im większej liczby łańcuchów użyjemy, tym silniejszą mamy przesłankę (gdy wszystkie się zbiegną), że odnaleźliśmy właściwą przestrzeń losowania.</p>
 <h3 id="przykład-praktyczny---bayesowska-regresja-liniowa">Przykład praktyczny - Bayesowska Regresja Liniowa</h3>
 <p>Nabyliśmy już intuicję, jak działa MCMC. Zabierzmy się więc za prawdziwy statystyczny problem.</p>
 <p>Powiedzmy, że chcemy policzyć bayesowską regresję liniową zmiennej <span class="math inline">\(y\)</span> ze względu na <span class="math inline">\(x\)</span>:</p>
@@ -2384,13 +2384,13 @@ Post będzie aktualizowany.
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>all_chains</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>       a                b              sigma       
- Min.   :0.3533   Min.   :0.4773   Min.   : 7.076  
- 1st Qu.:4.2451   1st Qu.:0.8510   1st Qu.: 9.032  
- Median :4.8853   Median :0.9118   Median : 9.465  
- Mean   :4.8819   Mean   :0.9117   Mean   : 9.508  
- 3rd Qu.:5.5330   3rd Qu.:0.9725   3rd Qu.: 9.945  
- Max.   :9.5630   Max.   :1.3593   Max.   :13.307  </code></pre>
+<pre><code>       a                 b              sigma       
+ Min.   :-0.8006   Min.   :0.3943   Min.   : 8.602  
+ 1st Qu.: 3.2810   1st Qu.:0.8971   1st Qu.:10.772  
+ Median : 4.0443   Median :0.9766   Median :11.301  
+ Mean   : 4.0388   Mean   :0.9766   Mean   :11.356  
+ 3rd Qu.: 4.8076   3rd Qu.:1.0560   3rd Qu.:11.884  
+ Max.   : 9.0998   Max.   :1.5642   Max.   :15.768  </code></pre>
 </div>
 <p>Porównajmy z klasyczną regresją.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2399,8 +2399,8 @@ Post będzie aktualizowany.
 <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>a <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, b <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>, sigma <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/sd.html'>sd</a></span><span class='op'>(</span><span class='va'>m</span><span class='op'>$</span><span class='va'>residuals</span><span class='op'>)</span>, row.names <span class='op'>=</span> <span class='st'>"Parameters"</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>                  a         b    sigma
-Parameters 4.874923 0.9117472 9.332462</code></pre>
+<pre><code>                  a        b    sigma
+Parameters 4.051894 0.977078 11.09892</code></pre>
 </div>
 <h2 id="diagnostyka">Diagnostyka</h2>
 <p>Gdy już mamy nasz model, musimy sprawdzić czy został wyestymowany poprawnie oraz w jakim zakresie jest w stanie odtworzyć zaobserwowane dane.</p>
@@ -2452,15 +2452,15 @@ W
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">a</td>
-<td style="text-align: right;">1.001728</td>
+<td style="text-align: right;">1.005496</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">b</td>
-<td style="text-align: right;">1.000017</td>
+<td style="text-align: right;">1.000034</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sigma</td>
-<td style="text-align: right;">1.004819</td>
+<td style="text-align: right;">1.008036</td>
 </tr>
 </tbody>
 </table>
@@ -2508,7 +2508,7 @@ W
 <p>Jednak, jeżeli obserwacje są skorelowane, wariancja wynosi:</p>
 <p><span class="math display">\[\sigma^2 = \frac{\tau}{N}\mathrm{Var}(\theta)\]</span></p>
 <p>Dlaczego tak jest, to na razie pominiemy (wymagało by to dłuższego zatrzymania się nad tym problemem, niemniej być może do tego wrócimy). <span class="math inline">\(\tau\)</span> to zintegrowana funkcja autokorelacji (<em>integrated autocorrelation function</em>) dana wzorem:</p>
-<p><span class="math display">\[ \tau =1 + 2\sum^N_{t= 1} \mathrm{aCor(t)}\]</span> Wobec tego <span class="math inline">\(\frac{N}{\tau}\)</span> to efektywna liczba próbek (ESS), a <span class="math inline">\(\tau\)</span> liczba iteracji jakie musi minąć łańcuch zanim “zapomni” gdzie sie zaczął.</p>
+<p><span class="math display">\[ \tau =1 + 2\sum^N_{t= 1} \mathrm{aCor(t)}\]</span> Wobec tego <span class="math inline">\(\frac{N}{\tau}\)</span> to efektywna liczba próbek (ESS), a <span class="math inline">\(\tau\)</span> to liczba iteracji jakie musi minąć łańcuch zanim “zapomni” gdzie sie zaczął.</p>
 <p>Popatrzmy na wykres autokorelacji dla <span class="math inline">\(\beta\)</span>. Do pewnego <span class="math inline">\(t\)</span> autokorelacja jest malejącą funkcją, po przekroczeniu <span class="math inline">\(t\)</span> zaczyna oscylować wokół 0. Ponieważ autokorelacje mogą być tylko pozytywne gdy <span class="math inline">\(N\)</span> dąży do nieskonczoności, obserwowane empirycznie negatywne korelacje na pewno wynikają z szumu <span class="citation" data-cites="geyer1992practical">(<a href="#ref-geyer1992practical" role="doc-biblioref">Geyer, 1992</a>)</span>. Sumowanie ich by otrzymać zmniejszy nam estymatę <span class="math inline">\(\tau\)</span>. Rownież te małe dodatnie korelacje są efektem szumu.</p>
 <p>Zwróćmy uwagę na wzór na autokowariancję. Im większy <em>lag</em> <span class="math inline">\(t\)</span> tym mniejsza liczebność próbki (wynosi <span class="math inline">\(N-t\)</span>), z której liczymy autokowariancę. W związku z tym im większe <span class="math inline">\(t\)</span> tym bardziej zaszumione estymaty autokowariancji otrzymujemy. Jednym ze sposóbw na obejście tego problemu jest estymowanie <span class="math inline">\(\tau\)</span> w następujący sposób:</p>
 <p><span class="math display">\[ \tau =1 + 2\sum^M_{t= 1} \mathrm{aCor(t)}\]</span> Gdzie <span class="math inline">\(M\)</span> jest ostatnią największą wartością <span class="math inline">\(t\)</span> dla której wszystkie <span class="math inline">\(t &lt; M\)</span> mają dodatnią autokowariancję.</p>
@@ -2526,7 +2526,7 @@ W
 <span class='fu'>ESS</span><span class='op'>(</span><span class='va'>results</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>[1] 1335</code></pre>
+<pre><code>[1] 716.2061</code></pre>
 </div>
 <p>Teraz policzmy ESS dla odchudzonego łańcucha.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2534,7 +2534,7 @@ W
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ESS</span><span class='op'>(</span><span class='va'>thinned_results</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>[1] 1332.089</code></pre>
+<pre><code>[1] 717.545</code></pre>
 </div>
 <p>EES zmniejszyło się względem nieodchudzonego łańcucha. Generalnie, znacznie lepszą metodą redukowania wpływu autokorelacji, jest użycie większej liczby dłuższych łańcuchów. Odchudzanie należy stosować tylko jeśli mierzymy się z bardzo dużą autokorelacją. Reguła kciuka została zaproponowana w tej książce <span class="citation" data-cites="christensen2010bayesian">(<a href="#ref-christensen2010bayesian" role="doc-biblioref">Christensen et al., 2010</a>)</span> - odchudzać jeśli duża autokorelacja występuje powyżej <em>lag</em> &gt; 30. W naszym przypadku było to więc niejako uzasadnione. Nie należy jednak stosować odchudzania jako rutyny w MCMC.</p>
 <h3 id="posterior-predictive-check">Posterior predictive check</h3>
