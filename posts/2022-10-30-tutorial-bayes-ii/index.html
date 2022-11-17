@@ -2385,12 +2385,12 @@ Post będzie aktualizowany.
 </code></pre>
 </div>
 <pre><code>       a                 b              sigma       
- Min.   :-0.8006   Min.   :0.3943   Min.   : 8.602  
- 1st Qu.: 3.2810   1st Qu.:0.8971   1st Qu.:10.772  
- Median : 4.0443   Median :0.9766   Median :11.301  
- Mean   : 4.0388   Mean   :0.9766   Mean   :11.356  
- 3rd Qu.: 4.8076   3rd Qu.:1.0560   3rd Qu.:11.884  
- Max.   : 9.0998   Max.   :1.5642   Max.   :15.768  </code></pre>
+ Min.   :-0.7595   Min.   :0.5025   Min.   : 8.115  
+ 1st Qu.: 2.9092   1st Qu.:0.8924   1st Qu.:10.255  
+ Median : 3.6507   Median :0.9559   Median :10.753  
+ Mean   : 3.6393   Mean   :0.9561   Mean   :10.800  
+ 3rd Qu.: 4.3751   3rd Qu.:1.0199   3rd Qu.:11.289  
+ Max.   : 8.8833   Max.   :1.4666   Max.   :14.417  </code></pre>
 </div>
 <p>Porównajmy z klasyczną regresją.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2399,8 +2399,8 @@ Post będzie aktualizowany.
 <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>a <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, b <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>, sigma <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/sd.html'>sd</a></span><span class='op'>(</span><span class='va'>m</span><span class='op'>$</span><span class='va'>residuals</span><span class='op'>)</span>, row.names <span class='op'>=</span> <span class='st'>"Parameters"</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>                  a        b    sigma
-Parameters 4.051894 0.977078 11.09892</code></pre>
+<pre><code>                  a         b    sigma
+Parameters 3.629699 0.9562273 10.57452</code></pre>
 </div>
 <h2 id="diagnostyka">Diagnostyka</h2>
 <p>Gdy już mamy nasz model, musimy sprawdzić czy został wyestymowany poprawnie oraz w jakim zakresie jest w stanie odtworzyć zaobserwowane dane.</p>
@@ -2452,15 +2452,15 @@ W
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">a</td>
-<td style="text-align: right;">1.005496</td>
+<td style="text-align: right;">1.002925</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">b</td>
-<td style="text-align: right;">1.000034</td>
+<td style="text-align: right;">1.000061</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sigma</td>
-<td style="text-align: right;">1.008036</td>
+<td style="text-align: right;">1.007122</td>
 </tr>
 </tbody>
 </table>
@@ -2468,7 +2468,7 @@ W
 <p>Każdy parametr spełnia kryterium Gelmana-Rubina.</p>
 <h3 id="autokorelacja">Autokorelacja</h3>
 <p>Jak wspominałem już wielokrotnie wcześniej, MCMC ma symulować losowanie z rozkładu <em>a posteriori</em>. Wyobraźmy sobie taką sytuację - losujemy 1000 osób, by estymować rozkład wzrostu w populacji. Obserwacje są od siebie niezależne, wylosowanie osoby A nie ma wpływu na prawdopodobieństwo wylosowania osoby B. W przypadku łańcuchów nie jest to prawdą. Zauważmy, że wylosowanie obserwacji B, zależy od tego jaką wartośc ma obserwacja A.</p>
-<p>W MCMC poruszamy się od obserwacji do obserwacji różniących się o jakąś małą losową wartość. W następstwie tego w łańcuchach występuje autokorelacja. Jeśli jest duża, może zbiasować nasz rozkład <em>a posteriori</em>, ponieważ pewne wartości będą nadreprezentowane, a efektywna liczba prób z rozkładu <em>post priori</em> będzie mniejsza niż <em>N</em>.</p>
+<p>W MCMC poruszamy się od obserwacji do obserwacji różniących się o jakąś małą losową wartość. W następstwie w łańcuchach występuje autokorelacja. Jeśli jest duża, może zbiasować nasz rozkład <em>a posteriori</em>, ponieważ pewne wartości będą nadreprezentowane, a efektywna liczba prób z rozkładu <em>post priori</em> będzie mniejsza niż <em>N</em>.</p>
 <p>Autokowariancja dla opóźnienia (<em>lag</em>) <span class="math inline">\(t\)</span> jest zdefiniowana tak:</p>
 <p><span class="math display">\[aCov(t) = \frac{1}{N - t} \sum_{n=1}^{N-t} (\theta_n - \mu_f)\,(\theta_{n+t}-\mu_\theta)\]</span></p>
 <p>gdzie</p>
@@ -2526,7 +2526,7 @@ W
 <span class='fu'>ESS</span><span class='op'>(</span><span class='va'>results</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>[1] 716.2061</code></pre>
+<pre><code>[1] 913.2895</code></pre>
 </div>
 <p>Teraz policzmy ESS dla odchudzonego łańcucha.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2534,7 +2534,7 @@ W
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ESS</span><span class='op'>(</span><span class='va'>thinned_results</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span>
 </code></pre>
 </div>
-<pre><code>[1] 717.545</code></pre>
+<pre><code>[1] 913.1932</code></pre>
 </div>
 <p>EES zmniejszyło się względem nieodchudzonego łańcucha. Generalnie, znacznie lepszą metodą redukowania wpływu autokorelacji, jest użycie większej liczby dłuższych łańcuchów. Odchudzanie należy stosować tylko jeśli mierzymy się z bardzo dużą autokorelacją. Reguła kciuka została zaproponowana w tej książce <span class="citation" data-cites="christensen2010bayesian">(<a href="#ref-christensen2010bayesian" role="doc-biblioref">Christensen et al., 2010</a>)</span> - odchudzać jeśli duża autokorelacja występuje powyżej <em>lag</em> &gt; 30. W naszym przypadku było to więc niejako uzasadnione. Nie należy jednak stosować odchudzania jako rutyny w MCMC.</p>
 <h3 id="posterior-predictive-check">Posterior predictive check</h3>
