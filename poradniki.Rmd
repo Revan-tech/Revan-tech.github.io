@@ -10,8 +10,6 @@ knitr::include_graphics("clock.jpg")
 ```
 
 <br>
-
-
 [Poszukiwanie wiedzy naukowej: Subiektywny poradnik](https://revan-tech.github.io/poradniki/P1_szukanie/szukanie)
 
 Poradnik wprowadzający dla osób studiujących (i nie tylko!), które chciałyby znaleźć artykuły i książki naukowe - do esejów, prezentacji i różnorakich projektów. Pokazujemy przydatne źródła i narzędzia, radzimy co zrobić, żeby nie utonąć w nadmiarze danych.

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial statystyki Bayesowskiej"
+title: "Tutorial Statystyki Bayesowskiej"
 description: |
   Częśc I: Nabywanie intuicji
 preview: "Statystyczne_Dygresje2.jpg"
