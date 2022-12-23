@@ -449,9 +449,16 @@ Ostatni sposób rozumowania, jaki tu opiszę, to [**analogia**](https://pl.wikip
 
 Specjalnie postanowiłem, żeby zobrazować to zjawisko, bo dotyczy to nie tylko analogii, ale semantyki w ogóle. Postrzegamy zjawiska, obiekty i procesy jako kategorie, które odznaczają się pewnymi cechami. Analogia jest umiejętnością dostrzegania podobnych cech, pomiędzy różnymi bytami. To prowadzi nas do języka figuratywnego i metafor, ale o tym opowiem w kolejnej części poradnika. W samej retoryce dowód z analogii nie jest szczególnie mocny, a przede wszystkim może prowadzić do nadużyć - jeśli autor wyciąga cechy, których w jakimś bycie nie ma: <br>
 - “Mężczyźni są jak lwy - dumni i szlachetni” - lwy nie znają takich ludzkich cech jak duma i szlachetność, porównanie jest nieuprawnione. Ewentualnie może to być projekcja naszych uczuć na lwy, ale w takim razie zdanie powinno brzmieć: “Mężczyźni są jak ludzki stereotyp lwów - dumni i szlachetni”.<br>
-- “Partia X to dosłownie komuniści! Chcą wprowadzać darmowe uniwersytety!” - o tyle, o ile jedną z cech komunizmu mogła być darmowa edukacja wyższa, to nie jest to w żadnej mierze cecha definiująca komunizm.
+- “Partia X to dosłownie komuniści! Chcą wprowadzać darmowe uniwersytety!” - o tyle, o ile jedną z cech komunizmu mogła być darmowa edukacja wyższa, to nie jest to w żadnej mierze cecha definiująca komunizm.<br>
 - “Partia Y to dosłownie faszyści! Chcą po raz kolejny dofinansować policję” - jak wyżej, dofinansowania policji nie są cechą definiującą faszyzmu. 
+
+<details>
+  <summary><span style="color: blue;">Analogia z Orwella</span></summary>
+<hr>
 - “Z całą tą poprawnością polityczną, to mamy już jak u Orwella” - zestawienie orwellowskiej Nowomowy (newspeak) z formami współczesnej uprzejmości językowej. Pomijając, że argument ignoruje większy kontekst książki Rok 1984 (język działający na usługi totalitarnej ideologii państwowej), to pomija dwa istotne aspekty: (1). nieproporcjonalna skala - nikt nie wymusza języka poprawności politycznej, język ten jest elementem ciągłej debaty publicznej, w której każdy może wziąć udział, (2). język zawsze się zmienia i ewoluuje, nie ma niczego niezwykłego w zmianie nazw pojęć, (3). język konserwatywnego dyskursu w równym stopniu narzuca wiele sposobów mówienia o rzeczywistości, wręcz wymuszając od dziesięcioleci mówienie w pewien sposób o kobietach, osobach nieheteronormatywnych i osobach innych niż białe. Ta analogia ma sens w zasadzie tylko wtedy, gdy żadna ze stron nie czytała książki.
+<hr>
+</details>
+
 
 
 ### Erystyka, argumentacja w prawdziwym życiu
