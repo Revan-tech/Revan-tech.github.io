@@ -260,7 +260,7 @@ I przede wszystkim - wartości są relacyjne, legitymizowane społecznie. Tak, k
 Jedna reklama powie: “Siła natury w nowym kremie! Tylko naturalne składniki!”<br>
 Druga reklama powie: “Nienaturalnie niskie ceny!”<br>
 
-Naturalność/prawdziwość skóry jest wartością pozytywną tylko do momentu, gdy wprowadzony zostaje dylemat etyczny, związany z zabijaniem zwierząt.
+Naturalność/prawdziwość skóry, z której zostało stworzone ubranie, jest wartością pozytywną tylko do momentu, gdy wprowadzony zostaje dylemat etyczny, związany z zabijaniem zwierząt.
 
 <details>
   <summary><span style="color: blue;">Chleb</span></summary>
