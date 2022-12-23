@@ -175,7 +175,7 @@ Ponieważ toposy są schematami, to znaczy, że mogą być też wizualne, dźwi�
 <details>
   <summary><span style="color: blue;">Toposy literackie</span></summary>
   <hr>
-Toposy literackie/poetyckie zatracają nieco element retoryczny i zbliżają się do kategorii motywów, schematycznych obrazowych konceptualizacji. Stąd niedaleko już do teorii ram i schematów poznawczych/wyobrażeniowych - opisywanych przez lingwistykę kognitywną.
+Toposy literackie/poetyckie zatracają nieco element retoryczny i zbliżają się do kategorii motywów, schematycznych obrazowych konceptualizacji. Stąd niedaleko już do [teorii ram](https://en.wikipedia.org/wiki/Frame_semantics_(linguistics)) i [schematów poznawczych/wyobrażeniowych](https://en.wikipedia.org/wiki/Image_schema) - opisywanych przez lingwistykę kognitywną.
 <hr>
 </details>
 
