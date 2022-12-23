@@ -168,7 +168,7 @@ Toposy charakteryzuje sześć cech: narracyjność, paradygmatyczność, interte
 <hr>
 </details>
 
-Ponieważ toposy są schematami, to znaczy, że mogą być też wizualne, dźwiękowe, a być może nawet zapachowe. Analizować można kolory, kompozycję wizualną, symbole, montaż filmowy, wpływ dźwięku na obraz, mechaniki gier komputerowych i tak dalej, i tak dalej. Przykład? Memiczne przedstawienie Donalda Tuska w TVP, bardzo czerwonego na twarzy (wysoka saturacja kolorów) - gotowy schemat argumentacyjny CZERWONE TO ZŁO, DIABEŁ. Takim materiałem zajmuje się multimodalna analiza dyskursu, semiotyczna analiza dyskursu.
+Ponieważ toposy są schematami, to znaczy, że mogą być też wizualne, dźwiękowe, a być może nawet zapachowe. Analizować można kolory, kompozycję wizualną, symbole, montaż filmowy, wpływ dźwięku na obraz, mechaniki gier komputerowych i tak dalej, i tak dalej. Przykład? [Memiczne przedstawienie Donalda Tuska w TVP](https://oko.press/tydzien-z-tuskiem-w-tvp-wrog-dziennikarzy-i-kobiet-niemiecki-demon-ktory-laknie-krwi), bardzo czerwonego na twarzy (wysoka saturacja kolorów) - gotowy schemat argumentacyjny CZERWONE TO ZŁO, DIABEŁ. Takim materiałem zajmuje się multimodalna analiza dyskursu, semiotyczna analiza dyskursu.
 
 
 
@@ -188,7 +188,7 @@ Zależy nam oczywiście na sile, mocy dowodów. Nie wszystkie metody naukowe są
 Sposoby konstrukcji argumentu (m.in. sylogizm) zostaną przedstawione w sekcji Kompozycja; póki jednak jesteśmy jeszcze przy samym doborze informacji, rozważmy zalety i wady związane ze szczegółowością lub ogólnością przywoływanych argumentów. 
 
 Powiedzmy, że rozmawiamy na temat tego, że spora liczba najbogatszych Europejczyków nie płaci podatków w Europie, korzystając z tzw. rajów podatkowych.
-Co możemy postulować?
+Co możemy postulować?<br>
  - Konieczne jest zmuszenie bogaczy do płacenia w Europie!<br>
  - Zwiększenie integracji europejskich systemów podatkowych i wzmocnienie instrumentów penalizacji nieuczciwych zachowań (wersja o wysokim poziomie abstrakcji).<br>
  - Uszczelnienie systemu podatkowego i danie administracjom odpowiednich narzędzi do ręki, które umożliwią łapanie nieuczciwych obywateli (wersja z metaforami).<br>
