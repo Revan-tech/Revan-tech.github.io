@@ -931,21 +931,24 @@ Ostatnie zdania chcę poświęcić ideałom - to wszystko jest po coś. Chcemy s
 
 
 Tekst oparłem w dużej mierze na dwóch książkach:<br>
-Barłowska, M., Budzyńska-Daca, A., & Wilczek, P. (2008). Retoryka. Wydawnictwo Naukowe PWN.<br>
+```
+Barłowska, M., Budzyńska-Daca, A., & Wilczek, P. (2008). Retoryka. Wydawnictwo Naukowe PWN.
 Budzyńska-Daca, A., Barłowska, M., & Załęska, M. (2010). Ćwiczenia z retoryki. Wydawnictwo Naukowe PWN.
+```
 
 Pewna część pomysłów na wykorzystanie lingwistyki kognitywnej pochodzi z książki:<br>
+```
 Hart, C. (2010). Critical Discourse Analysis and Cognitive Science: New Perspectives on Immigration Discourse. Palgrave Macmillan UK.
-
+```
 
 Rozumienie retoryki zawdzięczam w dużej części zajęciom (sylabus zawiera cenną literaturę):<br>
 https://usosweb.uw.edu.pl/kontroler.php?_action=katalog2/przedmioty/pokazPrzedmiot&kod=3502-JIS-1
 
 
 Kilka stron z Wikipedii pomoże rozeznać się w temacie i poznać nowe środki retoryczne:<br>
-https://pl.wikipedia.org/wiki/Kategoria:Retoryka 
-https://pl.wikipedia.org/wiki/Kategoria:%C5%9Arodki_stylistyczne
-https://pl.wikipedia.org/wiki/J%C4%99zykowe_%C5%9Brodki_perswazji 
+https://pl.wikipedia.org/wiki/Kategoria:Retoryka <br>
+https://pl.wikipedia.org/wiki/Kategoria:%C5%9Arodki_stylistyczne <br>
+https://pl.wikipedia.org/wiki/J%C4%99zykowe_%C5%9Brodki_perswazji <br>
 
 Trochę ciekawych materiałów (np. infografiki) znajduje się na stronie:<br>
 https://retoryka.edu.pl/o-retoryce
