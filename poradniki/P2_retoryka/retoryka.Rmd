@@ -33,9 +33,9 @@ output:
 - podręcznikiem do retoryki, kompleksowym omówieniem teorii<br>
 - wprowadzeniem do retoryki arystotelesowskiej<br>
 
+<br>
 
-
-Hej! Masz przed sobą tekst o retoryce. Tekst, którego zadaniem jest wprowadzenie pojęć, które umożliwiają analizę tekstów. Inaczej mówiąc, pojęcia te umożliwiają dekonstrukcję tekstu. Wiedząc jak można teksty rozłożyć, zyskasz jednocześnie intuicje - jak można teksty składać intencjonalnie, czyli tworzyć.
+**Hej!** Masz przed sobą tekst o retoryce. Tekst, którego zadaniem jest wprowadzenie pojęć, które umożliwiają analizę tekstów. Inaczej mówiąc, pojęcia te umożliwiają dekonstrukcję tekstu. Wiedząc jak można teksty rozłożyć, zyskasz jednocześnie intuicje - jak można teksty składać intencjonalnie, czyli tworzyć.
 Sklejam ten zestaw pojęciowy z kilku metodologii: klasycznej retoryki, lingwistyki kognitywnej, semantyki i pragmalingwistyki. Będzie to pewnego rodzaju szwedzki stół z metodami. Nie chcę ograniczać się do jednej kompleksowej ramy badawczej, by, po pierwsze, nie utknąć w szczegółach, a po drugie - ponieważ pozwoli to na bardziej elastyczne podejście w opisywaniu zjawisk/fenomenów zawartych w tekstach. Będę też trochę mieszał dwa porządki: porządek analizowania/dekonstrukcji (analiza retoryczna) i porządek produkcji/konstrukcji przekazu (retoryka). Tekst jest dość długi, więc nie czuj się w obowiązku czytania ciągiem. Tekst jest też dość intensywny terminologicznie - nie trzeba rozumieć i pamiętać wszystkiego od razu.
 
 <details>
@@ -384,7 +384,7 @@ Nietrudno jednak zauważyć, że w tym kryje się niebezpieczeństwo entymemató
 ### Presupozycje i implikatury
 
 Podobne zagrożenie przedstawiają [presupozycje](https://pl.wikipedia.org/wiki/Presupozycja) i [implikatury konwersacyjne](https://pl.wikipedia.org/wiki/Implikatura). Pierwsze wynika z zawartości semantycznej twierdzenia, drugie z pragmatycznej (sytuacyjnej, kontekstowej). Spróbuję wyjaśnić to jak najprościej:<br>
-Presupozycja to jakiś sąd, wewnętrznie (implicytnie) zawarty w zdaniu. Są różne rodzaje presupozycji, ale ograniczmy się do przykładów:<br>
+**Presupozycja** to jakiś sąd, wewnętrznie (implicytnie) zawarty w zdaniu. Są różne rodzaje presupozycji, ale ograniczmy się do przykładów:<br>
 - “Obecny król Francji jest łysy” (presupozycja - Francja ma obecnie króla)<br>
 Negacja: Obecny król francji nie jest łysy<br>
 - “Zamknij okno!” (presupozycja - okno jest otwarte)<br>
@@ -404,7 +404,7 @@ Negacja: Nie spodziewam się możliwości ataku terrorystycznego w związku z na
 
 Jak widać, presupozycje są niewrażliwe na negację. Założenie ich prawdziwości jest niejako przemycane w konstrukcji zdań i potrzeba dużego wysiłku komunikacyjnego, by je zakwestionować.
 
-Implikatury są bardziej zależne od kontekstu komunikacyjnego. Jeśli powiesz “Aj, zimno jest” - możesz implikować prośbę o zamknięcie okna albo prośbę o zmniejszenie mocy klimatyzacji. Implikatury wymagają od odbiorców przeprowadzenia dodatkowego wnioskowania, by “uratować” tzw. [zasadę kooperacji](https://pl.wikipedia.org/wiki/Regu%C5%82a_konwersacyjna), mówiącą o tym, że partnerzy komunikacyjni dołożą starań, by komunikacja zakończyła się sukcesem.<br>
+**Implikatury** są bardziej zależne od kontekstu komunikacyjnego. Jeśli powiesz “Aj, zimno jest” - możesz implikować prośbę o zamknięcie okna albo prośbę o zmniejszenie mocy klimatyzacji. Implikatury wymagają od odbiorców przeprowadzenia dodatkowego wnioskowania, by “uratować” tzw. [zasadę kooperacji](https://pl.wikipedia.org/wiki/Regu%C5%82a_konwersacyjna), mówiącą o tym, że partnerzy komunikacyjni dołożą starań, by komunikacja zakończyła się sukcesem.<br>
 - “Potrzebuję komórki” /druga osoba podaje telefon pierwszej osobie/ - implikowana jest prośba o podanie telefonu.<br>
 - “Nasza partia doprowadzi do pięcioprocentowego wzrostu PKB w kraju!” - “A nasza wyśle człowieka na Marsa i otworzy tam kasyno” - implikowana jest całkowita nierealizowalność pierwszego projektu.<br>
 - “Pada” - możliwa implikatura: trzeba zabrać parasol.<br>
@@ -438,12 +438,12 @@ W: Sokrates jest śmiertelny
 Może to wyglądać tak: <br>
 - “Jestem obywatelem Polski, więc płacę podatki, z moich pieniędzy finansuje się opiekę zdrowia, a więc należy mi się darmowa wizyta u stomatologa”. 
 
-Inna forma, to dobrze znany [dylemat](https://pl.wikipedia.org/wiki/Dylemat) (sylogizm dwurożny). Ma dwa zdania warunkowe, które się wykluczają. Z tego może wyłonić się trzecia możliwość, na przykład: “Możesz głosować na PiS albo PO. Tak źle i tak niedobrze. Wobec tego chyba lepiej nie głosować, albo założyć własną partię”, “Jeśli nie zainwestujemy w zieloną energię, to czeka nas kryzys klimatyczny związany z nadmiarem dwutlenku węgla. Ale jeśli zainwestujemy w zieloną energię, to system energetyczny może być niewydolny. Może w związku z tym warto rozważyć energię atomową?”. 
+Inna forma, to dobrze znany [**dylemat**](https://pl.wikipedia.org/wiki/Dylemat) (sylogizm dwurożny). Ma dwa zdania warunkowe, które się wykluczają. Z tego może wyłonić się trzecia możliwość, na przykład: “Możesz głosować na PiS albo PO. Tak źle i tak niedobrze. Wobec tego chyba lepiej nie głosować, albo założyć własną partię”, “Jeśli nie zainwestujemy w zieloną energię, to czeka nas kryzys klimatyczny związany z nadmiarem dwutlenku węgla. Ale jeśli zainwestujemy w zieloną energię, to system energetyczny może być niewydolny. Może w związku z tym warto rozważyć energię atomową?”. 
 W podobnym tonie można porównywać dwa (lub więcej) elementy jakiegoś zbioru i na tej podstawie wyprowadzać wniosek (X jest takie, a Y takie. A więc…). To już nie dedukcja, a indukcja, czyli wnioskowanie z przykładów. Indukcja ma złą prasę w obrębie filozofii nauki, ponieważ jeśli próbka jest niereprezentatywna, to może prowadzić do nieuzasadnionej generalizacji. W szczególności mowa tu o dowodach anegdotycznych (“znam jednego obcokrajowca, który ciągle żyje na zasiłku, a mój szwagier zna takiego, co kradł rowery - a więc, obcokrajowcy to lenie i złodzieje”). Niemniej, badania indukcyjne mogą być bardzo cenne (w szczególności, jeśli przeprowadzane na reprezentatywnej próbie) i mogą służyć dalszym badaniom opartym na dedukcji, np. prowokując zadawanie nowych pytań badawczych. W sytuacji debaty retorycznej powinniśmy być jednak czujni - czy zaprezentowana część faktycznie reprezentuje całość? Czy podane przykłady zostały dobrane uczciwie? 
 
 ### Analogie
 
-Ostatni sposób rozumowania, jaki tu opiszę, to [analogia](https://pl.wikipedia.org/wiki/Analogia) (X jest jak Y, stąd…). Na mocy podobieństwa porównujemy dwa byty i wyciągamy jakieś wnioski, co do istoty jednego z nich. Odwołujemy się do ich inherentnych cech i zestawiamy je ze sobą. Posłużę się tu rysowaną ilustracją, żeby zobrazować semantyczną zawartość dwóch bytów:
+Ostatni sposób rozumowania, jaki tu opiszę, to [**analogia**](https://pl.wikipedia.org/wiki/Analogia) (X jest jak Y, stąd…). Na mocy podobieństwa porównujemy dwa byty i wyciągamy jakieś wnioski, co do istoty jednego z nich. Odwołujemy się do ich inherentnych cech i zestawiamy je ze sobą. Posłużę się tu rysowaną ilustracją, żeby zobrazować semantyczną zawartość dwóch bytów:
 
 ![Wizualna reprezentacja analogii: dopasowywanie elementów semantycznych pomiędzy dwoma bytami](analogia.png){width=90%}
 
@@ -458,8 +458,9 @@ Specjalnie postanowiłem, żeby zobrazować to zjawisko, bo dotyczy to nie tylko
 
 Nie umieszczam w tym poradniku technik erystycznych (nieuczciwych chwytów argumentacyjnych). Warto się z nimi zaznajomić (np. poprzez skrót na Wikipedii https://pl.wikipedia.org/wiki/Erystyka), by móc wykrywać je na co dzień. Mi samemu zdarzało się chwytać partnera konwersacyjnego na nieuprawnionym rozszerzaniu lub zawężaniu tematu. Towarzyszy temu ciekawe uczucie - masz wrażenie, że tracisz grunt pod nogami, ale w momencie, kiedy orientujesz się, że druga strona właśnie zastosowała chwyt erystyczny, pojawia się olśnienie: “A! Mam cię! Stosujesz nieuczciwe zagranie i nawet potrafię je nazwać!”. Na co druga strona odpowiada: “Oj no, dobra dobra”.
 
-Podsumowując, sam nie jestem pewien, na ile klasyczne sposoby argumentacji mogą się przydać w komunikacji naukowej. Jest mała szansa, że natrafimy na czyste sylogizmy w przestrzeni publicznej. Poprawna argumentacja to raczej sposób myślenia i postawa, z której dopiero będą wynikać bardziej złożone narracje. Ucieleśniając te schematy, będziemy tworzyć lepsze merytorycznie materiały. Zyskamy też możliwość krytycznej oceny cudzych rozumowań. Współczesne dyskusje mają jednak inny charakter, niż starożytne - po pierwsze, wiemy dużo więcej. Po drugie, mamy natychmiastowy dostęp do informacji. Po trzecie, wykształciliśmy metodę naukową (lub liczne metody naukowe), które w bardziej precyzyjny sposób zbliżają nas do “obiektywnej” rzeczywistości. Po czwarte, jesteśmy w stanie zrozumieć, że wiele ludzkich perspektyw tworzy wiele subiektywnych rzeczywistości - i pewnych rzeczy nie da się udowodnić na 100%. Czasami lepiej jest zaakceptować, że inne osoby mają inne widzenie świata - i to nie jest kwestia do udowadniania, tylko do zrozumienia. Dopiero z takiej pozycji można wychodzić do próby konsensusu, czyli porozumienia.
-Ponadto, klasyczna retoryka kładzie duży nacisk na odkrywanie ciągów przyczynowo-skutkowych. Takie zależności bardzo trudno jest udowodnić we współczesnej nauce, w szczególności w przypadku szerokich zjawisk, takich jak procesy społeczne. Dlatego trzeba koniecznie podkreślić: korelacja to nie kauzacja! Współwystępowanie to nie przyczynowość! Warto zwracać na to szczególną uwagę, ponieważ badania korelacyjne często są przedstawiane w dyskusjach jako dowód na ścisły związek dwóch fenomenów. Tak nie musi być i często nie jest. Najbardziej uczciwa dyskusja powinna na dowolny temat powinna wyglądać więc tak:
+Podsumowując, sam nie jestem pewien, na ile klasyczne sposoby argumentacji mogą się przydać w komunikacji naukowej. Jest mała szansa, że natrafimy na czyste sylogizmy w przestrzeni publicznej. Poprawna argumentacja to raczej sposób myślenia i postawa, z której dopiero będą wynikać bardziej złożone narracje. Ucieleśniając te schematy, będziemy tworzyć lepsze merytorycznie materiały. Zyskamy też możliwość krytycznej oceny cudzych rozumowań. Współczesne dyskusje mają jednak inny charakter, niż starożytne - po pierwsze, wiemy dużo więcej. <br>
+Po drugie, mamy natychmiastowy dostęp do informacji. Po trzecie, wykształciliśmy metodę naukową (lub liczne metody naukowe), które w bardziej precyzyjny sposób zbliżają nas do “obiektywnej” rzeczywistości. Po czwarte, jesteśmy w stanie zrozumieć, że wiele ludzkich perspektyw tworzy wiele subiektywnych rzeczywistości - i pewnych rzeczy nie da się udowodnić na 100%. Czasami lepiej jest zaakceptować, że inne osoby mają inne widzenie świata - i to nie jest kwestia do udowadniania, tylko do zrozumienia. Dopiero z takiej pozycji można wychodzić do próby konsensusu, czyli porozumienia.<br>
+Ponadto, klasyczna retoryka kładzie duży nacisk na odkrywanie ciągów przyczynowo-skutkowych. Takie zależności bardzo trudno jest udowodnić we współczesnej nauce, w szczególności w przypadku szerokich zjawisk, takich jak procesy społeczne. Dlatego trzeba koniecznie podkreślić: korelacja to nie kauzacja! Współwystępowanie to nie przyczynowość! Warto zwracać na to szczególną uwagę, ponieważ badania korelacyjne często są przedstawiane w dyskusjach jako dowód na ścisły związek dwóch fenomenów. Tak nie musi być i często nie jest. Najbardziej uczciwa dyskusja powinna na dowolny temat powinna wyglądać więc tak:<br>
 “Może być tak albo tak, ciężko stwierdzić, wpływać może wiele czynników. Poczytajmy na ten temat i wymieńmy się informacjami”.
 
 ![Sprzedaż lodów powoduje ataki rekinów? A może to tylko korelacja?](corr.png){width=100%}
@@ -477,7 +478,7 @@ Mówiąc prościej: (1) opowiadamy o czymś, odbiorca wyobraża sobie przestrze�
 <hr>
 </details>
 
-Dla argumentacji szczególne znaczenie ma modalność - czyli stopień prawdziwości lub prawdopodobieństwa. Rozważ: może, tak, chyba, nie wiem, nie, możliwe, na pewno, na 100%, z pewnością nie, nigdy, zawsze, jest, nie wiadomo, fałsz, oczywiście, w życiu, prawdopodobnie, prawda, p < .05, całkowicie nieprawdopodobne, totalnie, była, bardzo możliwe (...)
+Dla argumentacji szczególne znaczenie ma **modalność** - czyli stopień prawdziwości lub prawdopodobieństwa. Rozważ: może, tak, chyba, nie wiem, nie, możliwe, na pewno, na 100%, z pewnością nie, nigdy, zawsze, jest, nie wiadomo, fałsz, oczywiście, w życiu, prawdopodobnie, prawda, p < .05, całkowicie nieprawdopodobne, totalnie, była, bardzo możliwe (...)
 Dysponujemy całym zestawem słów, które modulują nam prawdopodobieństwo i prawdziwość jakiegoś zdarzenia lub bytu. Co zaskakujące, największą moc ma brak jakiegokolwiek słowa. Np.:<br>
 - “Byłem wczoraj w banku” versus “Na pewno byłem wczoraj w banku!”<br>
 - “Nie ukradłem samochodu” versus “Naprawdę nie ukradłem samochodu”<br>
@@ -496,37 +497,37 @@ Tyyyylko, pomija to jeden drobny szczegół: mieszkańcy Afryki, Azji, Australii
 </details>
 
 
-Jeśli chodzi o czas, to oczywiście mamy przeszłość, teraźniejszość i przyszłość. To jednak uproszczone spojrzenie, bo nie uwzględnia bardziej skomplikowanych relacji takich jak:
-- przeszłość/przyszłość bliższa i dalsza
-- wydarzenia z przeszłości, które mają konsekwencje teraz i w przyszłości
-- opisywanie przyszłości tak jakby była teraźniejszością lub przeszłością
-- przeszłe przyszłości (np. dawna futurologia)
-- różne formy podchodzenia do przyszłości (plany, prognozy, oczekiwania, działania, interwencje), również tzw. działania uprzedzające i pewne formy - teraźniejszego działania, opartego o predykcje przyszłości:
-&emsp;- bombardowanie wioski ponieważ w przyszłości może być tam wróg
-&emsp;- skomplikowane pochodne instrumenty finansowe, uzależniające zysk od przyszłych wydarzeń.
-&emsp;- tzw. anticipatory shipping, spedycja antycypacyjna - korporacje takie jak Amazon wysyłają produkty do magazynów niedaleko nas, w oparciu o nasze profile zakupowe i potencjalność dokonania zakupu w niedługim czasie.
-&emsp;- prewencja policyjna, policyjne działania wyprzedzające - profilowanie obywateli pod względem prawdopodobieństwa dokonania przez nich przestępstwa.
+Jeśli chodzi o **czas**, to oczywiście mamy przeszłość, teraźniejszość i przyszłość. To jednak uproszczone spojrzenie, bo nie uwzględnia bardziej skomplikowanych relacji takich jak:<br>
+- przeszłość/przyszłość bliższa i dalsza.<br>
+- wydarzenia z przeszłości, które mają konsekwencje teraz i w przyszłości.<br>
+- opisywanie przyszłości tak jakby była teraźniejszością lub przeszłością.<br>
+- przeszłe przyszłości (np. futurologia z lat 50.).<br>
+- różne formy podchodzenia do przyszłości (plany, prognozy, oczekiwania, działania, interwencje), również tzw. działania uprzedzające i pewne formy teraźniejszego działania, opartego o predykcje przyszłości: <br>
+&emsp;- bombardowanie wioski ponieważ w przyszłości może być tam wróg.<br>
+&emsp;- skomplikowane pochodne instrumenty finansowe, uzależniające zysk od przyszłych wydarzeń.<br>
+&emsp;- tzw. anticipatory shipping, spedycja antycypacyjna - korporacje takie jak Amazon wysyłają produkty do magazynów niedaleko nas, w oparciu o nasze profile zakupowe i potencjalność dokonania zakupu w niedługim czasie.<br>
+&emsp;- prewencja policyjna, policyjne działania wyprzedzające - profilowanie obywateli pod względem prawdopodobieństwa dokonania przez nich przestępstwa.<br>
 
-Również słowo o przestrzeni - przestrzeń w naszych opowieściach jest zawsze ludzka, w tym sensie, że rozumiemy przestrzeń poprzez własną percepcję, miarą przestrzeni zawsze jest człowiek. Od niemowlęctwa uczymy się szacować odległość, nasze ciało jest instrumentem poznania. I tak aż do śmierci. Stąd dystans można podzielić na:
-to co jest w zasięgu naszych rąk 
-to co jest poza zasięgiem naszych rąk
-Lub:
-to co widzimy
-to co jest poza zasięgiem naszego wzroku
+Również słowo o **przestrzeni** - przestrzeń w naszych opowieściach jest zawsze ludzka, w tym sensie, że rozumiemy przestrzeń poprzez własną percepcję, miarą przestrzeni zawsze jest człowiek. Od niemowlęctwa uczymy się szacować odległość, nasze ciało jest instrumentem poznania. I tak aż do śmierci. Stąd dystans można podzielić na:<br>
+- to co jest w zasięgu naszych rąk <br>
+- to co jest poza zasięgiem naszych rąk<br>
+Lub:<br>
+- to co widzimy<br>
+- to co jest poza zasięgiem naszego wzroku<br>
 
-Dystans można podzielić też wg kategorii społecznych:
-intymny (bardzo blisko, np. na odległość oddechu)
-indywidualny (na odległość do zwykłej rozmowy z drugą osobą)
-społeczny (np. widzimy osobę z całym jej otoczeniem, z taką osobą można się przywitać po nawiązaniu kontaktu wzrokowego)
-publiczny (odleglejsi ludzie w tłumie, ludzie w oddali, brak możliwości nawiązania bezpośredniego kontaktu)
+Dystans można podzielić też wg **kategorii społecznych**:<br>
+- intymny (bardzo blisko, np. na odległość oddechu)<br>
+- indywidualny (na odległość do zwykłej rozmowy z drugą osobą)<br>
+- społeczny (np. widzimy osobę z całym jej otoczeniem, z taką osobą można się przywitać po nawiązaniu kontaktu wzrokowego)<br>
+- publiczny (odleglejsi ludzie w tłumie, ludzie w oddali, brak możliwości nawiązania bezpośredniego kontaktu)<br>
 
 Warto o tym pamiętać, przy opisywaniu wielkości dla człowieka niemal niepojmowalnych: kosmicznych lub mikroskopijnych.
 
-Czas, przestrzeń i modalność można sobie rozrysować:
-oś T (time): czas
-oś S (space): przestrzeń
-oś M (modality): modalność
-punkt 0, punkt centralny, tzw. centrum deiktyczne: tutaj, teraz, prawda/istnienie 
+Czas, przestrzeń i modalność można sobie rozrysować:<br>
+oś T (time): czas<br>
+oś S (space): przestrzeń<br>
+oś M (modality): modalność<br>
+punkt 0, punkt centralny, tzw. centrum deiktyczne: tutaj, teraz, prawda/istnienie <br>
 
 Przykład takiego rozrysowania:
 
@@ -573,7 +574,7 @@ Historie nie muszą wcale być długie, by stworzyć jakiś świat przedstawiony
 - “Wojna jak nawałnica, przeszła przez miasto i pozostawiła ruiny.”<br>
 - “Pracując w barze, był świadkiem trzech pokoleń szczęścia, dramatów i wspólnej samotności.”<br>
 
-Szczególnie obiecującym środkiem w narracji wydaje się być figura prolepsis - uprzedzenie, antycypacja. W węższym, retorycznym kontekście oznacza uprzedzenie potencjalnych pytań i wątpliwości słuchaczy, poprzez teoretyczne odpowiedzenie na nie. Patrząc szerzej, możemy rozumieć prolepsis jako wybieg do przyszłości, opisując przyszłość tak jakby już była zastana. W literaturze może to oznaczać przeskok narracji do wydarzeń z przyszłości, by pokazać co się stanie (np. aby pokazać konsekwencje działań bohaterów) - i powrót do teraźniejszości, do głównego ciągu narracji.
+Szczególnie obiecującym środkiem w narracji wydaje się być figura **prolepsis** - uprzedzenie, antycypacja. W węższym, retorycznym kontekście oznacza uprzedzenie potencjalnych pytań i wątpliwości słuchaczy, poprzez teoretyczne odpowiedzenie na nie. Patrząc szerzej, możemy rozumieć prolepsis jako wybieg do przyszłości, opisując przyszłość tak jakby już była zastana. W literaturze może to oznaczać przeskok narracji do wydarzeń z przyszłości, by pokazać co się stanie (np. aby pokazać konsekwencje działań bohaterów) - i powrót do teraźniejszości, do głównego ciągu narracji.
 Przykład:<br>
 - W Królu Edypie przepowiedziane jest, że Edyp zabije ojca. Pomimo swych wysiłków, nie może uniknąć losu.<br>
 - Jakiś dowolny film kryminalny: kamera pokazuje martwego człowieka. W trakcie trwania filmu dowiadujemy się po kolei co zaszło, by zakończyć się na śmierci.<br>
@@ -586,7 +587,7 @@ Przykład:<br>
 Dział elokucji dotyczy stylu przekazu. Nie znaczy to, że elokucja ma funkcję wyłącznie dekoracyjną. Wręcz przeciwnie, wszystkie opisywane tu środki mają duży potencjał perswazyjny. W tym dziale odjadę najdalej od klasycznej retoryki, przywołując wiele terminów z różnych gałęzi współczesnej lingwistyki. Początkiem będą jednak -
 
 ## Tropy i figury
-Zajęło mi dużo czasu zrozumienie czym są tropy i figury. A raczej, nie tyle zrozumienie - co nabranie heurystycznej intuicji. Podobnie jak pojęcie toposu, również pojęcia tropów i figur mają wiele definicji, wyrobionych przez kilka tysięcy lat tradycji i mnogich dziedzin. Wybieram takie rozumienie tych środków: są to pewnego rodzaju anomalie językowe, odstępstwa od normy językowej. Są celowe i perswazyjne. Są celowym zaburzeniem porządku semantycznego lub składniowego. Sprawdzają się najlepiej, gdy pozostają niezauważone. Tropy są odstępstwami od normy semantycznej (czyli znaczeniowej), figury są specjalnymi przekształceniami na poziomie składniowym (szyku zdań, pozycji słów). 
+Zajęło mi dużo czasu zrozumienie czym są tropy i figury. A raczej, nie tyle zrozumienie - co nabranie heurystycznej intuicji. Podobnie jak pojęcie toposu, również pojęcia tropów i figur mają wiele definicji, wyrobionych przez kilka tysięcy lat tradycji i mnogich dziedzin. Wybieram takie rozumienie tych środków: są to pewnego rodzaju anomalie językowe, odstępstwa od normy językowej. Są celowe i perswazyjne. Są celowym zaburzeniem porządku semantycznego lub składniowego. Sprawdzają się najlepiej, gdy pozostają niezauważone. Tropy są odstępstwami od normy semantycznej (czyli znaczeniowej), figury są specjalnymi przekształceniami na poziomie składniowym (szyku zdań, pozycji słów) i argumentacyjnym. 
 Zastrzeżenie: językiem figuratywnym (niedosłownym) posługujemy się codziennie. Metafor używamy bez przerwy, nie mając tego świadomości. Wyznaczenie niefiguratywnej “normy” językowej jest niemożliwe (ponieważ taka nie istnieje), w związku z czym traktujmy tropy i figury z pewnym dystansem. Miejscami też różnica-granica między tropami i figurami jest niejasna - z góry przepraszam, jeśli źle przydzieliłem jakieś środki.
 
 ## Tropy
@@ -594,7 +595,8 @@ Zastrzeżenie: językiem figuratywnym (niedosłownym) posługujemy się codzienn
 
 ### Metafory i amalgamaty kognitywne
 
-Z licznych środków, które mogą ubarwić przekaz retoryczny, metafory zdecydowanie królują. W samym tym poradniku jest pełno metafor. Cholera, samo pierwsze zdanie tego akapitu zawiera dwie metafory (ubarwić, królują). Jak działają metafory, częściowo już zacząłem to wyjaśniać, w sekcji dotyczącej analogii. Poszczególne byty zawierają zestawy cech, które możemy ekstrapolować, przeszczepiać, projektować na inne byty. Mówimy tu o domenach. Domena, z której wyciągamy cechy, to domena źródłowa. Domena, na którą przeszczepiamy cechy, to domena docelowa. Zazwyczaj metaforami tłumaczymy pojęcia abstrakcyjne, pojęciami bardziej dosłownymi. Na przykład:<br>
+Z licznych środków, które mogą ubarwić przekaz retoryczny, metafory zdecydowanie królują. W samym tym poradniku jest pełno metafor. Cholera, samo pierwsze zdanie tego akapitu zawiera dwie metafory (ubarwić, królują). Jak działają **metafory**, częściowo już zacząłem to wyjaśniać, w sekcji dotyczącej analogii. Poszczególne byty zawierają zestawy cech, które możemy ekstrapolować, przeszczepiać, projektować na inne byty. Mówimy tu o domenach. Domena, z której wyciągamy cechy, to **domena źródłowa**. Domena, na którą przeszczepiamy cechy, to **domena docelowa**. Zazwyczaj metaforami tłumaczymy pojęcia abstrakcyjne, pojęciami bardziej dosłownymi.<br>
+Na przykład:<br>
 - Gospodarka kwitnie i ładnie się rozwija - GOSPODARKA TO ROŚLINA, bierzemy cechy rozwoju, z domeny roślinno-ogrodniczej.<br>
 - Współczesne społeczeństwo cierpi na wiele przypadłości, jest to wynik szkodliwej zachodniej ideologii. Na szczęście mamy na to lekarstwo w nowym programie wyborczym - SPOŁECZEŃSTWO TO PACJENT, IDEOLOGIA TO CHOROBA, PARTIA TO LEKARZ, PROGRAM WYBORCZY TO LEK. To przykład, jak metafora może być rozwijana, czerpiąc cały czas z jednej domeny MEDYCYNA.<br>
 - Mój mózg przestał przetwarzać nowe informacje - MÓZG TO KOMPUTER.<br>
@@ -606,6 +608,7 @@ Z licznych środków, które mogą ubarwić przekaz retoryczny, metafory zdecydo
 - Do przyszłości prowadzi wiele dróg - PRZYSZŁOŚĆ TO MIEJSCE, przyszłość jest tu statyczna, tylko “my” się poruszamy.<br>
 
 Jak widać, metafory mają duży potencjał i poznawczy i dekoracyjny i perswazyjny. Z jednej strony, pozwalają nam zrozumieć świat. Z drugiej strony, każde użycie metafory modyfikuje opis rzeczywistości.
+
 W nagłówku wymieniam amalgamaty kognitywne. Co to jest? Właściwie, lepszym terminem byłoby stapianie kognitywne lub amalgamacja kognitywna (por. [conceptual blending](https://en.wikipedia.org/wiki/Conceptual_blending)). Jest to model analizy procesów poznawczych, które prowadzą do łączenia domen. Metafory konceptualne są węższym, jednokierunkowym przejawem amalgamacji kognitywnej. Wiem, brzmi strasznie. Chodzi o to, że my, ludzie, łączymy w głowach różne rzeczy, stapiając je w nowe zlepki znaczeniowe - amalgamaty. Załączam kolejny rysunek, przedstawiający szybką analizę “retrofuturyzmu PRL”, czyli nurtu narracyjno-estetycznego umieszczającego wyobrażoną przyszłość w Polsce Ludowej. Latające Polonezy, smartfony Bajtek itd. Analiza oczywiście w schemacie amalgamatu.
 
 ![Zjawisko narracyjno-estetyczne, rozpisane do postaci amalgamatu kognitywnego](amalgamat.png){width=85%}
@@ -631,11 +634,11 @@ Co do metafor w komunikacji naukowej - nie przesadzajmy z nimi. Jest ryzyko, że
 
 ### Metonimie + synekdochy
 
-Metonimia jest specjalnym rodzajem operacji mentalnej, w której mówimy o czymś poprzez cechy, istotę czegoś powiązanego; na mocy przyległości semantycznej. Np. “rusz głową” znaczy “pomyśl” - głowa za procesy myślowe. “Noszę adidasy” - marka obuwia za każde sportowe obuwie. “Czytam Prousta” - autor za książkę. “Berlin przedstawił plany rozwoju (…)” - miasto za rząd/osoby decyzyjne. “Polak idzie na wojnę” - jednostka za całość nacji. “Meksyk wygrał 2:0” - kraj za drużynę sportową. “Policja przyjechała” - cała instytucja za grupę funkcjonariuszy.
+**Metonimia** jest specjalnym rodzajem operacji mentalnej, w której mówimy o czymś poprzez cechy, istotę czegoś powiązanego; na mocy przyległości semantycznej. Np. “rusz głową” znaczy “pomyśl” - głowa za procesy myślowe. “Noszę adidasy” - marka obuwia za każde sportowe obuwie. “Czytam Prousta” - autor za książkę. “Berlin przedstawił plany rozwoju (…)” - miasto za rząd/osoby decyzyjne. “Polak idzie na wojnę” - jednostka za całość nacji. “Meksyk wygrał 2:0” - kraj za drużynę sportową. “Policja przyjechała” - cała instytucja za grupę funkcjonariuszy.
 
 ![Wizualna reprezentacja metonimii "Rusz głową". Słowo *rusz* wprowadza też dodatkowy charakter metaforyczny](met1.png){width=100%}
 
-Typów metonimii wyróżnia się wiele, ze względu na wewnętrzny rodzaj operacji, np. metonimia narzędzia: “pierwsza gitara w kraju” - na najlepszą osobę grającą na gitarze. Jednak zamiast zapamiętywać wszystkie rodzaje, lepiej jest nauczyć się rozpoznawać bardziej ogólne sytuacje, w których doszło do transferu cech. Zwrócę uwagę tylko na jeden szczególny przypadek metonimii, czyli synekdochy. Są to metonimie część za całość oraz całość za część. Mogą się odwoływać do ludzkiego ciała, społeczeństwa, organizacji/instytucji, pojazdów itd. Metonimii używamy bez przerwy, nawet o tym nie myśląc. Z retorycznego punktu widzenia, mogą być użyteczne przy naświetlaniu pewnych zjawisk lub cech związanych z przedmiotem. Dobierane, poprzez przyległość semantyczną, cechy nie są wybierane przypadkowo - są celowe. Nie powiemy “społeczeństwo przyjechało”, kiedy w parku zjawią się funkcjonariusze policji. Owszem, są częścią społeczeństwa - ale taki zwrot nie miałby komunikacyjnego sensu.
+Typów metonimii wyróżnia się wiele, ze względu na wewnętrzny rodzaj operacji, np. metonimia narzędzia: “pierwsza gitara w kraju” - na najlepszą osobę grającą na gitarze. Jednak zamiast zapamiętywać wszystkie rodzaje, lepiej jest nauczyć się rozpoznawać bardziej ogólne sytuacje, w których doszło do transferu cech. Zwrócę uwagę tylko na jeden szczególny przypadek metonimii, czyli **synekdochy**. Są to metonimie część za całość oraz całość za część. Mogą się odwoływać do ludzkiego ciała, społeczeństwa, organizacji/instytucji, pojazdów itd. Metonimii używamy bez przerwy, nawet o tym nie myśląc. Z retorycznego punktu widzenia, mogą być użyteczne przy naświetlaniu pewnych zjawisk lub cech związanych z przedmiotem. Dobierane, poprzez przyległość semantyczną, cechy nie są wybierane przypadkowo - są celowe. Nie powiemy “społeczeństwo przyjechało”, kiedy w parku zjawią się funkcjonariusze policji. Owszem, są częścią społeczeństwa - ale taki zwrot nie miałby komunikacyjnego sensu.
 
 ![Wizualna reprezentacja metonimii "Policja przyjechała"](met2.png){width=100%}
 
@@ -650,14 +653,14 @@ Spróbujmy wymyślić trzy metonimie, opisujące Jeffa Bezosa:<br>
 
 Zanim opiszę kolejny wątek, musicie coś zrobić. Wejdźcie na http://plwordnet.pwr.wroc.pl/wordnet/ i przejrzyjcie kilka słów. Dowolne słowa, cokolwiek przyjdzie do głowy. 
 Jak widzicie, słowa są systematycznie powiązane w relacje. “Pies” jest słowem bardziej ogólnym niż “jamnik”. “Jabłko” ma węższy zakres od “owocu”. “Facet” znaczy mniej więcej to samo co “mężczyzna”, choć wydźwięk jest nieco inny. 
-Czym są hiponimy, hiperonimy i synonimy - wywnioskujecie z przeglądania Słowosieci. 
-Dodatkowy termin: [polisemia](https://pl.wikipedia.org/wiki/Polisemia), te same słowa mogą być wieloznaczne. Na przykład “język” - część ciała, oraz mowa ludzka. “Polityka” - obszar działalności społecznej (“Maciek świetnie odnalazł się w polityce”) lub konkretne działanie (“polityka ekologiczna rządu okazała się umiarkowanym sukcesem”). Polisemiczne znaczenia mogą być więc dość wyraźnie odrębne (język), ale mogą też być bardzo bliskie (polityka). Często wieloznaczność ma charakter metonimiczny. Warto zwracać na to uwagę, bo polisemiczność może być wykorzystywana do nieuczciwej argumentacji. Zawsze warto jest dopytywać o dokładne definicje, tzn. ustalać wspólny grunt dyskusji. Bardzo często dwie strony mają całkowicie dobre intencje, ale nie dogadują się przez to, że inaczej rozumieją przedmiot dyskusji.
+Czym są **hiponimy**, **hiperonimy** i **synonimy** - wywnioskujecie z przeglądania Słowosieci. 
+Dodatkowy termin: [**polisemia**](https://pl.wikipedia.org/wiki/Polisemia), te same słowa mogą być wieloznaczne. Na przykład “język” - część ciała, oraz mowa ludzka. “Polityka” - obszar działalności społecznej (“Maciek świetnie odnalazł się w polityce”) lub konkretne działanie (“polityka ekologiczna rządu okazała się umiarkowanym sukcesem”). Polisemiczne znaczenia mogą być więc dość wyraźnie odrębne (język), ale mogą też być bardzo bliskie (polityka). Często wieloznaczność ma charakter metonimiczny. Warto zwracać na to uwagę, bo polisemiczność może być wykorzystywana do nieuczciwej argumentacji. Zawsze warto jest dopytywać o dokładne definicje, tzn. ustalać wspólny grunt dyskusji. Bardzo często dwie strony mają całkowicie dobre intencje, ale nie dogadują się przez to, że inaczej rozumieją przedmiot dyskusji.
 
 A właśnie, definicje. Istnieje pojęcie **definicji retorycznych**. Definiowanie również jest w dyskusji zabiegiem perswazyjnym, ponieważ autor posiada kontrolę nad prezentowaniem i uwypuklaniem aspektów danej rzeczy, procesu, zjawiska. Załóżmy, że moglibyśmy opisać konia na tysiąc sposobów. Ale osoba A wybierze taką definicję: “Patykowate nogi, wielkie zęby, frędzlowaty ogon”. Osoba B z kolei powie: “Majestatyczna lśniąca sierść, ambitna sylwetka, naprężone muskuły - gotowe do biegu”. Osoba C (Benedykt Chmielowski) napisze: “Koń jaki jest, każdy widzi”.
 
 ![Definicja konia z Nowych Aten](ateny.jpg){width=100%}
 
-Pole semantyczne można rozwijać, tworząc wyrazy pokrewne/derywaty. Załóżmy, że dyskusja dotyczy technologii. Jak możemy to rozwinąć? “Technologiczny”, “technologizacja rzeczywistości”, “technologizm”, “technologizowanie”, “technologicznie”. Następnie możemy sprawdzić w narzędziu HASK kolokacje http://pelcra.pl/hask_pl/ technologii (czyli często współwystępujące słowa). Przymiotniki: nowa, nowoczesna, informatyczna, cyfrowa, stosowana, przestarzała, innowacyjna, kosmiczna. Czasowniki: wykorzystywać, oprzeć, pozwalać, umożliwiać, opracować, wykorzystać, rozwijać. Rzeczowniki: produkcja, wytwarzanie, żywność, drewno, utylizacja.
+Pole semantyczne można rozwijać, tworząc **wyrazy pokrewne/derywaty**. Załóżmy, że dyskusja dotyczy technologii. Jak możemy to rozwinąć? “Technologiczny”, “technologizacja rzeczywistości”, “technologizm”, “technologizowanie”, “technologicznie”. Następnie możemy sprawdzić w narzędziu HASK kolokacje http://pelcra.pl/hask_pl/ technologii (czyli często współwystępujące słowa). Przymiotniki: nowa, nowoczesna, informatyczna, cyfrowa, stosowana, przestarzała, innowacyjna, kosmiczna. Czasowniki: wykorzystywać, oprzeć, pozwalać, umożliwiać, opracować, wykorzystać, rozwijać. Rzeczowniki: produkcja, wytwarzanie, żywność, drewno, utylizacja.
 Wzmocnienie efektu retorycznego może się odbyć przez zabawę z fleksją, np.:<br>
 - “On kradł, kradnie i będzie kraść! Zajrzyjcie do jego domu - wszystko kradzione! Jego ulubione zajęcie? Kradzenie!”
 
@@ -670,7 +673,7 @@ https://portal.abczdrowie.pl/kaczynski-o-imigrantach-sa-juz-objawy-cholery-pierw
 
 Tworzenie pozytywnych sieci skojarzeniowych (asocjacyjnych) dla produktów, przez agencje reklamowe. Wprowadzanie słownictwa martyrologicznego, języka ofiary, dla wywyższenia pozycji nacji. Stosowanie języka sukcesu w kulturze korporacyjnej. Promowanie toposu ciężkiej pracy, dla legitymizacji podziałów klasowych i rozbieżności majątkowych (“Gdybyś wcześniej wstawał, ciężej pracował…”).
 
-Wzbogacanie konceptualizacji można dokonywać przez nagromadzenia. Różny stosunek ilości rzeczowników, czasowników i przymiotników wpłynie na charakter tekstu. Nagromadzenie rzeczowników ugruntuje tekst, osadzi w konkrecie. Duże ilości czasowników i przysłówków zdynamizują tekst, nadadzą poczucie procesualności, ruchu, akcji. Przymiotniki nadadzą tekstowi kolor (mówiąc metaforycznie), sprawią, że wizualizacje będą wyraźniejsze. 
+Wzbogacanie konceptualizacji można dokonywać przez **nagromadzenia**. Różny stosunek ilości rzeczowników, czasowników i przymiotników wpłynie na charakter tekstu. Nagromadzenie rzeczowników ugruntuje tekst, osadzi w konkrecie. Duże ilości czasowników i przysłówków zdynamizują tekst, nadadzą poczucie procesualności, ruchu, akcji. Przymiotniki nadadzą tekstowi kolor (mówiąc metaforycznie), sprawią, że wizualizacje będą wyraźniejsze. 
 Z kolei liczne **deiksy** (patrz: [deixis, deiktyka](https://pl.wikipedia.org/wiki/Deixis)), czyli środki wskazywania/demonstracji, podkreślą relacyjność opisywanych obiektów, systemowość, sieci powiązań. Przykłady deiks: tu, tam, ty, ona, wtedy, tutaj, gdzieś, *wskazujący ruch ręką*, w górze, obok, na lewo, dalej, wczoraj, oni, ich. Jak widać w tym zbiorze, znaczniki wskazywania mogą dotyczyć czasu, przestrzeni i osób.
 
 Skoro jesteśmy przy polu semantycznym, warto wspomnieć o **etykietach**. Są to, jak nazwa wskazuje, proste, stereotypiczne nazwy, nadawane bytom, w celu usprawnienia komunikacji. Nadanie nazwy czasami niemal stwarza rzecz, a przynajmniej ją uwidacznia. Etykiet jednak trudno się pozbyć, jeśli już zaczynają funkcjonować w obiegu społecznym. Tym większy problem, jeśli etykiety mają negatywne nacechowanie i służą wykluczeniu grupy społecznej (“pedał”, “lesba”, “ciapaty”). W obliczu tego dane grupy muszą wykonać wiele pracy, by pozbyć się etykiet, lub je odbić dla siebie i zmienić nacechowanie na pozytywne (rozbrajanie terminu). Niemniej, etykiety są poręczne retorycznie, ponieważ urzeczowiają (reifikacja) niejasne lub abstrakcyjne terminy.
@@ -710,7 +713,7 @@ Wypowiedzenie składa się z (1) aktu lokucji, (2) aktu illokucji, (3) aktu perl
 (2). akt illokucji to INTENCJA nadawcy. To, czego chce nadawca.
 (3). akt perlokucji to reakcja odbiorcy/audytorium na komunikat. Perlokucja nie występuje, jeśli odbiorców nie ma.
 
-W przypadku ironii, najbardziej interesuje nas akt illokucji. Bo to właśnie intencja jest kluczowa w rozumieniu ironii. Ten sposób wypowiadania się jest dwugłosem, ma dwa poziomy - dosłowny i ukryty. Do kompetencji odbiorcy należy zdekodowanie ukrytego przekazu, będącego intencją nadawcy. Jest to rodzaj metajęzyka, bo nadawca dystansuje się do znaczenia dosłownego, wyraża opinię na temat tego, co jest w danej chwili wyrażane (a nie na temat samego przedmiotu dyskusji).
+W przypadku **ironii**, najbardziej interesuje nas **akt illokucji**. Bo to właśnie intencja jest kluczowa w rozumieniu ironii. Ten sposób wypowiadania się jest dwugłosem, ma dwa poziomy - dosłowny i ukryty. Do kompetencji odbiorcy należy zdekodowanie ukrytego przekazu, będącego intencją nadawcy. Jest to rodzaj metajęzyka, bo nadawca dystansuje się do znaczenia dosłownego, wyraża opinię na temat tego, co jest w danej chwili wyrażane (a nie na temat samego przedmiotu dyskusji).
 Cele? Humor, dyskredytacja, zbudowanie dystansu, rozluźnienie nastroju, zaatakowanie kogoś lub wykpienie, popisanie się inteligencją, wzmocnienie argumentu, pozostawienie czytelnikom retorycznej zagadki do rozkodowania. Ironia może służyć wytknięciu hipokryzji i sprzeczności poglądów stronie przeciwnej.
 Ironia jest środkiem ryzykownym, ponieważ może atakować twarz społeczną odbiorców.
 
@@ -727,7 +730,7 @@ Figury, czyli przemieszczenia syntaktyczne - specjalne ujęcia wypowiedzi na poz
 Jedną figurę powinniście już dobrze znać. Czy konieczne jest wspominanie o pytaniu retorycznym?
 Figuratywność pytania retorycznego mieści się w tym, że nie jest normą zadawanie pytań, jeśli nie chcemy odpowiedzi. Gdyby to była norma, to nie potrzebowalibyśmy pytań. Pytanie z definicji potrzebuje odpowiedzi. A jednak, używamy pytań retorycznych - po to, by zatrzymać na chwilę wypowiedź i sprawić, by odbiorcy sami uzupełnili sobie w głowie dalszy ciąg. Założenie jest takie, że odbiorcy wyrażą aprobatę, przytakną osobie mówiącej.
 
-Figury można kategoryzować na różne sposoby, m.in. na figury słów i figury myśli. Figury słów dotyczą wyjątkowych konfiguracji wyrazów. Figury myśli można podzielić na figury kontaktu i figury sprawy. Figury kontaktu obejmują specjalne formy relacji z odbiorcą/audytorium, natomiast figury sprawy - specjalnych sposobów mówienia o “sprawie”, czyli temacie wywodu retorycznego. Używam słowa “specjalny”, bo, jak przypominam - figury są czymś nietypowym, są odejściem od codziennej normy językowej.
+Figury można kategoryzować na różne sposoby, m.in. na figury słów i figury myśli. Figury słów dotyczą wyjątkowych konfiguracji wyrazów. Figury myśli dotyczą szczególnej organizacji przebiegu myślowego, można je podzielić na figury kontaktu i figury sprawy. Figury kontaktu obejmują specjalne formy relacji z odbiorcą/audytorium, natomiast figury sprawy - specjalnych sposobów mówienia o “sprawie”, czyli temacie wywodu retorycznego. Używam słowa “specjalny”, bo, jak przypominam - figury są czymś nietypowym, są odejściem od codziennej normy językowej.
 
 ## Figury Słowa
 
@@ -749,7 +752,7 @@ Istnieje też bezlik figur, które dotyczą zamiany pozycji, specjalnej składni
 - “Szybkim krokiem Jan wszedł do biura. Do banku wbiegł Andrzej, truchtem powolnym”<br>
 
 
-Tu warto powołać się na teorię tematyczno-rematycznej struktury zdania. Wyobraźmy sobie, że mamy kilka zdań, które dotyczą jednej kwestii. Temat, to coś co już znamy. Remat to nowa informacja. Temat wprowadza remat. W drugim zdaniu remat jest już poznany, więc staje się nowym tematem - i służy do wprowadzania kolejnego rematu:<br>
+Tu warto powołać się na **teorię tematyczno-rematycznej struktury zdania**. Wyobraźmy sobie, że mamy kilka zdań, które dotyczą jednej kwestii. Temat, to coś co już znamy. Remat to nowa informacja. Temat wprowadza remat. W drugim zdaniu remat jest już poznany, więc staje się nowym tematem - i służy do wprowadzania kolejnego rematu:<br>
 — I co tam nowego u Jana? (temat)<br>
 — A widzisz, Jan (temat) teraz jedzie (remat) na wakacje z Andrzejem.<br>
 — Jedzie na wakacje? (temat)<br>
@@ -768,7 +771,7 @@ T1---------------------R2<br>
 T1-------------------------------------R3<br>
 
 Kolejność przedstawiania rzeczy jest o tyle ważna, że może uwypuklić, naświetlić elementy zdania. Jak w przykładach z Janem, raz najważniejszą informacją zdania był Jan, a kiedy indziej - miejsce lub sposób wchodzenia.
-Takie naświetlanie można retorycznie wywołać również poprzez celowe błędy i specjalne zabiegi graficzne i akustyczno-rytmiczne (naśladujące dźwięki, czerpiące z muzyki, własności głosu):<br>
+Takie naświetlanie można retorycznie wywołać również poprzez **celowe błędy** i **specjalne zabiegi graficzne** i akustyczno-rytmiczne (naśladujące dźwięki, czerpiące z muzyki, własności głosu):<br>
 - “Jan wszedł do biura baaaardzo szybkim krokiem”<br>
 - “Jan wszedł do biura SZYBKIM KROKIEM”<br>
 - “Jan wszedł do biura (!) szybkim krokiem”<br>
@@ -787,18 +790,18 @@ Takie naświetlanie można retorycznie wywołać również poprzez celowe błęd
 
 ## Figury kontaktu
  
-Czy wiesz, że figury kontaktu dotyczą specjalnej relacji nadawcy z odbiorcą/audytorium? Teraz już wiesz. Pytanie retoryczne jest tego typu figurą, ponieważ jest zwrócone bezpośrednio do osób odbierających przekaz (choć nie wymaga odpowiedzi - raczej namysłu). Apostrofa jest taką prototypową figurą kontaktu, ponieważ jest bezpośrednim zwrotem do osoby (lub bóstwa, idei, abstrakcyjnego bytu). Na poziomie gramatycznym, używamy pierwszej (my) lub drugiej osoby (ty, wy), może nawet zechcemy użyć wołacza:<br>
+Czy wiesz, że figury kontaktu dotyczą specjalnej relacji nadawcy z odbiorcą/audytorium? Teraz już wiesz. **Pytanie retoryczne** jest tego typu figurą, ponieważ jest zwrócone bezpośrednio do osób odbierających przekaz (choć nie wymaga odpowiedzi - raczej namysłu). **Apostrofa** jest taką prototypową figurą kontaktu, ponieważ jest bezpośrednim zwrotem do osoby (lub bóstwa, idei, abstrakcyjnego bytu). Na poziomie gramatycznym, używamy pierwszej (my) lub drugiej osoby (ty, wy), może nawet zechcemy użyć wołacza:<br>
 - Polaku! (przy okazji metonimia-synekdocha, jeden Polak za całą nację)<br>
 - Osobo czytająca!<br>
 - Droga odbiorczyni!<br>
 
-W analizie retorycznej tekstów warto zwrócić uwagę, czy zaimki i formy czasowników są inkluzywne (włączające), czy ekskluzywne (wyłączające - kogoś).
+W analizie retorycznej tekstów warto zwrócić uwagę, czy zaimki i formy czasowników są **inkluzywne** (włączające), czy **ekskluzywne** (wyłączające - kogoś).<br>
 Załóżmy, że jesteśmy na konferencji naukowej:<br>
 - “Zebraliśmy się tu, by omówić niecierpiące zwłoki zagadnienia chemii materiałowej” - audytorium jest włączone.<br>
 - “Opracowaliśmy sposób na produkcję najtrwalszego materiału w historii biodegradowalnych tkanin!” - audytorium jest wyłączone, “my” odnosi się tylko do autorów prezentacji.<br>
 - “Komisja nie jest zadowolona poziomem metod analizy, musimy coś z tym zrobić” - sugerowane oskarżenie, pierwsza osoba liczby mnogiej implikuje raczej, że to uczestnicy konferencji muszą podnieść poziom, a nie komisja.<br>
 
-Sytuację mogą podgrzewać pewne akty mowy i czasowniki deontyczne (nakaz, zakaz, powinność):<br>
+Sytuację mogą podgrzewać pewne akty mowy i **czasowniki deontyczne** (nakaz, zakaz, powinność):<br>
  - “Musicie coś z tym zrobić!”<br>
  - “Nie wolno tak prowadzić badań!”<br>
  - “Obiecuję, że poprawię mój eksperyment”<br>
@@ -806,8 +809,8 @@ Sytuację mogą podgrzewać pewne akty mowy i czasowniki deontyczne (nakaz, zaka
  - “Słuchajcie! Te badania was zszokują!”<br>
 
 A skoro jesteśmy w temacie, poruszmy od razu kwestię obecności osoby autorskiej w przekazie. W tym poradniku stosuję pierwszą osobę (pojedynczą), wypowiadam się jako “ja”. Czasem też jest w tym tekście używana forma bezosobowa. Czasem patrzymy na retorykę poprzez liczbę mnogą. Niektóre fragmenty tekstu chyba zostały napisane w stronie biernej. 
-Ujawnianie się osoby autorskiej w przekazie sygnalizuje stopień odpowiedzialności za wypowiedziane treści. Pierwszoosobowe “ja” może legitymizować dowody (ja widziałem, ja słyszałem), ale podkreśla subiektywny charakter wypowiedzi. Formy bierne i bezosobowe stwarzają pozory obiektywności, ponieważ żaden konkretny podmiot się pod nimi nie podpisuje. 
-Jeśli wybieramy styl subiektywny, to zapoznajmy się z **czasownikami percepcji** i **czasownikami epistemicznymi** (poznawczymi, poznania):
+**Ujawnianie się osoby autorskiej** w przekazie sygnalizuje stopień odpowiedzialności za wypowiedziane treści. Pierwszoosobowe “ja” może legitymizować dowody (ja widziałem, ja słyszałem), ale podkreśla subiektywny charakter wypowiedzi. Formy bierne i bezosobowe stwarzają pozory obiektywności, ponieważ żaden konkretny podmiot się pod nimi nie podpisuje. 
+Jeśli wybieramy styl subiektywny, to zapoznajmy się z **czasownikami percepcji** i **czasownikami epistemicznymi** (poznawczymi, poznania):<br>
 
 Czasowniki epistemiczne:<br>
 - wiem/wiemy (że)<br>
@@ -823,22 +826,22 @@ Czasowniki percepcji:<br>
  - wygląda mi to na (...)<br>
 
 Nie muszę chyba mówić, jakie ma to znaczenie dla modalności przekazu (prawdziwość, prawdopodobieństwo), dla ewidencjalności (skąd czerpiemy dowody) i dla legitymizacji (kto jest gwarancją dowodów).
-Styl subiektywny jest przydatny w komunikacji naukowej. Tak, zaznacza subiektywny punkt widzenia, ale jednocześnie daje możliwość zempatyzowania z nadawcą, przyjęcia perspektywy nadawcy. Taka narracja wciąga i angażuje. Osobiście uważam też, że jest bardziej uczciwa - nie musimy kryć się za iluzją obiektywności strony biernej. Jeśli wykonaliśmy jakieś badania, to “my” je zrobiliśmy, nie jakiś bezosobowy byt, ani badania nie wykonały się same. 
+**Styl subiektywny** jest przydatny w komunikacji naukowej. Tak, zaznacza subiektywny punkt widzenia, ale jednocześnie daje możliwość zempatyzowania z nadawcą, przyjęcia perspektywy nadawcy. Taka narracja wciąga i angażuje. Osobiście uważam też, że jest bardziej uczciwa - nie musimy kryć się za iluzją obiektywności strony biernej. Jeśli wykonaliśmy jakieś badania, to “my” je zrobiliśmy, nie jakiś bezosobowy byt, ani badania nie wykonały się same. 
 
 ### Rejestr, socjolekty
 
-Chcąc utrzymać kontakt z odbiorcami, powinniśmy mówić ich językiem. W życiu mówimy różnymi rejestrami języka - wysokim w sytuacjach oficjalnych, niskim z rodziną i przyjaciółmi. Powinniśmy dostosować rejestr przekazu do aktualnego kontekstu komunikacyjnego. O dostosowywaniu języka mówi [Teoria Akomodacji Komunikacji](https://en.wikipedia.org/wiki/Communication_accommodation_theory).
+Chcąc utrzymać kontakt z odbiorcami, powinniśmy mówić ich językiem. W życiu mówimy różnymi **rejestrami języka** - wysokim w sytuacjach oficjalnych, niskim z rodziną i przyjaciółmi. Powinniśmy dostosować rejestr przekazu do aktualnego kontekstu komunikacyjnego. O dostosowywaniu języka mówi [Teoria Akomodacji Komunikacji](https://en.wikipedia.org/wiki/Communication_accommodation_theory).
 
 Różne grupy społeczne mówią różnymi formami języka. Wyróżnia się socjolekty młodych ludzi (również slangi), mowę więzienną, socjolekty grup religijnych, socjolekty związane z wykonywaną pracą (np. korpomowa), socjolekty klas społecznych itd. Mowa tu o charakterystycznym słownictwie, specjalnych formach gramatycznych; a nawet o zmienionej wymowie spółgłosek i samogłosek.
-Nauczenie się czyjegoś socjolektu to nie jest łatwa sprawa (możliwa chyba tylko przez przebywanie z ludźmi mówiącymi danym socjolektem), niemniej - łatwiej się przyjmuje argumenty, jeśli ktoś “gada jak nasz”.
+Nauczenie się czyjegoś **socjolektu** to nie jest łatwa sprawa (możliwa chyba tylko przez przebywanie z ludźmi mówiącymi danym socjolektem), niemniej - łatwiej się przyjmuje argumenty, jeśli ktoś “gada jak nasz”.
 
 ### Dialogiczność, narratywizacja
 
-Wprowadzałem tę formę kilkukrotnie w poradniku - w głównym tekście i w przykładach. Powiesz, że może momentami było to dość tandetne - ja na to odpowiem, że może i tak, ale ożywiło to tekst. Mowa z pewnością jest dla nas bardziej naturalnym środkiem przekazu, od tekstów naukowych. Szybciej nauczymy się tematu, dyskutując z przyjaciółmi na przerwie, niż z półtoragodzinnego wykładu, prowadzonego monotonnym głosem. Nadanie tekstowi cech dialogicznych, to nadanie mu polifonii, wielogłosowości. <br>
+Wprowadzałem tę formę kilkukrotnie w poradniku - w głównym tekście i w przykładach. Powiesz, że może momentami było to dość tandetne - ja na to odpowiem, że może i tak, ale ożywiło to tekst. Mowa z pewnością jest dla nas bardziej naturalnym środkiem przekazu, od tekstów naukowych. Szybciej nauczymy się tematu, dyskutując z przyjaciółmi na przerwie, niż z półtoragodzinnego wykładu, prowadzonego monotonnym głosem. Nadanie tekstowi cech dialogicznych, to nadanie mu **polifonii**, wielogłosowości. <br>
  — Czy chodzi o wprowadzenie formy, gatunku dialogu?<br>
  — Może o to chodzić, ale nie musi. Ujęcie tekstu w gatunek rozmowy na pewno będzie ciekawe, ale pytanie, czy nie będzie odwracać uwagi od sedna sprawy.<br>
  — Ale czy nie jest to manipulacja? Przecież autor kontroluje wypowiedzi wszystkie głosy dialogu, wymyślając je podczas pisania.<br>
- — Jak najbardziej. Jest to i eksperyment myślowy i sposób na perswazyjne przedstawienie argumentów. W retoryce taka figura nazywa się konkretnie [prozopopeja](https://pl.wikipedia.org/wiki/Prozopopeja) - uosabianie. Można wprowadzić i przeciwników i zwolenników, odnoszących się do argumentacji. Można wypowiadać się, uosabiając zmarłych, nieobecnych.<br>
+ — Jak najbardziej. Jest to i eksperyment myślowy i sposób na perswazyjne przedstawienie argumentów. W retoryce taka figura nazywa się konkretnie [**prozopopeja**](https://pl.wikipedia.org/wiki/Prozopopeja) - uosabianie. Można wprowadzić i przeciwników i zwolenników, odnoszących się do argumentacji. Można wypowiadać się, uosabiając zmarłych, nieobecnych.<br>
  — A jaki to ma sens w komunikacji naukowej?<br>
  — Duży potencjał! Bo można uosabiać byty abstrakcyjne, przedmioty - personifikować je. Spróbujmy oddać głos atomom, planetom, klimatowi, dwutlenkowi węgla, chlorofilowi, trzcinom, kablom transmitującym dane, serwerom, ustrojom politycznym.<br>
  — Jestem sceptyczna.<br>
@@ -852,7 +855,7 @@ Dochodzimy do figur wyjątkowego, nietypowego przedstawiania tematu (sprawy) prz
 
 ### Gradacja, antygradacja (klimaks i antyklimaks)
 
-Czasami mówi się, że coś było antyklimaktyczne. Z kolei, w filmach akcji mamy gradację napięcia, stopniowanie emocji - dochodzące do wielkiego finału i rozwiązania napięcia (klimaks - dosłownie z greckiego: drabina). Tak samo w retoryce możemy stopniować argumenty, [budując napięcie](https://pl.wikipedia.org/wiki/Gradacja_(literatura)) lub je [zmniejszając](https://pl.wikipedia.org/wiki/Antygradacja). Antyklimaks można osiągnąć poprzez zmianę tonu i rejestru - zaczynając od patetycznego i emocjonalnego wstępu, a kończąc na wulgaryźmie lub mowie potocznej. Można też zestawić mocne ze słabym, wielkie z małym.
+Czasami mówi się, że coś było antyklimaktyczne. Z kolei, w filmach akcji mamy **gradację** napięcia, stopniowanie emocji - dochodzące do wielkiego finału i rozwiązania napięcia (klimaks - dosłownie z greckiego: drabina). Tak samo w retoryce możemy stopniować argumenty, [budując napięcie](https://pl.wikipedia.org/wiki/Gradacja_(literatura)) lub je [zmniejszając](https://pl.wikipedia.org/wiki/Antygradacja). **Antyklimaks** można osiągnąć poprzez zmianę tonu i rejestru - zaczynając od patetycznego i emocjonalnego wstępu, a kończąc na wulgaryźmie lub mowie potocznej. Można też zestawić mocne ze słabym, wielkie z małym.
 
 ### Niedomówienia, przemilczenia, wtrącenia, parentezy
 
@@ -861,19 +864,19 @@ Jak pokazują niektóre przykłady z Janem, zwrócenie uwagi na przedmiot może 
 - “Po sesji plenarnej będzie kawa, ciastka. Wszyscy nie możemy się doczekać na… No ale to za półtorej godziny”<br>
 - “Haha, bo wiecie! ( ͡~ ͜ʖ ͡°)”<br>
 
-Wtrącenia i [parentezy](https://pl.wikipedia.org/wiki/Parenteza) (zdania wtrącone w nawias - takie jak to) rozbijają tok argumentacji, na chwilę go przerywają i uzupełniają wypowiedź. Mogą służyć przedstawieniu innej perspektywy:<br>
+Wtrącenia i [**parentezy**](https://pl.wikipedia.org/wiki/Parenteza) (zdania wtrącone w nawias - takie jak to) rozbijają tok argumentacji, na chwilę go przerywają i uzupełniają wypowiedź. Mogą służyć przedstawieniu innej perspektywy:<br>
 - “Zdecydowali się na analizę jakościową materiału (Anna miała inne zdanie na ten temat)”
 
 ### Antyteza
 
-[Jest to zestawienie](https://pl.wikipedia.org/wiki/Antyteza) dwóch przeciwstawnych elementów, z którego wynika nowe znaczenie. <br>
+[Jest to zestawienie](https://pl.wikipedia.org/wiki/Antyteza) dwóch **przeciwstawnych elementów**, z którego wynika nowe znaczenie. <br>
 - “Mamy normalną walutę, gwarantowaną przez państwa, ale i od nich zależną. Mamy Bitcoina, wolnego od ingerencji rządowych - ale podatnego na spekulacje. Nie ma idealnego środka wymiany.”<br>
 - “Ser zwykły, czy ser wegański? Jeden smakuje lepiej, drugi jest bardziej etyczny. U przeciętnego konsumenta zadecyduje więc pewnie cena.”<br>
 - “Żyję! Ale co to za życie? Pełne cierpienia”<br>
 
 ### Sprostowanie (correctio)
 
-Gdy chcemy wprowadzić wątpliwość, wycofać się z sądu, lub wzmocnić sąd - możemy użyć [sprostowania](https://pl.wikipedia.org/wiki/Correctio):<br>
+Gdy chcemy wprowadzić wątpliwość, wycofać się z sądu, lub wzmocnić sąd - możemy użyć [**sprostowania**](https://pl.wikipedia.org/wiki/Correctio):<br>
 - “Wstał, zjadł śniadanie… ale czy zjadł? Tak jakby nie tknął jedzenia. Spojrzał jej w oczy… ale czy spojrzał? Przebiegł wzrokiem, jakby winny, unikający.”<br>
 - “Mamy w kadrze narodowej świetnego zawodnika. Świetnego? Wybitnego! Klasa światowa!”<br>
 - “Pan, Panie pośle to osioł jest. Nie, więcej niż osioł - muł! Muł kwalifikowany.”<br>
@@ -882,7 +885,7 @@ Sprostowanie pozornie unieważnia twierdzenie, wciąga w rodzaj metagry z przeka
 
 ### Hypotypoza
 
-Pod tą groźną nazwą kryje się figura, odpowiadająca za żywy, dynamiczny opis. Tak jakby przedstawiana akcja działa się na naszych oczach. To oznacza konieczność użycia dużej ilości czasowników, być może też czasu teraźniejszego:<br>
+Pod tą groźną nazwą kryje się figura, odpowiadająca za żywy, dynamiczny opis. **Tak jakby przedstawiana akcja działa się na naszych oczach**. To oznacza konieczność użycia dużej ilości czasowników, być może też czasu teraźniejszego:<br>
 - “Marian wstaje, podchodzi do drzwi. Po drugiej stronie stoi nagi mężczyzna. Firany furkoczą w przeciągu. Ktoś pootwierał wszystkie okna. Powieka Mariana drgnęła na mikrosekundę, nie wie co się dzieje.”<br>
 - “Słuchaj no, jestem w alejce z serami, podchodzi do mnie Elżbieta, mówię cześć, i tak rozmawiamy przez pół godziny, aż przychodzi do nas ekspedient - i rozumiesz - mówi że mamy iść, bo blokujemy sery. A Ela się pyta - to gdzie mamy iść? Na sałatę? - a ten pacjent odpowiada - na buraki! Bezczelny. Poszłam potem do domu i zrobiłam obiad, jedz, bo jeszcze ciepłe jest.”<br>
 - “Tu, gdzie teraz są ogrody i parki, będzie pustynia! Jeśli nie zawalczymy o powstrzymanie zmian klimatycznych, to tu, gdzie stoicie, będzie martwa ziemia i pogorzelisko! Nie będzie wody, nie będzie jedzenia! Przejdziesz się po ruinach dawnej cywilizacji, przeklinając młodszego siebie, że nie działałeś - kiedy był odpowiedni czas!”.<br>
@@ -891,7 +894,7 @@ Figura hypotypozy wymaga osadzenia narracji w konkretnej rzeczywistości, w konk
 
 ### Amplifikacja
 
-Na koniec środek, który powinien być oczywisty, szczególnie że jego elementy pojawiały się tu i tam. [Amplifikacja](https://pl.wikipedia.org/wiki/Amplifikacja_(retoryka)) dotyczy powiększenia, wyolbrzymienia faktów, obiektów, pojęć (pomniejszenia też). Rodzaje amplifikacji można podzielić tak:
+Na koniec środek, który powinien być oczywisty, szczególnie że jego elementy pojawiały się tu i tam. [**Amplifikacja**](https://pl.wikipedia.org/wiki/Amplifikacja_(retoryka)) dotyczy powiększenia, wyolbrzymienia faktów, obiektów, pojęć (pomniejszenia też). Rodzaje amplifikacji można podzielić tak:
 nagromadzenie - zbiór, kolekcja argumentów, którą można na koniec podsumować.
 stopniowanie - narastające lub opadające, odsyłam do gradacji i antygradacji.
 porównanie - zestawienie dwóch bytów, w obliczu czego jeden z bytów jest wywyższony - lub udowodniona jest ich równość.
