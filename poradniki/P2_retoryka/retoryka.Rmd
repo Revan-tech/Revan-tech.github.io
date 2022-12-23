@@ -2,11 +2,11 @@
 title: "Notatki z analizy retorycznej dla komunikacji naukowej"
 description: |
   Jak mówić? Jak pisać? Jak mówić i pisać skutecznie? Jak projektować skuteczne wyobrażenia, przestrzenie konceptualne dla odbiorców? Zastanówmy się nad tym, przy okazji zapoznając się z kilkoma tradycjami analizy komunikacji.
-preview: "dal1.jpg"
+preview: "retposter.png"
 author:
   - name: Kamil Kopacewicz
     url: https://revan-tech.github.io/kontakt.html
-date: 10-15-2022
+date: 12-23-2022
 output:
   distill::distill_article:
     self_contained: false
@@ -48,12 +48,15 @@ Terminologię retoryczną uważam za dość problematyczną. Jest chaotyczną mi
 
 Zacznijmy od ustalenia wspólnego gruntu. Czym jest **komunikacja**? Jest to wymiana znaczeń. Ktoś tworzy tekst-informację i chce przekazać znaczenia, ktoś inny odbiera tekst-informację i dekoduje znaczenia. Nadawca i odbiorca. Słowa są formą, naczyniem dla znaczeń. Czym są znaczenia? No to już trudne pytanie. Na pewnym poziomie są w naszym mózgu. Jak ktoś mówi koń, to odpala się nam w głowie obszar “KOŃ”. Ogólna idea konia, związane cechy, wspomnienia, jakieś obrazy itd.
 
+<aside>
+Przez **tekst** mamy na myśli tekst kultury, czyli COŚ, co jest wehikułem komunikacji. Tym czymś może być tekst pisany, ale też - wypowiedź ustna, obrazek, film, gra, podkast.
+</aside>
 
 <details>
   <summary><span style="color: blue;">Znaczenia - neurony?</span></summary>
   <hr>
 Można powiedzieć, że znaczenia to chmury neuronów w naszych mózgach, kodujące wiedzę o świecie - będąc powiązanymi zarówno z czystymi kategoriami w pamięci semantycznej, jak i z naszymi wspomnieniami z pamięci epizodycznej/autobiograficznej. Wiemy, że terminy odpowiedzialne za np. owoce i warzywa aktywują obszary mózgu w innym miejscu, niż na przykład terminy odpowiadające narzędziom. Co więcej - obszary mózgu związane z terminami na jedzenie znajdują się bliżej kory wzrokowej, a obszary związane z narzędziami - bliżej kory ruchowej.
-</hr>
+<hr>
 </details>
 
 Jeśli ktoś nadaje jakikolwiek komunikat, to uruchamia dość skomplikowany proces **kodowania** tej mieszanki kategorii, wspomnień i obrazów w poręczny pakiet słów. Następnie, odbiorca komunikatu dekoduje słowa, przenosząc je na własną siatkę informacyjną - na własne kategorie, wspomnienia i obrazy. Jakim cudem jesteśmy zdolni się porozumieć? Dzięki koordynacji. Ludzie skoordynowali systemy znaczeń, ustalili wspólne, intersubiektywne kategorie. Tym jest, mówiąc z grubsza, język. Kiedy mówimy, mamy mniej więcej to samo w głowach. Kiedy powiem: koń, powinniśmy mieć dość podobne wyobrażenie (czyli konceptualizację) konia w głowie. Choć każde z nas będzie wyobrażać sobie trochę inny prototyp konia. Zawsze rozumiemy się “mniej więcej” - choć prawie zawsze to “mniej więcej” jest całkowicie wystarczające do sukcesu komunikacyjnego.
@@ -87,7 +90,7 @@ Retoryka a storytelling i narratologia. Osoby interesujące się popularyzacją 
 Do rzeczy. W następnej części poradnika przedstawię działy retoryczne, struktury budowy przekazu i schematy argumentów. Potem opiszę wybór zjawisk językowych, które są elementami wypowiedzi retorycznych. Klasyczna retoryka ma 5 głównych działów - **inwencja**, **kompozycja** (dyspozycja), **elokucja**, mnemotechnika (memoria) i akcja-działanie. To dobry podział, również współcześnie, będziemy się go trzymać (ale mnemotechniki i działania nie będę opisywać w tym poradniku). 
 
 # A. Inwencja
-Wyszukiwanie tego co przekonujące. Logos, czyli wynajdywanie słowa - faktu.
+*Wyszukiwanie tego co przekonujące. Logos, czyli wynajdywanie słowa - faktu.*
 
 Pole startowe to inwencja (inventio). Trzeba od czegoś zacząć - wybrać temat, dokonać selekcji informacji, obrać sobie cel, wstępnie dobrać toposy, sprecyzować odbiorców (audiencję).
 
@@ -100,6 +103,7 @@ A teraz - co jest naszym celem? Istotą retoryki jest zmiana przekonań. Jeśli 
   <summary><span style="color: blue;">Budowanie rusztowania</span></summary>
 <hr>
 Jest to pokrewne teorii budowania rusztowania (scaffolding) i [modelowi hierarchicznej kompleksowości rozwoju](https://en.wikipedia.org/wiki/Model_of_hierarchical_complexity). Dobrym, jeśli nie najlepszym, sposobem edukacji jest budowanie tego metaforycznego rusztowania, które pomoże wspiąć się osobom na wyższy poziom rozumienia świata. Nie można jednak budować rusztowania, bez rozważenia obecnego stanu wiedzy odbiorców. 
+<hr>
 </details>
 
 ## Audytorium
@@ -151,9 +155,9 @@ https://tvtropes.org, która zbiera tysiące współczesnych tropów i toposów 
 Topos powinien więc być schematyczny, opowiadać krótką uniwersalną historię i musi być powszechnie rozumiany. Zdanie “Życie jest jak rzeka” powinno być klarowne, tak samo jak “Życie jest jak droga” - bo np. długie, pełne zakrętów, nieprzewidzianych wydarzeń etc. Natomiast “Życie jest jak jezioro” raczej nie zostanie zrozumiane, przynajmniej bez dodatkowego wyjaśnienia.
 
 Toposy można ze sobą zestawiać, pokazując podobieństwa, sprzeczności, opozycje. Np.:<br>
-“Młodzi zawsze stoją na ramionach poprzednich pokoleń.”<br>
+- “Młodzi zawsze stoją na ramionach poprzednich pokoleń.”<br>
 można zestawić z:<br>
-“Każde nowe pokolenie musi wykuć swoją własną ścieżkę.”<br>
+- “Każde nowe pokolenie musi wykuć swoją własną ścieżkę.”<br>
 Zaznaczam jednak, że toposy nie są jednoznaczne z metaforami, banałami, alegoriami czy kliszami. Mogą być przez nie realizowane - ale nimi nie są.
 
 
@@ -258,8 +262,12 @@ Druga reklama powie: “Nienaturalnie niskie ceny!”<br>
 
 Naturalność/prawdziwość skóry jest wartością pozytywną tylko do momentu, gdy wprowadzony zostaje dylemat etyczny, związany z zabijaniem zwierząt.
 
-Biały chleb tostowy (“[wonder bread](https://99percentinvisible.org/episode/good-bread/)”) jest obecnie uznawany za mniej wartościowy od tradycyjnych chlebów piekarnianych, ale jeszcze kilkadziesiąt lat temu jego “fabryczność”, nienaturalność i standaryzacja były oceniane pozytywnie, ponieważ tradycyjny chleb kojarzył się z brudem i chorobami. 
-
+<details>
+  <summary><span style="color: blue;">Chleb</span></summary>
+<hr>
+Biały chleb tostowy (“[wonder bread](https://99percentinvisible.org/episode/good-bread/)”) obecnie może być traktowany jako mniej wartościowy od tradycyjnych chlebów piekarnianych, ale jeszcze kilkadziesiąt lat temu jego “fabryczność”, nienaturalność i standaryzacja były oceniane pozytywnie, ponieważ tradycyjny chleb kojarzył się z brudem i chorobami. 
+<hr>
+</details>
 
 Stąd, powoływanie się w przekazie retorycznym na wartości będzie o tyle skuteczne, o ile odbiorcy podzielają przywołane wartości. Można się spierać, czy istnieją tzw. wartości uniwersalne - nie poddające się relatywizacji i pozytywne w każdym kontekście. To jednak nie miejsce na tę dyskusję.
 
@@ -289,16 +297,20 @@ Pleśń na jedzeniu? Obrzydzenie!<br>
 
 Te schematy pomagały nam (i wciąż pomagają) przeżyć, przetrwać jako wspólnota. Niestety, ludzie nauczyli się również nadużywać tych schematów, do własnych celów. I stąd mamy taki paradoks uchodźcy: jednocześnie jest nierobem, pobiera zasiłki; i jednocześnie odbiera NASZE miejsca pracy. W sekcji dotyczącej pola semantycznego pojawi się z kolei temat wywoływania strachu i obrzydzenia, poprzez konotacje z chorobami i pasożytami.
 
+
+<details>
+  <summary><span style="color: blue;">Nie jesteśmy odporni na manipulację</span></summary>
+<hr>
 Mamy pecha, bo ewolucyjnie nie wykształciliśmy biologicznych sposobów radzenia sobie z nieuczciwą retoryką. Wykształciliśmy sposoby kognitywno-kulturowe, czyli właśnie uczciwą argumentację/dialektykę, metodę naukową, kulturowe kody wzajemnego poszanowania w dyskusji itd. No ale tego trzeba się nauczyć i potem z tego korzystać. I wciąż, nawet najbardziej inteligentne osoby są jak najbardziej podatne na różnego rodzaju błędy poznawcze i przedkładanie myślenia emocjonalnego nad racjonalnym (patrz: [Pułapki Myślenia Kahnemanna](https://lubimyczytac.pl/ksiazka/154212/pulapki-myslenia-o-mysleniu-szybkim-i-wolnym)).
+<hr>
+</details>
 
 Omówmy się więc, że w komunikacji naukowej postaramy się jak najmniej grać na pierwotnych emocjach - w szczególności tych negatywnych. To nie znaczy, że nie powinniśmy wywoływać jakichkolwiek emocji! Przeciwnie! 
 Spójrzmy na Koło emocji Plutchika. Wzbudzać można zaciekawienie, zachwyt, zaskoczenie, podziw, oczekiwanie. Można zachęcać do poszukiwania wewnętrznego spokoju i zadowolenia. W przypadku zagrożeń, takich jak zmiany klimatyczne, można wywoływać czujność, zaniepokojenie i złość - ale tylko do tego stopnia, by pozostawić miejsce na chęć dążenia do zmian i mimo wszystko - optymizm. Najlepiej też, jeśli emocje są zniuansowane. Nasze emocje rzadko są “czyste”, częściej mierzymy się z trudnymi do określenia odcieniami wielu emocji. Czyjaś śmierć nie musi oznaczać tylko głębokiego smutku - może być mieszanką żałoby, zadumy, strachu, wściekłości na śmiertelność, radosnych wspomnień z przeszłości, niepewnego oczekiwania na kolejne dni itd. To coś, w czym literatura piękna, beletrystyka, jest zdecydowanie lepsza od retoryki i literatury popularnonaukowej. Warto podpatrzeć tam parę wzorców opisywania i wywoływania emocji. Przykładem bardzo specyficznej emocji z literatury jest głęboki kosmiczny, egzystencjalny lęk, wywoływany przez książki Lovecrafta. Lub - uczucie przygody u Tolkiena - nakładające się na antycypację, zainteresowanie (rozwojem wydarzeń) w modelu emocji Plutchika.
 
 
 # B. Kompozycja
-
-(Dyspozycja. kompozycja, konstrukcja)
-jasność, precyzja, uczciwa argumentacja
+*Dyspozycja. kompozycja, konstrukcja*
 
 Tekst trzeba skonstruować. Wykorzystajmy asocjacje architekturalne i metaforę PRZEKAZ RETORYCZNY TO BUDYNEK. Pisząc ten tekst, wiem mniej więcej co chcę przekazać, ale wcielenie tego w rzeczywisty tekst wymaga wysiłku i rozmyślania - co wrzucić do tej sekcji, co będzie pasować, które informacje są niezbędne, a które można odrzucić. Mam otwarte cztery pliki pdf z notatkami, dwa epuby, notatki na czytniku książek i kilkanaście zakładek w przeglądarce internetowej. Próbuję to złożyć w jakąś sensowną całość, jakbym leżał na podłodze pośród klocków lego i nieco otumaniony próbował zadecydować gdzie pójdą kolejne klocki, żeby zbudować katedrę, która się nie zawali i nie będzie wyglądać jak chaotyczny zlepek badziewia. Już poczytałem książki, już złapałem sens retoryki; ale zawarcie tego w nowej formie wcale nie jest proste. Co zrobić, żeby budynek był i ładny i funkcjonalny?
 
@@ -334,27 +346,37 @@ Ważne jest jedno - dostosuj kompozycję do możliwości poznawczych swoich odbi
 Celem logiki jest niepodważalność dowodów. Retoryka jest nieco luźniejsza w tym aspekcie, jej celem jest akceptowalność dowodów. Pracujemy na wiedzy prawdopodobnej. Zacznijmy rozumowania dedukcyjnego, czyli [sylogizmu](https://pl.wikipedia.org/wiki/Sylogizm).
 
 Konstrukcja argumentu standardowego, sylogizmu, wygląda tak:
-Przesłanka mniejsza (węższy zakres) + Przesłanka większa (szerszy zakres) -> Wniosek<br>
-Każde A jest B + Każde B jest C -> Więc każde A jest C<br>
+```
+Przesłanka mniejsza (węższy zakres) + Przesłanka większa (szerszy zakres) -> Wniosek
+Każde A jest B + Każde B jest C -> Więc każde A jest C
+```
+```
+Przesłanka mniejsza: Elżbieta jest człowiekiem
+Przesłanka większa: Każdy człowiek musi jeść
+Wniosek: Elżbieta musi jeść, bo jest człowiekiem
 
-Elżbieta jest człowiekiem (Przesłanka mniejsza)<br>
-Każdy człowiek musi jeść (Przesłanka większa)<br>
-Elżbieta musi jeść, bo jest człowiekiem (Wniosek)<br>
+Pm: Spacer jest lekką aktywnością fizyczną
+Pw: Wiele badań wykazuje, że lekka aktywność fizyczna pozytywnie wpływa na zdrowie
+W: Spacery są dobre dla zdrowia
 
-Spacer jest lekką aktywnością fizyczną (Pm)<br>
-Wiele badań wykazuje, że lekka aktywność fizyczna pozytywnie wpływa na zdrowie (Pw)<br>
-Spacery są dobre dla zdrowia (W)<br>
+Pm: Politycy są częścią większego systemu politycznego
+Pw: Pole systemu politycznego jest grą społeczną, 
+w której jedną z nagród jest utrzymywanie wysokiej pozycji w systemie
+W: Politycy będą dążyć do zdobycia i utrzymania władzy, 
+ponieważ do tego bodźcuje ich swoista gra społeczna, środowisko, w którym są zanurzeni
+
+```
 
 ![Poprosiłem ChatGPT o stworzenie sylogizmu](sylog.png){width=100%}
 
-Politycy są częścią większego systemu politycznego (Pm)<br>
-Pole systemu politycznego jest grą społeczną, w której jedną z nagród jest utrzymywanie wysokiej pozycji w systemie (Pw)<br>
-Politycy będą dążyć do zdobycia i utrzymania władzy, ponieważ do tego bodźcuje ich swoista gra społeczna, środowisko, w którym są zanurzeni (W)<br>
 
 Takie rozumowanie jest dość sztywne i nie wygląda zbyt dynamicznie. Stąd liczne stosowanie [entymematów](https://pl.wikipedia.org/wiki/Wnioskowanie_entymematyczne) (en thymo - w umyśle), czyli sylogizmów, w których jedna z części została ukryta (wniosek lub jedna z przesłanek) - bo np. jest oczywista dla audytorium. Na przykład:<br>
-Jak każdy człowiek, Ela musi jeść.<br>
-Warto spacerować - badania wykazują, że lekka aktywność fizyczna jest dobra dla zdrowia.<br>
-Politykom zależy na władzy - bo w takim właśnie systemie się obracają.<br>
+
+```
+Jak każdy człowiek, Ela musi jeść.
+Warto spacerować - badania wykazują, że lekka aktywność fizyczna jest dobra dla zdrowia.
+Politykom zależy na władzy - bo w takim właśnie systemie się obracają.
+```
 
 Nietrudno jednak zauważyć, że w tym kryje się niebezpieczeństwo entymematów. Podstępnie można przepchnąć rozumowanie oparte na fałszywych przesłankach. Odbiorcy łatwo mogą to przegapić, a wytknięcie błędów w rozumowaniu wymaga specjalnej inicjatywy.
 
@@ -382,7 +404,7 @@ Negacja: Nie spodziewam się możliwości ataku terrorystycznego w związku z na
 
 Jak widać, presupozycje są niewrażliwe na negację. Założenie ich prawdziwości jest niejako przemycane w konstrukcji zdań i potrzeba dużego wysiłku komunikacyjnego, by je zakwestionować.
 
-Implikatury są bardziej zależne od kontekstu komunikacyjnego. Jeśli powiesz “Aj, zimno jest” - możesz implikować prośbę o zamknięcie okna albo prośbę o zmniejszenie mocy klimatyzacji. Implikatury wymagają od odbiorców przeprowadzenia dodatkowego wnioskowania, by “uratować” tzw. [zasadę kooperacji](https://pl.wikipedia.org/wiki/Regu%C5%82a_konwersacyjna), mówiącą o tym, że partnerzy komunikacyjni dołożą starań, by komunikacja zakończyła się sukcesem.
+Implikatury są bardziej zależne od kontekstu komunikacyjnego. Jeśli powiesz “Aj, zimno jest” - możesz implikować prośbę o zamknięcie okna albo prośbę o zmniejszenie mocy klimatyzacji. Implikatury wymagają od odbiorców przeprowadzenia dodatkowego wnioskowania, by “uratować” tzw. [zasadę kooperacji](https://pl.wikipedia.org/wiki/Regu%C5%82a_konwersacyjna), mówiącą o tym, że partnerzy komunikacyjni dołożą starań, by komunikacja zakończyła się sukcesem.<br>
 - “Potrzebuję komórki” /druga osoba podaje telefon pierwszej osobie/ - implikowana jest prośba o podanie telefonu.<br>
 - “Nasza partia doprowadzi do pięcioprocentowego wzrostu PKB w kraju!” - “A nasza wyśle człowieka na Marsa i otworzy tam kasyno” - implikowana jest całkowita nierealizowalność pierwszego projektu.<br>
 - “Pada” - możliwa implikatura: trzeba zabrać parasol.<br>
@@ -395,16 +417,22 @@ Implikatury są bardziej zależne od kontekstu komunikacyjnego. Jeśli powiesz �
 
 Powróćmy do argumentacji.
 Istnieje jeszcze kilka modeli klasycznej argumentacji, które mogą się przydać w komunikacji naukowej - a przynajmniej zainspirować do rozwijania własnego stylu dowodzenia. Są to sylogizmy niedoskonałe, odbiegające na różne sposoby od złotego standardu. 
-I tak na przykład, **[epicheremat](https://de.wikipedia.org/wiki/Epicherem)** (“krasomówczy sylogizm”) to schemat, w którym przynajmniej jedna z przesłanek jest przerośnięta, bo dostaje dodatkowe uzasadnienie, dodatkowe dowodzenie wyjaśniające. Przykład:
+I tak na przykład, **[epicheremat](https://de.wikipedia.org/wiki/Epicherem)** (“krasomówczy sylogizm”) to schemat, w którym przynajmniej jedna z przesłanek jest przerośnięta, bo dostaje dodatkowe uzasadnienie, dodatkowe dowodzenie wyjaśniające. Przykład:<br>
 Zwykły sylogizm:<br>
-Pw: Wszyscy ludzie są śmiertelni<br>
-Pm: Sokrates jest człowiekiem<br>
-W: Sokrates jest śmiertelny<br>
+```
+Pw: Wszyscy ludzie są śmiertelni
+Pm: Sokrates jest człowiekiem
+W: Sokrates jest śmiertelny
+```
+
 
 Epicheremat, w którym obie przesłanki są dodatkowo uzasadnione:<br>
-Pw: Wszyscy ludzie są śmiertelni, ponieważ mają ciało, organy, które się zużywają i mają ograniczony okres działania<br>
-Pm: Sokrates jest człowiekiem, ponieważ jego rodzice są ludźmi<br>
-W: Sokrates jest śmiertelny <br>
+```
+Pw: Wszyscy ludzie są śmiertelni, ponieważ mają ciało, organy, które się zużywają i mają ograniczony okres działania
+Pm: Sokrates jest człowiekiem, ponieważ jego rodzice są ludźmi
+W: Sokrates jest śmiertelny
+```
+
 
 **[Soryt](https://pl.wikipedia.org/wiki/Soryt_(logika))** (inaczej “łańcusznik” - brzmi jak jakiś jadowity wąż) jest łańcuchem sylogizmów, w którym każde kolejne zdanie wynika z poprzedniego. 
 Może to wyglądać tak: <br>
@@ -503,7 +531,7 @@ punkt 0, punkt centralny, tzw. centrum deiktyczne: tutaj, teraz, prawda/istnieni
 Przykład takiego rozrysowania:
 
 
-![](ex.png){width=75%}
+![Nagłówek: Kosiniak-Kamysz ujawnia, co planowała opozycja. "Upadek rządu był na wyciągnięcie ręki"](ex.png){width=75%}
 
 ![Drugie zdanie nagłówka, rozpisane na czas, przestrzeń i modalność](diagrama.png){width=75%}
 
@@ -625,7 +653,7 @@ Jak widzicie, słowa są systematycznie powiązane w relacje. “Pies” jest s�
 Czym są hiponimy, hiperonimy i synonimy - wywnioskujecie z przeglądania Słowosieci. 
 Dodatkowy termin: [polisemia](https://pl.wikipedia.org/wiki/Polisemia), te same słowa mogą być wieloznaczne. Na przykład “język” - część ciała, oraz mowa ludzka. “Polityka” - obszar działalności społecznej (“Maciek świetnie odnalazł się w polityce”) lub konkretne działanie (“polityka ekologiczna rządu okazała się umiarkowanym sukcesem”). Polisemiczne znaczenia mogą być więc dość wyraźnie odrębne (język), ale mogą też być bardzo bliskie (polityka). Często wieloznaczność ma charakter metonimiczny. Warto zwracać na to uwagę, bo polisemiczność może być wykorzystywana do nieuczciwej argumentacji. Zawsze warto jest dopytywać o dokładne definicje, tzn. ustalać wspólny grunt dyskusji. Bardzo często dwie strony mają całkowicie dobre intencje, ale nie dogadują się przez to, że inaczej rozumieją przedmiot dyskusji.
 
-A właśnie, definicje. Istnieje kategoria definicji retorycznych. Definiowanie również jest w dyskusji zabiegiem perswazyjnym, ponieważ autor posiada kontrolę nad prezentowaniem i uwypuklaniem aspektów danej rzeczy, procesu, zjawiska. Załóżmy, że moglibyśmy opisać konia na tysiąc sposobów. Ale osoba A wybierze taką definicję: “Patykowate nogi, wielkie zęby, frędzlowaty ogon”. Osoba B z kolei powie: “Majestatyczna lśniąca sierść, ambitna sylwetka, naprężone muskuły - gotowe do biegu”. Osoba C (Benedykt Chmielowski) napisze: “Koń jaki jest, każdy widzi”.
+A właśnie, definicje. Istnieje pojęcie **definicji retorycznych**. Definiowanie również jest w dyskusji zabiegiem perswazyjnym, ponieważ autor posiada kontrolę nad prezentowaniem i uwypuklaniem aspektów danej rzeczy, procesu, zjawiska. Załóżmy, że moglibyśmy opisać konia na tysiąc sposobów. Ale osoba A wybierze taką definicję: “Patykowate nogi, wielkie zęby, frędzlowaty ogon”. Osoba B z kolei powie: “Majestatyczna lśniąca sierść, ambitna sylwetka, naprężone muskuły - gotowe do biegu”. Osoba C (Benedykt Chmielowski) napisze: “Koń jaki jest, każdy widzi”.
 
 ![Definicja konia z Nowych Aten](ateny.jpg){width=100%}
 
@@ -643,11 +671,11 @@ https://portal.abczdrowie.pl/kaczynski-o-imigrantach-sa-juz-objawy-cholery-pierw
 Tworzenie pozytywnych sieci skojarzeniowych (asocjacyjnych) dla produktów, przez agencje reklamowe. Wprowadzanie słownictwa martyrologicznego, języka ofiary, dla wywyższenia pozycji nacji. Stosowanie języka sukcesu w kulturze korporacyjnej. Promowanie toposu ciężkiej pracy, dla legitymizacji podziałów klasowych i rozbieżności majątkowych (“Gdybyś wcześniej wstawał, ciężej pracował…”).
 
 Wzbogacanie konceptualizacji można dokonywać przez nagromadzenia. Różny stosunek ilości rzeczowników, czasowników i przymiotników wpłynie na charakter tekstu. Nagromadzenie rzeczowników ugruntuje tekst, osadzi w konkrecie. Duże ilości czasowników i przysłówków zdynamizują tekst, nadadzą poczucie procesualności, ruchu, akcji. Przymiotniki nadadzą tekstowi kolor (mówiąc metaforycznie), sprawią, że wizualizacje będą wyraźniejsze. 
-Z kolei liczne deiksy (patrz: [deixis, deiktyka](https://pl.wikipedia.org/wiki/Deixis)), czyli środki wskazywania/demonstracji, podkreślą relacyjność opisywanych obiektów, systemowość, sieci powiązań. Przykłady deiks: tu, tam, ty, ona, wtedy, tutaj, gdzieś, *wskazujący ruch ręką*, w górze, obok, na lewo, dalej, wczoraj, oni, ich. Jak widać w tym zbiorze, znaczniki wskazywania mogą dotyczyć czasu, przestrzeni i osób.
+Z kolei liczne **deiksy** (patrz: [deixis, deiktyka](https://pl.wikipedia.org/wiki/Deixis)), czyli środki wskazywania/demonstracji, podkreślą relacyjność opisywanych obiektów, systemowość, sieci powiązań. Przykłady deiks: tu, tam, ty, ona, wtedy, tutaj, gdzieś, *wskazujący ruch ręką*, w górze, obok, na lewo, dalej, wczoraj, oni, ich. Jak widać w tym zbiorze, znaczniki wskazywania mogą dotyczyć czasu, przestrzeni i osób.
 
-Skoro jesteśmy przy polu semantycznym, warto wspomnieć o etykietach. Są to, jak nazwa wskazuje, proste, stereotypiczne nazwy, nadawane bytom, w celu usprawnienia komunikacji. Nadanie nazwy czasami niemal stwarza rzecz, a przynajmniej ją uwidacznia. Etykiet jednak trudno się pozbyć, jeśli już zaczynają funkcjonować w obiegu społecznym. Tym większy problem, jeśli etykiety mają negatywne nacechowanie i służą wykluczeniu grupy społecznej (“pedał”, “lesba”, “ciapaty”). W obliczu tego dane grupy muszą wykonać wiele pracy, by pozbyć się etykiet, lub je odbić dla siebie i zmienić nacechowanie na pozytywne (rozbrajanie terminu). Niemniej, etykiety są poręczne retorycznie, ponieważ urzeczowiają (reifikacja) niejasne lub abstrakcyjne terminy.
+Skoro jesteśmy przy polu semantycznym, warto wspomnieć o **etykietach**. Są to, jak nazwa wskazuje, proste, stereotypiczne nazwy, nadawane bytom, w celu usprawnienia komunikacji. Nadanie nazwy czasami niemal stwarza rzecz, a przynajmniej ją uwidacznia. Etykiet jednak trudno się pozbyć, jeśli już zaczynają funkcjonować w obiegu społecznym. Tym większy problem, jeśli etykiety mają negatywne nacechowanie i służą wykluczeniu grupy społecznej (“pedał”, “lesba”, “ciapaty”). W obliczu tego dane grupy muszą wykonać wiele pracy, by pozbyć się etykiet, lub je odbić dla siebie i zmienić nacechowanie na pozytywne (rozbrajanie terminu). Niemniej, etykiety są poręczne retorycznie, ponieważ urzeczowiają (reifikacja) niejasne lub abstrakcyjne terminy.
 
-W kontekście celów naukowych, edukacyjnych - zawsze warto podawać etymologię wyrażenia. To wpłynie pozytywnie na zapamiętanie terminu, ponieważ często etymologia tłumaczy samo słowo. Za etymologiami mogą stać też ciekawe historie, np. [“niedźwiedź” pochodzi od mědv-edь](https://sjp.pwn.pl/poradnia/haslo/Skad-sie-wziely-niedzwiedzie;6135.html), czyli “jedzący miód” i prawdopodobnie wynika to z tabu (czasów prasłowiańskich), zakazującego używania prawdziwego imienia groźnej bestii, stąd peryfrastyczny eufemizm - omówienie, unikające nazywania wprost.
+W kontekście celów naukowych, edukacyjnych - zawsze warto podawać **etymologię** wyrażenia. To wpłynie pozytywnie na zapamiętanie terminu, ponieważ często etymologia tłumaczy samo słowo. Za etymologiami mogą stać też ciekawe historie, np. [“niedźwiedź” pochodzi od mědv-edь](https://sjp.pwn.pl/poradnia/haslo/Skad-sie-wziely-niedzwiedzie;6135.html), czyli “jedzący miód” i prawdopodobnie wynika to z tabu (czasów prasłowiańskich), zakazującego używania prawdziwego imienia groźnej bestii, stąd peryfrastyczny eufemizm - omówienie, unikające nazywania wprost.
 
 ### Hiperbole, litoty, eufemizmy, peryfrazy, hedging i boostery, zdrobnienia i zgrubienia
 
