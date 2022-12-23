@@ -248,8 +248,8 @@ A jak wierzymy w zewnętrzne dowody? Jak działa zewnętrzna spójność (czyli 
 
 
 Powoływanie się na twarde dane lub na wiarygodne autorytety zdawałoby się zdecydowanie uczciwym sposobem argumentacji, trzeba jednak pamiętać, że sama struktura atrybucji źródeł (powoływania się na źródła) wcale nie świadczy o prawdziwości źródeł. Ten sposób może być użyty do stworzenia pozorów poprawnej argumentacji, a także do zrzucenia z siebie odpowiedzialności:<br>
-- “Y powiedział, że sos pomidorowy jest toksyczny. Ja się z tym zgadzam, ale to nie jest moje zdanie.”
-- “Artykuł Q jasno dowodzi, że jedzenie plastiku poprawia zdrowie. Badanie pochodzi z Uniwersytetu V, to dobry uniwersytet.”
+- “Y powiedział, że sos pomidorowy jest toksyczny. Ja się z tym zgadzam, ale to nie jest moje zdanie.” <br>
+- “Artykuł Q jasno dowodzi, że jedzenie plastiku poprawia zdrowie. Badanie pochodzi z Uniwersytetu V, to dobry uniwersytet.”<br>
 
 Co do wiedzy ogólnej, wiedzy z “folkloru”, retoryka powołuje termin **[endoxa](https://en.wikipedia.org/wiki/Endoxa)**. Wiedza codzienna, wiedza podzielana przez wszystkich (w danej grupie), wiedza co do której panuje konsensus. Nie trzeba jej uzasadniać - a nawet można pomijać, jako ukryte, ale akceptowane założenia. Oczywiście, nikt nie mówi, że endoxa będzie w jakimkolwiek wymiarze prawdziwa!
 
