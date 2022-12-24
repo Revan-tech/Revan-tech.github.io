@@ -126,7 +126,7 @@ $$ P(A) = \int_{}P(A \land B)dB$$
 
 Czyli, by obliczyć intersujące nas prawdopodobieństwo musimy podstawić odpowiednie wartości do wzoru:
 
-$P(Choroba|Pozytywny) =\frac{P(Pozytywny|Choroba)P(Choroba)}{P(Pozytywny) = P(Pozytywny|Choroba)P(Choroba) + P(Pozytywny|\neg Choroba)P( \neg Choroba)}$
+$$P(Choroba|Pozytywny) =\frac{P(Pozytywny|Choroba)P(Choroba)}{P(Pozytywny) = P(Pozytywny|Choroba)P(Choroba) + P(Pozytywny|\neg Choroba)P( \neg Choroba)}$$
 
 Po podstawieniu do wzoru
 
