@@ -224,7 +224,7 @@ $$P(y|\mu,\sigma) = \prod_{i=1}^{n}P(y_i|\mu,\sigma) = P(y_1|\mu,\sigma)*P(y_2|\
 
 Skoro mamy już naszą funkcję wiarygodności, potrzebujemy jeszcze naszego prawdopodobieństwa *A priori* $P(\mu,\sigma)$. Zakładamy, że wartość średniej jest niezależna od wartości odchylenia standardowego, czyli $P(\mu,\sigma) = P(\mu) P(\sigma)$. Tak jak już wspomniałem, prawdopodobieństwo *a priori* przedstawia stan wyjściowy (np. naszą wcześniejszą wiedzę). 
 
-Jaką wiedzę mamy na temat średniego IQ? Wiemy, że w populacji wynosi 100 (tak jest skonstruowana ta miara). Raczej nie podejrzewamy, dużych odstępów od tej wartości więc możemy zamodelować $P(\mu)$ rozkładem normalnym o średniej 100 i odchyleniu 2 $N(100,3)$. Wiemy też, że odchylenie standardowe wynosi 15, ale na potrzeby tego ćwiczenia udamy, że tego nie wiemy. A skoro nie mamy żadnej wcześniejszej wiedzy na temat SD, uznajemy że każda wartość SD jest tak samo prawdopodobna i zamodelujemy $P(\sigma)$ rozkładem jednostajnym (prawdopodobieństwo wylosowania każdej wartości z zadanego przedziału jest takie same). 
+Jaką wiedzę mamy na temat średniego IQ? Wiemy, że w populacji wynosi 100 (tak jest skonstruowana ta miara). Raczej nie podejrzewamy dużych odstępów od tej wartości więc możemy zamodelować $P(\mu)$ rozkładem normalnym o średniej 100 i odchyleniu 2 $N(100,3)$. Wiemy też, że odchylenie standardowe wynosi 15, ale na potrzeby tego ćwiczenia udamy, że tego nie wiemy. A skoro nie mamy żadnej wcześniejszej wiedzy na temat SD, uznajemy że każda wartość SD jest tak samo prawdopodobna i zamodelujemy $P(\sigma)$ rozkładem jednostajnym (prawdopodobieństwo wylosowania każdej wartości z zadanego przedziału jest takie same). 
 
 Nasz wzór możemy zapisać:
 

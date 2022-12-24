@@ -122,7 +122,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["apa.csl","bib.bib","hero-image.html","Statystyczne_Dygresje.jpg","Statystyczne_Dygresje2.jpg","theme.css","tutorial-bayes-ii_files/anchor-4.2.2/anchor.min.js","tutorial-bayes-ii_files/bowser-1.9.3/bowser.min.js","tutorial-bayes-ii_files/distill-2.2.21/template.v2.js","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-1-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-10-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-12-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-13-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-14-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-15-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-16-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-17-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-19-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-2-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-2-2.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-2-3.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-3-3.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-4-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-5-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-6-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-7-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-8-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-9-1.png","tutorial-bayes-ii_files/header-attrs-2.10/header-attrs.js","tutorial-bayes-ii_files/jquery-1.11.3/jquery.min.js","tutorial-bayes-ii_files/popper-2.6.0/popper.min.js","tutorial-bayes-ii_files/tippy-6.2.7/tippy-bundle.umd.min.js","tutorial-bayes-ii_files/tippy-6.2.7/tippy-light-border.css","tutorial-bayes-ii_files/tippy-6.2.7/tippy.css","tutorial-bayes-ii_files/tippy-6.2.7/tippy.umd.min.js","tutorial-bayes-ii_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["apa.csl","bib.bib","hero-image.html","Statystyczne_Dygresje.jpg","Statystyczne_Dygresje2.jpg","theme.css","tutorial-bayes-ii_files/anchor-4.2.2/anchor.min.js","tutorial-bayes-ii_files/bowser-1.9.3/bowser.min.js","tutorial-bayes-ii_files/distill-2.2.21/template.v2.js","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-1-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-10-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-11-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-12-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-13-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-14-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-15-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-16-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-17-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-19-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-2-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-2-2.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-2-3.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-20-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-3-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-3-3.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-4-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-5-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-6-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-7-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-8-1.png","tutorial-bayes-ii_files/figure-html5/unnamed-chunk-9-1.png","tutorial-bayes-ii_files/header-attrs-2.10/header-attrs.js","tutorial-bayes-ii_files/jquery-1.11.3/jquery.min.js","tutorial-bayes-ii_files/popper-2.6.0/popper.min.js","tutorial-bayes-ii_files/tippy-6.2.7/tippy-bundle.umd.min.js","tutorial-bayes-ii_files/tippy-6.2.7/tippy-light-border.css","tutorial-bayes-ii_files/tippy-6.2.7/tippy.css","tutorial-bayes-ii_files/tippy-6.2.7/tippy.umd.min.js","tutorial-bayes-ii_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2135,6 +2135,14 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul>
 </nav>
 </div>
+<div class="layout-chunk" data-layout="l-body">
+<style type="text/css">
+.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+</style>
+</div>
 <p style="color:blue">
 Post będzie aktualizowany.
 </p>
@@ -2164,7 +2172,7 @@ Post będzie aktualizowany.
 <p>Ta wersja MCMC to algorytm Metropolisa-Hastingsa. Żeby być rzetelnym, prawdopodobnie musiałbym zacząć od przedstawienia wam czym jest proces stochatyczny, łańcuchy Markova, rozkład stacjonarny, et cetera. Ale ponieważ chcę się skupić na pokazaniu jak wygląda estymacja MCMC w praktyce, pominę to. Dowód i opis matematyczny działania algorytmu Metropolisa-Hastingsa możecie znaleźć <span style="color:blue"><a href="https://similarweb.engineering/mcmc/">tutaj</a></span>.</p>
 <p>Skąd wiemy, że losujemy z <strong>właściwej przestrzeni parametrów rozkładu</strong>? Żeby wyjaśnić ten termin pójrzmy na wykres poniżej.</p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
 </div>
 <p>Jak widzimy, ten rozkład prawdopodbieństwa ma dwa maksima. Chcielibyśmy, by rozkład <em>post priori</em> był odwzorowany jak najdokładniej. Jednak nasz algorytm może w utknąć makismum po lewej, dając nam błędne przybliżenie rozkładu.</p>
 <p>Czy nasz algorytm jest w stanie poradzić sobie z tym? Odowiedź brzmi: Wykonując nieskończoną liczbę iteracji, wartości zbiegną do właściwej przestrzeni rozkładu. Dzieje się tak dlatego, że nasz algorytm może poruszać się także po mniejszych wartościach <span class="math inline">\(P(\theta|y)\)</span>, jest więc w stanie opuścić lokalne maksima.</p>
@@ -2173,98 +2181,93 @@ Post będzie aktualizowany.
 <p>Zobaczmy to na przykładzie, który kiedyś podpatrzyłem i wydaje mi się idealny do zaprezentowania działania MCMC. Weźmy sobie pewną funkcję, która jako argumenty bierze <span class="math inline">\(x\)</span> i <span class="math inline">\(y\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>f</span> <span class='op'>=</span> <span class='kw'>function</span> <span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span><span class='op'>)</span> <span class='op'>{</span>
-  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='fl'>20</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>0.2</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>x</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>+</span><span class='va'>y</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fl'>0.5</span><span class='op'>*</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Trig.html'>cos</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>*</span><span class='va'>pi</span><span class='op'>*</span><span class='va'>x</span><span class='op'>)</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/Trig.html'>cos</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>*</span><span class='va'>pi</span><span class='op'>*</span><span class='va'>y</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
-<span class='op'>}</span>
-
-<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://lattice.r-forge.r-project.org/'>lattice</a></span><span class='op'>)</span>
-<span class='va'>points</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>nrow <span class='op'>=</span> <span class='fl'>61</span>, ncol <span class='op'>=</span> <span class='fl'>61</span>, <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>3</span>,<span class='fl'>3</span>,<span class='fl'>0.1</span><span class='op'>)</span><span class='op'>)</span> 
-<span class='fu'><a href='https://rdrr.io/r/graphics/filled.contour.html'>filled.contour</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>points</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, y <span class='op'>=</span> <span class='va'>points</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, z <span class='op'>=</span> <span class='fu'>f</span><span class='op'>(</span><span class='va'>points</span>, <span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>points</span><span class='op'>)</span><span class='op'>)</span>, nlevels<span class='op'>=</span><span class='fl'>20</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>f</span> <span class='op'>=</span> <span class='kw'>function</span> <span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='fl'>20</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>0.2</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>x</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>+</span><span class='va'>y</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fl'>0.5</span><span class='op'>*</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Trig.html'>cos</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>*</span><span class='va'>pi</span><span class='op'>*</span><span class='va'>x</span><span class='op'>)</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/Trig.html'>cos</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>*</span><span class='va'>pi</span><span class='op'>*</span><span class='va'>y</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://lattice.r-forge.r-project.org/'>lattice</a></span><span class='op'>)</span></span>
+<span><span class='va'>points</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span>nrow <span class='op'>=</span> <span class='fl'>61</span>, ncol <span class='op'>=</span> <span class='fl'>61</span>, <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>3</span>,<span class='fl'>3</span>,<span class='fl'>0.1</span><span class='op'>)</span><span class='op'>)</span> </span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/filled.contour.html'>filled.contour</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>points</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, y <span class='op'>=</span> <span class='va'>points</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, z <span class='op'>=</span> <span class='fu'>f</span><span class='op'>(</span><span class='va'>points</span>, <span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>points</span><span class='op'>)</span><span class='op'>)</span>, nlevels<span class='op'>=</span><span class='fl'>20</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
 <p>Jak widzimy, nasza funkcja ma wiele lokalnych maksimów, ale tylko jedno globalne na środku. Sprawdźmy jak poradzi sobie nasz algorytm. <strong>Uwaga</strong>, funkcja, której używamy <strong>nie jest rozkładem prawdopodbieństwa</strong>, dlatego algorytm wygląda trochę inaczej niż w podpunktach przedstawionych wcześniej.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>jmp</span> <span class='op'>=</span> <span class='fl'>0.2</span> <span class='co'># step size</span>
-<span class='va'>iter</span> <span class='op'>=</span> <span class='fl'>10000</span> <span class='co'>#liczba iteracji algorytmu</span>
-<span class='va'>chain</span> <span class='op'>=</span> <span class='fl'>3</span> <span class='co'># liczba łańcuchów</span>
-
-<span class='va'>samples</span> <span class='op'>=</span>  <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10000</span>,<span class='fl'>3</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Pusty tensor na nasze próbki</span>
-
-<span class='co'># Wartości początkowe łańcuchów</span>
-<span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>]</span> <span class='op'>=</span> <span class='fl'>2.3</span> 
-<span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>]</span> <span class='op'>=</span> <span class='fl'>1.98</span>
-<span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>2</span><span class='op'>]</span> <span class='op'>=</span> <span class='op'>-</span><span class='fl'>2.3</span>  
-<span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>]</span> <span class='op'>=</span> <span class='op'>-</span><span class='fl'>1.98</span>
-<span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>]</span> <span class='op'>=</span> <span class='fl'>1</span> 
-<span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>3</span><span class='op'>]</span> <span class='op'>=</span> <span class='op'>-</span><span class='fl'>2.5</span>
-
-<span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>chain</span><span class='op'>)</span><span class='op'>{</span>
-<span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>3</span>,<span class='va'>j</span><span class='op'>]</span> <span class='op'>=</span> <span class='fu'>f</span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>1</span>,<span class='va'>j</span><span class='op'>]</span>, <span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='va'>j</span><span class='op'>]</span><span class='op'>)</span> <span class='co'># ewaluujemy naszą funkcję dla wartości</span>
-<span class='co'># początkowych łańcuchów</span>
-<span class='va'>n</span> <span class='op'>=</span> <span class='fl'>1</span>
-
-<span class='kw'>while</span><span class='op'>(</span><span class='va'>n</span> <span class='op'>&lt;=</span> <span class='op'>(</span><span class='va'>iter</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span> <span class='co'>#Iterujemy dopóki nie zbierzemy 'iter' próbek</span>
-  <span class='va'>new_x</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>1</span>,<span class='va'>j</span><span class='op'>]</span>, <span class='va'>jmp</span><span class='op'>)</span> <span class='co'># przemieszczamy się o losową wartość dla wartości x</span>
-  <span class='va'>new_y</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>2</span>,<span class='va'>j</span><span class='op'>]</span>, <span class='va'>jmp</span><span class='op'>)</span> <span class='co'># przemieszczamy się o losową wartość dla wartości y</span>
-  
-  <span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>12</span><span class='op'>*</span><span class='op'>(</span><span class='fu'>f</span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>1</span>,<span class='va'>j</span><span class='op'>]</span>, <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>2</span>,<span class='va'>j</span><span class='op'>]</span><span class='op'>)</span><span class='op'>-</span><span class='fu'>f</span><span class='op'>(</span><span class='va'>new_x</span>, <span class='va'>new_y</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>&gt;</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span>
-  <span class='co'># Sprawdzamy czy nowe wartości zwracają wyzszą wartość naszej funkcji. Poniweważ funkcja nie</span>
-  <span class='co'># jest rozkładem prawdopodobieństwa nie możemy policzyć stosunku prawdopodobieńst. Zamiast</span>
-  <span class='co'># tego używamy funkcji eksponencjalnej różnicy pomnożonej przez ujemną stałą.  </span>
-    
-    <span class='va'>n</span> <span class='op'>=</span> <span class='va'>n</span> <span class='op'>+</span> <span class='fl'>1</span>
-    <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>1</span>,<span class='va'>j</span><span class='op'>]</span> <span class='op'>=</span> <span class='va'>new_x</span>
-    <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>2</span>,<span class='va'>j</span><span class='op'>]</span> <span class='op'>=</span> <span class='va'>new_y</span>
-    <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>3</span>,<span class='va'>j</span><span class='op'>]</span> <span class='op'>=</span> <span class='fu'>f</span><span class='op'>(</span><span class='va'>new_x</span>, <span class='va'>new_y</span><span class='op'>)</span>
-
-  <span class='op'>}</span>   
-<span class='op'>}</span>
-<span class='op'>}</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>jmp</span> <span class='op'>=</span> <span class='fl'>0.2</span> <span class='co'># step size</span></span>
+<span><span class='va'>iter</span> <span class='op'>=</span> <span class='fl'>10000</span> <span class='co'>#liczba iteracji algorytmu</span></span>
+<span><span class='va'>chain</span> <span class='op'>=</span> <span class='fl'>3</span> <span class='co'># liczba łańcuchów</span></span>
+<span></span>
+<span><span class='va'>samples</span> <span class='op'>=</span>  <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10000</span>,<span class='fl'>3</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Pusty tensor na nasze próbki</span></span>
+<span></span>
+<span><span class='co'># Wartości początkowe łańcuchów</span></span>
+<span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>]</span> <span class='op'>=</span> <span class='fl'>2.3</span> </span>
+<span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>]</span> <span class='op'>=</span> <span class='fl'>1.98</span></span>
+<span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>2</span><span class='op'>]</span> <span class='op'>=</span> <span class='op'>-</span><span class='fl'>2.3</span>  </span>
+<span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>]</span> <span class='op'>=</span> <span class='op'>-</span><span class='fl'>1.98</span></span>
+<span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>]</span> <span class='op'>=</span> <span class='fl'>1</span> </span>
+<span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>3</span><span class='op'>]</span> <span class='op'>=</span> <span class='op'>-</span><span class='fl'>2.5</span></span>
+<span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>chain</span><span class='op'>)</span><span class='op'>{</span></span>
+<span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>3</span>,<span class='va'>j</span><span class='op'>]</span> <span class='op'>=</span> <span class='fu'>f</span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>1</span>,<span class='va'>j</span><span class='op'>]</span>, <span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='va'>j</span><span class='op'>]</span><span class='op'>)</span> <span class='co'># ewaluujemy naszą funkcję dla wartości</span></span>
+<span><span class='co'># początkowych łańcuchów</span></span>
+<span><span class='va'>n</span> <span class='op'>=</span> <span class='fl'>1</span></span>
+<span></span>
+<span><span class='kw'>while</span><span class='op'>(</span><span class='va'>n</span> <span class='op'>&lt;=</span> <span class='op'>(</span><span class='va'>iter</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span> <span class='co'>#Iterujemy dopóki nie zbierzemy 'iter' próbek</span></span>
+<span>  <span class='va'>new_x</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>1</span>,<span class='va'>j</span><span class='op'>]</span>, <span class='va'>jmp</span><span class='op'>)</span> <span class='co'># przemieszczamy się o losową wartość dla wartości x</span></span>
+<span>  <span class='va'>new_y</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>2</span>,<span class='va'>j</span><span class='op'>]</span>, <span class='va'>jmp</span><span class='op'>)</span> <span class='co'># przemieszczamy się o losową wartość dla wartości y</span></span>
+<span>  </span>
+<span>  <span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>12</span><span class='op'>*</span><span class='op'>(</span><span class='fu'>f</span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>1</span>,<span class='va'>j</span><span class='op'>]</span>, <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>2</span>,<span class='va'>j</span><span class='op'>]</span><span class='op'>)</span><span class='op'>-</span><span class='fu'>f</span><span class='op'>(</span><span class='va'>new_x</span>, <span class='va'>new_y</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>&gt;</span> <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='co'># Sprawdzamy czy nowe wartości zwracają wyzszą wartość naszej funkcji. Poniweważ funkcja nie</span></span>
+<span>  <span class='co'># jest rozkładem prawdopodobieństwa nie możemy policzyć stosunku prawdopodobieńst. Zamiast</span></span>
+<span>  <span class='co'># tego używamy funkcji eksponencjalnej różnicy pomnożonej przez ujemną stałą.  </span></span>
+<span>    </span>
+<span>    <span class='va'>n</span> <span class='op'>=</span> <span class='va'>n</span> <span class='op'>+</span> <span class='fl'>1</span></span>
+<span>    <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>1</span>,<span class='va'>j</span><span class='op'>]</span> <span class='op'>=</span> <span class='va'>new_x</span></span>
+<span>    <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>2</span>,<span class='va'>j</span><span class='op'>]</span> <span class='op'>=</span> <span class='va'>new_y</span></span>
+<span>    <span class='va'>samples</span><span class='op'>[</span><span class='va'>n</span>,<span class='fl'>3</span>,<span class='va'>j</span><span class='op'>]</span> <span class='op'>=</span> <span class='fu'>f</span><span class='op'>(</span><span class='va'>new_x</span>, <span class='va'>new_y</span><span class='op'>)</span></span>
+<span></span>
+<span>  <span class='op'>}</span>   </span>
+<span><span class='op'>}</span></span>
+<span><span class='op'>}</span></span></code></pre>
 </div>
 </div>
 <p>Zobaczmy jak poradziły sobie nasze łańcuchy.</p>
 <div class="layout-chunk" data-layout="l-body-outset">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/graphics/filled.contour.html'>filled.contour</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>points</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, y<span class='op'>=</span><span class='va'>points</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, z <span class='op'>=</span><span class='fu'>f</span><span class='op'>(</span><span class='va'>points</span>,<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>points</span><span class='op'>)</span><span class='op'>)</span>, nlevels<span class='op'>=</span><span class='fl'>20</span>, plot.axes <span class='op'>=</span> <span class='op'>{</span>
-  <span class='fu'><a href='https://rdrr.io/r/graphics/axis.html'>axis</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>; <span class='fu'><a href='https://rdrr.io/r/graphics/axis.html'>axis</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span>; <span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10000</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>]</span>, col <span class='op'>=</span>
-  <span class='st'>"black"</span><span class='op'>)</span>;<span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10000</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>]</span>, col <span class='op'>=</span> <span class='st'>"blue"</span><span class='op'>)</span>; <span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10000</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>,<span class='fl'>3</span><span class='op'>]</span>, col <span class='op'>=</span> 
-  <span class='st'>"green"</span><span class='op'>)</span> <span class='op'>}</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/graphics/filled.contour.html'>filled.contour</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>points</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, y<span class='op'>=</span><span class='va'>points</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, z <span class='op'>=</span><span class='fu'>f</span><span class='op'>(</span><span class='va'>points</span>,<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>points</span><span class='op'>)</span><span class='op'>)</span>, nlevels<span class='op'>=</span><span class='fl'>20</span>, plot.axes <span class='op'>=</span> <span class='op'>{</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/graphics/axis.html'>axis</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>; <span class='fu'><a href='https://rdrr.io/r/graphics/axis.html'>axis</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span>; <span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10000</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>]</span>, col <span class='op'>=</span></span>
+<span>  <span class='st'>"black"</span><span class='op'>)</span>;<span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10000</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>]</span>, col <span class='op'>=</span> <span class='st'>"blue"</span><span class='op'>)</span>; <span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10000</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>,<span class='fl'>3</span><span class='op'>]</span>, col <span class='op'>=</span> </span>
+<span>  <span class='st'>"green"</span><span class='op'>)</span> <span class='op'>}</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
 <p>Łańcuchy znajdowały na swojej drodze lokalne maksima, w których pozostawały na jakiś czas, po czym zmierzały do następnych. Ostatecznie wszystkie zbiegły się do lokalnego maksimum.</p>
 <p>Dobrze. Wiemy, że nasz algorytm znalazł globalne maksimum, ponieważ znamy funkcję, której ekstremum szukamy. Jednak w przeciwieństwie do powyższego przykładu, zwykle nie znamy funkcji generującej rozkład <em>post priori</em> - dopiero staramy się go estymować. Jak więc sprawdzić czy znaleźliśmy własciwą przestrzeń losowania? Spójrzmy na pierwsze 200 interacji dla argumentu <span class="math inline">\(x\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>x_samples</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='va'>iter</span>,<span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span><span class='op'>)</span>
-<span class='va'>x_samples</span><span class='op'>$</span><span class='va'>iteration</span> <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>samples</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>x_samples</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>3</span>,<span class='st'>"Iteration"</span><span class='op'>)</span>
-<span class='va'>x_samples_burn_in</span> <span class='op'>=</span> <span class='va'>x_samples</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>200</span>,<span class='op'>]</span>
-<span class='va'>x_samples_in_space</span> <span class='op'>=</span> <span class='va'>x_samples</span><span class='op'>[</span><span class='fl'>2000</span><span class='op'>:</span><span class='fl'>2500</span>,<span class='op'>]</span>
-<span class='va'>x_samples_burn_in</span> <span class='op'>=</span> <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='va'>x_samples_burn_in</span>,cols <span class='op'>=</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, names_to <span class='op'>=</span> <span class='st'>"chain"</span>, values_to <span class='op'>=</span> <span class='st'>"x"</span><span class='op'>)</span>
-<span class='va'>x_samples_in_space</span> <span class='op'>=</span> <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='va'>x_samples_in_space</span>,cols <span class='op'>=</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, names_to <span class='op'>=</span> <span class='st'>"chain"</span>, values_to <span class='op'>=</span> <span class='st'>"x"</span><span class='op'>)</span>
-
-<span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>x_samples_burn_in</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Iteration</span>, y <span class='op'>=</span> <span class='va'>x</span>, color <span class='op'>=</span> <span class='va'>chain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>x_samples</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='va'>samples</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='va'>iter</span>,<span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span><span class='op'>)</span></span>
+<span><span class='va'>x_samples</span><span class='op'>$</span><span class='va'>iteration</span> <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>samples</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>x_samples</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>3</span>,<span class='st'>"Iteration"</span><span class='op'>)</span></span>
+<span><span class='va'>x_samples_burn_in</span> <span class='op'>=</span> <span class='va'>x_samples</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>200</span>,<span class='op'>]</span></span>
+<span><span class='va'>x_samples_in_space</span> <span class='op'>=</span> <span class='va'>x_samples</span><span class='op'>[</span><span class='fl'>2000</span><span class='op'>:</span><span class='fl'>2500</span>,<span class='op'>]</span></span>
+<span><span class='va'>x_samples_burn_in</span> <span class='op'>=</span> <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='va'>x_samples_burn_in</span>,cols <span class='op'>=</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, names_to <span class='op'>=</span> <span class='st'>"chain"</span>, values_to <span class='op'>=</span> <span class='st'>"x"</span><span class='op'>)</span></span>
+<span><span class='va'>x_samples_in_space</span> <span class='op'>=</span> <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='va'>x_samples_in_space</span>,cols <span class='op'>=</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, names_to <span class='op'>=</span> <span class='st'>"chain"</span>, values_to <span class='op'>=</span> <span class='st'>"x"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>x_samples_burn_in</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Iteration</span>, y <span class='op'>=</span> <span class='va'>x</span>, color <span class='op'>=</span> <span class='va'>chain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
 </div>
 <p>Widzimy, że każdy łańcuch oscyluje wokół innej wartości. Teraz spójrzmy na iteracje między 2000 a 2500.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>x_samples_in_space</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Iteration</span>, y <span class='op'>=</span> <span class='va'>x</span>, color <span class='op'>=</span> <span class='va'>chain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>x_samples_in_space</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Iteration</span>, y <span class='op'>=</span> <span class='va'>x</span>, color <span class='op'>=</span> <span class='va'>chain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-6-1.png" width="624" data-distill-preview=1 /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-7-1.png" width="624" data-distill-preview=1 /></p>
 </div>
 <p>Widzimy, że wszytkie łańcuchy się zbiegły. Co prawda, nie daje nam to całkowitej pewności, że łańcuchy odnalazły właściwą przestrzeń.</p>
 <p>Działanie algorytmu MCMC dzieli się na dwie części: wypalanie (<em>burn-in</em>) i losowanie z rozkładu <em>post priori</em>. Wypalamy łańcuchy dopóki się nie zbiegną, wtedy możemy rozpocząć estymacje rozkładu <em>post priori</em> z próbek z łańcuchów. Im większej liczby łańcuchów użyjemy, tym silniejszą mamy przesłankę (gdy wszystkie się zbiegną), że odnaleźliśmy właściwą przestrzeń losowania.</p>
@@ -2275,9 +2278,8 @@ Post będzie aktualizowany.
 <p>Wytwórzmy sobie przykładowe dane:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>x</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>0</span>,<span class='fl'>10</span><span class='op'>)</span>
-<span class='va'>y</span> <span class='op'>=</span> <span class='fl'>5</span> <span class='op'>+</span> <span class='va'>x</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>0</span>,<span class='fl'>10</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>x</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>0</span>,<span class='fl'>10</span><span class='op'>)</span></span>
+<span><span class='va'>y</span> <span class='op'>=</span> <span class='fl'>5</span> <span class='op'>+</span> <span class='va'>x</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>0</span>,<span class='fl'>10</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>W ujęciu Bayesowskim będziemy szukali rozkładów <em>post priori</em> interesujących nas parametrów. Naszą zmienną zależną zamodelujemy w następujący sposób:</p>
@@ -2286,121 +2288,116 @@ Post będzie aktualizowany.
 <p>Zaimplementujmy algorytm Metropolisa-Hastingsa by wyestymować rozkłady parametrów regresji.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># Definujemy naszą funkcję wiarygodności, prior i posterior. Zwrócie uwagę, że funkcję</span>
-<span class='co'># zwracają nam logarytm naturalny gęstości prawdopodobieństwa. Jest to użyteczna </span>
-<span class='co'># transformacja, ponieważ komputery nie radzą sobie dobrze z wartościami bardzo bliskimi 0. </span>
-
-<span class='va'>likelihood</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span><span class='op'>{</span>
-  <span class='va'>a</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>; <span class='va'>b</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>; <span class='va'>sigma</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>3</span><span class='op'>]</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='va'>y</span>,<span class='va'>a</span> <span class='op'>+</span><span class='va'>b</span><span class='op'>*</span><span class='va'>x</span>, <span class='va'>sigma</span>, log <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span>
-<span class='op'>}</span>
-
-<span class='va'>prior</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span><span class='op'>{</span>
-  <span class='va'>a</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>; <span class='va'>b</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>; <span class='va'>sigma</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>3</span><span class='op'>]</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>dunif</a></span><span class='op'>(</span><span class='va'>a</span>,<span class='op'>-</span><span class='fl'>1000</span>,<span class='fl'>1000</span>,log <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='va'>b</span>,<span class='fl'>0</span>,<span class='fl'>100</span>,log <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,   
-  <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>dunif</a></span><span class='op'>(</span><span class='va'>sigma</span>,<span class='fl'>0.000001</span>,<span class='fl'>1000</span>,log <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span>
-<span class='op'>}</span>
-
-<span class='va'>posterior</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span> <span class='op'>{</span><span class='fu'>likelihood</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>prior</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span><span class='op'>}</span>
-
-<span class='va'>chain</span> <span class='op'>=</span> <span class='fl'>3</span> <span class='co'># Liczba łańcuchów</span>
-<span class='va'>n.iter</span> <span class='op'>&lt;-</span> <span class='fl'>300000</span> <span class='co'># Liczba iteracji</span>
-<span class='va'>results</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>n.iter</span>,<span class='fl'>3</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Pusty tensor na nasze próbki</span>
-
-<span class='va'>n.burn</span> <span class='op'>=</span> <span class='fl'>50000</span> <span class='co'># Liczba iteracji, którą odrzucimy w ramach wypalania</span>
-
-<span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>chain</span><span class='op'>)</span><span class='op'>{</span>
-
-<span class='va'>parameters</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='op'>-</span><span class='fl'>50</span>,<span class='fl'>50</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>10</span><span class='op'>)</span>,<span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>0.000001</span>,<span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Losujemy wartości początkowe dla łańcucha</span>
-<span class='va'>results</span><span class='op'>[</span><span class='fl'>1</span>,,<span class='va'>j</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>parameters</span>
-<span class='va'>naccepted</span> <span class='op'>=</span> <span class='fl'>2</span>
-
-  <span class='kw'>while</span><span class='op'>(</span><span class='va'>naccepted</span> <span class='op'>&lt;=</span> <span class='va'>n.iter</span><span class='op'>)</span><span class='op'>{</span>
-    
-    <span class='va'>candidate</span> <span class='op'>&lt;-</span>  <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>3</span>, mean <span class='op'>=</span> <span class='va'>parameters</span>, sd <span class='op'>=</span> <span class='fl'>0.1</span><span class='op'>)</span> <span class='co'># przemieszczamy się o losową wartość</span>
-    <span class='co'># parametrów od wartości obecnych parametrów </span>
-    
-    <span class='va'>ratio</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fu'>posterior</span><span class='op'>(</span><span class='va'>candidate</span><span class='op'>)</span> <span class='op'>-</span> <span class='fu'>posterior</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Odejmujemy ponieważ log(a/b) </span>
-  <span class='co'># = log(a) - log(b). Różnicę wkladamy do funckcji eksponencjalnej by z logarytmów otrzyamć</span>
-  <span class='co'># stosunek prawdopodobieństw. </span>
-    
-    <span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span> <span class='op'>&lt;</span> <span class='va'>ratio</span><span class='op'>)</span> <span class='op'>{</span><span class='va'>parameters</span> <span class='op'>&lt;-</span> <span class='va'>candidate</span> 
-    <span class='va'>results</span><span class='op'>[</span><span class='va'>naccepted</span>, ,<span class='va'>j</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>parameters</span>
-    <span class='va'>naccepted</span> <span class='op'>=</span> <span class='va'>naccepted</span> <span class='op'>+</span> <span class='fl'>1</span><span class='op'>}</span>
-  <span class='op'>}</span><span class='op'>}</span>
-
-<span class='va'>results</span> <span class='op'>&lt;-</span> <span class='va'>results</span><span class='op'>[</span><span class='op'>(</span><span class='va'>n.burn</span><span class='op'>+</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>:</span><span class='va'>n.iter</span>,,<span class='op'>]</span> <span class='co'># Usuwamy 'n.burn' pierwszych iteracji</span>
-
-<span class='va'>all_chains</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='op'>)</span>
-
-<span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>chain</span><span class='op'>)</span><span class='op'>{</span>
-  
-  <span class='va'>all_chains</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>all_chains</span>,<span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>[</span>,,<span class='va'>i</span><span class='op'>]</span>, chain <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>i</span><span class='op'>)</span>, Iteration <span class='op'>=</span> <span class='op'>(</span><span class='va'>n.burn</span><span class='op'>+</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>:</span><span class='va'>n.iter</span><span class='op'>)</span><span class='op'>)</span>
-  
-  <span class='op'>}</span>
-
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>all_chains</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"a"</span>, <span class='st'>"b"</span>, <span class='st'>"sigma"</span>,<span class='st'>"chain"</span>, <span class='st'>"Iteration"</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Definujemy naszą funkcję wiarygodności, prior i posterior. Zwrócie uwagę, że funkcję</span></span>
+<span><span class='co'># zwracają nam logarytm naturalny gęstości prawdopodobieństwa. Jest to użyteczna </span></span>
+<span><span class='co'># transformacja, ponieważ komputery nie radzą sobie dobrze z wartościami bardzo bliskimi 0. </span></span>
+<span></span>
+<span><span class='va'>likelihood</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='va'>a</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>; <span class='va'>b</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>; <span class='va'>sigma</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>3</span><span class='op'>]</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='va'>y</span>,<span class='va'>a</span> <span class='op'>+</span><span class='va'>b</span><span class='op'>*</span><span class='va'>x</span>, <span class='va'>sigma</span>, log <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>prior</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='va'>a</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>; <span class='va'>b</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>; <span class='va'>sigma</span><span class='op'>=</span><span class='va'>parameters</span><span class='op'>[</span><span class='fl'>3</span><span class='op'>]</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>dunif</a></span><span class='op'>(</span><span class='va'>a</span>,<span class='op'>-</span><span class='fl'>1000</span>,<span class='fl'>1000</span>,log <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='va'>b</span>,<span class='fl'>0</span>,<span class='fl'>100</span>,log <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>,   </span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>dunif</a></span><span class='op'>(</span><span class='va'>sigma</span>,<span class='fl'>0.000001</span>,<span class='fl'>1000</span>,log <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>posterior</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span> <span class='op'>{</span><span class='fu'>likelihood</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>prior</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>chain</span> <span class='op'>=</span> <span class='fl'>3</span> <span class='co'># Liczba łańcuchów</span></span>
+<span><span class='va'>n.iter</span> <span class='op'>&lt;-</span> <span class='fl'>300000</span> <span class='co'># Liczba iteracji</span></span>
+<span><span class='va'>results</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>n.iter</span>,<span class='fl'>3</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Pusty tensor na nasze próbki</span></span>
+<span></span>
+<span><span class='va'>n.burn</span> <span class='op'>=</span> <span class='fl'>50000</span> <span class='co'># Liczba iteracji, którą odrzucimy w ramach wypalania</span></span>
+<span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>chain</span><span class='op'>)</span><span class='op'>{</span></span>
+<span></span>
+<span><span class='va'>parameters</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='op'>-</span><span class='fl'>50</span>,<span class='fl'>50</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>10</span><span class='op'>)</span>,<span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>0.000001</span>,<span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Losujemy wartości początkowe dla łańcucha</span></span>
+<span><span class='va'>results</span><span class='op'>[</span><span class='fl'>1</span>,,<span class='va'>j</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>parameters</span></span>
+<span><span class='va'>naccepted</span> <span class='op'>=</span> <span class='fl'>2</span></span>
+<span></span>
+<span>  <span class='kw'>while</span><span class='op'>(</span><span class='va'>naccepted</span> <span class='op'>&lt;=</span> <span class='va'>n.iter</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>    </span>
+<span>    <span class='va'>candidate</span> <span class='op'>&lt;-</span>  <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>3</span>, mean <span class='op'>=</span> <span class='va'>parameters</span>, sd <span class='op'>=</span> <span class='fl'>0.1</span><span class='op'>)</span> <span class='co'># przemieszczamy się o losową wartość</span></span>
+<span>    <span class='co'># parametrów od wartości obecnych parametrów </span></span>
+<span>    </span>
+<span>    <span class='va'>ratio</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fu'>posterior</span><span class='op'>(</span><span class='va'>candidate</span><span class='op'>)</span> <span class='op'>-</span> <span class='fu'>posterior</span><span class='op'>(</span><span class='va'>parameters</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Odejmujemy ponieważ log(a/b) </span></span>
+<span>  <span class='co'># = log(a) - log(b). Różnicę wkladamy do funckcji eksponencjalnej by z logarytmów otrzyamć</span></span>
+<span>  <span class='co'># stosunek prawdopodobieństw. </span></span>
+<span>    </span>
+<span>    <span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Uniform.html'>runif</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span> <span class='op'>&lt;</span> <span class='va'>ratio</span><span class='op'>)</span> <span class='op'>{</span><span class='va'>parameters</span> <span class='op'>&lt;-</span> <span class='va'>candidate</span> </span>
+<span>    <span class='va'>results</span><span class='op'>[</span><span class='va'>naccepted</span>, ,<span class='va'>j</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>parameters</span></span>
+<span>    <span class='va'>naccepted</span> <span class='op'>=</span> <span class='va'>naccepted</span> <span class='op'>+</span> <span class='fl'>1</span><span class='op'>}</span></span>
+<span>  <span class='op'>}</span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>results</span> <span class='op'>&lt;-</span> <span class='va'>results</span><span class='op'>[</span><span class='op'>(</span><span class='va'>n.burn</span><span class='op'>+</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>:</span><span class='va'>n.iter</span>,,<span class='op'>]</span> <span class='co'># Usuwamy 'n.burn' pierwszych iteracji</span></span>
+<span></span>
+<span><span class='va'>all_chains</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>chain</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  </span>
+<span>  <span class='va'>all_chains</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>all_chains</span>,<span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>[</span>,,<span class='va'>i</span><span class='op'>]</span>, chain <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>i</span><span class='op'>)</span>, Iteration <span class='op'>=</span> <span class='op'>(</span><span class='va'>n.burn</span><span class='op'>+</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>:</span><span class='va'>n.iter</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>  </span>
+<span>  <span class='op'>}</span></span>
+<span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>all_chains</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"a"</span>, <span class='st'>"b"</span>, <span class='st'>"sigma"</span>,<span class='st'>"chain"</span>, <span class='st'>"Iteration"</span><span class='op'>)</span></span></code></pre>
 </div>
 </div>
 <p>Mamy to! Sprawdźmy czy nasze łańcuchy się zbiegły.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>gridExtra</span><span class='op'>)</span>
-<span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Iteration</span>, y <span class='op'>=</span> <span class='va'>a</span>, color <span class='op'>=</span> <span class='va'>chain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
-<span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Iteration</span>, y <span class='op'>=</span> <span class='va'>b</span>, color <span class='op'>=</span> <span class='va'>chain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
-<span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Iteration</span>, y <span class='op'>=</span> <span class='va'>sigma</span>, color <span class='op'>=</span> <span class='va'>chain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/gridExtra/man/arrangeGrob.html'>grid.arrange</a></span><span class='op'>(</span><span class='va'>p1</span>, <span class='va'>p2</span>,<span class='va'>p3</span>, nrow <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>gridExtra</span><span class='op'>)</span></span>
+<span><span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Iteration</span>, y <span class='op'>=</span> <span class='va'>a</span>, color <span class='op'>=</span> <span class='va'>chain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Iteration</span>, y <span class='op'>=</span> <span class='va'>b</span>, color <span class='op'>=</span> <span class='va'>chain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Iteration</span>, y <span class='op'>=</span> <span class='va'>sigma</span>, color <span class='op'>=</span> <span class='va'>chain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>geom_line</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/gridExtra/man/arrangeGrob.html'>grid.arrange</a></span><span class='op'>(</span><span class='va'>p1</span>, <span class='va'>p2</span>,<span class='va'>p3</span>, nrow <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
 </div>
 <p>Wizualna inspekcja wskazuje, że łańcuchy zbiegły sie wystarczająco (póżniej poznamy ilościowe wskaźniki). Zobaczmy rozkłady <em>post piori</em>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>a</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_histogram</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"white"</span>,color<span class='op'>=</span><span class='st'>"black"</span>,<span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
-<span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>b</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_histogram</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"white"</span>,color<span class='op'>=</span><span class='st'>"black"</span>,<span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
-<span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>sigma</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span>
-  <span class='fu'>geom_histogram</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"white"</span>,color<span class='op'>=</span><span class='st'>"black"</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/gridExtra/man/arrangeGrob.html'>grid.arrange</a></span><span class='op'>(</span><span class='va'>p1</span>, <span class='va'>p2</span>, <span class='va'>p3</span>, nrow <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>a</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>geom_histogram</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"white"</span>,color<span class='op'>=</span><span class='st'>"black"</span>,<span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='va'>p2</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>b</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>geom_histogram</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"white"</span>,color<span class='op'>=</span><span class='st'>"black"</span>,<span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>all_chains</span>, mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>sigma</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span></span>
+<span>  <span class='fu'>geom_histogram</span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"white"</span>,color<span class='op'>=</span><span class='st'>"black"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/pkg/gridExtra/man/arrangeGrob.html'>grid.arrange</a></span><span class='op'>(</span><span class='va'>p1</span>, <span class='va'>p2</span>, <span class='va'>p3</span>, nrow <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
 </div>
 <p>Policzmy statystyki rozkładów.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>all_chains</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>all_chains</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>       a                b              sigma       
- Min.   :0.2799   Min.   :0.6895   Min.   : 7.924  
- 1st Qu.:4.3235   1st Qu.:1.1579   1st Qu.:10.128  
- Median :5.0148   Median :1.2302   Median :10.620  
- Mean   :5.0089   Mean   :1.2302   Mean   :10.669  
- 3rd Qu.:5.7083   3rd Qu.:1.3026   3rd Qu.:11.163  
- Max.   :9.0632   Max.   :1.7902   Max.   :14.263  </code></pre>
+<pre><code>       a                 b              sigma       
+ Min.   : 0.6514   Min.   :0.4538   Min.   : 8.393  
+ 1st Qu.: 5.2496   1st Qu.:0.8909   1st Qu.:10.525  
+ Median : 6.0006   Median :0.9648   Median :11.030  
+ Mean   : 5.9920   Mean   :0.9646   Mean   :11.079  
+ 3rd Qu.: 6.7492   3rd Qu.:1.0384   3rd Qu.:11.580  
+ Max.   :10.1575   Max.   :1.5140   Max.   :15.981  </code></pre>
 </div>
 <p>Porównajmy z klasyczną regresją.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>m</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>~</span><span class='va'>x</span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>a <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, b <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>, sigma <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/sd.html'>sd</a></span><span class='op'>(</span><span class='va'>m</span><span class='op'>$</span><span class='va'>residuals</span><span class='op'>)</span>, row.names <span class='op'>=</span> <span class='st'>"Parameters"</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>m</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>~</span><span class='va'>x</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>a <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, b <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>coefficients</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>, sigma <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/sd.html'>sd</a></span><span class='op'>(</span><span class='va'>m</span><span class='op'>$</span><span class='va'>residuals</span><span class='op'>)</span>, row.names <span class='op'>=</span> <span class='st'>"Parameters"</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>                  a        b    sigma
-Parameters 5.043664 1.230289 10.44847</code></pre>
+<pre><code>                  a         b    sigma
+Parameters 5.966328 0.9650728 10.85435</code></pre>
 </div>
 <h2 id="diagnostyka">Diagnostyka</h2>
 <p>Gdy już mamy nasz model, musimy sprawdzić czy został wyestymowany poprawnie oraz w jakim zakresie jest w stanie odtworzyć zaobserwowane dane.</p>
@@ -2432,15 +2429,14 @@ W
 <p>Zwykle uznaje się, że łańcuchy się zbiegły, jeśli R &lt; 1.15. Statystykę liczy się dla każdego parametru. W przypadku naszej regresji:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>BW</span> <span class='op'>=</span> <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='va'>all_chains</span>,cols <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, names_to <span class='op'>=</span> <span class='st'>"parameter"</span>, values_to <span class='op'>=</span> <span class='st'>"Value"</span><span class='op'>)</span>
-<span class='va'>BW</span> <span class='op'>=</span> <span class='va'>BW</span> <span class='op'>%&gt;%</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>parameter</span>,<span class='va'>chain</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>summarise</span><span class='op'>(</span>Mean <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Value</span><span class='op'>)</span>, Var <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='va'>Value</span><span class='op'>)</span>, n <span class='op'>=</span><span class='fu'>n</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
-<span class='va'>W</span> <span class='op'>=</span> <span class='va'>BW</span> <span class='op'>%&gt;%</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>parameter</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>summarise</span><span class='op'>(</span>W <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Var</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>3</span><span class='op'>)</span> 
-<span class='va'>B</span> <span class='op'>=</span> <span class='va'>BW</span> <span class='op'>%&gt;%</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>parameter</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>summarise</span><span class='op'>(</span>B <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='va'>Mean</span><span class='op'>)</span><span class='op'>)</span> 
-
-<span class='va'>R</span> <span class='op'>=</span> <span class='op'>(</span><span class='va'>W</span><span class='op'>$</span><span class='va'>W</span><span class='op'>*</span><span class='op'>(</span><span class='op'>(</span><span class='va'>n.iter</span> <span class='op'>-</span> <span class='va'>n.burn</span> <span class='op'>-</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='va'>n.iter</span> <span class='op'>-</span> <span class='va'>n.burn</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>B</span><span class='op'>$</span><span class='va'>B</span><span class='op'>)</span><span class='op'>/</span><span class='va'>W</span><span class='op'>$</span><span class='va'>W</span>
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>R</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"a"</span>,<span class='st'>"b"</span>,<span class='st'>"sigma"</span><span class='op'>)</span>
-<span class='fu'>kable</span><span class='op'>(</span><span class='va'>R</span>,col.names <span class='op'>=</span> <span class='st'>"R"</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>BW</span> <span class='op'>=</span> <span class='fu'>pivot_longer</span><span class='op'>(</span><span class='va'>all_chains</span>,cols <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, names_to <span class='op'>=</span> <span class='st'>"parameter"</span>, values_to <span class='op'>=</span> <span class='st'>"Value"</span><span class='op'>)</span></span>
+<span><span class='va'>BW</span> <span class='op'>=</span> <span class='va'>BW</span> <span class='op'>%&gt;%</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>parameter</span>,<span class='va'>chain</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>summarise</span><span class='op'>(</span>Mean <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Value</span><span class='op'>)</span>, Var <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='va'>Value</span><span class='op'>)</span>, n <span class='op'>=</span><span class='fu'>n</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>W</span> <span class='op'>=</span> <span class='va'>BW</span> <span class='op'>%&gt;%</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>parameter</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>summarise</span><span class='op'>(</span>W <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Var</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>3</span><span class='op'>)</span> </span>
+<span><span class='va'>B</span> <span class='op'>=</span> <span class='va'>BW</span> <span class='op'>%&gt;%</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>parameter</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'>summarise</span><span class='op'>(</span>B <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='va'>Mean</span><span class='op'>)</span><span class='op'>)</span> </span>
+<span></span>
+<span><span class='va'>R</span> <span class='op'>=</span> <span class='op'>(</span><span class='va'>W</span><span class='op'>$</span><span class='va'>W</span><span class='op'>*</span><span class='op'>(</span><span class='op'>(</span><span class='va'>n.iter</span> <span class='op'>-</span> <span class='va'>n.burn</span> <span class='op'>-</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='va'>n.iter</span> <span class='op'>-</span> <span class='va'>n.burn</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>B</span><span class='op'>$</span><span class='va'>B</span><span class='op'>)</span><span class='op'>/</span><span class='va'>W</span><span class='op'>$</span><span class='va'>W</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>R</span><span class='op'>)</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"a"</span>,<span class='st'>"b"</span>,<span class='st'>"sigma"</span><span class='op'>)</span></span>
+<span><span class='fu'>kable</span><span class='op'>(</span><span class='va'>R</span>,col.names <span class='op'>=</span> <span class='st'>"R"</span><span class='op'>)</span></span></code></pre>
 </div>
 <table>
 <thead>
@@ -2452,15 +2448,15 @@ W
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">a</td>
-<td style="text-align: right;">1.005779</td>
+<td style="text-align: right;">1.003454</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">b</td>
-<td style="text-align: right;">1.000064</td>
+<td style="text-align: right;">1.000222</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sigma</td>
-<td style="text-align: right;">1.000537</td>
+<td style="text-align: right;">1.002829</td>
 </tr>
 </tbody>
 </table>
@@ -2479,27 +2475,24 @@ W
 <p>Sprawdźmy autokorelację dla pierwszego łańcucha i parametru <span class="math inline">\(\beta\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/stats/acf.html'>acf</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>[</span>,<span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>]</span>,lag.max <span class='op'>=</span> <span class='fl'>1000</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/stats/acf.html'>acf</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>[</span>,<span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>]</span>,lag.max <span class='op'>=</span> <span class='fl'>1000</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-14-1.png" width="624" /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-15-1.png" width="624" /></p>
 </div>
 <p>Wyglada to dobrze. Slina autokorleacja występuje tylko dla bardzo małego opóźnienia. Sprawdźmy teraz autokorelacje parametru <span class="math inline">\(\sigma\)</span>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/stats/acf.html'>acf</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>[</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>]</span>,lag.max <span class='op'>=</span> <span class='fl'>1000</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/stats/acf.html'>acf</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>[</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>]</span>,lag.max <span class='op'>=</span> <span class='fl'>1000</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-15-1.png" width="624" /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-16-1.png" width="624" /></p>
 </div>
 <p>W przypadku <span class="math inline">\(\sigma\)</span> wygląda to gorzej. Możecie się spotkać z tym, że niektórzy badacze by zmniejszyć autokorelacje, stosują odchudzanie (<em>thinning</em>), polegające na tym, do naszej próby rozkładu <em>post priori</em> bierzyemy co <span class="math inline">\(n\)</span>-tą wartość z łańcucha.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>thinned_results</span> <span class='op'>=</span> <span class='va'>results</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>n.iter</span> <span class='op'>-</span> <span class='va'>n.burn</span>, by <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span>,,<span class='op'>]</span>
-<span class='fu'><a href='https://rdrr.io/r/stats/acf.html'>acf</a></span><span class='op'>(</span><span class='va'>thinned_results</span><span class='op'>[</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>]</span>,lag.max <span class='op'>=</span> <span class='fl'>2000</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>thinned_results</span> <span class='op'>=</span> <span class='va'>results</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='va'>n.iter</span> <span class='op'>-</span> <span class='va'>n.burn</span>, by <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span>,,<span class='op'>]</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/stats/acf.html'>acf</a></span><span class='op'>(</span><span class='va'>thinned_results</span><span class='op'>[</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>]</span>,lag.max <span class='op'>=</span> <span class='fl'>2000</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-16-1.png" width="624" /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-17-1.png" width="624" /></p>
 </div>
 <p>Jednakże, odchudzanie nie jest najlepszą strategią. Historycznie odchudzanie było stosowane z chęci zaoszczędzenia pamięci komputerów. Choć zmniejsza autokorelację, odchudzanie zmniejsza precyzję naszych wyników <span class="citation" data-cites="link2012thinning">(<a href="#ref-link2012thinning" role="doc-biblioref">Link &amp; Eaton, 2012</a>)</span>.</p>
 <p>Zastanówmy się dlaczego. Chcielibyśmy by średnia wartości naszego łańcucha była jak najbliższa prawdziwej średniej rozkładu.</p>
@@ -2515,26 +2508,24 @@ W
 <p>Policzmy efektywną liczbę próbek dla parametru <span class="math inline">\(\sigma\)</span> i łańcucha 1.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>ESS</span> <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>data</span>,<span class='va'>parameter</span>,<span class='va'>chain</span><span class='op'>)</span><span class='op'>{</span>
-  
-  <span class='va'>tmp</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>[</span>,<span class='va'>parameter</span>,<span class='va'>chain</span><span class='op'>]</span>
-  <span class='va'>ACF</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/acf.html'>acf</a></span><span class='op'>(</span><span class='va'>tmp</span>,plot <span class='op'>=</span> <span class='cn'>F</span>,lag.max <span class='op'>=</span> <span class='fl'>10000</span>, type <span class='op'>=</span> <span class='st'>"covariance"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>acf</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='va'>tmp</span><span class='op'>)</span>
-  <span class='va'>tau</span> <span class='op'>=</span>  <span class='fl'>2</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>ACF</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>ACF</span><span class='op'>&lt;</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>-</span> <span class='fl'>1</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>tmp</span><span class='op'>)</span><span class='op'>/</span><span class='va'>tau</span>
-<span class='op'>}</span>
-
-<span class='fu'>ESS</span><span class='op'>(</span><span class='va'>results</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>ESS</span> <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>data</span>,<span class='va'>parameter</span>,<span class='va'>chain</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  </span>
+<span>  <span class='va'>tmp</span> <span class='op'>=</span> <span class='va'>data</span><span class='op'>[</span>,<span class='va'>parameter</span>,<span class='va'>chain</span><span class='op'>]</span></span>
+<span>  <span class='va'>ACF</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/acf.html'>acf</a></span><span class='op'>(</span><span class='va'>tmp</span>,plot <span class='op'>=</span> <span class='cn'>F</span>,lag.max <span class='op'>=</span> <span class='fl'>10000</span>, type <span class='op'>=</span> <span class='st'>"covariance"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>acf</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='va'>tmp</span><span class='op'>)</span></span>
+<span>  <span class='va'>tau</span> <span class='op'>=</span>  <span class='fl'>2</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>ACF</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='va'>ACF</span><span class='op'>&lt;</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>-</span> <span class='fl'>1</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>tmp</span><span class='op'>)</span><span class='op'>/</span><span class='va'>tau</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='fu'>ESS</span><span class='op'>(</span><span class='va'>results</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 1086.461</code></pre>
+<pre><code>[1] 1090.731</code></pre>
 </div>
 <p>Teraz policzmy ESS dla odchudzonego łańcucha.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>ESS</span><span class='op'>(</span><span class='va'>thinned_results</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'>ESS</span><span class='op'>(</span><span class='va'>thinned_results</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 1081.041</code></pre>
+<pre><code>[1] 1087.427</code></pre>
 </div>
 <p>EES zmniejszyło się względem nieodchudzonego łańcucha. Generalnie, znacznie lepszą metodą redukowania wpływu autokorelacji, jest użycie większej liczby dłuższych łańcuchów. Odchudzanie należy stosować tylko jeśli mierzymy się z bardzo dużą autokorelacją. Reguła kciuka została zaproponowana w tej książce <span class="citation" data-cites="christensen2010bayesian">(<a href="#ref-christensen2010bayesian" role="doc-biblioref">Christensen et al., 2010</a>)</span> - odchudzać jeśli duża autokorelacja występuje powyżej <em>lag</em> &gt; 30. W naszym przypadku było to więc niejako uzasadnione. Nie należy jednak stosować odchudzania jako rutyny w MCMC.</p>
 <h3 id="posterior-predictive-check">Posterior predictive check</h3>
@@ -2544,24 +2535,23 @@ W
 <p>My sprawdzimy nasze dopasowanie modelu poprzez analizę wizualną. Wyplotujmy sobie histogram z naszych danych obok rozkładu generowanego przez model.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>predicted</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span>
-
-<span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
-<span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>chain</span><span class='op'>)</span><span class='op'>{</span>
-<span class='va'>predicted</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>predicted</span>,<span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='va'>results</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,<span class='fl'>1</span>,<span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span>
-<span class='va'>results</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,<span class='fl'>2</span>,<span class='va'>i</span><span class='op'>]</span><span class='op'>*</span><span class='va'>x</span><span class='op'>[</span><span class='va'>j</span><span class='op'>]</span>, <span class='va'>results</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,<span class='fl'>3</span>,<span class='va'>i</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span>
-<span class='op'>}</span><span class='op'>}</span>
-
-<span class='va'>predicted</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='va'>predicted</span><span class='op'>)</span>
-<span class='va'>y</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>)</span>
-<span class='fu'>ggplot</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> 
-  <span class='fu'>geom_histogram</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>y</span>,mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>y</span>,y <span class='op'>=</span> <span class='va'>..density..</span><span class='op'>)</span>,
-                 colour <span class='op'>=</span> <span class='fl'>1</span>, fill <span class='op'>=</span> <span class='st'>"white"</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>geom_density</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>predicted</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span><span class='va'>predicted</span>, y <span class='op'>=</span> <span class='va'>..density..</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
-  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span>
-</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>predicted</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span></span>
+<span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>j</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span></span>
+<span><span class='kw'>for</span> <span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>chain</span><span class='op'>)</span><span class='op'>{</span></span>
+<span><span class='va'>predicted</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>predicted</span>,<span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, <span class='va'>results</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,<span class='fl'>1</span>,<span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span></span>
+<span><span class='va'>results</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,<span class='fl'>2</span>,<span class='va'>i</span><span class='op'>]</span><span class='op'>*</span><span class='va'>x</span><span class='op'>[</span><span class='va'>j</span><span class='op'>]</span>, <span class='va'>results</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>results</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,<span class='fl'>3</span>,<span class='va'>i</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span><span class='op'>}</span></span>
+<span></span>
+<span><span class='va'>predicted</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='va'>predicted</span><span class='op'>)</span></span>
+<span><span class='va'>y</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>)</span></span>
+<span><span class='fu'>ggplot</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'>geom_histogram</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>y</span>,mapping <span class='op'>=</span> <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>y</span>,y <span class='op'>=</span> <span class='va'>..density..</span><span class='op'>)</span>,</span>
+<span>                 colour <span class='op'>=</span> <span class='fl'>1</span>, fill <span class='op'>=</span> <span class='st'>"white"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>geom_density</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>predicted</span>, <span class='fu'>aes</span><span class='op'>(</span>x <span class='op'>=</span><span class='va'>predicted</span>, y <span class='op'>=</span> <span class='va'>..density..</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'>theme_minimal</span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-19-1.png" width="624" /></p>
+<p><img src="tutorial-bayes-ii_files/figure-html5/unnamed-chunk-20-1.png" width="624" /></p>
 </div>
 <p>Wszystko wydaje się być w porządku. Problemy z <em>posterior predictive check</em> może świadczyć o tym, że wybraliśmy złą funkcją wiarygodności lub/i rozkłady <em>a priori</em>.</p>
 <h2 id="podsumowanie">Podsumowanie</h2>
