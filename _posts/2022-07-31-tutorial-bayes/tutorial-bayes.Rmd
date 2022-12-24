@@ -21,6 +21,13 @@ categories:
 csl: apa.csl
 ---
 
+```{css echo=FALSE}
+.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+```
+
 ## Mały wstęp
 
 Pomyślałem sobie, że napiszę taki mały tutorial statystyki Bayesowskiej.
