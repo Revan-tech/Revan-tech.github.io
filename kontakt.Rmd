@@ -7,7 +7,9 @@ site: distill::distill_article
 
 
 Hej, miło Cię widzieć! Jeśli chcesz się z nami skontaktować, zadać nam pytanie, lub pomóc w rozwoju projektu, napisz na ten adres: 
-sortownia.wiedzy@gmail.com
+sortownia.wiedzy@gmail.com<br>
+
+Strona facebookowa jest tu: https://www.facebook.com/SortowniaWiedzy 
 
 
 ```{css echo=FALSE}
