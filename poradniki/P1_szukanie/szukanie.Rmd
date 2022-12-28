@@ -90,7 +90,7 @@ Ewentualna wada Libgena? Mało jest tam materiałów w języku polskim. Na szcz�
 <p align="justify">
 Żeby było jasne - **nie popieramy łamania praw autorskich i majątkowych**. Kupujcie artykuły i  książki, jeśli Was na to stać, niezależnie od tego czy cyfrowe, czy papierowe. Jednocześnie, wierzymy w otwarty i egalitarny dostęp do nauki i sprawiedliwe wynagrodzenia dla autorów dzieł. Obecny system obiegu wiedzy zawiera w sobie strukturalne patologie, które podważają zasadność podejścia moralnego i niejako wymuszają pragmatyczne “radzenie sobie” z zastaną sytuacją.</p>
 
-
+Jedną z nowych stron, która ułatwia szukanie, jest [**Anna's Archive**](https://pl.annas-archive.org/). Jest to wyszukiwarka wyszukiwarek, przeszukująca wszystkie wersje Libgena i Z-library, czyli tzw. *shadow libraries*, "biblioteki cieni". 
 
 
 ![Przykład ograniczonego dostępu do wiedzy. Od czasu, gdy ten obrazek stał się memem, artykuł trafił jednak do otwartego dostępu.](money.jpg){width=65%} 
