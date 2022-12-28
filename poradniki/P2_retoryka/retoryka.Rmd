@@ -11,6 +11,7 @@ output:
   distill::distill_article:
     self_contained: false
     toc: true
+    toc_float: true
 ---
 
 
@@ -310,6 +311,11 @@ Omówmy się więc, że w komunikacji naukowej postaramy się jak najmniej grać
 Spójrzmy na Koło emocji Plutchika. **Wzbudzać można zaciekawienie, zachwyt, zaskoczenie, podziw, oczekiwanie**. Można zachęcać do poszukiwania wewnętrznego spokoju i zadowolenia. W przypadku zagrożeń, takich jak zmiany klimatyczne, można wywoływać czujność, zaniepokojenie i złość - ale tylko do tego stopnia, by pozostawić miejsce na chęć dążenia do zmian i mimo wszystko - optymizm. <br>
 Najlepiej też, jeśli emocje są zniuansowane. Nasze emocje rzadko są “czyste”, częściej mierzymy się z trudnymi do określenia odcieniami wielu emocji. Czyjaś śmierć nie musi oznaczać tylko głębokiego smutku - może być mieszanką żałoby, zadumy, strachu, wściekłości na śmiertelność, radosnych wspomnień z przeszłości, niepewnego oczekiwania na kolejne dni itd. To coś, w czym literatura piękna, beletrystyka, jest zdecydowanie lepsza od retoryki i literatury popularnonaukowej. Warto podpatrzeć tam parę wzorców opisywania i wywoływania emocji. Przykładem bardzo specyficznej emocji z literatury jest głęboki kosmiczny, egzystencjalny lęk, wywoływany przez książki Lovecrafta. Lub - uczucie przygody u Tolkiena - nakładające się na antycypację, zainteresowanie (rozwojem wydarzeń) w modelu emocji Plutchika.
 
+<aside>
+O retorycznej analizie emocji można posłuchać (!) w [podkaście Artykuły naukowe czytane](https://www.spreaker.com/user/12005698/110-cwiczenie-z-retoryki-emocje). W odcinku - analiza dwóch tekstów na gorąco i spora garść analizy metafor.
+
+</aside>
+
 
 # B. Kompozycja
 *Dyspozycja, konstrukcja*
@@ -518,6 +524,10 @@ Jeśli chodzi o **czas**, to oczywiście mamy przeszłość, teraźniejszość i
 &emsp;- tzw. anticipatory shipping, spedycja antycypacyjna - korporacje takie jak Amazon wysyłają produkty do magazynów niedaleko nas, w oparciu o nasze profile zakupowe i potencjalność dokonania zakupu w niedługim czasie.<br>
 &emsp;- prewencja policyjna, policyjne działania wyprzedzające - profilowanie obywateli pod względem prawdopodobieństwa dokonania przez nich przestępstwa.<br>
 
+<aside>
+W temacie zawiłości czasu warto posłuchać trzech odcinków Artykułów czytanych:  [Przyszłość nie może się zacząć](https://www.spreaker.com/episode/51837374) + [Wyjście z jaskini Platona: Naturalna historia czasu](https://www.spreaker.com/episode/51272908) + [Obraz czasu w języku potocznym i naukowym](https://www.spreaker.com/episode/45693606).
+</aside>
+
 Również słowo o **przestrzeni** - przestrzeń w naszych opowieściach jest zawsze ludzka, w tym sensie, że rozumiemy przestrzeń poprzez własną percepcję, miarą przestrzeni zawsze jest człowiek. Od niemowlęctwa uczymy się szacować odległość, nasze ciało jest instrumentem poznania. I tak aż do śmierci. Stąd dystans można podzielić na:<br>
 - to co jest w zasięgu naszych rąk <br>
 - to co jest poza zasięgiem naszych rąk<br>
@@ -688,6 +698,10 @@ Z kolei liczne **deiksy** (patrz: [deixis, deiktyka](https://pl.wikipedia.org/wi
 
 Skoro jesteśmy przy polu semantycznym, warto wspomnieć o **etykietach**. Są to, jak nazwa wskazuje, proste, stereotypiczne nazwy, nadawane bytom, w celu usprawnienia komunikacji. Nadanie nazwy czasami niemal stwarza rzecz, a przynajmniej ją uwidacznia. Etykiet jednak trudno się pozbyć, jeśli już zaczynają funkcjonować w obiegu społecznym. Tym większy problem, jeśli etykiety mają negatywne nacechowanie i służą wykluczeniu grupy społecznej (“pedał”, “lesba”, “ciapaty”). W obliczu tego dane grupy muszą wykonać wiele pracy, by pozbyć się etykiet, lub je odbić dla siebie i zmienić nacechowanie na pozytywne (rozbrajanie terminu). Niemniej, etykiety są poręczne retorycznie, ponieważ urzeczowiają (reifikacja) niejasne lub abstrakcyjne terminy.
 
+<aside>
+Więcej o dyskryminacji w języku: [Dyskryminacja w dyskursach](https://www.spreaker.com/episode/47322201).
+</aside>
+
 W kontekście celów naukowych, edukacyjnych - zawsze warto podawać **etymologię** wyrażenia. To wpłynie pozytywnie na zapamiętanie terminu, ponieważ często etymologia tłumaczy samo słowo. Za etymologiami mogą stać też ciekawe historie, np. [“niedźwiedź” pochodzi od mědv-edь](https://sjp.pwn.pl/poradnia/haslo/Skad-sie-wziely-niedzwiedzie;6135.html), czyli “jedzący miód” i prawdopodobnie wynika to z tabu (czasów prasłowiańskich), zakazującego używania prawdziwego imienia groźnej bestii, stąd peryfrastyczny eufemizm - omówienie, unikające nazywania wprost.
 
 ### Hiperbole, litoty, eufemizmy, peryfrazy, hedging i boostery, zdrobnienia i zgrubienia
@@ -696,6 +710,10 @@ Sprawę modalności poruszałem już w poprzedniej sekcji. Teraz temat pokrewny.
 **Litota**, powołująca się na skromność, jest tropem wykorzystującym negację: ktoś jest “niegłupi”, “niemądry”, “niewysoki”; coś jest “niejasne”, “nieprędkie”, “niewielkie”. Litota ma charakter eufemistyczny i osłabia moc wypowiedzi. Porównaj: “Jan jest głupi” z “Jan jest niemądry”. “Wynik Anny był wybitny, doskonały” z “wynik Anny był niezły, naprawdę nienajgorszy”.<br>
 **Eufemizmy** polegają na mówieniu nie-wprost, na omijaniu, na autocenzurze, na tabu. Najczęściej mają charakter metonimiczny (czyli wykorzystują przyległość semantyczną). Mogą być stosunkowo niewinne: “trzeba sobie poradzić z problemem” - kot nasrał na dywan, “🔥🔥🔥” - trzy emoji ognia, mogą implikować seks w opisie na aplikacji randkowej. Mogą być kwestią delikatności: “pani w sile wieku” - starsza kobieta. Mogą mieć czysto propagandowy, szkodliwy charakter: “Endlösung der Judenfrage, ostateczne rozwiązanie kwestii żydowskiej”.
 Podobny charakter ma [**peryfraza**](https://pl.wikipedia.org/wiki/Peryfraza). Zastępujemy nazwę jej omówieniem. “Jak powiedział twórca Tesli (…)” - Elon Musk. “W tym kraju z tektury i kartonu” - negatywnie o Polsce.
+
+<aside>
+O metonimicznym charakterze eufemizmów: [Rodzaje motywacji metonimicznej eufemizmów polskich](https://www.spreaker.com/episode/44003787).
+</aside>
 
 Innym podejściem, bardziej pragmatycznym niż retorycznym, jest wykorzystanie kategorii [**hedgingu**](https://en.wikipedia.org/wiki/Hedge_(linguistics)) i **boostingu**. Nie ma zbyt dobrych tłumaczeń tych terminów, powiedzmy że są to **znaczniki asekuracji** i **znaczniki wzmocnienia wydźwięku**. Porównaj:<br>
 - “Koncert mi się podobał”<br>
@@ -726,6 +744,10 @@ Wypowiedzenie składa się z (1) aktu lokucji, (2) aktu illokucji, (3) aktu perl
 W przypadku **ironii**, najbardziej interesuje nas **akt illokucji**. Bo to właśnie intencja jest kluczowa w rozumieniu ironii. Ten sposób wypowiadania się jest dwugłosem, ma dwa poziomy - dosłowny i ukryty. Do kompetencji odbiorcy należy zdekodowanie ukrytego przekazu, będącego intencją nadawcy. Jest to rodzaj metajęzyka, bo nadawca dystansuje się do znaczenia dosłownego, wyraża opinię na temat tego, co jest w danej chwili wyrażane (a nie na temat samego przedmiotu dyskusji).
 Cele? Humor, dyskredytacja, zbudowanie dystansu, rozluźnienie nastroju, zaatakowanie kogoś lub wykpienie, popisanie się inteligencją, wzmocnienie argumentu, pozostawienie czytelnikom retorycznej zagadki do rozkodowania. Ironia może służyć wytknięciu hipokryzji i sprzeczności poglądów stronie przeciwnej.
 Ironia jest środkiem ryzykownym, ponieważ może atakować twarz społeczną odbiorców.
+
+<aside>
+Więcej o ironii: [Badanie ironii w komunikacji internetowej ](https://www.spreaker.com/episode/44273311).
+</aside>
 
 Przykłady: <br>
 - “Świetna prezentacja.” - prelegent nie wyrobił się w czasie, mówił w sposób chaotyczny i mało zrozumiały.<br>
@@ -793,7 +815,9 @@ Takie naświetlanie można retorycznie wywołać również poprzez **celowe bł�
 - “Deszcz padał, padał padał. A Jan do biura wchodził, wchodził i wchodził”<br>
 - “Deszcz padał ☔, Jan 🧑 wszedł do biura 🏢 szybkim krokiem 💨😅”<br>
 
-
+<aside>
+O sposobach wyrażania słuchowo-akustycznych doświadczeń: [Konceptualizacja wrażeń słuchowych w języku polskim](https://www.spreaker.com/episode/49615640).
+</aside>
 
 
 ## Figury myśli
