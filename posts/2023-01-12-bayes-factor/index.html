@@ -1,0 +1,2482 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+<title>Sortownia: Tutorial Statystyki Bayesowskiej</title>
+
+<meta property="description" itemprop="description" content="Część III: Czynnik Bayesowski"/>
+
+
+<!--  https://schema.org/Article -->
+<meta property="article:published" itemprop="datePublished" content="2023-01-13"/>
+<meta property="article:created" itemprop="dateCreated" content="2023-01-13"/>
+<meta name="article:author" content="Szymon Mąka"/>
+
+<!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<meta property="og:title" content="Sortownia: Tutorial Statystyki Bayesowskiej"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="Część III: Czynnik Bayesowski"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Sortownia"/>
+
+<!--  https://dev.twitter.com/cards/types/summary -->
+<meta property="twitter:card" content="summary"/>
+<meta property="twitter:title" content="Sortownia: Tutorial Statystyki Bayesowskiej"/>
+<meta property="twitter:description" content="Część III: Czynnik Bayesowski"/>
+
+<!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Avoiding model selection in bayesian social research;citation_publication_date=1995;citation_publisher=JSTOR;citation_volume=25;citation_author=Andrew Gelman;citation_author=Donald B Rubin"/>
+  <meta name="citation_reference" content="citation_title=On the use of non-local prior densities in bayesian hypothesis tests;citation_publication_date=2010;citation_publisher=Wiley Online Library;citation_volume=72;citation_author=Valen E Johnson;citation_author=David Rossell"/>
+  <meta name="citation_reference" content="citation_title=Bayes factor approaches for testing interval null hypotheses.;citation_publication_date=2011;citation_publisher=American Psychological Association;citation_volume=16;citation_author=Richard D Morey;citation_author=Jeffrey N Rouder"/>
+  <meta name="citation_reference" content="citation_title=Bayes factors;citation_publication_date=1995;citation_publisher=Taylor &amp; Francis;citation_volume=90;citation_author=Robert E Kass;citation_author=Adrian E Raftery"/>
+  <meta name="citation_reference" content="citation_title=A review of issues about null hypothesis bayesian testing.;citation_publication_date=2019;citation_publisher=American Psychological Association;citation_volume=24;citation_author=Jorge N Tendeiro;citation_author=Henk AL Kiers"/>
+  <meta name="citation_reference" content="citation_title=The bayesian new statistics: Hypothesis testing, estimation, meta-analysis, and power analysis from a bayesian perspective;citation_publication_date=2018;citation_publisher=Springer;citation_volume=25;citation_author=John K Kruschke;citation_author=Torrin M Liddell"/>
+  <meta name="citation_reference" content="citation_title=Model comparison and occamâ€™s razor;citation_publication_date=2003;citation_publisher=Cambridge university press;citation_author=David J. C. MacKay"/>
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+<script type="text/json" id="radix-rmarkdown-metadata">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","author","date","output","bibliography","categories","csl"]}},"value":[{"type":"character","attributes":{},"value":["Tutorial Statystyki Bayesowskiej"]},{"type":"character","attributes":{},"value":["Część III: Czynnik Bayesowski"]},{"type":"character","attributes":{},"value":["Statystyczne_Dygresje2.jpg"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Szymon Mąka"]},{"type":"character","attributes":{},"value":["https://revan-tech.github.io/kontakt.html"]}]}]},{"type":"character","attributes":{},"value":["01-13-2023"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","includes","css"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["in_header"]}},"value":[{"type":"character","attributes":{},"value":["hero-image.html"]}]},{"type":"character","attributes":{},"value":["theme.css"]}]}]},{"type":"character","attributes":{},"value":["bib.bib"]},{"type":"character","attributes":{},"value":["Statystyczne Dygresje"]},{"type":"character","attributes":{},"value":["apa.csl"]}]}
+</script>
+<!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["apa.csl","bayes-factor_files/anchor-4.2.2/anchor.min.js","bayes-factor_files/bowser-1.9.3/bowser.min.js","bayes-factor_files/distill-2.2.21/template.v2.js","bayes-factor_files/figure-html5/unnamed-chunk-9-1.png","bayes-factor_files/header-attrs-2.10/header-attrs.js","bayes-factor_files/jquery-1.11.3/jquery.min.js","bayes-factor_files/popper-2.6.0/popper.min.js","bayes-factor_files/tippy-6.2.7/tippy-bundle.umd.min.js","bayes-factor_files/tippy-6.2.7/tippy-light-border.css","bayes-factor_files/tippy-6.2.7/tippy.css","bayes-factor_files/tippy-6.2.7/tippy.umd.min.js","bayes-factor_files/webcomponents-2.0.0/webcomponents.js","bayes.jpg","bayes2.jpg","bib.bib","GvM.JPG","hero-image.html","occam.JPG","Statystyczne_Dygresje.jpg","Statystyczne_Dygresje2.jpg","theme.css"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+<meta name="distill:offset" content="../.."/>
+
+<script type="application/javascript">
+
+  window.headroom_prevent_pin = false;
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // initialize headroom for banner
+    var header = $('header').get(0);
+    var headerHeight = header.offsetHeight;
+    var headroom = new Headroom(header, {
+      tolerance: 5,
+      onPin : function() {
+        if (window.headroom_prevent_pin) {
+          window.headroom_prevent_pin = false;
+          headroom.unpin();
+        }
+      }
+    });
+    headroom.init();
+    if(window.location.hash)
+      headroom.unpin();
+    $(header).addClass('headroom--transition');
+
+    // offset scroll location for banner on hash change
+    // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+    window.addEventListener("hashchange", function(event) {
+      window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+    });
+
+    // responsive menu
+    $('.distill-site-header').each(function(i, val) {
+      var topnav = $(this);
+      var toggle = topnav.find('.nav-toggle');
+      toggle.on('click', function() {
+        topnav.toggleClass('responsive');
+      });
+    });
+
+    // nav dropdowns
+    $('.nav-dropbtn').click(function(e) {
+      $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+      $(this).parent().siblings('.nav-dropdown')
+         .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $("body").click(function(e){
+      $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $(".nav-dropdown").click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<style type="text/css">
+
+/* Theme (user-documented overrideables for nav appearance) */
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #0F2E3D;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+.distill-site-header {
+
+}
+
+.distill-site-footer {
+
+}
+
+
+/* Site Header */
+
+.distill-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.distill-site-header .nav-left {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header .nav-left {
+    margin-left: 0;
+  }
+}
+
+
+.distill-site-header .nav-right {
+  float: right;
+  margin-right: 8px;
+}
+
+.distill-site-header a,
+.distill-site-header .title {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 10px 14px 10px;
+}
+
+.distill-site-header .title {
+  font-size: 18px;
+  min-width: 150px;
+}
+
+.distill-site-header .logo {
+  padding: 0;
+}
+
+.distill-site-header .logo img {
+  display: none;
+  max-height: 20px;
+  width: auto;
+  margin-bottom: -4px;
+}
+
+.distill-site-header .nav-image img {
+  max-height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .distill-site-header .logo img {
+    display: inline-block;
+  }
+  .distill-site-header .nav-left {
+    margin-left: 20px;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 20px;
+  }
+  .distill-site-header .title {
+    padding-left: 12px;
+  }
+}
+
+
+.distill-site-header .nav-toggle {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-dropdown .nav-dropbtn {
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 16px 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown-content hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown-active {
+  display: block;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+  color: black;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-content .nav-dropdown-header {
+  display: block;
+  padding: 5px 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999999;
+  white-space: nowrap;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+  color: white;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-right .nav-dropdown-content {
+  margin-left: -45%;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
+    float: right;
+    display: block;
+  }
+  .distill-site-header .title {
+    margin-left: 0;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 0;
+  }
+  .distill-site-header {
+    overflow: hidden;
+  }
+  .nav-right .nav-dropdown-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-header.responsive {position: relative; min-height: 500px; }
+  .distill-site-header.responsive a.nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
+    display: block;
+    text-align: left;
+  }
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
+    width: 100%;
+  }
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Site Footer */
+
+.distill-site-footer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* Headroom */
+
+d-title {
+  padding-top: 6rem;
+}
+
+@media print {
+  d-title {
+    padding-top: 4rem;
+  }
+}
+
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+/* adjust viewport for navbar height */
+/* helps vertically center bootstrap (non-distill) content */
+.min-vh-100 {
+  min-height: calc(100vh - 100px) !important;
+}
+
+</style>
+
+<script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+<link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+<script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
+<script src="../../site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
+<script src="../../site_libs/fuse-6.4.1/fuse.min.js"></script>
+
+<script type="application/javascript">
+
+function getMeta(metaName) {
+  var metas = document.getElementsByTagName('meta');
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute('name') === metaName) {
+      return metas[i].getAttribute('content');
+    }
+  }
+  return '';
+}
+
+function offsetURL(url) {
+  var offset = getMeta('distill:offset');
+  return offset ? offset + '/' + url : url;
+}
+
+function createFuseIndex() {
+
+  // create fuse index
+  var options = {
+    keys: [
+      { name: 'title', weight: 20 },
+      { name: 'categories', weight: 15 },
+      { name: 'description', weight: 10 },
+      { name: 'contents', weight: 5 },
+    ],
+    ignoreLocation: true,
+    threshold: 0
+  };
+  var fuse = new window.Fuse([], options);
+
+  // fetch the main search.json
+  return fetch(offsetURL('search.json'))
+    .then(function(response) {
+      if (response.status == 200) {
+        return response.json().then(function(json) {
+          // index main articles
+          json.articles.forEach(function(article) {
+            fuse.add(article);
+          });
+          // download collections and index their articles
+          return Promise.all(json.collections.map(function(collection) {
+            return fetch(offsetURL(collection)).then(function(response) {
+              if (response.status === 200) {
+                return response.json().then(function(articles) {
+                  articles.forEach(function(article) {
+                    fuse.add(article);
+                  });
+                })
+              } else {
+                return Promise.reject(
+                  new Error('Unexpected status from search index request: ' +
+                            response.status)
+                );
+              }
+            });
+          })).then(function() {
+            return fuse;
+          });
+        });
+
+      } else {
+        return Promise.reject(
+          new Error('Unexpected status from search index request: ' +
+                      response.status)
+        );
+      }
+    });
+}
+
+window.document.addEventListener("DOMContentLoaded", function (event) {
+
+  // get search element (bail if we don't have one)
+  var searchEl = window.document.getElementById('distill-search');
+  if (!searchEl)
+    return;
+
+  createFuseIndex()
+    .then(function(fuse) {
+
+      // make search box visible
+      searchEl.classList.remove('hidden');
+
+      // initialize autocomplete
+      var options = {
+        autoselect: true,
+        hint: false,
+        minLength: 2,
+      };
+      window.autocomplete(searchEl, options, [{
+        source: function(query, callback) {
+          const searchOptions = {
+            isCaseSensitive: false,
+            shouldSort: true,
+            minMatchCharLength: 2,
+            limit: 10,
+          };
+          var results = fuse.search(query, searchOptions);
+          callback(results
+            .map(function(result) { return result.item; })
+          );
+        },
+        templates: {
+          suggestion: function(suggestion) {
+            var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+              ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+              : '';
+            var html = `
+              <div class="search-item">
+                <h3>${suggestion.title}</h3>
+                <div class="search-item-description">
+                  ${suggestion.description || ''}
+                </div>
+                <div class="search-item-preview">
+                  ${img}
+                </div>
+              </div>
+            `;
+            return html;
+          }
+        }
+      }]).on('autocomplete:selected', function(event, suggestion) {
+        window.location.href = offsetURL(suggestion.path);
+      });
+      // remove inline display style on autocompleter (we want to
+      // manage responsive display via css)
+      $('.algolia-autocomplete').css("display", "");
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
+});
+
+</script>
+
+<style type="text/css">
+
+.nav-search {
+  font-size: x-small;
+}
+
+/* Algolioa Autocomplete */
+
+.algolia-autocomplete {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: sub;
+  background-color: white;
+  color: black;
+  padding: 6px;
+  padding-top: 8px;
+  padding-bottom: 0;
+  border-radius: 6px;
+  border: 1px #0F2E3D solid;
+  width: 180px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-nav .algolia-autocomplete {
+    display: none;
+    visibility: hidden;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete {
+    display: inline-block;
+    visibility: visible;
+  }
+  .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
+    margin-left: 0;
+    width: 400px;
+    max-height: 400px;
+  }
+}
+
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+  width: 90%;
+  outline: none;
+  border: none;
+}
+
+.algolia-autocomplete .aa-hint {
+  color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 550px;
+  max-height: 70vh;
+  overflow-x: visible;
+  overflow-y: scroll;
+  padding: 5px;
+  margin-top: 3px;
+  margin-left: -150px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+  border-top: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
+  border-bottom: none;
+  margin-bottom: 2px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
+  overflow: hidden;
+  font-size: 0.8em;
+  line-height: 1.4em;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+  font-size: 1rem;
+  margin-block-start: 0;
+  margin-block-end: 5px;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
+  display: inline-block;
+  overflow: hidden;
+  height: 2.8em;
+  width: 80%;
+  margin-right: 4%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
+  display: inline-block;
+  width: 15%;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
+  height: 3em;
+  width: auto;
+  display: none;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
+  display: initial;
+}
+
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #eee;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+</style>
+
+
+<!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+<style type="text/css">
+
+body {
+  background-color: white;
+}
+
+.pandoc-table {
+  width: 100%;
+}
+
+.pandoc-table>caption {
+  margin-bottom: 10px;
+}
+
+.pandoc-table th:not([align]) {
+  text-align: left;
+}
+
+.pagedtable-footer {
+  font-size: 15px;
+}
+
+d-byline .byline {
+  grid-template-columns: 2fr 2fr;
+}
+
+d-byline .byline h3 {
+  margin-block-start: 1.5em;
+}
+
+d-byline .byline .authors-affiliations h3 {
+  margin-block-start: 0.5em;
+}
+
+.authors-affiliations .orcid-id {
+  width: 16px;
+  height:16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
+
+d-title .dt-tags {
+  margin-top: 1em;
+  grid-column: text;
+}
+
+.dt-tags .dt-tag {
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0em 0.4em;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  font-size: 70%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+d-article table.gt_table td,
+d-article table.gt_table th {
+  border-bottom: none;
+}
+
+.html-widget {
+  margin-bottom: 2.0em;
+}
+
+.l-screen-inset {
+  padding-right: 16px;
+}
+
+.l-screen .caption {
+  margin-left: 10px;
+}
+
+.shaded {
+  background: rgb(247, 247, 247);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .html-widget {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .shaded-content {
+  background: white;
+}
+
+.text-output {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+d-article {
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+}
+
+d-appendix {
+  padding-top: 30px;
+}
+
+d-article>p>img {
+  width: 100%;
+}
+
+d-article h2 {
+  margin: 1rem 0 1.5rem 0;
+}
+
+d-article h3 {
+  margin-top: 1.5rem;
+}
+
+d-article iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.0em;
+  width: 100%;
+}
+
+/* Tweak code blocks */
+
+d-article div.sourceCode code,
+d-article pre code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: auto;
+}
+
+d-article div.sourceCode {
+  background-color: white;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 10px;
+  font-size: 12px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+d-article pre {
+  font-size: 12px;
+  color: black;
+  background: none;
+  margin-top: 0;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+d-article pre a {
+  border-bottom: none;
+}
+
+d-article pre a:hover {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+d-article details {
+  grid-column: text;
+  margin-bottom: 0.8em;
+}
+
+@media(min-width: 768px) {
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: visible !important;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+d-article pre {
+  font-size: 14px;
+}
+
+}
+
+figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* CSS for d-contents */
+
+.d-contents {
+  grid-column: text;
+  color: rgba(0,0,0,0.8);
+  font-size: 0.9em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 0.25em;
+  justify-self: start;
+}
+
+@media(min-width: 1000px) {
+  .d-contents.d-contents-float {
+    height: 0;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    padding-right: 3em;
+    padding-left: 2em;
+  }
+}
+
+.d-contents nav h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.d-contents li {
+  list-style-type: none
+}
+
+.d-contents nav > ul {
+  padding-left: 0;
+}
+
+.d-contents ul {
+  padding-left: 1em
+}
+
+.d-contents nav ul li {
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
+}
+
+.d-contents nav a {
+  font-size: 13px;
+  border-bottom: none;
+  text-decoration: none
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.d-contents nav a:hover {
+  text-decoration: underline solid rgba(0, 0, 0, 0.6)
+}
+
+.d-contents nav > ul > li > a {
+  font-weight: 600;
+}
+
+.d-contents nav > ul > li > ul {
+  font-weight: inherit;
+}
+
+.d-contents nav > ul > li > ul > li {
+  margin-top: 0.2em;
+}
+
+
+.d-contents nav ul {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.d-article-with-toc h2:nth-child(2) {
+  margin-top: 0;
+}
+
+
+/* Figure */
+
+.figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.figure img {
+  width: 100%;
+}
+
+.figure .caption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.figure .caption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.figure .caption b,
+.figure .caption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+/* Citations */
+
+d-article .citation {
+  color: inherit;
+  cursor: inherit;
+}
+
+div.hanging-indent{
+  margin-left: 1em; text-indent: -1em;
+}
+
+/* Citation hover box */
+
+.tippy-box[data-theme~=light-border] {
+  background-color: rgba(250, 250, 250, 0.95);
+}
+
+.tippy-content > p {
+  margin-bottom: 0;
+  padding: 2px;
+}
+
+
+/* Tweak 1000px media break to show more text */
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+  figure .caption, .figure .caption, figure figcaption {
+    font-size: 13px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+/* Get the citation styles for the appendix (not auto-injected on render since
+   we do our own rendering of the citation appendix) */
+
+d-appendix .citation-appendix,
+.d-appendix .citation-appendix {
+  font-size: 11px;
+  line-height: 15px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 18px;
+  border-radius: 3px;
+  color: rgba(150, 150, 150, 1);
+  overflow: hidden;
+  margin-top: -12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Include appendix styles here so they can be overridden */
+
+d-appendix {
+  contain: layout style;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-top: 60px;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0,0,0,0.5);
+  padding-top: 60px;
+  padding-bottom: 48px;
+}
+
+d-appendix h3 {
+  grid-column: page-start / text-start;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.65);
+}
+
+d-appendix h3 + * {
+  margin-top: 1em;
+}
+
+d-appendix ol {
+  padding: 0 0 0 15px;
+}
+
+@media (min-width: 768px) {
+  d-appendix ol {
+    padding: 0 0 0 30px;
+    margin-left: -30px;
+  }
+}
+
+d-appendix li {
+  margin-bottom: 1em;
+}
+
+d-appendix a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+d-appendix > * {
+  grid-column: text;
+}
+
+d-appendix > d-footnote-list,
+d-appendix > d-citation-list,
+d-appendix > distill-appendix {
+  grid-column: screen;
+}
+
+/* Include footnote styles here so they can be overridden */
+
+d-footnote-list {
+  contain: layout style;
+}
+
+d-footnote-list > * {
+  grid-column: text;
+}
+
+d-footnote-list a.footnote-backlink {
+  color: rgba(0,0,0,0.3);
+  padding-left: 0.5em;
+}
+
+
+
+/* Anchor.js */
+
+.anchorjs-link {
+  /*transition: all .25s linear; */
+  text-decoration: none;
+  border-bottom: none;
+}
+*:hover > .anchorjs-link {
+  margin-left: -1.125em !important;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Social footer */
+
+.social_footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.67);
+}
+
+.disqus-comments {
+  margin-right: 30px;
+}
+
+.disqus-comment-count {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.article-sharing a {
+  border-bottom: none;
+  margin-right: 8px;
+}
+
+.article-sharing a:hover {
+  border-bottom: none;
+}
+
+.sidebar-section.subscribe {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.subscribe p {
+  margin-bottom: 0.5em;
+}
+
+
+.article-footer .subscribe {
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+
+.sidebar-section.custom {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.custom p {
+  margin-bottom: 0.5em;
+}
+
+/* Styles for listing layout (hide title) */
+.layout-listing d-title, .layout-listing .d-title {
+  display: none;
+}
+
+/* Styles for posts lists (not auto-injected) */
+
+
+.posts-with-sidebar {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.posts-list .description h2,
+.posts-list .description p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.posts-list .description h2 {
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.posts-list h2.post-tag {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
+}
+.posts-list {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.posts-list .post-preview {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+}
+
+.post-preview-last {
+  border-bottom: none !important;
+}
+
+.posts-list .posts-list-caption {
+  grid-column: screen;
+  font-weight: 400;
+}
+
+.posts-list .post-preview h2 {
+  margin: 0 0 6px 0;
+  line-height: 1.2em;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.posts-list .post-preview p {
+  margin: 0 0 12px 0;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+
+.posts-list .post-preview .thumbnail {
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  position: relative;
+  max-width: 500px;
+}
+.posts-list .post-preview img {
+  width: 100%;
+  display: block;
+}
+
+.posts-list .metadata {
+  font-size: 12px;
+  line-height: 1.4em;
+  margin-bottom: 18px;
+}
+
+.posts-list .metadata > * {
+  display: inline-block;
+}
+
+.posts-list .metadata .publishedDate {
+  margin-right: 2em;
+}
+
+.posts-list .metadata .dt-authors {
+  display: block;
+  margin-top: 0.3em;
+  margin-right: 2em;
+}
+
+.posts-list .dt-tags {
+  display: block;
+  line-height: 1em;
+}
+
+.posts-list .dt-tags .dt-tag {
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0.3em 0.4em;
+  margin-right: 0.2em;
+  margin-bottom: 0.4em;
+  font-size: 60%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.posts-list img {
+  opacity: 1;
+}
+
+.posts-list img[data-src] {
+  opacity: 0;
+}
+
+.posts-more {
+  clear: both;
+}
+
+
+.posts-sidebar {
+  font-size: 16px;
+}
+
+.posts-sidebar h3 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0;
+}
+
+.categories li>a {
+  border-bottom: none;
+}
+
+.categories li>a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.categories .active {
+  font-weight: 600;
+}
+
+.categories .category-count {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+@media(min-width: 768px) {
+  .posts-list .post-preview h2 {
+    font-size: 26px;
+  }
+  .posts-list .post-preview .thumbnail {
+    float: right;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .posts-list .post-preview .description {
+    float: left;
+    width: 45%;
+  }
+  .posts-list .post-preview .metadata {
+    float: left;
+    width: 20%;
+    margin-top: 8px;
+  }
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  .posts-with-sidebar .posts-list {
+    float: left;
+    width: 75%;
+  }
+  .posts-with-sidebar .posts-sidebar {
+    float: right;
+    width: 20%;
+    margin-top: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+
+/* Improve display for browsers without grid (IE/Edge <= 15) */
+
+.downlevel {
+  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.downlevel .d-title {
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.downlevel .d-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+.downlevel .d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  margin-top: 0;
+}
+
+.downlevel .d-byline {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.8em;
+}
+
+.downlevel .section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.downlevel .d-article {
+  font-size: 1.06rem;
+  line-height: 1.7em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+
+.downlevel .d-appendix {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.downlevel .footnotes ol {
+  padding-left: 13px;
+}
+
+.downlevel .base-grid,
+.downlevel .distill-header,
+.downlevel .d-title,
+.downlevel .d-abstract,
+.downlevel .d-article,
+.downlevel .d-appendix,
+.downlevel .distill-appendix,
+.downlevel .d-byline,
+.downlevel .d-footnote-list,
+.downlevel .d-citation-list,
+.downlevel .distill-footer,
+.downlevel .appendix-bottom,
+.downlevel .posts-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media(min-width: 768px) {
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 900px;
+}
+}
+
+.downlevel pre code {
+  display: block;
+  border-left: 2px solid rgba(0, 0, 0, .1);
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+.downlevel code, .downlevel pre {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.downlevel .posts-list .post-preview {
+  color: inherit;
+}
+
+
+
+</style>
+
+<script type="application/javascript">
+
+function is_downlevel_browser() {
+  if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                 window.navigator.userAgent)) {
+    return true;
+  } else {
+    return window.load_distill_framework === undefined;
+  }
+}
+
+// show body when load is complete
+function on_load_complete() {
+
+  // add anchors
+  if (window.anchors) {
+    window.anchors.options.placement = 'left';
+    window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+  }
+
+
+  // set body to visible
+  document.body.style.visibility = 'visible';
+
+  // force redraw for leaflet widgets
+  if (window.HTMLWidgets) {
+    var maps = window.HTMLWidgets.findAll(".leaflet");
+    $.each(maps, function(i, el) {
+      var map = this.getMap();
+      map.invalidateSize();
+      map.eachLayer(function(layer) {
+        if (layer instanceof L.TileLayer)
+          layer.redraw();
+      });
+    });
+  }
+
+  // trigger 'shown' so htmlwidgets resize
+  $('d-article').trigger('shown');
+}
+
+function init_distill() {
+
+  init_common();
+
+  // create front matter
+  var front_matter = $('<d-front-matter></d-front-matter>');
+  $('#distill-front-matter').wrap(front_matter);
+
+  // create d-title
+  $('.d-title').changeElementType('d-title');
+
+  // create d-byline
+  var byline = $('<d-byline></d-byline>');
+  $('.d-byline').replaceWith(byline);
+
+  // create d-article
+  var article = $('<d-article></d-article>');
+  $('.d-article').wrap(article).children().unwrap();
+
+  // move posts container into article
+  $('.posts-container').appendTo($('d-article'));
+
+  // create d-appendix
+  $('.d-appendix').changeElementType('d-appendix');
+
+  // flag indicating that we have appendix items
+  var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+  // replace footnotes with <d-footnote>
+  $('.footnote-ref').each(function(i, val) {
+    appendix = true;
+    var href = $(this).attr('href');
+    var id = href.replace('#', '');
+    var fn = $('#' + id);
+    var fn_p = $('#' + id + '>p');
+    fn_p.find('.footnote-back').remove();
+    var text = fn_p.html();
+    var dtfn = $('<d-footnote></d-footnote>');
+    dtfn.html(text);
+    $(this).replaceWith(dtfn);
+  });
+  // remove footnotes
+  $('.footnotes').remove();
+
+  // move refs into #references-listing
+  $('#references-listing').replaceWith($('#refs'));
+
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    var id = $(this).attr('id');
+    $('.d-contents a[href="#' + id + '"]').parent().remove();
+    appendix = true;
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+  });
+
+  // show d-appendix if we have appendix content
+  $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+  // localize layout chunks to just output
+  $('.layout-chunk').each(function(i, val) {
+
+    // capture layout
+    var layout = $(this).attr('data-layout');
+
+    // apply layout to markdown level block elements
+    var elements = $(this).children().not('details, div.sourceCode, pre, script');
+    elements.each(function(i, el) {
+      var layout_div = $('<div class="' + layout + '"></div>');
+      if (layout_div.hasClass('shaded')) {
+        var shaded_content = $('<div class="shaded-content"></div>');
+        $(this).wrap(shaded_content);
+        $(this).parent().wrap(layout_div);
+      } else {
+        $(this).wrap(layout_div);
+      }
+    });
+
+
+    // unwrap the layout-chunk div
+    $(this).children().unwrap();
+  });
+
+  // remove code block used to force  highlighting css
+  $('.distill-force-highlighting-css').parent().remove();
+
+  // remove empty line numbers inserted by pandoc when using a
+  // custom syntax highlighting theme
+  $('code.sourceCode a:empty').remove();
+
+  // load distill framework
+  load_distill_framework();
+
+  // wait for window.distillRunlevel == 4 to do post processing
+  function distill_post_process() {
+
+    if (!window.distillRunlevel || window.distillRunlevel < 4)
+      return;
+
+    // hide author/affiliations entirely if we have no authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+    if (!have_authors)
+      $('d-byline').addClass('hidden');
+
+    // article with toc class
+    $('.d-contents').parent().addClass('d-article-with-toc');
+
+    // strip links that point to #
+    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+    // add orcid ids
+    $('.authors-affiliations').find('.author').each(function(i, el) {
+      var orcid_id = front_matter.authors[i].orcidID;
+      if (orcid_id) {
+        var a = $('<a></a>');
+        a.attr('href', 'https://orcid.org/' + orcid_id);
+        var img = $('<img></img>');
+        img.addClass('orcid-id');
+        img.attr('alt', 'ORCID ID');
+        img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+        a.append(img);
+        $(this).append(a);
+      }
+    });
+
+    // hide elements of author/affiliations grid that have no value
+    function hide_byline_column(caption) {
+      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+    }
+
+    // affiliations
+    var have_affiliations = false;
+    for (var i = 0; i<front_matter.authors.length; ++i) {
+      var author = front_matter.authors[i];
+      if (author.affiliation !== "&nbsp;") {
+        have_affiliations = true;
+        break;
+      }
+    }
+    if (!have_affiliations)
+      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+    // published date
+    if (!front_matter.publishedDate)
+      hide_byline_column("Published");
+
+    // document object identifier
+    var doi = $('d-byline').find('h3:contains("DOI")');
+    var doi_p = doi.next().empty();
+    if (!front_matter.doi) {
+      // if we have a citation and valid citationText then link to that
+      if ($('#citation').length > 0 && front_matter.citationText) {
+        doi.html('Citation');
+        $('<a href="#citation"></a>')
+          .text(front_matter.citationText)
+          .appendTo(doi_p);
+      } else {
+        hide_byline_column("DOI");
+      }
+    } else {
+      $('<a></a>')
+         .attr('href', "https://doi.org/" + front_matter.doi)
+         .html(front_matter.doi)
+         .appendTo(doi_p);
+    }
+
+     // change plural form of authors/affiliations
+    if (front_matter.authors.length === 1) {
+      var grid = $('.authors-affiliations');
+      grid.children('h3:contains("Authors")').text('Author');
+      grid.children('h3:contains("Affiliations")').text('Affiliation');
+    }
+
+    // remove d-appendix and d-footnote-list local styles
+    $('d-appendix > style:first-child').remove();
+    $('d-footnote-list > style:first-child').remove();
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // hoverable references
+    $('span.citation[data-cites]').each(function() {
+      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      window.tippy(this, {
+        allowHTML: true,
+        content: refHtml,
+        maxWidth: 500,
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start'
+      });
+    });
+
+    // clear polling timer
+    clearInterval(tid);
+
+    // show body now that everything is ready
+    on_load_complete();
+  }
+
+  var tid = setInterval(distill_post_process, 50);
+  distill_post_process();
+
+}
+
+function init_downlevel() {
+
+  init_common();
+
+   // insert hr after d-title
+  $('.d-title').after($('<hr class="section-separator"/>'));
+
+  // check if we have authors
+  var front_matter = JSON.parse($("#distill-front-matter").html());
+  var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+  // manage byline/border
+  if (!have_authors)
+    $('.d-byline').remove();
+  $('.d-byline').after($('<hr class="section-separator"/>'));
+  $('.d-byline a').remove();
+
+  // remove toc
+  $('.d-contents').remove();
+
+  // move appendix elements
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+  });
+
+
+  // inject headers into references and footnotes
+  var refs_header = $('<h3></h3>');
+  refs_header.text('References');
+  $('#refs').prepend(refs_header);
+
+  var footnotes_header = $('<h3></h3');
+  footnotes_header.text('Footnotes');
+  $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+  // move appendix-bottom entries to the bottom
+  $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+  $('.appendix-bottom').remove();
+
+  // remove appendix if it's empty
+  if ($('.d-appendix').children().length === 0)
+    $('.d-appendix').remove();
+
+  // prepend separator above appendix
+  $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+  // trim code
+  $('pre>code').each(function(i, val) {
+    $(this).html($.trim($(this).html()));
+  });
+
+  // move posts-container right before article
+  $('.posts-container').insertBefore($('.d-article'));
+
+  $('body').addClass('downlevel');
+
+  on_load_complete();
+}
+
+
+function init_common() {
+
+  // jquery plugin to change element types
+  (function($) {
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      this.replaceWith(function() {
+        return $("<" + newType + "/>", attrs).append($(this).contents());
+      });
+    };
+  })(jQuery);
+
+  // prevent underline for linked images
+  $('a > img').parent().css({'border-bottom' : 'none'});
+
+  // mark non-body figures created by knitr chunks as 100% width
+  $('.layout-chunk').each(function(i, val) {
+    var figures = $(this).find('img, .html-widget');
+    if ($(this).attr('data-layout') !== "l-body") {
+      figures.css('width', '100%');
+    } else {
+      figures.css('max-width', '100%');
+      figures.filter("[width]").each(function(i, val) {
+        var fig = $(this);
+        fig.css('width', fig.attr('width') + 'px');
+      });
+
+    }
+  });
+
+  // auto-append index.html to post-preview links in file: protocol
+  // and in rstudio ide preview
+  $('.post-preview').each(function(i, val) {
+    if (window.location.protocol === "file:")
+      $(this).attr('href', $(this).attr('href') + "index.html");
+  });
+
+  // get rid of index.html references in header
+  if (window.location.protocol !== "file:") {
+    $('.distill-site-header a[href]').each(function(i,val) {
+      $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+    });
+  }
+
+  // add class to pandoc style tables
+  $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+  $('.kable-table').children('table').addClass('pandoc-table');
+
+  // add figcaption style to table captions
+  $('caption').parent('table').addClass("figcaption");
+
+  // initialize posts list
+  if (window.init_posts_list)
+    window.init_posts_list();
+
+  // implmement disqus comment link
+  $('.disqus-comment-count').click(function() {
+    window.headroom_prevent_pin = true;
+    $('#disqus_thread').toggleClass('hidden');
+    if (!$('#disqus_thread').hasClass('hidden')) {
+      var offset = $(this).offset();
+      $(window).resize();
+      $('html, body').animate({
+        scrollTop: offset.top - 35
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (is_downlevel_browser())
+    init_downlevel();
+  else
+    window.addEventListener('WebComponentsReady', init_distill);
+});
+
+</script>
+
+<!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+<link rel="icon" type="image/png" href="favicon.ico"/>
+<!--/radix_placeholder_site_in_header-->
+  <div class="hero-image"> 
+
+  </div>
+
+  <link rel="stylesheet" href="theme.css" type="text/css"/>
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Tutorial Statystyki Bayesowskiej","description":"Część III: Czynnik Bayesowski","authors":[{"author":"Szymon Mąka","authorURL":"https://revan-tech.github.io/kontakt.html","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2023-01-13T00:00:00.000+01:00","citationText":"Mąka, 2023"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="../../index.html" class="title">Sortownia</a>
+<a href="../../index.html">Home</a>
+<a href="../../blog.html">Blog</a>
+<a href="../../poradniki.html">Poradniki</a>
+<a href="https://szpm.shinyapps.io/baza_wiedzy/">Baza wiedzy</a>
+<a href="../../projekty.html">Projekty</a>
+<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
+</div>
+<div class="nav-right">
+<a href="../../kontakt.html">Kontakt</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Tutorial Statystyki Bayesowskiej</h1>
+<!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../blog.html#category:Statystyczne_Dygresje" class="dt-tag">Statystyczne Dygresje</a>
+</div>
+<!--/radix_placeholder_categories-->
+<p><p>Część III: Czynnik Bayesowski</p></p>
+</div>
+
+<div class="d-byline">
+  Szymon Mąka <a href="https://revan-tech.github.io/kontakt.html" class="uri">https://revan-tech.github.io/kontakt.html</a> 
+  
+<br/>01-13-2023
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#wnioskowanie-statystyczne">Wnioskowanie Statystyczne</a>
+<ul>
+<li><a href="#porównywanie-modeli">Porównywanie modeli</a>
+<ul>
+<li><a href="#czynnik-bayesowski">Czynnik Bayesowski</a></li>
+<li><a href="#czynnik-bayesowski-a-złożoność-modelu">Czynnik Bayesowski a złożoność modelu</a></li>
+<li><a href="#bayesian-point-null-hypothesis-testing">Bayesian Point Null Hypothesis Testing</a></li>
+<li><a href="#savage-dickey-density-ratio">Savage-Dickey density ratio</a></li>
+<li><a href="#likelihood-sampling">Likelihood sampling</a></li>
+</ul></li>
+<li><a href="#porównywanie-modeli-1">Porównywanie modeli?</a>
+<ul>
+<li><a href="#czynnik-bayesa-nie-mierzy-czy-model-jest-właściwy">Czynnik Bayesa nie mierzy czy model jest właściwy</a></li>
+<li><a href="#czynnik-bayesowski-jest-wrażliwy-na-rozkłady-a-priori-parametrów-modelu">Czynnik Bayesowski jest wrażliwy na rozkłady <em>a priori</em> parametrów modelu</a></li>
+<li><a href="#rozkłady-posteriori-parametrów-nie-muszą-się-zgadzać-z-czynnikiem-bayesa">Rozkłady <em>posteriori</em> parametrów nie muszą się zgadzać z czynnikiem Bayesa</a></li>
+<li><a href="#czynnik-bayesa-a-prawdopodobieństwo-braku-efektu">Czynnik Bayesa a prawdopodobieństwo braku efektu</a></li>
+<li><a href="#i-co-z-tym-wszystkim-zrobić">I co z tym wszystkim zrobić?</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#zakończenie">Zakończenie</a></li>
+</ul>
+</nav>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<style type="text/css">
+.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+img[src*='#center'] { 
+    display: block;
+    margin: auto;
+}
+
+</style>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<p align="right">
+<em>Osobiście nienawidzę czynników Bayesa…</em>
+</p>
+<p align="right">
+— Andrew Gelman, 2017
+</p>
+<h1 id="wnioskowanie-statystyczne">Wnioskowanie Statystyczne</h1>
+<p>Jak pamiętamy, wnioskowanie w statystyce częstościowej opiera się na testowaniu hipotezy zerowej. Hipotezą zerową zwykle jest model, który świadczy o braku efektu, na przykład, że różnica średnich wynosi lub współczynnik regresji wynosi 0. Im mniejsza p-value, tym bardziej otrzymane dane nie pasują to tego modelu. Jeśli jednak p-value jest większa niż 0.05 nie oznacza to, że model zerowy jest <strong>bardziej prawdopodobny</strong> niż inne. Innymi słowy, ten rodzaj testowania może nam jedynie powiedzieć o występowaniu różnicy średnich czy występowaniu korelacji, ale nie o jej braku.</p>
+<p>Przypomnijmy sobie, że wielkość przedziału ufności dla testu zależy od wariancji i wielkości próby. Gdyby NHST pozwalało nam orzekać o równości średnich, udowodnienie takiej hipotezy byłoby niezwykle łatwe.</p>
+<p>Na przykład załóżmy, że chcemy sprawdzić czy nowy lek nie różni się skutecznością od leku będącego już na rynku. Wystarczyłoby manipulować wielkością próby, aby otrzymać wniosek o braku istotnej różnicy pomiędzy wpływem tych dwóch leków!</p>
+<p>Dlatego chcielibyśmy móc orzec, który z modeli (hipotez) jest bardziej prawdopodobny. Podejście bayesowskie daje nam taką możliwość (choć, nie do końca).</p>
+<h2 id="porównywanie-modeli">Porównywanie modeli</h2>
+<p>Czym jest model? <strong>Najprościej mówiąc model jest zbiorem ograniczeń, który nakładamy na proces generujący dane.</strong> Na przykład może interesować nas porównanie dwóch różnych modeli regresji z innymi zbiorami predyktorów. Przykładowy model <span class="math inline">\(M_i\)</span> posiada parametry <span class="math inline">\(\theta\)</span> i funkcję wiarygodności <span class="math inline">\(P(D \mid \theta, M)\)</span>. Załóżmy, że chcielibyśmy obliczyć prawdopodobieństwo <em>a posteriori</em> modelu <span class="math inline">\(P(M \mid D)\)</span>.</p>
+<p><span class="math display">\[P(M_i \mid D) = \frac{ P(D \mid M_i) \ P(M_i) }{P(D) = \int P(D \mid M) \ P(M) \  \text{d} M}\,\]</span></p>
+<p>Widzimy, że analogicznie jak w poprzednich częściach tutorialu za pomocą twierdzenia Bayesa, interesuje nas obliczenie prawdopodobieństwa modelu <span class="math inline">\(M_i\)</span> pod warunkiem otrzymanych przez nas danych.</p>
+<p>Prawdopodobieństwo <span class="math inline">\(P(M_1)\)</span> jest oczywiście prawdopodobieństwem <em>a priori</em> naszego modelu. Sami je ustalamy, więc nie ma z nim problemu.</p>
+<p>Nasuwa się jednak pytanie jak obliczyć funkcję wiarygodności? <span class="math inline">\(P(D|M_1)\)</span> oznacza marginalne prawdopodobieństwo (<em>marginal likelihood</em>) otrzymania danych pod warunkiem modelu dla wszystkich możliwych wartości parametrów:</p>
+<p><span class="math display">\[P(D \mid M_i) = \int P(D \mid \theta, M_i) \ P(\theta \mid M_i) \ \text{d}\theta\]</span></p>
+<p>Co to znaczy dla wszystkich możliwych parametrów? Załóżmy, że mamy dwa modele regresji liniowej, różniące się tym, że jeden ma dodatkowy predyktor. Tak jak pisałem wcześniej w statystyce bayesowskiej nie otrzymamy punktowych estymat parametrów <span class="math inline">\(\theta\)</span>, ale ich rozkłady <span class="math inline">\(P(\theta|y)\)</span>. Ponieważ jednak chcemy otrzymać jedną wartość - prawdopodobieństwo otrzymania danych wygenerowanych przez model <span class="math inline">\(M_1\)</span>, a nie przez jakieś konkretne wartości parametrów tego modelu, musimy całkować po parametrach, by pozbyć się <span class="math inline">\(\theta\)</span> z równania.</p>
+<p>Teraz zerknijmy na mianownik naszego równania zawierający <span class="math inline">\(P(D)\)</span>. Tutaj sprawa się komplikuje, ponieważ by obliczyć <span class="math inline">\(P(D)\)</span> musielibyśmy całkować po wszystkich (nieskończenie wielu) możliwych modelach. Jego obliczenie jest w zasadzie niemożliwe zarówno analitycznie (jak wyznaczyć rozkład <span class="math inline">\(P(M)\)</span>, dla wszystkich możliwych modeli), jak i numerycznie (ponieważ musielibyśmy wymyślić i policzyć te wszystkie modele).</p>
+<p>A co jeśli porównamy dwa modele ze sobą?</p>
+<p><span class="math display">\[ \underbrace{{\frac{P(M_1|D)}{P(M_2|D)}}}_{\text{stosunek a posteriori}} = \frac{\frac{P(D|M_1)P(M_1)}{P(D)}}{\frac{P(D|M_2)P(M_2)}{P(D)}} = \underbrace{\frac{P(D|M_1)}{P(D|M_2)}}_{{BF_{12}}} * \underbrace{\frac{P(M_1)}{P(M_2)}}_{\text{stosunek a prior}}\]</span></p>
+<p>Robiąc tak, pozbywamy się konieczności obliczania <span class="math inline">\(P(D)\)</span>!</p>
+<h3 id="czynnik-bayesowski">Czynnik Bayesowski</h3>
+<p>Jednak oceniając modele nie używamy stosunku prawdopodobieństw <em>posteriori</em>, lecz stosunku marginalnych wiarygodności nazywanym <strong>Czynnikiem Bayesowskim</strong>:</p>
+<p><span class="math display">\[BF_{12} = \frac{P(D|M_1)}{P(D|M_2)}\]</span></p>
+<p>Jest tak dlatego, że stosunek prawdopodobieństw <em>a posteriori</em> zależy od danych, ale także od prawdopodobieństw <em>a priori</em> modeli. Manipulując nimi, moglibyśmy zawsze uzyskać miarę faworyzującą nasz model. Użycie stosunku funkcji wiarygodności, mówi nam o ile bardziej/mniej prawdopodobne jest, że <span class="math inline">\(M_1\)</span> wyprodukował obserwowane dane od <span class="math inline">\(M_2\)</span>. Ponadto jeśli przepiszemy wzór na stosunek <em>a posteriori</em>, uzyskamy</p>
+<p><span class="math display">\[ \underbrace{\frac{P(D|M_1)}{P(D|M_2)}}_{BF_{12}} = \underbrace{\frac{P(M_1|D)}{P(M_2|D)}}_{\text{stosunek posteriori }}:\underbrace{\frac{P(M_1)}{P(M_2)}}_{\text{stosunek a priori}}\]</span></p>
+<p>Co daje nam dodatkową interpretację czynnika Bayesowskiego. Jest on stosunkiem prawdopodobieństw <em>posteriori</em> podzielony przez stosunek prawdopodobieństw <em>a priori</em> naszych dwóch modeli. Mówi nam <strong>o ile zmieniły się nasze przekonania</strong> <em>a priori</em> <strong>po zobaczeniu danych</strong>. Innymi słowy, Czynnik Bayesowski mówi nam jak zmieniły się pod wpływem danych nasze początkowe przekonania co do tego, który model jest lepszy.</p>
+<p>Załóżmy, że przeprowadziliśmy analizę dwóch modeli i otrzymaliśmy <span class="math inline">\(stosunek \ posteriori = 4\)</span>, faworyzujący pierwszy model. Jednak <span class="math inline">\(BF_{12} = 0.5\)</span>, mówiąc nam, że drugi model wyprodukował obserwowane dane z dwa razy większym prawdopodobieństwem. Skąd taka rozbieżność? Wynika ze tego, że <span class="math inline">\(stosunek \ a \ priori = 8\)</span>, od początku faworyzował pierwszy model.</p>
+<p>Zwróćmy też uwagę, że jeśli przypiszemy modelom takie same prawdopodobieństwa <em>a priori</em>, stosunek <em>a posteriori</em> będzie się równał czynnikowi Bayesa.</p>
+<h3 id="czynnik-bayesowski-a-złożoność-modelu">Czynnik Bayesowski a złożoność modelu</h3>
+<p>Czynnik Bayesowski w naturalny sposób karze za złożoność modelu, choć ta właściwość nie jest widoczna na pierwszy rzut oka. Żeby ją zwizualizować, wyobraźmy sobie, że <span class="math inline">\(P(D|M)\)</span> nie jest pojedyńczą wartością prawdopodobieństwa otrzymania zaobserwowanych danych, lecz rozkładem prawdopodobieństwa wygenerowania <strong>wszystkich możliwych zbiorów danych</strong>, przez model. Weźmy dwa takie rozkłady dla modeli: prostszego modelu - <span class="math inline">\(M_1\)</span> i bardziej złożonego <span class="math inline">\(M_2\)</span>. Bardziej złożony model jest w stanie wygenerować więcej możliwych zbiorów danych niż prostszy, ponieważ jest bardziej elastyczny.</p>
+<p><img src="occam.JPG" /></p>
+<p>Całka prawdopodobieństw (pole pod wykresem) każdego z rozkładów musi wynosić 1 (z definicji rozkładów prawdopodobieństwa). Oznacza to, że dla przedziału <span class="math inline">\(C_1\)</span> model <span class="math inline">\(M_1\)</span> będzie miał zawsze większe prawdopodobieństwo wygenerowania danych niż <span class="math inline">\(M_2\)</span>, w konsekwencji czynnik bayesa będzie faworyzował <span class="math inline">\(M_1\)</span>. Logika stojąca za taka własnością <span class="math inline">\(BF\)</span> jest iście Occamowska. Zadajmy sobie pytanie, który z modeli ma większe prawdopodobieństwo wygenerowania danych w przedziale <span class="math inline">\(C_1\)</span> jeśli otrzymane przez nas dane mogą być wyjaśnione przez oba modele. Ten, który częściej będzie generował zbiory danych zawierające się w przedziale <span class="math inline">\(C_1\)</span>, czyli <span class="math inline">\(M_1\)</span>.</p>
+<h3 id="bayesian-point-null-hypothesis-testing">Bayesian Point Null Hypothesis Testing</h3>
+<p>Przypomnijmy sobie NHST (<em>Null Hypothesis Significance Testing</em>), które testuje hipotezy zerową i alternatywną. Hipoteza zerowa zwykle oznacza, że jakiś parametr <span class="math inline">\(\delta = 0\)</span>, a hipoteza alternatywna, że <span class="math inline">\(\delta \neq 0\)</span>. Czynnik Bayesa w naukach społecznych jest często wykorzystywany podobnym celu. Nazywa się to <em>Bayesian Point Null Hypothesis Testing</em> <strong>(BPNHT)</strong>. Testujemy model, który zakłada, że <span class="math inline">\(\delta\)</span> może przyjąć dowolną wartość, względem takiego, w którym jego wartość jest zerowa. <strong>Takie podobieństwo pomiędzy tymi metodami nie jest przypadkowe i dzieli problemy z wersją częstościową, o czym wkrótce.</strong></p>
+<p>Jako przykład posłużymy się czynnikiem Bayesa do przeprowadzenia bayesowskiej wersji jednoczynnikowej analizy wariancji. Wygenerujmy sobie dane:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>123</span><span class='op'>)</span></span>
+<span><span class='va'>factor_a</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>50</span><span class='op'>)</span>,<span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>50</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>y</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>, <span class='fl'>3</span> <span class='op'>+</span> <span class='fl'>0.80</span><span class='op'>*</span><span class='va'>factor_a</span>, <span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='va'>data</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>id <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>50</span>, y <span class='op'>=</span> <span class='va'>y</span>, factor_a <span class='op'>=</span> <span class='va'>factor_a</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Ci z Was, którzy są zaznajomieni z klasyczną wersją analizy wariancji wiedzą, że Anova to specjalny przypadek regresji liniowej. Jest też idealnym przykładem do użycia czynnika bayesowskiego w praktyce, ponieważ polega na porównaniu modeli. Najprostszym modelem, naszym modelem zerowym, będzie model, który zawiera tylko stałą. Modelem bardziej skomplikowanym, który chcemy przetestować jest model zawierający dodatkowo współczynnik regresji dla czynnika a:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+&amp;  &amp;
+M_0: \ \ y = \alpha\\
+&amp;  &amp;
+M_1: \ \ y = \alpha + \beta*X_a \\
+&amp;  &amp;
+\end{eqnarray*}\]</span></p>
+<p>Jeśli <span class="math inline">\(y\)</span> nie jest powiązany z czynnikiem <span class="math inline">\(X_a\)</span>, czynnik Bayesa powinien faworyzować model zerowy.</p>
+<h3 id="savage-dickey-density-ratio">Savage-Dickey density ratio</h3>
+<p>Dla pewnych modeli, jeśli wybierzemy odpowiednie rozkłady <em>a priori</em>, możemy obliczyć <span class="math inline">\(BF\)</span> analitycznie. W przypadku bardziej skomplikowanych zdani jesteśmy na metody numeryczne. Niestety, dla wielu modeli estymacja <span class="math inline">\(BF\)</span> jest trudna i niełatwa do zastosowania w praktyce.</p>
+<p>Istnieje jednak prosty sposób na obliczenie czynnika bayesowskiego dla modeli zagnieżdżonych (<em>nested models</em>), czyli takich, w których jeden model możemy traktować jako rozszerzenie drugiego. Popatrzmy na <span class="math inline">\(M_0\)</span> i <span class="math inline">\(M_1\)</span>. Możemy przeformułować <span class="math inline">\(M_0\)</span> w następujący sposób:</p>
+<p><span class="math display">\[M_0: \ \ y = \alpha + \beta*X_a, \  \ \beta = 0\]</span> Teraz widzimy, że <span class="math inline">\(M_0\)</span> jest zagnieżdżony w <span class="math inline">\(M_1\)</span>, to znaczy jest modelem <span class="math inline">\(M_1\)</span>, którego wartość parametru <span class="math inline">\(\beta_1\)</span> została ustawiona jako stała.</p>
+<p>Generalnie, mając dwa modele z parametrami <span class="math inline">\(\varphi\)</span> i <span class="math inline">\(\delta\)</span>, takie, że <span class="math inline">\(M_0:\delta=\delta_0,\varphi\)</span> i <span class="math inline">\(M_1:\delta,\varphi\)</span>, które spełniają warunek <span class="math inline">\(p(\varphi\mid M_0) = p(\varphi\mid \delta=\delta_0,M_1)\)</span>, możemy obliczyć <span class="math inline">\(BF_{01}\)</span> w następujący sposób:</p>
+<span class="math display">\[\text{BF}_{01} = \frac{p(\delta=\delta_0\mid y,M_1)}{p(\delta=\delta_0\mid M_1)}\]</span>
+<details>
+<summary>
+<span style="color: blue;">Dowód</span>
+</summary>
+<hr />
+<p>Z definicji:</p>
+<p><span class="math display">\[\begin{equation}\label{eq:bf}\text{BF}_{01}=\frac{p(y \mid M_0)}{p(y \mid M_1)}.\end{equation}\]</span></p>
+<p>Możemy przekształcić <span class="math inline">\(p(y \mid M_0)\)</span> w: <span class="math display">\[\begin{equation}
+\begin{split}
+ p(y \mid M_0) &amp;= \int p(y \mid \varphi,M_0) \, p(\varphi\mid M_0) \, \mathrm{d} \varphi \\
+  &amp;= \int p(y \mid \varphi,\delta=\delta_0,M_1) \, p(\varphi\mid \delta=\delta_0,M_1) \, \mathrm{d} \varphi \\
+  &amp;= p(y \mid \delta=\delta_0,M_1).\\
+\end{split}
+\label{eq:ml-m0}
+\end{equation}\]</span></p>
+<p>Stosując twierdzenie Bayesa do ostatniego wyniku:</p>
+<p><span class="math display">\[\begin{equation}\label{eq:ml-bt}
+p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M_1)}{p(\delta=\delta_0\mid M_1)}\end{equation}\]</span></p>
+<p>Więc:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{split}
+  \text{BF}_{01} &amp;\overset{\eqref{eq:bf}}{=} \frac{p(y \mid M_0)}{p(y \mid M_1)}\\
+  &amp;= p(y \mid M_0) \cdot \frac{1}{p(y \mid M_1)}\\
+  &amp;\overset{\eqref{eq:ml-m0}}{=} p(y \mid \delta=\delta_0,M_1) \cdot \frac{1}{p(y \mid M_1)}\\
+  &amp;\overset{\eqref{eq:ml-bt}}{=} \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M_1)}{p(\delta=\delta_0\mid M_1)} \cdot \frac{1}{p(y \mid M_1)}\\
+  &amp;= \frac{p(\delta=\delta_0 \mid y,M_1)}{p(\delta=\delta_0\mid M_1)},
+\end{split}
+\end{equation}\]</span></p>
+<hr />
+</details>
+<p>Obliczmy sobie <span class="math inline">\(BF_{10}\)</span> posługując się numerycznym przybliżeniem stosunku Savage-Dickey. By to zrobić musimy najpierw zdefiniować nasz <span class="math inline">\(M_1\)</span>. Przyjmijmy, że rozkłady <em>a priori</em> zarówno <span class="math inline">\(\alpha\)</span> jak i <span class="math inline">\(\beta\)</span> to:</p>
+<p><span class="math display">\[ \alpha, \beta \sim N(0,10)\]</span> Wobec tego mianownik stosunku Savage-Dickey, będzie gęstością prawdopodobieństwa wylosowania 0 z powyższego rozkładu.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>prior_beta_0</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>10</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Nasz model w JAGS będzie wyglądał tak:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>m1</span> <span class='op'>=</span> <span class='st'>'</span></span>
+<span><span class='st'>model{</span></span>
+<span><span class='st'>for(i in 1:length(y)){</span></span>
+<span><span class='st'>y[i] ~ dnorm(mu[i], precision)</span></span>
+<span><span class='st'>mu[i] = alpha + beta*factor_a[i]</span></span>
+<span><span class='st'>}</span></span>
+<span><span class='st'>precision ~ dunif(0.0000001,100)</span></span>
+<span><span class='st'>alpha ~ dnorm(0,10^-2)</span></span>
+<span><span class='st'>beta ~ dnorm(0,10^-2)</span></span>
+<span><span class='st'>}'</span></span></code></pre>
+</div>
+</div>
+<p>Wyprodukujmy rozkłady <em>posteriori</em> parametru <span class="math inline">\(\beta\)</span>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://mcmc-jags.sourceforge.net'>rjags</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://xavier-fim.net/packages/ggmcmc/'>ggmcmc</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>polspline</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'># Parametry, które chcemy śledzić. </span></span>
+<span><span class='va'>params</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"beta"</span><span class='op'>)</span></span>
+<span><span class='co'># Inicjacja modelu</span></span>
+<span><span class='va'>jmod1</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span>file <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/textconnections.html'>textConnection</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>, data <span class='op'>=</span> <span class='va'>data</span>, n.chains <span class='op'>=</span> <span class='fl'>4</span>, inits <span class='op'>=</span> <span class='cn'>NULL</span>, n.adapt <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span></span>
+<span><span class='co'># Wypalanie</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>jmod1</span>, n.iter<span class='op'>=</span><span class='fl'>100</span><span class='op'>^</span><span class='fl'>2</span>, by<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='co'># Losowanie próbek z rozkładu posteriori</span></span>
+<span><span class='va'>post</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>jmod1</span>, <span class='va'>params</span>, n.iter <span class='op'>=</span> <span class='fl'>10</span><span class='op'>*</span><span class='fl'>100</span><span class='op'>^</span><span class='fl'>2</span>, thin <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='co'># tidy format</span></span>
+<span><span class='va'>model1</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/ggmcmc/man/ggs.html'>ggs</a></span><span class='op'>(</span><span class='va'>post</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Teraz wyestymujemy prawdopodobieństwo wylosowania <span class="math inline">\(\beta = 0\)</span> z rozkładu <em>posteriori</em>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>post_samples</span> <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>model1</span>, <span class='va'>Parameter</span> <span class='op'>==</span> <span class='st'>"beta"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>value</span></span>
+<span><span class='va'>fit.posterior</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/polspline/man/logspline.html'>logspline</a></span><span class='op'>(</span><span class='va'>post_samples</span><span class='op'>)</span></span>
+<span><span class='va'>posterior_beta_0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/polspline/man/dlogspline.html'>dlogspline</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='va'>fit.posterior</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Mamy już wszystko by policzyć <span class="math inline">\(BF_{01}\)</span>. Jednak ponieważ <span class="math inline">\(M_0\)</span> jest naszym modelem zerowym, popatrzmy na <span class="math inline">\(BF_{10}\)</span> czyli <span class="math inline">\(\frac{1}{BF_{01}}\)</span>.</p>
+<p>Nasz <span class="math inline">\(BF_{10}\)</span> wynosi</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='va'>posterior_beta_0</span><span class='op'>/</span><span class='va'>prior_beta_0</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>[1] 4.009118</code></pre>
+</div>
+<p>Otrzymaliśmy wartość <span class="math inline">\(BF_{10}\)</span> wskazującą to, że porównując te dwa modele, jest ca. 4 razy bardziej prawdopodobne, że <span class="math inline">\(M_1\)</span> wyprodukował obserwowane dane niż <span class="math inline">\(M_0\)</span>. Dużo? Mało? Jedna z propozycji interpretacji <span class="math inline">\(BF\)</span> jest następująca <span class="citation" data-cites="kass1995bayes">(<a href="#ref-kass1995bayes" role="doc-biblioref">Kass &amp; Raftery, 1995</a>)</span>:</p>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">BF</th>
+<th style="text-align: left;">Dowody</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt; 1</td>
+<td style="text-align: left;">Wspierające model zerowy</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1-3</td>
+<td style="text-align: left;">Anegdotyczne</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3-10</td>
+<td style="text-align: left;">Znaczne</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10-100</td>
+<td style="text-align: left;">Silne</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&gt; 100</td>
+<td style="text-align: left;">Decyzyjne</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="likelihood-sampling">Likelihood sampling</h3>
+<p>W przypadku gdy nasze modele nie są zagnieżdżone, musimy szukać innych metod. Jedną z nich jest naiwne symulowanie metodą Monte Carlo. Opiera się na pomyśle, że <span class="math inline">\(P(Y|M_i)\)</span> możemy przybliżyć w następujący sposób:</p>
+<p><span class="math display">\[P(D \mid M_i) = \int P(D \mid \theta, M_i) \ P(\theta, M_i) \ \text{d}\theta \approx \frac{1}{n} \sum^{n}_{\theta_i \sim P(\theta \mid M_i)} P(D \mid \theta, M_i)\]</span> Popatrzmy na naszą całkę. Jeśli potraktujemy <span class="math inline">\(P(D \mid \theta, M_i)\)</span> jako zmienną <span class="math inline">\(x\)</span>, a <span class="math inline">\(P(\theta, M_i)\)</span> jako związaną z <span class="math inline">\(x\)</span> funkcję prawdopodobieństwa <span class="math inline">\(P(X)\)</span> (którą w istocie jest), otrzymamy:</p>
+<p><span class="math display">\[P(D \mid M_i) = \int x \ P(x) \ \text{dx}\]</span></p>
+<p>Czyli wzór na średnią. Możemy więc przybliżyć wartość <span class="math inline">\(P(D|M_i)\)</span> losując najpierw <span class="math inline">\(\theta\)</span> z rozkładu <em>a priori</em>, następnie obliczając <span class="math inline">\(P(D \mid \theta, M_i)\)</span> poprzez wstawienie uzyskanej <span class="math inline">\(\theta\)</span>. Jeśli powtórzymy to wielokrotnie, a otrzymane prawdopodobieństwa uśredniamy, uzyskamy estymatę <span class="math inline">\(P(D \mid M_i)\)</span>. Takie losowanie również możemy wykonać przy pomocy JAGS, jednak uzyskany <span class="math inline">\(BF\)</span> nie jest zbyt stabilny. Dlatego stosuje się udoskonalone metody losowania takie jak np. <strong>Bridge Sampling</strong>. Nie będziemy jednak ich teraz dokładnie omawiać.</p>
+<h2 id="porównywanie-modeli-1">Porównywanie modeli?</h2>
+<p>Czynnik Bayesa wydaje się być niezłą metodą, którą można wykorzystać do wnioskowania statystycznego. Być może nawet pomoże nam on rozwiązać kryzys replikacyjny. Tak też pomyślało wielu, co skutkowało tym, że programy statystyczne takie jak np. JASP zwracają nam podsumowania bayesowskich analiz defaultowo w postaci Czynnika Bayesa. Również czasopisma naukowe często oczekują od autorów, jeśli Ci posługują się statystyką bayesowską, wyników w postaci czynników Bayesa.</p>
+<p>Niektóre czasopisma wręcz wymagają czynników Bayesa jako metody przeciwdziałającej kryzysowi replikacyjnemu (pisałem o kryzysie replikacyjnym trochę <span style="color:blue"><a href="https://revan-tech.github.io/posts/2022-01-15-seria-jak-rozumie-nauk-metodologia-bada-i-statystyka/">tutaj</a></span>). Skoro określono algorytm weryfikacji hipotez statystycznych w statystyce bayesowskiej (rzekomo skuteczniejszy od statystyki częstosciowej), możemy wreszcie wrócić do pracy, nie martwiąc się o problem replikacji.</p>
+<p>Niestety, jak to zwykle okazuje, rzeczywistość nie jest taka różowa. <strong>Czynnik Bayesa jest kontrowersyjny wśród statystyków</strong>. Różnice w podejściach możemy zauważyć na przykład w zaciętych dysputach Davida Mackaya z Adrew Gelmanem. Mackay napisał doktorat wykazujący właściwość czynnika bayesa do karania skomplikowanych modeli, którą omówiliśmy wcześniej. Andrew Gelman i inni wykazali wiele niedociągnięć i problemów związanych z czynnikiem Bayesa zwłaszcza w kontekście <em>Bayesian Point Null Hypothesis Testing</em>.</p>
+<figure>
+<img src="GvM.JPG" alt="Grafika skradziona ze slajdów Richard E. Turnera" /><figcaption aria-hidden="true">Grafika skradziona ze slajdów Richard E. Turnera</figcaption>
+</figure>
+<p>Rzućmy okiem na kilka najważniejszych zastrzeżeń. To, co ważne, to fakt nie wszystkie z nich są na pierwszy rzut oka oczywiste.</p>
+<h3 id="czynnik-bayesa-nie-mierzy-czy-model-jest-właściwy">Czynnik Bayesa nie mierzy czy model jest właściwy</h3>
+<p>Czynnik bayesowski jest stosunkiem marginalnej wiarygodności dwóch modeli, czyli o ile bardziej jest prawdopodobne, że jeden z modeli wyprodukował obserwowane dane niż drugi. Nie mówi nam on w żaden sposób o tym, jak dobre te modele w absolutnym sensie <span class="citation" data-cites="gelman1995avoiding">(<a href="#ref-gelman1995avoiding" role="doc-biblioref">Gelman &amp; Rubin, 1995</a>)</span>. Możemy być w sytuacji, w której czynnik Bayesa bardzo faworyzuje jeden z modeli, ale oba modele są fatalnie dopasowane do danych.</p>
+<p>W konsekwencji jeśli stosujemy sposób wnioskowania oparty na testowaniu hipotezy zerowej i alternatywnej (tak jak zrobiliśmy wyżej w przypadku Anovy), zasadniczo czynnik Bayesa nie mówi nam więcej niż p-value bez spojrzenia na wielkość efektu. By zbadać dopasowanie modelu potrzebujemy więc przeanalizować rozkłady <em>posteriori</em> parametrów.</p>
+<h3 id="czynnik-bayesowski-jest-wrażliwy-na-rozkłady-a-priori-parametrów-modelu">Czynnik Bayesowski jest wrażliwy na rozkłady <em>a priori</em> parametrów modelu</h3>
+<p>Rozkład <em>posteriori</em> parametrów <span class="math inline">\(\theta\)</span> jest niezależny od rozkładów <em>a prior</em> tychże, gdy liczba obserwacji dąży do nieskończoności.</p>
+<p><span class="math display">\[\lim_{n\to\infty}P(\theta|D,M) \propto P(D|\theta, M)\]</span></p>
+<p>Tak jak pokazaliśmy w pierwszej części tutorialu, gdy liczba obserwacji wzrasta, wpływ rozkładów <em>a priori</em> maleje. Jak jest jednak w przypadku czynnika Bayesa? Przyjmując pewne upraszczające założenia <span class="citation" data-cites="XXX">(<a href="#ref-XXX" role="doc-biblioref">MacKay, 2003</a>)</span>, możemy powiedzieć, że marginalna wiarygodność to:</p>
+<p><span class="math display">\[P(D|M) \approx P(D|\theta_{map}, M)P(\theta_{map}|M)\sigma_{\theta|D}\]</span> Gdzie <span class="math inline">\(\theta_{map} = \arg \max_{\theta} P(\theta|D,M)\)</span> to <em>maximum posteriori approximation</em>, czyli takie <span class="math inline">\(\theta\)</span>, dla którego prawdopodobieństwo <em>a posteriori</em> jest największe. Z kolei <span class="math inline">\(\sigma_{\theta|D}\)</span> to odchylenie standardowe <span class="math inline">\(P(\theta|D,M)\)</span>.</p>
+<p>W konsekwencji czynnik bayesowski zależy od <em>a priori</em> rozkładów parametru modelu <span class="math inline">\(P(\theta_{map}|M)\)</span>. W przypadku gdy użyjemy nieinformatywnego rozkładu <em>a priori</em> dla <span class="math inline">\(\theta\)</span>, rozkładu jednostajnego o szerokości <span class="math inline">\(\sigma_{\theta}\)</span>, wtedy wzór upraszcza się do</p>
+<p><span class="math display">\[P(D|M) \approx P(D|\theta_{map}, M)\frac{\sigma_{\theta|D}}{\sigma_{\theta}}\]</span></p>
+<p>Im bardziej chcemy by dane przemówiły za siebie (im bardziej nieinformatywny rozkład <em>a priori</em> zastosujemy), tym bardziej faworyzowany będzie model zerowy w przypadku <em>Bayesian Point Null Hypothesis Testing</em>. Wrażliwość na rozkłady <em>a priori</em> nie jest tak istotnym problemem, gdy <strong>porównujemy ze sobą niezagnieżdżone modele</strong> to znaczy w przypadku, gdy testujemy <strong>dwa alternatywne wyjaśnienia zjawiska</strong>.</p>
+<h3 id="rozkłady-posteriori-parametrów-nie-muszą-się-zgadzać-z-czynnikiem-bayesa">Rozkłady <em>posteriori</em> parametrów nie muszą się zgadzać z czynnikiem Bayesa</h3>
+<p>W statystyce częstościowej p-value &lt; 0.05 dla parametru oznacza odrzucenie hipotezy zerowej. Jednak w przypadku analizy bayesowskiej możemy spotkać się z sytuacjami, w których czynnik Bayesa sugeruje przyjęcie modelu zerowego, jednak interesujący nas parametr w modelu alternatywnym nie zawiera w 95% przedziale wiarygodności, i vice versa <span class="citation" data-cites="kruschke2018bayesian">(<a href="#ref-kruschke2018bayesian" role="doc-biblioref">Kruschke &amp; Liddell, 2018</a>)</span>. Ta własność czynnika Bayesa jest często nieintuicyjna, ponieważ przenosimy nasze oczekiwania ze statystyki częstościowej.</p>
+<h3 id="czynnik-bayesa-a-prawdopodobieństwo-braku-efektu">Czynnik Bayesa a prawdopodobieństwo braku efektu</h3>
+<p>Często się mówi, że by wnioskować o braku efektu musimy użyć statystyki Bayesowskiej, ponieważ w statystyce klasycznej możemy mówić co najwyżej o braku dowodów na istnienie efektu. Niestety, przypadku BPNHT, pojawia się pewien problem, ponieważ czynnik Bayesa jest wrażliwy na wielkość próby <span class="citation" data-cites="morey2011bayes">(<a href="#ref-morey2011bayes" role="doc-biblioref">Morey &amp; Rouder, 2011</a>)</span>.</p>
+<p>By zobaczyć to na własne oczy posłużymy się przykładem. Załóżmy, że zebraliśmy dane, które mają rozkład normalny <span class="math inline">\(y \sim N(\mu,\sigma)\)</span>, ze znanym odchyleniem standardowym <span class="math inline">\(\sigma = 5\)</span>. Chcemy przetestować dwa modele w myśl BPNHT: <span class="math inline">\(M_0: \mu = 0\)</span> i <span class="math inline">\(M_1: \mu \sim U(-\infty,+\infty)\)</span>. <span class="math inline">\(U(a,b)\)</span> oznacza rozkład jednostajny w przedziale między <span class="math inline">\(a,b\)</span>.</p>
+<p>Dokładny czynnik Bayesa dla tych dwóch modeli, dane jest wzorem<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
+<p><span class="math display">\[BF_{10} = \frac{\sqrt{2\pi}\sigma}{\sqrt{n}}e^{(\frac{\overline{\text{Y}}^2n}{2\sigma})}\]</span> Gdzie <span class="math inline">\(\overline{\text{Y}}\)</span> to średnia w próbie. Już we wzorze możemy zobaczyć, że ta wartość będzie coraz większa, gdy <span class="math inline">\(n\)</span> rośnie. Zobaczmy na wykresie jak wyglądają wartości czynnika Bayesa dla ustalonych wartości <span class="math inline">\(\overline{\text{Y}}\)</span>:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>BF</span> <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>sample_size</span>,<span class='va'>sample_mean</span>, <span class='va'>sd</span><span class='op'>)</span><span class='op'>{</span></span>
+<span>  <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='va'>sample_size</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>*</span><span class='va'>pi</span><span class='op'>)</span><span class='op'>*</span><span class='va'>sd</span><span class='op'>)</span><span class='op'>)</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='op'>(</span><span class='op'>(</span><span class='va'>sample_mean</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>*</span><span class='va'>sample_size</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>2</span><span class='op'>*</span><span class='va'>sd</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='op'>}</span></span>
+<span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fl'>0</span><span class='op'>)</span>, mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>x</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_function.html'>stat_function</a></span><span class='op'>(</span>fun <span class='op'>=</span> <span class='va'>BF</span>,args <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>sample_mean <span class='op'>=</span> <span class='fl'>0.6</span>,sd <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"0.6"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_function.html'>stat_function</a></span><span class='op'>(</span>fun <span class='op'>=</span> <span class='va'>BF</span>,args <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>sample_mean <span class='op'>=</span> <span class='fl'>0.75</span>,sd <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"0.75"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_function.html'>stat_function</a></span><span class='op'>(</span>fun <span class='op'>=</span> <span class='va'>BF</span>,args <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>sample_mean <span class='op'>=</span> <span class='fl'>0.9</span>,sd <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"0.9"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/lims.html'>xlim</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>100</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>xlab</a></span><span class='op'>(</span><span class='st'>"N"</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>ylab</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/bquote.html'>bquote</a></span><span class='op'>(</span><span class='va'>BF</span><span class='op'>[</span><span class='fl'>10</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"Legend"</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_manual.html'>scale_colour_manual</a></span><span class='op'>(</span><span class='st'>"Sample Mean"</span>, values <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span> <span class='st'>"blue"</span>, <span class='st'>"green"</span>, <span class='st'>"red"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_abline.html'>geom_hline</a></span><span class='op'>(</span>yintercept <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_light</a></span><span class='op'>(</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="bayes-factor_files/figure-html5/unnamed-chunk-9-1.png" width="624" style="display: block; margin: auto;" /></p>
+</div>
+<p>Ok, im większa próba, tym większe wsparcie dla hipotezy alternatywnej. Choć spojrzeliśmy tylko na dwa partykularne modele, ta własność utrzymuje się generalnie w całym BPNHT <span class="citation" data-cites="johnson2010use">(<a href="#ref-johnson2010use" role="doc-biblioref">Johnson &amp; Rossell, 2010</a>)</span>. Czy to źle? Niekoniecznie, ale to znaczy, że podobnie jak w przypadku p-value, tym mniejszy efekt jest potrzebny by odrzucić hipotezę zerową, im większa próba. Dlatego też ciężko jest wnioskować o braku efektu, ponieważ nie wiemy czy czynnik Bayesa faworyzuje model zerowy, ponieważ jest lepszy, czy dlatego, że nie ma wystarczających dowodów by go odrzucić.</p>
+<p>Nie oznacza jednak, że statystyka Bayesowska nam na to nie pozwala. Jeśli rozkład <em>posteriori</em> parametru jest silnie skoncentrowany blisko zera, możemy mówić, że pod warunkiem danych mamy dużą pewność braku efektu lub marginalnego efektu.</p>
+<h3 id="i-co-z-tym-wszystkim-zrobić">I co z tym wszystkim zrobić?</h3>
+<p>Dogłębne omówienie wyżej wymienionych problemów możecie znaleźć w artykule <em>“A Review of Issues About Null Hypothesis Bayesian Testing”</em> <span class="citation" data-cites="tendeiro2019review">(<a href="#ref-tendeiro2019review" role="doc-biblioref">Tendeiro &amp; Kiers, 2019</a>)</span>.</p>
+<figure>
+<img src="bayes.jpg#center" style="width:75.0%" alt="Alternatywna rzeczywistość, w której, w miejsce statystyki częstościowej, statystyka Bayesowska zdominowała naukę. Grafika skradziona ze slajdów Richarda Moreya." /><figcaption aria-hidden="true">Alternatywna rzeczywistość, w której, w miejsce statystyki częstościowej, statystyka Bayesowska zdominowała naukę. Grafika skradziona ze slajdów Richarda Moreya.</figcaption>
+</figure>
+<p>Z jednej strony czynnik Bayesa pozwala na bezpośrednie porównanie prawdopodobieństwa wyprodukowania danych przez cały model, a nie tylko punktowe wartości parametrów. Jednocześnie w naturalny sposób karze złożoność modelu, co w innych miarach dopasowania modelu takich jak na przykład AIC, próbujemy robić estymując złożoność poprzez liczbę wolnych parametrów.</p>
+<p>Jednakże, jak widzimy, czynnik Bayesa jest miarą, która również słabe strony, nie jest więc cudownym lekiem na statystyczne bolączki. Z tego miejsca mamy dwie możliwości. Możemy używać czynnika Bayesa rozważnie, czyli:</p>
+<ul>
+<li>Ostrożnie dobierać rozkłady <em>a priori</em> parametrów modelu</li>
+<li>Przeprowadzać analizę wrażliwość (<em>sensitivity analysis</em>), tzn. sprawdzić jak bardzo wartość czynnika Bayesa ulega zmianie, gdy użyjemy innych rozkładów <em>a priori</em> parametrów. Niestety, konsekwencją tego, że czynnik Bayesa jest trudny do policzenia, jest to żmudny proces.</li>
+<li>Nie raportować czynnika Bayesa samotnie, ale także miary rozkładu parametrów <em>a posteriori</em>.</li>
+</ul>
+<p><strong>Albo</strong></p>
+<p>unikać porównywania modeli. Zamiast tego, na pierwszym miejscu skupić się na tworzeniu wiarygodnych modeli wspieranych przez teorię, przełożyć nacisku na estymację parametrów, tzn. zamiast porównywać interesujący nas model do modelu zerowego z wartością parametru równą 0, skupić się na ewaluacji rozkładu <em>a posteriori</em> parametrów. Wykorzystać <em>Posterior Predictive Testsing</em>, które może nam wskazać problemy z naszym modelem, bez konieczności porównywania go z innym. Wykorzystywać porównywanie modeli wtedy, gdy mamy dwa lub więcej podyktowane teorią konkurujące modele pewnego zjawiska np. pamięci, lecz nie po to by w przy pomocy BPNHT testować zasadność pojedynczego modelu. Co istotne, do tego ostatniego możemy posłużyć się statystykami prostszymi do obliczenia, jak np. DIC albo WAIC.</p>
+<h1 id="zakończenie">Zakończenie</h1>
+<p>Dowiedzieliśmy się czym jest czynnik Bayesowski i przy okazji omówiliśmy kontrowersje wokół niego. Mamy już intuicję na temat statystyki Bayesowskiej, estymacji modeli i wnioskowania. Fajnie, by było wreszcie coś policzyć po Bayesowsku co nie jest prostym modelem liniowym. Dlatego w następnej części przyjrzymy się jednej z ciekawszych możliwości statystyki Bayesowskiej - modelom hierarchicznym.</p>
+<p>Na koniec dodam, że czynnik Bayesowski, p-value ani żadna inna statystyka nie jest rozwiązaniem kryzysu replikacyjnego. Nie dlatego, że te miary obarczone są wadami, tylko dlatego, że prawdziwe powody leżą gdzie indziej. Badacze czasami naiwnie stosują statystykę, czasami recenzenci wymagają od badaczy stosowania utartych, choć nieadekwatnych procedur. Dodatkowo system ewaluacji pracowników naukowych wymaga od nich by publikowali dużo, a czasopisma naukowe wymagają by publikowali badania świadczące o istnieniu efektu, raczej niż o jego braku. Bez zaadresowania tych problemów, nie sądzę by jakakolwiek statystyczny test rozwiązał problem replikacji w nauce.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-gelman1995avoiding" class="csl-entry" role="doc-biblioentry">
+Gelman, A., &amp; Rubin, D. B. (1995). Avoiding model selection in bayesian social research. <em>Sociological Methodology</em>, <em>25</em>, 165–173.
+</div>
+<div id="ref-johnson2010use" class="csl-entry" role="doc-biblioentry">
+Johnson, V. E., &amp; Rossell, D. (2010). On the use of non-local prior densities in bayesian hypothesis tests. <em>Journal of the Royal Statistical Society: Series B (Statistical Methodology)</em>, <em>72</em>(2), 143–170.
+</div>
+<div id="ref-kass1995bayes" class="csl-entry" role="doc-biblioentry">
+Kass, R. E., &amp; Raftery, A. E. (1995). Bayes factors. <em>Journal of the American Statistical Association</em>, <em>90</em>(430), 773–795.
+</div>
+<div id="ref-kruschke2018bayesian" class="csl-entry" role="doc-biblioentry">
+Kruschke, J. K., &amp; Liddell, T. M. (2018). The bayesian new statistics: Hypothesis testing, estimation, meta-analysis, and power analysis from a bayesian perspective. <em>Psychonomic Bulletin &amp; Review</em>, <em>25</em>(1), 178–206.
+</div>
+<div id="ref-XXX" class="csl-entry" role="doc-biblioentry">
+MacKay, D. J. C. (2003). Model comparison and occam’s razor. In <em>Information theory, inference and learning algorithms</em>. Cambridge university press.
+</div>
+<div id="ref-morey2011bayes" class="csl-entry" role="doc-biblioentry">
+Morey, R. D., &amp; Rouder, J. N. (2011). Bayes factor approaches for testing interval null hypotheses. <em>Psychological Methods</em>, <em>16</em>(4), 406.
+</div>
+<div id="ref-tendeiro2019review" class="csl-entry" role="doc-biblioentry">
+Tendeiro, J. N., &amp; Kiers, H. A. (2019). A review of issues about null hypothesis bayesian testing. <em>Psychological Methods</em>, <em>24</em>(6), 774.
+</div>
+</div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Dowód możecie znaleść w suplemencie B do tego artykułu <span class="citation" data-cites="tendeiro2019review">(<a href="#ref-tendeiro2019review" role="doc-biblioref">Tendeiro &amp; Kiers, 2019</a>)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+  <h3 id="references">References</h3>
+  <div id="references-listing"></div>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+  <p>Â© Copyright 2022 Sortownia</p>
+</div>
+<!--/radix_placeholder_navigation_after_body-->
+
+
+</body>
+
+</html>
