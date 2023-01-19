@@ -99,7 +99,7 @@ Zwróćmy też uwagę, że jeśli przypiszemy modelom takie same prawdopodobień
 
 Czynnik Bayesowski w naturalny sposób karze za złożoność modelu, choć ta właściwość nie jest widoczna na pierwszy rzut oka. Żeby ją zwizualizować, wyobraźmy sobie, że $P(D|M)$ nie jest pojedyńczą wartością prawdopodobieństwa otrzymania zaobserwowanych danych, lecz rozkładem prawdopodobieństwa wygenerowania **wszystkich możliwych zbiorów danych**, przez model. Weźmy dwa takie rozkłady dla modeli: prostszego modelu - $M_1$ i bardziej złożonego $M_2$. Bardziej złożony model jest w stanie wygenerować więcej możliwych zbiorów danych niż prostszy, ponieważ jest bardziej elastyczny. 
 
-![](occam.jpg)
+![](o.jpg)
 
 Całka prawdopodobieństw (pole pod wykresem) każdego z rozkładów musi wynosić 1 (z definicji rozkładów prawdopodobieństwa). Oznacza to, że dla przedziału $C_1$ model $M_1$ będzie miał zawsze większe prawdopodobieństwo wygenerowania danych niż $M_2$, w konsekwencji czynnik bayesa będzie faworyzował $M_1$. Logika stojąca za taka własnością $BF$ jest iście Occamowska. Zadajmy sobie pytanie, który z modeli ma większe prawdopodobieństwo wygenerowania danych w przedziale $C_1$ jeśli otrzymane przez nas dane mogą być wyjaśnione przez oba modele. Ten, który częściej będzie generował zbiory danych zawierające się w przedziale $C_1$, czyli $M_1$.
 
