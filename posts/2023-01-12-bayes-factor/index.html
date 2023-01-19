@@ -117,6 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="citation_reference" content="citation_title=A review of issues about null hypothesis bayesian testing.;citation_publication_date=2019;citation_publisher=American Psychological Association;citation_volume=24;citation_author=Jorge N Tendeiro;citation_author=Henk AL Kiers"/>
   <meta name="citation_reference" content="citation_title=The bayesian new statistics: Hypothesis testing, estimation, meta-analysis, and power analysis from a bayesian perspective;citation_publication_date=2018;citation_publisher=Springer;citation_volume=25;citation_author=John K Kruschke;citation_author=Torrin M Liddell"/>
   <meta name="citation_reference" content="citation_title=Model comparison and occamâ€™s razor;citation_publication_date=2003;citation_publisher=Cambridge university press;citation_author=David J. C. MacKay"/>
+  <meta name="citation_reference" content="citation_title=A tutorial on bridge sampling;citation_publication_date=2017;citation_publisher=Elsevier;citation_volume=81;citation_author=Quentin F Gronau;citation_author=Alexandra Sarafoglou;citation_author=Dora Matzke;citation_author=Alexander Ly;citation_author=Udo Boehm;citation_author=Maarten Marsman;citation_author=David S Leslie;citation_author=Jonathan J Forster;citation_author=Eric-Jan Wagenmakers;citation_author=Helen Steingroever"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -2311,7 +2312,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='va'>posterior_beta_0</span><span class='op'>/</span><span class='va'>prior_beta_0</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 3.794644</code></pre>
+<pre><code>[1] 4.145683</code></pre>
 </div>
 <p>Otrzymaliśmy wartość <span class="math inline">\(BF_{10}\)</span> wskazującą to, że porównując te dwa modele, jest ca. 4 razy bardziej prawdopodobne, że <span class="math inline">\(M_1\)</span> wyprodukował obserwowane dane niż <span class="math inline">\(M_0\)</span>. Dużo? Mało? Jedna z propozycji interpretacji <span class="math inline">\(BF\)</span> jest następująca <span class="citation" data-cites="kass1995bayes">(<a href="#ref-kass1995bayes" role="doc-biblioref">Kass &amp; Raftery, 1995</a>)</span>:</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2347,7 +2348,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 </table>
 </div>
 <h3 id="likelihood-sampling">Likelihood sampling</h3>
-<p>W przypadku gdy nasze modele nie są zagnieżdżone, musimy szukać innych metod. Jedną z nich jest naiwne symulowanie metodą Monte Carlo. Opiera się na pomyśle, że <span class="math inline">\(P(Y|M_i)\)</span> możemy przybliżyć w następujący sposób:</p>
+<p>W przypadku gdy nasze modele nie są zagnieżdżone, musimy szukać innych metod. Jedną z nich jest naiwne symulowanie metodą Monte Carlo. Opiera się na pomyśle, że <span class="math inline">\(P(Y|M_i)\)</span> możemy przybliżyć w następujący sposób <span class="citation" data-cites="gronau2017tutorial">(<a href="#ref-gronau2017tutorial" role="doc-biblioref">Gronau et al., 2017</a>)</span>:</p>
 <p><span class="math display">\[P(D \mid M_i) = \int P(D \mid \theta, M_i) \ P(\theta, M_i) \ \text{d}\theta \approx \frac{1}{n} \sum^{n}_{\theta_i \sim P(\theta \mid M_i)} P(D \mid \theta, M_i)\]</span> Popatrzmy na naszą całkę. Jeśli potraktujemy <span class="math inline">\(P(D \mid \theta, M_i)\)</span> jako zmienną <span class="math inline">\(x\)</span>, a <span class="math inline">\(P(\theta, M_i)\)</span> jako związaną z <span class="math inline">\(x\)</span> funkcję prawdopodobieństwa <span class="math inline">\(P(X)\)</span> (którą w istocie jest), otrzymamy:</p>
 <p><span class="math display">\[P(D \mid M_i) = \int x \ P(x) \ \text{dx}\]</span></p>
 <p>Czyli wzór na średnią. Możemy więc przybliżyć wartość <span class="math inline">\(P(D|M_i)\)</span> losując najpierw <span class="math inline">\(\theta\)</span> z rozkładu <em>a priori</em>, następnie obliczając <span class="math inline">\(P(D \mid \theta, M_i)\)</span> poprzez wstawienie uzyskanej <span class="math inline">\(\theta\)</span>. Jeśli powtórzymy to wielokrotnie, a otrzymane prawdopodobieństwa uśredniamy, uzyskamy estymatę <span class="math inline">\(P(D \mid M_i)\)</span>. Takie losowanie również możemy wykonać przy pomocy JAGS, jednak uzyskany <span class="math inline">\(BF\)</span> nie jest zbyt stabilny. Dlatego stosuje się udoskonalone metody losowania takie jak np. <strong>Bridge Sampling</strong>. Nie będziemy jednak ich teraz dokładnie omawiać.</p>
@@ -2411,7 +2412,8 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <li>Nie raportować czynnika Bayesa samotnie, ale także miary rozkładu parametrów <em>a posteriori</em>.</li>
 </ul>
 <p><strong>Albo</strong></p>
-<p>unikać porównywania modeli. Zamiast tego, na pierwszym miejscu skupić się na tworzeniu wiarygodnych modeli wspieranych przez teorię, przełożyć nacisku na estymację parametrów, tzn. zamiast porównywać interesujący nas model do modelu zerowego z wartością parametru równą 0, skupić się na ewaluacji rozkładu <em>a posteriori</em> parametrów. Wykorzystać <em>Posterior Predictive Testsing</em>, które może nam wskazać problemy z naszym modelem, bez konieczności porównywania go z innym. Wykorzystywać porównywanie modeli wtedy, gdy mamy dwa lub więcej podyktowane teorią konkurujące modele pewnego zjawiska np. pamięci, lecz nie po to by w przy pomocy BPNHT testować zasadność pojedynczego modelu. Co istotne, do tego ostatniego możemy posłużyć się statystykami prostszymi do obliczenia, jak np. DIC albo WAIC.</p>
+<p>unikać porównywania modeli. Zamiast tego, na pierwszym miejscu skupić się na tworzeniu wiarygodnych modeli wspieranych przez teorię, przełożyć nacisk na estymację parametrów, tzn. zamiast porównywać interesujący nas model do modelu zerowego z wartością parametru równą 0, skupić się na ewaluacji rozkładu <em>a posteriori</em> parametrów. Wykorzystać <em>Posterior Predictive Testsing</em>, które może nam wskazać problemy z naszym modelem, bez konieczności porównywania go z innym.</p>
+<p>Unikać testowania przy pomocy BPNHT zasadności pojedynczego modelu. Prównywanie modeli jest natomiast jak najbardziej przydatne wtedy, gdy mamy dwa lub więcej (np. podyktowane teorią) konkurujące modele inaczej ujmujące mechanizm jakiegoś zajawiska np. pamięci. Co istotne, do tego możemy posłużyć się statystykami prostszymi do obliczenia, jak np. DIC albo WAIC.</p>
 <h1 id="zakończenie">Zakończenie</h1>
 <p>Dowiedzieliśmy się czym jest czynnik Bayesowski i przy okazji omówiliśmy kontrowersje wokół niego. Mamy już intuicję na temat statystyki Bayesowskiej, estymacji modeli i wnioskowania. Fajnie, by było wreszcie coś policzyć po Bayesowsku co nie jest prostym modelem liniowym. Dlatego w następnej części przyjrzymy się jednej z ciekawszych możliwości statystyki Bayesowskiej - modelom hierarchicznym.</p>
 <p>Na koniec dodam, że czynnik Bayesowski, p-value ani żadna inna statystyka nie jest rozwiązaniem kryzysu replikacyjnego. Nie dlatego, że te miary obarczone są wadami, tylko dlatego, że prawdziwe powody leżą gdzie indziej. Badacze czasami naiwnie stosują statystykę, czasami recenzenci wymagają od badaczy stosowania utartych, choć nieadekwatnych procedur. Dodatkowo system ewaluacji pracowników naukowych wymaga od nich by publikowali dużo, a czasopisma naukowe wymagają by publikowali badania świadczące o istnieniu efektu, raczej niż o jego braku. Bez zaadresowania tych problemów, nie sądzę by jakakolwiek statystyczny test rozwiązał problem replikacji w nauce.</p>
@@ -2419,6 +2421,9 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
 <div id="ref-gelman1995avoiding" class="csl-entry" role="doc-biblioentry">
 Gelman, A., &amp; Rubin, D. B. (1995). Avoiding model selection in bayesian social research. <em>Sociological Methodology</em>, <em>25</em>, 165–173.
+</div>
+<div id="ref-gronau2017tutorial" class="csl-entry" role="doc-biblioentry">
+Gronau, Q. F., Sarafoglou, A., Matzke, D., Ly, A., Boehm, U., Marsman, M., Leslie, D. S., Forster, J. J., Wagenmakers, E.-J., &amp; Steingroever, H. (2017). A tutorial on bridge sampling. <em>Journal of Mathematical Psychology</em>, <em>81</em>, 80–97.
 </div>
 <div id="ref-johnson2010use" class="csl-entry" role="doc-biblioentry">
 Johnson, V. E., &amp; Rossell, D. (2010). On the use of non-local prior densities in bayesian hypothesis tests. <em>Journal of the Royal Statistical Society: Series B (Statistical Methodology)</em>, <em>72</em>(2), 143–170.

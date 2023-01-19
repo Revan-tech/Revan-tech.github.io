@@ -254,7 +254,7 @@ kable(bf)
 
 ### Likelihood sampling
 
-W przypadku gdy nasze modele nie są zagnieżdżone, musimy szukać innych metod. Jedną z nich jest naiwne symulowanie metodą Monte Carlo. Opiera się na pomyśle, że $P(Y|M_i)$ możemy przybliżyć w następujący sposób:
+W przypadku gdy nasze modele nie są zagnieżdżone, musimy szukać innych metod. Jedną z nich jest naiwne symulowanie metodą Monte Carlo. Opiera się na pomyśle, że $P(Y|M_i)$ możemy przybliżyć w następujący sposób [@gronau2017tutorial]:
 
 $$P(D \mid M_i) = \int P(D \mid \theta, M_i) \ P(\theta, M_i) \ \text{d}\theta \approx \frac{1}{n} \sum^{n}_{\theta_i \sim P(\theta \mid M_i)} P(D \mid \theta, M_i)$$
 Popatrzmy na naszą całkę. Jeśli potraktujemy $P(D \mid \theta, M_i)$ jako zmienną $x$, a $P(\theta, M_i)$ jako związaną z $x$ funkcję prawdopodobieństwa $P(X)$ (którą w istocie jest), otrzymamy:
@@ -359,7 +359,9 @@ Jednakże, jak widzimy, czynnik Bayesa jest miarą, która również słabe stro
 
 **Albo**
 
-unikać porównywania modeli. Zamiast tego, na pierwszym miejscu skupić się na tworzeniu wiarygodnych modeli wspieranych przez teorię, przełożyć nacisku na estymację parametrów, tzn. zamiast porównywać interesujący nas model do modelu zerowego z wartością parametru równą 0, skupić się na ewaluacji rozkładu *a posteriori* parametrów. Wykorzystać *Posterior Predictive Testsing*, które może nam wskazać problemy z naszym modelem, bez konieczności porównywania go z innym. Wykorzystywać porównywanie modeli wtedy, gdy mamy dwa lub więcej podyktowane teorią konkurujące modele pewnego zjawiska np. pamięci, lecz nie po to by w przy pomocy BPNHT testować zasadność pojedynczego modelu. Co istotne, do tego ostatniego możemy posłużyć się statystykami prostszymi do obliczenia, jak np. DIC albo WAIC.  
+unikać porównywania modeli. Zamiast tego, na pierwszym miejscu skupić się na tworzeniu wiarygodnych modeli wspieranych przez teorię, przełożyć nacisk na estymację parametrów, tzn. zamiast porównywać interesujący nas model do modelu zerowego z wartością parametru równą 0, skupić się na ewaluacji rozkładu *a posteriori* parametrów. Wykorzystać *Posterior Predictive Testsing*, które może nam wskazać problemy z naszym modelem, bez konieczności porównywania go z innym. 
+
+Unikać testowania przy pomocy BPNHT zasadności pojedynczego modelu. Prównywanie modeli jest natomiast jak najbardziej przydatne  wtedy, gdy mamy dwa lub więcej (np. podyktowane teorią) konkurujące modele inaczej ujmujące mechanizm jakiegoś zajawiska np. pamięci. Co istotne, do tego możemy posłużyć się statystykami prostszymi do obliczenia, jak np. DIC albo WAIC.  
 
 
 # Zakończenie
