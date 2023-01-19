@@ -192,5 +192,5 @@ W przypadku modeli bayesowskich zapewno dosyć często będziecie się spotykać
 $$\alpha \sim Uniform(-1000, 1000)$$
 $$ \beta \sim N(0, 100) $$
 $$ \sigma \sim Uniform(0.000001,1000)$$ 
-$$ y_i \sim N(a + b * x_i, \sigma^{1/2})$$
+$$ y_i \sim N(a + b * x_i, \sigma)$$
 
