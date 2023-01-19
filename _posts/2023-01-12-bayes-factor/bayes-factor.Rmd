@@ -279,7 +279,7 @@ Niestety, jak to zwykle okazuje, rzeczywistość nie jest taka różowa. **Czynn
 Rzućmy okiem na kilka najważniejszych zastrzeżeń. To, co ważne, to fakt nie wszystkie z nich są na pierwszy rzut oka oczywiste. 
 
 
-### Czynnik Bayesa nie mierzy czy model jest właściwy
+### Czynnik Bayesa nie mierzy czy model jest prawdziwy
 
 Czynnik bayesowski jest stosunkiem marginalnej wiarygodności dwóch modeli, czyli o ile bardziej jest prawdopodobne, że jeden z modeli wyprodukował obserwowane dane niż drugi. Nie mówi nam on w żaden sposób o tym, jak dobre te modele w absolutnym sensie [@gelman1995avoiding]. Możemy być w sytuacji, w której czynnik Bayesa bardzo faworyzuje jeden z modeli, ale oba modele są fatalnie dopasowane do danych.  
 

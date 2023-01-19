@@ -2134,7 +2134,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </ul></li>
 <li><a href="#porównywanie-modeli-1">Porównywanie modeli?</a>
 <ul>
-<li><a href="#czynnik-bayesa-nie-mierzy-czy-model-jest-właściwy">Czynnik Bayesa nie mierzy czy model jest właściwy</a></li>
+<li><a href="#czynnik-bayesa-nie-mierzy-czy-model-jest-prawdziwy">Czynnik Bayesa nie mierzy czy model jest prawdziwy</a></li>
 <li><a href="#czynnik-bayesowski-jest-wrażliwy-na-rozkłady-a-priori-parametrów-modelu">Czynnik Bayesowski jest wrażliwy na rozkłady <em>a priori</em> parametrów modelu</a></li>
 <li><a href="#rozkłady-posteriori-parametrów-nie-muszą-się-zgadzać-z-czynnikiem-bayesa">Rozkłady <em>posteriori</em> parametrów nie muszą się zgadzać z czynnikiem Bayesa</a></li>
 <li><a href="#czynnik-bayesa-a-prawdopodobieństwo-braku-efektu">Czynnik Bayesa a prawdopodobieństwo braku efektu</a></li>
@@ -2311,7 +2311,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='va'>posterior_beta_0</span><span class='op'>/</span><span class='va'>prior_beta_0</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 4.009118</code></pre>
+<pre><code>[1] 3.813111</code></pre>
 </div>
 <p>Otrzymaliśmy wartość <span class="math inline">\(BF_{10}\)</span> wskazującą to, że porównując te dwa modele, jest ca. 4 razy bardziej prawdopodobne, że <span class="math inline">\(M_1\)</span> wyprodukował obserwowane dane niż <span class="math inline">\(M_0\)</span>. Dużo? Mało? Jedna z propozycji interpretacji <span class="math inline">\(BF\)</span> jest następująca <span class="citation" data-cites="kass1995bayes">(<a href="#ref-kass1995bayes" role="doc-biblioref">Kass &amp; Raftery, 1995</a>)</span>:</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2359,7 +2359,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <img src="GvM.JPG" alt="Grafika skradziona ze slajdów Richard E. Turnera" /><figcaption aria-hidden="true">Grafika skradziona ze slajdów Richard E. Turnera</figcaption>
 </figure>
 <p>Rzućmy okiem na kilka najważniejszych zastrzeżeń. To, co ważne, to fakt nie wszystkie z nich są na pierwszy rzut oka oczywiste.</p>
-<h3 id="czynnik-bayesa-nie-mierzy-czy-model-jest-właściwy">Czynnik Bayesa nie mierzy czy model jest właściwy</h3>
+<h3 id="czynnik-bayesa-nie-mierzy-czy-model-jest-prawdziwy">Czynnik Bayesa nie mierzy czy model jest prawdziwy</h3>
 <p>Czynnik bayesowski jest stosunkiem marginalnej wiarygodności dwóch modeli, czyli o ile bardziej jest prawdopodobne, że jeden z modeli wyprodukował obserwowane dane niż drugi. Nie mówi nam on w żaden sposób o tym, jak dobre te modele w absolutnym sensie <span class="citation" data-cites="gelman1995avoiding">(<a href="#ref-gelman1995avoiding" role="doc-biblioref">Gelman &amp; Rubin, 1995</a>)</span>. Możemy być w sytuacji, w której czynnik Bayesa bardzo faworyzuje jeden z modeli, ale oba modele są fatalnie dopasowane do danych.</p>
 <p>W konsekwencji jeśli stosujemy sposób wnioskowania oparty na testowaniu hipotezy zerowej i alternatywnej (tak jak zrobiliśmy wyżej w przypadku Anovy), zasadniczo czynnik Bayesa nie mówi nam więcej niż p-value bez spojrzenia na wielkość efektu. By zbadać dopasowanie modelu potrzebujemy więc przeanalizować rozkłady <em>posteriori</em> parametrów.</p>
 <h3 id="czynnik-bayesowski-jest-wrażliwy-na-rozkłady-a-priori-parametrów-modelu">Czynnik Bayesowski jest wrażliwy na rozkłady <em>a priori</em> parametrów modelu</h3>

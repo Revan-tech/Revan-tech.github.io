@@ -122,7 +122,7 @@ Autokorelacja praktycznie nie występuje.
 
 JAGS poradził sobie dużo lepiej z regresją liniową, niż mój zabawkowy kod.Ponadto jego składnia jest relatywnie prosta. Dlatego z niego będziemy korzystać w następnych częściach tutorialu. 
 
-Przykładowe kody JAGS bardzo wielu modeli możecie znaleść <span style="color:blue">[tutaj](https://github.com/andrewcparnell/jags_examples)</span>.
+Przykładowe kody JAGS dla wielu modeli możecie znaleść <span style="color:blue">[tutaj](https://github.com/andrewcparnell/jags_examples)</span>.
 
 ### JAGS in JASP
 

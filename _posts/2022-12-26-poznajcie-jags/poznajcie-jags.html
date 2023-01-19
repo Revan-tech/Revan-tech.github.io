@@ -1585,16 +1585,16 @@ Sample size per chain = 3000
    plus standard error of the mean:
 
         Mean     SD Naive SE Time-series SE
-a      5.903 1.0387 0.010949       0.011711
-b      1.015 0.1174 0.001237       0.001286
-sigma 10.140 0.7413 0.007814       0.008516
+a      6.568 1.1387 0.012003       0.012646
+b      1.001 0.1134 0.001195       0.001240
+sigma 11.547 0.8289 0.008738       0.009381
 
 2. Quantiles for each variable:
 
-       2.5%    25%    50%    75%  97.5%
-a     3.885 5.2068  5.897  6.583  7.976
-b     0.783 0.9359  1.014  1.092  1.247
-sigma 8.826 9.6087 10.095 10.624 11.680</code></pre>
+         2.5%    25%    50%    75%  97.5%
+a      4.3108  5.806  6.584  7.348  8.801
+b      0.7762  0.925  1.000  1.077  1.223
+sigma 10.0485 10.966 11.501 12.077 13.308</code></pre>
 </div>
 <p>A także sprawdźmy czy łańcuchy się zbiegły:</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1625,16 +1625,16 @@ Multivariate psrf
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/coda/man/autocorr.diag.html'>autocorr.diag</a></span><span class='op'>(</span><span class='va'>post</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>                 a            b         sigma
-Lag 0  1.000000000 1.0000000000  1.0000000000
-Lag 1  0.073275587 0.0382308620  0.0861146679
-Lag 5  0.002170099 0.0006053023 -0.0001911328
-Lag 10 0.009845442 0.0074322279 -0.0012309186
-Lag 50 0.002289988 0.0163871903 -0.0034043425</code></pre>
+<pre><code>                  a           b         sigma
+Lag 0   1.000000000 1.000000000  1.0000000000
+Lag 1   0.052107838 0.036227109  0.0698947033
+Lag 5   0.004006012 0.006658263 -0.0043778557
+Lag 10  0.005318083 0.015748954  0.0007391561
+Lag 50 -0.000887632 0.009502967 -0.0113052665</code></pre>
 </div>
 <p>Autokorelacja praktycznie nie występuje.</p>
 <p>JAGS poradził sobie dużo lepiej z regresją liniową, niż mój zabawkowy kod.Ponadto jego składnia jest relatywnie prosta. Dlatego z niego będziemy korzystać w następnych częściach tutorialu.</p>
-<p>Przykładowe kody JAGS bardzo wielu modeli możecie znaleść <span style="color:blue"><a href="https://github.com/andrewcparnell/jags_examples">tutaj</a></span>.</p>
+<p>Przykładowe kody JAGS dla wielu modeli możecie znaleść <span style="color:blue"><a href="https://github.com/andrewcparnell/jags_examples">tutaj</a></span>.</p>
 <h3 id="jags-in-jasp">JAGS in JASP</h3>
 <p>Jeśli ktoś nie jest wielkim fanem robienia statystyk za pomocą języków programowania, JAGS jest kompatybilny z graficznym programem statystycznym JASP.</p>
 <p><img src="JASP.png" /></p>
