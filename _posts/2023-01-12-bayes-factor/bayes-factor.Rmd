@@ -106,7 +106,7 @@ Całka prawdopodobieństw (pole pod wykresem) każdego z rozkładów musi wynosi
 
 ### Bayesian Point Null Hypothesis Testing
 
-Przypomnijmy sobie NHST (*Null Hypothesis Significance Testing*), które testuje hipotezy zerową i alternatywną. Hipoteza zerowa zwykle oznacza, że jakiś parametr $\delta = 0$, a hipoteza alternatywna, że $\delta \neq 0$. Czynnik Bayesa w naukach społecznych jest często wykorzystywany podobnym celu. Nazywa się to *Bayesian Point Null Hypothesis Testing* **(BPNHT)**. Testujemy model, który zakłada, że $\delta$ może przyjąć dowolną wartość, względem takiego, w którym jego wartość jest zerowa. **Takie podobieństwo pomiędzy tymi metodami nie jest przypadkowe i dzieli problemy z wersją częstościową, o czym wkrótce.**
+Przypomnijmy sobie NHST (*Null Hypothesis Significance Testing*), które testuje hipotezy zerową i alternatywną. Hipoteza zerowa zwykle oznacza, że jakiś parametr $\delta = 0$, a hipoteza alternatywna, że $\delta \neq 0$. Czynnik Bayesa w naukach społecznych jest często wykorzystywany podobnym celu. Nazywa się to *Bayesian Point Null Hypothesis Testing* **(BPNHT)**. Testujemy model, który zakłada, że $\delta$ może przyjąć dowolną wartość, względem takiego, w którym jego wartość jest zerowa. **Takie podobieństwo pomiędzy tymi metodami nie jest przypadkowe i i obie metody dzielą pewne problemy, o czym wkrótce.**
 
 Jako przykład posłużymy się czynnikiem Bayesa do przeprowadzenia bayesowskiej wersji jednoczynnikowej analizy wariancji. Wygenerujmy sobie dane:
 
