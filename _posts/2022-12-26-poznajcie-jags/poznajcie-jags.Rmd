@@ -112,7 +112,7 @@ gelman.plot(post)
 
 Na wykresie widzimy statystykę Gelmana Rubina liczną dla każdych 50 iteracji następujących po sobie. Dzięki temu możemy sprawdzić czy nasze próby wylosowane są z rozkładów, które naprawdę się zbiegły. Widzimy, że dla początkowych wartości łancuchów statystyka ma wyższe wartośći, co może sugerować, że powinniśmy zastosować dłuższy interwał wypalania (choć w naszym przypadku statystyka nie przekracza nigdzie wartości 1.15, więc bybyłby to raczej zabieg kosmetyczny).
 
-Sprawdźmyy autokorelację:
+Sprawdźmy autokorelację:
 
 ```{r}
 autocorr.diag(post)
@@ -189,8 +189,8 @@ Diagram pokazuje, że rozkład zmiennej $y_i$ definują 3 nieobserwowalne parame
 
 W przypadku modeli bayesowskich zapewno dosyć często będziecie się spotykać z takimi graficznymi opisami modeli. Do grafu dołączane są zwykle definicje parametrów. W naszym przypadku:
 
-$$\alpha \sim Uniform(-1000, 1000)$$
+$$\alpha \sim U(-1000, 1000)$$
 $$ \beta \sim N(0, 100) $$
-$$ \sigma \sim Uniform(0.000001,1000)$$ 
+$$ \sigma \sim U(0.000001,1000)$$ 
 $$ y_i \sim N(a + b * x_i, \sigma)$$
 

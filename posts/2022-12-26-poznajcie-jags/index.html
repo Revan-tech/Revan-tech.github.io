@@ -2209,17 +2209,17 @@ Sample size per chain = 3000
 1. Empirical mean and standard deviation for each variable,
    plus standard error of the mean:
 
-        Mean     SD Naive SE Time-series SE
-a      6.568 1.1387 0.012003       0.012646
-b      1.001 0.1134 0.001195       0.001240
-sigma 11.547 0.8289 0.008738       0.009381
+        Mean      SD Naive SE Time-series SE
+a     4.5803 0.95620 0.010079       0.010650
+b     0.9113 0.08775 0.000925       0.000925
+sigma 9.3601 0.68294 0.007199       0.007507
 
 2. Quantiles for each variable:
 
-         2.5%    25%    50%    75%  97.5%
-a      4.3108  5.806  6.584  7.348  8.801
-b      0.7762  0.925  1.000  1.077  1.223
-sigma 10.0485 10.966 11.501 12.077 13.308</code></pre>
+       2.5%    25%    50%    75%  97.5%
+a     2.702 3.9454 4.5744 5.2252  6.471
+b     0.738 0.8524 0.9122 0.9695  1.085
+sigma 8.148 8.8782 9.3262 9.7982 10.810</code></pre>
 </div>
 <p>A także sprawdźmy czy łańcuchy się zbiegły:</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2245,17 +2245,17 @@ Multivariate psrf
 <p><img src="poznajcie-jags_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
 </div>
 <p>Na wykresie widzimy statystykę Gelmana Rubina liczną dla każdych 50 iteracji następujących po sobie. Dzięki temu możemy sprawdzić czy nasze próby wylosowane są z rozkładów, które naprawdę się zbiegły. Widzimy, że dla początkowych wartości łancuchów statystyka ma wyższe wartośći, co może sugerować, że powinniśmy zastosować dłuższy interwał wypalania (choć w naszym przypadku statystyka nie przekracza nigdzie wartości 1.15, więc bybyłby to raczej zabieg kosmetyczny).</p>
-<p>Sprawdźmyy autokorelację:</p>
+<p>Sprawdźmy autokorelację:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/coda/man/autocorr.diag.html'>autocorr.diag</a></span><span class='op'>(</span><span class='va'>post</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>                  a           b         sigma
-Lag 0   1.000000000 1.000000000  1.0000000000
-Lag 1   0.052107838 0.036227109  0.0698947033
-Lag 5   0.004006012 0.006658263 -0.0043778557
-Lag 10  0.005318083 0.015748954  0.0007391561
-Lag 50 -0.000887632 0.009502967 -0.0113052665</code></pre>
+<pre><code>                 a            b        sigma
+Lag 0  1.000000000  1.000000000  1.000000000
+Lag 1  0.029878333  0.021306509  0.050087619
+Lag 5  0.005264560 -0.002882478  0.003968644
+Lag 10 0.002108300 -0.009317490  0.006910744
+Lag 50 0.006366223  0.019776605 -0.017047426</code></pre>
 </div>
 <p>Autokorelacja praktycznie nie występuje.</p>
 <p>JAGS poradził sobie dużo lepiej z regresją liniową, niż mój zabawkowy kod.Ponadto jego składnia jest relatywnie prosta. Dlatego z niego będziemy korzystać w następnych częściach tutorialu.</p>
@@ -2292,7 +2292,7 @@ Lag 50 -0.000887632 0.009502967 -0.0113052665</code></pre>
 </div>
 <p>Diagram pokazuje, że rozkład zmiennej <span class="math inline">\(y_i\)</span> definują 3 nieobserwowalne parametry (pojedyńcze okręgi) i jedna obserwowalna zmienna (pogrubiony okrąg).</p>
 <p>W przypadku modeli bayesowskich zapewno dosyć często będziecie się spotykać z takimi graficznymi opisami modeli. Do grafu dołączane są zwykle definicje parametrów. W naszym przypadku:</p>
-<p><span class="math display">\[\alpha \sim Uniform(-1000, 1000)\]</span> <span class="math display">\[ \beta \sim N(0, 100) \]</span> <span class="math display">\[ \sigma \sim Uniform(0.000001,1000)\]</span> <span class="math display">\[ y_i \sim N(a + b * x_i, \sigma)\]</span></p>
+<p><span class="math display">\[\alpha \sim U(-1000, 1000)\]</span> <span class="math display">\[ \beta \sim N(0, 100) \]</span> <span class="math display">\[ \sigma \sim U(0.000001,1000)\]</span> <span class="math display">\[ y_i \sim N(a + b * x_i, \sigma)\]</span></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

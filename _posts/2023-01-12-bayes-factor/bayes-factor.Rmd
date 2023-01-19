@@ -310,7 +310,7 @@ W statystyce częstościowej p-value < 0.05 dla parametru oznacza odrzucenie hip
 
 Często się mówi, że by wnioskować o braku efektu musimy użyć statystyki Bayesowskiej, ponieważ w statystyce klasycznej możemy mówić co najwyżej o braku dowodów na istnienie efektu. Niestety, przypadku BPNHT, pojawia się pewien problem, ponieważ czynnik Bayesa jest wrażliwy na wielkość próby [@morey2011bayes]. 
 
-By zobaczyć to na własne oczy posłużymy się przykładem. Załóżmy, że zebraliśmy dane, które mają rozkład normalny $y \sim N(\mu,\sigma)$, ze znanym odchyleniem standardowym $\sigma = 5$. Chcemy przetestować dwa modele w myśl BPNHT: $M_0:  \mu = 0$ i $M_1: \mu \sim U(-\infty,+\infty)$. $U(a,b)$ oznacza rozkład jednostajny w przedziale między $a,b$.
+By zobaczyć to na własne oczy posłużymy się przykładem. Załóżmy, że zebraliśmy dane, które mają rozkład normalny $y \sim N(\mu,\sigma)$, ze znanym odchyleniem standardowym $\sigma = 5$. Chcemy przetestować dwa modele w myśl BPNHT: $M_0:  \mu = 0$ i $M_1: \mu \sim U(-\infty,+\infty)$. Czyli model zakładający, że wartość $\mu = 0$ i model, który zakada, że każda wartość $\mu$ jest równie prawdopodobna. 
 
 Dokładny czynnik Bayesa dla tych dwóch modeli, dane jest wzorem^[Dowód możecie znaleść w suplemencie B do tego artykułu [@tendeiro2019review]]:
 
