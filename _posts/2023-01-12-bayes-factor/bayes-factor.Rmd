@@ -46,7 +46,7 @@ MathJax.Hub.Config({
 
 # Wnioskowanie Statystyczne
 
-Jak pamiętamy, wnioskowanie w statystyce częstościowej opiera się na testowaniu hipotezy zerowej. Hipotezą zerową zwykle jest model, który świadczy o braku efektu, na przykład, że różnica średnich wynosi lub współczynnik regresji wynosi 0. Im mniejsza p-value, tym bardziej otrzymane dane nie pasują to tego modelu. Jeśli jednak p-value jest większa niż 0.05 nie oznacza to, że model zerowy jest **bardziej prawdopodobny** niż inne. Innymi słowy, ten rodzaj testowania może nam jedynie powiedzieć o występowaniu różnicy średnich czy występowaniu korelacji, ale nie o jej braku. 
+Jak pamiętamy, wnioskowanie w statystyce częstościowej opiera się na testowaniu hipotezy zerowej. Hipotezą zerową zwykle jest model, który świadczy o braku efektu, na przykład, że różnica średnich wynosi lub współczynnik regresji wynosi 0. Im mniejsza p-value, tym bardziej otrzymane dane nie pasują do modelu zerowego. Jeśli jednak p-value jest większa niż 0.05 nie oznacza to, że model zerowy jest **bardziej prawdopodobny** niż inne. Innymi słowy, ten rodzaj testowania może nam jedynie powiedzieć o występowaniu różnicy średnich czy występowaniu korelacji, ale nie o jej braku. 
 
 Przypomnijmy sobie, że wielkość przedziału ufności dla testu zależy od wariancji i wielkości próby. Gdyby NHST pozwalało nam orzekać o równości średnich, udowodnienie takiej hipotezy byłoby niezwykle łatwe.
 

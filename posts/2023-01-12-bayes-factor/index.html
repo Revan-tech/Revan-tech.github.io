@@ -2172,7 +2172,7 @@ MathJax.Hub.Config({
 — Andrew Gelman, 2017
 </p>
 <h1 id="wnioskowanie-statystyczne">Wnioskowanie Statystyczne</h1>
-<p>Jak pamiętamy, wnioskowanie w statystyce częstościowej opiera się na testowaniu hipotezy zerowej. Hipotezą zerową zwykle jest model, który świadczy o braku efektu, na przykład, że różnica średnich wynosi lub współczynnik regresji wynosi 0. Im mniejsza p-value, tym bardziej otrzymane dane nie pasują to tego modelu. Jeśli jednak p-value jest większa niż 0.05 nie oznacza to, że model zerowy jest <strong>bardziej prawdopodobny</strong> niż inne. Innymi słowy, ten rodzaj testowania może nam jedynie powiedzieć o występowaniu różnicy średnich czy występowaniu korelacji, ale nie o jej braku.</p>
+<p>Jak pamiętamy, wnioskowanie w statystyce częstościowej opiera się na testowaniu hipotezy zerowej. Hipotezą zerową zwykle jest model, który świadczy o braku efektu, na przykład, że różnica średnich wynosi lub współczynnik regresji wynosi 0. Im mniejsza p-value, tym bardziej otrzymane dane nie pasują do modelu zerowego. Jeśli jednak p-value jest większa niż 0.05 nie oznacza to, że model zerowy jest <strong>bardziej prawdopodobny</strong> niż inne. Innymi słowy, ten rodzaj testowania może nam jedynie powiedzieć o występowaniu różnicy średnich czy występowaniu korelacji, ale nie o jej braku.</p>
 <p>Przypomnijmy sobie, że wielkość przedziału ufności dla testu zależy od wariancji i wielkości próby. Gdyby NHST pozwalało nam orzekać o równości średnich, udowodnienie takiej hipotezy byłoby niezwykle łatwe.</p>
 <p>Na przykład załóżmy, że chcemy sprawdzić czy nowy lek nie różni się skutecznością od leku będącego już na rynku. Wystarczyłoby manipulować wielkością próby, aby otrzymać wniosek o braku istotnej różnicy pomiędzy wpływem tych dwóch leków!</p>
 <p>Dlatego chcielibyśmy móc orzec, który z modeli (hipotez) jest bardziej prawdopodobny. Podejście bayesowskie daje nam taką możliwość (choć, nie do końca).</p>
@@ -2312,7 +2312,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='va'>posterior_beta_0</span><span class='op'>/</span><span class='va'>prior_beta_0</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 3.583009</code></pre>
+<pre><code>[1] 3.747699</code></pre>
 </div>
 <p>Otrzymaliśmy wartość <span class="math inline">\(BF_{10}\)</span> wskazującą to, że porównując te dwa modele, jest ca. 4 razy bardziej prawdopodobne, że <span class="math inline">\(M_1\)</span> wyprodukował obserwowane dane niż <span class="math inline">\(M_0\)</span>. Dużo? Mało? Jedna z propozycji interpretacji <span class="math inline">\(BF\)</span> jest następująca <span class="citation" data-cites="kass1995bayes">(<a href="#ref-kass1995bayes" role="doc-biblioref">Kass &amp; Raftery, 1995</a>)</span>:</p>
 <div class="layout-chunk" data-layout="l-body">
