@@ -48,7 +48,7 @@ knitr::include_graphics("Statystyczne_Dygresje.jpg")
 
 <br>
 
-https://revan-tech.github.io//blog.html#category:Statystyczne_Dygresje
+https://revan-tech.github.io//statystyczne_dygresje
 
 Miniblog. Trochę o statystyce, trochę o modelowaniu procesów poznawczych. 
 

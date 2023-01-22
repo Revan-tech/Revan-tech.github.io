@@ -2090,6 +2090,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <a href="../../poradniki.html">Poradniki</a>
 <a href="https://szpm.shinyapps.io/baza_wiedzy/">Baza wiedzy</a>
 <a href="../../projekty.html">Projekty</a>
+<a href="../../statystyczne_dygresje.html">Statystyczne Dygresje</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
@@ -2105,9 +2106,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="d-title">
 <h1>Tutorial Statystyki Bayesowskiej</h1>
 <!--radix_placeholder_categories-->
-<div class="dt-tags">
-  <a href="../../blog.html#category:Statystyczne_Dygresje" class="dt-tag">Statystyczne Dygresje</a>
-</div>
 <!--/radix_placeholder_categories-->
 <p><p>Część III: Czynnik Bayesowski</p></p>
 </div>
@@ -2184,7 +2182,7 @@ MathJax.Hub.Config({
 <p>Nasuwa się jednak pytanie jak obliczyć funkcję wiarygodności? <span class="math inline">\(P(D|M_1)\)</span> oznacza marginalne prawdopodobieństwo (<em>marginal likelihood</em>) otrzymania danych pod warunkiem modelu dla wszystkich możliwych wartości parametrów:</p>
 <p><span class="math display">\[P(D \mid M_i) = \int P(D \mid \theta, M_i) \ P(\theta \mid M_i) \ \text{d}\theta\]</span></p>
 <p>Co to znaczy dla wszystkich możliwych parametrów? Załóżmy, że mamy dwa modele regresji liniowej, różniące się tym, że jeden ma dodatkowy predyktor. Tak jak pisałem wcześniej w statystyce bayesowskiej nie otrzymamy punktowych estymat parametrów <span class="math inline">\(\theta\)</span>, ale ich rozkłady <span class="math inline">\(P(\theta|y)\)</span>. Ponieważ jednak chcemy otrzymać jedną wartość - prawdopodobieństwo otrzymania danych wygenerowanych przez model <span class="math inline">\(M_1\)</span>, a nie przez jakieś konkretne wartości parametrów tego modelu, musimy całkować po parametrach, by pozbyć się <span class="math inline">\(\theta\)</span> z równania.</p>
-<p>Teraz zerknijmy na mianownik naszego równania zawierający <span class="math inline">\(P(D)\)</span>. Tutaj sprawa się komplikuje, ponieważ by obliczyć <span class="math inline">\(P(D)\)</span> musielibyśmy całkować po wszystkich (nieskończenie wielu) możliwych modelach. Jego obliczenie jest w zasadzie niemożliwe zarówno analitycznie (jak wyznaczyć rozkład <span class="math inline">\(P(M)\)</span>, dla wszystkich możliwych modeli), jak i numerycznie (ponieważ musielibyśmy wymyślić i policzyć te wszystkie modele).</p>
+<p>Teraz zerknijmy na mianownik naszego równania zawierający <span class="math inline">\(P(D)\)</span>. Tutaj sprawa się komplikuje, ponieważ by obliczyć <span class="math inline">\(P(D)\)</span> musielibyśmy całkować po wszystkich (nieskończenie wielu) możliwych modelach. Jego obliczenie jest w zasadzie niemożliwe zarówno analitycznie (jak wyznaczyć rozkład <span class="math inline">\(P(M)\)</span> dla wszystkich możliwych modeli), jak i numerycznie (ponieważ musielibyśmy wymyślić i policzyć te wszystkie modele).</p>
 <p>A co jeśli porównamy dwa modele ze sobą?</p>
 <p><span class="math display">\[ \underbrace{{\frac{P(M_1|D)}{P(M_2|D)}}}_{\text{stosunek a posteriori}} = \frac{\frac{P(D|M_1)P(M_1)}{P(D)}}{\frac{P(D|M_2)P(M_2)}{P(D)}} = \underbrace{\frac{P(D|M_1)}{P(D|M_2)}}_{{BF_{12}}} * \underbrace{\frac{P(M_1)}{P(M_2)}}_{\text{stosunek a prior}}\]</span></p>
 <p>Robiąc tak, pozbywamy się konieczności obliczania <span class="math inline">\(P(D)\)</span>!</p>
@@ -2312,7 +2310,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='va'>posterior_beta_0</span><span class='op'>/</span><span class='va'>prior_beta_0</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 3.747699</code></pre>
+<pre><code>[1] 3.894828</code></pre>
 </div>
 <p>Otrzymaliśmy wartość <span class="math inline">\(BF_{10}\)</span> wskazującą to, że porównując te dwa modele, jest ca. 4 razy bardziej prawdopodobne, że <span class="math inline">\(M_1\)</span> wyprodukował obserwowane dane niż <span class="math inline">\(M_0\)</span>. Dużo? Mało? Jedna z propozycji interpretacji <span class="math inline">\(BF\)</span> jest następująca <span class="citation" data-cites="kass1995bayes">(<a href="#ref-kass1995bayes" role="doc-biblioref">Kass &amp; Raftery, 1995</a>)</span>:</p>
 <div class="layout-chunk" data-layout="l-body">

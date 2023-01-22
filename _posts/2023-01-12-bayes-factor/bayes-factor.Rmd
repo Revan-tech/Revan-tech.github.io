@@ -71,7 +71,7 @@ $$P(D \mid M_i) = \int P(D \mid \theta, M_i) \ P(\theta \mid M_i) \ \text{d}\the
 
 Co to znaczy dla wszystkich możliwych parametrów? Załóżmy, że mamy dwa modele regresji liniowej, różniące się tym, że jeden ma dodatkowy predyktor. Tak jak pisałem wcześniej w statystyce bayesowskiej nie otrzymamy punktowych estymat parametrów $\theta$, ale ich rozkłady $P(\theta|y)$. Ponieważ jednak chcemy otrzymać jedną wartość - prawdopodobieństwo otrzymania danych wygenerowanych przez model $M_1$, a nie przez jakieś konkretne wartości parametrów tego modelu, musimy całkować po parametrach, by pozbyć się $\theta$ z równania.  
  
-Teraz zerknijmy na mianownik naszego równania zawierający $P(D)$. Tutaj sprawa się komplikuje, ponieważ by obliczyć $P(D)$ musielibyśmy całkować po wszystkich (nieskończenie wielu) możliwych modelach. Jego obliczenie jest w zasadzie niemożliwe zarówno analitycznie (jak wyznaczyć rozkład $P(M)$, dla wszystkich możliwych modeli), jak i numerycznie (ponieważ musielibyśmy wymyślić i policzyć te wszystkie modele).
+Teraz zerknijmy na mianownik naszego równania zawierający $P(D)$. Tutaj sprawa się komplikuje, ponieważ by obliczyć $P(D)$ musielibyśmy całkować po wszystkich (nieskończenie wielu) możliwych modelach. Jego obliczenie jest w zasadzie niemożliwe zarówno analitycznie (jak wyznaczyć rozkład $P(M)$ dla wszystkich możliwych modeli), jak i numerycznie (ponieważ musielibyśmy wymyślić i policzyć te wszystkie modele).
 
 A co jeśli porównamy dwa modele ze sobą?
 

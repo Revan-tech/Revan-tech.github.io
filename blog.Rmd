@@ -2,7 +2,13 @@
 title: ""
 description: |
   Some additional details about the blog
-listing: posts
+listing: 
+  posts:
+    - 2022-01-15-seria-jak-rozumie-nauk-metodologia-bada-i-statystyka 
+    - 2021-09-13-o-odpowiedzialnoci-za-czyny-w-dobie-lotw-na-marsa
+    - 2021-09-12-odwied-baz-wiedzy
+    - 2021-09-12-witajcie-w-sortowni
+
 ---
 
 ```{r setup, include=FALSE}

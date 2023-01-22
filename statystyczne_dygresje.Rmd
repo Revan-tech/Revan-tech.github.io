@@ -1,0 +1,19 @@
+---
+title: ""
+description: |
+  Some additional details about the blog
+listing: 
+  posts:
+    - 2023-01-12-bayes-factor
+    - 2022-12-26-poznajcie-jags
+    - 2022-10-30-tutorial-bayes-ii
+    - 2022-07-31-tutorial-bayes
+    - 2022-05-13-mixedmotivation
+    - 2022-05-05-tranistive
+    - 2022-04-28-behrens
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
