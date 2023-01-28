@@ -2125,18 +2125,18 @@ document.addEventListener('DOMContentLoaded', function() {
 <ul>
 <li><a href="#porównywanie-modeli">Porównywanie modeli</a>
 <ul>
-<li><a href="#czynnik-bayesowski">czynnik Bayesowski</a></li>
-<li><a href="#czynnik-bayesowski-a-złożoność-modelu">czynnik Bayesowski a złożoność modelu</a></li>
+<li><a href="#czynnik-bayesowski">Czynnik Bayesowski</a></li>
+<li><a href="#czynnik-bayesowski-a-złożoność-modelu">Czynnik Bayesowski a złożoność modelu</a></li>
 <li><a href="#bayesian-point-null-hypothesis-testing">Bayesian Point Null Hypothesis Testing</a></li>
 <li><a href="#savage-dickey-density-ratio">Savage-Dickey density ratio</a></li>
 <li><a href="#likelihood-sampling">Likelihood sampling</a></li>
 </ul></li>
 <li><a href="#porównywanie-modeli-1">Porównywanie modeli?</a>
 <ul>
-<li><a href="#czynnik-bayesa-nie-mierzy-czy-model-jest-prawdziwy">czynnik Bayesa nie mierzy czy model jest prawdziwy</a></li>
-<li><a href="#czynnik-bayesowski-jest-wrażliwy-na-rozkłady-a-priori-parametrów-modelu">czynnik Bayesowski jest wrażliwy na rozkłady <em>a priori</em> parametrów modelu</a></li>
+<li><a href="#czynnik-bayesa-nie-mierzy-czy-model-jest-prawdziwy">Czynnik Bayesa nie mierzy czy model jest prawdziwy</a></li>
+<li><a href="#czynnik-bayesowski-jest-wrażliwy-na-rozkłady-a-priori-parametrów-modelu">Czynnik Bayesowski jest wrażliwy na rozkłady <em>a priori</em> parametrów modelu</a></li>
 <li><a href="#rozkłady-posteriori-parametrów-nie-muszą-się-zgadzać-z-czynnikiem-bayesa">Rozkłady <em>posteriori</em> parametrów nie muszą się zgadzać z czynnikiem Bayesa</a></li>
-<li><a href="#czynnik-bayesa-a-prawdopodobieństwo-braku-efektu">czynnik Bayesa a prawdopodobieństwo braku efektu</a></li>
+<li><a href="#czynnik-bayesa-a-prawdopodobieństwo-braku-efektu">Czynnik Bayesa a prawdopodobieństwo braku efektu</a></li>
 <li><a href="#i-co-z-tym-wszystkim-zrobić">I co z tym wszystkim zrobić?</a></li>
 </ul></li>
 </ul></li>
@@ -2186,7 +2186,7 @@ MathJax.Hub.Config({
 <p>A co jeśli porównamy dwa modele ze sobą?</p>
 <p><span class="math display">\[ \underbrace{{\frac{P(M_1|D)}{P(M_2|D)}}}_{\text{stosunek a posteriori}} = \frac{\frac{P(D|M_1)P(M_1)}{P(D)}}{\frac{P(D|M_2)P(M_2)}{P(D)}} = \underbrace{\frac{P(D|M_1)}{P(D|M_2)}}_{{BF_{12}}} * \underbrace{\frac{P(M_1)}{P(M_2)}}_{\text{stosunek a prior}}\]</span></p>
 <p>Robiąc tak, pozbywamy się konieczności obliczania <span class="math inline">\(P(D)\)</span>!</p>
-<h3 id="czynnik-bayesowski">czynnik Bayesowski</h3>
+<h3 id="czynnik-bayesowski">Czynnik Bayesowski</h3>
 <p>Jednak oceniając modele nie używamy stosunku prawdopodobieństw <em>posteriori</em>, lecz stosunku marginalnych wiarygodności nazywanym <strong>czynnikiem Bayesowskim</strong>:</p>
 <p><span class="math display">\[BF_{12} = \frac{P(D|M_1)}{P(D|M_2)}\]</span></p>
 <p>Jest tak dlatego, że stosunek prawdopodobieństw <em>a posteriori</em> zależy od danych, ale także od prawdopodobieństw <em>a priori</em> modeli. Manipulując nimi, moglibyśmy zawsze uzyskać miarę faworyzującą nasz model. Użycie stosunku funkcji wiarygodności, mówi nam o ile bardziej/mniej prawdopodobne jest, że <span class="math inline">\(M_1\)</span> wyprodukował obserwowane dane od <span class="math inline">\(M_2\)</span>. Ponadto jeśli przepiszemy wzór na stosunek <em>a posteriori</em>, uzyskamy</p>
@@ -2194,8 +2194,8 @@ MathJax.Hub.Config({
 <p>Co daje nam dodatkową interpretację czynnika Bayesowskiego. Jest on stosunkiem prawdopodobieństw <em>posteriori</em> podzielony przez stosunek prawdopodobieństw <em>a priori</em> naszych dwóch modeli. Mówi nam <strong>o ile zmieniły się nasze przekonania</strong> <em>a priori</em> <strong>po zobaczeniu danych</strong>. Innymi słowy, czynnik Bayesowski mówi nam jak zmieniły się pod wpływem danych nasze początkowe przekonania co do tego, który model jest lepszy.</p>
 <p>Załóżmy, że przeprowadziliśmy analizę dwóch modeli i otrzymaliśmy <span class="math inline">\(stosunek \ posteriori = 4\)</span>, faworyzujący pierwszy model. Jednak <span class="math inline">\(BF_{12} = 0.5\)</span>, mówiąc nam, że drugi model wyprodukował obserwowane dane z dwa razy większym prawdopodobieństwem. Skąd taka rozbieżność? Wynika ze tego, że <span class="math inline">\(stosunek \ a \ priori = 8\)</span>, od początku faworyzował pierwszy model.</p>
 <p>Zwróćmy też uwagę, że jeśli przypiszemy modelom takie same prawdopodobieństwa <em>a priori</em>, stosunek <em>a posteriori</em> będzie się równał czynnikowi Bayesa.</p>
-<h3 id="czynnik-bayesowski-a-złożoność-modelu">czynnik Bayesowski a złożoność modelu</h3>
-<p>czynnik Bayesowski w naturalny sposób karze za złożoność modelu, choć ta właściwość nie jest widoczna na pierwszy rzut oka. Żeby ją zwizualizować, wyobraźmy sobie, że <span class="math inline">\(P(D|M)\)</span> nie jest pojedyńczą wartością prawdopodobieństwa otrzymania zaobserwowanych danych, lecz rozkładem prawdopodobieństwa wygenerowania <strong>wszystkich możliwych zbiorów danych</strong>, przez model. Weźmy dwa takie rozkłady dla modeli: prostszego modelu - <span class="math inline">\(M_1\)</span> i bardziej złożonego <span class="math inline">\(M_2\)</span>. Bardziej złożony model jest w stanie wygenerować więcej możliwych zbiorów danych niż prostszy, ponieważ jest bardziej elastyczny.</p>
+<h3 id="czynnik-bayesowski-a-złożoność-modelu">Czynnik Bayesowski a złożoność modelu</h3>
+<p>Czynnik Bayesowski w naturalny sposób karze za złożoność modelu, choć ta właściwość nie jest widoczna na pierwszy rzut oka. Żeby ją zwizualizować, wyobraźmy sobie, że <span class="math inline">\(P(D|M)\)</span> nie jest pojedyńczą wartością prawdopodobieństwa otrzymania zaobserwowanych danych, lecz rozkładem prawdopodobieństwa wygenerowania <strong>wszystkich możliwych zbiorów danych</strong>, przez model. Weźmy dwa takie rozkłady dla modeli: prostszego modelu - <span class="math inline">\(M_1\)</span> i bardziej złożonego <span class="math inline">\(M_2\)</span>. Bardziej złożony model jest w stanie wygenerować więcej możliwych zbiorów danych niż prostszy, ponieważ jest bardziej elastyczny.</p>
 <p><img src="o.jpg" /></p>
 <p>Całka prawdopodobieństw (pole pod wykresem) każdego z rozkładów musi wynosić 1 (z definicji rozkładów prawdopodobieństwa). Oznacza to, że dla przedziału <span class="math inline">\(C_1\)</span> model <span class="math inline">\(M_1\)</span> będzie miał zawsze większe prawdopodobieństwo wygenerowania danych niż <span class="math inline">\(M_2\)</span>, w konsekwencji czynnik Bayesa będzie faworyzował <span class="math inline">\(M_1\)</span>. Logika stojąca za taka własnością <span class="math inline">\(BF\)</span> jest iście Occamowska. Zadajmy sobie pytanie, który z modeli ma większe prawdopodobieństwo wygenerowania danych w przedziale <span class="math inline">\(C_1\)</span> jeśli otrzymane przez nas dane mogą być wyjaśnione przez oba modele. Ten, który częściej będzie generował zbiory danych zawierające się w przedziale <span class="math inline">\(C_1\)</span>, czyli <span class="math inline">\(M_1\)</span>.</p>
 <h3 id="bayesian-point-null-hypothesis-testing">Bayesian Point Null Hypothesis Testing</h3>
@@ -2310,7 +2310,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='va'>posterior_beta_0</span><span class='op'>/</span><span class='va'>prior_beta_0</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 3.930973</code></pre>
+<pre><code>[1] 4.129349</code></pre>
 </div>
 <p>Otrzymaliśmy wartość <span class="math inline">\(BF_{10}\)</span> wskazującą to, że porównując te dwa modele, jest ca. 4 razy bardziej prawdopodobne, że <span class="math inline">\(M_1\)</span> wyprodukował obserwowane dane niż <span class="math inline">\(M_0\)</span>. Dużo? Mało? Jedna z propozycji interpretacji <span class="math inline">\(BF\)</span> jest następująca <span class="citation" data-cites="kass1995bayes">(<a href="#ref-kass1995bayes" role="doc-biblioref">Kass &amp; Raftery, 1995</a>)</span>:</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2358,10 +2358,10 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <img src="GvM.JPG" alt="Grafika skradziona ze slajdów Richard E. Turnera" /><figcaption aria-hidden="true">Grafika skradziona ze slajdów Richard E. Turnera</figcaption>
 </figure>
 <p>Rzućmy okiem na kilka najważniejszych zastrzeżeń. To, co ważne, to fakt nie wszystkie z nich są na pierwszy rzut oka oczywiste.</p>
-<h3 id="czynnik-bayesa-nie-mierzy-czy-model-jest-prawdziwy">czynnik Bayesa nie mierzy czy model jest prawdziwy</h3>
-<p>czynnik Bayesowski jest stosunkiem marginalnej wiarygodności dwóch modeli, czyli o ile bardziej jest prawdopodobne, że jeden z modeli wyprodukował obserwowane dane niż drugi. Nie mówi nam on w żaden sposób o tym, jak dobre te modele w absolutnym sensie <span class="citation" data-cites="gelman1995avoiding">(<a href="#ref-gelman1995avoiding" role="doc-biblioref">Gelman &amp; Rubin, 1995</a>)</span>. Możemy być w sytuacji, w której czynnik Bayesa bardzo faworyzuje jeden z modeli, ale oba modele są fatalnie dopasowane do danych.</p>
+<h3 id="czynnik-bayesa-nie-mierzy-czy-model-jest-prawdziwy">Czynnik Bayesa nie mierzy czy model jest prawdziwy</h3>
+<p>Czynnik Bayesowski jest stosunkiem marginalnej wiarygodności dwóch modeli, czyli o ile bardziej jest prawdopodobne, że jeden z modeli wyprodukował obserwowane dane niż drugi. Nie mówi nam on w żaden sposób o tym, jak dobre te modele w absolutnym sensie <span class="citation" data-cites="gelman1995avoiding">(<a href="#ref-gelman1995avoiding" role="doc-biblioref">Gelman &amp; Rubin, 1995</a>)</span>. Możemy być w sytuacji, w której czynnik Bayesa bardzo faworyzuje jeden z modeli, ale oba modele są fatalnie dopasowane do danych.</p>
 <p>W konsekwencji jeśli stosujemy sposób wnioskowania oparty na testowaniu hipotezy zerowej i alternatywnej (tak jak zrobiliśmy wyżej w przypadku Anovy), zasadniczo czynnik Bayesa nie mówi nam więcej niż p-value bez spojrzenia na wielkość efektu. By zbadać dopasowanie modelu potrzebujemy więc przeanalizować rozkłady <em>posteriori</em> parametrów.</p>
-<h3 id="czynnik-bayesowski-jest-wrażliwy-na-rozkłady-a-priori-parametrów-modelu">czynnik Bayesowski jest wrażliwy na rozkłady <em>a priori</em> parametrów modelu</h3>
+<h3 id="czynnik-bayesowski-jest-wrażliwy-na-rozkłady-a-priori-parametrów-modelu">Czynnik Bayesowski jest wrażliwy na rozkłady <em>a priori</em> parametrów modelu</h3>
 <p>Rozkład <em>posteriori</em> parametrów <span class="math inline">\(\theta\)</span> jest niezależny od rozkładów <em>a prior</em> tychże, gdy liczba obserwacji dąży do nieskończoności.</p>
 <p><span class="math display">\[\lim_{n\to\infty}P(\theta|D,M) \propto P(D|\theta, M)\]</span></p>
 <p>Tak jak pokazaliśmy w pierwszej części tutorialu, gdy liczba obserwacji wzrasta, wpływ rozkładów <em>a priori</em> maleje. Jak jest jednak w przypadku czynnika Bayesa? Przyjmując pewne upraszczające założenia <span class="citation" data-cites="XXX">(<a href="#ref-XXX" role="doc-biblioref">MacKay, 2003</a>)</span>, możemy powiedzieć, że marginalna wiarygodność to:</p>
@@ -2371,7 +2371,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <p>Im bardziej chcemy by dane przemówiły za siebie (im bardziej nieinformatywny rozkład <em>a priori</em> zastosujemy), tym bardziej faworyzowany będzie model zerowy w przypadku <em>Bayesian Point Null Hypothesis Testing</em>. Wrażliwość na rozkłady <em>a priori</em> nie jest tak istotnym problemem, gdy <strong>porównujemy ze sobą niezagnieżdżone modele</strong> to znaczy w przypadku, gdy testujemy <strong>dwa alternatywne wyjaśnienia zjawiska</strong>.</p>
 <h3 id="rozkłady-posteriori-parametrów-nie-muszą-się-zgadzać-z-czynnikiem-bayesa">Rozkłady <em>posteriori</em> parametrów nie muszą się zgadzać z czynnikiem Bayesa</h3>
 <p>W statystyce częstościowej p-value &lt; 0.05 dla parametru oznacza odrzucenie hipotezy zerowej. Jednak w przypadku analizy Bayesowskiej możemy spotkać się z sytuacjami, w których czynnik Bayesa sugeruje przyjęcie modelu zerowego, jednak interesujący nas parametr w modelu alternatywnym nie zawiera w 95% przedziale wiarygodności, i vice versa <span class="citation" data-cites="kruschke2018bayesian">(<a href="#ref-kruschke2018bayesian" role="doc-biblioref">Kruschke &amp; Liddell, 2018</a>)</span>. Ta własność czynnika Bayesa jest często nieintuicyjna, ponieważ przenosimy nasze oczekiwania ze statystyki częstościowej.</p>
-<h3 id="czynnik-bayesa-a-prawdopodobieństwo-braku-efektu">czynnik Bayesa a prawdopodobieństwo braku efektu</h3>
+<h3 id="czynnik-bayesa-a-prawdopodobieństwo-braku-efektu">Czynnik Bayesa a prawdopodobieństwo braku efektu</h3>
 <p>Często się mówi, że by wnioskować o braku efektu musimy użyć statystyki Bayesowskiej, ponieważ w statystyce klasycznej możemy mówić co najwyżej o braku dowodów na istnienie efektu. Niestety, przypadku BPNHT, pojawia się pewien problem, ponieważ czynnik Bayesa jest wrażliwy na wielkość próby <span class="citation" data-cites="morey2011bayes">(<a href="#ref-morey2011bayes" role="doc-biblioref">Morey &amp; Rouder, 2011</a>)</span>.</p>
 <p>By zobaczyć to na własne oczy posłużymy się przykładem. Załóżmy, że zebraliśmy dane, które mają rozkład normalny <span class="math inline">\(y \sim N(\mu,\sigma)\)</span>, ze znanym odchyleniem standardowym <span class="math inline">\(\sigma = 5\)</span>. Chcemy przetestować dwa modele w myśl BPNHT: <span class="math inline">\(M_0: \mu = 0\)</span> i <span class="math inline">\(M_1: \mu \sim U(-\infty,+\infty)\)</span>. Czyli model zakładający, że wartość <span class="math inline">\(\mu = 0\)</span> i model, który zakada, że każda wartość <span class="math inline">\(\mu\)</span> jest równie prawdopodobna.</p>
 <p>Dokładny czynnik Bayesa dla tych dwóch modeli dany jest wzorem<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>

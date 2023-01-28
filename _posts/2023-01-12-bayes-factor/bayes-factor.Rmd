@@ -79,7 +79,7 @@ $$ \underbrace{{\frac{P(M_1|D)}{P(M_2|D)}}}_{\text{stosunek a posteriori}} = \fr
  
 Robiąc tak, pozbywamy się konieczności obliczania $P(D)$! 
 
-### czynnik Bayesowski 
+### Czynnik Bayesowski 
 
 Jednak oceniając modele nie używamy stosunku prawdopodobieństw *posteriori*, lecz stosunku marginalnych wiarygodności nazywanym **czynnikiem Bayesowskim**:
 
@@ -95,9 +95,9 @@ Załóżmy, że przeprowadziliśmy analizę dwóch modeli i otrzymaliśmy $stosu
 
 Zwróćmy też uwagę, że jeśli przypiszemy modelom takie same prawdopodobieństwa *a priori*, stosunek *a posteriori* będzie się równał czynnikowi Bayesa. 
 
-### czynnik Bayesowski a złożoność modelu
+### Czynnik Bayesowski a złożoność modelu
 
-czynnik Bayesowski w naturalny sposób karze za złożoność modelu, choć ta właściwość nie jest widoczna na pierwszy rzut oka. Żeby ją zwizualizować, wyobraźmy sobie, że $P(D|M)$ nie jest pojedyńczą wartością prawdopodobieństwa otrzymania zaobserwowanych danych, lecz rozkładem prawdopodobieństwa wygenerowania **wszystkich możliwych zbiorów danych**, przez model. Weźmy dwa takie rozkłady dla modeli: prostszego modelu - $M_1$ i bardziej złożonego $M_2$. Bardziej złożony model jest w stanie wygenerować więcej możliwych zbiorów danych niż prostszy, ponieważ jest bardziej elastyczny. 
+Czynnik Bayesowski w naturalny sposób karze za złożoność modelu, choć ta właściwość nie jest widoczna na pierwszy rzut oka. Żeby ją zwizualizować, wyobraźmy sobie, że $P(D|M)$ nie jest pojedyńczą wartością prawdopodobieństwa otrzymania zaobserwowanych danych, lecz rozkładem prawdopodobieństwa wygenerowania **wszystkich możliwych zbiorów danych**, przez model. Weźmy dwa takie rozkłady dla modeli: prostszego modelu - $M_1$ i bardziej złożonego $M_2$. Bardziej złożony model jest w stanie wygenerować więcej możliwych zbiorów danych niż prostszy, ponieważ jest bardziej elastyczny. 
 
 ![](o.jpg)
 
@@ -279,13 +279,13 @@ Niestety, jak to zwykle okazuje, rzeczywistość nie jest taka różowa. **czynn
 Rzućmy okiem na kilka najważniejszych zastrzeżeń. To, co ważne, to fakt nie wszystkie z nich są na pierwszy rzut oka oczywiste. 
 
 
-### czynnik Bayesa nie mierzy czy model jest prawdziwy
+### Czynnik Bayesa nie mierzy czy model jest prawdziwy
 
-czynnik Bayesowski jest stosunkiem marginalnej wiarygodności dwóch modeli, czyli o ile bardziej jest prawdopodobne, że jeden z modeli wyprodukował obserwowane dane niż drugi. Nie mówi nam on w żaden sposób o tym, jak dobre te modele w absolutnym sensie [@gelman1995avoiding]. Możemy być w sytuacji, w której czynnik Bayesa bardzo faworyzuje jeden z modeli, ale oba modele są fatalnie dopasowane do danych.  
+Czynnik Bayesowski jest stosunkiem marginalnej wiarygodności dwóch modeli, czyli o ile bardziej jest prawdopodobne, że jeden z modeli wyprodukował obserwowane dane niż drugi. Nie mówi nam on w żaden sposób o tym, jak dobre te modele w absolutnym sensie [@gelman1995avoiding]. Możemy być w sytuacji, w której czynnik Bayesa bardzo faworyzuje jeden z modeli, ale oba modele są fatalnie dopasowane do danych.  
 
 W konsekwencji jeśli stosujemy sposób wnioskowania oparty na testowaniu hipotezy zerowej i alternatywnej (tak jak zrobiliśmy wyżej w przypadku Anovy), zasadniczo czynnik Bayesa nie mówi nam więcej niż p-value bez spojrzenia na wielkość efektu. By zbadać dopasowanie modelu potrzebujemy więc przeanalizować rozkłady *posteriori* parametrów.  
 
-### czynnik Bayesowski jest wrażliwy na rozkłady *a priori* parametrów modelu
+### Czynnik Bayesowski jest wrażliwy na rozkłady *a priori* parametrów modelu
 
 Rozkład *posteriori* parametrów $\theta$ jest niezależny od rozkładów *a prior* tychże, gdy liczba obserwacji dąży do nieskończoności. 
 
@@ -306,7 +306,7 @@ Im bardziej chcemy by dane przemówiły za siebie (im bardziej nieinformatywny r
 
 W statystyce częstościowej p-value < 0.05 dla parametru oznacza odrzucenie hipotezy zerowej. Jednak w przypadku analizy Bayesowskiej możemy spotkać się z sytuacjami, w których czynnik Bayesa sugeruje przyjęcie modelu zerowego, jednak interesujący nas parametr w modelu alternatywnym nie zawiera w 95% przedziale wiarygodności, i vice versa [@kruschke2018bayesian]. Ta własność czynnika Bayesa jest często nieintuicyjna, ponieważ przenosimy nasze oczekiwania ze statystyki częstościowej. 
 
-### czynnik Bayesa a prawdopodobieństwo braku efektu
+### Czynnik Bayesa a prawdopodobieństwo braku efektu
 
 Często się mówi, że by wnioskować o braku efektu musimy użyć statystyki Bayesowskiej, ponieważ w statystyce klasycznej możemy mówić co najwyżej o braku dowodów na istnienie efektu. Niestety, przypadku BPNHT, pojawia się pewien problem, ponieważ czynnik Bayesa jest wrażliwy na wielkość próby [@morey2011bayes]. 
 
@@ -347,7 +347,7 @@ Nie oznacza jednak, że statystyka Bayesowska nam na to nie pozwala. Jeśli rozk
 
 Dogłębne omówienie wyżej wymienionych problemów możecie znaleźć w artykule *"A Review of Issues About Null Hypothesis Bayesian Testing"* [@tendeiro2019review].
 
-![Alternatywna rzeczywistość, w której, w miejsce statystyki częstościowej, statystyka Bayesowska zdominowała naukę. Grafika skradziona ze slajdów Richarda Moreya.](Bayes.jpg#center){width=75%}
+![Alternatywna rzeczywistość, w której, w miejsce statystyki częstościowej, statystyka Bayesowska zdominowała naukę. Grafika skradziona ze slajdów Richarda Moreya.](bayes.jpg#center){width=75%}
 
 Z jednej strony czynnik Bayesa pozwala na bezpośrednie porównanie prawdopodobieństwa wyprodukowania danych przez cały model, a nie tylko punktowe wartości parametrów. Jednocześnie w naturalny sposób karze złożoność modelu, co w innych miarach dopasowania modelu takich jak na przykład AIC, próbujemy robić estymując złożoność poprzez liczbę wolnych parametrów. 
 
