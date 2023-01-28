@@ -1687,7 +1687,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='va'>posterior_beta_0</span><span class='op'>/</span><span class='va'>prior_beta_0</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 4.129349</code></pre>
+<pre><code>[1] 4.185781</code></pre>
 </div>
 <p>Otrzymaliśmy wartość <span class="math inline">\(BF_{10}\)</span> wskazującą to, że porównując te dwa modele, jest ca. 4 razy bardziej prawdopodobne, że <span class="math inline">\(M_1\)</span> wyprodukował obserwowane dane niż <span class="math inline">\(M_0\)</span>. Dużo? Mało? Jedna z propozycji interpretacji <span class="math inline">\(BF\)</span> jest następująca <span class="citation" data-cites="kass1995bayes">(<a href="#ref-kass1995bayes" role="doc-biblioref">Kass &amp; Raftery, 1995</a>)</span>:</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1777,7 +1777,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <h3 id="i-co-z-tym-wszystkim-zrobić">I co z tym wszystkim zrobić?</h3>
 <p>Dogłębne omówienie wyżej wymienionych problemów możecie znaleźć w artykule <em>“A Review of Issues About Null Hypothesis Bayesian Testing”</em> <span class="citation" data-cites="tendeiro2019review">(<a href="#ref-tendeiro2019review" role="doc-biblioref">Tendeiro &amp; Kiers, 2019</a>)</span>.</p>
 <figure>
-<img src="Bayes.jpg#center" style="width:75.0%" alt="Alternatywna rzeczywistość, w której, w miejsce statystyki częstościowej, statystyka Bayesowska zdominowała naukę. Grafika skradziona ze slajdów Richarda Moreya." /><figcaption aria-hidden="true">Alternatywna rzeczywistość, w której, w miejsce statystyki częstościowej, statystyka Bayesowska zdominowała naukę. Grafika skradziona ze slajdów Richarda Moreya.</figcaption>
+<img src="bayes.jpg#center" style="width:75.0%" alt="Alternatywna rzeczywistość, w której, w miejsce statystyki częstościowej, statystyka Bayesowska zdominowała naukę. Grafika skradziona ze slajdów Richarda Moreya." /><figcaption aria-hidden="true">Alternatywna rzeczywistość, w której, w miejsce statystyki częstościowej, statystyka Bayesowska zdominowała naukę. Grafika skradziona ze slajdów Richarda Moreya.</figcaption>
 </figure>
 <p>Z jednej strony czynnik Bayesa pozwala na bezpośrednie porównanie prawdopodobieństwa wyprodukowania danych przez cały model, a nie tylko punktowe wartości parametrów. Jednocześnie w naturalny sposób karze złożoność modelu, co w innych miarach dopasowania modelu takich jak na przykład AIC, próbujemy robić estymując złożoność poprzez liczbę wolnych parametrów.</p>
 <p>Jednakże, jak widzimy, czynnik Bayesa jest miarą, która również słabe strony, nie jest więc cudownym lekiem na statystyczne bolączki. Z tego miejsca mamy dwie możliwości. Możemy używać czynnika Bayesa rozważnie, czyli:</p>
