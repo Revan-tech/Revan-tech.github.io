@@ -1,7 +1,7 @@
 ---
 title: "Tutorial Statystyki Bayesowskiej"
 description: |
-  Część III: Czynnik Bayesowski 
+  Część III: czynnik Bayesowski 
 preview: "Statystyczne_Dygresje2.jpg"
 author:
   - name: Szymon Mąka
@@ -52,7 +52,7 @@ Przypomnijmy sobie, że wielkość przedziału ufności dla testu zależy od war
 
 Na przykład załóżmy, że chcemy sprawdzić czy nowy lek nie różni się skutecznością od leku będącego już na rynku. Wystarczyłoby manipulować wielkością próby, aby otrzymać wniosek o braku istotnej różnicy pomiędzy wpływem tych dwóch leków!
 
-Dlatego chcielibyśmy móc orzec, który z modeli (hipotez) jest bardziej prawdopodobny. Podejście bayesowskie daje nam taką możliwość (choć, nie do końca). 
+Dlatego chcielibyśmy móc orzec, który z modeli (hipotez) jest bardziej prawdopodobny. Podejście Bayesowskie daje nam taką możliwość (choć, nie do końca). 
 
 
 ## Porównywanie modeli
@@ -69,7 +69,7 @@ Nasuwa się jednak pytanie jak obliczyć funkcję wiarygodności? $P(D|M_1)$ ozn
 
 $$P(D \mid M_i) = \int P(D \mid \theta, M_i) \ P(\theta \mid M_i) \ \text{d}\theta$$
 
-Co to znaczy dla wszystkich możliwych parametrów? Załóżmy, że mamy dwa modele regresji liniowej, różniące się tym, że jeden ma dodatkowy predyktor. Tak jak pisałem wcześniej w statystyce bayesowskiej nie otrzymamy punktowych estymat parametrów $\theta$, ale ich rozkłady $P(\theta|y)$. Ponieważ jednak chcemy otrzymać jedną wartość - prawdopodobieństwo otrzymania danych wygenerowanych przez model $M_1$, a nie przez jakieś konkretne wartości parametrów tego modelu, musimy całkować po parametrach, by pozbyć się $\theta$ z równania.  
+Co to znaczy dla wszystkich możliwych parametrów? Załóżmy, że mamy dwa modele regresji liniowej, różniące się tym, że jeden ma dodatkowy predyktor. Tak jak pisałem wcześniej w statystyce Bayesowskiej nie otrzymamy punktowych estymat parametrów $\theta$, ale ich rozkłady $P(\theta|y)$. Ponieważ jednak chcemy otrzymać jedną wartość - prawdopodobieństwo otrzymania danych wygenerowanych przez model $M_1$, a nie przez jakieś konkretne wartości parametrów tego modelu, musimy całkować po parametrach, by pozbyć się $\theta$ z równania.  
  
 Teraz zerknijmy na mianownik naszego równania zawierający $P(D)$. Tutaj sprawa się komplikuje, ponieważ by obliczyć $P(D)$ musielibyśmy całkować po wszystkich (nieskończenie wielu) możliwych modelach. Jego obliczenie jest w zasadzie niemożliwe zarówno analitycznie (jak wyznaczyć rozkład $P(M)$ dla wszystkich możliwych modeli), jak i numerycznie (ponieważ musielibyśmy wymyślić i policzyć te wszystkie modele).
 
@@ -79,9 +79,9 @@ $$ \underbrace{{\frac{P(M_1|D)}{P(M_2|D)}}}_{\text{stosunek a posteriori}} = \fr
  
 Robiąc tak, pozbywamy się konieczności obliczania $P(D)$! 
 
-### Czynnik Bayesowski 
+### czynnik Bayesowski 
 
-Jednak oceniając modele nie używamy stosunku prawdopodobieństw *posteriori*, lecz stosunku marginalnych wiarygodności nazywanym **Czynnikiem Bayesowskim**:
+Jednak oceniając modele nie używamy stosunku prawdopodobieństw *posteriori*, lecz stosunku marginalnych wiarygodności nazywanym **czynnikiem Bayesowskim**:
 
 $$BF_{12} = \frac{P(D|M_1)}{P(D|M_2)}$$
 
@@ -89,26 +89,26 @@ Jest tak dlatego, że stosunek prawdopodobieństw *a posteriori* zależy od dany
 
 $$ \underbrace{\frac{P(D|M_1)}{P(D|M_2)}}_{BF_{12}} = \underbrace{\frac{P(M_1|D)}{P(M_2|D)}}_{\text{stosunek posteriori }}:\underbrace{\frac{P(M_1)}{P(M_2)}}_{\text{stosunek a priori}}$$
 
-Co daje nam dodatkową interpretację czynnika Bayesowskiego. Jest on stosunkiem prawdopodobieństw *posteriori* podzielony przez stosunek prawdopodobieństw *a priori* naszych dwóch modeli. Mówi nam **o ile zmieniły się nasze przekonania** *a priori* **po zobaczeniu danych**. Innymi słowy, Czynnik Bayesowski mówi nam jak zmieniły się pod wpływem danych nasze początkowe przekonania co do tego, który model jest lepszy.
+Co daje nam dodatkową interpretację czynnika Bayesowskiego. Jest on stosunkiem prawdopodobieństw *posteriori* podzielony przez stosunek prawdopodobieństw *a priori* naszych dwóch modeli. Mówi nam **o ile zmieniły się nasze przekonania** *a priori* **po zobaczeniu danych**. Innymi słowy, czynnik Bayesowski mówi nam jak zmieniły się pod wpływem danych nasze początkowe przekonania co do tego, który model jest lepszy.
 
 Załóżmy, że przeprowadziliśmy analizę dwóch modeli i otrzymaliśmy $stosunek \ posteriori = 4$, faworyzujący pierwszy model. Jednak $BF_{12} = 0.5$, mówiąc nam, że drugi model wyprodukował obserwowane dane z dwa razy większym prawdopodobieństwem. Skąd taka rozbieżność? Wynika ze tego, że $stosunek \ a \ priori = 8$, od początku faworyzował pierwszy model.  
 
 Zwróćmy też uwagę, że jeśli przypiszemy modelom takie same prawdopodobieństwa *a priori*, stosunek *a posteriori* będzie się równał czynnikowi Bayesa. 
 
-### Czynnik Bayesowski a złożoność modelu
+### czynnik Bayesowski a złożoność modelu
 
-Czynnik Bayesowski w naturalny sposób karze za złożoność modelu, choć ta właściwość nie jest widoczna na pierwszy rzut oka. Żeby ją zwizualizować, wyobraźmy sobie, że $P(D|M)$ nie jest pojedyńczą wartością prawdopodobieństwa otrzymania zaobserwowanych danych, lecz rozkładem prawdopodobieństwa wygenerowania **wszystkich możliwych zbiorów danych**, przez model. Weźmy dwa takie rozkłady dla modeli: prostszego modelu - $M_1$ i bardziej złożonego $M_2$. Bardziej złożony model jest w stanie wygenerować więcej możliwych zbiorów danych niż prostszy, ponieważ jest bardziej elastyczny. 
+czynnik Bayesowski w naturalny sposób karze za złożoność modelu, choć ta właściwość nie jest widoczna na pierwszy rzut oka. Żeby ją zwizualizować, wyobraźmy sobie, że $P(D|M)$ nie jest pojedyńczą wartością prawdopodobieństwa otrzymania zaobserwowanych danych, lecz rozkładem prawdopodobieństwa wygenerowania **wszystkich możliwych zbiorów danych**, przez model. Weźmy dwa takie rozkłady dla modeli: prostszego modelu - $M_1$ i bardziej złożonego $M_2$. Bardziej złożony model jest w stanie wygenerować więcej możliwych zbiorów danych niż prostszy, ponieważ jest bardziej elastyczny. 
 
 ![](o.jpg)
 
-Całka prawdopodobieństw (pole pod wykresem) każdego z rozkładów musi wynosić 1 (z definicji rozkładów prawdopodobieństwa). Oznacza to, że dla przedziału $C_1$ model $M_1$ będzie miał zawsze większe prawdopodobieństwo wygenerowania danych niż $M_2$, w konsekwencji czynnik bayesa będzie faworyzował $M_1$. Logika stojąca za taka własnością $BF$ jest iście Occamowska. Zadajmy sobie pytanie, który z modeli ma większe prawdopodobieństwo wygenerowania danych w przedziale $C_1$ jeśli otrzymane przez nas dane mogą być wyjaśnione przez oba modele. Ten, który częściej będzie generował zbiory danych zawierające się w przedziale $C_1$, czyli $M_1$.
+Całka prawdopodobieństw (pole pod wykresem) każdego z rozkładów musi wynosić 1 (z definicji rozkładów prawdopodobieństwa). Oznacza to, że dla przedziału $C_1$ model $M_1$ będzie miał zawsze większe prawdopodobieństwo wygenerowania danych niż $M_2$, w konsekwencji czynnik Bayesa będzie faworyzował $M_1$. Logika stojąca za taka własnością $BF$ jest iście Occamowska. Zadajmy sobie pytanie, który z modeli ma większe prawdopodobieństwo wygenerowania danych w przedziale $C_1$ jeśli otrzymane przez nas dane mogą być wyjaśnione przez oba modele. Ten, który częściej będzie generował zbiory danych zawierające się w przedziale $C_1$, czyli $M_1$.
 
 
 ### Bayesian Point Null Hypothesis Testing
 
-Przypomnijmy sobie NHST (*Null Hypothesis Significance Testing*), które testuje hipotezy zerową i alternatywną. Hipoteza zerowa zwykle oznacza, że jakiś parametr $\delta = 0$, a hipoteza alternatywna, że $\delta \neq 0$. Czynnik Bayesa w naukach społecznych jest często wykorzystywany podobnym celu. Nazywa się to *Bayesian Point Null Hypothesis Testing* **(BPNHT)**. Testujemy model, który zakłada, że $\delta$ może przyjąć dowolną wartość, względem takiego, w którym jego wartość jest zerowa. **Takie podobieństwo pomiędzy tymi metodami nie jest przypadkowe i i obie metody dzielą pewne problemy, o czym wkrótce.**
+Przypomnijmy sobie NHST (*Null Hypothesis Significance Testing*), które testuje hipotezy zerową i alternatywną. Hipoteza zerowa zwykle oznacza, że jakiś parametr $\delta = 0$, a hipoteza alternatywna, że $\delta \neq 0$. czynnik Bayesa w naukach społecznych jest często wykorzystywany podobnym celu. Nazywa się to *Bayesian Point Null Hypothesis Testing* **(BPNHT)**. Testujemy model, który zakłada, że $\delta$ może przyjąć dowolną wartość, względem takiego, w którym jego wartość jest zerowa. **Takie podobieństwo pomiędzy tymi metodami nie jest przypadkowe i i obie metody dzielą pewne problemy, o czym wkrótce.**
 
-Jako przykład posłużymy się czynnikiem Bayesa do przeprowadzenia bayesowskiej wersji jednoczynnikowej analizy wariancji. Wygenerujmy sobie dane:
+Jako przykład posłużymy się czynnikiem Bayesa do przeprowadzenia Bayesowskiej wersji jednoczynnikowej analizy wariancji. Wygenerujmy sobie dane:
 
 ```{r}
 set.seed(123)
@@ -118,7 +118,7 @@ data = data.frame(id = 1:50, y = y, factor_a = factor_a)
 
 ```
 
-Ci z Was, którzy są zaznajomieni z klasyczną wersją analizy wariancji wiedzą, że Anova to specjalny przypadek regresji liniowej. Jest też idealnym przykładem do użycia czynnika bayesowskiego w praktyce, ponieważ polega na porównaniu modeli. Najprostszym modelem, naszym modelem zerowym, będzie model, który zawiera tylko stałą. Modelem bardziej skomplikowanym, który chcemy przetestować jest model zawierający dodatkowo współczynnik regresji dla czynnika a:
+Ci z Was, którzy są zaznajomieni z klasyczną wersją analizy wariancji wiedzą, że Anova to specjalny przypadek regresji liniowej. Jest też idealnym przykładem do użycia czynnika Bayesowskiego w praktyce, ponieważ polega na porównaniu modeli. Najprostszym modelem, naszym modelem zerowym, będzie model, który zawiera tylko stałą. Modelem bardziej skomplikowanym, który chcemy przetestować jest model zawierający dodatkowo współczynnik regresji dla czynnika a:
 
 $$\begin{eqnarray*}
 &  &
@@ -134,7 +134,7 @@ Jeśli $y$ nie jest powiązany z czynnikiem $X_a$, czynnik Bayesa powinien fawor
 
 Dla pewnych modeli, jeśli wybierzemy odpowiednie rozkłady *a priori*, możemy obliczyć $BF$ analitycznie. W przypadku bardziej skomplikowanych zdani jesteśmy na metody numeryczne. Niestety, dla wielu modeli estymacja $BF$ jest trudna i niełatwa do zastosowania w praktyce. 
 
-Istnieje jednak prosty sposób na obliczenie czynnika bayesowskiego dla modeli zagnieżdżonych (*nested models*), czyli takich, w których jeden model możemy traktować jako rozszerzenie drugiego. Popatrzmy na $M_0$ i $M_1$. Możemy przeformułować $M_0$ w następujący sposób:
+Istnieje jednak prosty sposób na obliczenie czynnika Bayesowskiego dla modeli zagnieżdżonych (*nested models*), czyli takich, w których jeden model możemy traktować jako rozszerzenie drugiego. Popatrzmy na $M_0$ i $M_1$. Możemy przeformułować $M_0$ w następujący sposób:
 
 $$M_0: \ \ y = \alpha + \beta*X_a, \  \ \beta = 0$$
 Teraz widzimy, że $M_0$ jest zagnieżdżony w $M_1$, to znaczy jest modelem $M_1$, którego wartość parametru $\beta_1$ została ustawiona jako stała.
@@ -266,11 +266,11 @@ Czyli wzór na średnią. Możemy więc przybliżyć wartość $P(D|M_i)$ losuj�
 
 ## Porównywanie modeli?
 
-Czynnik Bayesa wydaje się być niezłą metodą, którą można wykorzystać do wnioskowania statystycznego. Być może nawet pomoże nam on rozwiązać kryzys replikacyjny. Tak też pomyślało wielu, co skutkowało tym, że programy statystyczne takie jak np. JASP zwracają nam podsumowania bayesowskich analiz defaultowo w postaci Czynnika Bayesa. Również czasopisma naukowe często oczekują od autorów, jeśli Ci posługują się statystyką bayesowską, wyników w postaci czynników Bayesa. 
+czynnik Bayesa wydaje się być niezłą metodą, którą można wykorzystać do wnioskowania statystycznego. Być może nawet pomoże nam on rozwiązać kryzys replikacyjny. Tak też pomyślało wielu, co skutkowało tym, że programy statystyczne takie jak np. JASP zwracają nam podsumowania Bayesowskich analiz defaultowo w postaci czynnika Bayesa. Również czasopisma naukowe często oczekują od autorów, jeśli Ci posługują się statystyką Bayesowską, wyników w postaci czynników Bayesa. 
 
-Niektóre czasopisma wręcz wymagają czynników Bayesa jako metody przeciwdziałającej kryzysowi replikacyjnemu (pisałem o kryzysie replikacyjnym trochę <span style="color:blue">[tutaj](https://revan-tech.github.io/posts/2022-01-15-seria-jak-rozumie-nauk-metodologia-bada-i-statystyka/)</span>). Skoro określono algorytm weryfikacji hipotez statystycznych w statystyce bayesowskiej (rzekomo skuteczniejszy od statystyki częstosciowej), możemy wreszcie wrócić do pracy, nie martwiąc się o problem replikacji. 
+Niektóre czasopisma wręcz wymagają czynników Bayesa jako metody przeciwdziałającej kryzysowi replikacyjnemu (pisałem o kryzysie replikacyjnym trochę <span style="color:blue">[tutaj](https://revan-tech.github.io/posts/2022-01-15-seria-jak-rozumie-nauk-metodologia-bada-i-statystyka/)</span>). Skoro określono algorytm weryfikacji hipotez statystycznych w statystyce Bayesowskiej (rzekomo skuteczniejszy od statystyki częstosciowej), możemy wreszcie wrócić do pracy, nie martwiąc się o problem replikacji. 
 
-Niestety, jak to zwykle okazuje, rzeczywistość nie jest taka różowa. **Czynnik Bayesa jest kontrowersyjny wśród statystyków**. Różnice w podejściach możemy zauważyć na przykład w zaciętych dysputach Davida Mackaya z Adrew Gelmanem. Mackay napisał doktorat wykazujący właściwość czynnika bayesa do karania skomplikowanych modeli, którą omówiliśmy wcześniej. Andrew Gelman i inni wykazali wiele niedociągnięć i problemów związanych z czynnikiem Bayesa zwłaszcza w kontekście *Bayesian Point Null Hypothesis Testing*. 
+Niestety, jak to zwykle okazuje, rzeczywistość nie jest taka różowa. **czynnik Bayesa jest kontrowersyjny wśród statystyków**. Różnice w podejściach możemy zauważyć na przykład w zaciętych dysputach Davida Mackaya z Adrew Gelmanem. Mackay napisał doktorat wykazujący właściwość czynnika Bayesa do karania skomplikowanych modeli, którą omówiliśmy wcześniej. Andrew Gelman i inni wykazali wiele niedociągnięć i problemów związanych z czynnikiem Bayesa zwłaszcza w kontekście *Bayesian Point Null Hypothesis Testing*. 
 
 
 
@@ -279,13 +279,13 @@ Niestety, jak to zwykle okazuje, rzeczywistość nie jest taka różowa. **Czynn
 Rzućmy okiem na kilka najważniejszych zastrzeżeń. To, co ważne, to fakt nie wszystkie z nich są na pierwszy rzut oka oczywiste. 
 
 
-### Czynnik Bayesa nie mierzy czy model jest prawdziwy
+### czynnik Bayesa nie mierzy czy model jest prawdziwy
 
-Czynnik bayesowski jest stosunkiem marginalnej wiarygodności dwóch modeli, czyli o ile bardziej jest prawdopodobne, że jeden z modeli wyprodukował obserwowane dane niż drugi. Nie mówi nam on w żaden sposób o tym, jak dobre te modele w absolutnym sensie [@gelman1995avoiding]. Możemy być w sytuacji, w której czynnik Bayesa bardzo faworyzuje jeden z modeli, ale oba modele są fatalnie dopasowane do danych.  
+czynnik Bayesowski jest stosunkiem marginalnej wiarygodności dwóch modeli, czyli o ile bardziej jest prawdopodobne, że jeden z modeli wyprodukował obserwowane dane niż drugi. Nie mówi nam on w żaden sposób o tym, jak dobre te modele w absolutnym sensie [@gelman1995avoiding]. Możemy być w sytuacji, w której czynnik Bayesa bardzo faworyzuje jeden z modeli, ale oba modele są fatalnie dopasowane do danych.  
 
 W konsekwencji jeśli stosujemy sposób wnioskowania oparty na testowaniu hipotezy zerowej i alternatywnej (tak jak zrobiliśmy wyżej w przypadku Anovy), zasadniczo czynnik Bayesa nie mówi nam więcej niż p-value bez spojrzenia na wielkość efektu. By zbadać dopasowanie modelu potrzebujemy więc przeanalizować rozkłady *posteriori* parametrów.  
 
-### Czynnik Bayesowski jest wrażliwy na rozkłady *a priori* parametrów modelu
+### czynnik Bayesowski jest wrażliwy na rozkłady *a priori* parametrów modelu
 
 Rozkład *posteriori* parametrów $\theta$ jest niezależny od rozkładów *a prior* tychże, gdy liczba obserwacji dąży do nieskończoności. 
 
@@ -296,7 +296,7 @@ Tak jak pokazaliśmy w pierwszej części tutorialu, gdy liczba obserwacji wzras
 $$P(D|M) \approx P(D|\theta_{map}, M)P(\theta_{map}|M)\sigma_{\theta|D}$$
 Gdzie $\theta_{map} = \arg \max_{\theta} P(\theta|D,M)$ to *maximum posteriori approximation*, czyli takie $\theta$, dla którego prawdopodobieństwo *a posteriori* jest największe. Z kolei $\sigma_{\theta|D}$ to odchylenie standardowe $P(\theta|D,M)$. 
 
-W konsekwencji czynnik bayesowski zależy od *a priori* rozkładów parametru modelu $P(\theta_{map}|M)$. W przypadku gdy użyjemy nieinformatywnego rozkładu *a priori* dla $\theta$, rozkładu jednostajnego o szerokości $\sigma_{\theta}$, wtedy wzór upraszcza się do 
+W konsekwencji czynnik Bayesowski zależy od *a priori* rozkładów parametru modelu $P(\theta_{map}|M)$. W przypadku gdy użyjemy nieinformatywnego rozkładu *a priori* dla $\theta$, rozkładu jednostajnego o szerokości $\sigma_{\theta}$, wtedy wzór upraszcza się do 
 
 $$P(D|M) \approx P(D|\theta_{map}, M)\frac{\sigma_{\theta|D}}{\sigma_{\theta}}$$
 
@@ -304,18 +304,18 @@ Im bardziej chcemy by dane przemówiły za siebie (im bardziej nieinformatywny r
 
 ### Rozkłady *posteriori* parametrów nie muszą się zgadzać z czynnikiem Bayesa
 
-W statystyce częstościowej p-value < 0.05 dla parametru oznacza odrzucenie hipotezy zerowej. Jednak w przypadku analizy bayesowskiej możemy spotkać się z sytuacjami, w których czynnik Bayesa sugeruje przyjęcie modelu zerowego, jednak interesujący nas parametr w modelu alternatywnym nie zawiera w 95% przedziale wiarygodności, i vice versa [@kruschke2018bayesian]. Ta własność czynnika Bayesa jest często nieintuicyjna, ponieważ przenosimy nasze oczekiwania ze statystyki częstościowej. 
+W statystyce częstościowej p-value < 0.05 dla parametru oznacza odrzucenie hipotezy zerowej. Jednak w przypadku analizy Bayesowskiej możemy spotkać się z sytuacjami, w których czynnik Bayesa sugeruje przyjęcie modelu zerowego, jednak interesujący nas parametr w modelu alternatywnym nie zawiera w 95% przedziale wiarygodności, i vice versa [@kruschke2018bayesian]. Ta własność czynnika Bayesa jest często nieintuicyjna, ponieważ przenosimy nasze oczekiwania ze statystyki częstościowej. 
 
-### Czynnik Bayesa a prawdopodobieństwo braku efektu
+### czynnik Bayesa a prawdopodobieństwo braku efektu
 
 Często się mówi, że by wnioskować o braku efektu musimy użyć statystyki Bayesowskiej, ponieważ w statystyce klasycznej możemy mówić co najwyżej o braku dowodów na istnienie efektu. Niestety, przypadku BPNHT, pojawia się pewien problem, ponieważ czynnik Bayesa jest wrażliwy na wielkość próby [@morey2011bayes]. 
 
 By zobaczyć to na własne oczy posłużymy się przykładem. Załóżmy, że zebraliśmy dane, które mają rozkład normalny $y \sim N(\mu,\sigma)$, ze znanym odchyleniem standardowym $\sigma = 5$. Chcemy przetestować dwa modele w myśl BPNHT: $M_0:  \mu = 0$ i $M_1: \mu \sim U(-\infty,+\infty)$. Czyli model zakładający, że wartość $\mu = 0$ i model, który zakada, że każda wartość $\mu$ jest równie prawdopodobna. 
 
-Dokładny czynnik Bayesa dla tych dwóch modeli, dane jest wzorem^[Dowód możecie znaleść w suplemencie B do tego artykułu [@tendeiro2019review]]:
+Dokładny czynnik Bayesa dla tych dwóch modeli dany jest wzorem^[Dowód możecie znaleść w suplemencie B do tego artykułu [@tendeiro2019review]]:
 
-$$BF_{10} = \frac{\sqrt{2\pi}\sigma}{\sqrt{n}}e^{(\frac{\overline{\text{Y}}^2n}{2\sigma})}$$
-Gdzie $\overline{\text{Y}}$ to średnia w próbie. Już we wzorze możemy zobaczyć, że ta wartość będzie coraz większa, gdy $n$ rośnie. Zobaczmy na wykresie jak wyglądają wartości czynnika Bayesa dla ustalonych wartości $\overline{\text{Y}}$:
+$$BF_{10} = \frac{\sqrt{2\pi}\sigma}{\sqrt{n}}e^{(\frac{\overline{\text{y}}^2n}{2\sigma})}$$
+Gdzie $\overline{\text{y}}$ to średnia w próbie. Już we wzorze możemy zobaczyć, że ta wartość będzie coraz większa, gdy $n$ rośnie. Zobaczmy na wykresie jak wyglądają wartości czynnika Bayesa dla ustalonych wartości $\overline{\text{y}}$:
 
 ```{r,fig.align='center'}
 BF = function(sample_size,sample_mean, sd){
@@ -347,13 +347,13 @@ Nie oznacza jednak, że statystyka Bayesowska nam na to nie pozwala. Jeśli rozk
 
 Dogłębne omówienie wyżej wymienionych problemów możecie znaleźć w artykule *"A Review of Issues About Null Hypothesis Bayesian Testing"* [@tendeiro2019review].
 
-![Alternatywna rzeczywistość, w której, w miejsce statystyki częstościowej, statystyka Bayesowska zdominowała naukę. Grafika skradziona ze slajdów Richarda Moreya.](bayes.jpg#center){width=75%}
+![Alternatywna rzeczywistość, w której, w miejsce statystyki częstościowej, statystyka Bayesowska zdominowała naukę. Grafika skradziona ze slajdów Richarda Moreya.](Bayes.jpg#center){width=75%}
 
 Z jednej strony czynnik Bayesa pozwala na bezpośrednie porównanie prawdopodobieństwa wyprodukowania danych przez cały model, a nie tylko punktowe wartości parametrów. Jednocześnie w naturalny sposób karze złożoność modelu, co w innych miarach dopasowania modelu takich jak na przykład AIC, próbujemy robić estymując złożoność poprzez liczbę wolnych parametrów. 
 
 Jednakże, jak widzimy, czynnik Bayesa jest miarą, która również słabe strony, nie jest więc cudownym lekiem na statystyczne bolączki. Z tego miejsca mamy dwie możliwości. Możemy używać czynnika Bayesa rozważnie, czyli: 
 
-- Ostrożnie dobierać rozkłady *a priori* parametrów modelu
+- Ostrożnie dobierać rozkłady *a priori* parametrów modelu.
 - Przeprowadzać analizę wrażliwość (*sensitivity analysis*), tzn. sprawdzić jak bardzo wartość czynnika Bayesa ulega zmianie, gdy użyjemy innych rozkładów *a priori* parametrów. Niestety, konsekwencją tego, że czynnik Bayesa jest trudny do policzenia, jest to żmudny proces. 
 - Nie raportować czynnika Bayesa samotnie, ale także miary rozkładu parametrów *a posteriori*.
 
@@ -369,5 +369,8 @@ Unikać testowania przy pomocy BPNHT zasadności pojedynczego modelu. Prównywan
 Dowiedzieliśmy się czym jest czynnik Bayesowski i przy okazji omówiliśmy kontrowersje wokół niego. Mamy już intuicję na temat statystyki Bayesowskiej, estymacji modeli i wnioskowania. Fajnie, by było wreszcie coś policzyć po Bayesowsku co nie jest prostym modelem liniowym. Dlatego w następnej części przyjrzymy się jednej z ciekawszych możliwości statystyki Bayesowskiej - modelom hierarchicznym. 
 
 Na koniec dodam, że czynnik Bayesowski, p-value ani żadna inna statystyka nie jest rozwiązaniem kryzysu replikacyjnego. Nie dlatego, że te miary obarczone są wadami, tylko dlatego, że prawdziwe powody leżą gdzie indziej. Badacze czasami naiwnie stosują statystykę, czasami recenzenci wymagają od badaczy stosowania utartych, choć nieadekwatnych procedur. Dodatkowo system ewaluacji pracowników naukowych wymaga od nich by publikowali dużo, a czasopisma naukowe wymagają by publikowali badania świadczące o istnieniu efektu, raczej niż o jego braku. Bez zaadresowania tych problemów, nie sądzę by jakakolwiek statystyczny test rozwiązał problem replikacji w nauce. 
+
+
+
 
 

@@ -1,7 +1,6 @@
 ---
 title: ""
-description: |
-  Some additional details about the blog
+description: 
 listing: 
   posts:
     - 2023-01-12-bayes-factor
