@@ -1598,7 +1598,7 @@ M_1: \ \ y = \alpha + \beta*X_a \\
 <h3 id="savage-dickey-density-ratio">Savage-Dickey density ratio</h3>
 <p>Dla pewnych modeli, jeśli wybierzemy odpowiednie rozkłady <em>a priori</em>, możemy obliczyć <span class="math inline">\(BF\)</span> analitycznie. W przypadku bardziej skomplikowanych zdani jesteśmy na metody numeryczne. Niestety, dla wielu modeli estymacja <span class="math inline">\(BF\)</span> jest trudna i niełatwa do zastosowania w praktyce.</p>
 <p>Istnieje jednak prosty sposób na obliczenie czynnika Bayesowskiego dla modeli zagnieżdżonych (<em>nested models</em>), czyli takich, w których jeden model możemy traktować jako rozszerzenie drugiego. Popatrzmy na <span class="math inline">\(M_0\)</span> i <span class="math inline">\(M_1\)</span>. Możemy przeformułować <span class="math inline">\(M_0\)</span> w następujący sposób:</p>
-<p><span class="math display">\[M_0: \ \ y = \alpha + \beta*X_a, \  \ \beta = 0\]</span> Teraz widzimy, że <span class="math inline">\(M_0\)</span> jest zagnieżdżony w <span class="math inline">\(M_1\)</span>, to znaczy jest modelem <span class="math inline">\(M_1\)</span>, którego wartość parametru <span class="math inline">\(\beta_1\)</span> została ustawiona jako stała.</p>
+<p><span class="math display">\[M_0: \ \ y = \alpha + \beta*X_a, \  \ \beta = 0\]</span> Teraz widzimy, że <span class="math inline">\(M_0\)</span> jest zagnieżdżony w <span class="math inline">\(M_1\)</span>, to znaczy jest modelem <span class="math inline">\(M_1\)</span>, którego wartość parametru <span class="math inline">\(\beta\)</span> została ustawiona jako stała.</p>
 <p>Generalnie, mając dwa modele z parametrami <span class="math inline">\(\varphi\)</span> i <span class="math inline">\(\delta\)</span>, takie, że <span class="math inline">\(M_0:\delta=\delta_0,\varphi\)</span> i <span class="math inline">\(M_1:\delta,\varphi\)</span>, które spełniają warunek <span class="math inline">\(p(\varphi\mid M_0) = p(\varphi\mid \delta=\delta_0,M_1)\)</span>, możemy obliczyć <span class="math inline">\(BF_{01}\)</span> w następujący sposób:</p>
 <span class="math display">\[\text{BF}_{01} = \frac{p(\delta=\delta_0\mid y,M_1)}{p(\delta=\delta_0\mid M_1)}\]</span>
 <details>
@@ -1687,7 +1687,7 @@ p(y \mid \delta=\delta_0,M_1) = \frac{p(\delta=\delta_0\mid y,M_1) \, p(y \mid M
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='va'>posterior_beta_0</span><span class='op'>/</span><span class='va'>prior_beta_0</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>[1] 3.860927</code></pre>
+<pre><code>[1] 3.873367</code></pre>
 </div>
 <p>Otrzymaliśmy wartość <span class="math inline">\(BF_{10}\)</span> wskazującą to, że porównując te dwa modele, jest ca. 4 razy bardziej prawdopodobne, że <span class="math inline">\(M_1\)</span> wyprodukował obserwowane dane niż <span class="math inline">\(M_0\)</span>. Dużo? Mało? Jedna z propozycji interpretacji <span class="math inline">\(BF\)</span> jest następująca <span class="citation" data-cites="kass1995bayes">(<a href="#ref-kass1995bayes" role="doc-biblioref">Kass &amp; Raftery, 1995</a>)</span>:</p>
 <div class="layout-chunk" data-layout="l-body">

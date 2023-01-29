@@ -137,7 +137,7 @@ Dla pewnych modeli, jeśli wybierzemy odpowiednie rozkłady *a priori*, możemy 
 Istnieje jednak prosty sposób na obliczenie czynnika Bayesowskiego dla modeli zagnieżdżonych (*nested models*), czyli takich, w których jeden model możemy traktować jako rozszerzenie drugiego. Popatrzmy na $M_0$ i $M_1$. Możemy przeformułować $M_0$ w następujący sposób:
 
 $$M_0: \ \ y = \alpha + \beta*X_a, \  \ \beta = 0$$
-Teraz widzimy, że $M_0$ jest zagnieżdżony w $M_1$, to znaczy jest modelem $M_1$, którego wartość parametru $\beta_1$ została ustawiona jako stała.
+Teraz widzimy, że $M_0$ jest zagnieżdżony w $M_1$, to znaczy jest modelem $M_1$, którego wartość parametru $\beta$ została ustawiona jako stała.
 
 Generalnie, mając dwa modele z parametrami $\varphi$ i $\delta$, takie, że $M_0:\delta=\delta_0,\varphi$ i $M_1:\delta,\varphi$, które spełniają warunek $p(\varphi\mid M_0) = p(\varphi\mid \delta=\delta_0,M_1)$, możemy obliczyć $BF_{01}$ w następujący sposób: 
 
