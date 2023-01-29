@@ -314,7 +314,7 @@ By zobaczyć to na własne oczy posłużymy się przykładem. Załóżmy, że ze
 
 Dokładny czynnik Bayesa dla tych dwóch modeli dany jest wzorem^[Dowód możecie znaleść w suplemencie B do tego artykułu [@tendeiro2019review]]:
 
-$$BF_{10} = \frac{\sqrt{2\pi}\sigma}{\sqrt{n}}e^{(\frac{\overline{\text{y}}^2n}{2\sigma})}$$
+$$BF_{10} = \frac{\sqrt{n}}{\sqrt{2\pi}\sigma}e^{(\frac{\overline{\text{y}}^2n}{2\sigma})}$$
 Gdzie $\overline{\text{y}}$ to średnia w próbie. Już we wzorze możemy zobaczyć, że ta wartość będzie coraz większa, gdy $n$ rośnie. Zobaczmy na wykresie jak wyglądają wartości czynnika Bayesa dla ustalonych wartości $\overline{\text{y}}$:
 
 ```{r,fig.align='center'}
