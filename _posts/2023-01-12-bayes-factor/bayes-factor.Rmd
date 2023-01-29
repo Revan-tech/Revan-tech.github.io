@@ -192,7 +192,7 @@ prior_beta_0 = dnorm(0,0,10)
 ```
 
 
-Nasz model w JAGS będzie wyglądał tak: 
+Nasz model w JAGS (pisałem o nim <span style="color:blue">[tutaj](https://revan-tech.github.io/posts/2022-12-26-poznajcie-jags/)</span>)) będzie wyglądał tak: 
 
 ```{r}
 m1 = '
