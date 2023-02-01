@@ -1,7 +1,7 @@
 ---
 title: "Tutorial Statystyki Bayesowskiej"
 description: |
-  Część III: czynnik Bayesowski 
+  Część III: Czynnik Bayesowski 
 preview: "Statystyczne_Dygresje2.jpg"
 author:
   - name: Szymon Mąka
@@ -270,7 +270,7 @@ Czynnik Bayesa wydaje się być niezłą metodą, którą można wykorzystać do
 
 Niektóre czasopisma wręcz wymagają czynników Bayesa jako metody przeciwdziałającej kryzysowi replikacyjnemu (pisałem o kryzysie replikacyjnym trochę <span style="color:blue">[tutaj](https://revan-tech.github.io/posts/2022-01-15-seria-jak-rozumie-nauk-metodologia-bada-i-statystyka/)</span>). Skoro określono algorytm weryfikacji hipotez statystycznych w statystyce Bayesowskiej (rzekomo skuteczniejszy od statystyki częstosciowej), możemy wreszcie wrócić do pracy, nie martwiąc się o problem replikacji. 
 
-Niestety, jak to zwykle okazuje, rzeczywistość nie jest taka różowa. **Czynnik Bayesa jest kontrowersyjny wśród statystyków**. Różnice w podejściach możemy zauważyć na przykład w zaciętych dysputach Davida Mackaya z Adrew Gelmanem. Mackay napisał doktorat wykazujący właściwość czynnika Bayesa do karania skomplikowanych modeli, którą omówiliśmy wcześniej. Andrew Gelman i inni wykazali wiele niedociągnięć i problemów związanych z czynnikiem Bayesa zwłaszcza w kontekście *Bayesian Point Null Hypothesis Testing*. 
+Niestety, jak to się zwykle okazuje, rzeczywistość nie jest taka różowa. **Czynnik Bayesa jest kontrowersyjny wśród statystyków**. Różnice w podejściach możemy zauważyć na przykład w zaciętych dysputach Davida Mackaya z Adrew Gelmanem. Mackay napisał doktorat wykazujący właściwość czynnika Bayesa do karania skomplikowanych modeli, którą omówiliśmy wcześniej. Andrew Gelman i inni wykazali wiele niedociągnięć i problemów związanych z czynnikiem Bayesa zwłaszcza w kontekście *Bayesian Point Null Hypothesis Testing*. 
 
 
 
