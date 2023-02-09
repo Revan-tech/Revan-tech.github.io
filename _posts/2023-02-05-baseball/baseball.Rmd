@@ -137,7 +137,7 @@ $$\text{Var}(\mathbf{x}) \leq \bar{x}(c-\bar{x})$$
 
 $$eta^2 = \frac{Var(Y)}{Var(X)} \le \frac{0.07(0.1-0.07)}{0.1971} = 0.01065$$
 
-może w najlepszym wypadku wyjaśnić 1% wariancji. Widzimy ze wzoru, że rozszerzanie przedziału, w którym znajdują się możliwe średnie graczy, będzie zwiększało procent możliwej do wyjaśnienia wariancji. 
+może w najlepszym wypadku wyjaśnić 1% wariancji. Widzimy ze wzoru, że zachowując wartość średniej sukcesów jako stałą, rozszerzanie przedziału, w którym znajdują się możliwe średnie graczy, będzie zwiększało procent możliwej do wyjaśnienia wariancji. 
 
 Wydaje mi się, że zdziwienie Abelsona wynikało z faktu, że spodziewał się, że procent wyjaśnionej wariancji w pojedyńczym sukcesie przez średnią gracza powinen być wysoki, ponieważ przewidujemy zachowanie na podstawie średniej miary tegoż zachowania, czyli jego średniej w dłuższym okresie (analgoicznie do neurotyzmu mającego przewidywać zachowania neurotyczne). 
 
@@ -170,7 +170,7 @@ plot(data2_plot$mean,data2_plot$skill)
 cat(paste("Korelacja wynosi ", round(cor(data2_plot$skill,data2_plot$mean),3),".", sep = ""))
 ```
 
-Jak widzimy korelacja jest większa w drugiej symulacji, mimo, że związek pomiędzy zmiennymi jest taki sam. Mamy tu do czynienia ze zjawiskiem Restricted Range Corelation - czyli sytuacji w której zmienna w próbie ma mniejszą wariancję niż w populacji. Ponieważ obserwacje są do siebie bardziej podobne, (są bliżej siebie na wykresie) wpływ błędu jest większy. Przybliżmy teraz drugi wykres tak, by widzieć wartości prawdziwej średniej z zakresu między 0.2 a 0.3.
+Jak widzimy korelacja jest większa w drugiej symulacji, mimo, że związek pomiędzy zmiennymi jest taki sam. Mamy tu do czynienia ze zjawiskiem **Restricted Range Corelation** - czyli sytuacji w której zmienna w próbie ma mniejszą wariancję niż w populacji. Ponieważ obserwacje są do siebie bardziej podobne (są bliżej siebie na wykresie), wpływ błędu jest większy. Przybliżmy teraz drugi wykres tak, by widzieć wartości prawdziwej średniej z zakresu między 0.2 a 0.3.
 
 ```{r}
 data3_plot = data2_plot %>% filter(skill >0.2 & skill < 0.3)
