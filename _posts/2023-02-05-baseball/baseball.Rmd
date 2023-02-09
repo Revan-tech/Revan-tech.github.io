@@ -6,7 +6,7 @@ preview: "Statystyczne_Dygresje.jpg"
 author:
   - name: Szymon Mąka
     url: {https://revan-tech.github.io/kontakt.html}
-date: 02-05-2023
+date: 08-02-2023
 output:
   distill::distill_article:
     self_contained: false
@@ -135,9 +135,9 @@ $$\text{Var}(\mathbf{x}) \leq \bar{x}(c-\bar{x})$$
 
 średnia uderzeń graczy Abelsona  
 
-$$eta^2 = \frac{Var(Y)}{Var(X)} \le \frac{0.7(0.1-0.7)}{0.1971} = 0.01065$$
+$$eta^2 = \frac{Var(Y)}{Var(X)} \le \frac{0.07(0.1-0.07)}{0.1971} = 0.01065$$
 
-może w najlepszym wypadku wyjaśnić 1% wariancji. Widzimy ze wzoru, że zachowując wartość średniej sukcesów jako stałą, rozszerzanie przedziału, w którym znajdują się możliwe średnie graczy, będzie zwiększało procent możliwej do wyjaśnienia wariancji. 
+może w najlepszym wypadku wyjaśnić 1% wariancji. Widzimy ze wzoru, że rozszerzanie przedziału, w którym znajdują się możliwe średnie graczy, będzie zwiększało procent możliwej do wyjaśnienia wariancji. 
 
 Wydaje mi się, że zdziwienie Abelsona wynikało z faktu, że spodziewał się, że procent wyjaśnionej wariancji w pojedyńczym sukcesie przez średnią gracza powinen być wysoki, ponieważ przewidujemy zachowanie na podstawie średniej miary tegoż zachowania, czyli jego średniej w dłuższym okresie (analgoicznie do neurotyzmu mającego przewidywać zachowania neurotyczne). 
 
