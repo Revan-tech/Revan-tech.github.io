@@ -317,6 +317,27 @@ O retorycznej analizie emocji można posłuchać (!) w [podkaście Artykuły nau
 </aside>
 
 
+
+
+<details>
+<summary><span style="color: blue;">Pozyskanie publiczności, czyli Captatio benevolentiae</span></summary>
+<hr>
+Skoro przy emocjach, warto wspomnieć o toposie pozyskiwania dobrej woli (*captatio benevolentiae*) publiczności, czyli schlebieniu jej - pośrednio lub bezpośrednio. Przykłady: <br>
+"Zrozumieją mnie wszyscy, którzy lubują się w prawdzie”, <br>
+"Zwracam się do tych z was, którym dobro tego kraju leży na sercu”. <br>
+
+Alternatywnie, schlebić można z pomocą negacji: <br>
+"Te słowa nie są skierowane do ludzi małej wiary, lecz do tych, którzy z nadzieją patrzą w przyszłość”. <br>
+
+Nic oczywiście nie stoi na przeszkodzie, by sekcja captatio była dłuższa niż jednozdaniowe pochwały. Nie musi być też na początku przemowy, jeśli zostanie wpleciona w różne elementy struktury tekstu. W dalszej części poradnika poznacie litoty -- środek, który wydaje się działać szczególnie dobrze, w nastawianiu do siebie odbiorców, ponieważ może służyć chwaleniu, przy zachowaniu skromności: <br>
+"Jako, że zebraliśmy się w audytorium uniwersyteckim, mogę założyć, że mam do czynienia z ludźmi naprawdę **niegłupimi**",<br>
+"Nie zebrałbym was na to spotkanie, gdybym nie był pewien, że macie **pewien wpływ** na sprawy kraju" - sytuacja spotkania najważniejszych osób - litotą jest "pewien wpływ", w znaczeniu - bardzo duży wpływ. <br>
+
+Za przypomnienie mi o istotności tej techniki, a także za przykłady - dziękuję serdecznie lubującej się w prawdzie osobie z Reddita <3
+<hr>
+</details>
+
+
 # B. Kompozycja
 *Dyspozycja, konstrukcja*
 
@@ -658,7 +679,7 @@ Co do metafor w komunikacji naukowej - nie przesadzajmy z nimi. Jest ryzyko, że
 
 ![Wizualna reprezentacja metonimii "Rusz głową". Słowo *rusz* wprowadza też dodatkowy charakter metaforyczny](met1.png){width=100%}
 
-Typów metonimii wyróżnia się wiele, ze względu na wewnętrzny rodzaj operacji, np. metonimia narzędzia: “pierwsza gitara w kraju” - na najlepszą osobę grającą na gitarze. Jednak zamiast zapamiętywać wszystkie rodzaje, lepiej jest nauczyć się rozpoznawać bardziej ogólne sytuacje, w których doszło do transferu cech. Zwrócę uwagę tylko na jeden szczególny przypadek metonimii, czyli **synekdochy**. Są to metonimie część za całość oraz całość za część. Mogą się odwoływać do ludzkiego ciała, społeczeństwa, organizacji/instytucji, pojazdów itd. Metonimii używamy bez przerwy, nawet o tym nie myśląc. Z retorycznego punktu widzenia, mogą być użyteczne przy naświetlaniu pewnych zjawisk lub cech związanych z przedmiotem. Dobierane, poprzez przyległość semantyczną, cechy nie są wybierane przypadkowo - są celowe. Nie powiemy “społeczeństwo przyjechało”, kiedy w parku zjawią się funkcjonariusze policji. Owszem, są częścią społeczeństwa - ale taki zwrot nie miałby komunikacyjnego sensu.
+Typów metonimii wyróżnia się wiele, ze względu na wewnętrzny rodzaj operacji, np. metonimia narzędzia: “pierwsza gitara w kraju” - na najlepszą osobę grającą na gitarze. Jednak zamiast zapamiętywać wszystkie rodzaje, lepiej jest nauczyć się rozpoznawać bardziej ogólne sytuacje, w których doszło do transferu cech. Zwrócę uwagę tylko na jeden szczególny przypadek metonimii, czyli **synekdochy**. Są to metonimie część za całość oraz całość za część. Mogą się odwoływać do ludzkiego ciała, społeczeństwa, organizacji/instytucji, pojazdów itd. Metonimii używamy bez przerwy, nawet o tym nie myśląc. Z retorycznego punktu widzenia, mogą być użyteczne przy naświetlaniu pewnych zjawisk lub cech związanych z przedmiotem. Dobierane, poprzez przyległość semantyczną, cechy nie są wybierane przypadkowo - są celowe. Nie powiemy “społeczeństwo przyjechało”, kiedy w parku zjawią się funkcjonariusze policji. Owszem, są częścią społeczeństwa - ale taki zwrot nie miałby komunikacyjnego sensu. "Polak idzie na wojnę" jest właśnie przykładem synekdochy.
 
 ![Wizualna reprezentacja metonimii "Policja przyjechała"](met2.png){width=100%}
 
