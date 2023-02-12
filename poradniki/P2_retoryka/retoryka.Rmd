@@ -679,7 +679,8 @@ Co do metafor w komunikacji naukowej - nie przesadzajmy z nimi. Jest ryzyko, że
 
 ![Wizualna reprezentacja metonimii "Rusz głową". Słowo *rusz* wprowadza też dodatkowy charakter metaforyczny](met1.png){width=100%}
 
-Typów metonimii wyróżnia się wiele, ze względu na wewnętrzny rodzaj operacji, np. metonimia narzędzia: “pierwsza gitara w kraju” - na najlepszą osobę grającą na gitarze. Jednak zamiast zapamiętywać wszystkie rodzaje, lepiej jest nauczyć się rozpoznawać bardziej ogólne sytuacje, w których doszło do transferu cech. Zwrócę uwagę tylko na jeden szczególny przypadek metonimii, czyli **synekdochy**. Są to metonimie część za całość oraz całość za część. Mogą się odwoływać do ludzkiego ciała, społeczeństwa, organizacji/instytucji, pojazdów itd. Metonimii używamy bez przerwy, nawet o tym nie myśląc. Z retorycznego punktu widzenia, mogą być użyteczne przy naświetlaniu pewnych zjawisk lub cech związanych z przedmiotem. Dobierane, poprzez przyległość semantyczną, cechy nie są wybierane przypadkowo - są celowe. Nie powiemy “społeczeństwo przyjechało”, kiedy w parku zjawią się funkcjonariusze policji. Owszem, są częścią społeczeństwa - ale taki zwrot nie miałby komunikacyjnego sensu. "Polak idzie na wojnę" jest właśnie przykładem synekdochy.
+Typów metonimii wyróżnia się wiele, ze względu na wewnętrzny rodzaj operacji, np. metonimia narzędzia: “pierwsza gitara w kraju” - na najlepszą osobę grającą na gitarze. Jednak zamiast zapamiętywać wszystkie rodzaje, lepiej jest nauczyć się rozpoznawać bardziej ogólne sytuacje, w których doszło do transferu cech. Zwrócę uwagę tylko na jeden szczególny przypadek metonimii, czyli **synekdochy**. Są to metonimie część za całość oraz całość za część. Mogą się odwoływać do ludzkiego ciała, społeczeństwa, organizacji/instytucji, pojazdów itd ("Polak idzie na wojnę" jest właśnie przykładem synekdochy). <br>
+Metonimii używamy bez przerwy, nawet o tym nie myśląc. Z retorycznego punktu widzenia, mogą być użyteczne przy naświetlaniu pewnych zjawisk lub cech związanych z przedmiotem. Dobierane, poprzez przyległość semantyczną, cechy nie są wybierane przypadkowo - są celowe. Nie powiemy “społeczeństwo przyjechało”, kiedy w parku zjawią się funkcjonariusze policji. Owszem, są częścią społeczeństwa - ale taki zwrot nie miałby komunikacyjnego sensu. 
 
 ![Wizualna reprezentacja metonimii "Policja przyjechała"](met2.png){width=100%}
 
@@ -712,6 +713,7 @@ https://twojahistoria.pl/2019/08/06/niszczycielskie-pasozyty-i-szkodniki-jak-prz
 
 https://portal.abczdrowie.pl/kaczynski-o-imigrantach-sa-juz-objawy-cholery-pierwotniaki-pasozyty-wideo 
 
+Inne zastosowania pól semantycznych: <br>
 Tworzenie pozytywnych sieci skojarzeniowych (asocjacyjnych) dla produktów, przez agencje reklamowe. Wprowadzanie słownictwa martyrologicznego, języka ofiary, dla wywyższenia pozycji nacji. Stosowanie języka sukcesu w kulturze korporacyjnej. Promowanie toposu ciężkiej pracy, dla legitymizacji podziałów klasowych i rozbieżności majątkowych (“Gdybyś wcześniej wstawał, ciężej pracował…”).
 
 Wzbogacanie konceptualizacji można dokonywać przez **nagromadzenia**. Różny stosunek ilości rzeczowników, czasowników i przymiotników wpłynie na charakter tekstu. Nagromadzenie rzeczowników ugruntuje tekst, osadzi w konkrecie. Duże ilości czasowników i przysłówków zdynamizują tekst, nadadzą poczucie procesualności, ruchu, akcji. Przymiotniki nadadzą tekstowi kolor (mówiąc metaforycznie), sprawią, że wizualizacje będą wyraźniejsze. 
@@ -895,7 +897,7 @@ Nauczenie się czyjegoś **socjolektu** to nie jest łatwa sprawa (możliwa chyb
 Wprowadzałem tę formę kilkukrotnie w poradniku - w głównym tekście i w przykładach. Powiesz, że może momentami było to dość tandetne - ja na to odpowiem, że może i tak, ale ożywiło to tekst. Mowa z pewnością jest dla nas bardziej naturalnym środkiem przekazu, od tekstów naukowych. Szybciej nauczymy się tematu, dyskutując z przyjaciółmi na przerwie, niż z półtoragodzinnego wykładu, prowadzonego monotonnym głosem. Nadanie tekstowi cech dialogicznych, to nadanie mu **polifonii**, wielogłosowości. <br>
  — Czy chodzi o wprowadzenie formy, gatunku dialogu?<br>
  — Może o to chodzić, ale nie musi. Ujęcie tekstu w gatunek rozmowy na pewno będzie ciekawe, ale pytanie, czy nie będzie odwracać uwagi od sedna sprawy.<br>
- — Ale czy nie jest to manipulacja? Przecież autor kontroluje wypowiedzi wszystkie głosy dialogu, wymyślając je podczas pisania.<br>
+ — Ale czy nie jest to manipulacja? Przecież autor kontroluje w wypowiedzi wszystkie głosy dialogu, wymyślając je podczas pisania.<br>
  — Jak najbardziej. Jest to i eksperyment myślowy i sposób na perswazyjne przedstawienie argumentów. W retoryce taka figura nazywa się konkretnie [**prozopopeja**](https://pl.wikipedia.org/wiki/Prozopopeja) - uosabianie. Można wprowadzić i przeciwników i zwolenników, odnoszących się do argumentacji. Można wypowiadać się, uosabiając zmarłych, nieobecnych.<br>
  — A jaki to ma sens w komunikacji naukowej?<br>
  — Duży potencjał! Bo można uosabiać byty abstrakcyjne, przedmioty - personifikować je. Spróbujmy oddać głos atomom, planetom, klimatowi, dwutlenkowi węgla, chlorofilowi, trzcinom, kablom transmitującym dane, serwerom, ustrojom politycznym.<br>
