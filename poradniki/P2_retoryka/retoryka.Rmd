@@ -307,7 +307,7 @@ Mamy pecha, bo ewolucyjnie nie wykształciliśmy biologicznych sposobów radzeni
 <hr>
 </details>
 
-Omówmy się więc, że w komunikacji naukowej postaramy się jak najmniej grać na pierwotnych emocjach - w szczególności tych negatywnych. To nie znaczy, że nie powinniśmy wywoływać jakichkolwiek emocji! Przeciwnie! 
+Umówmy się więc, że w komunikacji naukowej postaramy się jak najmniej grać na pierwotnych emocjach - w szczególności tych negatywnych. To nie znaczy, że nie powinniśmy wywoływać jakichkolwiek emocji! Przeciwnie! 
 Spójrzmy na Koło emocji Plutchika. **Wzbudzać można zaciekawienie, zachwyt, zaskoczenie, podziw, oczekiwanie**. Można zachęcać do poszukiwania wewnętrznego spokoju i zadowolenia. W przypadku zagrożeń, takich jak zmiany klimatyczne, można wywoływać czujność, zaniepokojenie i złość - ale tylko do tego stopnia, by pozostawić miejsce na chęć dążenia do zmian i mimo wszystko - optymizm. <br>
 Najlepiej też, jeśli emocje są zniuansowane. Nasze emocje rzadko są “czyste”, częściej mierzymy się z trudnymi do określenia odcieniami wielu emocji. Czyjaś śmierć nie musi oznaczać tylko głębokiego smutku - może być mieszanką żałoby, zadumy, strachu, wściekłości na śmiertelność, radosnych wspomnień z przeszłości, niepewnego oczekiwania na kolejne dni itd. To coś, w czym literatura piękna, beletrystyka, jest zdecydowanie lepsza od retoryki i literatury popularnonaukowej. Warto podpatrzeć tam parę wzorców opisywania i wywoływania emocji. Przykładem bardzo specyficznej emocji z literatury jest głęboki kosmiczny, egzystencjalny lęk, wywoływany przez książki Lovecrafta. Lub - uczucie przygody u Tolkiena - nakładające się na antycypację, zainteresowanie (rozwojem wydarzeń) w modelu emocji Plutchika.
 
@@ -373,7 +373,7 @@ Ważne jest jedno - dostosuj kompozycję do możliwości poznawczych swoich odbi
 
 ## Argumentacja
 
-Celem logiki jest niepodważalność dowodów. Retoryka jest nieco luźniejsza w tym aspekcie, jej celem jest akceptowalność dowodów. Pracujemy na wiedzy prawdopodobnej. Zacznijmy rozumowania dedukcyjnego, czyli [sylogizmu](https://pl.wikipedia.org/wiki/Sylogizm).
+Celem logiki jest niepodważalność dowodów. Retoryka jest nieco luźniejsza w tym aspekcie, jej celem jest akceptowalność dowodów. Pracujemy na wiedzy prawdopodobnej. Zacznijmy od rozumowania dedukcyjnego, czyli [sylogizmu](https://pl.wikipedia.org/wiki/Sylogizm).
 
 Konstrukcja argumentu standardowego, sylogizmu, wygląda tak:
 ```
@@ -497,7 +497,7 @@ Nie umieszczam w tym poradniku technik erystycznych (nieuczciwych chwytów argum
 
 Podsumowując, sam nie jestem pewien, na ile klasyczne sposoby argumentacji mogą się przydać w komunikacji naukowej. Jest mała szansa, że natrafimy na czyste sylogizmy w przestrzeni publicznej. Poprawna argumentacja to raczej sposób myślenia i postawa, z której dopiero będą wynikać bardziej złożone narracje. Ucieleśniając te schematy, będziemy tworzyć lepsze merytorycznie materiały. Zyskamy też możliwość krytycznej oceny cudzych rozumowań. Współczesne dyskusje mają jednak inny charakter, niż starożytne - po pierwsze, wiemy dużo więcej. <br>
 Po drugie, mamy natychmiastowy dostęp do informacji. Po trzecie, wykształciliśmy metodę naukową (lub liczne metody naukowe), które w bardziej precyzyjny sposób zbliżają nas do “obiektywnej” rzeczywistości. Po czwarte, jesteśmy w stanie zrozumieć, że wiele ludzkich perspektyw tworzy wiele subiektywnych rzeczywistości - i pewnych rzeczy nie da się udowodnić na 100%. Czasami lepiej jest zaakceptować, że inne osoby mają inne widzenie świata - i to nie jest kwestia do udowadniania, tylko do zrozumienia. Dopiero z takiej pozycji można wychodzić do próby konsensusu, czyli porozumienia.<br>
-Ponadto, klasyczna retoryka kładzie duży nacisk na odkrywanie ciągów przyczynowo-skutkowych. Takie zależności bardzo trudno jest udowodnić we współczesnej nauce, w szczególności w przypadku szerokich zjawisk, takich jak procesy społeczne. Dlatego trzeba koniecznie podkreślić: korelacja to nie kauzacja! Współwystępowanie to nie przyczynowość! Warto zwracać na to szczególną uwagę, ponieważ badania korelacyjne często są przedstawiane w dyskusjach jako dowód na ścisły związek dwóch fenomenów. Tak nie musi być i często nie jest. Najbardziej uczciwa dyskusja powinna na dowolny temat powinna wyglądać więc tak:<br>
+Ponadto, klasyczna retoryka kładzie duży nacisk na odkrywanie ciągów przyczynowo-skutkowych. Takie zależności bardzo trudno jest udowodnić we współczesnej nauce, w szczególności w przypadku szerokich zjawisk, takich jak procesy społeczne. Dlatego trzeba koniecznie podkreślić: korelacja to nie kauzacja! Współwystępowanie to nie przyczynowość! Warto zwracać na to szczególną uwagę, ponieważ badania korelacyjne często są przedstawiane w dyskusjach jako dowód na ścisły związek dwóch fenomenów. Tak nie musi być i często nie jest. Najbardziej uczciwa dyskusja na dowolny temat powinna wyglądać więc tak:<br>
 “Może być tak albo tak, ciężko stwierdzić, wpływać może wiele czynników. Poczytajmy na ten temat i wymieńmy się informacjami”.
 
 ![Sprzedaż lodów powoduje ataki rekinów? A może to tylko korelacja?](corr.png){width=100%}
