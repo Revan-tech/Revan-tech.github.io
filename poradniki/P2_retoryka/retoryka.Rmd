@@ -14,7 +14,6 @@ output:
     toc_float: true
 ---
 
-
 <p align="justify">
 
 
@@ -33,6 +32,15 @@ output:
 **Czym nie jest ten poradnik?**<br>
 - podręcznikiem do retoryki, kompleksowym omówieniem teorii<br>
 - wprowadzeniem do retoryki arystotelesowskiej<br>
+<br>
+
+Poradnik jest dostępny w formie audio, <br>
+w podkaście **Artykuły naukowe czytane**:<br>
+
+[![Artykuły naukowe czytane](art.jpg){width=40%}](https://www.spreaker.com/episode/52760721)
+<br>(Podkast do przesłuchania na dowolnej platformie z podkastami, np. Google/Apple Podcasts, Spotify, Stitcher, Youtube)
+<br>[Posłuchaj](https://www.spreaker.com/episode/52760721)
+<br>[Dołącz](https://www.facebook.com/artykulynaukoweczytane/)
 
 <br>
 
@@ -341,6 +349,13 @@ Za przypomnienie mi o istotności tej techniki, a także za przykłady - dzięku
 # B. Kompozycja
 *Dyspozycja, konstrukcja*
 
+<p align="right">
+Audionarracja:<br>
+[![Artykuły naukowe czytane](art2.jpg){width=30%}](https://www.spreaker.com/episode/52766458)
+<br>[Posłuchaj sekcji Kompozycja](https://www.spreaker.com/episode/52766458)
+</p><br>
+
+
 Tekst trzeba skonstruować. Wykorzystajmy asocjacje architekturalne i metaforę PRZEKAZ RETORYCZNY TO BUDYNEK. Pisząc ten tekst, wiem mniej więcej co chcę przekazać, ale wcielenie tego w rzeczywisty tekst wymaga wysiłku i rozmyślania - co wrzucić do tej sekcji, co będzie pasować, które informacje są niezbędne, a które można odrzucić. Mam otwarte cztery pliki pdf z notatkami, dwa epuby, notatki na czytniku książek i kilkanaście zakładek w przeglądarce internetowej. Próbuję to złożyć w jakąś sensowną całość, jakbym leżał na podłodze pośród klocków lego i nieco otumaniony próbował zadecydować gdzie pójdą kolejne klocki, żeby zbudować katedrę, która się nie zawali i nie będzie wyglądać jak chaotyczny zlepek badziewia. Już poczytałem książki, już złapałem sens retoryki; ale zawarcie tego w nowej formie wcale nie jest proste. Co zrobić, żeby budynek był i ładny i funkcjonalny?
 
 Klasyczna retoryka proponuje następujący schemat wypowiedzi:<br>
@@ -624,6 +639,13 @@ Przykład:<br>
 
 # C. Elokucja / Styl / Tropy i figury
 *Środki językowe, stylistyczne*
+<br>
+
+<br><p align="right">
+Audionarracja:<br>
+[![Artykuły naukowe czytane](art3.jpg){width=30%}](https://www.spreaker.com/episode/52780672)
+<br>[Posłuchaj sekcji Elokucja](https://www.spreaker.com/episode/52780672)
+</p><br>
 
 Dział elokucji dotyczy stylu przekazu. Nie znaczy to, że elokucja ma funkcję wyłącznie dekoracyjną. Wręcz przeciwnie, wszystkie opisywane tu środki mają duży potencjał perswazyjny. W tym dziale odjadę najdalej od klasycznej retoryki, przywołując wiele terminów z różnych gałęzi współczesnej lingwistyki. Początkiem będą jednak -
 
