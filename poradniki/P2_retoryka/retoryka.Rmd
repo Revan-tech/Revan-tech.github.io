@@ -303,7 +303,7 @@ Oszustwo? Złość się!<br>
 Jedzenie? Radość!<br>
 Pleśń na jedzeniu? Obrzydzenie!<br>
 
-![“Using google scholar” - DALL-E](emocje.png){width=80%}
+![Koło emocji Plutchika](emocje.png){width=80%}
 [Źródło grafiki.](https://commons.m.wikimedia.org/wiki/File:Plutchiks-emotional-wheel.png)
 
 
