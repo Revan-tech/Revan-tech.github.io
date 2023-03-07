@@ -40,7 +40,7 @@ Przytłaczająca większość polskiej nauki została zaklęta w format PDF. Jes
 # Problem
 Główna zaleta formatu PDF (niemodyfikowalność) jest jednocześnie największą wadą, w kontekście pewnego, dość istotnego procesu – czytania. Jeśli narzucone formatowanie jest niewygodne do czytania, musimy to cierpliwie znieść. Jeśli używamy urządzenia, które niezbyt dobrze wyświetla pliki PDF – musimy to znieść. Jeśli układ dwu-, trzykolumnowy jest dla nas trudny do czytania – musimy to znieść. Jeśli edytorzy wybrali nieczytelną czcionkę i/lub skandalicznie małe odstępy pomiędzy wierszami – musimy to znieść.
 
-**Format tekstu nie powinien nie może być dodatkowym utrudnieniem, przy już i tak trudnej do zrozumienia treści**
+**Format tekstu <s>nie powinien</s> nie może być dodatkowym utrudnieniem, przy już i tak trudnej do zrozumienia treści**
 
 To może być irytujące dla osób sprawnych fizycznie i kognitywnie. Jednak dla osób niedowidzących, czy dla dyslektyków – to coś więcej niż irytacja. To już kwestia dostępności. Brak możliwości zwiększenia czcionki (lub zmiany czcionki na specjalnie dostosowaną do potrzeb) **może dosłownie być barierą, utrudniającą lub uniemożliwiającą dostęp do nauki**. 
 
