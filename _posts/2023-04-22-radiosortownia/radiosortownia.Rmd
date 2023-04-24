@@ -1,0 +1,90 @@
+---
+title: "Radio Sortownia"
+description: |
+  Czego słuchać podczas czytania tekstów naukowych?
+preview: "boom.png"
+author:
+  - name: Kamil Kopacewicz
+    url:
+      https://revan-tech.github.io/kontakt.html: {}
+date: 04-25-2023
+output:
+  distill::distill_article:
+    self_contained: false
+---
+*Post może być aktualizowany po publikacji -- jeśli pojawią się nowe ciekawe źródła, dodamy je.*
+
+![](bp.png){width=70%}
+
+Czego słuchać podczas czytania artykułów lub podczas nauki?
+Każdy może słuchać czego chce i tego co lubi. Temat zamknięty!
+
+Ale nie kończmy jeszcze. Wszyscy mamy jakieś preferencje co do muzyki (lub jej braku) do pracy i nauki. To może też zmieniać się w czasie -- o jednej porze dnia cisza i zatyczki, kiedy indziej jak najgłośniejszy pop, edm i top100 miesiąca.
+Jazz-metal, Motown, disco-polo, trap, french touch -- każdy gatunek jest dobry, jeśli działa.  Różne są też potrzeby. Możemy chcieć wprowadzić się w stan *flow*, kiedy jesteśmy hiper-kreatywni, łatwo łączymy wiele elementów i ogarniamy cały kontekst naraz. Albo, możemy dążyć do uzyskania głębokiego spokoju i wysokiej koncentracji (warto połączyć z 5-10 minutami głębokiego oddychania/medytacji).
+
+W kontekście skutecznej muzyki do nauki często wymienia się ambient, lo-fi, techno, muzykę klasyczną, ścieżki dźwiękowe do gier i filmów. A więc muzyka albo spokojna, albo rytmiczna i pozbawiona słów.
+
+
+Różne playlisty znajdziecie na dowolnej platformie streamingowej. W Radiu Sortownia podejdziemy jednak do sprawy inaczej. Pokażemy mniej i bardziej znane alternatywne projekty soniczne. Wspólnotowo-spółdzielcze rozgłośnie, ambientowe kolaże, nieskończone rozmowy filozoficzne. Dźwięki rozpięte w czasie jak żagle, rozgłośnie z Madagaskaru i sposoby na sen.
+
+
+# Radio Sortownia zaprasza na następujące doświadczenia:
+
+**SomaFM**<br>
+https://somafm.com/
+
+SomaFM to niezależne radio (bez reklam!), obejmujące wiele stacji tematycznych z muzyką niezależną. Ambient, downtempo, vaporwave, IDM, jazz, doom metal, folk etc. Są również kanały z muzyką dla szpiegów i z muzyką dla hakerów. Space Station Soma sprawdza się w codziennej pracy astronautów, a także o szóstej nad ranem, kiedy trzeba oddać esej z etnografii na ostatni termin. 
+
+
+**Radia wspólnotowe**<br>
+https://monoskop.org/Community_radio
+
+Pod powyższym linkiem znajduje się lista niezależnych rozgłośni z całego świata. Pomiędzy nimi jest polskie Radio Kapitał, które poza graniem muzyki jest też platformą dyskusji nt. kultury, sztuki i społeczeństwa. Dużą zaletą takich rozgłośni jest fakt, że muzykę dobierają w nich DJe i DJki z głęboką wiedzą o kontekście muzyki i subkulturach, scenach -- to coś, czego nie dostarczą algorytmy Spotify.
+
+
+
+**Radio Garden**<br>
+http://radio.garden/
+
+Radio Garden to aplikacja przeglądarkowa i na telefony, pozwalająca latać po kuli ziemskiej, w poszukiwaniu odległych stacji radiowych. Można sprawdzić co grają w Boliwii, Tajlandii, Nashville, Kirgistanie. Można posłuchać dziwnych reklam z RPA, gadanego radia z Japonii, romantycznych indonezyjskich ballad. Radio Garden przyda się też w nauce języków, np. możemy wybrać się w długą podróż po Francji i Hiszpanii, przy okazji osłuchując się z lokalną wymową. Jeśli przytłoczą nas (zdecydowanie najczęstsze) stacje popowe, możemy zajrzeć na playlisty z wybranymi stacjami radiowymi. Na Independent Sounds znajdziemy m.in. legendarne NTS, na Rare Tongues posłuchamy rzadkich i zagrożonych języków.
+
+
+**You are listening to**<br>
+http://youarelistening.to/
+
+You are listening to (_____) jest kolażem dźwiękowym, łączącym ambient z miastami. Strona nakłada na siebie muzykę z publicznie dostępnymi transmisjami nadawanymi przez policję, straże pożarne i lotniska. 
+
+
+
+**Radia akademickie**<br>
+http://radiocentrum.pl/redakcja/polskie-rozglosnie-akademickie/ <br>
+https://pl.wikipedia.org/wiki/Kategoria:Studenckie_rozg%C5%82o%C5%9Bnie_radiowe_w_Polsce
+
+Warto przypomnieć też o istnieniu rozgłośni akademickich. Pojawiają się w nich autorskie audycje z selekcją muzyki, ale też dyskusje i wywiady. Społecznościowy i lokalny charakter tych rozgłośni nie kłóci się z tym, że mają one profesjonalny poziom produkcji.
+
+
+**Sleep with me Podcast**<br>
+http://www.sleepwithmepodcast.com/
+
+Jeśli potrzebujemy zasnąć lub na naszą koncentrację pozytywnie wpływa gadanie w tle, można spróbować Sleep with me. Są to wielogodzinne gawędziarskie przypływy i odpływy, potoki bezsensu i niesamowitych historii. Coś podobnego zrobił też kiedyś Jeff Bridges: http://www.dreamingwithjeff.com/#music-section 
+
+
+**Infinite conversation**<br>
+https://infiniteconversation.com/
+
+Wchodząc w sferę dźwięków generowanych, możemy natrafić na nieskończoną dyskusję Slavoja Žižka z Wernerem Herzogiem. Modele neuronowe słoweńskiego filozofa i apokaliptycznego reżysera gadają ze sobą o życiu, śmierci i pieszych wędrówkach. Jest to równie głębokie, co płytkie. Śmieszne i niepokojące. "*Yes, we will simply die. It's an empty gesture, but maybe this is the only way to live in peace.*"
+
+
+**MykoLyco**<br>
+https://www.youtube.com/@MycoLyco
+
+Zastanawialiście się kiedyś -- co się stanie, jeśli podłączy się grzyby do syntezatorów? Na tym kanale znajdziecie odpowiedź. Różne rodzaje grzybów! 
+
+
+﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
+
+
+Znacie inne podobne projekty? Napiszcie! Dodamy do listy.
+
+
+❖❖❖
