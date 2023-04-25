@@ -49,10 +49,11 @@ http://radio.garden/
 Radio Garden to aplikacja przeglądarkowa i na telefony, pozwalająca latać po kuli ziemskiej, w poszukiwaniu odległych stacji radiowych. Można sprawdzić co grają w Boliwii, Tajlandii, Nashville, Kirgistanie. Można posłuchać dziwnych reklam z RPA, gadanego radia z Japonii, romantycznych indonezyjskich ballad. Radio Garden przyda się też w nauce języków, np. możemy wybrać się w długą podróż po Francji i Hiszpanii, przy okazji osłuchując się z lokalną wymową. Jeśli przytłoczą nas (zdecydowanie najczęstsze) stacje popowe, możemy zajrzeć na playlisty z wybranymi stacjami radiowymi. Na Independent Sounds znajdziemy m.in. legendarne NTS, na Rare Tongues posłuchamy rzadkich i zagrożonych języków.
 
 
-**You are listening to**<br>
-http://youarelistening.to/
+**You are listening to, Lofi Air Traffic Control**<br>
+http://youarelistening.to/<br>
+https://www.lofiatc.com
 
-You are listening to (_____) jest kolażem dźwiękowym, łączącym ambient z miastami. Strona nakłada na siebie muzykę z publicznie dostępnymi transmisjami nadawanymi przez policję, straże pożarne i lotniska. 
+You are listening to (_____) jest kolażem dźwiękowym, łączącym ambient z miastami. Strona nakłada na siebie muzykę z publicznie dostępnymi transmisjami nadawanymi przez policję, straże pożarne i lotniska. Lofi Air Traffic Control jest podobnym pomysłem, tylko za ambient wskakuje lofi.
 
 
 
@@ -80,6 +81,17 @@ https://www.youtube.com/@MycoLyco
 
 Zastanawialiście się kiedyś -- co się stanie, jeśli podłączy się grzyby do syntezatorów? Na tym kanale znajdziecie odpowiedź. Różne rodzaje grzybów! 
 
+
+**Listen to Wikipedia**<br>
+http://listen.hatnote.com/
+
+*Bells are additions, strings are subtractions.* Na tej stronie możemy posłuchać na żywo zmian dokonywanych na Wikipedii. Każda zmiana ma tu reprezentację dźwiękową oraz wizualną. Uspokajają nie tylko dźwięki, ale i świadomość, że największa encyklopedia świata jest dynamicznym, wiecznie rozwijającym się organizmem społecznym.
+
+
+**Apollo in Real-time** <br>
+https://apolloinrealtime.org/
+
+Tu z kolei można posłuchać trzech misji księżycowych -- w takim czasie, w jakim one naprawdę trwały, tzn. w całości. Są to transmisje rozmów między astronautami a kontrolą lotów, ale -- są one zsynchronizowane z wideo i wykonywanymi przez misję zdjęciami!
 
 ﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
 
