@@ -1,0 +1,32 @@
+model {
+    for (i in 1:N){
+      y[i] ~ dnorm (y.hat[i], tau.y)
+      y.hat[i] <- a[county[i]]
+      + b[county[i]]*x[i]
+      e.y[i] <- y[i] - y.hat[i]
+    }
+    tau.y <- pow(sigma.y, -2)
+    sigma.y ∼ dunif (0, 1000)
+    for (j in 1:J){
+      a[j] <- g[j,1]
+      b[j] <- g[j,2]
+      g[j,1:2] ∼ dmnorm (g.hat[j,1:2],
+                         tau.g[1:2,1:2])
+      g.hat[j,1] <- gamma.0 + gamma.1*u[j]
+      e.a[j] <- a[j] - g.hat[j,1]
+      g.hat[j,2] <- delta.0 + delta.1*u[j]
+      e.b[j] <- b[j] - g.hat[j,2]
+    }
+    gamma.0 ∼ dnorm (0, .0001)
+    gamma.1 ∼ dnorm (0, .0001)
+    delta.0 ∼ dnorm (0, .0001)
+    delta.1 ∼ dnorm (0, .0001)
+    tau.g[1:2,1:2] <- inverse(sigma.g[,])
+    sigma.g[1,1] <- pow(sigma.a, 2)
+    sigma.a ∼ dunif (0, 100)
+    sigma.g[2,2] <- pow(sigma.b, 2)
+    sigma.b ∼ dunif (0, 100)
+    sigma.g[1,2] <- rho*sigma.a*sigma.b
+    sigma.g[2,1] <- sigma.g[1,2]
+    rho ∼ dunif (-1, 1)
+  }

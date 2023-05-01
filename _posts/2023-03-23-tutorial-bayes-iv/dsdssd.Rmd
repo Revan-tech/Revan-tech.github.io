@@ -1,0 +1,53 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+A więc, ponieważ $P(y|\theta_j)$ prawdopodobieństwem uzyskania danych $y_{ij}$ z grupy $j$ pod warunkiem średniej rozkładu *a priori* dla tej grupy $\theta_j$.
+
+A więc:
+
+$$P(y|\theta_j) = \prod_{i=1}^{n} \exp\left( -\frac{(y_{ij}-\theta_j)^2}{\sigma^2}\,\right) = \exp\left( -\frac{\sum_{i=1}^{n}(y_{ij}-\theta_j)^2}{2\sigma^2}\,\right)$$
+
+Zauważmy też, że: 
+
+$$P(y|\theta_j) = \exp\left( -\frac{\sum_{i=1}^{n}(y_{ij}-\theta_j)^2}{2\sigma^2}\,\right) = \exp\left( -\frac{\sum_{i=1}^{n}y{_j}^2-2\theta_j\sum_{i=1}^{n}y_ij + \theta_j^2}{2\sigma^2}\,\right)$$
+
+$$\begin{equation}
+\begin{aligned}
+P(y|\theta_j) ={} & \exp\left( -\frac{\sum_{i=1}^{n}(y_{ij}-\theta_j)^2}{2\sigma^2}\,\right) \\
+    ={}  & \exp\left( -\frac{\sum_{i=1}^{n}y_{ij}^2-2n_{j}\theta_j\sum_{i=1}^{n}y_{ij} + n_j\theta_j^2}{2\sigma^2}\,\right) \\
+    ={}  & \exp\left( -\frac{\sum_{i=1}^{n}y_{ij}^2-2n_{j}\theta_j\sum_{i=1}^{n}y_{ij} + n_j\theta_j^2}{2\sigma^2} \frac{\frac{1}{n_j}}{\frac{1}{n_j}}\,\right) \\
+    \propto{}  & \exp\left( -\frac{\sum_{i=1}^{n}\frac{y_{ij}^2}{n_j}-2\theta_j\sum_{i=1}^{n}y_{ij} + \theta_j^2}{2\frac{\sigma^2}{n_j}}\,\right);  \\
+    \propto{} & \exp\left( -\frac{(\sum_{i=1}^{n}\frac{y_{ij}}{n_j}-\theta_j)^2}{\frac{\sigma^2}{n_j}}\,\right) \\
+    \propto{} & \exp\left( -\frac{(\bar{x}_j-\theta_j)^2}{\frac{\sigma^2}{n_j}}\,\right); \hspace{2em}\bar{x}_j = \sum_{i=1}^{n}\frac{y_{ij}}{n_j} \\
+    
+\end{aligned}
+\end{equation}$$
+
+Czyli widzimy, że możemy zaprezentować naszą funkcję wiarygodności jako $$P(y|\theta_j)$$, jako prawdopodbieństwa orzymania średniej w grupie $\bar{x}_j$ pod warunkiem $\theta_j$. 
+
+
+
+
+$$\begin{align}
+-\frac{1}{2}\left[\frac{(\bar{x}_i - \theta_i)^2}{\epsilon_i^2} + \frac{(\theta_i-\mu)^2}{\tau^2}\right]  &= -\frac{1}{2}\left[\frac{\bar{x}_i^2 - 2\bar{x}_i\theta_i + \theta_i^2}{\epsilon_i^2} + \frac{\theta_i^2 - 2\theta_i\mu + \mu^2}{\tau^2}\right] \\
+&= -\frac{1}{2}\left[\frac{\theta_i^2}{\epsilon_i^2} - \frac{2\bar{x}_i\theta_i}{\epsilon_i^2} + \frac{\bar{x}_i^2}{\epsilon_i^2} + \frac{\theta_i^2}{\tau^2} - \frac{2\theta_i\mu}{\tau^2} + \frac{\mu^2}{\tau^2}\right] \\
+&= -\frac{1}{2}\left[\left(\frac{1}{\epsilon_i^2} + \frac{1}{\tau^2}\right)\theta_i^2 - \frac{2\bar{x}_i}{\epsilon_i^2}\theta_i + \frac{\bar{x}_i^2}{\epsilon_i^2} - \frac{2\mu}{\tau^2}\theta_i + \frac{\mu^2}{\tau^2}\right] \\
+\end{align}$$ 
+
+
+$$\begin{align}
+-\frac{1}{2}\left[\left(\frac{1}{\epsilon_i^2} + \frac{1}{\tau^2}\right)\theta_i^2 - \frac{2\bar{x}_i}{\epsilon_i^2}\theta_i + \frac{\bar{x}_i^2}{\epsilon_i^2} - \frac{2\mu}{\tau^2}\theta_i + \frac{\mu^2}{\tau^2}\right] &= -\frac{1}{2}\left(\frac{1}{\epsilon_i^2} \\ + \frac{1}{\tau^2}\right)\left[\left(\theta_i - \frac{\tau^2 \bar{x}_i + \epsilon_i^2\mu}{\tau^2 + \epsilon_i^2}\right)^2 - \frac{\tau^4\bar{x}_i^2 + 2\tau^2\epsilon_i^2\bar{x}_i\mu + \epsilon_i^4\mu^2}{(\tau^2 + \epsilon_i^2)\epsilon_i^2}\right] \\
+&= -\frac{1}{2}\left(\frac{1}{\tau^2} + \frac{1}{\epsilon_i^2}\right)\left[\theta_i - \frac{\tau^2 \bar{x}_i + \epsilon_i^2\mu}{\tau^2 + \epsilon_i^2}\right]^2 + \frac{1}{2}\left(\frac{\tau^2\bar{x}_i^2 + \epsilon_i^2\mu^2}{\epsilon_i^2\tau^2 + \tau^4}\right)
+\end{align}$$
+
+Now we can see that the expression is proportional to the exponential of this quadratic form:
+
+$$\begin{equation}
+-\frac{1}{2}\left(\frac{1}{\tau^2} + \frac{1}{\epsilon_i^2}\right)\left[\theta_i - \frac{\tau^2 \bar{x}_i + \epsilon_i^2\mu}{\tau^2 + \epsilon_i^2}\right]^2
+\end{equation}$$
+
+
+
+
