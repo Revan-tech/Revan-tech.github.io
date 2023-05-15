@@ -322,6 +322,7 @@ Rozkład normalny jest rozkładem zgodym (*conjugate prior*) dla samego siebie. 
 Gdzie 
 
 $$\hat{\theta_j} = \frac{\tau^2 \sum_{i=1}^{n}\frac{y_{ij}}{n} + \frac{\sigma_j^2}{n}\mu}{\tau^2 + \frac{\sigma_j^2}{n}} = \left(\frac{\tau^2}{\tau^2 + \frac{\sigma_j^2}{n}}\right)\sum_{i=1}^{n}\frac{y_{ij}}{n} + \left(\frac{\frac{\sigma_j^2}{n}}{\tau^2 + \frac{\sigma_j^2}{n}}\right)\mu$$
+<br>
 $$\frac{1}{S_j^2} = \frac{1}{\tau^2} + \frac{1}{\frac{\sigma_j^2}{n}}$$
 
 Czyli nasz rozkład *posteriori* $\theta_j$ ma rozkład o średniej $\hat{\theta}_{j}$ i wariancji $S^2$. Zwykle, jeśli chcemy otrzymać punktową estymatę parametru z rozkładu *posteriori*, bierzemy jego średnią (w przypadku rozkładu normalnego jego średnia ma najwyższą wartość gęstości prawdopodobieństwa). W tym przypadku będzie to $\hat{\theta_i}$. Możemy zauważyć, że wzór na $\hat{\theta_i}$, który otrzymaliśmy, to średnia ważona średniej empirycznej w próbie w danej grupie $\sum_{i=1}^{n}\frac{y_{ij}}{n}$ i ogólnej średniej w próbie $\mu$. Możemy zapisać to następująco:

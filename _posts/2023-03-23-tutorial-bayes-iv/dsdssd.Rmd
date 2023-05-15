@@ -34,7 +34,7 @@ $$\begin{align}
 -\frac{1}{2}\left[\frac{(\bar{x}_i - \theta_i)^2}{\epsilon_i^2} + \frac{(\theta_i-\mu)^2}{\tau^2}\right]  &= -\frac{1}{2}\left[\frac{\bar{x}_i^2 - 2\bar{x}_i\theta_i + \theta_i^2}{\epsilon_i^2} + \frac{\theta_i^2 - 2\theta_i\mu + \mu^2}{\tau^2}\right] \\
 &= -\frac{1}{2}\left[\frac{\theta_i^2}{\epsilon_i^2} - \frac{2\bar{x}_i\theta_i}{\epsilon_i^2} + \frac{\bar{x}_i^2}{\epsilon_i^2} + \frac{\theta_i^2}{\tau^2} - \frac{2\theta_i\mu}{\tau^2} + \frac{\mu^2}{\tau^2}\right] \\
 &= -\frac{1}{2}\left[\left(\frac{1}{\epsilon_i^2} + \frac{1}{\tau^2}\right)\theta_i^2 - \frac{2\bar{x}_i}{\epsilon_i^2}\theta_i + \frac{\bar{x}_i^2}{\epsilon_i^2} - \frac{2\mu}{\tau^2}\theta_i + \frac{\mu^2}{\tau^2}\right] \\
-\end{align}$$ 
+\end{align}$$
 
 
 $$\begin{align}
