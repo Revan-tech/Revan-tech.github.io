@@ -62,17 +62,3 @@ $$\begin{align}
 0 & 0 & \text{Cov(Intercept, Slope)} & \text{Var(Slope)}
 \end{pmatrix}
 \end{align}$$
-
-
-$$\begin{align}
-E(Y) &= E(X\beta) + E(Zb) + E(e) \
-&= X\beta + Zb + E(e) \
-&= X\beta + \begin{pmatrix} b_{01} \ b_{11} \ b_{02} \ b_{12} \end{pmatrix} \begin{pmatrix} 1 & x_{1,1} & 0 & 0 \ 1 & x_{1,2} & 0 & 0 \ 0 & 0 & 1 & x_{2,1} \ 0 & 0 & 1 & x_{2,2} \end{pmatrix} + E(e) \
-&= \begin{pmatrix} \beta_0 + \beta_1x_{1,1} + b_{01} + b_{11}x_{1,1} \ \beta_0 + \beta_1x_{1,2} + b_{01} + b_{11}x_{1,2} \ \beta_0 + \beta_1x_{2,1} + b_{02} + b_{12}x_{2,1} \ \beta_0 + \beta_1x_{2,2} + b_{02} + b_{12}x_{2,2} \end{pmatrix} + E(e)
-\end{align}$$
-where X is the design matrix for the fixed effects, Z is the design matrix for the random effects, b is the vector of random effects, and e is the vector of residual errors.
-The covariance matrix of Y can then be obtained as:
-$$\begin{align}
-\text{Cov}(Y) &= E[(Y - E(Y))(Y - E(Y))^T] \\
-&= E[(X\beta + Zb + e - X\beta - \begin{pmatrix} b_{01} + b_{11}x_{1,1} \\ b_{01} + b_{11}x_{1,2} \\ b_{02} + b_{12}x_{2,1} \\ b_{02} + b_{12}x_{2,2} \end{pmatrix} - E(e))(X\beta + Zb + e - X\beta - \begin{pmatrix} b_{01} + b_{11}x_{1,1} \\ b_{01} + b_{11}x_{1,2} \\ b_{02} + b_{12}x_{2,1} \\ b_{02} + b_{12}x_{2,2} \end{pmatrix} - E(e))^T] \\
-&= E[(Zb + e - \begin{pmatrix} b_{01} + b_{11}x_{1,1} \\ b_{01} + b_{11}x_{1,2} \\ b_{02} + b_{12}x_{2,1} \\ b_{02} + b_{12}x_{2,2} \end{pmatrix}\end{align}$$

@@ -275,19 +275,19 @@ Rozważmy teraz następujący problem: zmierzyliśmy zmienną $X$ w różnych po
 
 - Użyć modelu mieszanego, który pozwoli nam wykorzystać wszystkie dostępne dane, poprzez wykorzystanie informacji z całej naszej próby (*partial pooling, borrowing information*).
 
-W jaki sposób model mieszany pozwoli nam na to? Dla uproszczenia zdefiniujmy model, w którym interesuje nas prawdopodobieństwo otrzymania średniej $y_{ij}$ w próbie dla danej podgrupy $j$. Jako funkcję wiarygodności wybierzmy rozkład normalny: 
+W jaki sposób model mieszany pozwoli nam na to? Dla uproszczenia zdefiniujmy model, w którym interesuje nas prawdopodobieństwo otrzymania średniej w próbie dla danej podgrupy $\bar{x_j}$. Wiemy, że dla każdej średniej (sumy) niezależnych zmiennych losowych o takim samym rozkładzie, zgodnie z Centralnym Twierdzeniem Granicznym, rozkład średniej z próby dąży do rozkładu normalnego. Parametry tego rozkładu to prawdziwa średnia w grupie $\theta_j$ oraz odchylenie standardowe średnich w próbie $\epsilon_j$. W związku z tym:
 
-$$P(y|\theta_j, \sigma_j) \sim N(\theta_j , \sigma_j)$$
-Parametry tego rozkładu to prawdziwa średnia w grupie $\theta_j$ oraz odchylenie standardowe w grupie $\sigma_j$
+$$\bar{x_{i}} \sim N(\theta_j , \epsilon_j)$$
+Przypomnijmy sobie, że estymatorem odchylenia standardowego średnich, czyli błędu standardowego, jest $\epsilon_j = \frac{\sigma_j}{\sqrt{n_j}}$, gdzie $n_j$ to liczebność danej grupy.
 
-Jednocześnie, rozkład prawdziwych średnich w grupach zamodelujmy następująco:
+Jednocześnie, rozkład prawdziwych średnich w grupach jest dany rozkładem:
 
 $$\theta_{j} \sim N(\mu, \tau)$$
 gdzie $\mu$ to ogólna średnia zmiennej  $X$ , a $\tau$ to odchylenie standardowe rozkładu ogólnej średniej.
 
 Dobrze, to co nas naprawdę interesuje, to policzenie najlepszej estymaty prawdziwej średniej w grupie $\theta_j$. Do tego potrzebujemy rozkładu $P(\theta_j|\bar{x_{i}})$. Aby obliczyć szukany przez nas rozkład, możemy zastosować twierdzenie Bayesa:
 
-$$P(\theta_j|y) \propto P(y|\theta_j)P(\theta_j)$$
+$$P(\theta_j|\bar{x_{j}}) \propto P(\bar{x_{j}}|\theta_j)P(\theta_j)$$
 
 <br>
 <br>
@@ -306,13 +306,9 @@ $$P(x) \propto
 </p>
 <br>
 
-Funkcja wiarygodności naszych danych to iloczyn prawdopdobieństwa otrzymania każdej obserwacji:
-
-$$P(y|\theta_j) = \prod_{i=1}^{n} \exp\left( -\frac{(y_{ij}-\theta_j)^2}{\sigma^2}\,\right) = \exp\left( -\frac{\sum_{i=1}^{n}(y_{ij}-\theta_j)^2}{2\sigma^2}\,\right)$$
-
 A więc nasz rozkład *post priori* będzie proporcjonalny do:
 
-$$P(\theta_i|\bar{x_{j}}) \propto  \exp\left(-\frac{\sum_{i=1}^{n}(y_{ij} - \theta_j)^2}{2\sigma_j^2}\right)\exp\left(-\frac{(\theta_j-\mu)^2}{2\tau^2}\right)$$
+$$P(\theta_i|\bar{x_{j}}) \propto  \exp\left(-\frac{(\bar{x}_j - \theta_j)^2}{2\epsilon_i^2}\right)\exp\left(-\frac{(\theta_j-\mu)^2}{2\tau^2}\right)$$
 
 Gdy po wykonaniu kilku przekształceń otrzymamy:
 
@@ -321,21 +317,22 @@ Rozkład normalny jest rozkładem zgodym (*conjugate prior*) dla samego siebie. 
 
 Gdzie 
 
-$$\hat{\theta_j} = \frac{\tau^2 \sum_{i=1}^{n}\frac{y_{ij}}{n} + \frac{\sigma_j^2}{n}\mu}{\tau^2 + \frac{\sigma_j^2}{n}} = \left(\frac{\tau^2}{\tau^2 + \frac{\sigma_j^2}{n}}\right)\sum_{i=1}^{n}\frac{y_{ij}}{n} + \left(\frac{\frac{\sigma_j^2}{n}}{\tau^2 + \frac{\sigma_j^2}{n}}\right)\mu$$
-$$\frac{1}{S_j^2} = \frac{1}{\tau^2} + \frac{1}{\frac{\sigma_j^2}{n}}$$
+$$\hat{\theta_j} = \frac{\tau^2 \bar{x}_j + \epsilon_j^2\mu}{\tau^2 + \epsilon_j^2} = \left(\frac{\tau^2}{\tau^2 + \epsilon_j^2}\right)\bar{x}_j + \left(\frac{\epsilon_j^2}{\tau^2 + \epsilon_j^2}\right)\mu$$
+$$\frac{1}{S_j^2} = \frac{1}{\tau^2} + \frac{1}{\epsilon_j^2}$$
 
-Czyli nasz rozkład *posteriori* $\theta_j$ ma rozkład o średniej $\hat{\theta}_{j}$ i wariancji $S^2$. Zwykle, jeśli chcemy otrzymać punktową estymatę parametru z rozkładu *posteriori*, bierzemy jego średnią (w przypadku rozkładu normalnego jego średnia ma najwyższą wartość gęstości prawdopodobieństwa). W tym przypadku będzie to $\hat{\theta_i}$. Możemy zauważyć, że wzór na $\hat{\theta_i}$, który otrzymaliśmy, to średnia ważona średniej empirycznej w próbie w danej grupie $\sum_{i=1}^{n}\frac{y_{ij}}{n}$ i ogólnej średniej w próbie $\mu$. Możemy zapisać to następująco:
+Czyli nasz rozkład *posteriori* $\theta_j$ ma rozkład o średniej $\hat{\theta}_{j}$ i wariancji $S^2$. Zwykle, jeśli chcemy otrzymać punktową estymatę parametru z rozkładu *posteriori*, bierzemy jego średnią (w przypadku rozkładu normalnego jego średnia ma najwyższą wartość gęstości prawdopodobieństwa). W tym przypadku będzie to $\hat{\theta_i}$. Możemy zauważyć, że wzór na $\hat{\theta_i}$, który otrzymaliśmy, to średnia ważona średniej w próbie w danej grupie $x_i$ i ogólnej średniej w próbie $\mu$. Możemy zapisać to następująco:
 
-$$\hat{\theta}_j = \lambda_j \sum_{i=1}^{n}\frac{y_{ij}}{n} + (1-\lambda_j)\mu$$
+$$\hat{\theta}_i = \lambda_i \bar{x}_i + (1-\lambda_i)\mu$$
 
 gdzie:
 
-$$\lambda_i = \frac{\tau^2}{(\tau^2 + \frac{\sigma_j^2}{n})}$$
+$$\lambda_i = \frac{\tau^2}{(\tau^2 + \epsilon_i^2)}$$
 
-Widzimy, że najlepsza estymata średniej w grupie będzie się różniła od średniej w próbie dla grupy $j$ w zależności od tego, jak bardzo $\lambda_i$ będzie mniejsze od 1. Będzie się tak działo, gdy $\frac{\sigma_j^2}{n}$ będzie duży. A kiedy będzie duży? 
+Widzimy, że najlepsza estymata średniej w grupie będzie się różniła od średniej w próbie dla grupy $j$ w zależności od tego, jak bardzo $\lambda_i$ będzie mniejsze od 1. Będzie się tak działo, gdy $\epsilon_j$ będzie duży. A kiedy $\epsilon_j$ będzie duży? Przypomnijmy:
 
+$$\epsilon_{j}^2 = \frac{\sigma_{j}^2}{n_j}$$
 
-Im mniejsza wariancja w danej grupie i im większa liczebność grupy, tym bardziej estymata średniej będzie się zbliżała do średniej empirycznej w grupie. Natomiast, jeśli wariancja w grupie jest duża i/lub grupa ma małą liczebność, estymata $\hat{\theta}_i$ będzie bardziej przesunięta w stronę $\mu$, ponieważ prawdopodobieństwo, że średnia w grupie $j$ znacznie odbiega od średniej ogólnej, jest mniejsze (przypomnijmy sobie przykład z księgarnią z pierwszej części tutorialu). 
+Zatem im mniejsza wariancja w danej grupie i im większa liczebność grupy, tym bardziej estymata średniej będzie się zbliżała do średniej empirycznej w grupie. Natomiast, jeśli wariancja w grupie jest duża i/lub grupa ma małą liczebność, estymata $\hat{\theta}_i$ będzie bardziej przesunięta w stronę $\mu$, ponieważ prawdopodobieństwo, że średnia w grupie $j$ znacznie odbiega od średniej ogólnej, jest mniejsze (przypomnijmy sobie przykład z księgarnią z pierwszej części tutorialu). 
 
 $\lambda_i$ nazywamy współcznynnikiem ściągania (*shrinkage coefficient*). Choć jego formuła nie będzie zawsze wyglądała tak elegancko, jak w tym przypdaku (gdzie rozkład *a priori* i funkcja wiarygodności dane są rozkładami normalnymi), widzimy, że model mieszany pozwala nam na estymację średnich w grupach z większą pewnością, ponieważ wykorzystujemy do tego obserwacje ze wszystkich podgrup! 
 
@@ -484,7 +481,7 @@ tau.g[1:2,1:2] <- inverse(sigma.g[,])
 }"
 ```
 
-O ile nie interesuje nas relacja między piętrem a radonem w konkretnym hrabstwie, możemy śledzić jedynie wektor $\boldsymbol{\mu}$ zawierający ogólny intercept ($\alpha$) i współczynnik regresji $\beta$. Wyestymujmy także $\rho$, czyli nasz współczynnik korelacji pomiędzy $a_j$ i $b_j$.
+"O ile nie interesuje nas relacja między piętrem a radonem w konkretnym hrabstwie, możemy śledzić jedynie wektor $\boldsymbol{\mu}$ zawierający ogólny intercept ($\alpha$) i współczynnik regresji $\beta$. Wyestymujmy także $\rho$, czyli nasz współczynnik korelacji pomiędzy $a_j$ i $b_j$."
 
 ```{r, results='hide'}
 params = c("alpha","beta", "rho")

@@ -47,7 +47,16 @@ Now we can see that the expression is proportional to the exponential of this qu
 $$\begin{equation}
 -\frac{1}{2}\left(\frac{1}{\tau^2} + \frac{1}{\epsilon_i^2}\right)\left[\theta_i - \frac{\tau^2 \bar{x}_i + \epsilon_i^2\mu}{\tau^2 + \epsilon_i^2}\right]^2
 \end{equation}$$
+$$\begin{align*}
+&\exp\left(-\frac{\sum y_i^2 - 2\sum y_i\theta + \theta^2}{2\sigma^2} - \frac{\theta^2 - 2\theta\mu + \mu^2}{2\tau^2}\right) \\
+&= \exp\left(-\frac{1}{2\sigma^2}\sum y_i^2 + \frac{1}{\sigma^2}\sum y_i\theta - \frac{1}{2\sigma^2}\theta^2 - \frac{1}{2\tau^2}\theta^2 + \frac{1}{\tau^2}\theta\mu - \frac{1}{2\tau^2}\mu^2\right) \\
+&= \exp\left(-\frac{1}{2}\left[\frac{1}{\sigma^2}\sum y_i^2 - \frac{2}{\sigma^2}\sum y_i\theta + \frac{1}{\sigma^2}\theta^2 + \frac{1}{\tau^2}\theta^2 - \frac{2}{\tau^2}\theta\mu + \frac{1}{\tau^2}\mu^2\right]\right) \\
+&= \exp\left(-\frac{1}{2}\left[\left(\frac{1}{\sigma^2} + \frac{1}{\tau^2}\right)\theta^2 - 2\left(\frac{\sum y_i}{\sigma^2}\right)\theta + \frac{1}{\sigma^2}\sum y_i^2 - \frac{2\mu}{\tau^2}\theta + \frac{1}{\tau^2}\mu^2\right]\right)
+\end{align*}$$
 
 
 
 
+$$\begin{equation*}
+\exp\left(-\frac{\sum y_i^2 - 2\sum y_i\theta + \theta^2}{2\sigma^2} - \frac{\theta^2 - 2\theta\mu + \mu^2}{2\tau^2}\right)
+\end{equation*}$$
