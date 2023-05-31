@@ -278,7 +278,7 @@ Rozważmy teraz następujący problem: zmierzyliśmy zmienną $X$ w różnych po
 W jaki sposób model mieszany pozwoli nam na to? Dla uproszczenia zdefiniujmy model, w którym interesuje nas prawdopodobieństwo otrzymania średniej $y_{ij}$ w próbie dla danej podgrupy $j$. Jako funkcję wiarygodności wybierzmy rozkład normalny: 
 
 $$P(y|\theta_j, \sigma_j) \sim N(\theta_j , \sigma_j)$$
-Parametry tego rozkładu to prawdziwa średnia w grupie $\theta_j$ oraz odchylenie standardowe w grupie $\sigma_j$
+Parametry tego rozkładu to prawdziwa średnia w grupie $\theta_j$ oraz odchylenie standardowe w grupie $\sigma_j$.
 
 Jednocześnie, rozkład prawdziwych średnich w grupach zamodelujmy następująco:
 
@@ -312,28 +312,30 @@ $$P(y|\theta_j) = \prod_{i=1}^{n} \exp\left( -\frac{(y_{ij}-\theta_j)^2}{\sigma^
 
 A więc nasz rozkład *post priori* będzie proporcjonalny do:
 
-$$P(\theta_i|\bar{x_{j}}) \propto  \exp\left(-\frac{\sum_{i=1}^{n}(y_{ij} - \theta_j)^2}{2\sigma_j^2}\right)\exp\left(-\frac{(\theta_j-\mu)^2}{2\tau^2}\right)$$
+$$P(\theta_i|y) \propto  \exp\left(-\frac{\sum_{i=1}^{n}(y_{ij} - \theta_j)^2}{2\sigma_j^2}\right)\exp\left(-\frac{(\theta_j-\mu)^2}{2\tau^2}\right)$$
 
 Gdy po wykonaniu kilku przekształceń otrzymamy:
 
-$$P(\theta_i|\bar{x_{j}}) \propto \exp\left(-\frac{(\theta_j - \hat{\theta_j})^2}{2S_i^2}\right)$$
+$$P(\theta_i|y) \propto \exp\left(-\frac{(\theta_j - \hat{\theta_j})^2}{2S_i^2}\right)$$
 Rozkład normalny jest rozkładem zgodym (*conjugate prior*) dla samego siebie. A więc rozkład *a posteriori* jest rozkładem normalnym o średniej $\hat{\theta_i}$ i wariancji $S^2$.  
 
 Gdzie 
 
-$$\hat{\theta_j} = \frac{\tau^2 \sum_{i=1}^{n}\frac{y_{ij}}{n} + \frac{\sigma_j^2}{n}\mu}{\tau^2 + \frac{\sigma_j^2}{n}} = \left(\frac{\tau^2}{\tau^2 + \frac{\sigma_j^2}{n}}\right)\sum_{i=1}^{n}\frac{y_{ij}}{n} + \left(\frac{\frac{\sigma_j^2}{n}}{\tau^2 + \frac{\sigma_j^2}{n}}\right)\mu$$
+$$\hat{\theta_j} = \frac{\tau^2 \bar{x_j} + \frac{\sigma_j^2}{n}\mu}{\tau^2 + \frac{\sigma_j^2}{n_j}} = \left(\frac{\tau^2}{\tau^2 + \frac{\sigma_j^2}{n_j}}\right)\bar{x_j} + \left(\frac{\frac{\sigma_j^2}{n_j}}{\tau^2 + \frac{\sigma_j^2}{n}}\right)\mu$$
+<br>
+$$\bar{x_j} = \sum_{i=1}^{n_j}\frac{y_{ij}}{n_j}$$
 <br>
 $$\frac{1}{S_j^2} = \frac{1}{\tau^2} + \frac{1}{\frac{\sigma_j^2}{n}}$$
 
-Czyli nasz rozkład *posteriori* $\theta_j$ ma rozkład o średniej $\hat{\theta}_{j}$ i wariancji $S^2$. Zwykle, jeśli chcemy otrzymać punktową estymatę parametru z rozkładu *posteriori*, bierzemy jego średnią (w przypadku rozkładu normalnego jego średnia ma najwyższą wartość gęstości prawdopodobieństwa). W tym przypadku będzie to $\hat{\theta_i}$. Możemy zauważyć, że wzór na $\hat{\theta_i}$, który otrzymaliśmy, to średnia ważona średniej empirycznej w próbie w danej grupie $\sum_{i=1}^{n}\frac{y_{ij}}{n}$ i ogólnej średniej w próbie $\mu$. Możemy zapisać to następująco:
+Czyli nasz rozkład *posteriori* $\theta_j$ ma rozkład o średniej $\hat{\theta}_{j}$ i wariancji $S^2$. Zwykle, jeśli chcemy otrzymać punktową estymatę parametru z rozkładu *posteriori*, bierzemy jego średnią (w przypadku rozkładu normalnego jego średnia ma najwyższą wartość gęstości prawdopodobieństwa). W tym przypadku będzie to $\hat{\theta_i}$. Możemy zauważyć, że wzór na $\hat{\theta_i}$, który otrzymaliśmy, to średnia ważona średniej empirycznej w próbie w danej grupie $\bar{x_j}$ i ogólnej średniej w próbie $\mu$. Możemy zapisać to następująco:
 
-$$\hat{\theta}_j = \lambda_j \sum_{i=1}^{n}\frac{y_{ij}}{n} + (1-\lambda_j)\mu$$
+$$\hat{\theta}_j = \lambda_j \bar{x_j} + (1-\lambda_j)\mu$$
 
 gdzie:
 
-$$\lambda_i = \frac{\tau^2}{(\tau^2 + \frac{\sigma_j^2}{n})}$$
+$$\lambda_j = \frac{\tau^2}{(\tau^2 + \frac{\sigma_j^2}{n})}$$
 
-Widzimy, że najlepsza estymata średniej w grupie będzie się różniła od średniej w próbie dla grupy $j$ w zależności od tego, jak bardzo $\lambda_i$ będzie mniejsze od 1. Będzie się tak działo, gdy $\frac{\sigma_j^2}{n}$ będzie duży. A kiedy będzie duży? 
+Widzimy, że najlepsza estymata średniej w grupie będzie się różniła od średniej w próbie dla grupy $j$ w zależności od tego, jak bardzo $\lambda_i$ będzie mniejsze od 1. Będzie się tak działo, gdy $\frac{\sigma_j^2}{n_j}$ będzie duży. A kiedy będzie duży? 
 
 
 Im mniejsza wariancja w danej grupie i im większa liczebność grupy, tym bardziej estymata średniej będzie się zbliżała do średniej empirycznej w grupie. Natomiast, jeśli wariancja w grupie jest duża i/lub grupa ma małą liczebność, estymata $\hat{\theta}_i$ będzie bardziej przesunięta w stronę $\mu$, ponieważ prawdopodobieństwo, że średnia w grupie $j$ znacznie odbiega od średniej ogólnej, jest mniejsze (przypomnijmy sobie przykład z księgarnią z pierwszej części tutorialu). 
