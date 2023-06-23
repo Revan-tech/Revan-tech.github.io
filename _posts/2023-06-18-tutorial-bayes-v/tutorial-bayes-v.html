@@ -1557,7 +1557,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#wstęp" id="toc-wstęp">Wstęp</a>
 <ul>
 <li><a href="#selekcja-modeli" id="toc-selekcja-modeli">Selekcja modeli</a></li>
-<li><a href="#wybór-rozkładów-a-priori" id="toc-wybór-rozkładów-a-priori">Wybór rozkładów a priori</a></li>
 <li><a href="#garść-wniosków" id="toc-garść-wniosków">Garść wniosków</a></li>
 </ul></li>
 </ul>
@@ -1637,16 +1636,16 @@ Sample size per chain = 3000
    plus standard error of the mean:
 
          Mean      SD  Naive SE Time-series SE
-a     -0.2629 0.16892 0.0017806      0.0036514
-b      1.0657 0.11867 0.0012508      0.0024458
-sigma  1.0860 0.07962 0.0008393      0.0008444
+a     -0.2599 0.16924 0.0017839      0.0034188
+b      1.0637 0.11957 0.0012604      0.0024116
+sigma  1.0846 0.07813 0.0008235      0.0008773
 
 2. Quantiles for each variable:
 
          2.5%     25%     50%     75%   97.5%
-a     -0.6003 -0.3736 -0.2618 -0.1503 0.06835
-b      0.8280  0.9870  1.0653  1.1450 1.30143
-sigma  0.9448  1.0304  1.0815  1.1356 1.25578</code></pre>
+a     -0.5962 -0.3719 -0.2589 -0.1466 0.07121
+b      0.8262  0.9833  1.0639  1.1423 1.29861
+sigma  0.9458  1.0309  1.0785  1.1331 1.24936</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1662,16 +1661,16 @@ Sample size per chain = 3000
    plus standard error of the mean:
 
           Mean      SD  Naive SE Time-series SE
-a     -0.02631 0.13005 0.0013709      0.0021185
-b      0.46019 0.04237 0.0004466      0.0006945
-sigma  0.98023 0.07083 0.0007466      0.0007991
+a     -0.02662 0.13115 0.0013825      0.0022044
+b      0.46027 0.04316 0.0004550      0.0007105
+sigma  0.98054 0.07148 0.0007535      0.0008375
 
 2. Quantiles for each variable:
 
          2.5%     25%      50%     75%  97.5%
-a     -0.2798 -0.1130 -0.02682 0.05845 0.2346
-b      0.3771  0.4319  0.45989 0.48871 0.5453
-sigma  0.8535  0.9301  0.97590 1.02461 1.1322</code></pre>
+a     -0.2868 -0.1154 -0.02372 0.06243 0.2257
+b      0.3759  0.4309  0.46096 0.48936 0.5443
+sigma  0.8522  0.9304  0.97654 1.02500 1.1327</code></pre>
 </div>
 <p>W obydwu przypadkach przedziały nie zawierają zera. Musimy rozsądzić, który model jest lepszy. Moglibyśmy zrobić to przy pomocy już omówionego Czynnika Bayesa. Jednak, tak jak już wspominałem, obliczenie go w bardziej skomplikowanych modelach jest problematyczne.</p>
 <p>W modelach częstościowych używa się kryteriów informacyjnych takich jak AIC i BIC do selekcji modeli. W statystyce Bayesowskiej do oceny dopoasowania modelu możemy użyć <em>Deviance Information Cryterion</em> (DIC).</p>
@@ -1689,28 +1688,28 @@ gdzie:</p>
 <span><span class='va'>Dic_lin</span></span></code></pre>
 </div>
 <pre><code>Mean deviance:  298.6 
-penalty 3.106 
-Penalized deviance: 301.7 </code></pre>
+penalty 3.053 
+Penalized deviance: 301.6 </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Dic_sq</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/dic.samples.html'>dic.samples</a></span><span class='op'>(</span><span class='va'>model_sq</span>,<span class='fl'>1000</span><span class='op'>)</span></span>
 <span><span class='va'>Dic_sq</span></span></code></pre>
 </div>
-<pre><code>Mean deviance:  278.4 
-penalty 3.178 
-Penalized deviance: 281.6 </code></pre>
+<pre><code>Mean deviance:  278.3 
+penalty 3.061 
+Penalized deviance: 281.3 </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/rjags/man/diffdic.html'>diffdic</a></span><span class='op'>(</span><span class='va'>Dic_sq</span>,<span class='va'>Dic_lin</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>Difference: -20.17897
-Sample standard error: 9.873102</code></pre>
+<pre><code>Difference: -20.32408
+Sample standard error: 9.939601</code></pre>
 </div>
 <p>Widzimy, że model z kwadratowym związkiem pomiedzy x i y jest lepiej dopasowany do danych.</p>
-<p>Prócz DIC, w statystyce Bayesowskiej narzedziami do oceny dopasowania modeli są: <em>Widely Applicable Information Criterion</em> (WAIC) i <em>Leave-one-out cross-validation</em> (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, niemniej ponieważ mają lepsze właściwości, warto je znać <span class="citation" data-cites="gelman2014understanding">(<a href="#ref-gelman2014understanding" role="doc-biblioref">Gelman et al., 2014</a>)</span>.</p>
-<h2 id="wybór-rozkładów-a-priori">Wybór rozkładów a priori</h2>
+<p>Prócz DIC, w statystyce Bayesowskiej narzędziami do oceny dopasowania modeli są <em>Widely Applicable Information Criterion</em> (WAIC) oraz <em>Leave-one-out cross-validation</em> (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, jednak warto je poznać, ponieważ posiadają lepsze właściwości <span class="citation" data-cites="gelman2014understanding">(<a href="#ref-gelman2014understanding" role="doc-biblioref">Gelman et al., 2014</a>)</span>.
+## Wybór rozkładów a priori</p>
 <p>To chyba najtrudniejszy temat w statystyce Bayesowskiej. Zasadniczo zgodnie z ortodoksyjną filozofią Bayesowską rozkłady <em>a priori</em> powinny odzwierciedlać naszą wcześniejszą wiedzę. Filozofia ta może wydawać się kusząca, ponieważ tak właśnie powinna działać nauka. Akumulować wiedzę i następnie po otrzymaniu nowych danych aktualizować swoje oczekiwania. Jednak gdy przechodzimy do modelowania pojawia się problem.</p>
 <p>Jak przedstawić naszą wiedzę w postaci rozkładów <em>a priori</em>? Czy jeśli użyjemy informatywnego rozkładu dla współczynnika regresji, powiedzmy <span class="math inline">\(N(100,0.001)\)</span>, i po otrzymaniu rozkładu <em>a posteriori</em> przedział wiarygodności nie będzie zawierał 0, czy właśnie nie oszukaliśmy by uzyskać “istotny” współczynnik regresji?</p>
 <p>Z kolei jeśli użyjemy zbyt informatywnego rozkładu skoncentrowanego wokół zera, możemy ograniczyć naszą zdolność do wykrycia istniejącego efektu.</p>

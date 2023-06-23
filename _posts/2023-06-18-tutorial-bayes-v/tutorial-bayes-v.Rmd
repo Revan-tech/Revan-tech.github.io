@@ -132,8 +132,7 @@ diffdic(Dic_sq,Dic_lin)
 
 Widzimy, że model z kwadratowym związkiem pomiedzy x i y jest lepiej dopasowany do danych.  
 
-Prócz DIC, w statystyce Bayesowskiej narzedziami do oceny dopasowania modeli są: *Widely Applicable Information Criterion* (WAIC) i *Leave-one-out cross-validation* (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, niemniej ponieważ mają lepsze właściwości, warto je znać [@gelman2014understanding]. 
-
+Prócz DIC, w statystyce Bayesowskiej narzędziami do oceny dopasowania modeli są *Widely Applicable Information Criterion* (WAIC) oraz *Leave-one-out cross-validation* (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, jednak warto je poznać, ponieważ posiadają lepsze właściwości [@gelman2014understanding].
 ## Wybór rozkładów a priori
 
 To chyba najtrudniejszy temat w statystyce Bayesowskiej. Zasadniczo zgodnie z ortodoksyjną filozofią Bayesowską rozkłady *a priori* powinny odzwierciedlać naszą wcześniejszą wiedzę. Filozofia ta może wydawać się kusząca, ponieważ tak właśnie powinna działać nauka. Akumulować wiedzę i następnie po otrzymaniu nowych danych aktualizować swoje oczekiwania. Jednak gdy przechodzimy do modelowania pojawia się problem. 
