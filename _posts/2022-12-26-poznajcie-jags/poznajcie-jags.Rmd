@@ -166,20 +166,23 @@ plt.show()
 import daft
 import matplotlib.pyplot as plt 
 
-pgm = daft.PGM(observed_style="inner")
+pgm = daft.PGM(observed_style='shaded')
 
-pgm.add_node("alpha", r"$\alpha$", 0.5, 2)
-pgm.add_node("beta", r"$\beta$", 1.5, 2)
-pgm.add_node("sigma", r"$\sigma$", 2.5, 2)
-pgm.add_node("x", r"$x_i$", 2, 1, observed=True)
+pgm.add_node("alpha", r"$\alpha_{i,j}$", 0.4, 2)
+pgm.add_node("beta", r"$\tau_{i,j}$", 1.6, 2)
+pgm.add_node("sigma", r"$v_{i,j}$", 1, 2)
+pgm.add_node("x", r"$x_i$", 1, 3, observed=True)
 pgm.add_node("y", r"$y_i$", 1, 1, observed=True)
 
 pgm.add_edge("alpha", "y")
 pgm.add_edge("beta", "y")
-pgm.add_edge("x", "y")
+pgm.add_edge("x", "alpha")
+pgm.add_edge("x", "beta")
+pgm.add_edge("x", "sigma")
 pgm.add_edge("sigma", "y")
 
-pgm.add_plate([0.5, 0.5, 2, 1], label=r"$i = 1, \ldots, N$", shift=-0.1)
+pgm.add_plate([0, 0, 2, 4], label=r"$i = 1, \ldots, N$", shift=-0.1)
+pgm.add_plate([-0.5, -0.5, 3, 6], label=r"$j = 1, \ldots, N$", shift=-0.1)
 
 pgm.render()
 plt.show() 

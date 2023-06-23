@@ -86,637 +86,65 @@ code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Sortownia: </title>
+  <title>Tutorial Statystyki Bayesowskiej</title>
+
+  <meta property="description" itemprop="description" content="Część V: Selekcja modeli, wybór rozkładów a priori i inne przydatne rzeczy"/>
 
 
-
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2023-06-18"/>
+  <meta property="article:created" itemprop="dateCreated" content="2023-06-18"/>
+  <meta name="article:author" content="Szymon Mąka"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Sortownia: "/>
+  <meta property="og:title" content="Tutorial Statystyki Bayesowskiej"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Część V: Selekcja modeli, wybór rozkładów a priori i inne przydatne rzeczy"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Sortownia"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Sortownia: "/>
+  <meta property="twitter:title" content="Tutorial Statystyki Bayesowskiej"/>
+  <meta property="twitter:description" content="Część V: Selekcja modeli, wybór rozkładów a priori i inne przydatne rzeczy"/>
 
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Understanding predictive information criteria for bayesian models;citation_publisher=Springer;citation_volume=24;citation_author=Andrew Gelman;citation_author=Jessica Hwang;citation_author=Aki Vehtari"/>
+  <meta name="citation_reference" content="citation_title=The prior can often only be understood in the context of the likelihood;citation_publisher=MDPI;citation_volume=19;citation_author=Andrew Gelman;citation_author=Daniel Simpson;citation_author=Michael Betancourt"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","listing"]}},"value":[{"type":"character","attributes":{},"value":[""]},{"type":"NULL"},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["posts"]}},"value":[{"type":"character","attributes":{},"value":["2023-06-18-tutorial-bayes-v","2023-03-23-tutorial-bayes-iv","2023-02-05-baseball","2023-01-12-bayes-factor","2022-12-26-poznajcie-jags","2022-10-30-tutorial-bayes-ii","2022-07-31-tutorial-bayes","2022-05-13-mixedmotivation","2022-05-05-tranistive","2022-04-28-behrens"]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","author","date","output","bibliography","categories","csl"]}},"value":[{"type":"character","attributes":{},"value":["Tutorial Statystyki Bayesowskiej"]},{"type":"character","attributes":{},"value":["Część V: Selekcja modeli, wybór rozkładów a priori i inne przydatne rzeczy\n"]},{"type":"character","attributes":{},"value":["Statystyczne_Dygresje2.jpg"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Szymon Mąka"]},{"type":"character","attributes":{},"value":["https://revan-tech.github.io/kontakt.html"]}]}]},{"type":"character","attributes":{},"value":["06-18-2023"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","includes","css"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["in_header"]}},"value":[{"type":"character","attributes":{},"value":["hero-image.html"]}]},{"type":"character","attributes":{},"value":["theme.css"]}]}]},{"type":"character","attributes":{},"value":["bib.bib"]},{"type":"character","attributes":{},"value":["Statystyczne Dygresje"]},{"type":"character","attributes":{},"value":["apa.csl"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["apa.csl","bib.bib","hero-image.html","p_p_l.png","Statystyczne_Dygresje.jpg","Statystyczne_Dygresje2.jpg","theme.css","tutorial-bayes-v_files/anchor-4.2.2/anchor.min.js","tutorial-bayes-v_files/bowser-1.9.3/bowser.min.js","tutorial-bayes-v_files/distill-2.2.21/template.v2.js","tutorial-bayes-v_files/figure-html5/unnamed-chunk-1-1.png","tutorial-bayes-v_files/figure-html5/unnamed-chunk-8-1.png","tutorial-bayes-v_files/figure-html5/unnamed-chunk-9-1.png","tutorial-bayes-v_files/header-attrs-2.21/header-attrs.js","tutorial-bayes-v_files/jquery-3.6.0/jquery-3.6.0.js","tutorial-bayes-v_files/jquery-3.6.0/jquery-3.6.0.min.js","tutorial-bayes-v_files/jquery-3.6.0/jquery-3.6.0.min.map","tutorial-bayes-v_files/popper-2.6.0/popper.min.js","tutorial-bayes-v_files/tippy-6.2.7/tippy-bundle.umd.min.js","tutorial-bayes-v_files/tippy-6.2.7/tippy-light-border.css","tutorial-bayes-v_files/tippy-6.2.7/tippy.css","tutorial-bayes-v_files/tippy-6.2.7/tippy.umd.min.js","tutorial-bayes-v_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2071,411 +1499,259 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="tutorial-bayes-v_files/header-attrs-2.21/header-attrs.js"></script>
+  <script src="tutorial-bayes-v_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="tutorial-bayes-v_files/popper-2.6.0/popper.min.js"></script>
+  <link href="tutorial-bayes-v_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="tutorial-bayes-v_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="tutorial-bayes-v_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="tutorial-bayes-v_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="tutorial-bayes-v_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="tutorial-bayes-v_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="tutorial-bayes-v_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <link rel="icon" type="image/png" href="favicon.ico"/>
   <!--/radix_placeholder_site_in_header-->
+  <div class="hero-image"> 
 
+  </div>
+
+  <link rel="stylesheet" href="theme.css" type="text/css"/>
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"","authors":[]}
+{"title":"Tutorial Statystyki Bayesowskiej","description":"Część V: Selekcja modeli, wybór rozkładów a priori i inne przydatne rzeczy","authors":[{"author":"Szymon Mąka","authorURL":"https://revan-tech.github.io/kontakt.html","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2023-06-18T00:00:00.000+02:00","citationText":"Mąka, 2023"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">Sortownia</a>
-<a href="index.html">Home</a>
-<a href="blog.html">Blog</a>
-<a href="poradniki.html">Poradniki</a>
-<a href="https://szpm.shinyapps.io/baza_wiedzy/">Baza wiedzy</a>
-<a href="projekty.html">Projekty</a>
-<a href="statystyczne_dygresje.html">Statystyczne Dygresje</a>
-<input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
-</div>
-<div class="nav-right">
-<a href="kontakt.html">Kontakt</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption=""></h1>
-<a href="posts/2023-06-18-tutorial-bayes-v/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Statystyczne Dygresje"]}</script>
-<div class="metadata">
-<div class="publishedDate">June 18, 2023</div>
-<div class="dt-authors">
-<div class="dt-author">Szymon Mąka</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2023-06-18-tutorial-bayes-v/Statystyczne_Dygresje2.jpg"/>
-</div>
-<div class="description">
-<h2>Tutorial Statystyki Bayesowskiej</h2>
-<div class="dt-tags">
-<div class="dt-tag">Statystyczne Dygresje</div>
-</div>
-<p>Część V: Selekcja modeli, wybór rozkładów a priori i inne przydatne rzeczy</p>
-</div>
-</a>
-<a href="posts/2023-03-23-tutorial-bayes-iv/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Statystyczne Dygresje"]}</script>
-<div class="metadata">
-<div class="publishedDate">Oct. 30, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Szymon Mąka</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2023-03-23-tutorial-bayes-iv/Statystyczne_Dygresje2.jpg"/>
-</div>
-<div class="description">
-<h2>Tutorial Statystyki Bayesowskiej</h2>
-<div class="dt-tags">
-<div class="dt-tag">Statystyczne Dygresje</div>
-</div>
-<p>Część IV: Wprowadzenie do modeli wielopoziomowych</p>
-</div>
-</a>
-<a href="posts/2023-02-05-baseball/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Statystyczne Dygresje"]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 2, 2023</div>
-<div class="dt-authors">
-<div class="dt-author">Szymon Mąka</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2023-02-05-baseball/Statystyczne_Dygresje.jpg"/>
-</div>
-<div class="description">
-<h2>Dlaczego średnia uderzeń graczy nie przewiduje sukcesu w pojedyńczym uderzeniu?</h2>
-<div class="dt-tags">
-<div class="dt-tag">Statystyczne Dygresje</div>
-</div>
-<p>O psychologach i małych efektach</p>
-</div>
-</a>
-<a href="posts/2023-01-12-bayes-factor/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Statystyczne Dygresje"]}</script>
-<div class="metadata">
-<div class="publishedDate">Jan. 13, 2023</div>
-<div class="dt-authors">
-<div class="dt-author">Szymon Mąka</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2023-01-12-bayes-factor/Statystyczne_Dygresje2.jpg"/>
-</div>
-<div class="description">
-<h2>Tutorial Statystyki Bayesowskiej</h2>
-<div class="dt-tags">
-<div class="dt-tag">Statystyczne Dygresje</div>
-</div>
-<p>Część III: Czynnik Bayesowski</p>
-</div>
-</a>
-<a href="posts/2022-12-26-poznajcie-jags/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Statystyczne Dygresje"]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 26, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Szymon Mąka</div>
-</div>
-</div>
-<div class="thumbnail">
-<img src="posts/2022-12-26-poznajcie-jags/Statystyczne_Dygresje2.jpg"/>
-</div>
-<div class="description">
-<h2>Tutorial Statystyki Bayesowskiej</h2>
-<div class="dt-tags">
-<div class="dt-tag">Statystyczne Dygresje</div>
-</div>
-<p>Część 2.5: Poznajcie JAGS</p>
-</div>
-</a>
-<a href="posts/2022-10-30-tutorial-bayes-ii/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Statystyczne Dygresje"]}</script>
-<div class="metadata">
-<div class="publishedDate">Oct. 30, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Szymon Mąka</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2022-10-30-tutorial-bayes-ii/Statystyczne_Dygresje2.jpg"/>
-</div>
-<div class="description">
-<h2>Tutorial Statystyki Bayesowskiej</h2>
-<div class="dt-tags">
-<div class="dt-tag">Statystyczne Dygresje</div>
-</div>
-<p>Część II: Estymacja modeli bayesowskich</p>
-</div>
-</a>
-<a href="posts/2022-07-31-tutorial-bayes/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Statystyczne Dygresje"]}</script>
-<div class="metadata">
-<div class="publishedDate">Aug. 14, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Szymon Mąka</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2022-07-31-tutorial-bayes/Statystyczne_Dygresje2.jpg"/>
-</div>
-<div class="description">
-<h2>Tutorial Statystyki Bayesowskiej</h2>
-<div class="dt-tags">
-<div class="dt-tag">Statystyczne Dygresje</div>
-</div>
-<p>Częśc I: Nabywanie intuicji</p>
-</div>
-</a>
-<a href="posts/2022-05-13-mixedmotivation/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Statystyczne Dygresje"]}</script>
-<div class="metadata">
-<div class="publishedDate">May 14, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Szymon Mąka</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2022-05-13-mixedmotivation/Statystyczne_Dygresje2.jpg"/>
-</div>
-<div class="description">
-<h2>Dlaczego liniowe modele mieszane?</h2>
-<div class="dt-tags">
-<div class="dt-tag">Statystyczne Dygresje</div>
-</div>
-<p>Mała zachęta do stosowania mieszanych modeli liniowych.</p>
-</div>
-</a>
-<a href="posts/2022-05-05-tranistive/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Statystyczne Dygresje"]}</script>
-<div class="metadata">
-<div class="publishedDate">May 5, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Szymon Mąka</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2022-05-05-tranistive/Statystyczne_Dygresje2.jpg"/>
-</div>
-<div class="description">
-<h2>Większe czy równe?</h2>
-<div class="dt-tags">
-<div class="dt-tag">Statystyczne Dygresje</div>
-</div>
-<p>O nieprzechodności testów statystycznych.</p>
-</div>
-</a>
-<a href="posts/2022-04-28-behrens/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["Statystyczne Dygresje"]}</script>
-<div class="metadata">
-<div class="publishedDate">April 28, 2022</div>
-<div class="dt-authors">
-<div class="dt-author">Szymon Mąka</div>
-</div>
-</div>
-<div class="thumbnail">
-<img data-src="posts/2022-04-28-behrens/Statystyczne_Dygresje2.jpg"/>
-</div>
-<div class="description">
-<h2>Jak mózg monitoruje zmienność środowiska?</h2>
-<div class="dt-tags">
-<div class="dt-tag">Statystyczne Dygresje</div>
-</div>
-<p>Modelowanie niepewności w procesie uczenia się wartości bodźców.</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:Articles">Articles</a>
-<span class="category-count">(10)</span>
-</li>
-<li>
-<a href="#category:Statystyczne_Dygresje">Statystyczne Dygresje</a>
-<span class="category-count">(10)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>statystyczne_dygresje.knit</h1>
+<h1>Tutorial Statystyki Bayesowskiej</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+<div class="dt-tag">Statystyczne Dygresje</div>
+</div>
 <!--/radix_placeholder_categories-->
-
+<p><p>Część V: Selekcja modeli, wybór rozkładów a priori i inne przydatne rzeczy</p></p>
 </div>
 
+<div class="d-byline">
+  Szymon Mąka <a href="https://revan-tech.github.io/kontakt.html" class="uri">https://revan-tech.github.io/kontakt.html</a> 
+  
+<br/>06-18-2023
+</div>
 
 <div class="d-article">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#wstęp" id="toc-wstęp">Wstęp</a>
+<ul>
+<li><a href="#selekcja-modeli" id="toc-selekcja-modeli">Selekcja modeli</a></li>
+<li><a href="#wybór-rozkładów-a-priori" id="toc-wybór-rozkładów-a-priori">Wybór rozkładów a priori</a></li>
+<li><a href="#garść-wniosków" id="toc-garść-wniosków">Garść wniosków</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h1 id="wstęp">Wstęp</h1>
+<p>Dzisiejszy wpis będzie nie będzie w formie zamkniętej, będę dodawał do niego treści gdy czas pozwoli. Poruszymy problematykę selekcji modeli, wyboru rozkładów a priori i innych rzeczy.</p>
+<h2 id="selekcja-modeli">Selekcja modeli</h2>
+<p>Wyprodukujmy sobie dane powiązane kwadratowo.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>123</span><span class='op'>)</span></span>
+<span><span class='va'>x</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='va'>y</span> <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>*</span><span class='va'>x</span><span class='op'>^</span><span class='fl'>2</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>100</span>,<span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="tutorial-bayes-v_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
+</div>
+<p>Następnie zamodelujemy związek x i y liniowo i kwadratowo.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mcmc-jags.sourceforge.io'>rjags</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>coda</span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/caseyyoungflesh/MCMCvis'>MCMCvis</a></span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>mod_lin</span> <span class='op'>=</span> <span class='st'>"model {</span></span>
+<span><span class='st'>  # Priors</span></span>
+<span><span class='st'>  a ~ dunif(-1000, 1000)</span></span>
+<span><span class='st'>  b ~ dnorm(0, 100^-2)</span></span>
+<span><span class='st'>  sigma ~ dunif(0.000001,1000)</span></span>
+<span><span class='st'>  </span></span>
+<span><span class='st'>  # Likelihood</span></span>
+<span><span class='st'>  for (i in 1:length(y)) {</span></span>
+<span><span class='st'>    y[i] ~ dnorm(a + b * x[i], sigma^-2)</span></span>
+<span><span class='st'>  }}"</span></span>
+<span></span>
+<span><span class='va'>mod_sq</span> <span class='op'>=</span> <span class='st'>"model {</span></span>
+<span><span class='st'>  # Priors</span></span>
+<span><span class='st'>  a ~ dunif(-1000, 1000)</span></span>
+<span><span class='st'>  b ~ dnorm(0, 100^-2)</span></span>
+<span><span class='st'>  sigma ~ dunif(0.000001,1000)</span></span>
+<span><span class='st'>  </span></span>
+<span><span class='st'>  # Likelihood</span></span>
+<span><span class='st'>  for (i in 1:length(y)) {</span></span>
+<span><span class='st'>    y[i] ~ dnorm(a + b * x[i]^2, sigma^-2)</span></span>
+<span><span class='st'>  }}"</span></span>
+<span></span>
+<span></span>
+<span><span class='va'>params</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"a"</span>,<span class='st'>"b"</span>,<span class='st'>"sigma"</span><span class='op'>)</span></span>
+<span><span class='va'>n.adapt</span> <span class='op'>=</span> <span class='fl'>100</span></span>
+<span><span class='va'>ni</span> <span class='op'>=</span> <span class='fl'>3000</span></span>
+<span><span class='va'>nb</span> <span class='op'>=</span> <span class='fl'>3000</span></span>
+<span><span class='va'>nt</span> <span class='op'>=</span> <span class='fl'>1</span></span>
+<span><span class='va'>nc</span> <span class='op'>=</span> <span class='fl'>3</span></span>
+<span></span>
+<span><span class='va'>model_lin</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span>file <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/textconnections.html'>textConnection</a></span><span class='op'>(</span><span class='va'>mod_lin</span><span class='op'>)</span>, data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>x</span>, y <span class='op'>=</span> <span class='va'>y</span><span class='op'>)</span>, n.chains <span class='op'>=</span> <span class='va'>nc</span>, inits <span class='op'>=</span> <span class='cn'>NULL</span>, n.adapt <span class='op'>=</span> <span class='va'>n.adapt</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>model_lin</span>, n.iter<span class='op'>=</span><span class='va'>ni</span>, by<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='va'>samples_lin</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>model_lin</span>, <span class='va'>params</span>, n.iter <span class='op'>=</span> <span class='va'>nb</span>, thin <span class='op'>=</span> <span class='va'>nt</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>model_sq</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/jags.model.html'>jags.model</a></span><span class='op'>(</span>file <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/textconnections.html'>textConnection</a></span><span class='op'>(</span><span class='va'>mod_sq</span><span class='op'>)</span>, data <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>x</span>, y <span class='op'>=</span> <span class='va'>y</span><span class='op'>)</span>, n.chains <span class='op'>=</span> <span class='va'>nc</span>, inits <span class='op'>=</span> <span class='cn'>NULL</span>, n.adapt <span class='op'>=</span> <span class='va'>n.adapt</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>model_sq</span>, n.iter<span class='op'>=</span><span class='va'>ni</span>, by<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span></span>
+<span><span class='va'>samples_sq</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/coda.samples.html'>coda.samples</a></span><span class='op'>(</span><span class='va'>model_sq</span>, <span class='va'>params</span>, n.iter <span class='op'>=</span> <span class='va'>nb</span>, thin <span class='op'>=</span> <span class='va'>nt</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<p>Zerknijmy na przedziały wiarygodności dla współczynników regresji.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>samples_lin</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>
+Iterations = 3101:6100
+Thinning interval = 1 
+Number of chains = 3 
+Sample size per chain = 3000 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+         Mean      SD  Naive SE Time-series SE
+a     -0.2629 0.16892 0.0017806      0.0036514
+b      1.0657 0.11867 0.0012508      0.0024458
+sigma  1.0860 0.07962 0.0008393      0.0008444
+
+2. Quantiles for each variable:
+
+         2.5%     25%     50%     75%   97.5%
+a     -0.6003 -0.3736 -0.2618 -0.1503 0.06835
+b      0.8280  0.9870  1.0653  1.1450 1.30143
+sigma  0.9448  1.0304  1.0815  1.1356 1.25578</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>samples_sq</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>
+Iterations = 3101:6100
+Thinning interval = 1 
+Number of chains = 3 
+Sample size per chain = 3000 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+          Mean      SD  Naive SE Time-series SE
+a     -0.02631 0.13005 0.0013709      0.0021185
+b      0.46019 0.04237 0.0004466      0.0006945
+sigma  0.98023 0.07083 0.0007466      0.0007991
+
+2. Quantiles for each variable:
+
+         2.5%     25%      50%     75%  97.5%
+a     -0.2798 -0.1130 -0.02682 0.05845 0.2346
+b      0.3771  0.4319  0.45989 0.48871 0.5453
+sigma  0.8535  0.9301  0.97590 1.02461 1.1322</code></pre>
+</div>
+<p>W obydwu przypadkach przedziały nie zawierają zera. Musimy rozsądzić, który model jest lepszy. Moglibyśmy zrobić to przy pomocy już omówionego Czynnika Bayesa. Jednak, tak jak już wspominałem, obliczenie go w bardziej skomplikowanych modelach jest problematyczne.</p>
+<p>W modelach częstościowych używa się kryteriów informacyjnych takich jak AIC i BIC do selekcji modeli. W statystyce Bayesowskiej do oceny dopoasowania modelu możemy użyć <em>Deviance Information Cryterion</em> (DIC).</p>
+<p><span class="math display">\[\text{DIC} = D(\bar{\theta}) + 2*p_D\]</span>
+gdzie:</p>
+<p><span class="math display">\[ D(\theta) =  -  2\log ({\rm{P}}(y|\theta ))\]</span></p>
+<p><span class="math display">\[ p_D= D(\bar{\theta}) -  \overline{D(\theta)}\]</span></p>
+<p>DIC jest zdefiniowane jako różnica między (ujemnym) logarytmem funkcji wiarygodności zewaluowanym dla średniej wartości parametrów <span class="math inline">\(\theta\)</span> z rozkładu post priori <span class="math inline">\(D(\bar{\theta})\)</span> (gdzie dla symetrycznych rozkładów otrzymujemy najbardziej wiarygodne wartości) a dewiacją <span class="math inline">\(p_D\)</span>. Dewiacja, z kolei, jest obliczana jako różnica między wartością funkcji wiarygodności <span class="math inline">\(D(\bar{\theta})\)</span> a średnią wartością logarytmu funkcji wiarygodności dla wszystkich parametrów.</p>
+<p>Innymi słowy, wartość <span class="math inline">\(D(\bar{\theta})\)</span> dostarcza informacji na temat skupienia gęstości prawdopodobieństwa wokół dominującej wartości <span class="math inline">\(\bar{\theta}\)</span>. Im lepszy jest model, tym mniejsza jest ta wartość. Jednakże, gdy liczba parametrów w modelu wzrasta, wartość <span class="math inline">\(D(\bar{\theta})\)</span> może również maleć, ponieważ bardziej skomplikowany model ma większą elastyczność w dopasowaniu się do danych. Dlatego drugi składnik, <span class="math inline">\(\overline{D(\theta)}\)</span>, mierzy stopień rozproszenia wiarygodności wokół dominującej wartości. Im więcej parametrów, tym większa wartość tego składnika.</p>
+<p>Podsumowując, modele z mniejszą wartością DIC są preferowane, ponieważ sugerują większe skupienie gęstości prawdopodobieństwa wokół dominującej wartości, jednocześnie uwzględniając liczbę parametrów w modelu.</p>
+<p>Policzmy DIC dla naszych modeli.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Dic_lin</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/dic.samples.html'>dic.samples</a></span><span class='op'>(</span><span class='va'>model_lin</span>,<span class='fl'>1000</span><span class='op'>)</span></span>
+<span><span class='va'>Dic_lin</span></span></code></pre>
+</div>
+<pre><code>Mean deviance:  298.6 
+penalty 3.106 
+Penalized deviance: 301.7 </code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Dic_sq</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/dic.samples.html'>dic.samples</a></span><span class='op'>(</span><span class='va'>model_sq</span>,<span class='fl'>1000</span><span class='op'>)</span></span>
+<span><span class='va'>Dic_sq</span></span></code></pre>
+</div>
+<pre><code>Mean deviance:  278.4 
+penalty 3.178 
+Penalized deviance: 281.6 </code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/rjags/man/diffdic.html'>diffdic</a></span><span class='op'>(</span><span class='va'>Dic_sq</span>,<span class='va'>Dic_lin</span><span class='op'>)</span></span></code></pre>
+</div>
+<pre><code>Difference: -20.17897
+Sample standard error: 9.873102</code></pre>
+</div>
+<p>Widzimy, że model z kwadratowym związkiem pomiedzy x i y jest lepiej dopasowany do danych.</p>
+<p>Prócz DIC, w statystyce Bayesowskiej narzedziami do oceny dopasowania modeli są: <em>Widely Applicable Information Criterion</em> (WAIC) i <em>Leave-one-out cross-validation</em> (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, niemniej ponieważ mają lepsze właściwości, warto je znać <span class="citation" data-cites="gelman2014understanding">(<a href="#ref-gelman2014understanding" role="doc-biblioref">Gelman et al., 2014</a>)</span>.</p>
+<h2 id="wybór-rozkładów-a-priori">Wybór rozkładów a priori</h2>
+<p>To chyba najtrudniejszy temat w statystyce Bayesowskiej. Zasadniczo zgodnie z ortodoksyjną filozofią Bayesowską rozkłady <em>a priori</em> powinny odzwierciedlać naszą wcześniejszą wiedzę. Filozofia ta może wydawać się kusząca, ponieważ tak właśnie powinna działać nauka. Akumulować wiedzę i następnie po otrzymaniu nowych danych aktualizować swoje oczekiwania. Jednak gdy przechodzimy do modelowania pojawia się problem.</p>
+<p>Jak przedstawić naszą wiedzę w postaci rozkładów <em>a priori</em>? Czy jeśli użyjemy informatywnego rozkładu dla współczynnika regresji, powiedzmy <span class="math inline">\(N(100,0.001)\)</span>, i po otrzymaniu rozkładu <em>a posteriori</em> przedział wiarygodności nie będzie zawierał 0, czy właśnie nie oszukaliśmy by uzyskać “istotny” współczynnik regresji?</p>
+<p>Z kolei jeśli użyjemy zbyt informatywnego rozkładu skoncentrowanego wokół zera, możemy ograniczyć naszą zdolność do wykrycia istniejącego efektu.</p>
+<p>Rozważmy następujący przypadek:</p>
+<p><img src="p_p_l.png" /></p>
+<p>Widzimy tu przykład zastosowania bardzo restrykcyjnego rozkładu <em>a priori</em>. Rozkład <em>posteriori</em> nie bardzo przypomina rozkład <em>a priori</em>. Z kolei gdybyśmy brali pod uwagę tylko wiarygodność (tzn, zastosowalibyśmy płaski rozkład <em>a priori</em>), różniłby się on znacznie od rozkładu <em>a priori</em>.</p>
+<p>Przypomnijmy sobie jaką interpretacje ma rozkład <em>a posteriori</em> i zastosujmy ją do powyższego wykresu: Pod warunkiem naszych zaobserwowanych danych, zaobserwowane przez nas dane mają znikome prawdopodobieństwo zaobserwowania.</p>
+<p>Hmm. Tak jak wspominałem ustalenie właściwych rozkładów to rzecz nietrywialna.</p>
+<p>Zasadniczo, możliwe podejścia do rozkładów <em>a priori</em>:</p>
+<ul>
+<li><p><strong>Używanie nieinformaywnych priorów</strong> (np. rozkładów jednostajnych) - częste i najprostsze podejście. Zalety: Dobre do celów eksploracyjnych. Wady: To głębszy temat, jednak w wielu przypadkach użycie słabych priorów może znacząco zbiasować wyniki naszej analizy. Rozszerzę ten punkt, a na razie odsyłam do <span style="color:blue"><a href="https://statmodeling.stat.columbia.edu/2013/11/21/hidden-dangers-noninformative-priors/">wpisu</a></span> Andrewa Gelmana.</p></li>
+<li><p><strong>Empiryczny Bayes</strong>. Możemy użyć danych by wyestymować rozkłady <em>a prior</em>. Przykład możecie znaleźć w pierwszej części tutorialu (przykład z księgarnią). Jest to użyteczne narzędzie, jednak niekoniecznie zawsze najlepsze do wnioskowania statystycznego. To znaczy, należy rozważyć na ile możemy sobie pozwolić na “zajrzenie” do danych, zanim użyjemy docelowego modelu.</p></li>
+<li><p><strong>Wybieranie informatywnych rozkładów <em>a priori</em> </strong>. W jaki sposób? Zwykle posiadamy jakieś informacje na temat badanego zjawiska. Jakiej wielkości efektu możemy się spodziewać? Jeśli współczynnik regresji 0.1 to maksymalna rozsądna wartość na jaką możemy liczyć, ponieważ wiemy, że inne zbadane w literaturze efekty znacznie ważniejszych predykatorów osiągają maksymalnie taki efekt, to <span class="math inline">\(N(0,1)\)</span> nie będzie najlepszym priorem, ponieważ ponad 90% gęstości prawdopodobieństwa znajduje się <em>poza przedziałem [-0.1,0.1]</em>. Słaby prior mógłby na przykład sprawić, że wykrylibyśmy efekt “istotny, ale trywialny”, jak na przykład korelację między atrakcyjnością rodziców a prawdopodobieństwem urodzenia dziewczynki. Ten pozorny efekt nie został by uznany za istotny, gdyby użyto informatywnego rozkładu <em>a priori</em>, który uwzględniał wielkości efektów dla zmiennych takich jak np. wiek matki <span class="citation" data-cites="gelman2017prior">(<a href="#ref-gelman2017prior" role="doc-biblioref">Gelman et al., 2017</a>)</span>.</p></li>
+</ul>
+<p>Ogólne wskazówki dotyczące wybierania rozkładów <em>a priori</em> (niezależne od wyżej wymienionych strategii):</p>
+<p>Rozkład <em>a priori</em> powinien kształtem przypominać rozkład modelowanego parametru. Jeśli parametr jest średnią - to zwykle zamodelujemy go rozkładem normalnym. Co w przypadku innych parametrów? Warto zobaczyć jak takie parametry się zachowują. Policzmy sobie wariancję z 300^2 prób, w których losujemy 25 obserwacji z rozkładu normalnego.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>variances</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>replicate</a></span><span class='op'>(</span><span class='fl'>300</span><span class='op'>^</span><span class='fl'>2</span>,<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='fl'>25</span>,<span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/density.html'>density</a></span><span class='op'>(</span><span class='va'>variances</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="tutorial-bayes-v_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
+</div>
+<p>Jak widzimy, rozkład wariancji jest prawoskośny. Rozkładem prawdopodobieństwa, którym często modeluje się wariancję jest rozkład Gamma.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/r/graphics/curve.html'>curve</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/GammaDist.html'>dgamma</a></span><span class='op'>(</span><span class='va'>x</span>,<span class='fl'>7</span>,<span class='fl'>7</span><span class='op'>)</span>,<span class='fl'>0</span>,<span class='fl'>3</span><span class='op'>)</span></span></code></pre>
+</div>
+<p><img src="tutorial-bayes-v_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+</div>
+<h2 id="garść-wniosków">Garść wniosków</h2>
+<p>Statystyka Bayesowska ma swoje wady i zalety. W tutorialu skupiliśmy się głównie na metodzie numerycznej, jaką jest MCMC, do modelowania. Ta metoda umożliwia także estymację modeli, które nie mają rozwiązań analitycznych (albo ich nie znamy). Moglibyśmy estymować parametry takich modeli za pomocą zwykłej optymalizacji. Jednakże, wtedy pojawia się problem, ponieważ nie możemy obliczyć przedziałów ufności. Mnie interesuje mnie głównie wnioskowanie statystyczne, a podejście Bayesowskie dostarcza nie punktową wartość parametru tylko jego rozkład, co pozwala ocenić niepewność związana z tymi parametrami!</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
+<div id="ref-gelman2014understanding" class="csl-entry" role="doc-biblioentry">
+Gelman, A., Hwang, J., &amp; Vehtari, A. (2014). Understanding predictive information criteria for bayesian models. <em>Statistics and Computing</em>, <em>24</em>(6), 997–1016.
+</div>
+<div id="ref-gelman2017prior" class="csl-entry" role="doc-biblioentry">
+Gelman, A., Simpson, D., &amp; Betancourt, M. (2017). The prior can often only be understood in the context of the likelihood. <em>Entropy</em>, <em>19</em>(10), 555.
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2483,18 +1759,26 @@ function init_posts_list() {
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
-<div class="distill-site-nav distill-site-footer">
-<p>© Copyright 2023 Sortownia</p>
-</div>
 <!--/radix_placeholder_navigation_after_body-->
-
 
 </body>
 
