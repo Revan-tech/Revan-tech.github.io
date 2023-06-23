@@ -23,7 +23,7 @@ csl: apa.csl
 
 # Wstęp
 
-Dzisiejszy wpis będzie nie będzie w formie zamkniętej, będę dodawał do niego treści gdy czas pozwoli. Poruszymy problematykę selekcji modeli, wyboru rozkładów a priori i innych rzeczy.
+Dzisiejszy wpis będzie nie będzie w formie zamkniętej, będę dodawał do niego treści gdy czas pozwoli. Poruszymy problematykę selekcji modeli, wyboru rozkładów a priori i innych przydatnych rzeczy w analizie Bayesowskiej.
 
 
 ## Selekcja modeli
@@ -157,7 +157,7 @@ Zasadniczo, możliwe podejścia do rozkładów *a priori*:
 
 - **Empiryczny Bayes**. Możemy użyć danych by wyestymować rozkłady *a prior*. Przykład możecie znaleźć w pierwszej części tutorialu (przykład z księgarnią). Jest to użyteczne narzędzie, jednak niekoniecznie zawsze najlepsze do wnioskowania statystycznego. To znaczy, należy rozważyć na ile możemy sobie pozwolić na "zajrzenie" do danych, zanim użyjemy docelowego modelu. 
 
-- **Wybieranie informatywnych rozkładów *a priori* **. W jaki sposób? Zwykle posiadamy jakieś informacje na temat badanego zjawiska. Jakiej wielkości efektu możemy się spodziewać? Jeśli współczynnik regresji 0.1 to maksymalna rozsądna wartość na jaką możemy liczyć, ponieważ wiemy, że inne zbadane w literaturze efekty znacznie ważniejszych predykatorów osiągają maksymalnie taki efekt, to $N(0,1)$ nie będzie najlepszym priorem, ponieważ ponad 90% gęstości prawdopodobieństwa znajduje się *poza przedziałem [-0.1,0.1]*. Słaby prior mógłby na przykład sprawić, że wykrylibyśmy efekt "istotny, ale trywialny", jak na przykład korelację między atrakcyjnością rodziców a prawdopodobieństwem urodzenia dziewczynki. Ten pozorny efekt nie został by uznany za istotny, gdyby użyto informatywnego rozkładu *a priori*, który uwzględniał wielkości efektów dla zmiennych takich jak np. wiek matki [@gelman2017prior]. 
+- **Wybieranie informatywnych rozkładów *a priori* **. W jaki sposób? Zwykle posiadamy jakieś informacje na temat badanego zjawiska. Jakiej wielkości efektu możemy się spodziewać? Jeśli współczynnik regresji 0.1 to maksymalna rozsądna wartość na jaką możemy liczyć, ponieważ wiemy, że inne zbadane w literaturze efekty znacznie ważniejszych predykatorów osiągają maksymalnie taki efekt, to $N(0,1)$ nie będzie najlepszym priorem, ponieważ ponad 90% gęstości prawdopodobieństwa znajduje się **poza przedziałem [-0.1, 0.1]**. Słaby prior mógłby na przykład sprawić, że wykrylibyśmy efekt "istotny, ale trywialny", jak na przykład korelację między atrakcyjnością rodziców a prawdopodobieństwem urodzenia dziewczynki. Ten pozorny efekt nie został by uznany za istotny, gdyby użyto informatywnego rozkładu *a priori*, który uwzględniał wielkości efektów dla zmiennych takich jak np. wiek matki [@gelman2017prior]. 
 
 Ogólne wskazówki dotyczące wybierania rozkładów *a priori* (niezależne od wyżej wymienionych strategii):
 

@@ -1563,7 +1563,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </nav>
 </div>
 <h1 id="wstęp">Wstęp</h1>
-<p>Dzisiejszy wpis będzie nie będzie w formie zamkniętej, będę dodawał do niego treści gdy czas pozwoli. Poruszymy problematykę selekcji modeli, wyboru rozkładów a priori i innych rzeczy.</p>
+<p>Dzisiejszy wpis będzie nie będzie w formie zamkniętej, będę dodawał do niego treści gdy czas pozwoli. Poruszymy problematykę selekcji modeli, wyboru rozkładów a priori i innych przydatnych rzeczy w analizie Bayesowskiej.</p>
 <h2 id="selekcja-modeli">Selekcja modeli</h2>
 <p>Wyprodukujmy sobie dane powiązane kwadratowo.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1636,16 +1636,16 @@ Sample size per chain = 3000
    plus standard error of the mean:
 
          Mean      SD  Naive SE Time-series SE
-a     -0.2599 0.16924 0.0017839      0.0034188
-b      1.0637 0.11957 0.0012604      0.0024116
-sigma  1.0846 0.07813 0.0008235      0.0008773
+a     -0.2625 0.17159 0.0018087      0.0036431
+b      1.0658 0.11917 0.0012562      0.0025497
+sigma  1.0847 0.07746 0.0008165      0.0008622
 
 2. Quantiles for each variable:
 
          2.5%     25%     50%     75%   97.5%
-a     -0.5962 -0.3719 -0.2589 -0.1466 0.07121
-b      0.8262  0.9833  1.0639  1.1423 1.29861
-sigma  0.9458  1.0309  1.0785  1.1331 1.24936</code></pre>
+a     -0.6003 -0.3777 -0.2609 -0.1477 0.07165
+b      0.8317  0.9855  1.0657  1.1449 1.30052
+sigma  0.9458  1.0294  1.0808  1.1344 1.24844</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1661,16 +1661,16 @@ Sample size per chain = 3000
    plus standard error of the mean:
 
           Mean      SD  Naive SE Time-series SE
-a     -0.02662 0.13115 0.0013825      0.0022044
-b      0.46027 0.04316 0.0004550      0.0007105
-sigma  0.98054 0.07148 0.0007535      0.0008375
+a     -0.03488 0.13088 0.0013796      0.0021828
+b      0.46331 0.04243 0.0004473      0.0006849
+sigma  0.98035 0.07184 0.0007573      0.0007835
 
 2. Quantiles for each variable:
 
          2.5%     25%      50%     75%  97.5%
-a     -0.2868 -0.1154 -0.02372 0.06243 0.2257
-b      0.3759  0.4309  0.46096 0.48936 0.5443
-sigma  0.8522  0.9304  0.97654 1.02500 1.1327</code></pre>
+a     -0.2919 -0.1217 -0.03498 0.04985 0.2291
+b      0.3797  0.4345  0.46335 0.49155 0.5463
+sigma  0.8533  0.9294  0.97601 1.02602 1.1322</code></pre>
 </div>
 <p>W obydwu przypadkach przedziały nie zawierają zera. Musimy rozsądzić, który model jest lepszy. Moglibyśmy zrobić to przy pomocy już omówionego Czynnika Bayesa. Jednak, tak jak już wspominałem, obliczenie go w bardziej skomplikowanych modelach jest problematyczne.</p>
 <p>W modelach częstościowych używa się kryteriów informacyjnych takich jak AIC i BIC do selekcji modeli. W statystyce Bayesowskiej do oceny dopoasowania modelu możemy użyć <em>Deviance Information Cryterion</em> (DIC).</p>
@@ -1688,8 +1688,8 @@ gdzie:</p>
 <span><span class='va'>Dic_lin</span></span></code></pre>
 </div>
 <pre><code>Mean deviance:  298.6 
-penalty 3.053 
-Penalized deviance: 301.6 </code></pre>
+penalty 3.133 
+Penalized deviance: 301.7 </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1697,15 +1697,15 @@ Penalized deviance: 301.6 </code></pre>
 <span><span class='va'>Dic_sq</span></span></code></pre>
 </div>
 <pre><code>Mean deviance:  278.3 
-penalty 3.061 
-Penalized deviance: 281.3 </code></pre>
+penalty 3.084 
+Penalized deviance: 281.4 </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/rjags/man/diffdic.html'>diffdic</a></span><span class='op'>(</span><span class='va'>Dic_sq</span>,<span class='va'>Dic_lin</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>Difference: -20.32408
-Sample standard error: 9.939601</code></pre>
+<pre><code>Difference: -20.34959
+Sample standard error: 9.924028</code></pre>
 </div>
 <p>Widzimy, że model z kwadratowym związkiem pomiedzy x i y jest lepiej dopasowany do danych.</p>
 <p>Prócz DIC, w statystyce Bayesowskiej narzędziami do oceny dopasowania modeli są <em>Widely Applicable Information Criterion</em> (WAIC) oraz <em>Leave-one-out cross-validation</em> (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, jednak warto je poznać, ponieważ posiadają lepsze właściwości <span class="citation" data-cites="gelman2014understanding">(<a href="#ref-gelman2014understanding" role="doc-biblioref">Gelman et al., 2014</a>)</span>.
@@ -1722,7 +1722,7 @@ Sample standard error: 9.939601</code></pre>
 <ul>
 <li><p><strong>Używanie nieinformaywnych priorów</strong> (np. rozkładów jednostajnych) - częste i najprostsze podejście. Zalety: Dobre do celów eksploracyjnych. Wady: To głębszy temat, jednak w wielu przypadkach użycie słabych priorów może znacząco zbiasować wyniki naszej analizy. Rozszerzę ten punkt, a na razie odsyłam do <span style="color:blue"><a href="https://statmodeling.stat.columbia.edu/2013/11/21/hidden-dangers-noninformative-priors/">wpisu</a></span> Andrewa Gelmana.</p></li>
 <li><p><strong>Empiryczny Bayes</strong>. Możemy użyć danych by wyestymować rozkłady <em>a prior</em>. Przykład możecie znaleźć w pierwszej części tutorialu (przykład z księgarnią). Jest to użyteczne narzędzie, jednak niekoniecznie zawsze najlepsze do wnioskowania statystycznego. To znaczy, należy rozważyć na ile możemy sobie pozwolić na “zajrzenie” do danych, zanim użyjemy docelowego modelu.</p></li>
-<li><p><strong>Wybieranie informatywnych rozkładów <em>a priori</em> </strong>. W jaki sposób? Zwykle posiadamy jakieś informacje na temat badanego zjawiska. Jakiej wielkości efektu możemy się spodziewać? Jeśli współczynnik regresji 0.1 to maksymalna rozsądna wartość na jaką możemy liczyć, ponieważ wiemy, że inne zbadane w literaturze efekty znacznie ważniejszych predykatorów osiągają maksymalnie taki efekt, to <span class="math inline">\(N(0,1)\)</span> nie będzie najlepszym priorem, ponieważ ponad 90% gęstości prawdopodobieństwa znajduje się <em>poza przedziałem [-0.1,0.1]</em>. Słaby prior mógłby na przykład sprawić, że wykrylibyśmy efekt “istotny, ale trywialny”, jak na przykład korelację między atrakcyjnością rodziców a prawdopodobieństwem urodzenia dziewczynki. Ten pozorny efekt nie został by uznany za istotny, gdyby użyto informatywnego rozkładu <em>a priori</em>, który uwzględniał wielkości efektów dla zmiennych takich jak np. wiek matki <span class="citation" data-cites="gelman2017prior">(<a href="#ref-gelman2017prior" role="doc-biblioref">Gelman et al., 2017</a>)</span>.</p></li>
+<li><p><strong>Wybieranie informatywnych rozkładów <em>a priori</em> </strong>. W jaki sposób? Zwykle posiadamy jakieś informacje na temat badanego zjawiska. Jakiej wielkości efektu możemy się spodziewać? Jeśli współczynnik regresji 0.1 to maksymalna rozsądna wartość na jaką możemy liczyć, ponieważ wiemy, że inne zbadane w literaturze efekty znacznie ważniejszych predykatorów osiągają maksymalnie taki efekt, to <span class="math inline">\(N(0,1)\)</span> nie będzie najlepszym priorem, ponieważ ponad 90% gęstości prawdopodobieństwa znajduje się <strong>poza przedziałem [-0.1, 0.1]</strong>. Słaby prior mógłby na przykład sprawić, że wykrylibyśmy efekt “istotny, ale trywialny”, jak na przykład korelację między atrakcyjnością rodziców a prawdopodobieństwem urodzenia dziewczynki. Ten pozorny efekt nie został by uznany za istotny, gdyby użyto informatywnego rozkładu <em>a priori</em>, który uwzględniał wielkości efektów dla zmiennych takich jak np. wiek matki <span class="citation" data-cites="gelman2017prior">(<a href="#ref-gelman2017prior" role="doc-biblioref">Gelman et al., 2017</a>)</span>.</p></li>
 </ul>
 <p>Ogólne wskazówki dotyczące wybierania rozkładów <em>a priori</em> (niezależne od wyżej wymienionych strategii):</p>
 <p>Rozkład <em>a priori</em> powinien kształtem przypominać rozkład modelowanego parametru. Jeśli parametr jest średnią - to zwykle zamodelujemy go rozkładem normalnym. Co w przypadku innych parametrów? Warto zobaczyć jak takie parametry się zachowują. Policzmy sobie wariancję z 300^2 prób, w których losujemy 25 obserwacji z rozkładu normalnego.</p>
