@@ -2180,6 +2180,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#wstęp" id="toc-wstęp">Wstęp</a>
 <ul>
 <li><a href="#selekcja-modeli" id="toc-selekcja-modeli">Selekcja modeli</a></li>
+<li><a href="#wybór-rozkładów-a-priori" id="toc-wybór-rozkładów-a-priori">Wybór rozkładów a priori</a></li>
 <li><a href="#garść-wniosków" id="toc-garść-wniosków">Garść wniosków</a></li>
 </ul></li>
 </ul>
@@ -2259,16 +2260,16 @@ Sample size per chain = 3000
    plus standard error of the mean:
 
          Mean      SD  Naive SE Time-series SE
-a     -0.2625 0.17159 0.0018087      0.0036431
-b      1.0658 0.11917 0.0012562      0.0025497
-sigma  1.0847 0.07746 0.0008165      0.0008622
+a     -0.2677 0.16947 0.0017864      0.0035472
+b      1.0683 0.11989 0.0012637      0.0024007
+sigma  1.0852 0.07869 0.0008295      0.0008698
 
 2. Quantiles for each variable:
 
          2.5%     25%     50%     75%   97.5%
-a     -0.6003 -0.3777 -0.2609 -0.1477 0.07165
-b      0.8317  0.9855  1.0657  1.1449 1.30052
-sigma  0.9458  1.0294  1.0808  1.1344 1.24844</code></pre>
+a     -0.5993 -0.3794 -0.2687 -0.1544 0.06437
+b      0.8316  0.9889  1.0694  1.1470 1.30690
+sigma  0.9471  1.0296  1.0804  1.1344 1.25610</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2284,16 +2285,16 @@ Sample size per chain = 3000
    plus standard error of the mean:
 
           Mean      SD  Naive SE Time-series SE
-a     -0.03488 0.13088 0.0013796      0.0021828
-b      0.46331 0.04243 0.0004473      0.0006849
-sigma  0.98035 0.07184 0.0007573      0.0007835
+a     -0.03549 0.12908 0.0013607      0.0021837
+b      0.46277 0.04233 0.0004462      0.0007037
+sigma  0.98071 0.07135 0.0007521      0.0007847
 
 2. Quantiles for each variable:
 
          2.5%     25%      50%     75%  97.5%
-a     -0.2919 -0.1217 -0.03498 0.04985 0.2291
-b      0.3797  0.4345  0.46335 0.49155 0.5463
-sigma  0.8533  0.9294  0.97601 1.02602 1.1322</code></pre>
+a     -0.2869 -0.1235 -0.03456 0.05162 0.2173
+b      0.3798  0.4345  0.46280 0.49103 0.5459
+sigma  0.8530  0.9309  0.97645 1.02513 1.1349</code></pre>
 </div>
 <p>W obydwu przypadkach przedziały nie zawierają zera. Musimy rozsądzić, który model jest lepszy. Moglibyśmy zrobić to przy pomocy już omówionego Czynnika Bayesa. Jednak, tak jak już wspominałem, obliczenie go w bardziej skomplikowanych modelach jest problematyczne.</p>
 <p>W modelach częstościowych używa się kryteriów informacyjnych takich jak AIC i BIC do selekcji modeli. W statystyce Bayesowskiej do oceny dopoasowania modelu możemy użyć <em>Deviance Information Cryterion</em> (DIC).</p>
@@ -2311,8 +2312,8 @@ gdzie:</p>
 <span><span class='va'>Dic_lin</span></span></code></pre>
 </div>
 <pre><code>Mean deviance:  298.6 
-penalty 3.133 
-Penalized deviance: 301.7 </code></pre>
+penalty 3.049 
+Penalized deviance: 301.6 </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2320,19 +2321,19 @@ Penalized deviance: 301.7 </code></pre>
 <span><span class='va'>Dic_sq</span></span></code></pre>
 </div>
 <pre><code>Mean deviance:  278.3 
-penalty 3.084 
-Penalized deviance: 281.4 </code></pre>
+penalty 3.146 
+Penalized deviance: 281.5 </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/rjags/man/diffdic.html'>diffdic</a></span><span class='op'>(</span><span class='va'>Dic_sq</span>,<span class='va'>Dic_lin</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>Difference: -20.34959
-Sample standard error: 9.924028</code></pre>
+<pre><code>Difference: -20.13234
+Sample standard error: 9.952882</code></pre>
 </div>
 <p>Widzimy, że model z kwadratowym związkiem pomiedzy x i y jest lepiej dopasowany do danych.</p>
-<p>Prócz DIC, w statystyce Bayesowskiej narzędziami do oceny dopasowania modeli są <em>Widely Applicable Information Criterion</em> (WAIC) oraz <em>Leave-one-out cross-validation</em> (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, jednak warto je poznać, ponieważ posiadają lepsze właściwości <span class="citation" data-cites="gelman2014understanding">(<a href="#ref-gelman2014understanding" role="doc-biblioref">Gelman et al., 2014</a>)</span>.
-## Wybór rozkładów a priori</p>
+<p>Prócz DIC, w statystyce Bayesowskiej narzędziami do oceny dopasowania modeli są <em>Widely Applicable Information Criterion</em> (WAIC) oraz <em>Leave-one-out cross-validation</em> (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, jednak warto je poznać, ponieważ posiadają lepsze właściwości <span class="citation" data-cites="gelman2014understanding">(<a href="#ref-gelman2014understanding" role="doc-biblioref">Gelman et al., 2014</a>)</span>.</p>
+<h2 id="wybór-rozkładów-a-priori">Wybór rozkładów a priori</h2>
 <p>To chyba najtrudniejszy temat w statystyce Bayesowskiej. Zasadniczo zgodnie z ortodoksyjną filozofią Bayesowską rozkłady <em>a priori</em> powinny odzwierciedlać naszą wcześniejszą wiedzę. Filozofia ta może wydawać się kusząca, ponieważ tak właśnie powinna działać nauka. Akumulować wiedzę i następnie po otrzymaniu nowych danych aktualizować swoje oczekiwania. Jednak gdy przechodzimy do modelowania pojawia się problem.</p>
 <p>Jak przedstawić naszą wiedzę w postaci rozkładów <em>a priori</em>? Czy jeśli użyjemy informatywnego rozkładu dla współczynnika regresji, powiedzmy <span class="math inline">\(N(100,0.001)\)</span>, i po otrzymaniu rozkładu <em>a posteriori</em> przedział wiarygodności nie będzie zawierał 0, czy właśnie nie oszukaliśmy by uzyskać “istotny” współczynnik regresji?</p>
 <p>Z kolei jeśli użyjemy zbyt informatywnego rozkładu skoncentrowanego wokół zera, możemy ograniczyć naszą zdolność do wykrycia istniejącego efektu.</p>

@@ -104,7 +104,7 @@ $$ D(\theta) =  -  2\log ({\rm{P}}(y|\theta ))$$
 
 $$ p_D= D(\bar{\theta}) -  \overline{D(\theta)}$$
 
- DIC jest zdefiniowane jako różnica między (ujemnym) logarytmem funkcji wiarygodności zewaluowanym dla średniej wartości parametrów $\theta$ z rozkładu post priori $D(\bar{\theta})$ (gdzie dla symetrycznych rozkładów otrzymujemy najbardziej wiarygodne wartości) a dewiacją $p_D$. Dewiacja, z kolei, jest obliczana jako różnica między wartością funkcji wiarygodności $D(\bar{\theta})$ a średnią wartością logarytmu funkcji wiarygodności dla wszystkich parametrów. 
+DIC jest zdefiniowane jako różnica między (ujemnym) logarytmem funkcji wiarygodności zewaluowanym dla średniej wartości parametrów $\theta$ z rozkładu post priori $D(\bar{\theta})$ (gdzie dla symetrycznych rozkładów otrzymujemy najbardziej wiarygodne wartości) a dewiacją $p_D$. Dewiacja, z kolei, jest obliczana jako różnica między wartością funkcji wiarygodności $D(\bar{\theta})$ a średnią wartością logarytmu funkcji wiarygodności dla wszystkich parametrów. 
 
 
 Innymi słowy, wartość $D(\bar{\theta})$ dostarcza informacji na temat skupienia gęstości prawdopodobieństwa wokół dominującej wartości $\bar{\theta}$. Im lepszy jest model, tym mniejsza jest ta wartość. Jednakże, gdy liczba parametrów w modelu wzrasta, wartość $D(\bar{\theta})$ może również maleć, ponieważ bardziej skomplikowany model ma większą elastyczność w dopasowaniu się do danych. Dlatego drugi składnik, $\overline{D(\theta)}$, mierzy stopień rozproszenia wiarygodności wokół dominującej wartości. Im więcej parametrów, tym większa wartość tego składnika.
@@ -133,6 +133,8 @@ diffdic(Dic_sq,Dic_lin)
 Widzimy, że model z kwadratowym związkiem pomiedzy x i y jest lepiej dopasowany do danych.  
 
 Prócz DIC, w statystyce Bayesowskiej narzędziami do oceny dopasowania modeli są *Widely Applicable Information Criterion* (WAIC) oraz *Leave-one-out cross-validation* (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, jednak warto je poznać, ponieważ posiadają lepsze właściwości [@gelman2014understanding].
+
+
 ## Wybór rozkładów a priori
 
 To chyba najtrudniejszy temat w statystyce Bayesowskiej. Zasadniczo zgodnie z ortodoksyjną filozofią Bayesowską rozkłady *a priori* powinny odzwierciedlać naszą wcześniejszą wiedzę. Filozofia ta może wydawać się kusząca, ponieważ tak właśnie powinna działać nauka. Akumulować wiedzę i następnie po otrzymaniu nowych danych aktualizować swoje oczekiwania. Jednak gdy przechodzimy do modelowania pojawia się problem. 
