@@ -44,7 +44,7 @@ Gdy chcemy oszacować związek liniowy pomiedzy zmienną Y i X wykorzystujemy ta
 
 Czyli, zasadniczo staramy się wyestymować taką linię regresji, która sprawi, że odległości naszych obserwacji do niej będą jak najmniejsze. 
 
-W naszej funcji liniowej $a$ kontroluje gdzie linia przetnie 0 na osi Y. Współczynik regresji $\beta$ kontroluje nachylenie lini (gdy wynosi 0, linia jest płaska). To co następnie robimy, to liczymy statystykę dla $\beta$ by określić czy istotnie różni się od 0. Jeśli tak uznajemy, że wykryliśmy związek liniowy pomiędzy Y i X. 
+W naszej funcji liniowej $a$ kontroluje gdzie linia przetnie 0 na osi Y. Współczynik regresji $\beta$ kontroluje nachylenie lini (gdy wynosi 0, linia jest płaska). To co następnie robimy, to liczymy statystykę dla $\beta$ by określić czy istotnie różni się od 0. Jeśli tak, uznajemy, że wykryliśmy związek liniowy pomiędzy Y i X. 
 
 Co jeśli jednak nasze dane będą pogrupowane w klastry? 
 
@@ -176,7 +176,7 @@ Chcemy zadać pytanie czy większa amplituda sygnału z elektrod jest związana 
 
 Gdyby interesowało nas to, czy osoby z średnio wyższą amplitudą sygnału mają wyższą średnią ocenę (efekt międzyobiektowy), możemy po prostu uśrednić pomiary na osobę i skorelować je ze sobą. 
 
-Nas jednak interesuje to, czy osoby z średnio wyższą amplitudą sygnału mają wyższą średnią ocenę (efekt międzyobiektowy). Możemy spróbować po prostu skorelować  pojedyńcze pomiary pobudzenia i amplitudy ze sobą. Niestety ta metoda nie zadziałałaby. Dlaczego? Zasymulowałem takie dane:
+Nas jednak interesuje to, czy osoby z kiedy mają wyższą amplitudę sygnału dają też wyższą ocenę (efekt wewnątrzobiektowy). Możemy spróbować po prostu skorelowaćpojedyńcze pomiary pobudzenia i amplitudy ze sobą. Niestety ta metoda nie zadziałałaby. Dlaczego? Zasymulowałem takie dane:
  
 
 

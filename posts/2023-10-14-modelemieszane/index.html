@@ -2175,7 +2175,7 @@ gdzie <span class="math inline">\(a\)</span> to stała, <span class="math inline
 <p>Gdy chcemy oszacować związek liniowy pomiedzy zmienną Y i X wykorzystujemy taką włłaśnie funckję liniową, szukając takich parametrów <span class="math inline">\(a\)</span> i <span class="math inline">\(\beta\)</span>, które zminimalizują nam średni kwadrat błędu <span class="math inline">\(E(\epsilon^2)\)</span>.</p>
 <p><img src="reg_line.png" /></p>
 <p>Czyli, zasadniczo staramy się wyestymować taką linię regresji, która sprawi, że odległości naszych obserwacji do niej będą jak najmniejsze.</p>
-<p>W naszej funcji liniowej <span class="math inline">\(a\)</span> kontroluje gdzie linia przetnie 0 na osi Y. Współczynik regresji <span class="math inline">\(\beta\)</span> kontroluje nachylenie lini (gdy wynosi 0, linia jest płaska). To co następnie robimy, to liczymy statystykę dla <span class="math inline">\(\beta\)</span> by określić czy istotnie różni się od 0. Jeśli tak uznajemy, że wykryliśmy związek liniowy pomiędzy Y i X.</p>
+<p>W naszej funcji liniowej <span class="math inline">\(a\)</span> kontroluje gdzie linia przetnie 0 na osi Y. Współczynik regresji <span class="math inline">\(\beta\)</span> kontroluje nachylenie lini (gdy wynosi 0, linia jest płaska). To co następnie robimy, to liczymy statystykę dla <span class="math inline">\(\beta\)</span> by określić czy istotnie różni się od 0. Jeśli tak, uznajemy, że wykryliśmy związek liniowy pomiędzy Y i X.</p>
 <p>Co jeśli jednak nasze dane będą pogrupowane w klastry?</p>
 <h3 id="niewykrycie-prawdziego-efektu">Niewykrycie prawdziego efektu</h3>
 <p>Załóżmy, że wykonujemy przez pewien czas pomiary zadowolenia z obsługi i wysokości napiwków u stałych klientów pewnej restauracji.</p>
@@ -2213,7 +2213,7 @@ gdzie <span class="math inline">\(a\)</span> to stała, <span class="math inline
 <p>Rozważmy hipotetyczny eksperyment. Badane osoby oglądają różne zdjęcia, a po po obejrzeniu oceniają jak bardzo zdjęcie było pobudzające. W trakcie badania uczesnicy mają na palcu wskazującym i środkowym elektrody mierzące aktywność skórno-galwaniczną (mikropocenie).</p>
 <p>Chcemy zadać pytanie czy większa amplituda sygnału z elektrod jest związana z większym pobudzeniem.</p>
 <p>Gdyby interesowało nas to, czy osoby z średnio wyższą amplitudą sygnału mają wyższą średnią ocenę (efekt międzyobiektowy), możemy po prostu uśrednić pomiary na osobę i skorelować je ze sobą.</p>
-<p>Nas jednak interesuje to, czy osoby z średnio wyższą amplitudą sygnału mają wyższą średnią ocenę (efekt międzyobiektowy). Możemy spróbować po prostu skorelować pojedyńcze pomiary pobudzenia i amplitudy ze sobą. Niestety ta metoda nie zadziałałaby. Dlaczego? Zasymulowałem takie dane:</p>
+<p>Nas jednak interesuje to, czy osoby z kiedy mają wyższą amplitudę sygnału dają też wyższą ocenę (efekt wewnątrzobiektowy). Możemy spróbować po prostu skorelowaćpojedyńcze pomiary pobudzenia i amplitudy ze sobą. Niestety ta metoda nie zadziałałaby. Dlaczego? Zasymulowałem takie dane:</p>
 <div class="layout-chunk" data-layout="l-body-outset">
 <p><img src="modelemieszane_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
 </div>
