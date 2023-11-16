@@ -176,7 +176,7 @@ Chcemy zadać pytanie czy większa amplituda sygnału z elektrod jest związana 
 
 Gdyby interesowało nas to, czy osoby z średnio wyższą amplitudą sygnału mają wyższą średnią ocenę (efekt międzyobiektowy), możemy po prostu uśrednić pomiary na osobę i skorelować je ze sobą. 
 
-Nas jednak interesuje to, czy osoby z kiedy mają wyższą amplitudę sygnału dają też wyższą ocenę (efekt wewnątrzobiektowy). Możemy spróbować po prostu skorelowaćpojedyńcze pomiary pobudzenia i amplitudy ze sobą. Niestety ta metoda nie zadziałałaby. Dlaczego? Zasymulowałem takie dane:
+Nas jednak interesuje to, czy osoby kiedy mają wyższą amplitudę sygnału dają też wyższą ocenę (efekt wewnątrzobiektowy). Możemy spróbować po prostu skorelować pojedyńcze pomiary pobudzenia i amplitudy ze sobą. Niestety ta metoda nie zadziałałaby. Dlaczego? Zasymulowałem takie dane:
  
 
 
