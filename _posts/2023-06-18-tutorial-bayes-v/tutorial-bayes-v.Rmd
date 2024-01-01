@@ -102,12 +102,12 @@ gdzie:
 
 $$ D(\theta) =  -  2\log ({\rm{P}}(y|\theta ))$$
 
-$$ p_D= D(\bar{\theta}) -  \overline{D(\theta)}$$
+$$ p_D=\overline{D(\theta)} -  D(\bar{\theta})$$
 
 DIC jest zdefiniowane jako różnica między (ujemnym) logarytmem funkcji wiarygodności zewaluowanym dla średniej wartości parametrów $\theta$ z rozkładu post priori $D(\bar{\theta})$ (gdzie dla symetrycznych rozkładów otrzymujemy najbardziej wiarygodne wartości) a dewiacją $p_D$. Dewiacja, z kolei, jest obliczana jako różnica między wartością funkcji wiarygodności $D(\bar{\theta})$ a średnią wartością logarytmu funkcji wiarygodności dla wszystkich parametrów. 
 
 
-Innymi słowy, wartość $D(\bar{\theta})$ dostarcza informacji na temat skupienia gęstości prawdopodobieństwa wokół dominującej wartości $\bar{\theta}$. Im lepszy jest model, tym mniejsza jest ta wartość. Jednakże, gdy liczba parametrów w modelu wzrasta, wartość $D(\bar{\theta})$ może również maleć, ponieważ bardziej skomplikowany model ma większą elastyczność w dopasowaniu się do danych. Dlatego drugi składnik, $\overline{D(\theta)}$, mierzy stopień rozproszenia wiarygodności wokół dominującej wartości. Im więcej parametrów, tym większa wartość tego składnika.
+Innymi słowy, wartość $D(\bar{\theta})$ dostarcza informacji na temat skupienia gęstości prawdopodobieństwa wokół dominującej wartości $\bar{\theta}$. Im lepszy jest model, tym mniejsza jest ta wartość. Jednakże, gdy liczba parametrów w modelu wzrasta, wartość $D(\bar{\theta})$ może również maleć, ponieważ bardziej skomplikowany model ma większą elastyczność w dopasowaniu się do danych. Dlatego drugi składnik, $\overline{D(\theta)}$, mierzy stopień rozproszenia wiarygodności wokół dominującej wartości. Im więcej parametrów, tym większa wartość tego składnika względem $\bar{\theta}$.
 
 Podsumowując, modele z mniejszą wartością DIC są preferowane, ponieważ sugerują większe skupienie gęstości prawdopodobieństwa wokół dominującej wartości, jednocześnie uwzględniając liczbę parametrów w modelu.
  

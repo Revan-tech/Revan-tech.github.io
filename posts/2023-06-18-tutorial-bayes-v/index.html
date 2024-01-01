@@ -143,7 +143,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["apa.csl","bib.bib","hero-image.html","p_p_l.png","Statystyczne_Dygresje.jpg","Statystyczne_Dygresje2.jpg","theme.css","tutorial-bayes-v_files/anchor-4.2.2/anchor.min.js","tutorial-bayes-v_files/bowser-1.9.3/bowser.min.js","tutorial-bayes-v_files/distill-2.2.21/template.v2.js","tutorial-bayes-v_files/figure-html5/unnamed-chunk-1-1.png","tutorial-bayes-v_files/figure-html5/unnamed-chunk-8-1.png","tutorial-bayes-v_files/figure-html5/unnamed-chunk-9-1.png","tutorial-bayes-v_files/header-attrs-2.21/header-attrs.js","tutorial-bayes-v_files/jquery-3.6.0/jquery-3.6.0.js","tutorial-bayes-v_files/jquery-3.6.0/jquery-3.6.0.min.js","tutorial-bayes-v_files/jquery-3.6.0/jquery-3.6.0.min.map","tutorial-bayes-v_files/popper-2.6.0/popper.min.js","tutorial-bayes-v_files/tippy-6.2.7/tippy-bundle.umd.min.js","tutorial-bayes-v_files/tippy-6.2.7/tippy-light-border.css","tutorial-bayes-v_files/tippy-6.2.7/tippy.css","tutorial-bayes-v_files/tippy-6.2.7/tippy.umd.min.js","tutorial-bayes-v_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["apa.csl","bib.bib","hero-image.html","p_p_l.png","Statystyczne_Dygresje.jpg","Statystyczne_Dygresje2.jpg","theme.css","tutorial-bayes-v_files/anchor-4.2.2/anchor.min.js","tutorial-bayes-v_files/bowser-1.9.3/bowser.min.js","tutorial-bayes-v_files/distill-2.2.21/template.v2.js","tutorial-bayes-v_files/figure-html5/unnamed-chunk-1-1.png","tutorial-bayes-v_files/figure-html5/unnamed-chunk-8-1.png","tutorial-bayes-v_files/figure-html5/unnamed-chunk-9-1.png","tutorial-bayes-v_files/header-attrs-2.21/header-attrs.js","tutorial-bayes-v_files/header-attrs-2.25/header-attrs.js","tutorial-bayes-v_files/jquery-3.6.0/jquery-3.6.0.js","tutorial-bayes-v_files/jquery-3.6.0/jquery-3.6.0.min.js","tutorial-bayes-v_files/jquery-3.6.0/jquery-3.6.0.min.map","tutorial-bayes-v_files/popper-2.6.0/popper.min.js","tutorial-bayes-v_files/tippy-6.2.7/tippy-bundle.umd.min.js","tutorial-bayes-v_files/tippy-6.2.7/tippy-light-border.css","tutorial-bayes-v_files/tippy-6.2.7/tippy.css","tutorial-bayes-v_files/tippy-6.2.7/tippy.umd.min.js","tutorial-bayes-v_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -490,8 +490,8 @@ d-title {
 </style>
 
 <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="../../site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="../../site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet"/>
 <script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
 <script src="../../site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
 <script src="../../site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -861,9 +861,21 @@ d-article table.gt_table th {
   display: none !important;
 }
 
+hr.section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0px;
+}
+
+
+d-byline {
+  border-top: none;
+}
+
 d-article {
   padding-top: 2.5rem;
   padding-bottom: 30px;
+  border-top: none;
 }
 
 d-appendix {
@@ -958,6 +970,11 @@ d-article div.sourceCode pre {
 d-article div.sourceCode pre {
   padding-left: 18px;
   font-size: 14px;
+}
+
+/* tweak for Pandoc numbered line within distill */
+d-article pre.numberSource code > span {
+    left: -2em;
 }
 
 d-article pre {
@@ -1719,6 +1736,12 @@ function init_distill() {
   // create d-title
   $('.d-title').changeElementType('d-title');
 
+  // separator
+  var separator = '<hr class="section-separator" style="clear: both"/>';
+  // prepend separator above appendix
+  $('.d-byline').before(separator);
+  $('.d-article').before(separator);
+
   // create d-byline
   var byline = $('<d-byline></d-byline>');
   $('.d-byline').replaceWith(byline);
@@ -1796,8 +1819,9 @@ function init_distill() {
   $('.distill-force-highlighting-css').parent().remove();
 
   // remove empty line numbers inserted by pandoc when using a
-  // custom syntax highlighting theme
-  $('code.sourceCode a:empty').remove();
+  // custom syntax highlighting theme, except when numbering line
+  // in code chunk
+  $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
   // load distill framework
   load_distill_framework();
@@ -1823,12 +1847,13 @@ function init_distill() {
     // add orcid ids
     $('.authors-affiliations').find('.author').each(function(i, el) {
       var orcid_id = front_matter.authors[i].orcidID;
+      var author_name = front_matter.authors[i].author
       if (orcid_id) {
         var a = $('<a></a>');
         a.attr('href', 'https://orcid.org/' + orcid_id);
         var img = $('<img></img>');
         img.addClass('orcid-id');
-        img.attr('alt', 'ORCID ID');
+        img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
         img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
         a.append(img);
         $(this).append(a);
@@ -2106,7 +2131,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.21/header-attrs.js"></script>
+  <script src="../../site_libs/header-attrs-2.25/header-attrs.js"></script>
   <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -2161,6 +2186,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Tutorial Statystyki Bayesowskiej</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>Część V: Selekcja modeli, wybór rozkładów a priori i inne przydatne rzeczy</p></p>
@@ -2259,17 +2285,17 @@ Sample size per chain = 3000
 1. Empirical mean and standard deviation for each variable,
    plus standard error of the mean:
 
-         Mean      SD  Naive SE Time-series SE
-a     -0.2677 0.16947 0.0017864      0.0035472
-b      1.0683 0.11989 0.0012637      0.0024007
-sigma  1.0852 0.07869 0.0008295      0.0008698
+         Mean      SD Naive SE Time-series SE
+a     -0.2616 0.16799 0.001771      0.0033996
+b      1.0651 0.11817 0.001246      0.0023641
+sigma  1.0843 0.07779 0.000820      0.0008881
 
 2. Quantiles for each variable:
 
          2.5%     25%     50%     75%   97.5%
-a     -0.5993 -0.3794 -0.2687 -0.1544 0.06437
-b      0.8316  0.9889  1.0694  1.1470 1.30690
-sigma  0.9471  1.0296  1.0804  1.1344 1.25610</code></pre>
+a     -0.5945 -0.3752 -0.2611 -0.1506 0.06742
+b      0.8337  0.9846  1.0641  1.1448 1.29676
+sigma  0.9449  1.0297  1.0805  1.1334 1.25110</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2285,25 +2311,25 @@ Sample size per chain = 3000
    plus standard error of the mean:
 
           Mean      SD  Naive SE Time-series SE
-a     -0.03549 0.12908 0.0013607      0.0021837
-b      0.46277 0.04233 0.0004462      0.0007037
-sigma  0.98071 0.07135 0.0007521      0.0007847
+a     -0.03259 0.13193 0.0013906      0.0021636
+b      0.46231 0.04275 0.0004506      0.0007096
+sigma  0.98115 0.06965 0.0007342      0.0007836
 
 2. Quantiles for each variable:
 
          2.5%     25%      50%     75%  97.5%
-a     -0.2869 -0.1235 -0.03456 0.05162 0.2173
-b      0.3798  0.4345  0.46280 0.49103 0.5459
-sigma  0.8530  0.9309  0.97645 1.02513 1.1349</code></pre>
+a     -0.2824 -0.1228 -0.03346 0.05604 0.2285
+b      0.3785  0.4334  0.46185 0.49134 0.5461
+sigma  0.8542  0.9331  0.97685 1.02623 1.1296</code></pre>
 </div>
 <p>W obydwu przypadkach przedziały nie zawierają zera. Musimy rozsądzić, który model jest lepszy. Moglibyśmy zrobić to przy pomocy już omówionego Czynnika Bayesa. Jednak, tak jak już wspominałem, obliczenie go w bardziej skomplikowanych modelach jest problematyczne.</p>
 <p>W modelach częstościowych używa się kryteriów informacyjnych takich jak AIC i BIC do selekcji modeli. W statystyce Bayesowskiej do oceny dopoasowania modelu możemy użyć <em>Deviance Information Cryterion</em> (DIC).</p>
 <p><span class="math display">\[\text{DIC} = D(\bar{\theta}) + 2*p_D\]</span>
 gdzie:</p>
 <p><span class="math display">\[ D(\theta) =  -  2\log ({\rm{P}}(y|\theta ))\]</span></p>
-<p><span class="math display">\[ p_D= D(\bar{\theta}) -  \overline{D(\theta)}\]</span></p>
+<p><span class="math display">\[ p_D=\overline{D(\theta)} -  D(\bar{\theta})\]</span></p>
 <p>DIC jest zdefiniowane jako różnica między (ujemnym) logarytmem funkcji wiarygodności zewaluowanym dla średniej wartości parametrów <span class="math inline">\(\theta\)</span> z rozkładu post priori <span class="math inline">\(D(\bar{\theta})\)</span> (gdzie dla symetrycznych rozkładów otrzymujemy najbardziej wiarygodne wartości) a dewiacją <span class="math inline">\(p_D\)</span>. Dewiacja, z kolei, jest obliczana jako różnica między wartością funkcji wiarygodności <span class="math inline">\(D(\bar{\theta})\)</span> a średnią wartością logarytmu funkcji wiarygodności dla wszystkich parametrów.</p>
-<p>Innymi słowy, wartość <span class="math inline">\(D(\bar{\theta})\)</span> dostarcza informacji na temat skupienia gęstości prawdopodobieństwa wokół dominującej wartości <span class="math inline">\(\bar{\theta}\)</span>. Im lepszy jest model, tym mniejsza jest ta wartość. Jednakże, gdy liczba parametrów w modelu wzrasta, wartość <span class="math inline">\(D(\bar{\theta})\)</span> może również maleć, ponieważ bardziej skomplikowany model ma większą elastyczność w dopasowaniu się do danych. Dlatego drugi składnik, <span class="math inline">\(\overline{D(\theta)}\)</span>, mierzy stopień rozproszenia wiarygodności wokół dominującej wartości. Im więcej parametrów, tym większa wartość tego składnika.</p>
+<p>Innymi słowy, wartość <span class="math inline">\(D(\bar{\theta})\)</span> dostarcza informacji na temat skupienia gęstości prawdopodobieństwa wokół dominującej wartości <span class="math inline">\(\bar{\theta}\)</span>. Im lepszy jest model, tym mniejsza jest ta wartość. Jednakże, gdy liczba parametrów w modelu wzrasta, wartość <span class="math inline">\(D(\bar{\theta})\)</span> może również maleć, ponieważ bardziej skomplikowany model ma większą elastyczność w dopasowaniu się do danych. Dlatego drugi składnik, <span class="math inline">\(\overline{D(\theta)}\)</span>, mierzy stopień rozproszenia wiarygodności wokół dominującej wartości. Im więcej parametrów, tym większa wartość tego składnika względem <span class="math inline">\(\bar{\theta}\)</span>.</p>
 <p>Podsumowując, modele z mniejszą wartością DIC są preferowane, ponieważ sugerują większe skupienie gęstości prawdopodobieństwa wokół dominującej wartości, jednocześnie uwzględniając liczbę parametrów w modelu.</p>
 <p>Policzmy DIC dla naszych modeli.</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -2311,9 +2337,9 @@ gdzie:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Dic_lin</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/dic.samples.html'>dic.samples</a></span><span class='op'>(</span><span class='va'>model_lin</span>,<span class='fl'>1000</span><span class='op'>)</span></span>
 <span><span class='va'>Dic_lin</span></span></code></pre>
 </div>
-<pre><code>Mean deviance:  298.6 
-penalty 3.049 
-Penalized deviance: 301.6 </code></pre>
+<pre><code>Mean deviance:  298.5 
+penalty 2.955 
+Penalized deviance: 301.4 </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2321,15 +2347,15 @@ Penalized deviance: 301.6 </code></pre>
 <span><span class='va'>Dic_sq</span></span></code></pre>
 </div>
 <pre><code>Mean deviance:  278.3 
-penalty 3.146 
+penalty 3.183 
 Penalized deviance: 281.5 </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/rjags/man/diffdic.html'>diffdic</a></span><span class='op'>(</span><span class='va'>Dic_sq</span>,<span class='va'>Dic_lin</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>Difference: -20.13234
-Sample standard error: 9.952882</code></pre>
+<pre><code>Difference: -19.93708
+Sample standard error: 9.970875</code></pre>
 </div>
 <p>Widzimy, że model z kwadratowym związkiem pomiedzy x i y jest lepiej dopasowany do danych.</p>
 <p>Prócz DIC, w statystyce Bayesowskiej narzędziami do oceny dopasowania modeli są <em>Widely Applicable Information Criterion</em> (WAIC) oraz <em>Leave-one-out cross-validation</em> (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, jednak warto je poznać, ponieważ posiadają lepsze właściwości <span class="citation" data-cites="gelman2014understanding">(<a href="#ref-gelman2014understanding" role="doc-biblioref">Gelman et al., 2014</a>)</span>.</p>
@@ -2367,11 +2393,11 @@ Sample standard error: 9.952882</code></pre>
 <h2 id="garść-wniosków">Garść wniosków</h2>
 <p>Statystyka Bayesowska ma swoje wady i zalety. W tutorialu skupiliśmy się głównie na metodzie numerycznej, jaką jest MCMC, do modelowania. Ta metoda umożliwia także estymację modeli, które nie mają rozwiązań analitycznych (albo ich nie znamy). Moglibyśmy estymować parametry takich modeli za pomocą zwykłej optymalizacji. Jednakże, wtedy pojawia się problem, ponieważ nie możemy obliczyć przedziałów ufności. Mnie interesuje mnie głównie wnioskowanie statystyczne, a podejście Bayesowskie dostarcza nie punktową wartość parametru tylko jego rozkład, co pozwala ocenić niepewność związana z tymi parametrami!</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
-<div id="ref-gelman2014understanding" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-gelman2014understanding" class="csl-entry" role="listitem">
 Gelman, A., Hwang, J., &amp; Vehtari, A. (2014). Understanding predictive information criteria for bayesian models. <em>Statistics and Computing</em>, <em>24</em>(6), 997–1016.
 </div>
-<div id="ref-gelman2017prior" class="csl-entry" role="doc-biblioentry">
+<div id="ref-gelman2017prior" class="csl-entry" role="listitem">
 Gelman, A., Simpson, D., &amp; Betancourt, M. (2017). The prior can often only be understood in the context of the likelihood. <em>Entropy</em>, <em>19</em>(10), 555.
 </div>
 </div>
