@@ -17,6 +17,8 @@ navbar:
       href: projekty.html  
     - text: "Statystyczne Dygresje"
       href: statystyczne_dygresje.html 
+    - text: "Półka Sortowni"
+      href: półka_sortowni.html
   right:
     - text: "Kontakt"
       href: kontakt.html 
