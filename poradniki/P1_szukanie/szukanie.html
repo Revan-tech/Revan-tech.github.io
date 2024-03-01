@@ -23,6 +23,7 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -49,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -72,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>Sortownia: Poszukiwanie wiedzy naukowej w internecie: subiektywny poradnik</title>
@@ -458,9 +461,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </style>
 
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
   <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -789,6 +792,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -829,9 +833,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -926,6 +942,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1030,10 +1051,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1691,6 +1708,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1768,8 +1791,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1795,12 +1819,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1865,7 +1890,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1876,6 +1916,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1975,6 +2040,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1997,7 +2064,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2036,7 +2103,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="szukanie_files/header-attrs-2.8/header-attrs.js"></script>
+  <script src="szukanie_files/header-attrs-2.25/header-attrs.js"></script>
   <script src="szukanie_files/popper-2.6.0/popper.min.js"></script>
   <link href="szukanie_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="szukanie_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2066,15 +2133,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="index.html" class="title">Sortownia</a>
-<a href="../../index.html">Home</a>
-<a href="../../blog.html">Blog</a>
-<a href="../../poradniki.html">Poradniki</a>
+<a href="index.html">Home</a>
+<a href="blog.html">Blog</a>
+<a href="poradniki.html">Poradniki</a>
 <a href="https://szpm.shinyapps.io/baza_wiedzy/">Baza wiedzy</a>
-<a href="../../projekty.html">Projekty</a>
+<a href="projekty.html">Projekty</a>
+<a href="statystyczne_dygresje.html">Statystyczne Dygresje</a>
+<a href="półka_sortowni.html">Półka Sortowni</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
-<a href="../../kontakt.html">Kontakt</a>
+<a href="kontakt.html">Kontakt</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2085,6 +2154,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>Poszukiwanie wiedzy naukowej w internecie: subiektywny poradnik</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>Poradnik dla osób studiujących (i nie tylko!)</p></p>
@@ -2101,20 +2171,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#przed-wyruszeniem-na-poszukiwanie-wiedzy-zbuduj-sobie-metodę">Przed wyruszeniem na poszukiwanie wiedzy, zbuduj sobie metodę</a></li>
-<li><a href="#najprostsze-wyszukiwanie">Najprostsze wyszukiwanie</a></li>
-<li><a href="#dostęp-do-artykułów-i-szara-strefa-którą-każdy-zna---ale-o-której-nie-wypada-mówić">Dostęp do artykułów i szara strefa, którą każdy zna - ale o której nie wypada mówić</a></li>
-<li><a href="#dalej-nie-mogę-znaleźć-tego-czego-chcę-dwie-klątwy">Dalej nie mogę znaleźć tego, czego chcę: dwie klątwy</a></li>
-<li><a href="#weryfikacja-treści">Weryfikacja treści</a></li>
-<li><a href="#kupka-wstydu">Kupka wstydu</a></li>
+<li><a href="#przed-wyruszeniem-na-poszukiwanie-wiedzy-zbuduj-sobie-metodę" id="toc-przed-wyruszeniem-na-poszukiwanie-wiedzy-zbuduj-sobie-metodę">Przed wyruszeniem na poszukiwanie wiedzy, zbuduj sobie metodę</a></li>
+<li><a href="#najprostsze-wyszukiwanie" id="toc-najprostsze-wyszukiwanie">Najprostsze wyszukiwanie</a></li>
+<li><a href="#dostęp-do-artykułów-i-szara-strefa-którą-każdy-zna---ale-o-której-nie-wypada-mówić" id="toc-dostęp-do-artykułów-i-szara-strefa-którą-każdy-zna---ale-o-której-nie-wypada-mówić">Dostęp do artykułów i szara strefa, którą każdy zna - ale o której nie wypada mówić</a></li>
+<li><a href="#dalej-nie-mogę-znaleźć-tego-czego-chcę-dwie-klątwy" id="toc-dalej-nie-mogę-znaleźć-tego-czego-chcę-dwie-klątwy">Dalej nie mogę znaleźć tego, czego chcę: dwie klątwy</a></li>
+<li><a href="#weryfikacja-treści" id="toc-weryfikacja-treści">Weryfikacja treści</a></li>
+<li><a href="#kupka-wstydu" id="toc-kupka-wstydu">Kupka wstydu</a></li>
 </ul>
 </nav>
 </div>
 <p align="justify">
-Cześć! Jesteście na Sortowni Wiedzy i jakkolwiek tu trafiliście, mogę założyć, że jesteście zainteresowani znalezieniem jakiegoś przydatnego kawałka wiedzy, informacji, naukowej treści. Zaczynacie przygodę z badaniami, ale nie jesteście pewni gdzie zacząć? Wyszukiwanie informacji może być przytłaczające, dlatego postanowiliśmy stworzyć krótki poradnik, który zaproponuje pewne podejście do przeszukiwania zbiorów. Pojawią się też powiązane kwestie, czyli budowanie metody, katalogowanie artykułów i ich czytanie. <strong>Nie ma jednego sposobu na szukanie wiedzy</strong>, więc nie traktujcie tego tekstu autorytatywnie. Pokażę tu jedynie sposób, który dość dobrze się sprawdza.
+Cześć! Jesteście na Sortowni Wiedzy i jakkolwiek tu trafiliście, mogę założyć, że jesteście zainteresowani znalezieniem jakiegoś przydatnego kawałka wiedzy, informacji, naukowej treści. Zaczynacie przygodę z badaniami, ale nie jesteście pewni gdzie zacząć? Wyszukiwanie informacji może być przytłaczające, dlatego postanowiliśmy stworzyć krótki poradnik, który zaproponuje pewne podejście do przeszukiwania zbiorów. Pojawią się też powiązane kwestie, czyli budowanie metody, katalogowanie artykułów i ich czytanie.
+<strong>Nie ma jednego sposobu na szukanie wiedzy</strong>, więc nie traktujcie tego tekstu autorytatywnie. Pokażę tu jedynie sposób, który dość dobrze się sprawdza.
 </p>
 <figure>
-<img src="dal1.jpg" style="width:70.0%" alt="“student looking for scientific data” - DALL-E" /><figcaption aria-hidden="true">“student looking for scientific data” - DALL-E</figcaption>
+<img src="dal1.jpg" style="width:70.0%" alt="“student looking for scientific data” - DALL-E" />
+<figcaption aria-hidden="true">“student looking for scientific data” - DALL-E</figcaption>
 </figure>
 <h2 id="przed-wyruszeniem-na-poszukiwanie-wiedzy-zbuduj-sobie-metodę">Przed wyruszeniem na poszukiwanie wiedzy, zbuduj sobie metodę</h2>
 <p align="justify">
@@ -2135,14 +2207,19 @@ Może to zabrzmi zniechęcająco, ale to naprawdę ważne. I zasadniczo sprowadz
 Nie ma żadnej konieczności trzymania się tych zasad! Nie przyjedzie do Was policja naukowa na sygnale, gdy po prostu wpiszemy w wyszukiwarkę pierwsze hasło, które przyjdzie nam do głowy. Te zasady mogą się jednak przydać w momencie, gdy poczujemy zagubienie lub przytłoczenie nadmiarem treści. Inna sprawa, że czasem faktycznie lepiej jest <em>po prostu płynąć</em> i dać się zaskoczyć znalezionymi materiałami.
 </p>
 <figure>
-<img src="dal2.jpg" style="width:50.0%" alt="“Using google scholar” - DALL-E" /><figcaption aria-hidden="true">“Using google scholar” - DALL-E</figcaption>
+<img src="dal2.jpg" style="width:50.0%" alt="“Using google scholar” - DALL-E" />
+<figcaption aria-hidden="true">“Using google scholar” - DALL-E</figcaption>
 </figure>
 <h1 id="najprostsze-wyszukiwanie">Najprostsze wyszukiwanie</h1>
 <p align="justify">
-W większości przypadków, całkowicie wystarczające będzie otworzenie Google Scholar i wpisanie tam kilku haseł. Można ustawić wyszukiwanie na wyłącznie język polski (lub dowolny inny). Poradniki dotyczące <a href="https://pitt.libguides.com/googlescholar/searchtips">zaawansowanego wyszukiwania</a> w Scholarze znajdują się w Bazie Wiedzy - m.in. wykluczanie haseł, szukanie po synonimach. Wiele artykułów uda się ściągnąć już z poziomu Google Scholar - jeśli są w otwartym dostępie. W zależności od dziedziny, Twoje pole naukowe może mieć inne domyślne repozytorium danych - w przypadku medycyny będzie to np. <a href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a>. Jeśli temat jest dla nas zupełnie nowy - <strong>czasem warto najpierw rozeznać się</strong>, poprzez czytanie wpisów na Wikipedii lub artykułów popularnonaukowych. Z tą wiedzą można ruszać dalej, na dokładniejsze poszukiwania. Często podkasty i kanały na Youtubie są świetnym wprowadzeniem w temat. Można też zacząć od naszej <a href="https://szpm.shinyapps.io/baza_wiedzy/">Bazy Wiedzy</a> w Sortowni Wiedzy, gdzie na szczycie listy zebraliśmy najważniejsze repozytoria artykułów naukowych. <strong><a href="https://www.worldcat.org/">Cennym źródłem jest WordCat</a></strong>, strona zawierająca dane bibliograficzne książek, a także pobliskie biblioteki, w których daną książkę można znaleźć. A jeśli szukamy wyłącznie książek - to trzeba zajrzeć na <a href="https://books.google.pl/">Google Books</a>. Serwis ten wyświetla fragmenty książek, czasami to wystarczy, by zorientować się, czy książka jest nam potrzebna.
+W większości przypadków, całkowicie wystarczające będzie otworzenie Google Scholar i wpisanie tam kilku haseł. Można ustawić wyszukiwanie na wyłącznie język polski (lub dowolny inny). Poradniki dotyczące <a href="https://pitt.libguides.com/googlescholar/searchtips">zaawansowanego wyszukiwania</a> w Scholarze znajdują się w Bazie Wiedzy - m.in. wykluczanie haseł, szukanie po synonimach. Wiele artykułów uda się ściągnąć już z poziomu Google Scholar - jeśli są w otwartym dostępie. W zależności od dziedziny, Twoje pole naukowe może mieć inne domyślne repozytorium danych - w przypadku medycyny będzie to np. <a href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a>.
+Jeśli temat jest dla nas zupełnie nowy - <strong>czasem warto najpierw rozeznać się</strong>, poprzez czytanie wpisów na Wikipedii lub artykułów popularnonaukowych. Z tą wiedzą można ruszać dalej, na dokładniejsze poszukiwania. Często podkasty i kanały na Youtubie są świetnym wprowadzeniem w temat.
+Można też zacząć od naszej <a href="https://szpm.shinyapps.io/baza_wiedzy/">Bazy Wiedzy</a> w Sortowni Wiedzy, gdzie na szczycie listy zebraliśmy najważniejsze repozytoria artykułów naukowych.
+<strong><a href="https://www.worldcat.org/">Cennym źródłem jest WordCat</a></strong>, strona zawierająca dane bibliograficzne książek, a także pobliskie biblioteki, w których daną książkę można znaleźć. A jeśli szukamy wyłącznie książek - to trzeba zajrzeć na <a href="https://books.google.pl/">Google Books</a>. Serwis ten wyświetla fragmenty książek, czasami to wystarczy, by zorientować się, czy książka jest nam potrzebna.
 </p>
 <figure>
-<img src="dal3.jpg" style="width:50.0%" alt="“Using Scihub” - DALL-E" /><figcaption aria-hidden="true">“Using Scihub” - DALL-E</figcaption>
+<img src="dal3.jpg" style="width:50.0%" alt="“Using Scihub” - DALL-E" />
+<figcaption aria-hidden="true">“Using Scihub” - DALL-E</figcaption>
 </figure>
 <h1 id="dostęp-do-artykułów-i-szara-strefa-którą-każdy-zna---ale-o-której-nie-wypada-mówić">Dostęp do artykułów i szara strefa, którą każdy zna - ale o której nie wypada mówić</h1>
 <p align="justify">
@@ -2164,12 +2241,14 @@ Ekosystem publikowania prac naukowych jest, delikatnie mówiąc, nieidealny. <st
 Stąd powstanie pirackich serwisów, które - w zależności od wybranego spojrzenia - uwalniają wiedzę lub ją zawłaszczają.
 </p>
 <p align="justify">
-Niezależnie od wybranego moralnego punktu widzenia, serwisy takie jak Libgen i SciHub udostępniają nieprzebrane ilości książek i artykułów za darmo. Przed skorzystaniem z Libgena warto zainstalować Adblocka w swojej przeglądarce, by nie zostać zbombardowanym(ą) reklamami. Libgen ma wiele adresów, które z czasem mogą się zmieniać - adres można łatwo znaleźć przez Google.
+Niezależnie od wybranego moralnego punktu widzenia, serwisy takie jak Libgen i SciHub udostępniają nieprzebrane ilości książek i artykułów za darmo.
+Przed skorzystaniem z Libgena warto zainstalować Adblocka w swojej przeglądarce, by nie zostać zbombardowanym(ą) reklamami. Libgen ma wiele adresów, które z czasem mogą się zmieniać - adres można łatwo znaleźć przez Google.
 </p>
 <p align="justify">
 Poniżej zamieszczam niezwykle przydatny poradnik korzystania ze wspomnianych stron (w języku angielskim):
 </p>
-<p><a href="https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/edit" class="uri">https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/edit</a> Poradnik wspomina szereg innych stron i wyjaśnia jak z nich korzystać.</p>
+<p><a href="https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/edit" class="uri">https://docs.google.com/document/d/1ZwWs8JOrlkrrqiHwkQSwc4_NM85Zbzc9t9ifQ1rHZgM/edit</a>
+Poradnik wspomina szereg innych stron i wyjaśnia jak z nich korzystać.</p>
 <p align="justify">
 W samym Libgenie można zaznaczyć wyszukiwanie książek naukowych, beletrystyki, artykułów naukowych (SciHub), a nawet komiksów. Wyszukiwać można po autorach, tytule, roku, języku etc. Jeśli wybierzemy jakąś książkę - klikamy tytuł, najlepiej wybrać <em>this mirror</em>, następnie GET lub któryś z czterech mirrorów. Mirrory zapasowe czasem działają szybciej niż główny mirror.
 </p>
@@ -2181,7 +2260,8 @@ Ewentualna wada Libgena? Mało jest tam materiałów w języku polskim. Na szcz�
 </p>
 <p>Jedną z nowych stron, która ułatwia szukanie, jest <a href="https://pl.annas-archive.org/"><strong>Anna’s Archive</strong></a>. Jest to wyszukiwarka wyszukiwarek, przeszukująca wszystkie wersje Libgena i Z-library, czyli tzw. <em>shadow libraries</em>, “biblioteki cieni”.</p>
 <figure>
-<img src="money.jpg" style="width:65.0%" alt="Przykład ograniczonego dostępu do wiedzy. Od czasu, gdy ten obrazek stał się memem, artykuł trafił jednak do otwartego dostępu." /><figcaption aria-hidden="true">Przykład ograniczonego dostępu do wiedzy. Od czasu, gdy ten obrazek stał się memem, artykuł trafił jednak do otwartego dostępu.</figcaption>
+<img src="money.jpg" style="width:65.0%" alt="Przykład ograniczonego dostępu do wiedzy. Od czasu, gdy ten obrazek stał się memem, artykuł trafił jednak do otwartego dostępu." />
+<figcaption aria-hidden="true">Przykład ograniczonego dostępu do wiedzy. Od czasu, gdy ten obrazek stał się memem, artykuł trafił jednak do otwartego dostępu.</figcaption>
 </figure>
 <h1 id="dalej-nie-mogę-znaleźć-tego-czego-chcę-dwie-klątwy">Dalej nie mogę znaleźć tego, czego chcę: dwie klątwy</h1>
 <p align="justify">
@@ -2200,7 +2280,8 @@ Ostatnio pojawiają się też strony takie jak <a href="https://researchrabbitap
 ResearchRabbit wymaga założenia konta.Nie jest też jedynym takim serwisem, zapraszamy do zajrzenia <a href="https://aarontay.medium.com/3-new-tools-to-try-for-literature-mapping-connected-papers-inciteful-and-litmaps-a399f27622a">pod ten link</a>, gdzie omawiane są <a href="https://www.connectedpapers.com/">Connected Papers</a>, <a href="https://inciteful.xyz/">Inciteful</a> i <a href="https://www.litmaps.com/">Litmaps</a>.
 </aside>
 <figure>
-<img src="dal5.jpg" style="width:50.0%" alt="“In Search of Lost Time” - DALL-E" /><figcaption aria-hidden="true">“In Search of Lost Time” - DALL-E</figcaption>
+<img src="dal5.jpg" style="width:50.0%" alt="“In Search of Lost Time” - DALL-E" />
+<figcaption aria-hidden="true">“In Search of Lost Time” - DALL-E</figcaption>
 </figure>
 <h1 id="weryfikacja-treści">Weryfikacja treści</h1>
 <p align="justify">
@@ -2217,17 +2298,21 @@ Kluczowe może być rozeznanie się, którzy autorzy są szczególnie istotni i 
 <li>jeśli chcemy poznać dziedzinę, interesują nas podręczniki, handbooki, wprowadzenia, monografie, opracowania z <em>concise</em> w nazwie</li>
 </ul>
 <figure>
-<img src="dal6.jpg" style="width:60.0%" alt="“The pile of shame” - DALL-E" /><figcaption aria-hidden="true">“The pile of shame” - DALL-E</figcaption>
+<img src="dal6.jpg" style="width:60.0%" alt="“The pile of shame” - DALL-E" />
+<figcaption aria-hidden="true">“The pile of shame” - DALL-E</figcaption>
 </figure>
 <h1 id="kupka-wstydu">Kupka wstydu</h1>
 <p align="justify">
 Na koniec być może największy problem. Naściągaliśmy mnóstwo plików i leży to wszystko latami, nigdy nie otworzone i nieprzeczytane. Wiedza musi żyć, musi być w umyśle, żeby funkcjonować. Zamknięta na dysku będzie mało przydatna. Sam nie wiem do końca jak rozwiązać ten problem, wciąż testuję różne systemy dla siebie. Do głowy przychodzą mi dwa podejścia:
 </p>
 <p align="justify">
-A. Mieć dobrą strukturę folderów i plików, tak by można było szybko i łatwo odnaleźć dany plik. Najgorsze, co można zrobić, to wrzucać pliki do jednego folderu - i to jeszcze ponazywane np. article.pdf, article(1).pdf, 1213598.pdf… Dodatkowo używam programu Everything, który błyskawicznie znajduje pliki na dysku. Czasami wystarczy, że pamiętam fragment nazwy pliku - mogę szybko odnaleźć to, czego potrzebowałem. Najważniejsze artykuły i książki warto katalogować w menedżerze bibliografii (np. Zotero), by można było szybko cytować istotne prace.
+A. Mieć dobrą strukturę folderów i plików, tak by można było szybko i łatwo odnaleźć dany plik. Najgorsze, co można zrobić, to wrzucać pliki do jednego folderu - i to jeszcze ponazywane np. article.pdf, article(1).pdf, 1213598.pdf…
+Dodatkowo używam programu Everything, który błyskawicznie znajduje pliki na dysku. Czasami wystarczy, że pamiętam fragment nazwy pliku - mogę szybko odnaleźć to, czego potrzebowałem.
+Najważniejsze artykuły i książki warto katalogować w menedżerze bibliografii (np. Zotero), by można było szybko cytować istotne prace.
 </p>
 <p align="justify">
-B. Mieć dobry system czytania. Czytanie artykułów naukowych jest ciężkie. Czasami “przedzieranie się” jest bardziej odpowiednim słowem. Są różne sposoby czytania artykułów naukowych. Wcale nie trzeba ich czytać od początku do końca! Dobrym sposobem jest:
+B. Mieć dobry system czytania. Czytanie artykułów naukowych jest ciężkie. Czasami “przedzieranie się” jest bardziej odpowiednim słowem.
+Są różne sposoby czytania artykułów naukowych. Wcale nie trzeba ich czytać od początku do końca! Dobrym sposobem jest:
 </p>
 <ol type="1">
 <li>przeczytanie abstraktu i wstępu,</li>
@@ -2239,10 +2324,12 @@ B. Mieć dobry system czytania. Czytanie artykułów naukowych jest ciężkie. C
 <strong>Sposób czytania w dużej mierze zależy od tego, co chcemy wyciągnąć z artykułów i do czego dalej użyjemy tej wiedzy</strong>. Czasem wystarczy pobieżne przejrzenie, czasem konieczne jest całkowite zanurzenie się w danej strukturze wiedzy.
 </p>
 <p align="justify">
-Zawsze warto jest robić notatki i zaznaczenia - wewnątrz pliku, w zewnętrznym pliku, czy na papierze. Jeśli coś jest gwarantowane, to to, że za kilka miesięcy nie będziemy pamiętać z czytania prawie nic. Notatki wtedy będą ratującymi skórę bodźcami, które przypomną nam o czym czytaliśmy. Trzeba się też rozeznać, kiedy ma się komfortowy czas na czytanie trudnych treści. Dla niektórych jest to poranek, dla innych późny wieczór (to ja). Nie ma co się zmuszać do czytania, jeśli nie mamy koncentracji i ewidentnie czytanie nie idzie. Często jednak warto lekko przymusić się i spróbować - po pierwszych 5 minutach może okazać się, że dalej już “jakoś poszło”. Bardzo rzadko będziemy mieli taki cudowny stan, w którym czytanie jest lekkie i sprawia radość. Przed czytaniem warto zrobić lekki wysiłek fizyczny - czasami pomaga na koncentrację.
+Zawsze warto jest robić notatki i zaznaczenia - wewnątrz pliku, w zewnętrznym pliku, czy na papierze. Jeśli coś jest gwarantowane, to to, że za kilka miesięcy nie będziemy pamiętać z czytania prawie nic. Notatki wtedy będą ratującymi skórę bodźcami, które przypomną nam o czym czytaliśmy.
+Trzeba się też rozeznać, kiedy ma się komfortowy czas na czytanie trudnych treści. Dla niektórych jest to poranek, dla innych późny wieczór (to ja). Nie ma co się zmuszać do czytania, jeśli nie mamy koncentracji i ewidentnie czytanie nie idzie. Często jednak warto lekko przymusić się i spróbować - po pierwszych 5 minutach może okazać się, że dalej już “jakoś poszło”. Bardzo rzadko będziemy mieli taki cudowny stan, w którym czytanie jest lekkie i sprawia radość. Przed czytaniem warto zrobić lekki wysiłek fizyczny - czasami pomaga na koncentrację.
 </p>
 <figure>
-<img src="dal4.jpg" style="width:50.0%" alt="“student looking for scientific data” - DALL-E" /><figcaption aria-hidden="true">“student looking for scientific data” - DALL-E</figcaption>
+<img src="dal4.jpg" style="width:50.0%" alt="“student looking for scientific data” - DALL-E" />
+<figcaption aria-hidden="true">“student looking for scientific data” - DALL-E</figcaption>
 </figure>
 <p align="justify">
 To tyle, kilka pomysłów na poszukiwania. Podkreślam - jest to subiektywna lista. Każdy wypracuje sobie własny najlepszy sposób. <strong>Poszukiwanie wiedzy to żywy proces</strong>, który za każdym razem się zmienia i ewoluuje. Pojawiają się nowe źródła, algorytmy zmieniają swoje działanie, my zmieniamy zainteresowania i uczymy się lepiej organizować wiedzę. Sam powód poszukiwań ma znaczenie dla ich wyglądu - raz lepiej jest robić to systematycznie, innym razem lepiej jest dać się porwać króliczej norze i popłynąć, razem z wyszukiwarkami i bazami danych.
