@@ -1,0 +1,16 @@
+---
+title: "Przykład"
+description: |
+  Przykłal lalalaa
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+
+LALALALALALAL

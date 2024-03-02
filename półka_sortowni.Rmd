@@ -82,7 +82,7 @@ knitr::opts_chunk$set(
   <a>
     <img src="_gallery/img/margines_transparent.png" />
   </a>
-  <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
+  <a href="_gallery/shelf/przykład/przykład.html">
     <img src="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png" />
   </a>
   <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
@@ -101,6 +101,23 @@ knitr::opts_chunk$set(
     <img src="_gallery/img/shell.png" />
   </a>
 </div>
+
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        const lightgallery = document.getElementById('lightgallery');
+        lightgallery.addEventListener('click', function(event) {
+            if (event.target.tagName === 'IMG') {
+                event.preventDefault(); // Prevent the default behavior (displaying the image)
+                const link = event.target.parentNode.getAttribute('href');
+                if (link) {
+                    window.location.href = link; // Redirect to the specified URL
+                }
+            }
+        });
+    });
+</script>
+
 
 <script type="text/javascript">
     lightGallery(document.getElementById('lightgallery'), {
