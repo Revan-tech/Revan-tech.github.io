@@ -76,23 +76,24 @@ knitr::opts_chunk$set(
 }
 ```
 
-
+**W tym miejscu będziemy prezentować wartościowe w naszej opinii książki naukowe i popularnonaukowe**<br>
+**🏗️Strona jeszcze w trakcie konstrukcji 🏗️**
 
 <div class="row" id="lightgallery">
   <a>
     <img src="_gallery/img/margines_transparent.png" />
   </a>
   <a href="_gallery/shelf/przykład/przykład.html">
-    <img src="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png" />
+    <img src="_gallery/img/small_twoj-mozg-plata-ci-figle.png" />
   </a>
   <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
-    <img src="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png" />
+    <img src="_gallery/img/small_lingwistykadyskursu.png" />
   </a>
   <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
-    <img src="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png" />
+    <img src="_gallery/img/small_wyobraz.png" />
   </a>
   <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
-    <img src="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png" />
+    <img src="_gallery/img/small_ludobojstwo.png" />
   </a>
   <a>
     <img src="_gallery/img/margines_transparent.png" />
@@ -101,6 +102,56 @@ knitr::opts_chunk$set(
     <img src="_gallery/img/shell.png" />
   </a>
 </div>
+
+<div class="row" id="lightgallery">
+  <a>
+    <img src="_gallery/img/margines_transparent.png" />
+  </a>
+  <a href="_gallery/shelf/przykład/przykład.html">
+    <img src="_gallery/img/small_walczprotestuj.png" />
+  </a>
+  <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
+    <img src="_gallery/img/small_dziejeczlowieka.png" />
+  </a>
+  <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
+    <img src="_gallery/img/small_powrotdoreims.png" />
+  </a>
+  <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
+    <img src="_gallery/img/small_radykalnemiasta.png" />
+  </a>
+  <a>
+    <img src="_gallery/img/margines_transparent.png" />
+  </a>
+   <a>
+    <img src="_gallery/img/shell.png" />
+  </a>
+</div>
+
+<div class="row" id="lightgallery">
+  <a>
+    <img src="_gallery/img/margines_transparent.png" />
+  </a>
+  <a href="_gallery/shelf/przykład/przykład.html">
+    <img src="_gallery/img/small_cyfrodziewczyny.png" />
+  </a>
+  <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
+    <img src="_gallery/img/small_wszystkodlazmarlych.png" />
+  </a>
+  <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
+    <img src="_gallery/img/small_topolskihistoriapolski.png" />
+  </a>
+  <a href="_gallery/img/twoj-mozg-plata-ci-figle-b-iext133274568.png">
+    <img src="_gallery/img/small_lifeofelements.png" />
+  </a>
+  <a>
+    <img src="_gallery/img/margines_transparent.png" />
+  </a>
+   <a>
+    <img src="_gallery/img/shell.png" />
+  </a>
+</div>
+
+
 
 
 <script type="text/javascript">
