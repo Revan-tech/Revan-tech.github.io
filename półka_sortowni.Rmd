@@ -107,7 +107,7 @@ knitr::opts_chunk$set(
   <a>
     <img src="_gallery/img/margines_transparent.png" />
   </a>
-  <a href="_gallery/img/small_walczprotestuj.png">
+  <a href="_gallery/shelf/przykład/przykład.html">
     <img src="_gallery/img/small_walczprotestuj.png" />
   </a>
   <a href="_gallery/img/small_dziejeczlowieka.png">
