@@ -1,0 +1,28 @@
+---
+title: "Półka: Wszystko dla naszych zmarłych"
+description: |
+  Opowieści tych, co zostają
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+**Wszystko dla naszych zmarłych. Opowieści tych, co zostają**<br>
+
+**Autorka**: Vinciane Despret <br>
+**Tłumaczka**: Urszula Kropiwiec<br>
+**Wydawnictwo**: Wydawnictwo Karakter<br>
+
+Poetycko-socjologiczna wyprawa w zaświaty. Czyli wgłąb nas samych, bo zmarli są częścią nas. Empatyczne spojrzenie na żałobę, pamiętanie, kontakt z bliskimi. Książka jest ćwiczeniem ze współodczuwania w metodzie badawczej i w ciekawy sposób wykorzystuje teorię aktora-sieci.<br>
+
+  <img src="12.png">
+
+https://lubimyczytac.pl/ksiazka/4973401/wszystko-dla-naszych-zmarlych-opowiesci-tych-co-zostaja <br>
+https://www.goodreads.com/book/show/58553185-wszystko-dla-naszych-zmar-ych-opowie-ci-tych-co-zostaj <br>
+https://www.google.pl/books/edition/Wszystko_dla_naszych_zmar%C5%82ych/5dn_zgEACAAJ?hl=en <br>
+
+Despret, V. (2021). Wszystko dla naszych zmarłych: Opowieści tych, co zostają (U. Kropiwiec, Tłum.). Karakter.

@@ -1,0 +1,29 @@
+---
+title: "Półka: Ludobójstwo"
+description: |
+  Historia i socjologia ludzkiej destrukcyjności
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+**Ludobójstwo. Historia i socjologia ludzkiej destrukcyjności**<br>
+
+**Autor**: Lech M. Nijakowski<br>
+**Wydawnictwo**: Iskry<br>
+
+Wprowadzenie do tematyki genocydu. Książka powinna interesować nie tylko osoby zajmujące się tym tematem. Każdy powinien zostać uwrażliwiony na procesy prowadzące do ludobójstw. 
+Spoiler alert: wcale nie chodzi o geniuszy zła. Ani nawet o „złych ludzi”.<br>
+
+  <img src="3.png">
+
+https://lubimyczytac.pl/ksiazka/4865145/ludobojstwo-historia-i-socjologia-ludzkiej-destrukcyjnosci <br>
+https://www.goodreads.com/book/show/42604033-ludob-jstwo-historia-i-socjologia-ludzkiej-destrukcyjno-ci <br>
+https://www.google.pl/books/edition/Ludob%C3%B3jstwo/CsM8vQEACAAJ?hl=en <br>
+
+Nijakowski, L. M. (2018). Ludobójstwo: Historia i socjologia ludzkiej destrukcyjności: popularne wprowadzenie. Iskry.

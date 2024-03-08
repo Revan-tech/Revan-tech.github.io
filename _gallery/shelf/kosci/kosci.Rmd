@@ -1,0 +1,27 @@
+---
+title: "Półka: Dzieje człowieka od jego początków do IV tysiąclecia p.n.e."
+description: |
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+**Dzieje człowieka od jego początków do IV tysiąclecia p.n.e.**<br>
+
+**Autorzy**: Ian Tattersall <br>
+**Tłumaczka**: Ewa Krystyna Suskiewicz <br>
+**Wydawnictwo**: Państwowy Instytut Wydawniczy<br>
+
+Książka, która pomoże zrozumieć, że historia naszych przodków nie jest linearna, tylko kłączowa. Nowe gatunki hominidów wciąż są odkrywane, a ta książka jest dobrym wprowadzeniem do złożonego zagadnienia. Przystępnie napisana, nawet wciągająca.<br>
+
+  <img src="5.png">
+
+https://lubimyczytac.pl/ksiazka/126507/dzieje-czlowieka-od-jego-poczatkow-do-iv-tysiaclecia-p-n-e <br>
+https://www.goodreads.com/book/show/13124982-dzieje-cz-owieka-od-jego-pocz-tk-w-do-iv-tysi-clecia-p-n-e<br>
+
+Tattersall, I. (2007). Dzieje człowieka od jego początków do IV tysiąclecia p.n.e. (E. K. Suskiewicz, Tłum.). Państwowy Instytut Wydawniczy.

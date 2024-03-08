@@ -1,0 +1,27 @@
+---
+title: "Półka: Historia Polski"
+description: |
+
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+**Historia Polski**<br>
+
+**Autorzy**: Jerzy Topolski <br>
+**Wydawnictwo**: Wydawnictwo Poznańskie<br>
+
+Spisanie ponad 1000 lat historii na tak małej przestrzeni to wielki wyczyn. I jest to synteza udana! Książka nie jest może tak „na ostrzu noża”, jak współczesny nurt historii ludowych, ale jest niemal awangardowa w porównaniu z pomnikowo-martyrologiczną historiografią. Pokazuje Polskę w kontekście procesów.<br>
+
+  <img src="10.png">
+
+https://lubimyczytac.pl/ksiazka/5038804/historia-polski <br>
+https://www.goodreads.com/book/show/12875588-historia-polski <br>
+https://www.google.pl/books/edition/Historia_Polski/81RrrgEACAAJ?hl=en <br>
+
+Topolski, J. (2022). Historia Polski. Wydawnictwo Poznańskie.

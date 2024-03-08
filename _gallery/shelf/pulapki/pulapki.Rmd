@@ -1,0 +1,29 @@
+---
+title: "Półka: Pułapki myślenia"
+description: |
+  O myśleniu szybkim i wolnym
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+**Pułapki myślenia. O myśleniu szybkim i wolnym**<br>
+
+**Autor**:  Daniel Kahneman<br>
+**Tłumacz**: Piotr Szymczak <br>
+**Wydawnictwo**: Media Rodzina <br>
+
+Jeśli jakaś książka miałaby być szkolną lekturą, to właśnie ta. Pokazuje nie tyle, że niektórzy ludzie są głupi, co że wszyscy w zasadzie jesteśmy głupi – w tym sensie, że ulegamy całej palecie pułapek poznawczych, nie ważne jak inteligentni jesteśmy. I jedyne co można z tym zrobić, to mieć tego świadomość.<br>
+
+  <img src="11.png">
+
+https://lubimyczytac.pl/ksiazka/5103227/pulapki-myslenia-o-mysleniu-szybkim-i-wolnym<br>
+https://www.goodreads.com/book/show/17161472-pu-apki-my-lenia-o-my-leniu-szybkim-i-wolnym <br>
+
+Kahneman, D. (2022). Pułapki myślenia. O myśleniu szybkim i wolnym (P. Szymczak, Tłum.). Media Rodzina.
+

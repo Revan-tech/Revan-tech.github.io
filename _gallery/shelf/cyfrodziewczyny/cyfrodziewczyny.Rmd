@@ -1,0 +1,27 @@
+---
+title: "Półka: Cyfrodziewczyny"
+description: |
+  Pionierki polskiej informatyki 
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+**Cyfrodziewczyny. Pionierki polskiej informatyki** <br>
+
+**Autorka**: Karolina Wasielewska <br>
+**Wydawnictwo**: Wydawnictwo Krytyki Politycznej<br>
+
+Historia polskiej informatyki i tego jak ważna była w tym rola dziewczyn: informatyczek, inżynierek, konstruktorek, myślicielek. Wciągająca historia i budząca dumę, biorąc pod uwagę jak świetne komputery budowały Polki, przy znacznie ograniczonych zasobach.<br>
+
+  <img src="8.png">
+  
+https://lubimyczytac.pl/ksiazka/4914179/cyfrodziewczyny <br>
+https://www.goodreads.com/en/book/show/50522825 <br>
+https://www.google.pl/books/edition/Cyfrodziewczyny/Yeu5zQEACAAJ?hl=en <br>
+
+Wasielewska, K. (2020). Cyfrodziewczyny: Pionierki polskiej informatyki. Wydawnictwo Krytyki Politycznej.

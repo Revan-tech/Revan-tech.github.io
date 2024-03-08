@@ -1,0 +1,28 @@
+---
+title: "Półka: Powrót do Reims"
+description: |
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+**Powrót do Reims**<br>
+
+**Autor**: Didier Eribon <br>
+**Tłumaczka**: Maryna Ochab <br>
+**Wydawnictwo**: Wydawnictwo Karakter<br>
+
+Niby nostalgiczny memuar, a podstępnie kryje się w tej książce socjologiczna analiza przypadku, meandrująca od podziałów klasowych, po specjalny charakter wspólnot gejowskich. Książka w szczególności spodoba się osobom, które chcą bezboleśnie podłapać teorie Bourdieu i Foucaulta.<br>
+
+  <img src="9.png">
+
+https://lubimyczytac.pl/ksiazka/4877028/powrot-do-reims <br>
+https://www.goodreads.com/book/show/44428603-powr-t-do-reims?<br>
+https://www.google.pl/books/edition/Powr%C3%B3t_do_Reims/x_FdzgEACAAJ?hl=en <br>
+
+Eribon, D. (2019). Powrót do Reims (M. Ochab, Tłum.). Wydawnictwo Karakter.
+

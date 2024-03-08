@@ -1,0 +1,29 @@
+---
+title: "Półka: Życie Laboratoryjne"
+description: |
+  Konstruowanie faktów naukowych
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+**Życie Laboratoryjne**<br>
+
+**Autorzy**: Bruno Latour, Steve Woolgar <br>
+**Tłumacz**: Krzysztof Abriszewski <br>
+**Wydawnictwo**: Narodowe Centrum Kultury<br>
+
+Przełomowa książka w zakresie filozofii i socjologii nauki, pokazująca proces tworzenia faktów naukowych. Przekonuje, że nauka nie jest wykonywaniem prostego algorytmu metody badawczej, tylko splotem czynników ludzkich i nieludzkich, a fakt naukowy jest operacją retoryczną i komunikacyjną.<br>
+
+  <img src="13.png">
+
+https://lubimyczytac.pl/ksiazka/4931535/zycie-laboratoryjne-konstruowanie-faktow-naukowych <br>
+https://www.goodreads.com/book/show/55844861-ycie-laboratoryjne-konstruowanie-fakt-w-naukowych <br>
+https://www.google.pl/books/edition/Zycie_laboratoryjne/6lq6zQEACAAJ?hl=en <br>
+
+Latour, B., & Woolgar, S. (2020). Życie laboratoryjne: Konstruowanie faktów naukowych. Narodowe Centrum Kultury.

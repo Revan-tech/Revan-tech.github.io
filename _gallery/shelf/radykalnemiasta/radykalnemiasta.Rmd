@@ -1,0 +1,28 @@
+---
+title: "Półka: Radykalne miasta"
+description: |
+  Przez Amerykę Łacińską w poszukiwaniu nowej architektury
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+**Radykalne miasta**<br>
+
+**Autor**: Justin McGuirk <br>
+**Tłumacz**: Marcin Wawrzyńczak<br>
+**Wydawnictwo**: Fundacja Bęc Zmiana<br>
+
+Radykalne miasta to reportaż urbanistyczny. Książka jest wstrząsająca, w tym sensie, że proponuje rewolucyjne sposoby myślenia o mieście i budynku. Pokazuje udane i nieudane eksperymenty z mieszkaniem, kładąc specjalny nacisk na myślenie wspólnotowe.
+Metamodernizm, Solarpunk.<br>
+
+  <img src="7.png">
+
+https://lubimyczytac.pl/ksiazka/254943/radykalne-miasta<br>
+https://www.goodreads.com/book/show/37843178-radykalne-miasta-przez-ameryk-aci-sk-w-poszukiwaniu-nowej-architektu <br>
+
+McGuirk, J. (2015). Radykalne miasta. Przez Amerykę Łacińską w poszukiwaniu nowej architektury (M. Wawrzyńczak, Tłum.). Fundacja Bęc Zmiana.

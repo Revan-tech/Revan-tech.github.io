@@ -1,0 +1,26 @@
+---
+title: "Półka: Wyobraź to sobie!"
+description: |
+  Psychologiczna opowieść o bujaniu w obłokach
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+**Wyobraź to sobie! Psychologiczna opowieść o bujaniu w obłokach**<br>
+
+**Autor**: Łukasz Jach<br>
+**Wydawnictwo**: Wydawnictwo Poznańskie<br>
+
+Pochwała wyobraźni i fantazji! Próba zrozumienia skomplikowanych procesów, stojących za wyobrażaniem i przewidywaniem. Książka jest mocno osadzona w badaniach naukowych! Każdy rozdział zawiera zadania na testowanie i ćwiczenie wyobraźni — to się może przydać osobom edukatorskim.<br>
+
+  <img src="2.png">
+
+https://lubimyczytac.pl/ksiazka/5028207/wyobraz-to-sobie-psychologiczna-opowiesc-o-bujaniu-w-oblokach <br>
+https://www.goodreads.com/book/show/61668442-wyobra-to-sobie-psychologiczna-opowie-o-bujaniu-w-ob-okach<br>
+
+Jach, Ł. (2022). Wyobraź to sobie! Psychologiczna opowieść o bujaniu w obłokach. Wydawnictwo Poznańskie.

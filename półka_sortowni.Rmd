@@ -1,5 +1,7 @@
 ---
 title: "Półka Sortowni"
+description: |
+  W tym miejscu prezentujemy wartościowe wg nas książki naukowe i popularnonaukowe
 output:
   distill::distill_article
 ---
@@ -76,23 +78,21 @@ knitr::opts_chunk$set(
 }
 ```
 
-**W tym miejscu będziemy prezentować wartościowe w naszej opinii książki naukowe i popularnonaukowe**<br>
-**🏗️Strona jeszcze w trakcie konstrukcji 🏗️**
 
 <div class="row" id="lightgallery">
   <a>
     <img src="_gallery/img/margines_transparent.png" />
   </a>
-  <a href="_gallery/shelf/przykład/przykład.html">
-    <img src="_gallery/img/small_twoj-mozg-plata-ci-figle.png" />
+  <a href="_gallery/shelf/pulapki/pulapki.html">
+    <img src="_gallery/img/small_pulapkimyslenia.png" />
   </a>
-  <a href="_gallery/img/small_lingwistykadyskursu.png">
+  <a href="_gallery/shelf/dyskurs/dyskurs.html">
     <img src="_gallery/img/small_lingwistykadyskursu.png" />
   </a>
-  <a href="_gallery/img/small_wyobraz.png">
+  <a href="_gallery/shelf/wyobraznia/wyobraznia.html">
     <img src="_gallery/img/small_wyobraz.png" />
   </a>
-  <a href="_gallery/img/small_ludobojstwo.png">
+  <a href="_gallery/shelf/ludobojstwo/ludobojstwo.html">
     <img src="_gallery/img/small_ludobojstwo.png" />
   </a>
   <a>
@@ -107,16 +107,16 @@ knitr::opts_chunk$set(
   <a>
     <img src="_gallery/img/margines_transparent.png" />
   </a>
-  <a href="_gallery/shelf/przykład/przykład.html">
+  <a href="_gallery/shelf/walcz/walcz.html">
     <img src="_gallery/img/small_walczprotestuj.png" />
   </a>
-  <a href="_gallery/img/small_dziejeczlowieka.png">
+  <a href="_gallery/shelf/kosci/kosci.html">
     <img src="_gallery/img/small_dziejeczlowieka.png" />
   </a>
-  <a href="_gallery/img/small_powrotdoreims.png">
+  <a href="_gallery/shelf/reims/reims.html">
     <img src="_gallery/img/small_powrotdoreims.png" />
   </a>
-  <a href="_gallery/img/small_radykalnemiasta.png">
+  <a href="_gallery/shelf/radykalnemiasta/radykalnemiasta.html">
     <img src="_gallery/img/small_radykalnemiasta.png" />
   </a>
   <a>
@@ -131,17 +131,17 @@ knitr::opts_chunk$set(
   <a>
     <img src="_gallery/img/margines_transparent.png" />
   </a>
-  <a href="_gallery/img/small_cyfrodziewczyny.png">
+  <a href="_gallery/shelf/cyfrodziewczyny/cyfrodziewczyny.html">
     <img src="_gallery/img/small_cyfrodziewczyny.png" />
   </a>
-  <a href="_gallery/img/small_wszystkodlazmarlych.png">
+  <a href="_gallery/shelf/wszystkodlazmarlych/wszystkodlazmarlych.html">
     <img src="_gallery/img/small_wszystkodlazmarlych.png" />
   </a>
-  <a href="_gallery/img/small_topolskihistoriapolski.png">
+  <a href="_gallery/shelf/historiapolski/historiapolski.html">
     <img src="_gallery/img/small_topolskihistoriapolski.png" />
   </a>
-  <a href="_gallery/img/small_lifeofelements.png">
-    <img src="_gallery/img/small_lifeofelements.png" />
+  <a href="_gallery/shelf/laboratoriumlatour/laboratoriumlatour.html">
+    <img src="_gallery/img/small_latour.png" />
   </a>
   <a>
     <img src="_gallery/img/margines_transparent.png" />

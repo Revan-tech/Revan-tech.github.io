@@ -12,9 +12,7 @@ output:
     toc: true
 ---
 
-SZABLON W TRAKCIE TWORZENIA <br>
-
-### Walcz, protestuj, zmieniaj świat: Psychologia aktywizmu <br><br>
+**Walcz, protestuj, zmieniaj świat: Psychologia aktywizmu**<br>
 
 **Autorzy**: Tomasz Besta, Katarzyna Jaśko, Joanna Grzymała-Moszczyńska, Paulina Górska <br>
 **Wydawnictwo**: Smak Słowa<br>

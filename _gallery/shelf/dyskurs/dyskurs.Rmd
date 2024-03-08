@@ -1,0 +1,26 @@
+---
+title: "Półka: Lingwistyka dyskursu jako integrujący program badawczy"
+description: |
+author:
+  - name: Kamil Kopacewicz
+    url: https://revan-tech.github.io/kontakt.html
+date: 10-15-2022
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+**Lingwistyka dyskursu jako integrujący program badawczy**<br>
+
+**Autor**: Waldemar Czachur <br>
+**Wydawnictwo**: Wydawnictwo ATUT<br>
+
+Najlepsza dostępna synteza różnych definicji dyskursu i podejść do dyskursu. Na dodatek udostępniona za darmo online! Przyda się i lingwistom i socjologom, ale i osoby spoza tych dziedzin mogą wiele wyciągnąć dla siebie z publikacji, np. wykształcając specyficzne podejście do komunikacji medialnej, charakterystyczne analizie dyskursu.<br>
+
+  <img src="6.png">
+
+https://lubimyczytac.pl/ksiazka/5049502/lingwistyka-dyskursu-jako-integrujacy-program-badawczy <br>
+https://www.goodreads.com/book/show/57287391-lingwistyka-dyskursu-jako-integruj-cy-program-badawczy <br>
+https://www.google.pl/books/edition/Lingwistyka_dyskursu_jako_integruj%C4%85cy_p/TCQqEAAAQBAJ?hl=en <br>
+
+Czachur, W. (2020). Lingwistyka dyskursu jako integrujący program badawczy. Oficyna Wydawnicza ATUT - Wrocławskie Wydawnictwo Oświatowe.
