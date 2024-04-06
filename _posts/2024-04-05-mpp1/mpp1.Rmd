@@ -140,4 +140,4 @@ head(z)
 
 ```
 
-Ot, stworzyliśmy właśnie model poznawczy dyskryminacji bodźca, biorący pod uwagę procesy uwagowe badanageo (skupienie na zadaniu). 
+Ot, stworzyliśmy właśnie model poznawczy dyskryminacji bodźca, biorący pod uwagę procesy uwagowe badanageo (skupienie na zadaniu). Więcej o bayesowskim modelowaniu krzywej psychometrycznej możecie przeczytać tutaj [@lee2018bayesian]. 
