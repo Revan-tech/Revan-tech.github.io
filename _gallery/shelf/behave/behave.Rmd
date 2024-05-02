@@ -1,0 +1,28 @@
+---
+title: "Półka: Zachowuj się"
+description: |
+  Jak biologia wydobywa z nas to, co najgorsze, i to, co najlepsze
+author:
+  - name: Szymon Mąka
+    url: https://revan-tech.github.io/kontakt.html
+date: 05-01-2024
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+**Zachowuj się. Jak biologia wydobywa z nas to, co najgorsze, i to, co najlepsze**<br>
+
+**Autor**: Robert Sapolsky<br>
+**Wydawnictwo**: Media Rodzina<br>
+**Uwagi**: Polskie tłumaczenie pozostawia wiele do życzenia<br>
+
+Naszym zdaniem jeden z lepszych krytycznych przeglądów stanu wiedzy nauk o zachowaniu, skierowany do szerokiego odbiorcy. Autor sięga do psychologii,  antropologii, prymatologii, neuronauki i genetyki, by przedstawić syntetyczną opowieść o tym, jak kształtuje się zachowanie.<br>
+
+<img src="behave.png">
+
+https://lubimyczytac.pl/ksiazka/4949256/zachowuj-sie-jak-biologia-wydobywa-z-nas-to-co-najgorsze-i-to-co-najlepsze <br>
+https://www.goodreads.com/book/show/31170723-behave<br>
+
+Sapolsky, R. M. (2021). Zachowuj się: jak biologia wydobywa z nas to, co najgorsze, i to, co najlepsze. Media Rodzina.

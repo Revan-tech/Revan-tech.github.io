@@ -1,0 +1,25 @@
+---
+title: "Półka: Mit neuronów lustrzanych"
+author:
+  - name: Szymon Mąka
+    url: https://revan-tech.github.io/kontakt.html
+date: 05-01-2024
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+**Mit neuronów lustrzanych**<br>
+
+**Autor**: Gregory Hickok<br>
+**Wydawnictwo**: Copernicus Center Press<br>
+
+Krytyczna analiza popularnych przekonań na temat neuronów lustrzanych i ich roli w ludzkim zachowaniu. Hickok argumentuje, że wiele z tego, co zostało opowiedziane na temat neuronów lustrzanych, jest przesadzone lub wręcz błędne. Książka  jest ostrzeżeniem przed nadmiernym upraszczaniem i nadinterpretacją wyników badań, które mogą prowadzić do nieprawidłowych wniosków i złej nauki.<br>
+
+<img src="mit.png">
+
+https://lubimyczytac.pl/ksiazka/4949256/zachowuj-sie-jak-biologia-wydobywa-z-nas-to-co-najgorsze-i-to-co-najlepsze <br>
+https://www.goodreads.com/book/show/31170723-behave<br>
+
+Hickok, G. (2016). Mit neuronów lustrzanych: rzetelna neuronauka komunikacji i poznania. Copernicus Center Press.

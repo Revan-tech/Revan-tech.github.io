@@ -83,11 +83,11 @@ knitr::opts_chunk$set(
   <a>
     <img src="_gallery/img/margines_transparent.png" />
   </a>
-  <a href="_gallery/shelf/pulapki/pulapki.html">
-    <img src="_gallery/img/small_pulapkimyslenia.png" />
-  </a>
   <a href="_gallery/shelf/dyskurs/dyskurs.html">
     <img src="_gallery/img/small_lingwistykadyskursu.png" />
+  </a>
+  <a href="_gallery/shelf/behave/behave.html">
+    <img src="_gallery/img/behave.jpg" />
   </a>
   <a href="_gallery/shelf/wyobraznia/wyobraznia.html">
     <img src="_gallery/img/small_wyobraz.png" />
@@ -142,6 +142,26 @@ knitr::opts_chunk$set(
   </a>
   <a href="_gallery/shelf/laboratoriumlatour/laboratoriumlatour.html">
     <img src="_gallery/img/small_latour.png" />
+  </a>
+  <a>
+    <img src="_gallery/img/margines_transparent.png" />
+  </a>
+   <a>
+    <img src="_gallery/img/shell.png" />
+  </a>
+</div>
+  <div class="row" id="lightgallery">
+  <a>
+    <img src="_gallery/img/margines_transparent.png" />
+  </a>
+  <a href="_gallery/shelf/pulapki/pulapki.html">
+    <img src="_gallery/img/small_pulapkimyslenia.png" />
+  </a>
+  <a href="_gallery/shelf/small/small.html">
+    <img src="_gallery/img/small.png" />
+  </a>
+  <a href="_gallery/shelf/mit/mit.html">
+    <img src="_gallery/img/mit.jpg" />
   </a>
   <a>
     <img src="_gallery/img/margines_transparent.png" />

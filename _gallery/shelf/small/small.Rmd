@@ -1,0 +1,25 @@
+---
+title: "Twój mózg płata Ci figle"
+author:
+  - name: Szymon Mąka
+    url: https://revan-tech.github.io/kontakt.html
+date: 05-01-2024
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+**Twój mózg płata Ci figle**<br>
+
+**Autor**: Albert Moukheiber<br>
+**Wydawnictwo**: Vis-á-Vis/Etiuda<br>
+
+Krótki esej skupiony na wniosku wyłaniającym się z dekad badań nad poznaniem. Nasz mózg jest maszyną do tworzenia narracji, lecz niekoniecznie obiektywnych. <br>
+
+<img src="small.png">
+
+https://lubimyczytac.pl/ksiazka/4943060/twoj-mozg-plata-ci-figle<br>
+https://www.goodreads.com/book/show/61062892-your-brain-is-playing-tricks-on-you?from_search=true&from_srp=true&qid=SqK50Knb31&rank=1<br>
+
+Moukheiber, A. (2020). Twój mózg płata Ci figle. Vis-á-Vis/Etiuda.
