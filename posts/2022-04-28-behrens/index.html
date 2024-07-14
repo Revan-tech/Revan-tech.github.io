@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,16 +74,38 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
 </style>
 
   <!--radix_placeholder_meta_tags-->
@@ -110,9 +133,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <!--/radix_placeholder_meta_tags-->
   
-  <meta name="citation_reference" content="citation_title=Learning the value of information in an uncertain world;citation_publication_date=2007;citation_publisher=Nature Publishing Group;citation_volume=10;citation_author=Timothy EJ Behrens;citation_author=Mark W Woolrich;citation_author=Mark E Walton;citation_author=Matthew FS Rushworth"/>
-  <meta name="citation_reference" content="citation_title=Uncertainty in perception and the hierarchical gaussian filter;citation_publication_date=2014;citation_publisher=Frontiers;citation_volume=8;citation_author=Christoph D Mathys;citation_author=Ekaterina I Lomakina;citation_author=Jean Daunizeau;citation_author=Sandra Iglesias;citation_author=Kay H Brodersen;citation_author=Karl J Friston;citation_author=Klaas E Stephan"/>
-  <meta name="citation_reference" content="citation_title=Reinforcement learning: An introduction;citation_publication_date=2018;citation_publisher=MIT press;citation_author=Richard S Sutton;citation_author=Andrew G Barto"/>
+  <meta name="citation_reference" content="citation_title=Learning the value of information in an uncertain world;citation_publisher=Nature Publishing Group;citation_volume=10;citation_author=Timothy EJ Behrens;citation_author=Mark W Woolrich;citation_author=Mark E Walton;citation_author=Matthew FS Rushworth"/>
+  <meta name="citation_reference" content="citation_title=Uncertainty in perception and the hierarchical gaussian filter;citation_publisher=Frontiers;citation_volume=8;citation_author=Christoph D Mathys;citation_author=Ekaterina I Lomakina;citation_author=Jean Daunizeau;citation_author=Sandra Iglesias;citation_author=Kay H Brodersen;citation_author=Karl J Friston;citation_author=Klaas E Stephan"/>
+  <meta name="citation_reference" content="citation_title=Reinforcement learning: An introduction;citation_publisher=MIT press;citation_author=Richard S Sutton;citation_author=Andrew G Barto"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -121,7 +144,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["apa.csl","behrens_files/anchor-4.2.2/anchor.min.js","behrens_files/bowser-1.9.3/bowser.min.js","behrens_files/distill-2.2.21/template.v2.js","behrens_files/header-attrs-2.10/header-attrs.js","behrens_files/jquery-1.11.3/jquery.min.js","behrens_files/popper-2.6.0/popper.min.js","behrens_files/tippy-6.2.7/tippy-bundle.umd.min.js","behrens_files/tippy-6.2.7/tippy-light-border.css","behrens_files/tippy-6.2.7/tippy.css","behrens_files/tippy-6.2.7/tippy.umd.min.js","behrens_files/webcomponents-2.0.0/webcomponents.js","bib.bib","hero-image.html","model.png","RL.PNG","Rplot1.png","Rplot2.png","Statystyczne_Dygresje.jpg","Statystyczne_Dygresje2.jpg","theme.css"]}
+  {"type":"character","attributes":{},"value":["apa.csl","behrens_files/anchor-4.2.2/anchor.min.js","behrens_files/bowser-1.9.3/bowser.min.js","behrens_files/distill-2.2.21/template.v2.js","behrens_files/header-attrs-2.10/header-attrs.js","behrens_files/header-attrs-2.25/header-attrs.js","behrens_files/jquery-1.11.3/jquery.min.js","behrens_files/jquery-3.6.0/jquery-3.6.0.js","behrens_files/jquery-3.6.0/jquery-3.6.0.min.js","behrens_files/jquery-3.6.0/jquery-3.6.0.min.map","behrens_files/popper-2.6.0/popper.min.js","behrens_files/tippy-6.2.7/tippy-bundle.umd.min.js","behrens_files/tippy-6.2.7/tippy-light-border.css","behrens_files/tippy-6.2.7/tippy.css","behrens_files/tippy-6.2.7/tippy.umd.min.js","behrens_files/webcomponents-2.0.0/webcomponents.js","bib.bib","hero-image.html","model.png","RL.PNG","Rplot1.png","Rplot2.png","Statystyczne_Dygresje.jpg","Statystyczne_Dygresje2.jpg","theme.css"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2109,8 +2132,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
-  <script src="../../site_libs/header-attrs-2.10/header-attrs.js"></script>
-  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/header-attrs-2.25/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2165,6 +2188,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-title">
 <h1>Jak mózg monitoruje zmienność środowiska?</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>Modelowanie niepewności w procesie uczenia się wartości bodźców.</p></p>
@@ -2181,14 +2205,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Podstawowa zasada warunkowania jest prosta: Jeśli po wykonaniu jakiejś czynności otrzymujemy rezulatat pozytywny, zwiększa się prawdopodobieństwo powtórzenia tej czynności, jeśli negatywny, zmniejsza się.</p>
 <p>Jednym z modeli warunkowania jest model Rescola-Wagner <span class="citation" data-cites="sutton2018reinforcement">(<a href="#ref-sutton2018reinforcement" role="doc-biblioref">Sutton &amp; Barto, 2018</a>)</span>, który wygląda tak:</p>
 <div class="layout-chunk" data-layout="l-body-outset">
-<p><img src="RL.PNG" width="754" /></p>
+<p><img src="RL.png" width="754" /></p>
 </div>
 <p>Model jest bardzo prosty. Przewidywaną wartością bodźca <span class="math inline">\(V\)</span> w czasie <span class="math inline">\(i\)</span> jest wartość bodzica w czasie <span class="math inline">\(i-1\)</span> plus błąd predykcji, czyli różnica pomiędzy rezultatem (np. wartością nagrody), a przewidywaną wartością bodźca w czasie <span class="math inline">\(i-1\)</span> , pomnożoną przez stałą <span class="math inline">\(a\)</span>. Od wielkości współczynnika uczenia (<em>learning rate</em>) <span class="math inline">\(a\)</span> zależy jak szybko agent aktualizuje wartość bodźca.</p>
 <p>Model Rescola-Wagner jest dość prosty i nie odda wszystkich zjawisk zachodzących u ludzi i zwierząt podczas warunkowania. Jednak jego prostota pozwala szybko zrozumieć ideę stojącą za tą klasą modeli - uczenia ze wzmocnieniem (<em>reinforcement learning models</em>).</p>
 <p>Takie modele wykorzystywane są w kognitywistyce i ekonomii (uczenie się i podejmowanie decyzji), a także w biologii (uczenie ze wzmocnieniem to jedna z podstawowych zasad działania neuronów dopaminergicznych) i robotyce. Ja chciałym się skupić na badaniu przeprowadzonym przez zespół Timothego Behrensa, które wyjątkowo mi się spodobało <span class="citation" data-cites="behrens2007learning">(<a href="#ref-behrens2007learning" role="doc-biblioref">Behrens et al., 2007</a>)</span>.</p>
 <p>Badani wykonywali proste zadanie, w którym mieli wybierać wiekokrotnie jedną z dwóch opcji. W pierwszej fazie (120 prób) każda z możliwości była związana ze stałym prawdopodbieństwem uzyskania nagrody. Następnie, w drugiej fazie prawdopodobieństwo uzyskania nagrody zmieniało się co 30-40 prób.</p>
 <p>Całą procedurę badani wykonywali w funkcjonalnym rezonansie magnetycznym (fMRI). Dzięki użyciu neurobrazowania, można nie tylko sprawdzić jak dobrze dany model uczenia ze wzmocniem wyjaśnia nam obserwowalne dane (w tym wypadku decyzje badanych), ale możemy sprawdzić czy mózg oblicza wartość bodźca i błąd predykcji w podobny sposób jak model (i jakie ośrodki w mózgu w tym współuczestniczą).</p>
-<p>Behrensa i jego zespół zainteresował problem zmienności środowiska. Jeśli środowisko jest stabilne (prawdopodobieństwa przypisane wyborom/opcjom nie zmieniają się), współczynnik uczenia się powinien być niższy, ponieważ nawet jeśli preferowana przez nas opcja akurat nie dostarczy nagrody, jest to raczej wynikiem przypadku. Natomiast jeśli prawdopodobieństwa związane z wyborami zmieniają się (a co za tym idzie zmienia się wartość bodźców), musimy szybko aktualizować wartości bodźców, inaczej z uporem wybieralibyśmy te, których wybranie w przeszłosci dawało często nagrodę.</p>
+<p>Behrensa i jego zespół zainteresował problem zmienności środowiska. Jeśli środowisko jest stabilne (prawdopodobieństwa przypisane wyborom/opcjom nie zmieniają się), współczynnik uczenia się powinien być niższy, ponieważ nawet jeśli preferowana przez nas opcja akurat nie dostarczy nagrody, jest to raczej wynikiem przypadku.
+Natomiast jeśli prawdopodobieństwa związane z wyborami zmieniają się (a co za tym idzie zmienia się wartość bodźców), musimy szybko aktualizować wartości bodźców, inaczej z uporem wybieralibyśmy te, których wybranie w przeszłosci dawało często nagrodę.</p>
 <p>Moglibyśmy tak zmodyfikować model Rescola-Wagner, by współczynnik uczenia nie był stały, ale zmieniał się w czasie. Uzyskalibyśmy wtedy informację jak dana osoba dostosowuje swój współczynik uczenia. Nie wiedzielibyśmy jednak dlaczego to robi. Wielkość współczynnika uczenia będzie także zależała od innych czynników.</p>
 <p>Na przykład, gdy nie mamy wcześniejszych informacji na temat wartości bodźców, współczynnik musi być wysoki, byśmy mogli szybko nabyć jakieś przekonania, na podstawie których podejmiemy decyzję. Natomiast, wraz z postępem czasu powinien maleć (wynika to z chartakterystyki uczenia się - wraz z postępem czasu efekty uczenia maleją).</p>
 <p>Jeśli chcielibyśmy wiedzieć jak bardzo współczynnik zmienia się w zależności od niestabilności (<em>volatility</em>), a także czy jej monitorowanie jest odzwierciedlone w sygnale fMRI (co interesowało Behrensa), musimy mieć jej jakąś estymatę.</p>
@@ -2206,10 +2231,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </summary>
 <p><strong>Twierdzenie Bayesa</strong></p>
 <p>Bayesowskie modele opierają się na twierdzeniu Bayesa (lub inaczej mówiąc, wzorze na prawdopodobieństwo warunkowe):</p>
-<p><span class="math display">\[ P(parameters|data) = \frac{P(data|parameters)P(parameters)}{P(data)}\]</span> Człon <span class="math inline">\(P(data|parameters)\)</span> (wiarygodność, <em>likehood</em>) oznacza prawdopodobieństwo, że dany parametr wygenerował zaobserwowane dane (czyli na przykład prawdopodbieństwo tego, że jeśli prawdopodobieństwo nagrody wynosi 80%, jakie jest prawdopodobieństwo, że zaobserwujemy 1 - czyli nagrodę).</p>
+<p><span class="math display">\[ P(parameters|data) = \frac{P(data|parameters)P(parameters)}{P(data)}\]</span>
+Człon <span class="math inline">\(P(data|parameters)\)</span> (wiarygodność, <em>likehood</em>) oznacza prawdopodobieństwo, że dany parametr wygenerował zaobserwowane dane (czyli na przykład prawdopodbieństwo tego, że jeśli prawdopodobieństwo nagrody wynosi 80%, jakie jest prawdopodobieństwo, że zaobserwujemy 1 - czyli nagrodę).</p>
 <p><span class="math inline">\(P(parameters)\)</span> nazywane prawdopodobieństem <em>a priori</em>, oznacza jakie jest prawdopodobieństwo danego parametru. Często opisuje się go jako wcześniejsze doświadczenie, ponieważ możemy wiedzieć, że wystąpienie jakiejś wartości parametru jest mniej prawdopodobne, niż innej (bądź ma pewnien określony rozkład statystyczny). Jeśli tego nie wiemy, <span class="math inline">\(P(parameters)\)</span> przyjmują taką samą wartość dla wszystkich <span class="math inline">\(P(data|parameters)\)</span>.</p>
 <p><span class="math inline">\(P(data)\)</span> jest właściwie tylko parametrem skalującym (stałą), bez specjalnej interpretacji. Dlatego powyższy wzór możemy zapisać:</p>
-<p><span class="math display">\[ P(parameters|data) \propto P(data|parameters)P(parameters)\]</span> gdzie <span class="math inline">\(\propto\)</span> oznacza “jest proporcjonalny do”</p>
+<p><span class="math display">\[ P(parameters|data) \propto P(data|parameters)P(parameters)\]</span>
+gdzie <span class="math inline">\(\propto\)</span> oznacza “jest proporcjonalny do”</p>
 <p>Wreszcie człon <span class="math inline">\(P(parameters|data)\)</span> jest prawdopodbieństwem <em>a posteriori</em>, czyli prawdopodbieństwem wartości parametru modelu przy zaobserowanych danych (na przykład, jeśli zaobserwowaliśmy 1, jakie jest prawdopodbieństwo, że prawdopodobieństwo otrzymania nagrody wynosi 66%).</p>
 <p><strong>Proces Markowa</strong></p>
 <p>Proces Markowa to proces stochastyczny, w którym prawdopodobieństwo zdarzenia w czasie <span class="math inline">\(i\)</span> zależy tylko od stanu systemu w czasie <span class="math inline">\(i-1\)</span>. Czyli:</p>
@@ -2226,7 +2253,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Potrzebujemy do pełni szczęścia jeszcze poszczególnych prawdopodobieństw wystepujących we wzorze.</p>
 <p>Prawdopodobieństwo <span class="math inline">\(P(y_i|r_i)\)</span>, czyli otrzymanie nagrody, pod warunkiem prawdopodobieństwa <span class="math inline">\(r_i\)</span> wynosi po prostu <span class="math inline">\(r_i\)</span>. Możemy więc zamodelować je rozkładem dwumianowym:</p>
 <p><span class="math display">\[P(y_i|r_i) \sim Binomial(r_i)\]</span></p>
-<p>Prawdpodobieństwo <span class="math inline">\(P(r_{i+1}|r_i,v_i)\)</span> Behrens zamodelował rozkładem Beta, jednak ja, kierowany lenistwem, zamodelowałem je rozkładem normalnym ograniczonym na przedziale (0,1): <span class="math display">\[P(r_{i+1}|r_{i},v_{i}) \sim N^{(0,1)}(r_i,e^{v_{i}})\]</span></p>
+<p>Prawdpodobieństwo <span class="math inline">\(P(r_{i+1}|r_i,v_i)\)</span> Behrens zamodelował rozkładem Beta, jednak ja, kierowany lenistwem, zamodelowałem je rozkładem normalnym ograniczonym na przedziale (0,1):
+<span class="math display">\[P(r_{i+1}|r_{i},v_{i}) \sim N^{(0,1)}(r_i,e^{v_{i}})\]</span></p>
 <p>Jak widzimy, prawdopodobieństwo <span class="math inline">\(r_{i+1}\)</span> dane jest rozkładem normalnym o średniej <span class="math inline">\(r_i\)</span> i wariancji <span class="math inline">\(e^{v_{i+1}}\)</span>. To jak bardzo prawdopodobny jest większy przeskok pomiędzy <span class="math inline">\(r_i\)</span> do <span class="math inline">\(r_{i+1}\)</span> zależne będzie od tego jak duża jest wariancja <span class="math inline">\(e^{v_{i+1}}\)</span>. Właśnie ona jest naszą ukrytą zmienną reprezentującą niestabilność.</p>
 <p>Prawdopodobieństwo <span class="math inline">\(P(v_{i+1}|v_i,k)\)</span> również zamodelowane jest rozkładem normalnym:</p>
 <p><span class="math display">\[P(v_{i+1}|v_i,k) \sim N(v_i,e^{k})\]</span></p>
@@ -2236,14 +2264,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>Po więcej detali polecam zajrzeć do orginalnego artykułu.</p>
 </details>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="doc-bibliography">
-<div id="ref-behrens2007learning" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list">
+<div id="ref-behrens2007learning" class="csl-entry" role="listitem">
 Behrens, T. E., Woolrich, M. W., Walton, M. E., &amp; Rushworth, M. F. (2007). Learning the value of information in an uncertain world. <em>Nature Neuroscience</em>, <em>10</em>(9), 1214–1221.
 </div>
-<div id="ref-mathys2014uncertainty" class="csl-entry" role="doc-biblioentry">
+<div id="ref-mathys2014uncertainty" class="csl-entry" role="listitem">
 Mathys, C. D., Lomakina, E. I., Daunizeau, J., Iglesias, S., Brodersen, K. H., Friston, K. J., &amp; Stephan, K. E. (2014). Uncertainty in perception and the hierarchical gaussian filter. <em>Frontiers in Human Neuroscience</em>, <em>8</em>, 825.
 </div>
-<div id="ref-sutton2018reinforcement" class="csl-entry" role="doc-biblioentry">
+<div id="ref-sutton2018reinforcement" class="csl-entry" role="listitem">
 Sutton, R. S., &amp; Barto, A. G. (2018). <em>Reinforcement learning: An introduction</em> (pp. 346–349). MIT press.
 </div>
 </div>
