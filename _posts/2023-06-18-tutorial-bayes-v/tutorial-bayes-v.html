@@ -1663,16 +1663,16 @@ Sample size per chain = 3000
    plus standard error of the mean:
 
          Mean      SD  Naive SE Time-series SE
-a     -0.2573 0.16894 0.0017808      0.0035766
-b      1.0620 0.11893 0.0012536      0.0024819
-sigma  1.0857 0.07811 0.0008234      0.0008731
+a     -0.2677 0.17540 0.0018489      0.0037692
+b      1.0689 0.12250 0.0012913      0.0026446
+sigma  1.0852 0.07916 0.0008344      0.0008969
 
 2. Quantiles for each variable:
 
          2.5%     25%     50%     75%   97.5%
-a     -0.5892 -0.3671 -0.2587 -0.1463 0.07539
-b      0.8255  0.9841  1.0629  1.1394 1.29638
-sigma  0.9465  1.0313  1.0819  1.1341 1.25375</code></pre>
+a     -0.6151 -0.3853 -0.2655 -0.1536 0.08256
+b      0.8265  0.9862  1.0688  1.1509 1.30783
+sigma  0.9446  1.0296  1.0810  1.1339 1.25730</code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1688,16 +1688,16 @@ Sample size per chain = 3000
    plus standard error of the mean:
 
           Mean      SD  Naive SE Time-series SE
-a     -0.02982 0.13000 0.0013703      0.0022181
-b      0.46119 0.04209 0.0004437      0.0007099
-sigma  0.97997 0.07155 0.0007542      0.0007791
+a     -0.03195 0.12903 0.0013601      0.0020837
+b      0.46223 0.04263 0.0004493      0.0007066
+sigma  0.97974 0.07116 0.0007501      0.0007826
 
 2. Quantiles for each variable:
 
-         2.5%     25%      50%     75%  97.5%
-a     -0.2840 -0.1188 -0.03036 0.05631 0.2263
-b      0.3801  0.4329  0.46076 0.48969 0.5442
-sigma  0.8527  0.9295  0.97626 1.02560 1.1314</code></pre>
+         2.5%     25%      50%    75%  97.5%
+a     -0.2801 -0.1205 -0.03134 0.0540 0.2195
+b      0.3782  0.4339  0.46215 0.4908 0.5464
+sigma  0.8526  0.9304  0.97632 1.0250 1.1314</code></pre>
 </div>
 <p>W obydwu przypadkach przedziały nie zawierają zera. Musimy rozsądzić, który model jest lepszy. Moglibyśmy zrobić to przy pomocy już omówionego Czynnika Bayesa. Jednak, tak jak już wspominałem, obliczenie go w bardziej skomplikowanych modelach jest problematyczne.</p>
 <p>W modelach częstościowych używa się kryteriów informacyjnych takich jak AIC i BIC do selekcji modeli. W statystyce Bayesowskiej do oceny dopoasowania modelu możemy użyć <em>Deviance Information Cryterion</em> (DIC).</p>
@@ -1705,7 +1705,7 @@ sigma  0.8527  0.9295  0.97626 1.02560 1.1314</code></pre>
 gdzie:</p>
 <p><span class="math display">\[ D(\theta) =  -  2\log ({\rm{P}}(y|\theta ))\]</span></p>
 <p><span class="math display">\[ p_D=\overline{D(\theta)} -  D(\bar{\theta})\]</span></p>
-<p>DIC jest zdefiniowane jako suma (ujemnego) średniego logarytmu funkcji wiarygodności zewaluowanym dla wszystkich wartości parametrów <span class="math inline">\(\theta\)</span> z rozkładu post priori <span class="math inline">\(\overline{D(\theta)}\)</span> i dewiacji <span class="math inline">\(p_D\)</span>. Dewiacja, z kolei, jest obliczana jako różnica między wartością funkcji wiarygodności <span class="math inline">\(D(\bar{\theta})\)</span> a średnią wartością logarytmu funkcji wiarygodności dla wszystkich parametrów(gdzie dla symetrycznych rozkładów otrzymujemy najbardziej wiarygodne wartości).</p>
+<p>DIC jest zdefiniowane jako suma (ujemnego) średniego logarytmu funkcji wiarygodności zewaluowanym dla wszystkich możliwych wartości parametrów <span class="math inline">\(\theta\)</span> z rozkładu post priori <span class="math inline">\(\overline{D(\theta)}\)</span> i dewiacji <span class="math inline">\(p_D\)</span>. Dewiacja, z kolei, jest obliczana jako różnica między <span class="math inline">\(\overline{D(\theta)}\)</span> a wartością logarytmu funkcji wiarygodności dla średniej wartości parametów <span class="math inline">\(D(\bar{\theta})\)</span> (gdzie dla symetrycznych rozkładów otrzymujemy najbardziej wiarygodne wartości).</p>
 <p>Innymi słowy, wartość <span class="math inline">\(\overline{D(\theta)}\)</span> dostarcza informacji jak dobrze model przewiduje dane <span class="math inline">\(y\)</span>. Im lepszy jest model, tym mniejsza jest ta wartość. Jednakże, gdy liczba parametrów w modelu wzrasta, wartość <span class="math inline">\(\overline{D(\theta)}\)</span> może również maleć, ponieważ bardziej skomplikowany model ma większą elastyczność w dopasowaniu się do danych. Dlatego drugi składnik, <span class="math inline">\(p_D\)</span>, mierzy poziom skomplikowania modelu (efektywną liczbę parametrów).</p>
 <p>Podsumowując, modele z mniejszą wartością DIC są preferowane, ponieważ sugerują większe skupienie gęstości prawdopodobieństwa wokół dominującej wartości, jednocześnie uwzględniając liczbę parametrów w modelu.</p>
 <p>Policzmy DIC dla naszych modeli.</p>
@@ -1715,24 +1715,24 @@ gdzie:</p>
 <span><span class='va'>Dic_lin</span></span></code></pre>
 </div>
 <pre><code>Mean deviance:  298.6 
-penalty 2.947 
-Penalized deviance: 301.5 </code></pre>
+penalty 3.105 
+Penalized deviance: 301.7 </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>Dic_sq</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/rjags/man/dic.samples.html'>dic.samples</a></span><span class='op'>(</span><span class='va'>model_sq</span>,<span class='fl'>1000</span><span class='op'>)</span></span>
 <span><span class='va'>Dic_sq</span></span></code></pre>
 </div>
-<pre><code>Mean deviance:  278.3 
-penalty 3.107 
-Penalized deviance: 281.4 </code></pre>
+<pre><code>Mean deviance:  278.2 
+penalty 3.058 
+Penalized deviance: 281.3 </code></pre>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://rdrr.io/pkg/rjags/man/diffdic.html'>diffdic</a></span><span class='op'>(</span><span class='va'>Dic_sq</span>,<span class='va'>Dic_lin</span><span class='op'>)</span></span></code></pre>
 </div>
-<pre><code>Difference: -20.15688
-Sample standard error: 9.885177</code></pre>
+<pre><code>Difference: -20.42313
+Sample standard error: 9.975646</code></pre>
 </div>
 <p>Widzimy, że model z kwadratowym związkiem pomiedzy x i y jest lepiej dopasowany do danych.</p>
 <p>Prócz DIC, w statystyce Bayesowskiej narzędziami do oceny dopasowania modeli są <em>Widely Applicable Information Criterion</em> (WAIC) oraz <em>Leave-one-out cross-validation</em> (LOO-CV). Są to metody, które nie są zaimplementowane w JAGS, jednak warto je poznać, ponieważ posiadają lepsze właściwości <span class="citation" data-cites="gelman2014understanding">(<a href="#ref-gelman2014understanding" role="doc-biblioref">Gelman et al., 2014</a>)</span>.</p>
