@@ -6,24 +6,25 @@ output_dir: "."
 navbar:
   left:
     - text: "Home"
-      href: index.html
+      href: ../../index.html
     - text: "Blog"
-      href: blog.html
+      href: ../../blog.html
     - text: "Poradniki"
-      href: poradniki.html
+      href: ../../poradniki.html
     - text: "Baza wiedzy"
       href: https://szpm.shinyapps.io/baza_wiedzy/
     - text: "Projekty"
-      href: projekty.html  
+      href: ../../projekty.html  
     - text: "Statystyczne Dygresje"
-      href: statystyczne_dygresje.html 
+      href: ../../statystyczne_dygresje.html 
     - text: "Półka Sortowni"
-      href: półka_sortowni.html
+      href: ../../półka_sortowni.html
   right:
     - text: "Kontakt"
-      href: kontakt.html 
+      href: ../../kontakt.html 
   search: true
 output: 
   distill::distill_article:
     includes:
       in_header: header.html
+
