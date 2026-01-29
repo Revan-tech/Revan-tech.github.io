@@ -1,0 +1,1520 @@
+---
+title: "Sit & Face"
+author: ""
+date: "`r Sys.Date()`"
+
+output:
+  fidelius::html_password_protected:
+    password: "BabyLab123!"
+    output_format:
+      rmarkdown::html_document:
+        theme: flatly
+        toc: false
+---
+
+# Raport {.tabset}
+
+## Wyodrębnianie AOI
+
+
+```{r setup, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+library(readr)
+library(readxl)
+library(stringr)
+library(ggplot2)
+library(scales)
+library(magick)
+library(grid)
+library(glmmTMB)
+library(knitr)
+library(emmeans)
+```
+
+### Dane wejściowe
+```{r data-load}
+SF_Vocalizations <- read_excel("SF_Vocalizations_Longitudinal_Tasks_T1toT4.xls")
+Sit_Face_Age_MotorScores <- read_excel("Sit&Face_Age_MotorScores.xlsx")
+allfixations <- read.delim("allfixations.txt")
+cz <- read.csv("cz.csv") # Trial duration and actress
+```
+
+
+```{r helper-functions, echo=FALSE}
+AOI <- list(
+  "Lewe oko"   = 36:41,
+  "Prawe oko"  = 42:47,
+  "Usta"       = 48:67,
+  "Owal"       = 0:16
+)
+
+pads <- c(0, 0.1, 0.2, 0.3, 0.5)
+
+
+bbox <- function(df, idx) {
+  xs <- df[paste0("x_", idx)]
+  ys <- df[paste0("y_", idx)]
+  cbind(
+    x1 = apply(xs, 1, min, na.rm=TRUE),
+    y1 = apply(ys, 1, min, na.rm=TRUE),
+    x2 = apply(xs, 1, max, na.rm=TRUE),
+    y2 = apply(ys, 1, max, na.rm=TRUE)
+  )
+}
+
+area <- function(b) pmax(0, b[,3]-b[,1]) * pmax(0, b[,4]-b[,2])
+
+intersect_area <- function(b1,b2){
+  x1 <- pmax(b1[,1],b2[,1])
+  y1 <- pmax(b1[,2],b2[,2])
+  x2 <- pmin(b1[,3],b2[,3])
+  y2 <- pmin(b1[,4],b2[,4])
+  pmax(0,x2-x1)*pmax(0,y2-y1)
+}
+
+pad_box <- function(b, pad){
+  w <- b[3]-b[1]; h <- b[4]-b[2]
+  cx <- (b[1]+b[3])/2; cy <- (b[2]+b[4])/2
+  w2 <- w*(1+2*pad); h2 <- h*(1+2*pad)
+  c(cx-w2/2, cy-h2/2, cx+w2/2, cy+h2/2)
+}
+```
+
+### Pokrycie AOI
+```{r aoi-coverage, echo=FALSE}
+files <- list.files(
+  path = "OpenFace",
+  pattern = "\\.csv$",
+  full.names = TRUE
+)
+results <- list()
+
+for(f in files){
+  df <- read_csv(f, show_col_types = FALSE)
+  df <- df[, trimws(names(df))]
+  
+  for(aoi in names(AOI)){
+    b <- bbox(df, AOI[[aoi]])
+    ref <- apply(b, 2, median, na.rm=TRUE)
+    
+    for(p in pads){
+      refp <- pad_box(ref,p)
+      cov <- intersect_area(
+        matrix(refp,nrow=nrow(b),ncol=4,byrow=TRUE), b
+      ) / area(b)
+      
+      results[[length(results)+1]] <- tibble(
+        Plik=f, AOI=aoi, Padding=p, Pokrycie=mean(cov, na.rm=TRUE)
+      )
+    }
+  }
+}
+
+res <- bind_rows(results)
+res$Plik = gsub("OpenFace/", "", res$Plik)
+```
+
+
+Areas of interest  were defined for each video using facial landmark coordinates extracted with OpenFace. For each film, mean landmark positions for the face oval, eyes, and mouth were computed across all frames to obtain stable, static AOI locations that amortized within-video facial motion. To ensure that dynamic facial features remained consistently within their corresponding AOIs, we systematically evaluated different levels of spatial expansion (padding) and selected a padding value that maximized coverage of the observed feature trajectories across frames.
+
+
+```{r aoi-coverage-plot, fig.width=9, echo=FALSE}
+ggplot(res, aes(x=Padding, y=Pokrycie, color=AOI)) +
+  geom_line() +
+  geom_point() +
+  facet_wrap(~Plik) +
+  scale_y_continuous(labels=percent_format(accuracy=1), limits=c(0,1)) +
+  theme_minimal() +
+  labs(
+    title="Średnie pokrycie AOI vs padding",
+    x="Padding",
+    y="Średnie pokrycie"
+  )
+```
+
+
+```{r aoi-static, echo=FALSE}
+### AOI statyczne – setup
+library(tidyverse)
+library(readr)
+library(stringr)
+
+# ---- indeksy i paddingi ----
+IDX <- list(
+  left_eye  = 36:41,
+  right_eye = 42:47,
+  mouth     = 48:67,
+  oval      = 0:16
+)
+
+PAD_MOUTH     <- 0.50
+PAD_OVAL      <- 0.20
+PAD_EYES_INIT <- 0.20
+
+
+trim_colnames <- function(df) { colnames(df) <- trimws(colnames(df)); df }
+
+detect_scheme <- function(nms){
+  if (any(str_detect(nms, "^x_\\d+$")) && any(str_detect(nms, "^y_\\d+$")))
+    return(list(x="x_", y="y_"))
+  if (any(str_detect(nms, "^X_\\d+$")) && any(str_detect(nms, "^Y_\\d+$")))
+    return(list(x="X_", y="Y_"))
+  if (any(str_detect(nms, "^eye_lmk_x_\\d+$")) && any(str_detect(nms, "^eye_lmk_y_\\d+$")))
+    return(list(x="eye_lmk_x_", y="eye_lmk_y_"))
+  stop("Nie rozpoznaję kolumn landmarków.")
+}
+
+bbox_mean_over_frames <- function(df, idx, pre){
+  xs <- df[paste0(pre$x, idx)]
+  ys <- df[paste0(pre$y, idx)]
+  x1 <- apply(xs, 1, min, na.rm = TRUE)
+  y1 <- apply(ys, 1, min, na.rm = TRUE)
+  x2 <- apply(xs, 1, max, na.rm = TRUE)
+  y2 <- apply(ys, 1, max, na.rm = TRUE)
+  c(mean(x1, na.rm = TRUE),
+    mean(y1, na.rm = TRUE),
+    mean(x2, na.rm = TRUE),
+    mean(y2, na.rm = TRUE))
+}
+
+pad_box <- function(b, pad){
+  w <- b[3]-b[1]; h <- b[4]-b[2]
+  cx <- (b[1]+b[3])/2; cy <- (b[2]+b[4])/2
+  w2 <- w*(1+2*pad); h2 <- h*(1+2*pad)
+  c(cx-w2/2, cy-h2/2, cx+w2/2, cy+h2/2)
+}
+
+scale_box <- function(b, sx = 1, sy = 1){
+  w <- (b[3]-b[1]) * sx
+  h <- (b[4]-b[2]) * sy
+  cx <- (b[1]+b[3])/2
+  cy <- (b[2]+b[4])/2
+  c(cx - w/2, cy - h/2, cx + w/2, cy + h/2)
+}
+
+area_box <- function(b) max(0, b[3]-b[1]) * max(0, b[4]-b[2])
+
+make_row <- function(file, name, b, extra = list()){
+  tibble(
+    Plik = file, AOI = name,
+    x1 = b[1], y1 = b[2], x2 = b[3], y2 = b[4],
+    cx = (b[1]+b[3])/2, cy = (b[2]+b[4])/2,
+    w  = b[3]-b[1],     h  = b[4]-b[2],
+    !!!extra
+  )
+}
+
+files <- list.files(
+  path = "OpenFace",          # jeśli trzymasz CSV w katalogu
+  pattern = "\\.csv$",
+  full.names = TRUE
+)
+
+rows <- list()
+
+for (f in files){
+  df  <- read_csv(f, show_col_types = FALSE) |> trim_colnames()
+  pre <- detect_scheme(names(df))
+
+  bL <- bbox_mean_over_frames(df, IDX$left_eye,  pre)
+  bR <- bbox_mean_over_frames(df, IDX$right_eye, pre)
+  bM <- bbox_mean_over_frames(df, IDX$mouth,     pre)
+  bO <- bbox_mean_over_frames(df, IDX$oval,      pre)
+
+# --- Usta ---
+mouth_box0 <- pad_box(bM, PAD_MOUTH)
+A_mouth0   <- area_box(mouth_box0)
+
+# --- Oczy ---
+eyes_union <- c(min(bL[1], bR[1]), min(bL[2], bR[2]),
+                max(bL[3], bR[3]), max(bL[4], bR[4]))
+eyes_box0  <- pad_box(eyes_union, PAD_EYES_INIT)
+A_eyes0    <- area_box(eyes_box0)
+
+# --- SYMETRYCZNE DOPASOWANIE POWIERZCHNI ---
+if (is.finite(A_mouth0) && is.finite(A_eyes0) && A_mouth0 > 0 && A_eyes0 > 0) {
+
+  s_area <- sqrt(A_mouth0 / A_eyes0)
+
+  anis <- 2
+  sx <- s_area / sqrt(anis)
+  sy <- s_area * sqrt(anis)
+
+  if (A_eyes0 < A_mouth0) {
+    # powiększ oczy
+    eyes_box  <- scale_box(eyes_box0, sx, sy)
+    mouth_box <- mouth_box0
+  } else {
+    # powiększ usta
+    mouth_box <- scale_box(mouth_box0, 1/sx, 1/sy)
+    eyes_box  <- eyes_box0
+  }
+
+} else {
+  mouth_box <- mouth_box0
+  eyes_box  <- eyes_box0
+}
+
+  # --- Owal ---
+  oval_box <- pad_box(bO, PAD_OVAL)
+
+  rows[[length(rows)+1]] <- make_row(f, "Oczy", eyes_box,
+                                     list(Padding = PAD_EYES_INIT,
+                                          eye_scale_used = s_area))
+  rows[[length(rows)+1]] <- make_row(f, "Usta", mouth_box,
+                                     list(Padding = PAD_MOUTH))
+  rows[[length(rows)+1]] <- make_row(f, "Owal", oval_box,
+                                     list(Padding = PAD_OVAL))
+}
+
+aoi_static <- bind_rows(rows)
+
+```
+
+Eye and mouth AOIs were symmetrically normalised to comparable surface areas, preventing systematic differences in relative AOI size between facial regions.
+
+```{r, echo=FALSE}
+aoi_area_tab <- aoi_static %>%
+  filter(AOI %in% c("Oczy", "Usta")) %>%
+  mutate(area = w * h) %>%
+  group_by(Plik, AOI) %>%
+  summarise(area_sum = sum(area, na.rm = TRUE), .groups = "drop") %>%
+  pivot_wider(
+    names_from  = AOI,
+    values_from = area_sum
+  ) %>%
+  mutate(
+    ratio = Oczy / Usta
+  ) %>%
+  arrange(Plik)
+
+kable(
+  aoi_area_tab,
+  digits = 2,
+  col.names = c(
+    "File",
+    "Eyes AOI area (px²)",
+    "Mouth AOI area (px²)",
+    "Eyes / Mouth area ratio"
+  ),
+  caption = "AOI areas and eyes-to-mouth area ratio"
+)
+```
+
+
+
+
+
+
+```{r fix-agg, echo = FALSE}
+
+# W <- 1920
+# H <- 1080
+# movie_csv <- "1_PL_Pentliczek _1.csv"
+# 
+# img <- image_read("image.jpg")
+# 
+# aoi_plot <- aoi_static %>%
+#   filter(Plik == movie_csv,
+#          AOI %in% c("Oczy","Usta","Owal")) %>%
+#   mutate(
+#     x1_c = x1 - W/2,
+#     x2_c = x2 - W/2,
+#     y1_c = H/2 - y2,
+#     y2_c = H/2 - y1,
+#     cx_c = (x1_c + x2_c)/2,
+#     cy_c = (y1_c + y2_c)/2
+#   )
+# 
+# g <- ggdraw() +
+#   draw_image(img,
+#              x = 0, y = 0,
+#              width = 1, height = 1) +
+#   geom_rect(
+#     data = aoi_plot,
+#     aes(xmin = (x1_c + W/2)/W,
+#         xmax = (x2_c + W/2)/W,
+#         ymin = (y1_c + H/2)/H,
+#         ymax = (y2_c + H/2)/H,
+#         fill = AOI,
+#         color = AOI),
+#     alpha = 0.35,
+#     linewidth = 1.2
+#   ) +
+#   geom_text(
+#     data = aoi_plot,
+#     aes(x = (cx_c + W/2)/W,
+#         y = (cy_c + H/2)/H,
+#         label = AOI,
+#         color = AOI),
+#     fontface = "bold",
+#     size = 9
+#   )
+# 
+# ggsave(
+#   "AOI_overlay_Pentliczek.png",
+#   g,
+#   width  = W,
+#   height = H,
+#   units  = "px",
+#   dpi    = 72
+# )
+
+```
+
+
+```{r final-results, echo=FALSE}
+knitr::include_graphics("AOI_overlay_Pentliczek.png")
+```
+
+## Data Check
+
+
+```{r fix-centered-setup, echo=FALSE, message=FALSE, warning=FALSE}
+# --- rozmiar ekranu/bodźca z image.jpg (np. 1920x1080) ---
+img <- image_read("image.jpg")
+wh  <- image_info(img)[, c("width","height")]
+W <- wh$width; H <- wh$height
+
+# --- 1) Trial -> trial_idx + movie_csv (bez zmiany XPos/YPos: to już jest układ centered) ---
+allfixations2 <- allfixations %>%
+  mutate(
+    trial_idx = as.integer(str_match(Trial, "^trial_(\\d+)_")[,2]),
+    movie_csv = str_replace(str_replace(Trial, "^trial_\\d+_", ""), "\\.mov$", ".csv")
+  )
+
+# --- 2) KONWERSJA AOI: top-left px -> centered (0,0 środek; X w prawo +; Y w górę +) ---
+#    x_c = x - W/2 ;  y_c = H/2 - y
+aoi_centered <- aoi_static %>%
+  filter(AOI %in% c("Oczy","Usta","Owal")) %>%
+  mutate(
+    x1c = x1 - W/2,
+    x2c = x2 - W/2,
+    y1c = H/2 - y2,   # odwracamy, by dolna granica była mniejsza
+    y2c = H/2 - y1
+  ) %>%
+  # upewnij się, że x1c<=x2c i y1c<=y2c
+  transmute(
+    Plik, AOI,
+    x1c = pmin(x1c, x2c), x2c = pmax(x1c, x2c),
+    y1c = pmin(y1c, y2c), y2c = pmax(y1c, y2c)
+  )
+
+# --- 3) AOI w szerokim formacie (po jednym wierszu na film) ---
+aoi_wide_c <- aoi_centered %>%
+  pivot_wider(
+    id_cols = Plik,
+    names_from = AOI,
+    values_from = c(x1c,y1c,x2c,y2c),
+    names_sep = "_"
+  )
+
+aoi_wide_c$Plik = gsub("OpenFace/", "", aoi_wide_c$Plik)
+
+# --- 4) Join i flagi trafień (w tym samym układzie co fiksacje: centered) ---
+in_box <- function(x, y, x1, y1, x2, y2) {
+  !is.na(x1) & !is.na(y1) & !is.na(x2) & !is.na(y2) &
+    x >= x1 & x <= x2 & y >= y1 & y <= y2
+}
+
+fx <- allfixations2 %>%
+  left_join(aoi_wide_c, by = c("movie_csv" = "Plik")) %>%
+  mutate(
+    in_Oczy = in_box(XPos, YPos, `x1c_Oczy`, `y1c_Oczy`, `x2c_Oczy`, `y2c_Oczy`),
+    in_Usta = in_box(XPos, YPos, `x1c_Usta`, `y1c_Usta`, `x2c_Usta`, `y2c_Usta`),
+    in_Owal = in_box(XPos, YPos, `x1c_Owal`, `y1c_Owal`, `x2c_Owal`, `y2c_Owal`)
+  )
+
+# --- podgląd ---
+#fx %>% select(Trial, trial_idx, movie_csv, XPos, YPos, in_Oczy, in_Usta, in_Owal) %>% head()
+
+# --- 5) Suma czasu fiksacji i połączenie z cz ---
+s <- fx %>%
+  group_by(Participant, trial_idx, movie_csv) %>%
+  summarise(s = sum(FixDur), .groups = "drop")
+
+cz <- cz %>% mutate(movie_csv = str_replace(Film, "\\.mov$", ".csv"))
+
+s <- left_join(s, cz, by = c("movie_csv"))
+s$s <- s$s / 1000  # sekundy
+
+```
+
+
+```{r fixations-aoi-plot, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(scales)
+library(magick)
+library(grid)
+library(dplyr)
+
+# === 1. Parametry ekranu ===
+img <- image_read("image.jpg")
+wh  <- image_info(img)[, c("width","height")]
+W <- wh$width
+H <- wh$height
+
+# === 2. Wybór uczestnika i trialu ===
+sel_part  <- unique(allfixations$Participant)[1]
+sel_trial <- 1
+
+fx_sel <- fx %>%
+  filter(
+    Participant == sel_part,
+    trial_idx == sel_trial
+  )
+
+movie_csv <- unique(fx_sel$movie_csv)
+
+# === 3. AOI dla danego filmu (układ centered) ===
+aoi_plot <- aoi_static %>%
+  filter(
+    Plik == movie_csv,
+    AOI %in% c("Oczy","Usta","Owal")
+  ) %>%
+  mutate(
+    x1c = x1 - W/2,
+    x2c = x2 - W/2,
+    y1c = H/2 - y2,
+    y2c = H/2 - y1,
+    cx_c = (x1c + x2c)/2,
+    cy_c = (y1c + y2c)/2
+  )
+
+# === 4. Tło ===
+img_raster <- as.raster(img)
+bg <- rasterGrob(
+  img_raster,
+  width  = unit(1, "npc"),
+  height = unit(1, "npc"),
+  interpolate = TRUE
+)
+
+# === 5. Kolory AOI ===
+col_fill <- c(
+  "Oczy" = alpha("deepskyblue3", 0.25),
+  "Usta" = alpha("orange2",     0.25),
+  "Owal" = alpha("gold",        0.18)
+)
+col_border <- c(
+  "Oczy" = "deepskyblue3",
+  "Usta" = "orange2",
+  "Owal" = "goldenrod3"
+)
+
+# === 6. Wykres ===
+p <- ggplot() +
+  annotation_custom(
+    bg,
+    xmin = -W/2, xmax = W/2,
+    ymin = -H/2, ymax = H/2
+  ) +
+  geom_rect(
+    data = aoi_plot,
+    aes(
+      xmin = x1c, xmax = x2c,
+      ymin = y1c, ymax = y2c,
+      fill = AOI, color = AOI
+    ),
+    linewidth = 1.2,
+    alpha = 0.4
+  ) +
+  geom_text(
+    data = aoi_plot,
+    aes(x = cx_c, y = cy_c + 40, label = AOI, color = AOI),
+    fontface = "bold",
+    size = 4.5
+  ) +
+  geom_point(
+    data = fx_sel,
+    aes(x = XPos, y = YPos),
+    color = "red",
+    size = 2,
+    alpha = 0.7
+  ) +
+  scale_fill_manual(values = col_fill) +
+  scale_color_manual(values = col_border) +
+  coord_fixed(
+    xlim = c(-W/2, W/2),
+    ylim = c(-H/2, H/2),
+    expand = FALSE
+  ) +
+  theme_void() +
+  labs(
+    title = paste0(
+      "Fiksacje i AOI — ",
+      sel_part, ", trial ", sel_trial,
+      " (", movie_csv, ")"
+    ),
+    subtitle = "Układ współrzędnych: środek ekranu = (0,0)"
+  )
+
+print(p)
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+colnames(cz)[2] = "movie_duration"
+
+# === 1) Lista filmów ===
+movies <- cz %>%
+  mutate(movie_csv = str_replace(movie_csv, "\\.mov$", ".csv")) %>%
+  distinct(movie_csv, movie_duration)
+
+# === 2) Uczestnicy ===
+participants <- allfixations %>%
+  distinct(Participant)
+
+# === 3) Pełna siatka: uczestnik × film ===
+expected <- tidyr::crossing(participants, movies)
+
+# === trial_idx: pierwsze wystąpienie filmu ===
+trial_idx_tbl <- allfixations %>%
+  mutate(
+    movie_csv = str_replace(str_replace(Trial, "^trial_\\d+_", ""), "\\.mov$", ".csv"),
+    trial_idx = as.integer(str_match(Trial, "^trial_(\\d+)_")[,2])
+  ) %>%
+  group_by(Participant, movie_csv) %>%
+  summarise(trial_idx = min(trial_idx, na.rm = TRUE), .groups = "drop")
+
+# === 4) Czas fiksacji (s) ===
+fix_time <- allfixations %>%
+  mutate(
+    movie_csv = str_replace(str_replace(Trial, "^trial_\\d+_", ""), "\\.mov$", ".csv")
+  ) %>%
+  group_by(Participant, movie_csv) %>%
+  summarise(fix_time_s = sum(FixDur) / 1000, .groups = "drop")
+
+# === 5) Join + flagi braku fiksacji ===
+trials <- expected %>%
+  left_join(trial_idx_tbl, by = c("Participant","movie_csv")) %>%
+  left_join(fix_time, by = c("Participant","movie_csv")) %>%
+  mutate(
+    fix_time_s = replace_na(fix_time_s, 0),
+    fix_ratio  = fix_time_s / movie_duration,
+    no_fix     = (fix_time_s == 0)
+  )
+
+# === lista prób bez fiksacji ===
+trials_no_fix <- trials %>%
+  filter(no_fix) %>%
+  arrange(Participant, movie_csv)
+
+# === 6) AOI + czas fiksacji ===
+fx_aoi <- fx %>%
+  mutate(
+    FixDur_s = FixDur / 1000,
+    AOI_label = case_when(
+      in_Oczy ~ "Oczy",
+      in_Usta ~ "Usta",
+      in_Owal ~ "Owal",
+      TRUE    ~ "Poza"
+    ),
+    movie_csv = str_replace(
+      str_replace(Trial, "^trial_\\d+_", ""),
+      "\\.mov$", ".csv"
+    )
+  )
+
+aoi_time <- fx_aoi %>%
+  group_by(Participant, movie_csv) %>%
+  summarise(
+    time_Oczy = sum(FixDur_s[in_Oczy], na.rm = TRUE),
+    time_Usta = sum(FixDur_s[in_Usta], na.rm = TRUE),
+    time_Owal = sum(FixDur_s[in_Owal], na.rm = TRUE),
+    .groups   = "drop"
+  )
+
+# === 7) join + ratio względem owalu ===
+trials <- trials %>%
+  left_join(aoi_time, by = c("Participant","movie_csv")) %>%
+  mutate(across(starts_with("time_"), ~ replace_na(., 0))) %>%
+  mutate(
+    ratio_Oczy = ifelse(time_Owal > 0, time_Oczy / time_Owal, NA_real_),
+    ratio_Usta = ifelse(time_Owal > 0, time_Usta / time_Owal, NA_real_)
+  )
+
+# === 8) filtr testowych uczestników ===
+trials <- trials[grepl("p1|p2|test", trials$Participant) == FALSE, ]
+
+# === korekty ID ===
+trials[trials$Participant == "SF_SF10_1","Participant"] <- "SF_88000_1"
+
+trials <- trials %>%
+  mutate(
+    n_underscores     = str_count(Participant, "_"),
+    has_numeric_sufix = str_detect(Participant, "_[0-9]+$"),
+    Session = case_when(
+      n_underscores >= 1 & has_numeric_sufix ~ as.integer(str_extract(Participant, "[0-9]+$")),
+      TRUE                                   ~ 1L
+    ),
+    Participant_base = case_when(
+      n_underscores >= 1 & has_numeric_sufix ~ str_replace(Participant, "_[0-9]+$", ""),
+      TRUE                                   ~ Participant
+    )
+  ) %>%
+  select(-n_underscores, -has_numeric_sufix)
+
+trials[trials$Participant == "88021-4", "Session"] <- 4
+trials[trials$Participant == "88021-4", "Participant_base"] <- "88021"
+
+# === końcowy filtr jakości ===
+trials <- trials %>% filter(fix_ratio > 0.15)
+
+
+# === 1) Agregacja do poziomu Participant × Session ===
+trials_agg <- trials %>%
+  group_by(Participant_base, Session) %>%
+  summarise(
+    n_trials = n_distinct(trial_idx),
+    movie_duration = sum(movie_duration, na.rm = FALSE),
+    fix_time_s = sum(fix_time_s, na.rm = TRUE),
+    time_Oczy  = sum(time_Oczy,  na.rm = TRUE),
+    time_Usta  = sum(time_Usta,  na.rm = TRUE),
+    time_Owal  = sum(time_Owal,  na.rm = TRUE),
+    any_no_fix = any(no_fix),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    fix_ratio  = if_else(movie_duration > 0, fix_time_s / movie_duration, NA_real_),
+    ratio_Oczy = if_else(time_Owal > 0, time_Oczy / time_Owal, NA_real_),
+    ratio_Usta = if_else(time_Owal > 0, time_Usta / time_Owal, NA_real_)
+  )
+
+# === 2) Uczestnicy/sesje z wystarczającym czasem patrzenia na twarz ===
+valid_participants <- trials_agg %>%
+  filter(time_Owal > 40) %>%
+  select(Participant_base, Session)
+
+# === 3) Odfiltrowanie trial-level danych ===
+trials <- trials %>%
+  semi_join(valid_participants,
+            by = c("Participant_base", "Session"))
+
+# === szybki sanity check ===
+
+
+```
+
+
+```{r analiza-prepare-data, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+
+# --- filtr jakości na poziomie agregacji ---
+trials_agg <- trials_agg %>%
+  filter(time_Owal > 40)
+
+# --- ujednolicenie nazw kolumn ---
+colnames(Sit_Face_Age_MotorScores)[1] <- "Participant_base"
+colnames(Sit_Face_Age_MotorScores)[3] <- "Session"
+
+colnames(SF_Vocalizations)[1:2] <- c("Participant_base", "Session")
+
+# --- typy ---
+Sit_Face_Age_MotorScores$Participant_base <-
+  as.character(Sit_Face_Age_MotorScores$Participant_base)
+
+SF_Vocalizations$Participant_base <-
+  as.character(SF_Vocalizations$Participant_base)
+
+# --- join ET + motor ---
+sss <- left_join(trials_agg, Sit_Face_Age_MotorScores)
+
+# --- agregacja wokalizacji ---
+SF_Vocalizations <- SF_Vocalizations %>%
+  group_by(Participant_base, Session) %>%
+  summarise(
+    totalDurRec = sum(totalDurRec, na.rm = TRUE),
+    nrVocal_p   = sum(nrVocal_p,   na.rm = TRUE),
+    nrVocal_s   = sum(nrVocal_s,   na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# --- join wokalizacji ---
+sss <- left_join(sss, SF_Vocalizations)
+
+# --- kompletność danych ---
+sss <- sss %>%
+  filter(!is.na(Age_Days),
+         !is.na(Sitting_Stage_AIMS))
+
+# --- usunięcie problematycznych uczestników ---
+sss <- sss %>%
+  filter(!(Participant_base %in% c("SF08", "SF10", "SF09")))
+
+# --- zmienne zliczeniowe (sekundy -> klatki ~60 Hz) ---
+sss$k_mouth <- round(sss$time_Usta * 60)
+sss$k_eyes  <- round(sss$time_Oczy * 60)
+sss$n_face  <- round(sss$time_Owal * 60)
+sss$n_all <- round(sss$movie_duration * 60)
+
+# --- zabezpieczenia ---
+sss <- subset(sss, n_face > 0)
+sss$k_eyes <- pmin(sss$k_eyes, sss$n_face)
+
+# --- centrowanie wieku ---
+sss$age_c <- sss$Age_Days - mean(sss$Age_Days)
+sss$age_c <- scale(sss$age_c)
+
+# --- faktor poziomu siedzenia ---
+sss$Sitting_Stage_AIMS <- factor(
+  sss$Sitting_Stage_AIMS,
+  levels = c("PreSitting", "Transition", "Wobbly", "Expert"),
+  labels = c("PreSitting", "Transition", "Wobbly", "Expert")
+)
+
+```
+
+
+
+```{r trials-qc-face-ratio, echo=FALSE, message=FALSE, warning=FALSE}
+
+# =========================
+# 0) Zmienne QC
+# =========================
+trials <- trials %>%
+  mutate(
+    face_ratio = if_else(movie_duration > 0,
+                         time_Owal / movie_duration,
+                         NA_real_)
+  )
+
+# =========================
+# 1) Statystyki opisowe – W WIERSZACH
+# =========================
+qc_table <- trials %>%
+  select(face_ratio, fix_ratio, ratio_Oczy, ratio_Usta) %>%
+  pivot_longer(
+    everything(),
+    names_to = "Measure",
+    values_to = "Value"
+  ) %>%
+  group_by(Measure) %>%
+  summarise(
+    n        = sum(!is.na(Value)),
+    mean     = mean(Value, na.rm = TRUE),
+    sd       = sd(Value, na.rm = TRUE),
+    min      = min(Value, na.rm = TRUE),
+    max      = max(Value, na.rm = TRUE),
+    .groups  = "drop"
+  ) %>%
+  mutate(
+    Measure = recode(
+      Measure,
+      fix_ratio   = "All Fix ratio (czas wszystkich fiksacji / czas obejrzanego filmu)",
+      face_ratio  = "Face ratio (czas twarzy / czas obejrzanego filmu)",
+      ratio_Oczy = "Eye ratio (czas fiksacji na oczy / czas fiksacji na twarzy)",
+      ratio_Usta = "Mouth ratio (czas fiksacji na usta / czas fiksacji na twarzy)"
+    )
+  )
+
+# --- tabela HTML ---
+kable(
+  qc_table,
+  digits = 3,
+  caption = "Statystyki opisowe zmiennych eyetrackingowych (trial-level)"
+)
+
+# =========================
+# 2) Histogramy (facet wrap)
+# =========================
+plot_df <- trials %>%
+  select(all_fix_ratio = fix_ratio, face_ratio, ratio_Oczy, ratio_Usta) %>%
+  pivot_longer(
+    everything(),
+    names_to = "Variable",
+    values_to = "Value"
+  ) %>%
+  filter(!is.na(Value))
+
+ggplot(plot_df, aes(x = Value)) +
+  geom_histogram(
+    bins = 30,
+    fill = "grey70",
+    color = "black"
+  ) +
+  facet_wrap(~Variable, scales = "free_x") +
+  theme_minimal(base_size = 13) +
+  labs(
+    title = "QC eyetrackingu – rozkłady zmiennych trial-level",
+    x = NULL,
+    y = "Liczba triali"
+  )
+
+# =========================
+# 3) Outliery (boxploty)
+# =========================
+ggplot(plot_df, aes(x = Variable, y = Value)) +
+  geom_boxplot(
+    outlier.colour = "red",
+    outlier.alpha = 0.6
+  ) +
+  theme_minimal(base_size = 13) +
+  labs(
+    title = "Box plot (trial-level)",
+    x = NULL,
+    y = NULL
+  )
+
+```
+
+
+```{r data-check-time-oval-by-session, echo=FALSE, message=FALSE, warning=FALSE}
+
+# --- wybór danych do checku ---
+dc <- sss %>% 
+  select(Participant_base, Session, time_Owal) %>%
+  filter(!is.na(Session), !is.na(time_Owal))
+
+# --- wykres ---
+ggplot(dc, aes(x = factor(Session), y = time_Owal)) +
+  geom_boxplot(outlier.alpha = 0.4) +
+  geom_jitter(width = 0.15, alpha = 0.4, size = 1) +
+  theme_minimal(base_size = 13) +
+  labs(
+    x = "Session",
+    y = "Total fixation time in face oval (s)",
+    title = " Absolute fixation time in face oval across sessions"
+  )
+
+```
+Mamy różnice wynikającą z aktorki jeśli chodzi o ratio usta. 
+
+```{r data-check-aktorka-simple, echo=FALSE, message=FALSE, warning=FALSE}
+# --- 1) join trials + Aktorka ---
+dat <- trials %>%
+  left_join(
+    cz %>% select(movie_csv, Aktorka),
+    by = "movie_csv"
+  ) %>%
+  filter(!is.na(Aktorka))
+
+# --- 2) agregacja: Participant × Session × Aktorka ---
+dat_agg <- dat %>%
+  group_by(Participant, Session, Aktorka) %>%
+  summarise(
+    fix_ratio   = sum(fix_time_s, na.rm = TRUE) / sum(movie_duration, na.rm = TRUE),
+    ratio_Owal  = sum(time_Owal,  na.rm = TRUE) / sum(movie_duration, na.rm = TRUE),
+    ratio_Oczy  = sum(time_Oczy,  na.rm = TRUE) / sum(time_Owal, na.rm = TRUE),
+    ratio_Usta  = sum(time_Usta,  na.rm = TRUE) / sum(time_Owal, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+sanity <- dat_agg %>%
+  group_by(Session, Aktorka) %>%
+  summarise(
+    N = n(),
+    fix_ratio_median   = median(fix_ratio,  na.rm = TRUE),
+    ratio_Owal_median  = median(ratio_Owal, na.rm = TRUE),
+    ratio_Oczy_median  = median(ratio_Oczy, na.rm = TRUE),
+    ratio_Usta_median  = median(ratio_Usta, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  mutate(across(where(is.numeric), ~ signif(.x, 3)))
+
+kable(
+  sanity,
+  caption = "Descriptive statistics of fixation time ratios by session and actress (medians)",
+  align = "c"
+)
+
+# --- 4) test wpływu Aktorki (osobno dla każdej miary i sesji) ---
+tests <- dat_agg %>%
+  group_by(Session) %>%
+  summarise(
+    `Fixation / movie duration` = wilcox.test(fix_ratio   ~ Aktorka)$p.value,
+    `Face / movie duration`     = wilcox.test(ratio_Owal ~ Aktorka)$p.value,
+    `Eyes / face`               = wilcox.test(ratio_Oczy ~ Aktorka)$p.value,
+    `Mouth / face`              = wilcox.test(ratio_Usta ~ Aktorka)$p.value,
+    .groups = "drop"
+  ) %>%
+  mutate(across(-Session, ~ signif(.x, 3)))
+
+# --- 5) estetyczna tabela ---
+kable(
+  tests,
+  caption = "Wilcoxon tests comparing actresses within each session. Table entries are p-values for differences in fixation time ratios between actresses.",
+  align = "c"
+)
+```
+
+```{r plot-mouth-by-actress, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(ggplot2)
+library(scales)
+
+dat_agg <- dat_agg %>%
+  mutate(
+    Aktorka = factor(
+      Aktorka,
+      levels = c(0, 1),
+      labels = c("Actress A", "Actress B")
+    )
+  )
+
+ggplot(dat_agg,
+       aes(x = Aktorka,
+           y = ratio_Usta,
+           fill = Aktorka)) +
+  geom_boxplot(outlier.alpha = 0.4) +
+  geom_jitter(width = 0.15, alpha = 0.4, size = 1) +
+  scale_y_continuous(
+    labels = percent_format(accuracy = 1),
+    limits = c(0, 1)
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "none") +
+  labs(
+    x = "Actress",
+    y = "Proportion of mouth fixations",
+    title = "Differences in mouth fixation proportion between actresses"
+  )
+
+```
+
+Ale się obronimy, że proporcja udziału aktorek (czas fiksacji na twarz jednej aktorki podzielony na czas drugiej aktorki per participant) nie zmienia się między sesjami.
+
+```{r test-oval-ratio-simple, echo=FALSE, message=FALSE, warning=FALSE}
+
+ratio_pp <- trials %>%
+  select(Participant, Session, movie_csv, time_Owal) %>%
+  left_join(cz %>% select(movie_csv, Aktorka), by = "movie_csv") %>%
+  group_by(Participant, Session, Aktorka) %>%
+  summarise(t = sum(time_Owal, na.rm = TRUE), .groups = "drop") %>%
+  pivot_wider(names_from = Aktorka, values_from = t) %>%
+  filter(`0` > 0, `1` > 0) %>%
+  mutate(ratio_oval = `1` / `0`)
+
+kt <- kruskal.test(ratio_oval ~ factor(Session), data = ratio_pp)
+
+kruskal_tbl <- tibble(
+  Test = "Kruskal–Wallis",
+  Outcome = "Oval fixation time ratio (Actress 1 / Actress 0)",
+  `df` = kt$parameter,
+  `Chi-square` = signif(kt$statistic, 3),
+  `p-value` = signif(kt$p.value, 3)
+)
+
+kable(
+  kruskal_tbl,
+  caption = "Kruskal–Wallis test for differences in oval fixation time ratios across sessions",
+  align = "c"
+)
+
+```
+
+## Analiza
+
+Across all mixed-effects models, sitting stage is coded using treatment contrasts with **PreSitting** as the reference level. Age (`age_c`) is standardised.
+
+---
+
+### Face fixations (face / movie duration)
+
+**ratio face/movie duration ~ sitting stage (+ random intercept for participant)**
+
+```{r model-betabin-output, echo=FALSE, message=FALSE, warning=FALSE}
+library(broom.mixed)
+
+m_betabin <- glmmTMB( cbind(n_face, n_all - n_face) ~ Sitting_Stage_AIMS  + (1| Participant_base), 
+                      family = betabinomial(link = "logit"), data = sss )
+# === tidy output modelu bazowego ===
+m_tab <- tidy(
+  m_betabin,
+  effects = "fixed",
+  conf.int = TRUE,
+  conf.level = 0.95
+) %>%
+  mutate(
+    OR       = exp(estimate),
+    OR_low  = exp(conf.low),
+    OR_high = exp(conf.high),
+    p.value = case_when(
+      p.value < 0.001 ~ "<0.001 ***",
+      p.value < 0.01  ~ paste0(formatC(p.value, format = "f", digits = 3), " **"),
+      p.value < 0.05  ~ paste0(formatC(p.value, format = "f", digits = 3), " *"),
+      TRUE            ~ formatC(p.value, format = "f", digits = 3)
+    )
+  ) %>%
+  select(
+    term,
+    estimate,
+    std.error,
+    statistic,
+    p.value,
+    conf.low,
+    conf.high,
+    OR,
+    OR_low,
+    OR_high
+  ) %>%
+  mutate(
+    term = recode(
+      term,
+      "(Intercept)" = "Intercept (PreSitting)",
+      "Sitting_Stage_AIMSTransition" = "Sitting: Transition vs PreSitting",
+      "Sitting_Stage_AIMSWobbly"     = "Sitting: Wobbly vs PreSitting",
+      "Sitting_Stage_AIMSExpert"     = "Sitting: Expert vs PreSitting"
+    )
+  )
+
+# === tabela HTML ===
+kable(
+  m_tab,
+  digits = 3,
+  caption = "Beta-binomial mixed-effects model predicting proportion of face fixations by sitting stage."
+)
+
+
+```
+---
+
+### Eye fixations within the face
+
+**Beta-binomial mixed-effects model predicting proportion of eye fixations within the face**
+
+```{r model-betabin-eyes-output, echo=FALSE, message=FALSE, warning=FALSE}
+
+
+m_betabin <- glmmTMB( cbind(k_eyes, n_face - k_eyes) ~ Sitting_Stage_AIMS * age_c + (1| Participant_base), 
+                      family = betabinomial(link = "logit"), data = sss )
+
+m_tab_eyes <- tidy(
+  m_betabin,
+  effects = "fixed",
+  conf.int = TRUE,
+  conf.level = 0.95
+) %>%
+  mutate(
+    OR       = exp(estimate),
+    OR_low  = exp(conf.low),
+    OR_high = exp(conf.high),
+    p.value = case_when(
+      p.value < 0.001 ~ "<0.001 ***",
+      p.value < 0.01  ~ paste0(formatC(p.value, format = "f", digits = 3), " **"),
+      p.value < 0.05  ~ paste0(formatC(p.value, format = "f", digits = 3), " *"),
+      TRUE            ~ formatC(p.value, format = "f", digits = 3)
+    )
+  ) %>%
+  select(
+    term,
+    estimate,
+    std.error,
+    statistic,
+    p.value,
+    conf.low,
+    conf.high,
+    OR,
+    OR_low,
+    OR_high
+  ) %>%
+  mutate(
+    term = recode(
+      term,
+      "(Intercept)" = "Intercept",
+      "Sitting_Stage_AIMSTransition" = "Sitting: Transition",
+      "Sitting_Stage_AIMSWobbly"     = "Sitting: Wobbly",
+      "Sitting_Stage_AIMSExpert"     = "Sitting: Expert",
+      "age_c"                        = "Age (centered)",
+      "Sitting_Stage_AIMSTransition:age_c" = "Transition × Age",
+      "Sitting_Stage_AIMSWobbly:age_c"     = "Wobbly × Age",
+      "Sitting_Stage_AIMSExpert:age_c"     = "Expert × Age"
+    )
+  )
+
+kable(
+  m_tab_eyes,
+  digits = 3,
+  caption = "ratio eyes/face ~ sitting stage × age (+ random intercept for participant)"
+)
+```
+
+
+```{r emmeans-eyes-plot, echo=FALSE, message=FALSE, warning=FALSE}
+
+m_betabin_eyes <- glmmTMB(
+  cbind(k_eyes, n_face - k_eyes) ~ Sitting_Stage_AIMS + (1 | Participant_base),
+  family = betabinomial(link = "logit"),
+  data = sss
+)
+
+# === Estimated marginal means on the response scale (proportions) ===
+emm_eyes <- emmeans(
+  m_betabin_eyes,
+  ~ Sitting_Stage_AIMS,
+  type = "response"
+)
+
+emm_eyes_df <- as.data.frame(emm_eyes)
+
+# === Plot ===
+ggplot(emm_eyes_df,
+       aes(x = Sitting_Stage_AIMS,
+           y = prob,
+           ymin = asymp.LCL,
+           ymax = asymp.UCL)) +
+  geom_point(size = 3, position = position_dodge(width = 0.3)) +
+  geom_errorbar(width = 0.15, position = position_dodge(width = 0.3)) +
+  geom_line(position = position_dodge(width = 0.3)) +
+  scale_y_continuous(labels = percent_format(accuracy = 1),
+                     limits = c(0, 0.6)) +
+  ggthemes::theme_tufte() + ggthemes::geom_rangeframe() + theme(
+    axis.line.y = element_line(),
+    axis.ticks.y = element_line()
+  ) +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks(),
+    labels = scales::percent
+  )+
+  labs(
+    title = "Proportion of eye fixations from model without interaction",
+    x = "Sitting stage",
+    y = "Proportion of eye fixations"
+  )
+
+```
+
+
+
+---
+
+### Mouth fixations within the face
+
+**Beta-binomial mixed-effects model predicting proportion of mouth fixations within the face**
+
+```{r model-betabin-mouth-output, echo=FALSE, message=FALSE, warning=FALSE}
+library(broom.mixed)
+library(dplyr)
+library(knitr)
+
+
+m_betabin_mouth<- glmmTMB( cbind(k_mouth, n_face - k_mouth) ~ Sitting_Stage_AIMS * age_c + (1| Participant_base), 
+                      family = betabinomial(link = "logit"), data = sss )
+
+m_tab_mouth <- tidy(
+  m_betabin_mouth,
+  effects = "fixed",
+  conf.int = TRUE,
+  conf.level = 0.95
+) %>%
+  mutate(
+    OR      = exp(estimate),
+    OR_low = exp(conf.low),
+    OR_high= exp(conf.high),
+    p.value = case_when(
+      p.value < 0.001 ~ "<0.001 ***",
+      p.value < 0.01  ~ paste0(formatC(p.value, format = "f", digits = 3), " **"),
+      p.value < 0.05  ~ paste0(formatC(p.value, format = "f", digits = 3), " *"),
+      TRUE            ~ formatC(p.value, format = "f", digits = 3)
+    )
+  ) %>%
+  select(
+    term,
+    estimate,
+    std.error,
+    statistic,
+    p.value,
+    conf.low,
+    conf.high,
+    OR,
+    OR_low,
+    OR_high
+  ) %>%
+  mutate(
+    term = recode(
+      term,
+      "(Intercept)" = "Intercept",
+      "Sitting_Stage_AIMSTransition" = "Sitting: Transition",
+      "Sitting_Stage_AIMSWobbly"     = "Sitting: Wobbly",
+      "Sitting_Stage_AIMSExpert"     = "Sitting: Expert",
+      "age_c"                        = "Age (centered)",
+      "Sitting_Stage_AIMSTransition:age_c" = "Transition × Age",
+      "Sitting_Stage_AIMSWobbly:age_c"     = "Wobbly × Age",
+      "Sitting_Stage_AIMSExpert:age_c"     = "Expert × Age"
+    )
+  )
+
+kable(
+  m_tab_mouth,
+  digits = 3,
+  caption = "ratio mouth/face ~ sitting stage × age (+ random intercept for participant)"
+)
+```
+
+
+
+```{r emmeans-mouth-plot, echo=FALSE, message=FALSE, warning=FALSE}
+library(emmeans)
+library(ggplot2)
+library(dplyr)
+library(scales)
+
+m_betabin =  glmmTMB( cbind(k_mouth, n_face - k_mouth) ~ Sitting_Stage_AIMS  + (1| Participant_base), 
+                      family = betabinomial(link = "logit"), data = sss )
+
+
+# === Estimated marginal means on the response scale (proportions) ===
+emm_mouth <- emmeans(
+  m_betabin,
+  ~ Sitting_Stage_AIMS,   # younger / mean / older
+  type = "response"
+)
+
+emm_mouth_df <- as.data.frame(emm_mouth)
+
+# === Plot ===
+ggplot(emm_mouth_df,
+       aes(x = Sitting_Stage_AIMS,
+           y = prob,
+           ymin = asymp.LCL,
+           ymax = asymp.UCL)) +
+  geom_point(size = 3, position = position_dodge(width = 0.3)) +
+  geom_errorbar(width = 0.15, position = position_dodge(width = 0.3)) +
+  geom_line(position = position_dodge(width = 0.3)) +
+  scale_y_continuous(labels = percent_format(accuracy = 1),
+                     limits = c(0, 0.25)) +
+  scale_color_manual(
+    values = c("-1" = "steelblue", "0" = "grey30", "1" = "firebrick"),
+    labels = c("-1" = "Younger", "0" = "Mean age", "1" = "Older")
+  ) +
+  ggthemes::theme_tufte() + ggthemes::geom_rangeframe() + theme(
+    axis.line.y = element_line(),
+    axis.ticks.y = element_line()
+  ) +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks(),
+    labels = scales::percent
+  )+
+  labs(
+    title = "Proportion of mouth fixations from model without interaction",
+    x = "Sitting stage",
+    y = "Proportion of mouth fixations"
+  )
+
+```
+
+```{r emmeans-mouth-plot-slopes, echo=FALSE, message=FALSE, warning=FALSE, echo=FALSE}
+
+library(marginaleffects)
+
+slopes_resp <- slopes(
+  m_betabin_mouth,
+  variables = "age_c",
+  by = "Sitting_Stage_AIMS",
+  type = "response"
+)
+
+
+
+ggplot(slopes_resp,
+       aes(x = Sitting_Stage_AIMS,
+           y = estimate,
+           ymin = conf.low,
+           ymax = conf.high)) +
+  geom_pointrange() +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  scale_y_continuous(labels = percent_format(accuracy = 1)) +
+  ggthemes::theme_tufte() + ggthemes::geom_rangeframe() + theme(
+    axis.line.y = element_line(),
+    axis.ticks.y = element_line()
+  ) +
+  scale_y_continuous(
+    breaks = scales::pretty_breaks(),
+    labels = scales::percent
+  )+
+  labs(
+    y = "Slope of age ",
+    x = "Sitting stage",
+    title = "Age slopes for mouth fixation proportion",
+    subtitle = "Average marginal effects on the response scale"
+  )
+
+```
+
+---
+
+### Vocalization predictors of fixation proportions
+
+Models below test whether vocalization measures predict fixation proportions within the face, controlling for participant-level random intercepts.
+
+**Beta-binomial mixed-effects model predicting proportion of mouth fixations from vocalization measures**
+
+
+```{r model-vocalizations-output, echo=FALSE, message=FALSE, warning=FALSE}
+sss <- sss %>%
+  # === 1) ID and factors =====================================================
+  mutate(
+    id    = factor(Participant_base),
+    
+    stage = factor(Sitting_Stage_AIMS),
+    stage = relevel(stage, ref = "PreSitting"),
+    
+    obs   = factor(seq_len(n()))
+  ) %>%
+  
+  # === 2) Exposure time ======================================================
+  mutate(
+    # totalDurRec assumed to be in seconds
+    minutes = totalDurRec / 60
+  ) %>%
+  
+  # === 3) Eye-tracking counts (binomial) =====================================
+  mutate(
+    k_mouth = replace_na(as.integer(k_mouth), 0L),
+    n_face  = replace_na(as.integer(n_face),  0L)
+  ) %>%
+  
+  # === 4) Vocalization counts ===============================================
+  mutate(
+    nrVocal_p = replace_na(as.integer(nrVocal_p), 0L),
+    nrVocal_s = replace_na(as.integer(nrVocal_s), 0L),
+    
+    Number_Speechlike = nrVocal_p + nrVocal_s
+  ) %>%
+  
+  # === 5) Derived vocalization measures =====================================
+  mutate(
+    Rate_Speechlike = if_else(
+      minutes > 0,
+      Number_Speechlike / minutes,
+      NA_real_
+    ),
+    
+    ratio_voc = if_else(
+      Number_Speechlike > 0,
+      nrVocal_s / Number_Speechlike,
+      NA_real_
+    )
+  ) %>%
+  
+  # === 6) Final safety filters ==============================================
+  filter(
+    !is.na(stage),
+    !is.na(minutes),
+    minutes > 0,
+    n_face > 0
+  )
+# === 7) Beta-binomial mixed-effects model ===
+m_betabin_sum <- glmmTMB(
+  cbind(k_mouth, n_face - k_mouth) ~
+    Rate_Speechlike + ratio_voc + (1 | Participant_base),
+  family = betabinomial(link = "logit"),
+  data = sss
+)
+
+# === Tidy fixed-effects output: vocalization model ===
+m_tab_voc <- tidy(
+  m_betabin_sum,
+  effects = "fixed",
+  conf.int = TRUE,
+  conf.level = 0.95
+) %>%
+  mutate(
+    OR       = exp(estimate),
+    OR_low   = exp(conf.low),
+    OR_high  = exp(conf.high),
+    # Format p-values with significance stars in the same column
+    p.value = case_when(
+      p.value < 0.001 ~ "<0.001 ***",
+      p.value < 0.01  ~ paste0(formatC(p.value, format = "f", digits = 3), " **"),
+      p.value < 0.05  ~ paste0(formatC(p.value, format = "f", digits = 3), " *"),
+      TRUE            ~ formatC(p.value, format = "f", digits = 3)
+    )
+  ) %>%
+  select(
+    term,
+    estimate,
+    std.error,
+    statistic,
+    p.value,
+    conf.low,
+    conf.high,
+    OR,
+    OR_low,
+    OR_high
+  ) %>%
+  mutate(
+    # Human-readable term labels
+    term = recode(
+      term,
+      "(Intercept)"     = "Intercept",
+      "Rate_Speechlike" = "Vocalization rate (per minute)",
+      "ratio_voc"       = "Proportion of speech-like vocalizations"
+    )
+  )
+
+# === HTML table ===
+kable(
+  m_tab_voc,
+  digits = 3,
+  caption = "ratio mouth/face ~ vocalization rate + speech-like proportion (+ random intercept for participant)"
+)
+```
+
+**Beta-binomial mixed-effects model predicting proportion of eye fixations from vocalization measures**
+
+```{r model-vocalization-eyes-table, echo=FALSE, message=FALSE, warning=FALSE}
+# === Beta-binomial mixed-effects model: EYES ===
+m_betabin_sum_eyes <- glmmTMB(
+  cbind(k_eyes, n_face - k_eyes) ~
+    Rate_Speechlike + ratio_voc  + (1 | Participant_base),
+  family = betabinomial(link = "logit"),
+  data = sss
+)
+
+# === Tidy fixed-effects output: vocalization model (eyes) ===
+m_tab_voc_eyes <- tidy(
+  m_betabin_sum_eyes,
+  effects = "fixed",
+  conf.int = TRUE,
+  conf.level = 0.95
+) %>%
+  mutate(
+    OR       = exp(estimate),
+    OR_low   = exp(conf.low),
+    OR_high  = exp(conf.high),
+    # Format p-values with significance stars in the same column
+    p.value = case_when(
+      p.value < 0.001 ~ "<0.001 ***",
+      p.value < 0.01  ~ paste0(formatC(p.value, format = "f", digits = 3), " **"),
+      p.value < 0.05  ~ paste0(formatC(p.value, format = "f", digits = 3), " *"),
+      TRUE            ~ formatC(p.value, format = "f", digits = 3)
+    )
+  ) %>%
+  select(
+    term,
+    estimate,
+    std.error,
+    statistic,
+    p.value,
+    conf.low,
+    conf.high,
+    OR,
+    OR_low,
+    OR_high
+  ) %>%
+  mutate(
+    # Human-readable term labels
+    term = recode(
+      term,
+      "(Intercept)"     = "Intercept",
+      "Rate_Speechlike" = "Vocalization rate (per minute)",
+      "ratio_voc"       = "Proportion of speech-like vocalizations"
+    )
+  )
+
+# === HTML table ===
+kable(
+  m_tab_voc_eyes,
+  digits = 3,
+  caption = "ratio eyes/face ~ vocalization rate + speech-like proportion (+ random intercept for participant)"
+)
+```
+
+## Pobierz {.tabset}
+
+<a href="Sit_and_Face.Rmd" download class="btn btn-primary">
+  ⬇ Download R Markdown source
+</a>
