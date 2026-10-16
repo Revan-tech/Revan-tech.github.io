@@ -128,7 +128,7 @@ http://www.niepelnosprawni.pl/ledge/x/249472 <br>
 https://pad.widzialni.org/start <br>
 
 💬 Kategoria: Równość i dostępność w nauce w Sortowni Wiedzy:<br>
-https://szpm.shinyapps.io/baza_wiedzy/<br>
+https://szpm.shinyapps.io/Baza/<br>
 
 💬 eTechnologie - Standardy dostępności w e-learningu (prezentacja):<br>
 https://etechnologie.pl/standardy-dostepnosci-w-e-learningu/ <br>
